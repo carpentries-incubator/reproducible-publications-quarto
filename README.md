@@ -59,7 +59,7 @@ For formatting & consistency's sake, we should :
 4) for tips, use the {: .callout} callout
 
 Examples: 
-1) **R markdown examples**
+1) **R markdown examples**  
 code: 
 ![image](https://user-images.githubusercontent.com/58574172/100487984-54d48500-30c0-11eb-9a35-0705f9c5e15d.png)
 *I can't get the markdown to render correctly this this comment so this is just a screenshot
@@ -67,7 +67,7 @@ code:
 outputs to:
 ![image](https://user-images.githubusercontent.com/58574172/100487875-b3e5ca00-30bf-11eb-98a8-554a7eb081bd.png)
 
-2) **Paper edits (not challenges)**
+2) **Exercises (i.e. "follow me" not challenges)**
 code: 
 ```
 ~~~
@@ -80,7 +80,7 @@ code:
 outputs as: 
 ![image](https://user-images.githubusercontent.com/58574172/100487796-55b8e700-30bf-11eb-8925-52fad5db9c18.png)
 
-3) **Paper edits (challenges)**
+3) **Challenges**
 - Make sure to label challenges `CHALLENGE [ep#.challenge#]`
 - the solution is just `SOLUTION`
 code: 
