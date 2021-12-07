@@ -17,19 +17,19 @@ here are a few things we recommend you do:
 
 ~~* [ ] Decide on a title for your new lesson!
   Once you've chosen a new title, you can set the value for `lesson_title`
-  in [`_config.yml`](_config.yml)
-~* [ ] Add the URL to your built lesson pages to the repository description\*
-~* [ ] [Add relevant topic tags to your lesson repository][cdh-topic-tags].
-~* [ ] Fill in the fields marked `FIXME` in:
-  * this README
-  * [`_config.yml`](_config.yml)
+  in [`_config.yml`](_config.yml)~~
+~~* [ ] Add the URL to your built lesson pages to the repository description\*~~
+~~* [ ] [Add relevant topic tags to your lesson repository][cdh-topic-tags].~~
+~~* [ ] Fill in the fields marked `FIXME` in:~~
+  ~~* this README~~
+  ~~* [`_config.yml`](_config.yml)~~ 
 * [ ] If you're going to be developing lesson material for the first time
   according to our design principles,
   consider reading the [Carpentries Curriculum Development Handbook][cdh]
 * [ ] Consult the [Lesson Example][lesson-example] website to find out more about
   working with the lesson template
-* [ ] If you are planning to write your lesson in RMarkdown,
-  [create a `main` branch and set this as the default branch in your repository settings][change-default-branch]
+~~* [ ] If you are planning to write your lesson in RMarkdown,
+  [create a `main` branch and set this as the default branch in your repository settings][change-default-branch]~~
 * [ ] Update this README with relevant information about your lesson
   and delete this section
 
@@ -39,6 +39,98 @@ on the right of the repository landing page.
 The lesson URL structure is **https://carpentries-incubator.github.io/<repository-slug\>**:
 a repository at https://github.com/carpentries-incubator/new-lesson/ will have pages at
 the lesson URL https://carpentries-incubator.github.io/new-lesson/.
+
+
+## UCSB Carpentry Team Lesson Development Notes
+
+ONLY edit the .Rmd files. At the end of the readme see a script in the RStudio terminal to generate the .md automatically. Never directly edit the .md files.
+Also, see for a walkthrough on converting the google doc rough drafts to .Rmd: https://docs.google.com/document/d/1bfzVnnrVR2qr8YGb12x0MqbXglcP8XBhyxY2JonUtuY/edit?usp=sharing
+
+## R Markdown vs. Github Markdown
+Note the two flavors of markdown are different. Some formatting tips:
+
+- **Line Breaks:** must have two spaces at the end of the line or manually add a break <br>
+
+### Lesson-specific formatting 
+For formatting & consistency's sake, we should :
+1) for examples that don't need to be input to the paper example rmd file, DON'T use `{: .source}` callouts but DO use  \``` \``` so the markdown doesn't render. For short partial line chunks ` ` can be used. 
+2) use `{: .source}` callouts for code we're walking them through to add to the rmd file.
+3) for challenge solutions the solutions should be unrendered markdown syntax between \``` \```
+4) for tips, use the {: .callout} callout
+
+Examples: 
+1) **R markdown examples**
+code: 
+![image](https://user-images.githubusercontent.com/58574172/100487984-54d48500-30c0-11eb-9a35-0705f9c5e15d.png)
+*I can't get the markdown to render correctly this this comment so this is just a screenshot
+
+outputs to:
+![image](https://user-images.githubusercontent.com/58574172/100487875-b3e5ca00-30bf-11eb-98a8-554a7eb081bd.png)
+
+2) **Paper edits (not challenges)**
+code: 
+```
+~~~
+## MATERIALS AND METHODS  
+### Survey Overview  
+### Data Analysis  
+~~~
+{: .source}
+```
+outputs as: 
+![image](https://user-images.githubusercontent.com/58574172/100487796-55b8e700-30bf-11eb-8925-52fad5db9c18.png)
+
+3) **Paper edits (challenges)**
+- Make sure to label challenges `CHALLENGE [ep#.challenge#]`
+- the solution is just `SOLUTION`
+code: 
+```
+> ## CHALLENGE 3.1
+> Insert headings throughout the rest of the paper so it is split into 5 sections (Introduction, Materials and Methods, Results and Discussion, Conclusion, and References). Use the search function in R Markdown to find these lines in the document. 
+>
+>> ## SOLUTION
+>> ```
+>> ## INTRODUCTION
+>> ## MATERIALS AND METHODS
+>> ## RESULTS AND DISCUSSION
+>> ## CONCLUSION
+>> ## REFERENCES
+>> ```
+>> Why are we using `##`? Because `#` should only be used once in the paper (for the title) and `##` is for the next heading level.
+> {: .solution}
+{: .challenge}
+```
+outputs as:
+![image](https://user-images.githubusercontent.com/58574172/100487815-6e290180-30bf-11eb-8e54-c4f97dfb39be.png)
+
+4) 
+- heading should say `Tip: [short description of tip]`
+```
+> ## Tip: how to make callouts
+> Use `>`s on each line of callout and after callout ends the next line should contain {: .callout}
+{: .callout}
+```
+
+### Generate regular vanilla Markdown from R-markdown for episodes
+
+When creating episodes in the `_episodes_rmd` directory you'll want to process them into rgular markdown so they will be further processed by Github and published when pushed to Github.  If you have the `make` utility, which Mac or Linux has by default you can call `make lesson-m`.   But if you do not have `make` which is the case for most windows users then you can use R and Knitr from the command line.
+
+#### 4 methods:
+(ordered from most automated to least automated)
+
+**3) example of using knitr from the command line/ Rstudio terminal to process an R-markdown file into a regular markdown file:**
+*assumes you are in the root directory
+*change the file name to match the episode you edited
+```
+Rscript -e 'knitr::knit("./_episodes_rmd/01-r-markdown-episode-template.Rmd", output = "./_episodes/01-r-markdown-episode-template.md")'
+```
+
+**4) Change your knit button settings**
+Next to the knit button there is a gear for options. Click it and chose `output options` at the very bottom of the list. Choose the `Advanced` tab and check `keep markdown source file`. Make sure to 1) move the `.md` file to the `_episodes/` folder and 2) delete the html file output. 
+
+
+
+
 
 
 ## Contributing
