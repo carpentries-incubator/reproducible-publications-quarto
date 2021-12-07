@@ -1,4 +1,4 @@
-# FIXME Lesson title
+# Intro to Reproducible Publications with RStudio
 
 [![Create a Slack Account with us](https://img.shields.io/badge/Create_Slack_Account-The_Carpentries-071159.svg)](https://swc-slack-invite.herokuapp.com/)
 
@@ -15,12 +15,12 @@ and make sure you have everything you need to begin developing your new lesson.
 Before you begin developing your new lesson,
 here are a few things we recommend you do:
 
-* [ ] Decide on a title for your new lesson!
+~~* [ ] Decide on a title for your new lesson!
   Once you've chosen a new title, you can set the value for `lesson_title`
   in [`_config.yml`](_config.yml)
-* [ ] Add the URL to your built lesson pages to the repository description\*
-* [ ] [Add relevant topic tags to your lesson repository][cdh-topic-tags].
-* [ ] Fill in the fields marked `FIXME` in:
+~* [ ] Add the URL to your built lesson pages to the repository description\*
+~* [ ] [Add relevant topic tags to your lesson repository][cdh-topic-tags].
+~* [ ] Fill in the fields marked `FIXME` in:
   * this README
   * [`_config.yml`](_config.yml)
 * [ ] If you're going to be developing lesson material for the first time
