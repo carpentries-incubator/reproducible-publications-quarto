@@ -27,10 +27,10 @@ here are a few things we recommend you do:
   according to our design principles,
   consider reading the [Carpentries Curriculum Development Handbook][cdh]
 * [ ] Consult the [Lesson Example][lesson-example] website to find out more about
-  working with the lesson template
+  working with the lesson template  
 ~~* [ ] If you are planning to write your lesson in RMarkdown,
   [create a `main` branch and set this as the default branch in your repository settings][change-default-branch]~~  
-* [ ] Update this README with relevant information about your lesson
+* [ ] Update this README with relevant information about your lesson  
   and delete this section
 
 
