@@ -114,24 +114,19 @@ outputs as:
 
 ### Generate regular vanilla Markdown from R-markdown for episodes
 
-When creating episodes in the `_episodes_rmd` directory you'll want to process them into rgular markdown so they will be further processed by Github and published when pushed to Github.  If you have the `make` utility, which Mac or Linux has by default you can call `make lesson-m`.   But if you do not have `make` which is the case for most windows users then you can use R and Knitr from the command line.
+When creating episodes in the `_episodes_rmd` directory you'll want to process them into rgular markdown so they will be further processed by Github and published when pushed to Github.  If you have the `make` utility, which Mac or Linux has by default you can call `make lesson-m`.   But if you do not have `make` which is the case for most windows users then you can use R and Knitr from the command line. There are two ways to do this for Windows users:
 
-#### 4 methods:
-(ordered from most automated to least automated)
-
-**3) example of using knitr from the command line/ Rstudio terminal to process an R-markdown file into a regular markdown file:**
+**1) Use knitr from the command line/ Rstudio terminal to process an R-markdown file into a regular markdown file:**
 *assumes you are in the root directory
 *change the file name to match the episode you edited
 ```
 Rscript -e 'knitr::knit("./_episodes_rmd/01-r-markdown-episode-template.Rmd", output = "./_episodes/01-r-markdown-episode-template.md")'
 ```
 
-**4) Change your knit button settings**
-Next to the knit button there is a gear for options. Click it and chose `output options` at the very bottom of the list. Choose the `Advanced` tab and check `keep markdown source file`. Make sure to 1) move the `.md` file to the `_episodes/` folder and 2) delete the html file output. 
+**2) Change your knit button settings**
+Next to the knit button there is a gear for options. Click it and chose `output options` at the very bottom of the list. Choose the `Advanced` tab and check `keep markdown source file`. Requires that you move some files around after: Make sure to 1) move the `.md` file to the `_episodes/` folder and 2) delete the html file output. 
 
-
-
-
+*method 1 will work even if all your image links etc. aren't working. Method 2 won't work unless all links are correct - errors out otherwise.
 
 
 ## Contributing
