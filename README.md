@@ -128,6 +128,15 @@ Next to the knit button there is a gear for options. Click it and chose `output 
 
 *method 1 will work even if all your image links etc. aren't working. Method 2 won't work unless all links are correct - errors out otherwise.
 
+#### Code for all lessons method 1 cheatsheet:
+~~~
+# episode 2:
+Rscript -e 'knitr::knit("./_episodes_rmd/02-basic-rstudio.Rmd", output = "./_episodes/02-basic-rstudio.md")'
+# episode 3:
+Rscript -e 'knitr::knit("./_episodes_rmd/03-rmarkdown-file.Rmd", output = "./_episodes/03-rmarkdown-file.md")'
+# episode 4:
+Rscript -e 'knitr::knit("./_episodes_rmd/04-good-project.Rmd", output = "./_episodes/04-good-project.md")'
+~~~
 
 ## Contributing
 
