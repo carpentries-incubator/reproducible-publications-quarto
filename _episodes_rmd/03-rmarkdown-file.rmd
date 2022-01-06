@@ -33,7 +33,7 @@ There are four distinct steps in the R Markdown workflow:
 4. render the document with **Knitr**  
 <br>
 
-![R Markdown Workflow](../fig/02-rmd-workflow.png)
+![R Markdown Workflow](../fig/03-rmd-workflow.png)
 
 Let’s dig in to those more:
 
@@ -48,7 +48,7 @@ R Markdown's default YAML header includes the following metadata surrounded by t
 * date  
 * output  
 
-![Add updated image](../fig/02-rmd-template-yaml.png)
+![Add updated image](../fig/03-rmd-template-yaml.png)
 
 The first three are self-explanatory, but what's the output? We saw this in the wizard for starting a new document, by default you are able to pick from pdf, html, and word document. Basically, this allows you to export your rmd file as a file type of your choice. There are [other options for output](https://bookdown.org/yihui/rmarkdown/output-formats.html) and even more can be added by installing certain packages, but these are the three default options.   
 <br>
@@ -77,7 +77,7 @@ HTML
 LaTeX
 
 
-![Update image (crop or replace to remove date)](../fig/02-rmd-template-text.png)
+![rmd template text](../fig/03-rmd-template-text.png)
 
 > ## CHALLENGE 2.3 - Formatting with Symbols (optional)
 > In Rmd certain symbols are used to denote formatting that should happen to the text (after we "knit" or render). Before we knit, these symbols will show up seemingly "randomly" throughout the text and don't contribute to the narrative in a logical way. In the generic Rmd document, there are three types of such symbols (##, **, <>) . Each symbol represents a different kind of formatting (think of your text formatting buttons you use in Word). Can you deduce from the surrounding text how these symbols format the surrounding text?  
@@ -105,7 +105,7 @@ SQL
 We’ll see more later, but a complete list of compatible languages can be found at: https://rmarkdown.rstudio.com/lesson-5.html 
 
 
-![add / update image (remove outdated yaml)](../fig/02-rmd-template-code.png)
+![rmd template code](../fig/03-rmd-template-code.png)
 
 ### 4. Rendering your Rmd document:
 This is called "knitting"" and the button looks like a spool of yarn with a knitting needle. Clicking the knit button will compile the code, check for errors, and finally, output the type of file indicated in your yaml header. One nice thing about the knit button is that it saves the .Rmd document each time you run it. Your rmd document may not run and render as your indicated output if there are any errors in the document so it also functions somewhat as a code checker.
@@ -121,10 +121,10 @@ Click the "knit" button
 
 Before you can render your document, you'll need to give it a file name and choose what folder you want to save it to. Choose `rmd-workshop-paper.rmd` as your file name and save the file to your `code` sub-folder. 
 
-![First knit choose filename](../fig/02-knit-filename.PNG)
+![First knit choose filename](../fig/03-knit-filename.PNG)
 
 This is how our hmtl document will render after clicking the knit button and choosing a file name:
-![Knit html output](../fig/02-knit-echoTRUE.PNG)
+![Knit html output](../fig/03-knit-echoTRUE.PNG)
 
 > ## CHALLENGE 2.4 - echo=TRUE Function (optional)
 > Can you deduce what the echo=TRUE option stands for?  
@@ -140,11 +140,11 @@ We have learned how to start a new document on RStudio and we will learn good pr
 
 Let’s take a look at that! On RStudio, load the `rticles` package by Once you’ve loaded the package is completed, use the plus icon at the upper-left side of your screen to create a new document or proceed with File>New File>R Markdown. This will prompt the window below:
 
-![Fig. 8.1 - Rticles Templates (Step 1)](../fig/08-rticles-template1.png)
+![Rticles Templates (Step 1)](../fig/03-rticles-template1.png)
 
 Clicking on “from template” will prompt a couple of dozen templates listed as {rticles}. Let’s choose the Biometrics Journal template and then, OK. 
 
-![Fig. 8.2 - Rticles Templates (Step 2)](../fig/08-rticles-template2.png)
+![Rticles Templates (Step 2)](../fig/03-rticles-template2.png)
 
 Note that along with the skeleton of the paper you will see a message on top indicating additional packages you may need to install for that particular template.
 
