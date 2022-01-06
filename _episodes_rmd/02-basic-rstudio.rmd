@@ -61,22 +61,7 @@ Packages can be installed and updated from the Package tab with the Install and 
 
 > ## CHALLENGE 2.2 - Installing Packages
 >
-> Install the following packages: `bookdown`, `tidyverse`, `knitr`, `rticles`,`kable` 
->> ## SOLUTION 
->> We can use the `install.packages()` command to install the required packages. 
->> ```
->> install.packages("bookdown")\
->> install.packages("tidyverse")
->> install.packages("knitr")
->> install.packages("rticles") 
->> install.packages("kable")
->> ```
->> An alternate solution, to install multiple packages with a single `install.packages()` command is: 
->> ```
->> install.packages(c("bookdown", "tidyverse", "knitr", "rticles", "kable")) 
->> ```
-> {: .solution} 
-{: .challenge}
+> Install the following packages: `bookdown`, `tidyverse`, `knitr`, `rticles`,`kable` \> ## SOLUTION \> We can use the `install.packages()` command to install the required packages. \> `> install.packages("bookdown")\ > install.packages("tidyverse") > install.packages("knitr") > install.packages("rticles")  > install.packages("kable") >` \> An alternate solution, to install multiple packages with a single `install.packages()` command is: \> `> install.packages(c("bookdown", "tidyverse", "knitr", "rticles", "kable"))  >` {: .solution} {: .challenge}
 
 ## Starting a R Markdown File
 
