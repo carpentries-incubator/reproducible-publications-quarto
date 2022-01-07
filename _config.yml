@@ -102,3 +102,6 @@ highlighter: rouge
 
 # Remote theme
 remote_theme: carpentries/carpentries-theme
+
+# Local Jekyll rendering fix 1.07.22
+future: true
