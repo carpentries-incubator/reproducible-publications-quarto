@@ -1,87 +1,87 @@
 current directory: /home/runner/work/Introduction-to-Reproducible-Publications-with-RStudio/Introduction-to-Reproducible-Publications-with-RStudio/.vendor/bundle/ruby/2.7.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
-/opt/hostedtoolcache/Ruby/2.7.5/x64/bin/ruby -I /opt/hostedtoolcache/Ruby/2.7.5/x64/lib/ruby/2.7.0 -r ./siteconf20220107-9757-voi3yw.rb extconf.rb
+/opt/hostedtoolcache/Ruby/2.7.5/x64/bin/ruby -I /opt/hostedtoolcache/Ruby/2.7.5/x64/lib/ruby/2.7.0 -r ./siteconf20220107-9697-13z0lnr.rb extconf.rb
 creating Makefile
 
 current directory: /home/runner/work/Introduction-to-Reproducible-Publications-with-RStudio/Introduction-to-Reproducible-Publications-with-RStudio/.vendor/bundle/ruby/2.7.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
 make "DESTDIR=" clean
 make[1]: Entering directory '/home/runner/work/Introduction-to-Reproducible-Publications-with-RStudio/Introduction-to-Reproducible-Publications-with-RStudio/.vendor/bundle/ruby/2.7.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser'
 Makefile:175: warning: overriding recipe for target 'clean'
-`è2"V:175: warning: ignoring old recipe for target 'clean'
+`ﬂ–oÅU:175: warning: ignoring old recipe for target 'clean'
 Makefile:182: warning: overriding recipe for target 'distclean'
-`è2"V:182: warning: ignoring old recipe for target 'distclean'
+`ﬂ–oÅU:182: warning: ignoring old recipe for target 'distclean'
 Makefile:190: warning: overriding recipe for target 'install-so'
-`è2"V:190: warning: ignoring old recipe for target 'install-so'
+`ﬂ–oÅU:190: warning: ignoring old recipe for target 'install-so'
 Makefile:200: warning: overriding recipe for target 'pre-install-rb-default'
-`è2"V:200: warning: ignoring old recipe for target 'pre-install-rb-default'
+`ﬂ–oÅU:200: warning: ignoring old recipe for target 'pre-install-rb-default'
 Makefile:202: warning: overriding recipe for target '.sitearchdir.time'
-`è2"V:202: warning: ignoring old recipe for target '.sitearchdir.time'
+`ﬂ–oÅU:202: warning: ignoring old recipe for target '.sitearchdir.time'
 Makefile:212: warning: overriding recipe for target '.cc.o'
-`è2"V:212: warning: ignoring old recipe for target '.cc.o'
+`ﬂ–oÅU:212: warning: ignoring old recipe for target '.cc.o'
 Makefile:216: warning: overriding recipe for target '.cc.S'
-`è2"V:216: warning: ignoring old recipe for target '.cc.S'
+`ﬂ–oÅU:216: warning: ignoring old recipe for target '.cc.S'
 Makefile:220: warning: overriding recipe for target '.mm.o'
-`è2"V:220: warning: ignoring old recipe for target '.mm.o'
+`ﬂ–oÅU:220: warning: ignoring old recipe for target '.mm.o'
 Makefile:224: warning: overriding recipe for target '.mm.S'
-`è2"V:224: warning: ignoring old recipe for target '.mm.S'
+`ﬂ–oÅU:224: warning: ignoring old recipe for target '.mm.S'
 Makefile:228: warning: overriding recipe for target '.cxx.o'
-`è2"V:228: warning: ignoring old recipe for target '.cxx.o'
+`ﬂ–oÅU:228: warning: ignoring old recipe for target '.cxx.o'
 Makefile:232: warning: overriding recipe for target '.cxx.S'
-`è2"V:232: warning: ignoring old recipe for target '.cxx.S'
+`ﬂ–oÅU:232: warning: ignoring old recipe for target '.cxx.S'
 Makefile:236: warning: overriding recipe for target '.cpp.o'
-`è2"V:236: warning: ignoring old recipe for target '.cpp.o'
+`ﬂ–oÅU:236: warning: ignoring old recipe for target '.cpp.o'
 Makefile:240: warning: overriding recipe for target '.cpp.S'
-`è2"V:240: warning: ignoring old recipe for target '.cpp.S'
+`ﬂ–oÅU:240: warning: ignoring old recipe for target '.cpp.S'
 Makefile:244: warning: overriding recipe for target '.c.o'
-`è2"V:244: warning: ignoring old recipe for target '.c.o'
+`ﬂ–oÅU:244: warning: ignoring old recipe for target '.c.o'
 Makefile:248: warning: overriding recipe for target '.c.S'
-`è2"V:248: warning: ignoring old recipe for target '.c.S'
+`ﬂ–oÅU:248: warning: ignoring old recipe for target '.c.S'
 Makefile:252: warning: overriding recipe for target '.m.o'
-`è2"V:252: warning: ignoring old recipe for target '.m.o'
+`ﬂ–oÅU:252: warning: ignoring old recipe for target '.m.o'
 Makefile:256: warning: overriding recipe for target '.m.S'
-`è2"V:256: warning: ignoring old recipe for target '.m.S'
+`ﬂ–oÅU:256: warning: ignoring old recipe for target '.m.S'
 Makefile:260: warning: overriding recipe for target 'ruby_http_parser.so'
-`è2"V:260: warning: ignoring old recipe for target 'ruby_http_parser.so'
+`ﬂ–oÅU:260: warning: ignoring old recipe for target 'ruby_http_parser.so'
 make[1]: Leaving directory '/home/runner/work/Introduction-to-Reproducible-Publications-with-RStudio/Introduction-to-Reproducible-Publications-with-RStudio/.vendor/bundle/ruby/2.7.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser'
 
 current directory: /home/runner/work/Introduction-to-Reproducible-Publications-with-RStudio/Introduction-to-Reproducible-Publications-with-RStudio/.vendor/bundle/ruby/2.7.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
 make "DESTDIR="
 make[1]: Entering directory '/home/runner/work/Introduction-to-Reproducible-Publications-with-RStudio/Introduction-to-Reproducible-Publications-with-RStudio/.vendor/bundle/ruby/2.7.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser'
 Makefile:175: warning: overriding recipe for target 'clean'
-`o”V:175: warning: ignoring old recipe for target 'clean'
+`ø=U|U:175: warning: ignoring old recipe for target 'clean'
 Makefile:182: warning: overriding recipe for target 'distclean'
-`o”V:182: warning: ignoring old recipe for target 'distclean'
+`ø=U|U:182: warning: ignoring old recipe for target 'distclean'
 Makefile:190: warning: overriding recipe for target 'install-so'
-`o”V:190: warning: ignoring old recipe for target 'install-so'
+`ø=U|U:190: warning: ignoring old recipe for target 'install-so'
 Makefile:200: warning: overriding recipe for target 'pre-install-rb-default'
-`o”V:200: warning: ignoring old recipe for target 'pre-install-rb-default'
+`ø=U|U:200: warning: ignoring old recipe for target 'pre-install-rb-default'
 Makefile:202: warning: overriding recipe for target '.sitearchdir.time'
-`o”V:202: warning: ignoring old recipe for target '.sitearchdir.time'
+`ø=U|U:202: warning: ignoring old recipe for target '.sitearchdir.time'
 Makefile:212: warning: overriding recipe for target '.cc.o'
-`o”V:212: warning: ignoring old recipe for target '.cc.o'
+`ø=U|U:212: warning: ignoring old recipe for target '.cc.o'
 Makefile:216: warning: overriding recipe for target '.cc.S'
-`o”V:216: warning: ignoring old recipe for target '.cc.S'
+`ø=U|U:216: warning: ignoring old recipe for target '.cc.S'
 Makefile:220: warning: overriding recipe for target '.mm.o'
-`o”V:220: warning: ignoring old recipe for target '.mm.o'
+`ø=U|U:220: warning: ignoring old recipe for target '.mm.o'
 Makefile:224: warning: overriding recipe for target '.mm.S'
-`o”V:224: warning: ignoring old recipe for target '.mm.S'
+`ø=U|U:224: warning: ignoring old recipe for target '.mm.S'
 Makefile:228: warning: overriding recipe for target '.cxx.o'
-`o”V:228: warning: ignoring old recipe for target '.cxx.o'
+`ø=U|U:228: warning: ignoring old recipe for target '.cxx.o'
 Makefile:232: warning: overriding recipe for target '.cxx.S'
-`o”V:232: warning: ignoring old recipe for target '.cxx.S'
+`ø=U|U:232: warning: ignoring old recipe for target '.cxx.S'
 Makefile:236: warning: overriding recipe for target '.cpp.o'
-`o”V:236: warning: ignoring old recipe for target '.cpp.o'
+`ø=U|U:236: warning: ignoring old recipe for target '.cpp.o'
 Makefile:240: warning: overriding recipe for target '.cpp.S'
-`o”V:240: warning: ignoring old recipe for target '.cpp.S'
+`ø=U|U:240: warning: ignoring old recipe for target '.cpp.S'
 Makefile:244: warning: overriding recipe for target '.c.o'
-`o”V:244: warning: ignoring old recipe for target '.c.o'
+`ø=U|U:244: warning: ignoring old recipe for target '.c.o'
 Makefile:248: warning: overriding recipe for target '.c.S'
-`o”V:248: warning: ignoring old recipe for target '.c.S'
+`ø=U|U:248: warning: ignoring old recipe for target '.c.S'
 Makefile:252: warning: overriding recipe for target '.m.o'
-`o”V:252: warning: ignoring old recipe for target '.m.o'
+`ø=U|U:252: warning: ignoring old recipe for target '.m.o'
 Makefile:256: warning: overriding recipe for target '.m.S'
-`o”V:256: warning: ignoring old recipe for target '.m.S'
+`ø=U|U:256: warning: ignoring old recipe for target '.m.S'
 Makefile:260: warning: overriding recipe for target 'ruby_http_parser.so'
-`o”V:260: warning: ignoring old recipe for target 'ruby_http_parser.so'
+`ø=U|U:260: warning: ignoring old recipe for target 'ruby_http_parser.so'
 compiling ruby_http_parser.c
 compiling ryah_http_parser.c
 linking shared-object ruby_http_parser.so
@@ -91,58 +91,40 @@ current directory: /home/runner/work/Introduction-to-Reproducible-Publications-w
 make "DESTDIR=" install
 make[1]: Entering directory '/home/runner/work/Introduction-to-Reproducible-Publications-with-RStudio/Introduction-to-Reproducible-Publications-with-RStudio/.vendor/bundle/ruby/2.7.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser'
 Makefile:175: warning: overriding recipe for target 'clean'
-`–ò
-V:175: warning: ignoring old recipe for target 'clean'
+`üã	æU:175: warning: ignoring old recipe for target 'clean'
 Makefile:182: warning: overriding recipe for target 'distclean'
-`–ò
-V:182: warning: ignoring old recipe for target 'distclean'
+`üã	æU:182: warning: ignoring old recipe for target 'distclean'
 Makefile:190: warning: overriding recipe for target 'install-so'
-`–ò
-V:190: warning: ignoring old recipe for target 'install-so'
+`üã	æU:190: warning: ignoring old recipe for target 'install-so'
 Makefile:200: warning: overriding recipe for target 'pre-install-rb-default'
-`–ò
-V:200: warning: ignoring old recipe for target 'pre-install-rb-default'
+`üã	æU:200: warning: ignoring old recipe for target 'pre-install-rb-default'
 Makefile:202: warning: overriding recipe for target '.sitearchdir.time'
-`–ò
-V:202: warning: ignoring old recipe for target '.sitearchdir.time'
+`üã	æU:202: warning: ignoring old recipe for target '.sitearchdir.time'
 Makefile:212: warning: overriding recipe for target '.cc.o'
-`–ò
-V:212: warning: ignoring old recipe for target '.cc.o'
+`üã	æU:212: warning: ignoring old recipe for target '.cc.o'
 Makefile:216: warning: overriding recipe for target '.cc.S'
-`–ò
-V:216: warning: ignoring old recipe for target '.cc.S'
+`üã	æU:216: warning: ignoring old recipe for target '.cc.S'
 Makefile:220: warning: overriding recipe for target '.mm.o'
-`–ò
-V:220: warning: ignoring old recipe for target '.mm.o'
+`üã	æU:220: warning: ignoring old recipe for target '.mm.o'
 Makefile:224: warning: overriding recipe for target '.mm.S'
-`–ò
-V:224: warning: ignoring old recipe for target '.mm.S'
+`üã	æU:224: warning: ignoring old recipe for target '.mm.S'
 Makefile:228: warning: overriding recipe for target '.cxx.o'
-`–ò
-V:228: warning: ignoring old recipe for target '.cxx.o'
+`üã	æU:228: warning: ignoring old recipe for target '.cxx.o'
 Makefile:232: warning: overriding recipe for target '.cxx.S'
-`–ò
-V:232: warning: ignoring old recipe for target '.cxx.S'
+`üã	æU:232: warning: ignoring old recipe for target '.cxx.S'
 Makefile:236: warning: overriding recipe for target '.cpp.o'
-`–ò
-V:236: warning: ignoring old recipe for target '.cpp.o'
+`üã	æU:236: warning: ignoring old recipe for target '.cpp.o'
 Makefile:240: warning: overriding recipe for target '.cpp.S'
-`–ò
-V:240: warning: ignoring old recipe for target '.cpp.S'
+`üã	æU:240: warning: ignoring old recipe for target '.cpp.S'
 Makefile:244: warning: overriding recipe for target '.c.o'
-`–ò
-V:244: warning: ignoring old recipe for target '.c.o'
+`üã	æU:244: warning: ignoring old recipe for target '.c.o'
 Makefile:248: warning: overriding recipe for target '.c.S'
-`–ò
-V:248: warning: ignoring old recipe for target '.c.S'
+`üã	æU:248: warning: ignoring old recipe for target '.c.S'
 Makefile:252: warning: overriding recipe for target '.m.o'
-`–ò
-V:252: warning: ignoring old recipe for target '.m.o'
+`üã	æU:252: warning: ignoring old recipe for target '.m.o'
 Makefile:256: warning: overriding recipe for target '.m.S'
-`–ò
-V:256: warning: ignoring old recipe for target '.m.S'
+`üã	æU:256: warning: ignoring old recipe for target '.m.S'
 Makefile:260: warning: overriding recipe for target 'ruby_http_parser.so'
-`–ò
-V:260: warning: ignoring old recipe for target 'ruby_http_parser.so'
-/usr/bin/install -c -m 0755 ruby_http_parser.so ./.gem.20220107-9757-1q7tso2
+`üã	æU:260: warning: ignoring old recipe for target 'ruby_http_parser.so'
+/usr/bin/install -c -m 0755 ruby_http_parser.so ./.gem.20220107-9697-176wr9t
 make[1]: Leaving directory '/home/runner/work/Introduction-to-Reproducible-Publications-with-RStudio/Introduction-to-Reproducible-Publications-with-RStudio/.vendor/bundle/ruby/2.7.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser'
