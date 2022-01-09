@@ -1,6 +1,6 @@
 ---
 source: Rmd  
-title: "Good Practices for Research Projects in RStudio"  
+title: "Good Practices for Managing Projects in RStudio"  
 teaching: FIXME
 exercises: FIXME
 questions:
@@ -23,25 +23,27 @@ keypoints:
 
 
 ## Managing Research Projects in R
-Now that we’ve learned some of the basics of authoring in RStudio with R Markdown documents, let’s take a step back and talk about research project management as a whole. The ability to integrate code and narratives is a major advantage of the RStudio environment, especially consideringthe scientific process is naturally incremental, and many projects start life as random notes, some code, then a manuscript, and eventually everything ends up a bit mixed together. To complicate things further, we are often working with other collaborators, lab members, graduate students, faculty from the same or different institutions, which makes it that much more difficult to keep projects organized. When you throw data into the mix (sometimes huge amounts of it!), it’s integral to use best practices to maintain the integrity of your analysis and to be able to publish high quality and reproducible research. Using Rmarkdown is a powerful tool, but it can’t be fully utilized unless your project documents, scripts and other files are well-organized. So let’s take a look at RStudio’s features to manage projects and discuss some of the best practices when working with data and collaborators. 
+Now that we’ve learned some of the basics of authoring in RStudio with R Markdown documents, let’s take a step back and talk about research project management as a whole. 
 
-Project Stress Points
+The ability to integrate code and narratives is a major advantage of the RStudio environment, especially consideringthe scientific process is naturally incremental, and many projects start life as random notes, some code, then a manuscript, and eventually everything ends up a bit mixed together. To complicate things further, we are often working with other collaborators, lab members, graduate students, faculty from the same or different institutions, which makes it that much more difficult to keep projects organized. When you throw data into the mix (sometimes huge amounts of it!), it’s integral to use best practices to maintain the integrity of your analysis and to be able to publish high quality and reproducible research. Using Rmarkdown is a powerful tool, but it can’t be fully utilized unless your project documents, scripts and other files are well-organized. So let’s take a look at RStudio’s features to manage projects and discuss some of the best practices when working with data and collaborators. 
+
+## Research Project Stress Points
 We often have organizational or logistical stress points in our research that may become breaking points, especially when it comes to working with collaborators, returning to a project after a hiatus, or dealing with data and scripts. Let’s discuss three of those common stress points:
 
-File/folder disorganization
-I.e. cannot find files on your computer
-Unsure what is the most recent version of your work
-Path issues when trying to run code 
-Reviewers or colleagues cannot understand or run code/analyses
-Storage and sharing issues
-Files are only saved to your computer and are vulnerable to computer/harddrive failure
-When working with collaborators, they (or you) don’t share the files needed
-Files are shared via email attachments
-Difficult to know if you have the latest version of documents
-Losing track of project status
-You cannot remember where you are in a project after being away for an extended period (or what you worked on the previous day (no judgement))
-You aren’t sure what you should be working on next
-You have various to-do notes spread across your office or home (or never write them down in the first place)
+- **File/folder disorganization**
+  - I.e. cannot find files on your computer
+  - Unsure what is the most recent version of your work
+  - Path issues when trying to run code 
+  - Reviewers or colleagues cannot understand or run code/analyses
+- **Storage and sharing issues**
+  - Files are only saved to your computer and are vulnerable to computer/harddrive failure
+  - When working with collaborators, they (or you) don’t share the files needed
+  - Files are shared via email attachments
+  - Difficult to know if you have the latest version of documents
+- **Losing track of project status**
+  - You cannot remember where you are in a project after being away for an extended period (or what you worked on the previous day (no judgement))
+  - You aren’t sure what you should be working on next
+  - You have various to-do notes spread across your office or home (or never write them down in the first place)
 
 > ## Discussion
 > To what extent do these stress points affect your research projects? Are there additional issues that you’ve encountered that slow down or derail your work?
@@ -100,10 +102,10 @@ FIXME With project details such as?
 
 For our project we’re working in today, we used the following setup for folders and files:
 
-**code:** contains the scripts that generate the plots and analysis (found in `output/plots`)  
-    **/functions:** contains custom functions written for the data pre-processing  
-**data:** this folder contains the raw and cleaned data files  
-	**/foodchoice_data:** contains the individual data files from food choice trials  
+- **code:** contains the scripts that generate the plots and analysis (found in `output/plots`)  
+    - **/functions:** contains custom functions written for the data pre-processing  
+- **data:** this folder contains the raw and cleaned data files  
+	  - **/foodchoice_data:** contains the individual data files from food choice trials  
 **output:**
 	**/data:** contains the output data file after applying custom pre-processing function  
 	**/plots:** contains pdfs of the plots generated from the plot scripts in the code folder  
