@@ -44,7 +44,7 @@ R Markdown's default YAML header includes the following metadata surrounded by t
 * date  
 * output  
 
-![Add updated image](../fig/03-rmd-template-yaml.png)
+![yaml highlighted in RMD document](../fig/03-rmd-template-yaml.png)
 
 The first three are self-explanatory, but what's the output? We saw this in the wizard for starting a new document, by default you are able to pick from pdf, html, and word document. Basically, this allows you to export your rmd file as a file type of your choice. There are [other options for output](https://bookdown.org/yihui/rmarkdown/output-formats.html) and even more can be added by installing certain packages, but these are the three default options.   
 <br>
@@ -113,7 +113,7 @@ We’re going to pause here and see what the R Markdown does when it’s rendere
 This is a little preview of what's to come in the Knitr syntax episodes later on.
 Click the "knit" button
 
-![Add or update image](../fig/02-rmd-knit-button.png)
+![Add or update image](../fig/03-knit-button.PNG)
 
 Before you can render your document, you'll need to give it a file name and choose what folder you want to save it to. Choose `rmd-workshop-paper.rmd` as your file name and save the file to your `code` sub-folder. 
 
@@ -134,20 +134,19 @@ This is how our hmtl document will render after clicking the knit button and cho
 
 We have learned how to start a new document on RStudio and we will learn good practices for project organization next. But, let’s say you are writing a paper and you already know which journal you are submitting it to? Writing it in your own style and then formatting prior to submission is time-consuming, right? The good news is that RStudio makes our lives easier. Through a package called “rticles” you can access a number of existing journals’ templates that will let you easily and quickly format and prepare your paper draft for peer review. Even if the journal you submit to does not have a template, it may be good to review several of the templates to get an idea of formatting options available to you in R Markdown.. 
 
-Let’s take a look at that! On RStudio, load the `rticles` package by Once you’ve loaded the package is completed, use the plus icon at the upper-left side of your screen to create a new document or proceed with File>New File>R Markdown. This will prompt the window below:
+Let’s take a look at that! On RStudio, load the `rticles` package by Once you’ve loaded the package is completed, use the plus icon at the upper-left side of your screen to create a new document or proceed with File>New File>R Markdown. This will prompt the window for creating a new R Markdown document as we saw earlier.
 
-![Rticles Templates (Step 1)](../fig/03-rticles-template1.png)
-
-Clicking on “from template” will prompt a couple of dozen templates listed as {rticles}. Let’s choose the Biometrics Journal template and then, OK. 
+Clicking on `“From Template”` will prompt a couple of dozen templates listed as {rticles}. Let’s choose the Biometrics Journal template and then, OK. 
 
 ![Rticles Templates (Step 2)](../fig/03-rticles-template2.png)
 
 Note that along with the skeleton of the paper you will see a message on top indicating additional packages you may need to install for that particular template.
 
-> ##Tip:
->Creating templates and adding other templates is beyond the scope of this workshop, but that is also possible. If you submit to the same journal frequently or use the same formatting for many of your publications, it may be worth creating your own template to save time. To learn more about how, you can create templates in RStudio:, 
+> ## Tip:  
+> Creating templates and adding other templates is beyond the scope of this workshop, but that is also possible. If you submit to the same journal frequently or use the same formatting for many of your publications, it may be worth creating your own template to save time. To learn more about how you can create templates in RStudio:
 > - [Using R Markdown Templates](https://bookdown.org/yihui/rmarkdown/document-templates.html) on the right-hand side check the [rticles package documentation](https://cran.r-project.org/web/packages/rticles/rticles.pdf)]
 > - [How to contribute to a new article template?](https://pkgs.rstudio.com/rticles/PULL_REQUEST_TEMPLATE.html)
+{: .callout}
 
 
 FIXME:
