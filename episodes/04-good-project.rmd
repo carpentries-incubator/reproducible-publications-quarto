@@ -32,7 +32,7 @@ R Markdown documents, let’s take a step back and talk about research project
 management as a whole. 
 
 The ability to integrate code and narratives is a major advantage of the RStudio 
-environment, especially consideringthe scientific process is naturally 
+environment, especially considering the scientific process is naturally 
 incremental, and many projects start life as random notes, some code, then a 
 manuscript, and eventually everything ends up a bit mixed together. To 
 complicate things further, we are often working with other collaborators, lab 
@@ -103,7 +103,9 @@ Then, we’ll get started on our project!
 ## Project File/Folder Organization
 ### Important principles:  
 
-Although there is no “best” way to lay out a project, there are some general principles to adhere to that will make project management easier:  
+Although there is no “best” way to lay out a project, there are some general 
+principles to adhere to that will make project management easier:  
+
 **Practice good file-naming practices**  
 The three principles of file-naming are: 
 
@@ -159,7 +161,7 @@ For our project we’re working in today, we used the following setup for folder
 - **output:**
 	- **/data:** contains the output data file after applying custom pre-processing function  
 	- **/plots:** contains pdfs of the plots generated from the plot scripts in the code folder  
-- **pub:** All files needed for the publication of the research project  
+- **report:** All files needed for the publication of the research project  
 	- **/source:** .Rmd file for the paper and additional files needed for rendering the paper  
       - **/fig:** contains the images created specifically (not through the analysis scripts) for the paper  
 	- **/output:** contains the final html output of the Rmd paper  
