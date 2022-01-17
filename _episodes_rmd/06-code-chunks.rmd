@@ -193,12 +193,14 @@ Now that we’ve named and adjusted the rendering for our first plot, let’s tr
 
 Problem here is that the file path is still wrong as it was with the first script, but if we’re pulling an external script we don’t want to have to go into that script and change the file path. However… we are going to let this error sit for a second while we learn about Global knitr options and a neat trick that will resolve this issue and make other settings in our paper more automated.
 
+use this option instead so plots display correctly: https://stackoverflow.com/questions/52397430/include-code-from-an-external-r-script-run-in-display-both-code-and-output
+
 
 ## Global Knitr options
 
 Benefits of global knitr options:
 1) Global code chunk options
-2) Set working directory so filepaths can be relative to the root instead of our .Rmd file
+---2) Set working directory so filepaths can be relative to the root instead of our .Rmd file--- FIXME REMOVE
 3) Load libraries and data once instead of in each code chunk
 
 To set global options that apply to every chunk in your file, call we will call `knitr::opts_chunk$set()` in a new code chunk right after our yaml header (name the new code chunk `setup`.
@@ -210,7 +212,7 @@ knitr::opts_chunk$set()`
 
 ### Set working directory to root:
 
-FIXME 
+FIXME REMOVE 
 
 https://stackoverflow.com/questions/26994958/error-cannot-open-the-connection-in-executing-knit-html-in-rstudio 
 
