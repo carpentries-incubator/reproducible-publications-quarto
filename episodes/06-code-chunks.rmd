@@ -195,12 +195,16 @@ Problem here is that the file path is still wrong as it was with the first scrip
 
 use this option instead so plots display correctly: https://stackoverflow.com/questions/52397430/include-code-from-an-external-r-script-run-in-display-both-code-and-output
 
+another helpful page: http://zevross.com/blog/2014/07/09/making-use-of-external-r-code-in-knitr-and-r-markdown/
+
+The best solution was to use source() but call the final plot in the code chunk - not sure why this is necessary.
+
 
 ## Global Knitr options
 
 Benefits of global knitr options:
 1) Global code chunk options
----2) Set working directory so filepaths can be relative to the root instead of our .Rmd file--- FIXME REMOVE
+2) Set working directory so filepaths can be relative to the root instead of our .Rmd file
 3) Load libraries and data once instead of in each code chunk
 
 To set global options that apply to every chunk in your file, call we will call `knitr::opts_chunk$set()` in a new code chunk right after our yaml header (name the new code chunk `setup`.
@@ -212,7 +216,7 @@ knitr::opts_chunk$set()`
 
 ### Set working directory to root:
 
-FIXME REMOVE 
+FIXME 
 
 https://stackoverflow.com/questions/26994958/error-cannot-open-the-connection-in-executing-knit-html-in-rstudio 
 
