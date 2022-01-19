@@ -5,6 +5,6 @@ Requirements:
 - install R & RStudio (see instructions below)
 - Github account (existing or new)
 
-{% include r.html %}
+{% include install_instructions/r.html %}
 
 {% include links.md %}
