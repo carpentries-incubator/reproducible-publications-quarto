@@ -218,7 +218,7 @@ To add a cross reference link we will replace the "Table 1" text with:
 
 We will replace type with tab and label with table-1.  
 
-> ## CHALLENGE 8.3: Add a Cross Reference to Figure 2
+> ## CHALLENGE 8.4: Add a Cross Reference to Figure 2
 >
 > Search for or find in the text: "(See Figure 2)" and make this into a cross reference link.
 >
