@@ -101,13 +101,13 @@ Go to previous chunk/title	| Ctrl+PgUp |	Command+PgUp
 > Use one of the above options to run your code. 
 {: .checklist}
 
-FIXME add image or code output of path error
+![heart rate code path error](../fig/06-HR-code-path-error.PNG)
 
-Hmmmm... we got an error while trying to run our code. That's because our code has a relative path to read in the data file, but now we're running the code from another document in a different directory so we will need to update the file path
+Hmmmm... we got an error while trying to run our code. That's because our code contains a relative path to read in the data file, but now we're running the code from the rmd document which is in a different directory so we will need to update the file path.
 
 Update the file path from: `"output/data/preprocessed-GARP-TSST-data.csv"` to `"../../output/data/preprocessed-GARP-TSST-data.csv"`
 
-![code heart rate updated file path]("../fig/06-heartrate-code.PNG")
+![code heart rate updated file path]("../fig/06-HR-code-fixed-path.PNG")
 
 > ## Time to Knit!
 > Let's try that again 
@@ -115,7 +115,7 @@ Update the file path from: `"output/data/preprocessed-GARP-TSST-data.csv"` to `"
 
 Ooof! That output doesn't look great.. we've got a bit more work to do.
 
-FIXME add image of output echo=TRUE ![]()
+![Heart rate code no options for code chunk](../fig/06-HR-output-no-options.PNG)
 
 let's see about fixing that with code chunk rendering options. 
 
@@ -123,7 +123,9 @@ let's see about fixing that with code chunk rendering options.
 
 There are over 50 different code chunk options!!! Obviously we will not go over all of them, but they fall into several larger categories including: code evaluation, text output, code style, cache options, plot output and animation. We’ll talk about a few options for code evaluation, text output and plot output specifically.
 
-FIXME add link to all code options
+> ## Tip:
+> Find a complete list of code chunk options on Knitr developer, Yihui Xie's, [online guide to knitr](https://yihui.org/knitr/options/). Or, you can find a brief list of all options on the R Markdown Reference guide on page 3 accesible through the RStudio Interface by navigating to the main menu bar `Help > Cheat Sheets > R Markdown Reference Guide`.
+{: .callout}
 
 Again, The chunk name is the only value other than r in the code chunk options that doesn’t require a tag (i.e. the "= VALUE" part of `option = VALUE`). So these chunk options will always require a tag whose syntax looks like:
 
