@@ -11,5 +11,6 @@ URL: {{ URL }}
 BugReports: {{ BugReports }}
 Encoding: UTF-8
 Imports: 
+    glue,
     jsonlite,
     renv
