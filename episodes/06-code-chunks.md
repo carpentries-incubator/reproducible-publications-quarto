@@ -60,9 +60,9 @@ We’ll start by typing our our starting backticks & r between curly brackets. (
 
 ![blank Rmd code chunk](../fig/06-blank-code-chunk.PNG)
 
-Now, let's open our `03_HR_analysis.R` script in our `code` folder. Copy the code ( you don't need to copy the last line though -- ggsave just saves a pdf version of the plot and we don't need that -- and paste it in between the two lines with backticks.
+Now, let's open our `03_HR_analysis.R` script in our `code` folder. Copy the code and paste it in between the two lines with backticks and `{r}.
 
-FIXME add image of HR_analysis code ![]()
+![heartrate code in chunk](../fig/06-heartrate-code.PNG)
 
 > ## Tip:
 > There's actually a button you can use in the RStudio menu to generate the code chunks automatically. Automatic code chunk generation is available for several other languages as well. Also, you can use the keyboard shortcut `ctrl`+`alt`+`I` for Windows and `command`+`option`+`I` for Mac. 
@@ -72,11 +72,11 @@ FIXME add image of HR_analysis code ![]()
 Now, to check to make sure our code renders, we could click the "knit" button as we have been doing. However, with the code chunks we have other opportunities for rendering. 
 
 1) Knit button - knitting will automatically run the code in all code chunks
-FIXME ![code chunk with plot1 code](../fig/03-knit-button.PNG) 
+![code chunk with plot1 code](../fig/06-run-code-with-knit.PNG) 
 
-2) Run from Rmd file (green play button on the right top corner)
+2) Run from code chunk (green play button on the right top corner)
 
-FIXME add image of HR_analysis code (previous)
+![run from code chunk](../fig/06-heartrate-code-runfromchunk.png)
 
 3) Run menu
 
@@ -98,11 +98,13 @@ Go to previous chunk/title	| Ctrl+PgUp |	Command+PgUp
 > Use one of the above options to run your code. 
 {: .checklist}
 
-Hmmmm... we got an error while trying to run our code. That's because our code has a relative path to read in the data file, but now we're running the code from another document in a different directory so we will need to update the file path
+![heart rate code path error](../fig/06-HR-code-path-error.PNG)
+
+Hmmmm... we got an error while trying to run our code. That's because our code contains a relative path to read in the data file, but now we're running the code from the rmd document which is in a different directory so we will need to update the file path.
 
 Update the file path from: `"output/data/preprocessed-GARP-TSST-data.csv"` to `"../../output/data/preprocessed-GARP-TSST-data.csv"`
 
-FIXME add image updated file path ![]()
+![code heart rate updated file path]("../fig/06-HR-code-fixed-path.PNG")
 
 > ## Time to Knit!
 > Let's try that again 
@@ -110,13 +112,17 @@ FIXME add image updated file path ![]()
 
 Ooof! That output doesn't look great.. we've got a bit more work to do.
 
-FIXME add image of output echo=TRUE ![]()
+![Heart rate code no options for code chunk](../fig/06-HR-output-no-options.PNG)
 
 let's see about fixing that with code chunk rendering options. 
 
 ### Code Chunk Options
 
 There are over 50 different code chunk options!!! Obviously we will not go over all of them, but they fall into several larger categories including: code evaluation, text output, code style, cache options, plot output and animation. We’ll talk about a few options for code evaluation, text output and plot output specifically.
+
+> ## Tip:
+> Find a complete list of code chunk options on Knitr developer, Yihui Xie's, [online guide to knitr](https://yihui.org/knitr/options/). Or, you can find a brief list of all options on the R Markdown Reference guide on page 3 accesible through the RStudio Interface by navigating to the main menu bar `Help > Cheat Sheets > R Markdown Reference Guide`.
+{: .callout}
 
 Again, The chunk name is the only value other than r in the code chunk options that doesn’t require a tag (i.e. the "= VALUE" part of `option = VALUE`). So these chunk options will always require a tag whose syntax looks like:
 
@@ -189,6 +195,12 @@ Now that we’ve named and adjusted the rendering for our first plot, let’s tr
 “Source external script” https://bookdown.org/yihui/rmarkdown-cookbook/source-script.html
 
 Problem here is that the file path is still wrong as it was with the first script, but if we’re pulling an external script we don’t want to have to go into that script and change the file path. However… we are going to let this error sit for a second while we learn about Global knitr options and a neat trick that will resolve this issue and make other settings in our paper more automated.
+
+use this option instead so plots display correctly: https://stackoverflow.com/questions/52397430/include-code-from-an-external-r-script-run-in-display-both-code-and-output
+
+another helpful page: http://zevross.com/blog/2014/07/09/making-use-of-external-r-code-in-knitr-and-r-markdown/
+
+The best solution was to use source() but call the final plot in the code chunk - not sure why this is necessary.
 
 
 ## Global Knitr options
