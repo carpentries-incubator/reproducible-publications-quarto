@@ -165,12 +165,12 @@ the option always follows the code chunk label (don't forget to add a `,` after 
 
 ### Name Your Code Chunk
 
-While not necessary for running your code, it is better practice is to give a name to each code chunk and allows for more advanced options to work with your rmd files later on:
+While not necessary for running your code, it is good practice is to give a name to each code chunk and allows for more advanced options (such as cross-referencing) to work with your rmd files later on:
 
 `{r chunk-name}`
 
 Some things to keep in mind
-- The chunk name is the only value other than r in the code chunk options that doesn’t require a tag (i.e. echo=FALSE)
+- The chunk name is the only value other than r in the code chunk options that doesn’t require a tag (i.e. `echo =` )
 - The chunk label has to be unique (i.e.you can't use the the same name for multiple chunks)
 
 We’ll see in a bit where this code chunk label comes in handy. But, for now let's go back and give our first code chunk a name:
@@ -181,33 +181,92 @@ We’ll see in a bit where this code chunk label comes in handy. But, for now le
 >Try to avoid spaces, periods (.), and underscores (_) in chunk labels and paths. If you need separators, you are recommended to use hyphens (-) instead. For example, setup-options is a good label, whereas setup.options and chunk 1 are bad; fig.path = 'figures/mcmc-' is a good path for figure output, and fig.path = 'markov chain/monte carlo' is bad. See more at: https://yihui.org/knitr/options/
 {: .callout}
 
------------------------------------FIXME start from here on 1/24/22
+
 ### Caption your figure output from code chunks:
 
-FIXME add
+Again, this is an optional feature, but if you need (or want) to add captions to your
+publication, it is straightforward to do in code chunks. 
 
+The caption information also resides between your brackets at the beginning of the chunk: `{r}`
 
-ADD Now Go back and add code chunk name, options, and caption to your code
-Now that we’ve named and adjusted the rendering for our first plot, let’s try another, but instead of copy/pasting we will use a more elegant solution
+the tag is 'fig.cap' followed by a `=` and the captions within quotes `"caption for figure"
+
+> ## Challenge 9.4: Add a caption to Figure 3
+> Let's add a caption to our heartrate figure. Add the caption:
+> ~~~
+> "Fig 3: Mean heart rate of stress and control groups at baseline and during intervention."
+> ~~~
+>> ## Solution
+>> so, you should end up with the following in your code chunk:
+>> ~~~
+>> {r fig3-heartrate, echo = FALSE, message = FALSE, warning = FALSE, result = FALSE, fig.cap = "Fig 3: Mean heart rate of stress and control groups at baseline and during intervention."}
+> {: .solution}
+{: challenge}
+
+Let's knit one more time to see if our figure outputs how we'd like and has a caption.
+
+> ## Time to Knit!
+> Let's try that again 
+{: .checklist}
+
+Now that we’ve named and adjusted the rendering for our first figure, let’s add another, but instead of copy/pasting an r script into our rmd document we will use a more elegant solution. 
 
 ## Run Code from an external script in a code chunk
 
-“Source external script” https://bookdown.org/yihui/rmarkdown-cookbook/source-script.html
+Now, we will learn how to call code from an external script instead of copying and pasting code from a code chunk in the rmd document that resides in an r script in a different directory of our project. There are at least several benefits to running code in this modular fashion instead of copy/pasting:
+1. Automatic updates: if the code gets updated in the R script, it automatically be updated in the rmd document as well. 
+2. Readability: calling code externally only takes several lines of code - versus copy/pasting 50+ lines of code from our scripts.
+3. Less fussing with relative paths* - we had to change the code slightly in the first example to update the file path to the data set, with this method we won't have to modify the source code. 
+
+*unfortunately, one cannot eliminate working with relative paths, there is just the question of the greater of two evils.
+
+
+
 
 Problem here is that the file path is still wrong as it was with the first script, but if we’re pulling an external script we don’t want to have to go into that script and change the file path. However… we are going to let this error sit for a second while we learn about Global knitr options and a neat trick that will resolve this issue and make other settings in our paper more automated.
 
-use this option instead so plots display correctly: https://stackoverflow.com/questions/52397430/include-code-from-an-external-r-script-run-in-display-both-code-and-output
+First, find the FIXME in the rmd document for Fig 4 (ctrl-f "Fig 4"). We need to add the code for the hormone analysis. 
 
-another helpful page: http://zevross.com/blog/2014/07/09/making-use-of-external-r-code-in-knitr-and-r-markdown/
+Add your code chunk:
 
-The best solution was to use source() but call the final plot in the code chunk - not sure why this is necessary.
+![basic code chunk](../fig/06-blank-code-chunk.PNG)
 
+Now, within the chunk add the code:
+~~~
+source("../../code/02_hormone_analysis.R", local = knitr::knit_global())
+plot # To display the plot created by code in 02_hormone_analysis.R
+~~~
+
+Time to Knit!
+FIXME add image of error
+
+Shoot, we got an error and it looks quite familiar... An error reading our files due to file path... That's because the code we are now virtually running within the rmd document contains file paths to read and save the data that are relative to the directory they are located in so throw an error when run here. Don't worry if all this relative path stuff is making your head spin... It's confusing at first... But you can (and need) to get the hang of it to work in R projects. 
+
+So, that basically totally defeats the purpose of automating generating our plots, because now we have to go back to the hormone analysis R script and change the paths to run it here... And then if we wanted to run the R script on it's own it would now have the wrong paths!!! Ugh, what can we do?
+
+Well, there is a solution to this as well! (As with most obstacles you run into with R) That solution is to change the working directory of our rmd document - to do that we will introduce Global knitr options.
+
+
+> ## Tip: Many ways to run external code
+> There are at least 3-4 methods one can use to run external code, which may be useful in different contexts. 
+> 1. source()
+> 2. sys.source()
+> 3. knitr::read_chunk()
+> 4. code() *in `{r} header
+>
+> The best solution was to use source() but call the final plot in the code chunk - not sure why this is necessary.
+> 
+> See the following links for more discussion on sourcing exteral scripts:
+> - “Source external script” https://bookdown.org/yihui/rmarkdown-cookbook/source-script.html
+> - use this option instead so plots display correctly: https://stackoverflow.com/questions/52397430/include-code-from-an-external-r-script-run-in-display-both-code-and-output
+> - another helpful page: http://zevross.com/blog/2014/07/09/making-use-of-external-r-code-in-knitr-and-r-markdown/
+{: .callout}
 
 ## Global Knitr options
 
 Benefits of global knitr options:
 1) Global code chunk options
-2) Set working directory so filepaths can be relative to the root instead of our .Rmd file
+2) Set working directory so file paths can be relative to the root instead of our .Rmd file
 3) Load libraries and data once instead of in each code chunk
 
 To set global options that apply to every chunk in your file, call we will call `knitr::opts_chunk$set()` in a new code chunk right after our yaml header (name the new code chunk `setup`.
