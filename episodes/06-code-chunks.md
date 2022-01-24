@@ -104,7 +104,7 @@ Hmmmm... we got an error while trying to run our code. That's because our code c
 
 Update the file path from: `"output/data/preprocessed-GARP-TSST-data.csv"` to `"../../output/data/preprocessed-GARP-TSST-data.csv"`
 
-![code heart rate updated file path]("../fig/06-HR-code-fixed-path.PNG")
+![code heart rate updated file path](../fig/06-HR-code-fixed-path.PNG)
 
 > ## Time to Knit!
 > Let's try that again 
@@ -120,7 +120,7 @@ let's see about fixing that with code chunk rendering options.
 
 There are over 50 different code chunk options!!! Obviously we will not go over all of them, but they fall into several larger categories including: code evaluation, text output, code style, cache options, plot output and animation. We’ll talk about a few options for code evaluation, text output and plot output specifically.
 
-> ## Tip:
+> ## Tip: Learn more about code chunk options
 > Find a complete list of code chunk options on Knitr developer, Yihui Xie's, [online guide to knitr](https://yihui.org/knitr/options/). Or, you can find a brief list of all options on the R Markdown Reference guide on page 3 accesible through the RStudio Interface by navigating to the main menu bar `Help > Cheat Sheets > R Markdown Reference Guide`.
 {: .callout}
 
@@ -153,7 +153,7 @@ the option always follows the code chunk label (don't forget to add a `,` after 
 
 > ## CHALLENGE 9.3 - add options to your code  
 > Add the following options to your code:  
-> echo = FALSE, message = FALSE, warning = FALSE  
+> echo = FALSE, message = FALSE, warning = FALSE, result = FALSE  
 > 
 > What will this do?  
 >> ## SOLUTION
@@ -175,13 +175,13 @@ Some things to keep in mind
 
 We’ll see in a bit where this code chunk label comes in handy. But, for now let's go back and give our first code chunk a name:
 
-`{r fig-1}`
+`{r fig3-heartrate}`
 
 > ## Tip: Don't use spaces, periods or underscores in code chunk labels
 >Try to avoid spaces, periods (.), and underscores (_) in chunk labels and paths. If you need separators, you are recommended to use hyphens (-) instead. For example, setup-options is a good label, whereas setup.options and chunk 1 are bad; fig.path = 'figures/mcmc-' is a good path for figure output, and fig.path = 'markov chain/monte carlo' is bad. See more at: https://yihui.org/knitr/options/
 {: .callout}
 
-
+-----------------------------------FIXME start from here on 1/24/22
 ### Caption your figure output from code chunks:
 
 FIXME add
