@@ -12,5 +12,6 @@ BugReports: {{ BugReports }}
 Encoding: UTF-8
 Imports: 
     glue,
+    yaml,
     jsonlite,
     renv
