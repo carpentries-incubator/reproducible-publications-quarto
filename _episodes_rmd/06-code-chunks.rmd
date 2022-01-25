@@ -143,7 +143,7 @@ the option always follows the code chunk label (don't forget to add a `,` after 
 **message** = (logical) whether or not to display messages that appear when running the code (default TRUE)
  
  
-> ## CHALLENGE 9.2 - Rendering Codes
+> ## CHALLENGE 9.1 - Rendering Codes
 > How will some hypothetical code render given the following options?
 > `{r global-chunk-challenge, eval = TRUE, include = FALSE}`
 > 
@@ -154,7 +154,7 @@ the option always follows the code chunk label (don't forget to add a `,` after 
 > {: .solution}
 {: .challenge}
 
-> ## CHALLENGE 9.3 - add options to your code  
+> ## CHALLENGE 9.2 - add options to your code  
 > Add the following options to your code:  
 > echo = FALSE, message = FALSE, warning = FALSE, result = FALSE  
 > 
@@ -194,7 +194,7 @@ The caption information also resides between your brackets at the beginning of t
 
 the tag is `fig.cap` followed by a `=` and the captions within quotes `"caption for figure"`
 
-> ## Challenge 9.4: Add a caption to Figure 3
+> ## Challenge 9.3: Add a caption to Figure 3
 > Let's add a caption to our heartrate figure. Add the caption:
 > 
 > > "Fig 3: Mean heart rate of stress and control groups at baseline and during intervention."
@@ -270,46 +270,73 @@ Well, there is a solution to this as well! (As with most obstacles you run into 
 ## Global Knitr options
 
 Benefits of global knitr options:
-1) Global code chunk options
-2) Set working directory so file paths (for code chunks) can be relative to the root instead of our .Rmd file
+1) Set working directory so file paths (for code chunks) can be relative to the root instead of our .Rmd file
+Global code chunk options
 3) Load libraries and data once instead of in each code chunk
 
-To set global options that apply to every chunk in your file, we will call `knitr::opts_chunk$set()` in a new code chunk right after our yaml header (name the new code chunk `setup`.
 
-Add to your file (with backticks):
+### Set working directory to project directory:
 
-`{r setup, echo = FALSE}
-knitr::opts_chunk$set()`
-
-### Set working directory to root:
-
-FIXME 
+Ok, so let's fix these path issues we get when we try to run externally sourced code. The definition of relative paths is that they are relative to your current document or working directory. So we are having issues with connections trying to read our data files because the R scripts in our code directory (../ to get to the 'root' or .Rproj directory) are in a different location relative to our rmd document (../..) We actually wouldn't have an issue if the rmd document was only one directory level below our root as our code directory is - that would be one way to fix it. However, that may not solve all path issues and we like our directory structure the way it is. There is the option to change our root directory for the rmd document however, and we actually have to methods to do it. One is a setting option in our global knitr settings - similar to what we just did for chunk options. However, the second option is even easier - we click the menu next to the knit button and change `Knit Directory` to `Project Directory`. This will direct RStudio to change the default working directory for the rmd document from the directory where the document is located to the project directory (which is the root directory of our project where the .Rproj file is located). *NOTE this is a bit awkward because it ONLY changes the root directory for the code chunks NOT our narrative portions (think image links), but for all intents and purposes it does what we need. 
+![change working directory rmd file](../fig/06-change-wd.PNG)
 
 https://stackoverflow.com/questions/26994958/error-cannot-open-the-connection-in-executing-knit-html-in-rstudio 
 
-Go back and change the relative path in Figure 3
+Ok, now that we've done that we'll have to go back and fix the Figure 3 code so it runs properly. That is about all we'll need to do with fussing around with relative paths though - thank goodness! 
+
+> ## Challenge 9.4
+> 
+> Fix Figure 3 so that the code runs now that we changed the working directory to the project directory instead of the directory where the rmd document lives
+> 
+> > ## Solution
+> > 
+> > 1. change the relative path on the line read.csv()
+> > 2. delete the code from the code chunk and run the code from the external R script as with Figure 4. 
+> {: .solution}
+{: .challenge}
+
+
+> ## Time to Knit!
+> Let's make sure all our file paths are correct and our code runs without errors. 
+{: .checklist}
+
+Now, we can have some more fun with global options:
 
 ### Global Code Chunk Options:
 
-With our plots we set the options s for each chunk individually. However, we may end up with quite a few code chunks in our paper and it might be a lot of work to keep track of what options we’re using throughout the paper. We can automate setting options by adding a special code chunk at the beginning of the document. Then, each code chunk we add will refer to those “global” options when it runs.
+With our plots we set the options for each chunk individually. However, we may end up with quite a few code chunks in our paper and it might be a lot of work to keep track of what options we’re using throughout the paper. We can automate setting options by adding a special code chunk at the beginning of the document. Then, each code chunk we add will refer to those “global” options when it runs.
+
+To set global options that apply to every chunk in your file, we will call `knitr::opts_chunk$set()` in a new code chunk right after our yaml header (name the new code chunk `setup`.
 
 Knitr will treat each option that we add to this call as default settings for all code chunks. However, we will need to set the options for this code chunk in the first place! so we’ll use the options from our first code chunk. In the `()` after the `knitr::opts_chunk$set()` add the options:
 
 `knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, results = FALSE)`
 
-Alright! Now let’s go back and remove the options we set in the individual code chunks since we’ve set the global options in the document instead (however, if we left them it would render just the same.
-
-> ## Tip: Overiding global options  
-> What if you want most of your code chunks to render with the same options (i.e. echo = FALSE), but you just have one or two chunks that you want to tweak the options on (i.e. display code with echo = TRUE)? Good news! The global options can be overwritten on a case by case basis in each individual code chunk.
-{: .callout}
+Alright! That takes care of Fig 4 as well as Fig 3. Now we could go back and remove the options we set in the individual code chunks since we’ve set the global options in the document instead (however, if we left them it would render just the same.)
 
 > ## Time to Knit!
 > Again, let's make sure our global options look right by knitting.
 {: .checklist}
 
-To finish up our second code chunk, let's go back and add a caption and name:
+> ## Tip: Overiding global options  
+> What if you want most of your code chunks to render with the same options (i.e. echo = FALSE), but you just have one or two chunks that you want to tweak the options on (i.e. display code with echo = TRUE)? Good news! The global options can be overwritten on a case by case basis in each individual code chunk.
+{: .callout}
 
-> ## Challenge 9.5: Add chunk name and caption to Figure 4
+> ## CHALLENGE 9.5 (optional) global & individual code chunk options  
+>
+> How would appear in our html document if we knit a code chunk with the following options?  
+> `{r challenge-5, warning = TRUE, echo = TRUE}`
+>
+> ...considering the global chunk settings were as listed: 
+> `knitr::opts_chunk$set(echo = FALSE, include = FALSE)`  
+>> ## SOLUTION  
+>> In this case, the global settings are set so neither the code nor the output will display. However, the individual chunk reverses the echo setting so the code will display, and it also indicates that any warnings the code renders should output too. The outputs of the code would still not be displayed (include = FALSE) The hypothetical situation for this configuration may be for debugging while writing the rmd document.   
+> {: .solution}  
+{: .challenge}
+
+Before we lose track of where we were with editing up our second code chunk, let's finish it up by going back and adding a caption and name:
+
+> ## Challenge 9.6: Add chunk name and caption to Figure 4
 >
 > Add the caption: `Fig 4: Cortisol and Amylase levels in stress and control groups`
 > Add the name: `fig4-hormones`
@@ -329,41 +356,24 @@ We can actually make our lives easier in one other way too. So far we've loaded 
 
 Instead, we can load libraries and data at the beginning of our document which makes it available for all other figures or calculations and lets us avoid repetition. This also makes it easier for us to keep track of all the libraries and data we need to use in any given document. If anything needs to be tweaked, we don't need to search through every code chunk in our rmd document to make a change. 
 
-FIXME finish editing from here on:
-
-------------------------------------
-FIXME change the following for this lesson:
 
 ```
-#load libraries
-#tidyverse for plots
+# load data
+df <- read.csv("./output/data/preprocessed-GARP-TSST-data.csv", encoding = "UTF-8")
+
+# load libraries
 library(tidyverse)
-
-#load data
-#data for figure 1
-data1 <- read_csv("../data/figure-1-data.csv", col_types="fi")
-#data for table 1
-table1 <- read_csv("../data/table.csv")
+library(BayesFactor)
+library(patchwork)
 ```
+
 It'll look like the following:
 ![load libraries & data](../fig/06-load-libraries-data.PNG)
 
-> ## Time to Knit!
-> Make sure our code runs for Figure 1 now that we moved it around.
-{: .checklist}
+At this point we could go back through our R scripts and comment out (or delete) the beginning sections where we load the data and libraries. That will save some time for the rmd document to render, because the data and libraries will only load once instead of twice. You can imagine that the more code chunks you have the more time taking this step would save. Bonus that this also works to load the data before it is called in inline code as well!
 
 > ## Tip: Yaml chunk options
 > We can also tweak some settings in our yaml which changes how code chunks are displayed. We're not going to get into this in the workshop, but many of the same options you set in your global code chunk settings are also configurable in the yaml. 
 {: .callout}
 
-> ## CHALLENGE 9.5 (optional) global & individual code chunk options  
->
-> How would appear in our html document if we knit a code chunk with the following options?  
-> `{r challenge-5, warning = TRUE, echo = TRUE}`
->
-> ...considering the global chunk settings were as listed: 
-> `knitr::opts_chunk$set(echo = FALSE, include = FALSE)`  
->> ## SOLUTION  
->> In this case, the global settings are set so neither the code nor the output will display. However, the individual chunk reverses the echo setting so the code will display, and it also indicates that any warnings the code renders should output too. The outputs of the code would still not be displayed (include = FALSE) The hypothetical situation for this configuration may be for debugging while writing the rmd document.   
-> {: .solution}  
-{: .challenge}
+
