@@ -178,7 +178,7 @@ We’ll see in a bit where this code chunk label comes in handy. But, for now le
 `{r fig3-heartrate}`
 
 > ## Tip: Don't use spaces, periods or underscores in code chunk labels
->Try to avoid spaces, periods (.), and underscores (_) in chunk labels and paths. If you need separators, you are recommended to use hyphens (-) instead. For example, setup-options is a good label, whereas setup.options and chunk 1 are bad; fig.path = 'figures/mcmc-' is a good path for figure output, and fig.path = 'markov chain/monte carlo' is bad. See more at: https://yihui.org/knitr/options/
+>Try to avoid spaces, periods (.), and underscores (_) in chunk labels and paths. If you need separators, you are recommended to use hyphens (-) instead. For example, setup-options is a good label, whereas setup.options and chunk 1 are bad; fig.path = 'figures/mcmc-' is a good path for figure output, and fig.path = 'markov chain/monte carlo' is bad. See more at: [https://yihui.org/knitr/options/](https://yihui.org/knitr/options/)
 {: .callout}
 
 
@@ -189,17 +189,19 @@ publication, it is straightforward to do in code chunks.
 
 The caption information also resides between your brackets at the beginning of the chunk: `{r}`
 
-the tag is 'fig.cap' followed by a `=` and the captions within quotes `"caption for figure"
+the tag is `fig.cap` followed by a `=` and the captions within quotes `"caption for figure"`
 
 > ## Challenge 9.4: Add a caption to Figure 3
 > Let's add a caption to our heartrate figure. Add the caption:
-> ~~~
-> "Fig 3: Mean heart rate of stress and control groups at baseline and during intervention."
-> ~~~
->> ## Solution
->> so, you should end up with the following in your code chunk:
->> ~~~
->> {r fig3-heartrate, echo = FALSE, message = FALSE, warning = FALSE, result = FALSE, fig.cap = "Fig 3: Mean heart rate of stress and control groups at baseline and during intervention."}
+> 
+> > "Fig 3: Mean heart rate of stress and control groups at baseline and during intervention."
+> 
+> > ## Solution
+> > so, you should end up with the following in your code chunk:
+> > ~~~
+> > {r fig3-heartrate, echo = FALSE, message = FALSE, warning = FALSE, result = FALSE, fig.cap = "Fig 3: Mean heart rate of stress and control groups at baseline and during intervention."}
+> > ~~~
+> > {: .language-r}
 > {: .solution}
 {: challenge}
 
@@ -221,10 +223,6 @@ Now, we will learn how to call code from an external script instead of copying a
 *unfortunately, one cannot eliminate working with relative paths, there is just the question of the greater of two evils.
 
 
-
-
-Problem here is that the file path is still wrong as it was with the first script, but if we’re pulling an external script we don’t want to have to go into that script and change the file path. However… we are going to let this error sit for a second while we learn about Global knitr options and a neat trick that will resolve this issue and make other settings in our paper more automated.
-
 First, find the FIXME in the rmd document for Fig 4 (ctrl-f "Fig 4"). We need to add the code for the hormone analysis. 
 
 Add your code chunk:
@@ -236,9 +234,13 @@ Now, within the chunk add the code:
 source("../../code/02_hormone_analysis.R", local = knitr::knit_global())
 plot # To display the plot created by code in 02_hormone_analysis.R
 ~~~
+{: .language-r}
 
-Time to Knit!
-FIXME add image of error
+> ## Time to Knit!
+> Let's see if our code worked from an external script 
+{: .checklist}
+
+![Fig 4 path error](../fig/06-fig4-connection-error.PNG)
 
 Shoot, we got an error and it looks quite familiar... An error reading our files due to file path... That's because the code we are now virtually running within the rmd document contains file paths to read and save the data that are relative to the directory they are located in so throw an error when run here. Don't worry if all this relative path stuff is making your head spin... It's confusing at first... But you can (and need) to get the hang of it to work in R projects. 
 
@@ -252,7 +254,7 @@ Well, there is a solution to this as well! (As with most obstacles you run into 
 > 1. source()
 > 2. sys.source()
 > 3. knitr::read_chunk()
-> 4. code() *in `{r} header
+> 4. code() *in `{r}` header
 >
 > The best solution was to use source() but call the final plot in the code chunk - not sure why this is necessary.
 > 
@@ -266,10 +268,10 @@ Well, there is a solution to this as well! (As with most obstacles you run into 
 
 Benefits of global knitr options:
 1) Global code chunk options
-2) Set working directory so file paths can be relative to the root instead of our .Rmd file
+2) Set working directory so file paths (for code chunks) can be relative to the root instead of our .Rmd file
 3) Load libraries and data once instead of in each code chunk
 
-To set global options that apply to every chunk in your file, call we will call `knitr::opts_chunk$set()` in a new code chunk right after our yaml header (name the new code chunk `setup`.
+To set global options that apply to every chunk in your file, we will call `knitr::opts_chunk$set()` in a new code chunk right after our yaml header (name the new code chunk `setup`.
 
 Add to your file (with backticks):
 
@@ -282,15 +284,17 @@ FIXME
 
 https://stackoverflow.com/questions/26994958/error-cannot-open-the-connection-in-executing-knit-html-in-rstudio 
 
+Go back and change the relative path in Figure 3
+
 ### Global Code Chunk Options:
 
 With our plots we set the options s for each chunk individually. However, we may end up with quite a few code chunks in our paper and it might be a lot of work to keep track of what options we’re using throughout the paper. We can automate setting options by adding a special code chunk at the beginning of the document. Then, each code chunk we add will refer to those “global” options when it runs.
 
-Knitr will treat each option that add to this call as a global default. However, we will need to set the options for this code chunk in the first place! so we’ll use `echo = FALSE`. Then in the `()` after the `knitr::opts_chunk$set()` add the three options we used for our first code chunk.
+Knitr will treat each option that we add to this call as default settings for all code chunks. However, we will need to set the options for this code chunk in the first place! so we’ll use the options from our first code chunk. In the `()` after the `knitr::opts_chunk$set()` add the options:
 
-`knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)`
+`knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, results = FALSE)`
 
-Alright! Now let’s go back and remove the options we set in the individual code chunks & since we’ve set the global options in the document instead.
+Alright! Now let’s go back and remove the options we set in the individual code chunks since we’ve set the global options in the document instead (however, if we left them it would render just the same.
 
 > ## Tip: Overiding global options  
 > What if you want most of your code chunks to render with the same options (i.e. echo = FALSE), but you just have one or two chunks that you want to tweak the options on (i.e. display code with echo = TRUE)? Good news! The global options can be overwritten on a case by case basis in each individual code chunk.
@@ -299,6 +303,22 @@ Alright! Now let’s go back and remove the options we set in the individual cod
 > ## Time to Knit!
 > Again, let's make sure our global options look right by knitting.
 {: .checklist}
+
+To finish up our second code chunk, let's go back and add a caption and name:
+
+> ## Challenge 9.5: Add chunk name and caption to Figure 4
+>
+> Add the caption: `Fig 4: Cortisol and Amylase levels in stress and control groups`
+> Add the name: `fig4-hormones`
+>
+> > ## Solution
+> >
+> > ~~~
+> > {r fig4-hormones, fig.cap = "Fig 4: Cortisol and Amylase levels in stress and control groups" }
+> > ~~~
+> > {: .language-r}
+> {: .solution}
+{: .challenge}
 
 ### Globally load data and packages
 
