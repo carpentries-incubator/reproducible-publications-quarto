@@ -18,4 +18,16 @@ keypoints:
 
 Continuing from [episode 4](../04-good-project/) ...
 
+1. Login to your Github account with your web browser. [https://github.com](https://github.com)
+1. Check for your local SSH keys.
+1. If you do not yet have SSH keys then create SSH keys  `id_rsa` and `is_rsa.pub`
+1. If you have not yet added your Public SSH key to Github do so.
+1. Create a bare repository on Github (maybe not needed if you already have a local repo ??? test this)
+1. Add the new repository's Github URL to your local Git repo as a "remote" 
+```
+git remote add origin git@github.com:<username>/<repositoryName>.git
+```
+1. push your local repository up to git.
+
+
 {% include links.md %}
