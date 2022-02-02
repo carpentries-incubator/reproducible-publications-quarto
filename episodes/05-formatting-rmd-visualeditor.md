@@ -26,11 +26,11 @@ As we briefly mentioned before, the visual editor in RStudio has made RMarkdown 
 
 The editor toolbar includes buttons for the most commonly used formatting commands:
 
-![Fig. 5.1 - Toolbar](../fig/Ep.5-toolbar.png)
+![Fig. 5.1 - Toolbar](../fig/05-toolbar.png)
 
 Additional commands are available on the Format, Insert, and Table menus:
 
-![Fig. 5.2 - Menu-Format](../fig/Ep.5-menu-format.png) ![Fig. 5.3 - Menu-Insert](../fig/Ep.5-menu-insert.png) ![Fig. 5.4 - Menu-Table](../fig/Ep.5-menu-table.png)  
+![Fig. 5.2 - Menu-Format](../fig/05-menuformat.png) ![Fig. 5.3 - Menu-Insert](../fig/05-menuinsert.png) ![Fig. 5.4 - Menu-Table](../fig/05-menutable.png)  
 
 
 > ## Tip: Inserting anything with shortcuts
