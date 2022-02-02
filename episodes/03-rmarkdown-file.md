@@ -170,3 +170,6 @@ FIXME:
 >> Small number of journal templates available (contribute to the `rticles` package!)
 > {: .solution}
 {: .challenge}
+
+
+<p class="callout warning">Please remember that for this workshop we are producing a report in html and not tied to a particular journal template.</p>
