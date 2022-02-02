@@ -14,7 +14,7 @@ objectives:
 
 
 keypoints:
-- "The visual editor make formatting much easier."
+- "The visual editor made formatting much easier."
 - "You can apply rmd styling without prior Rmarkdown knowledge."
 ---
 
