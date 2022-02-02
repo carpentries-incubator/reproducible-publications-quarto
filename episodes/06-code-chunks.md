@@ -3,14 +3,12 @@ title: "Code Chunks"
 teaching: 40
 exercises: 20
 questions:
-- "When would I want to add inline code?"
-- "How to add inline code?"
 - "When would I want to use code chunks?"
 - "How do I add code chunks?"
 
 objectives:
 - "Understand the basic functions of Knitr."
-- "Learn how to add inline code and code chunks to your document."
+- "Learn how to add code chunks to your document."
 - "Distinguish when inline code vs. code chunks would be appropriate."
 - "Understand how to change the output characteristics of code chunks."
 
