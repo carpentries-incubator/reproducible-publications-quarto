@@ -19,21 +19,21 @@ keypoints:
 Continuing from [episode 4](../04-good-project/) ...
 
 1. Check for your local SSH keys.  Tools --> Global Options --> Git/SVN.  
-1. If your "SSH RSA key" field is blank ![](../fig/09-rstudio-global-options-git-no-ssh-keys.png) then you do not yet have SSH Keys and you should generate keys by clicking the "create RSA key" button.  ![](../fig/09-rstudio-create-rsa-key-button.png)
-![](../fig/09-rstudio-create-rsa-key-set-passphrase.png) 
-![](../fig/09-rstudio-create-rsa-key-result.png)
+1. If your "SSH RSA key" field is blank ![](../fig/10-rstudio-global-options-git-no-ssh-keys.png) then you do not yet have SSH Keys and you should generate keys by clicking the "create RSA key" button.  ![](../fig/10-rstudio-create-rsa-key-button.png)
+![](../fig/10-rstudio-create-rsa-key-set-passphrase.png) 
+![](../fig/10-rstudio-create-rsa-key-result.png)
 1. Login to your Github account with your web browser. [https://github.com](https://github.com)
 1. If you have not yet added your Public SSH key to your Github account in "[Setting --> SSH and GPG keys](https://github.com/settings/keys)" do so.  <br><br>
 
 Click "View Public Key" in RStudio --> Tools --> Global Options --> Git/SVN
-![](../fig/09-rstudio-global-options-git-with-ssh-keys.png)
+![](../fig/10-rstudio-global-options-git-with-ssh-keys.png)
 
-![](../fig/09-rstudio-public-key-display.png)
+![](../fig/10-rstudio-public-key-display.png)
 
 Click the "New SSH Key" button in Github 
-![](../fig/09-github-add-new-ssh-key-button.png)
+![](../fig/10-github-add-new-ssh-key-button.png)
 then paste it into the form.
-![](../fig/09-github-add-new-ssh-key.png)
+![](../fig/10-github-add-new-ssh-key.png)
 
 
 1. Create a bare repository on Github (maybe not needed if you already have a local repo ??? TEST THIS)
