@@ -1,5 +1,5 @@
 ---
-title: "Bibliograpghy & Cross-referencing"
+title: "Bibliography & Cross-referencing"
 teaching: 25
 exercises: 10
 questions:
@@ -14,9 +14,12 @@ objectives:
 - "Cross-referencing content "
 
 keypoints:
-- "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor `incididunt` ut labore (i.e. et dolore magna aliqua)."
-- "Ut enim ad minim veniam, quis nostrud `*` exercitation `#` ullamco laboris nisi ut aliquip ex ea commodo consequat."
+- "Rstudio supports different lookups strategies to easy the citation process."
+- "Rstudio supports different citation styles."
+- "The YAML can be ajusted to display uncited items in the reference list."
 ---
+
+## Why citing?
 
 Correctly citing and attributing publications is key to academic writing. Older versions of RStudio require [Pandoc's]("https://pandoc.org/MANUAL.html#citation-syntax") citation syntax to render bibliographies correctly. We won’t be covering this approach extensively in this workshop, since the new visual editor has made the process more simple, but you can refer to our [previous workshop on Rmarkdown]("https://ucsbcarpentry.github.io/R-markdown/06-citations-bib/index.html") pre-visual editor for more information.  
 
