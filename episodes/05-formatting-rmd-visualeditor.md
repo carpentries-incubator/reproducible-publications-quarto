@@ -30,7 +30,7 @@ The editor toolbar includes buttons for the most commonly used formatting comman
 
 Additional commands are available on the Format, Insert, and Table menus:
 
-![Fig. 5.2 - Menu](../fig/Ep.5-menu.png)
+![Fig. 5.2 - Menu-Format](../fig/Ep.5-menu-format.png) ![Fig. 5.3 - Menu-Insert](../fig/Ep.5-menu-insert.png) ![Fig. 5.4 - Menu-Table](../fig/Ep.5-menu-table.png)  
 
 
 > ## Tip: Inserting anything with shortcuts
