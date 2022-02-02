@@ -131,9 +131,4 @@ Finally, three real-world examples that motivated the authors of this lesson to 
 Our goal is that by the end of this workshop you will be able to create a reproducible report applying R Markdown and Knitr to publish a paper such as this [example](https://rpubs.com/rcurty/RMarkdown_PaperOutput).
 This template is used exclusively for instruction purposes and is based on a short and adapted version of the following academic paper:
 
-``Nitsch, F. J., Sellitto, M., & Kalenscher, T. (2021). Trier social stress test and food-choice: Behavioral, self-report & hormonal data. Data in brief, 37, 107245. https://doi.org/10.1016/j.dib.2021.107245``
-
-## Citation
-
-{% include links.md %}
-
+Nitsch, F. J., Sellitto, M., & Kalenscher, T. (2021). Trier social stress test and food-choice: Behavioral, self-report & hormonal data. Data in brief, 37, 107245. https://doi.org/10.1016/j.dib.2021.107245
