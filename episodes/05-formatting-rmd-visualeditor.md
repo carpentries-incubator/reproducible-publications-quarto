@@ -1,7 +1,7 @@
 ---
 title: "Formatting Rmd Documents with the Visual Editor"
-teaching: 10 min.
-exercises: 05 min.
+teaching: 10
+exercises: 05
 questions:
 - "What is the Visual Editor in Rstudio?"
 - "Which features the Visual Editor have?"
