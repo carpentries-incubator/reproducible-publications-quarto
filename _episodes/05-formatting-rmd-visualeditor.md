@@ -22,7 +22,7 @@ keypoints:
 
 As we briefly mentioned before, the visual editor in RStudio has made RMarkdown formatting much more effortless. It provides improved productivity for composing longer-form articles and analyses with R Markdown. The visual markdown editing is available in RStudio v1.4 or higher. Markdown documents can be edited in either source or visual mode. To switch into visual mode for a given document, toggle on the compass  icon at the top-right of the document toolbar (or alternatively the ⌘⇧ F4 keyboard shortcut). This will prompt a formatting bar through which you can apply styling, add links, create tables, and others similar to functions you find in google docs and other document editors. Note that you can switch between source and visual mode at any time (editing location and undo/redo state will be preserved when you switch). Let’s try it! Feel free to follow along or just watch this quick demo. But first, make sure to have your visual editor enabled on your screen. 
 
-### Editor Toolbar
+## Editor Toolbar
 
 The editor toolbar includes buttons for the most commonly used formatting commands:
 
@@ -50,16 +50,19 @@ Adding headings to a Rmarkdown document in Rstudio is as simple as applying link
 ### Creating Tables
 Because creating tables manually in Rmd documents could be a little painful for beginners, Rstudio released an add-in functionality for tables back in 2018. The new visual editor made it more similar to other editors we use daily. In our template, we have the specification table with 10 rows and two columns. If we were willing to add that table, we could do that by inserting a table to a selected part of the documents and by specifying the desired number of rows and columns.  Including a caption is optional, but recommended. We can add or delete rows and columns, add a header that will be set bold by default but can be changed, and set the desired alignment. Select the desired text and click on the crossed T icon if you wish to clear formatting.
 
-### Creating Bullet and numbered lists
+### Creating Bullet and Numbered Lists
 Again, similarly to other document editors, Rstudio allows you to turn text into bullet or numbered lists. Let’s apply a bullet list to the paragraphs specifying the values of the data reported in the data paper. Assuming we were willing to create a numbered list instead, we could have followed the same process and chosen the other icon. We can also sink or lift the listed items.
 
 ### Adding Math Formula
 
+### Adding Inline Code 
 
+
+## Keyboard Shortcuts
+As you become a more regular Rstudio user, you may also consider using some keyboard shortcuts for all basic editing tasks. Visual mode supports both traditional keyboard shortcuts (e.g. ⌘ B for bold) as well as markdown shortcuts (using markdown syntax directly). For example, enclose **bold** text in asterisks or type ## and press space to create a second level heading. Here are some of the most commonly used shortcuts:
+
+![Fig. 5.3 - Menu](../fig/Ep.5-shortcuts.png)
 
 
 ### Other Editing Features
 The visual editor allows users to insert images by browsing their location or copying and pasting it to the rmd document directly. There are also options to add html, line blocks, blockquotes, and footnotes. As we will see shortly we can also add code chunks and comments to rdm documents. In further episodes we will also learn how to insert citations and create a bibliography.
-
-
-### Adding Math Formulas
