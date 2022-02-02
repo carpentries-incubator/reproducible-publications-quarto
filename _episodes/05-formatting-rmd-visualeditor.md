@@ -14,13 +14,29 @@ objectives:
 
 
 keypoints:
-- "The visual editor made formatting much easier."
+- "The visual editor has made formatting much easier."
 - "You can apply rmd styling without prior Rmarkdown knowledge."
 ---
 
 ## Formatting Rmd Documents with the Visual Editor
 
-The visual editor in RStudio has made RMarkdown formatting much more effortless that provides improved productivity for composing longer-form articles and analyses with R Markdown. The visual markdown editing is available in RStudio v1.4 or higher. Markdown documents can be edited in either source or visual mode. To switch into visual mode for a given document, toggle on the compass  icon at the top-right of the document toolbar (or alternatively the ⌘⇧ F4 keyboard shortcut). This will prompt a formatting bar through which you can apply styling, add links, create tables, and others similar to functions you find in google docs and other document editors. Note that you can switch between source and visual mode at any time (editing location and undo/redo state will be preserved when you switch). Let’s try it! Feel free to follow along or just watch this quick demo. But first, make sure to have your visual editor enabled on your screen. 
+As we briefly mentioned before, the visual editor in RStudio has made RMarkdown formatting much more effortless. It provides improved productivity for composing longer-form articles and analyses with R Markdown. The visual markdown editing is available in RStudio v1.4 or higher. Markdown documents can be edited in either source or visual mode. To switch into visual mode for a given document, toggle on the compass  icon at the top-right of the document toolbar (or alternatively the ⌘⇧ F4 keyboard shortcut). This will prompt a formatting bar through which you can apply styling, add links, create tables, and others similar to functions you find in google docs and other document editors. Note that you can switch between source and visual mode at any time (editing location and undo/redo state will be preserved when you switch). Let’s try it! Feel free to follow along or just watch this quick demo. But first, make sure to have your visual editor enabled on your screen. 
+
+### Editor Toolbar
+
+The editor toolbar includes buttons for the most commonly used formatting commands:
+
+![Fig. 5.1 - Toolbar](../fig/Ep.5-toolbar.png)
+
+Additional commands are available on the Format, Insert, and Table menus:
+
+![Fig. 5.2 - Toolbar](../fig/Ep.5-menu.png)
+
+
+> ## Tip: Inserting anything with shortcuts
+> You can also use the catch-all ⌘ / shortcut to insert just about anything. Just execute the shortcut then type what you want to insert. For example: `/lis` will prompt listing options.
+>
+{: .callout}
 
 ### Applying Emphasis
 At the very top of the document, we have a recommended citation for the sample data paper. We want to emphasize the title of the journal, “Data in brief” in italics. Select the text and click in the I icon and voilà!
@@ -35,5 +51,13 @@ Because creating tables manually in Rmd documents could be a little painful for 
 
 ### Creating Bullet and numbered lists
 Again, similarly to other document editors, Rstudio allows you to turn text into bullet or numbered lists. Let’s apply a bullet list to the paragraphs specifying the values of the data reported in the data paper. Assuming we were willing to create a numbered list instead, we could have followed the same process and chosen the other icon. We can also sink or lift the listed items.
+
+### Adding Math Formula
+
+
+
+### Other Editing Features
+The visual editor allows users to insert images by browsing their location or copying and pasting it to the rmd document directly. There are also options to add html, line blocks, blockquotes, and footnotes. As we will see shortly we can also add code chunks and comments to rdm documents. In further episodes we will also learn how to insert citations and create a bibliography.
+
 
 ### Adding Math Formulas
