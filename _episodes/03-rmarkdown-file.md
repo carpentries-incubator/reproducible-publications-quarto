@@ -6,16 +6,18 @@ exercises: FIXME
 questions:
 - What is the breakdown of an Rmarkdown file?
 - What are templates in Rmarkdown?
+- How can you render the input file to the specified output format?
 - How can you find existing templates for Rmarkdown files?
-- question #3?
 objectives:
-- Learn how an Rmarkdown file works
-- Understand what templates are
-- Understand the advantage of templates in Rstudio
-- Learn how to start a document from a template
+- Learn about the structure of a Rmardown file.
+- Learn how a Rmarkdown file works.
+- Learn how to knit/render a rmd file into an output format.
+- Understand what templates are and the advantage of using them.
+- Learn how to start a document from a template.
 keypoints:
-- keypoint #1. Specific concept or syntax learned in this episode
-- keypoint #2. Specific concept or syntax learned in this episode
+- An Rmarkdown file is comprised of a YAML header, formatted text in rmd and code chunks. 
+- The knit function renders the file into the chosen output format.
+- Rstudio has some journals' templates that can save you some formatting time.
 ---
 
 
