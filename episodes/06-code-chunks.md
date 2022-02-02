@@ -10,11 +10,11 @@ questions:
 - "How do I add code chunks?"
 
 objectives
-"Understand the basic functions of Knitr"
-"Learn how to add inline code to your document"
-"Learn how to add code chunks to your document"
-"Distinguish when inline code vs. code chunks would be appropriate"
-"Understand how to change the output characteristics of code chunks"
+- "Understand the basic functions of Knitr"
+- "Learn how to add inline code to your document"
+- "Learn how to add code chunks to your document"
+- "Distinguish when inline code vs. code chunks would be appropriate"
+- "Understand how to change the output characteristics of code chunks"
 
 keypoints:
 - keypoint #1. Specific concept or syntax learned in this episode
