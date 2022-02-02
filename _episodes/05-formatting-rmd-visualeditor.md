@@ -30,7 +30,7 @@ The editor toolbar includes buttons for the most commonly used formatting comman
 
 Additional commands are available on the Format, Insert, and Table menus:
 
-![Fig. 5.2 - Toolbar](../fig/Ep.5-menu.png)
+![Fig. 5.2 - Menu](../fig/Ep.5-menu.png)
 
 
 > ## Tip: Inserting anything with shortcuts
@@ -40,7 +40,8 @@ Additional commands are available on the Format, Insert, and Table menus:
 
 ### Applying Emphasis
 At the very top of the document, we have a recommended citation for the sample data paper. We want to emphasize the title of the journal, “Data in brief” in italics. Select the text and click in the I icon and voilà!
-Adding Links
+
+### Adding Links
 In the same citation we have just worked on, let’s now add a link to it by selecting and copying the doi address. Then, click on the link icon and paste the address in the URL field. Simple right? If you prefer, you can also the drop-down insert menu, or even use shortcuts. By hovering the mouse over the desired icon, you will see which keys you should use. For a complete list of editing shortcuts, check this link. Tip: if you didn’t intend to use a shortcut and want to reverse its effect, just press the backspace key.
 
 ### Adding Headings
@@ -53,6 +54,7 @@ Because creating tables manually in Rmd documents could be a little painful for 
 Again, similarly to other document editors, Rstudio allows you to turn text into bullet or numbered lists. Let’s apply a bullet list to the paragraphs specifying the values of the data reported in the data paper. Assuming we were willing to create a numbered list instead, we could have followed the same process and chosen the other icon. We can also sink or lift the listed items.
 
 ### Adding Math Formula
+
 
 
 
