@@ -7,14 +7,12 @@ questions:
 - "How to add inline code?"
 - "When would I want to use code chunks?"
 - "How do I add code chunks?"
-
-objectives
+objectives:
 - "Understand the basic functions of Knitr"
 - "Learn how to add inline code to your document"
 - "Learn how to add code chunks to your document"
 - "Distinguish when inline code vs. code chunks would be appropriate"
 - "Understand how to change the output characteristics of code chunks"
-
 keypoints:
 - "FIX ME"
 - "FIX ME"
