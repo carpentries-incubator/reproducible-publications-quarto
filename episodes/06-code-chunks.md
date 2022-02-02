@@ -1,5 +1,4 @@
 ---
-source: Rmd  
 title: "Code Chunks"  
 teaching: 40
 exercises: 20
@@ -17,8 +16,8 @@ objectives
 - "Understand how to change the output characteristics of code chunks"
 
 keypoints:
-- keypoint #1. Specific concept or syntax learned in this episode
-- keypoint #2. Specific concept or syntax learned in this episode
+- "FIX ME"
+- "FIX ME"
 ---
 
 
