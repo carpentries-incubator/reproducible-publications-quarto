@@ -89,9 +89,9 @@ If you update your dataset this value will be correct. But, remember to check if
 > The CSV file contains choice consistency data for `r nrow(bronars_simulation_data.csv)` simulated participants, that have been used to determine the power of our food-choice task design to detect choice consistency violations, which averaged ``enter inline code here``. 
 > Tip: we will need to use a dataset$variable syntax!
 >> ## Solution
->>
+>> ``r mean(bronars_simulation_data$violation_counts)``
 > {: .solution}
-> ``r mean(bronars_simulation_data$violation_counts)``
+>
 {: .challenge}
 
 > ## Important Note:
