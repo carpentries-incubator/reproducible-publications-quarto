@@ -61,6 +61,13 @@ Say you are discussing some of the summary statistics in your manuscript, but ha
 
 ***ADD CHALLENGE***
 
+> ## More on inline codes:
+> R Markdown will always: 1) display the results of inline code, but not the code. 2) Apply relevant text formatting to the results
+As a result, inline output is indistinguishable from the surrounding text. Inline expressions do not take knitr options.
+>
+{: .callout}
+
+
 
 ## Keyboard Shortcuts
 As you become a more regular Rstudio user, you may also consider using some keyboard shortcuts for all basic editing tasks. Visual mode supports both traditional keyboard shortcuts (e.g. ⌘ B for bold) as well as markdown shortcuts (using markdown syntax directly). For example, enclose **bold** text in asterisks or type ## and press space to create a second level heading. Here are some of the most commonly used shortcuts:
