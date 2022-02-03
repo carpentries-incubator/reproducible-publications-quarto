@@ -89,7 +89,7 @@ If you update your dataset this value will be correct. But, remember to check if
 >> ## Solution
 >> 
 > {: .solution}
-> ``r mean(bronars_simulation_data$bronars_simulation_data)``
+> ``r mean(bronars_simulation_data$violation_counts)``
 {: .challenge}
 
 > ## Important Note:
