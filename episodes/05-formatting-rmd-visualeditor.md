@@ -29,6 +29,9 @@ The editor toolbar includes buttons for the most commonly used formatting comman
 ![Fig. 5.1 - Toolbar](../fig/05-toolbar.png)
 
 Additional commands are available on the Format, Insert, and Table menus:
+<figure>
+<img src="../fig/01-fig5.png" width = "400" height = "300">
+</figure> 
 
 ![Fig. 5.2 - Menu-Format](../fig/05-menuformat.png) ![Fig. 5.3 - Menu-Insert](../fig/05-menuinsert.png) ![Fig. 5.4 - Menu-Table](../fig/05-menutable.png)  
 
@@ -61,7 +64,7 @@ Again, similarly to other document editors, Rstudio allows you to turn text into
 ## Keyboard Shortcuts
 As you become a more regular Rstudio user, you may also consider using some keyboard shortcuts for all basic editing tasks. Visual mode supports both traditional keyboard shortcuts (e.g. ⌘ B for bold) as well as markdown shortcuts (using markdown syntax directly). For example, enclose **bold** text in asterisks or type ## and press space to create a second level heading. Here are some of the most commonly used shortcuts:
 
-![Fig. 5.3 - Menu](../fig/Ep.5-shortcuts.png)
+![Fig. 5.5 - Shortcuts](../fig/05-shortcuts.png)
 
 
 ### Other Editing Features
