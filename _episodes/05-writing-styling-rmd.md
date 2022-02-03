@@ -54,12 +54,16 @@ Because creating tables manually in Rmd documents could be a little painful for 
 ### Creating Bullet and Numbered Lists
 Again, similarly to other document editors, Rstudio allows you to turn text into bullet or numbered lists. Let’s apply a bullet list to the paragraphs specifying the values of the data reported in the data paper (**FIXME4**). Assuming we were willing to create a numbered list instead, we could have followed the same process and chosen the other icon. We can also sink or lift the listed items.
 
+### Adding Images
+You may need to include static images to your manuscripts. For that, you can use the insert image function, click on the painting icon or even use the shortcut that shows right next to the function in the menu. After browsing and upload the desired image you may also specify the caption and the image title, as well as adjust dimensions if needed. Let's insert two images Fig. 1 (**FIXME5**) and Fig. 2 (**FIXME6**).  
+
+
 ### Adding Formulas
 
-If you have math formula in your manuscript there are three different ways you may insert one. Let's look for **FIXME5** for an example. Point and click at the insert menu, use the catch-all `⌘ /` keyboard short and then get to inline math mode, or type the formula content between dollar signs `$`. You will notice that the color and font type will change, as Rstudio identifies the block as an inline equation.
+If you have math formula in your manuscript there are three different ways you may insert one. Let's look for **FIXME7** for an example. Point and click at the insert menu, use the catch-all `⌘ /` keyboard short and then get to inline math mode, or type the formula content between dollar signs `$`. You will notice that the color and font type will change, as Rstudio identifies the block as an inline equation.
 
 ## Adding Inline Code 
-Say you are discussing some of the summary statistics in your manuscript, but have to continually check back at your data and scripts. R Markdown makes this easy through HTML/LaTeX inline code and allows you to calculate simple expressions integrated to your narrative. Inline code enables you to insert R code into your document to dynamically updated portions of your text. In other words, if your data set changes for any reason the code will automatically update the calculation specified. For example, use inline code to calculate a summary statistic, such as the percentage of participants. Let's try it by looking for **FIXME6**. Assuming you would like to compute (add example) (FIXME)
+Say you are discussing some of the summary statistics in your manuscript, but have to continually check back at your data and scripts. R Markdown makes this easy through HTML/LaTeX inline code and allows you to calculate simple expressions integrated to your narrative. Inline code enables you to insert R code into your document to dynamically updated portions of your text. In other words, if your data set changes for any reason the code will automatically update the calculation specified. For example, use inline code to calculate a summary statistic, such as the percentage of participants. Let's try it by looking for **FIXME8**. Assuming you would like to compute (add example) (FIXME)
 
 ***ADD CHALLENGE***
 
