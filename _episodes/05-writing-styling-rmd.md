@@ -85,7 +85,7 @@ If you update your dataset this value will be correct. But, remember to check if
 > ## CHALLENGE 5.1 - Adding inline code
 > Suppose we would like to add some information to the sentence we have jsut adjusted in our manuscript to include the average of violation_counts present in the same dataset. Which inline code we would have to add to the sentence: 
 > 
-> The CSV file contains choice consistency data for `r nrow(bronars_simulation_data.csv)` simulated participants, that have been used to determine the power of our food-choice task design to detect choice consistency violations, which averaged `enter inline code here`. 
+> The CSV file contains choice consistency data for `r nrow(bronars_simulation_data.csv)` simulated participants, that have been used to determine the power of our food-choice task design to detect choice consistency violations, which averaged `enter inline code here`. Tip: we will need to use a dataset$variable syntax.
 >> ## Solution
 >> 
 > {: .solution}
