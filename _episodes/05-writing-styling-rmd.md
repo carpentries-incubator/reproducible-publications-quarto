@@ -7,11 +7,13 @@ questions:
 - "Which features does the Visual Editor have?"
 - "How can I can apply styling and formatting to rmd documents in Rstudio more easily?"
 - "How to add inline code?
+
 objectives:
 - "Learn how to enable the visual editor."
 - "Get familiar with its basic functionalities."
 - "Apply rmd formatting and styling using the visual editor."
 - "Learn how to add inline code to your rdm document."
+
 keypoints:
 - "The visual editor has made formatting much easier."
 - "You can apply rmd styling without prior Rmarkdown knowledge."
