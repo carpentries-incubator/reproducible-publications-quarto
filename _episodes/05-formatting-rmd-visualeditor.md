@@ -31,12 +31,12 @@ The editor toolbar includes buttons for the most commonly used formatting comman
 Additional commands are available on the Format, Insert, and Table menus:
 
 <figure>
-<img src="../fig/05-menuformat.png" width = "200" height = "300">
+<img src="../fig/05-menuformat.png" width = "200" height = "400">
 </figure> 
 
 
 <figure>
-<img src="../fig/05-menuinsert.png" width = "200" height = "300">
+<img src="../fig/05-menuinsert.png" width = "200" height = "400">
 </figure> 
 
 
