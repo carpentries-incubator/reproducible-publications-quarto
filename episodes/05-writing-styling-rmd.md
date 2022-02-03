@@ -84,7 +84,7 @@ If you update your dataset this value will be correct. But, remember to check if
 
 
 > ## CHALLENGE 5.1 - Adding inline code
-> Suppose we would like to add some information to the sentence we have jsut adjusted in our manuscript. We would like to include the average of violation_counts present in the same dataset. Which inline code we would have to add to following sentence?
+> Suppose we would like to add some information to the sentence we have jsut adjusted in our manuscript. We would like to include the average for the variable *violation_counts* present in the same dataset. Which inline code we would have to add to following sentence?
 > 
 > The CSV file contains choice consistency data for **` `r nrow(bronars_simulation_data.csv)` `** simulated participants, that have been used to determine the power of our food-choice task design to detect choice consistency violations, which averaged ` `enter inline code here` `. 
 > 
@@ -103,7 +103,7 @@ If you update your dataset this value will be correct. But, remember to check if
 
 
 > ## More on inline codes:
-> R Markdown will always display the results of inline code, but not the code.
+> R Markdown will always display the results of inline code, but not the code. Inline expressions do not take knitr options.
 >
 {: .callout}
 
