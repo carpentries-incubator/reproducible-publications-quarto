@@ -78,7 +78,7 @@ You can also include `r code` directly in your text. Say you are discussing some
 
 This can be helpful when referring to specific variables on your data. For example, you should include numbers that are derived from the data as code not as numbers. Thus, rather than writing “The CSV file contains choice consistency data for 10.000 simulated participants” (**FIXME8**), insert a bit of code that, when evaluated, gives the number of individuals. Please note that this insertion is not included in the visual editor, so we need to do write an expression, for example:
 
-The CSV file contains choice consistency data for \`r nrow(bronars_simulation_data.csv)` simulated participants.
+The CSV file contains choice consistency data for ` `r nrow(bronars_simulation_data.csv)` ` simulated participants.
 
 If you update your dataset this value will be correct. But, remember to check if you are calling the correct dataset.
 
@@ -86,12 +86,12 @@ If you update your dataset this value will be correct. But, remember to check if
 > ## CHALLENGE 5.1 - Adding inline code
 > Suppose we would like to add some information to the sentence we have jsut adjusted in our manuscript. We would like to include the average of violation_counts present in the same dataset. Which inline code we would have to add to following sentence?
 > 
-> The CSV file contains choice consistency data for \`r nrow(bronars_simulation_data.csv)` simulated participants, that have been used to determine the power of our food-choice task design to detect choice consistency violations, which averaged `enter inline code here`. 
+> The CSV file contains choice consistency data for ` `r nrow(bronars_simulation_data.csv)` ` simulated participants, that have been used to determine the power of our food-choice task design to detect choice consistency violations, which averaged ` `enter inline code here` `. 
 > 
 > Tip: we will need to use a dataset$variable syntax!
 > 
 >> ## Solution;
->> \`r mean(bronars_simulation_data$violation_counts)`
+>> ` `r mean(bronars_simulation_data$violation_counts)` `
 > {: .solution}
 {: .challenge}
 
