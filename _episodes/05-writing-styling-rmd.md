@@ -90,7 +90,7 @@ If you update your dataset this value will be correct. But, remember to check if
 > 
 > Tip: we will need to use a dataset$variable syntax!
 > 
->> ## Solution;
+>> ## Solution:
 >> ` `r mean(bronars_simulation_data$violation_counts)` `
 > {: .solution}
 {: .challenge}
