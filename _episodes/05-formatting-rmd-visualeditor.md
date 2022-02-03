@@ -4,13 +4,13 @@ teaching: 10
 exercises: 05
 questions:
 - "What is the Visual Editor in Rstudio?"
-- "Which features the Visual Editor have?"
-- "How can I format rmd documents in Rstudio more easily?"
+- "Which features does the Visual Editor have?"
+- "How can I can apply styling and formatting to rmd documents in Rstudio more easily?"
 
 objectives:
 - "Learn how to enable the visual editor."
-- "Get familiar with the basic visual editor functionalities."
-- "Apply rmd formatting using the visual editor."
+- "Get familiar with its basic functionalities."
+- "Apply rmd formatting and styling using the visual editor."
 
 
 keypoints:
