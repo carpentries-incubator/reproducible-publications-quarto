@@ -82,9 +82,13 @@ The CSV file contains choice consistency data for `r nrow(bronars_simulation_dat
 
 If you update your dataset this value will be correct. But, remember to check if you are calling the correct dataset.
 
-You can also include inline code you do not want to evaluate by putting it between backticks. Here is some `inline code`.
-
-Let's now work on a more involved inline coding expression. Assuming you want to compute 
+> ## CHALLENGE 5.1 - Adding inline code
+> Suppose we would like to add a sentence after the one we just adjusted in our manuscript to mention the average of violation_counts present in the same dataset. Which inline code we would have to add to the sentence: 
+> The CSV file contains choice consistency data for `r nrow(bronars_simulation_data.csv)` simulated participants, that have been used to determine the power of our food-choice task design to detect choice consistency violations, which averaged `enter inline code here`. 
+>> ## Solution
+>> 
+> {: .solution}
+{: .challenge}
 
 
 > ## More on inline codes:
