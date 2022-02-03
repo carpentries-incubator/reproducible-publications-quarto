@@ -18,7 +18,7 @@ objectives:
 keypoints:
 - "The visual editor has made formatting much easier."
 - "You can apply rmd styling without prior Rmarkdown knowledge."
-- "You can include inline code to narratives for basic calculations.
+- "You can include inline code to narratives for basic calculations."
 ---
 
 ## Formatting Rmd Documents with the Visual Editor
