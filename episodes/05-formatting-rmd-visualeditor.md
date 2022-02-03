@@ -31,22 +31,18 @@ The editor toolbar includes buttons for the most commonly used formatting comman
 Additional commands are available on the Format, Insert, and Table menus:
 
 <figure>
-<img src="../fig/05-menuformat.png" width = "200" height = "400">
+<img src="../fig/05-menuformat.png" width = "200" height = "300">
 </figure> 
 
-![Fig. 5.2 - Menu-Format](../fig/05-menuformat.png)
 
 <figure>
-<img src="../fig/05-menuinsert.png" width = "200" height = "400">
+<img src="../fig/05-menuinsert.png" width = "200" height = "300">
 </figure> 
 
-![Fig. 5.3 - Menu-Insert](../fig/05-menuinsert.png) 
 
  <figure>
-<img src="../fig/05-menutable.png" width = "200" height = "400">
+<img src="../fig/05-menutable.png" width = "200" height = "300">
 </figure> 
-
-![Fig. 5.4 - Menu-Table](../fig/05-menutable.png)  
 
 
 > ## Tip: Inserting anything with shortcuts
