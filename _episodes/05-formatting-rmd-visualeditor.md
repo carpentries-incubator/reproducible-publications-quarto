@@ -1,5 +1,5 @@
 ---
-title: "Writing and Stylling Rmd Documents"
+title: "Writing and Styling Rmd Documents"
 teaching: 10
 exercises: 05
 questions:
