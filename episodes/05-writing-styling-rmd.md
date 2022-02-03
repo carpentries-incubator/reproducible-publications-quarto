@@ -67,7 +67,7 @@ You can also include `r code` directly in your text. Say you are discussing some
 
 This can be helpful when referring to specific variables on your data. For example, you should include numbers that are derived from the data as code not as numbers. Thus, rather than writing “The CSV file contains choice consistency data for 10.000 simulated participants” (**FIXME8**), insert a bit of code that, when evaluated, gives the number of individuals. Please note that this insertion is not included in the visual editor, so we need to do write an expression, for example:
 
-There are `r nrow(bronars_simulation_data.csv)` simulated participants.
+The CSV file contains choice consistency data for `r nrow(bronars_simulation_data.csv)` simulated participants.
 
 If you update your dataset this value will be correct. But, remember to check if you are calling the correct dataset.
 
