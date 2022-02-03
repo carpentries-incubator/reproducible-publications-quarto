@@ -57,7 +57,9 @@ Again, similarly to other document editors, Rstudio allows you to turn text into
 If you have math formula in your manuscript there are three different ways you may insert one. Let's look for **FIXME5** for an example. Point and click at the insert menu, use the catch-all `⌘ /` keyboard short and then get to inline math mode, or type the formula content between dollar signs `$`. You will notice that the color and font type will change, as Rstudio identifies the block as an inline equation.
 
 ### Adding Inline Code 
-Say you are discussing some of the summary statistics in your manuscript, but have to continually check back at your data and scripts. R Markdown makes this easy through HTML/LaTeX inline code. Inline code is best for calculating simple expressions integrated into your narrative. One of the benefits of using this method is if something about your data set changes the code will automatically update the calculation specified. For example, use inline code to calculate a summary statistic, such as the percentage of participants.
+Say you are discussing some of the summary statistics in your manuscript, but have to continually check back at your data and scripts. R Markdown makes this easy through HTML/LaTeX inline code. Inline code is best for calculating simple expressions integrated into your narrative. One of the benefits of using this method is if something about your data set changes the code will automatically update the calculation specified. For example, use inline code to calculate a summary statistic, such as the percentage of participants. Let's try it by looking for **FIXME6**. Assuming you would like to compute (add example) (FIXME)
+
+***ADD CHALLENGE***
 
 
 ## Keyboard Shortcuts
@@ -67,4 +69,4 @@ As you become a more regular Rstudio user, you may also consider using some keyb
 
 
 ### Other Editing Features
-The visual editor allows users to insert images by browsing their location or copying and pasting it to the rmd document directly. There are also options to add html, line blocks, blockquotes, and footnotes. As we will see shortly we can also add code chunks and comments to rdm documents. In further episodes we will also learn how to insert citations and create a bibliography.
+The visual editor allows users to insert images by browsing their location or copying and pasting it to the rmd document directly. There are also options to add html, line blocks, blockquotes, and footnotes. Up next we will learn more about how to add code chunks. In further episodes we will also learn how to insert citations and create a bibliography.
