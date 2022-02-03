@@ -6,7 +6,7 @@ questions:
 - "What is the Visual Editor in Rstudio?"
 - "Which features does the Visual Editor have?"
 - "How can I can apply styling and formatting to rmd documents in Rstudio more easily?"
-- "How to add inline code?
+- "How to add inline code?"
 
 objectives:
 - "Learn how to enable the visual editor."
