@@ -62,8 +62,7 @@ Say you are discussing some of the summary statistics in your manuscript, but ha
 ***ADD CHALLENGE***
 
 > ## More on inline codes:
-> R Markdown will always: 1) display the results of inline code, but not the code. 2) Apply relevant text formatting to the results
-As a result, inline output is indistinguishable from the surrounding text. Inline expressions do not take knitr options.
+> R Markdown will always display the results of inline code, but not the code. Inline expressions do not take knitr options.
 >
 {: .callout}
 
