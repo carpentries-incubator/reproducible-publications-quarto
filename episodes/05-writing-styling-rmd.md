@@ -101,7 +101,7 @@ If you update your dataset this value will be correct. But, remember to check if
 
 
 > ## More on inline codes:
-> R Markdown will always display the results of inline code, but not the code. Inline expressions do not take knitr options.
+> R Markdown will always display the results of inline code, but not the code.
 >
 {: .callout}
 
