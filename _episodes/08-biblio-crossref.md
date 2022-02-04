@@ -3,7 +3,7 @@ title: "Bibliography & Cross-referencing"
 teaching: 25
 exercises: 10
 questions:
-- "How can you insert citations to your manuscripts using RStudio visual editor?"
+- "How can you insert citations to your manuscripts using RStudio's visual editor?"
 - "How can you change citation styles?"
 - "How can you cross-reference content in your manuscript?"
 - "What are the options to display cited and uncited bibliography?"
