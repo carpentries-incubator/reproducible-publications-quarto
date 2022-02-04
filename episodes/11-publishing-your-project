@@ -18,3 +18,9 @@ keypoints:
 ---
 
 ## And now what?
+> Once you have completed your rmd manuscript following all the best practices for reproducibility, including organizing your project files what is next? 
+> The answer depends on your plans to move forward. Let's explore some scenarios:
+> 1) If you are willing to publish through a peer-reviewed journal: Give preference to open-access journals which foster open science and research reproducibility.
+You may consider submitting it to a journal in your field for peer-review. Most journals now request the data and code to be shared along with the manuscript, so in that case you will have that handy. You can download the paper
+desired format and submit it along with the rproject. You may depoist the data and code in a general repository such as Zenodo or Fighsare, or even consider Dryad, 
+> 2)
