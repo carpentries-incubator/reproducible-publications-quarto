@@ -17,12 +17,10 @@ keypoints:
 - "Sharing the code, data and documentation is necessary to allow for inspection and research reproducibility."
 ---
 
-## And Now What is Next?
+## What is Next?
 
 Once you have completed your rmd manuscript following all the best practices for reproducibility, including organizing your project files what is next? 
 The answer depends on your plans to move forward. Let's explore some scenarios:
-1) If you are willing to publish through a peer-reviewed journal: Give preference to open-access journals which foster open science and research reproducibility.
-You may consider submitting it to a journal in your field for peer-review. Most journals now request the data and code to be shared along with the manuscript, so in that case you will have that handy. 
-You can download the paper in the desired format and submit it along with your `rproject`, so that peers reviewers will be able to inspect your underlying data.  
-You may deposit the data and code in a general repository such as Zenodo or Fighsare, a disciplinary or institutional repository. 
-For options available please refer to the [https://www.re3data.org/]("Registry of Research Data Repositories")
+1) If you are willing to publish your manuscript through a **peer-reviewed journal**:
+- You may consider submitting it to a journal in your field for peer-review. Most journals now request the underlying data, code and documentation to be shared along with the manuscript, so in that case you will have that handy. 
+- Whenever possible, give preference to *open-access* journals with data sharing recommendations to foster open science, transparency and research reproducibility. The [https://topfactor.org/journals]("TOP factor") allows you to search by journal title and/or discipline and will rank journals compliance with those principles. If your chosen journal does not require nor recommend a particular process for making your project data available (some will dictate what, where and how project data should be uploaded), you may still consider depositing your project files in a reliable data repository and cross-reference paper and project data, ideally with a formal citation containing a [https://www.library.ucsb.edu/sites/default/files/dls_n4_pids_navy.pdf](Persistent Identifier)(e.g., DOI, ARK, handle, Pur) to avoid link rot. In terms of data repositories, there are many options available, and they can be disciplinary, instituional or generalist (e.g., Zenodo, Figshare). For a compreheensive list of options available please refer to the [https://www.re3data.org/]("Registry of Research Data Repositories"). At UCSB Library we support [https://datadryad.org/stash]("Dryad"). If Dryad is not suitable for your needs, [https://www.library.ucsb.edu/research-data-services]("Research Data Services") can assist you finding a more optimal solution for archiving your project data.   
