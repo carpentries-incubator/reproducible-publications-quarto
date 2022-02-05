@@ -32,7 +32,7 @@ Notice the "Publish" button in the upper right corner of your _Knit_ output.  Cl
 for this workshop.  
 
 Click the publish button 
-![](../fig/11-studio-publish-button-scrnshot.png)
+![](../fig/11-publish-button-scrnshot.png)
 
 and you'll be presented with the following panels:
 
