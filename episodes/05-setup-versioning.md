@@ -28,7 +28,7 @@ There are several options for working with R projects in RStudio. If you aren't 
 2. Continue an R project that was started without version control and begin versioning
 3. Continue an existing R project that already uses version control (i.e. download from GitHub)
 
-![new r project options](05-new-project.PNG)
+![new r project options](../fig/05-new-project.PNG)
 
 To start an R project, you would navigate to `File > new project` rather than just `File > new file`. 
 1. Starting a new project (with version control)
