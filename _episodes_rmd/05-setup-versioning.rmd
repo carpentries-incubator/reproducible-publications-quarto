@@ -27,30 +27,41 @@ knitr_fig_path("05-")
 
 
 ### Using R projects and version control in RStudio
+
+It's a two step process to work on a project in RStudio with version control. First step is to make sure your work is set up as an R Project. Secondly, and optionally, when you set up your project you can have the option to add versioning (or continue from an existing version-controlled project). 
+
+#### Starting an R Project
+
 There are several options for working with R projects in RStudio. If you aren't already working in an R Project, you can create a new one. There are three options here:
-1. Start a brand new R project and use version control from the start aka ""
-2. Continue an R project that was started without version control and begin versioning
-3. Continue an existing R project that already uses version control (i.e. download from GitHub)
+1. **New Directory** - start a brand new R project .
+2. **Existing Directory** - add exisiting work to a R project.
+3. **Version Control** Continue an existing R project that already uses version control (i.e. download from GitHub)
+
+The third option would be a project already under version control but options 1 and 2 will also give you the opportunity to use or add versioning to the project. Let's see how that would work. 
+
+#### Starting a R Project with Version Control
 
 ![new r project options](../fig/05-new-project.PNG)
 
 To start an R project, you would navigate to `File > new project` rather than just `File > new file`. 
-1. Starting a new project (with version control)
-![Add image starting new R project project type screen]()
+
+After choosing "New Directory" chose "new project" on the next menu options. Then, to use version control, make sure to check the box as highlighted:
+![new project w/ version control](../fig/05-brand-new-project.PNG)
 
 *Note when you choose directory name, it will create a new directory in the directory you specified along with an .Rproj file of the same name. Avoid spaces here. underscores "_", dashes "-" or camel case "NewProject" is the recommended way to name this directory/file.
 
-*Make sure the checkbox for git version control is checked. 
-
 *Optionally, check the box next to Open in new session if you want it to appear in a new RStudio window. 
 
-2. If you've already started an R project WITHOUT version control, you have the option to add version control retrospectively. You can also add existing R files to a project and version control if you've done neither. We won't go over that here, but to see an example please see episode from x lesson here: FIXME add link
-![Add image of this option]()
+#### Add versioning to an existing project
 
-3. Continue a version-controlled project
+We won't take the time to cover that here, but if you've already started an R project WITHOUT version control, you have the option to add version control retrospectively. You can also add existing R files to a project and version control if you've done neither. To see a tutorial of this process,  please see episode from x lesson here: FIXME add link
+This is by far the most labor intensive way to do it, so remember to add version control at the beginning of any new project (even if you get lazy and don't even use it).
+
+#### Continue a version-controlled project
 The final option is to continue a version controlled project. This is the option we will do.
-![Add image new project version control option]()
-![Add image import project from Git]()
+![continue project from GitHub](../fig/05-new-project-git-url.PNG)
+
+## Our turn!
 
 But first, we need to navigate to GitHub and make a copy of the project for this workshop -> FIXME add instructions. 
 
