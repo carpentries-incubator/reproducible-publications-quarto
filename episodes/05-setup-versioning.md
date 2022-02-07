@@ -23,48 +23,108 @@ keypoints:
 
 
 ### Using R projects and version control in RStudio
+
+It's a two step process to work on a project in RStudio with version control. First step is to make sure your work is set up as an R Project. Secondly, and optionally, when you set up your project you can have the option to add versioning (or continue from an existing version-controlled project). 
+
+#### Starting an R Project
+
 There are several options for working with R projects in RStudio. If you aren't already working in an R Project, you can create a new one. There are three options here:
-1. Start a brand new R project and use version control from the start aka ""
-2. Continue an R project that was started without version control and begin versioning
-3. Continue an existing R project that already uses version control (i.e. download from GitHub)
+1. **New Directory** - start a brand new R project .
+2. **Existing Directory** - add exisiting work to a R project.
+3. **Version Control** Continue an existing R project that already uses version control (i.e. download from GitHub)
 
 ![new r project options](../fig/05-new-project.PNG)
 
+The third option would be a project already under version control but options 1 and 2 will also give you the opportunity to use or add versioning to the project. Let's see how that would work. 
+
+#### Starting a R Project with Version Control
+
 To start an R project, you would navigate to `File > new project` rather than just `File > new file`. 
-1. Starting a new project (with version control)
-![Add image starting new R project project type screen]()
+
+![New directory](../fig/05-new-directory.png)
+
+After choosing `New Directory` chose `new project` on the next menu options. 
+
+Then, to use version control, make sure to check the box as highlighted:
+![new project w/ version control](../fig/05-brand-new-project.PNG)
 
 *Note when you choose directory name, it will create a new directory in the directory you specified along with an .Rproj file of the same name. Avoid spaces here. underscores "_", dashes "-" or camel case "NewProject" is the recommended way to name this directory/file.
 
-*Make sure the checkbox for git version control is checked. 
+*Optionally, check the box in the bottom left corner "Open in new session" if you want it to appear in a new RStudio window. 
 
-*Optionally, check the box next to Open in new session if you want it to appear in a new RStudio window. 
+#### Add versioning to an existing project
 
-2. If you've already started an R project WITHOUT version control, you have the option to add version control retrospectively. You can also add existing R files to a project and version control if you've done neither. We won't go over that here, but to see an example please see episode from x lesson here: FIXME add link
-![Add image of this option]()
+![existing project](../fig/05-existing-directory.png)
 
-3. Continue a version-controlled project
-The final option is to continue a version controlled project. This is the option we will do.
-![Add image new project version control option]()
-![Add image import project from Git]()
+We won't take the time to cover this here, but if you've already started an R project WITHOUT version control, you have the option to add version control retrospectively. You can also add existing R files to a project and version control if you've done neither. To see a tutorial of this process,  please see [episode 14 "Using Git from RStudio" in Version Control with Git](https://swcarpentry.github.io/git-novice/14-supplemental-rstudio/index.html).
 
-But first, we need to navigate to GitHub and make a copy of the project for this workshop -> FIXME add instructions. 
+This is by far the most labor intensive way to do it, so remember to add version control at the beginning of any new project (even if you get lazy and don't end up using it).
+
+#### Continue a version-controlled project
+
+![version controlled](../fig/05-version-control.png)
+The final option is to continue a version controlled project. This is the option we will do for our workshop.
+
+First, indicate which version control language you will be using (Subversion is another less popular language than Git)
+
+![Git or Subversion](../fig/05-new-project-git.PNG)
+
+When you choose this option there will be a place to paste the url of the GitHub (or other hosting platform) url. The name of the repository will automatically populate. Just choose which directory on your computer you wish to save the project directory and your good to go!
+
+![continue project from GitHub](../fig/05-new-project-git-url.PNG)
+
+## Our turn!
+
+We have a repository already prepared for this workshop at [https://github.com/UCSBCarpentry/R-repro-pub](https://github.com/UCSBCarpentry/R-repro-pub) We are going to use the third option to download a repository from GitHub to work hands on. 
+
+Let’s take a second to acquaint ourselves with GitHub.
+
+![GitHub](../fig/05-github.PNG)
+
+The two main sections are files and directories and the README which should contain a narrative description of the project. 
+
+We are each going to make a copy of this repository to use for this workshop. To do so: 
+
+![Clone repository](../fig/05-clone-repo.PNG)
+
+Then, in the upper right corner, click the + button next to your profile picture. Choose `import repository`.
+
+![import repository](../fig/05-import-repo.PNG)
+
+![import repository 2](../fig/05-import-repo-2.PNG)
+
+![preparing repository](../fig/05-preparing-repo.PNG)
+
+Again, click the green code button, click the copy button next to the url, and let's head back to RStudio. 
+
+Click File>New Project > Verison Control > Git . Now paste in your url and choose "Desktop" as your directory. 
+
+![start my R project](../fig/05-start-my-r-project.PNG)
 
 
-Woo hoo! We have the project we are collaborating on for this workshop open in a new RStudio session!
+Woo hoo! We have the project we're working on for this workshop opened in RStudio and set to use version control!
 
-Let’s take a second to pause and look at our materials in the folders to acquaint ourselves with them.
-Now, how to use version control. 
 
-### Using version control
+Now, let's dive in to how to use version control. 
+
+### Using version control in RStudio
+
+There are two places we can interact with Git in the RStudio interface.
+1. Menu bar ![Git menu bar](../fig/05-git-top-menu.PNG)
+2. Environment/History pane ![git environment panel](../fig/05-git-environment-window.PNG)
+
+Ok, but what do all the options mean? We won't go through them all, but here are the basics to get started versioning your project.
+
+#### Git workflow
 
 The most simple workflow for version control (working on your computer only)
 is referred to as "add" and "commit": 
 
 But what do those words even mean?
 
-add: definition  
-Commit: definition 
+add: choose a file or file to take a "snapshot" of. Aka what files do you want to add to your next version save?
+
+Commit: Taking a "snapshot" of a selected version of your project. The snapshot will **only** include the files you "added", typically only files that you've edited since your last commit. 
 
 
 If we are saving our work to a version control hosting cloud platform such as GitHub, 
@@ -73,9 +133,11 @@ our workflow gets a bit more complex, we add a "pull" and "push" step at the beg
 Pull > add > commit > push
 
 
-Pull: definition  
+Pull: *download* the most recent version of the repository *from* GitHub  
  
-Push: definition  
+Push: *upload* the most recent version of the repository *to* GitHub
+
+Later we'll see how to use push and pull, for now we'll stick to adding and commiting. 
 
 ### Tips for working with Git
 
