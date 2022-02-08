@@ -26,11 +26,11 @@ knitr_fig_path("05-")
 ```
 
 
-### Using R projects and version control in RStudio
+## Using R projects and Version Control in RStudio
 
 It's a two step process to work on a project in RStudio with version control. First step is to make sure your work is set up as an R Project. Secondly, and optionally, when you set up your project you can have the option to add versioning (or continue from an existing version-controlled project). 
 
-#### Starting an R Project
+## Starting an R Project
 
 There are several options for working with R projects in RStudio. If you aren't already working in an R Project, you can create a new one. There are three options here:
 1. **New Directory** - start a brand new R project .
@@ -41,7 +41,7 @@ There are several options for working with R projects in RStudio. If you aren't 
 
 The third option would be a project already under version control but options 1 and 2 will also give you the opportunity to use or add versioning to the project. Let's see how that would work. 
 
-#### Starting a R Project with Version Control
+### Starting a R Project with Version Control
 
 To start an R project, you would navigate to `File > new project` rather than just `File > new file`. 
 
@@ -56,7 +56,7 @@ Then, to use version control, make sure to check the box as highlighted:
 
 *Optionally, check the box in the bottom left corner "Open in new session" if you want it to appear in a new RStudio window. 
 
-#### Add versioning to an existing project
+### Add versioning to an existing project
 
 ![existing project](../fig/05-existing-directory.png)
 
@@ -64,7 +64,7 @@ We won't take the time to cover this here, but if you've already started an R pr
 
 This is by far the most labor intensive way to do it, so remember to add version control at the beginning of any new project (even if you get lazy and don't end up using it).
 
-#### Continue a version-controlled project
+### Continue a version-controlled project
 
 ![version controlled](../fig/05-version-control.png)
 The final option is to continue a version controlled project. This is the option we will do for our workshop.
@@ -111,7 +111,7 @@ Woo hoo! We have the project we're working on for this workshop opened in RStudi
 
 Now, let's dive in to how to use version control. 
 
-### Using version control in RStudio
+## Using Version Control in RStudio
 
 There are two places we can interact with Git in the RStudio interface.
 1. Menu bar ![Git menu bar](../fig/05-git-top-menu.PNG)
@@ -119,29 +119,30 @@ There are two places we can interact with Git in the RStudio interface.
 
 Ok, but what do all the options mean? We won't go through them all, but here are the basics to get started versioning your project.
 
-#### Git workflow
+### Git workflow
 
 The most simple workflow for version control (working on your computer only)
 is referred to as "add" and "commit": 
 
 But what do those words even mean?
 
-add: choose a file or file to take a "snapshot" of. Aka what files do you want to add to your next version save?
+**add:** choose a file or file to take a "snapshot" of. Aka what files do you want to add to your next version save?
 
-Commit: Taking a "snapshot" of a selected version of your project. The snapshot will **only** include the files you "added", typically only files that you've edited since your last commit. 
+**Commit:** Taking a "snapshot" of a selected version of your project. The snapshot will *only* include the files you "added", typically only files that you've edited since your last commit. 
 
+You may have a few to many commits in a single work session. 
 
 If we are saving our work to a version control hosting cloud platform such as GitHub, 
 our workflow gets a bit more complex, we add a "pull" and "push" step at the beginning and end of a work session. 
 
-Pull > add > commit > push
+`Pull > add > commit > push`
 
 
-Pull: *download* the most recent version of the repository *from* GitHub  
+**Pull:** *download* the most recent version of the repository *from* GitHub  
  
-Push: *upload* the most recent version of the repository *to* GitHub
+**Push:** *upload* the most recent version of the repository *to* GitHub
 
-Later we'll see how to use push and pull, for now we'll stick to adding and commiting. 
+Put a pin in pulling and pushing for now. For the time being as we edit our paper we will just stick to adding and commiting. At the end we'll see how to use push to GitHub, and you can experiment with pulling later on. 
 
 ### Tips for working with Git
 
@@ -151,7 +152,6 @@ Later we'll see how to use push and pull, for now we'll stick to adding and comm
 
 This pull, add, commit, push routine will become second nature. Pulling at the beginning and pushing at the end of your work session becomes a sort of ritual that marks the beginning and end of your work session. 
 
-Show how to commit
 
 > ## Tip: add files that don’t need to be tracked to the .gitignore
 > Such as data files, outputs, references (you want to save those, but you 
@@ -163,13 +163,26 @@ Show how to commit
 >
 {: .challenge}
 
-### Your first edit
+## Your first edit
 
-Demonstrate an edit
+The first edit we will make is to the yaml file so we can practice this process.
 
-> ## Challenge: Find the FIXMEs and add the Markdown formatting indicated. 
->
-{: .challenge}
+In the title add "(Carpentry Workshop Version)" and make sure to save. 
 
-Make a commit when you’re done with a message that is descriptive of the edits made. 
+![first edit](../fig/05-first-edit.PNG)
+
+Now, in the Environment panel, toggle to the Git tab. You'll see the file that was edited with a check mark next to it. Click the check mark to "add" . Note that if you edited more than one file you could choose any or all of the documents to "add". 
+
+![git panel add](../fig/05-Git-panel-add.PNG)
+
+Now, click commit. A dialogue box will pop up. You'll need to add a commit message to proceed. Add something about editing the title. The difference between your files will show in the bottom panel. 
+
+![commit in RStudio](../fig/05-rstudio-commit.PNG)
+
+Hit commit and a dialogue box will show a completed commit.
+
+You made your first commit!
+
+
+
 
