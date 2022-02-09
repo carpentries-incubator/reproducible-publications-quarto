@@ -141,7 +141,7 @@ the option always follows the code chunk label (don't forget to add a `,` after 
 **message** = (logical) whether or not to display messages that appear when running the code (default TRUE)
  
  
-> ## CHALLENGE 9.1 - Rendering Codes
+> ## CHALLENGE 6.1 - Rendering Codes
 > How will some hypothetical code render given the following options?
 > `{r global-chunk-challenge, eval = TRUE, include = FALSE}`
 > 
@@ -152,13 +152,13 @@ the option always follows the code chunk label (don't forget to add a `,` after 
 > {: .solution}
 {: .challenge}
 
-> ## CHALLENGE 9.2 - add options to your code  
+> ## CHALLENGE 6.2 - add options to your code  
 > Add the following options to your code:  
 > echo = FALSE, message = FALSE, warning = FALSE, result = FALSE  
 > 
 > What will this do?  
 >> ## SOLUTION
->> ![solution to 9.3](../fig/06-solution-9.3.PNG)    
+>> ![solution to 6.2](../fig/06-solution-9.3.PNG)    
 >>
 >> These options mean the source code will not be printed in the knit html document, messages from the code will not be printed in the knit html document, and warnings will not be printed in the knit html document (but will still output to the console). Plots, figures or whatever is printed by the code WILL show up in the final html document.  
 > {: .solution}
@@ -282,7 +282,7 @@ https://stackoverflow.com/questions/26994958/error-cannot-open-the-connection-in
 
 Ok, now that we've done that we'll have to go back and fix the Figure 3 code so it runs properly. That is about all we'll need to do with fussing around with relative paths though - thank goodness! 
 
-> ## Challenge 9.4
+> ## Challenge 6.4
 > 
 > Fix Figure 3 so that the code runs now that we changed the working directory to the project directory instead of the directory where the rmd document lives
 > 
@@ -320,7 +320,7 @@ Alright! That takes care of Fig 4 as well as Fig 3. Now we could go back and rem
 > What if you want most of your code chunks to render with the same options (i.e. echo = FALSE), but you just have one or two chunks that you want to tweak the options on (i.e. display code with echo = TRUE)? Good news! The global options can be overwritten on a case by case basis in each individual code chunk.
 {: .callout}
 
-> ## CHALLENGE 9.5 (optional) global & individual code chunk options  
+> ## CHALLENGE 6.5 (optional) global & individual code chunk options  
 >
 > How would appear in our html document if we knit a code chunk with the following options?  
 > `{r challenge-5, warning = TRUE, echo = TRUE}`
@@ -334,7 +334,7 @@ Alright! That takes care of Fig 4 as well as Fig 3. Now we could go back and rem
 
 Before we lose track of where we were with editing up our second code chunk, let's finish it up by going back and adding a caption and name:
 
-> ## Challenge 9.6: Add chunk name and caption to Figure 4
+> ## Challenge 6.6: Add chunk name and caption to Figure 4
 >
 > Add the caption: `Fig 4: Cortisol and Amylase levels in stress and control groups`
 > Add the name: `fig4-hormones`
@@ -373,5 +373,3 @@ At this point we could go back through our R scripts and comment out (or delete)
 > ## Tip: Yaml chunk options
 > We can also tweak some settings in our yaml which changes how code chunks are displayed. We're not going to get into this in the workshop, but many of the same options you set in your global code chunk settings are also configurable in the yaml. 
 {: .callout}
-
-
