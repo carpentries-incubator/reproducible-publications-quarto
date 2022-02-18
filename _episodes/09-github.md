@@ -12,7 +12,7 @@ objectives:
 - "Connecting your project to Github."
 
 keypoints:
-- "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor `incididunt` ut labore (i.e. et dolore magna aliqua)."
+- "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore (i.e. et dolore magna aliqua)."
 - "Ut enim ad minim veniam, quis nostrud `*` exercitation `#` ullamco laboris nisi ut aliquip ex ea commodo consequat."
 ---
 
@@ -27,15 +27,15 @@ Github used to allow simple Username & Password authentication but now Github re
 
 
 1. Check for your local SSH keys.  Tools --> Global Options --> Git/SVN.  
-1. If your "SSH RSA key" field is blank then you do not yet have SSH Keys and you should generate keys by clicking the "create RSA key" button. ![](../fig/10-rstudio-global-options-git-no-ssh-keys.png)  ![](../fig/10-rstudio-create-rsa-key-button.png)
+1. If your "SSH RSA key" field is blank then you do not yet have SSH Keys and you should generate keys by clicking the "create RSA key" button. ![](../fig/09-rstudio-global-options-git-no-ssh-keys.png)  ![](../fig/09-rstudio-create-rsa-key-button.png)
 Set your passphrase and don't forget it.  Store your passphrase in your password manager. 
-![](../fig/10-rstudio-create-rsa-key-set-passphrase.png) 
-![](../fig/10-rstudio-create-rsa-key-result.png)
+![](../fig/09-rstudio-create-rsa-key-set-passphrase.png) 
+![](../fig/09-rstudio-create-rsa-key-result.png)
 
 Click "View Public Key" in RStudio --> Tools --> Global Options --> Git/SVN and copy the public key cypher text.
-![](../fig/10-rstudio-global-options-git-with-ssh-keys.png)
+![](../fig/09-rstudio-global-options-git-with-ssh-keys.png)
 
-![](../fig/10-rstudio-public-key-display.png)
+![](../fig/09-rstudio-public-key-display.png)
 
 Now that you have a public key you need to add it to your account on Github.
 
@@ -43,9 +43,9 @@ Now that you have a public key you need to add it to your account on Github.
 1. If you have not yet added your Public SSH key to your Github account in "[Setting --> SSH and GPG keys](https://github.com/settings/keys)" do so.  <br><br>
 
 Click the "New SSH Key" button in Github 
-![](../fig/10-github-add-new-ssh-key-button.png)
+![](../fig/09-github-add-new-ssh-key-button.png)
 then paste it into the form.
-![](../fig/10-github-add-new-ssh-key.png)
+![](../fig/09-github-add-new-ssh-key.png)
 
 Now you can authenticate with Github using your SSH keys.  If you want to test this you can do so on the command line with:
 ```
@@ -58,12 +58,12 @@ If you forked and cloned the demonstration publication for this workshop as cove
 
 You can check this in Rstudio --> Tools --> Project Options --> Git/SVN
 
-![](../fig/10-rstudio-project-options-git-with-origin.png) 
+![](../fig/09-rstudio-project-options-git-with-origin.png) 
 
 If the "Origin" field is blank then you'll need to add it from the command line interface.
 You can get the address of your repository from Github by navigating to your repository on Github.com and clicking the green "Code" button.
 
-![](../fig/10-github-clone.png)
+![](../fig/09-github-clone.png)
 
 With that address you can complete the command 
 
@@ -73,7 +73,7 @@ git remote add origin <paste your repository address here>
 
 It should looks something like this:
 
-![](../fig/10-git-remote-add.png)
+![](../fig/09-git-remote-add.png)
 
 1. push your local repository up to git.
 
