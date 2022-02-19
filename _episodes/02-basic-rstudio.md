@@ -130,7 +130,7 @@ visual editor options.
 
 > ## Tip: Resources to learn R Markdown  
 > if you want to learn how to use the source editor (as we call it) please see 
-> the following documentation.
+> the [Pandoc Markdown Documentation](https://pandoc.org/MANUAL.html#philosophy).
 > You will need to know Markdown formatting (specifically R-flavored Markdown).       
 {: .callout}
 
