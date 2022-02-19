@@ -118,7 +118,9 @@ If you see this default text you're good to go: ![.Rmd new file generic template
 
 RStudio released a new major update to their IDE in January 2020, which includes a new "visual editor" for R Markdown to supplement their original editor (which we will call the source editor) for authoring with R Markdown syntax. The new visual editor is friendlier with a graphical user interface similar to Word or Google docs that lets you choose styling options from the menu (before you had to either have the R Markdown code memorized or look it up for each of your styling choices). The second major benefit is that the new editor renders the R Markdown styling in real time so you can see a preview of your final paper appearance without needing to knit (of course you still need to knit to render your final document).
 
-![Add image source editor](../fig/02-source-editor.PNG) ![Add image visual editor](../fig/02-visual-editor.PNG)
+![Add image source editor](../fig/02-source-editor.PNG) 
+![change to visual editor](../fig/02-visual-editor-spotlight.png)
+![Add image visual editor](../fig/02-visual-editor.PNG)
 
 We will proceed using the visual editor during this workshop as it is more 
 user-friendly and allows us to talk about styling without needing to teach the 
