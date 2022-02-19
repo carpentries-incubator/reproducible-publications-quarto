@@ -41,8 +41,6 @@ You can quickly insert chunks like these into your file with:
 
 The most basic (and empty) code chunk looks like so:
 
-The most basic code chunk looks like so:
-
 ![blank Rmd code chunk](../fig/06-blank-code-chunk.PNG)
 
 Other than our backticks ``` for code chunks that surround the code top and bottom, the only **required** piece is the specified language (r) placed between the curly brackets. This indicates that the language to read the code is R.
