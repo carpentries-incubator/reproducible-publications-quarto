@@ -69,15 +69,17 @@ bibliography: references.bib
 ### 2. Formatted text: 
 This one is simple, it's literally just text narrative formatted by using markdown (more on markdown syntax later). Markdown-formatted text is one of the benefits added above and beyond the capabilities of a regular r script. Any text section will have the default white background in the rmd document. As you might know, in a regular R file, # starts a comment. In R markdown, plain text is just plain narrative text that appears in the document. In R scripts, plain text wants to be code. In R Markdown, you will need to enclose your code in special characters. Any symbols you do see that aren’t regular grammar components are for formatting, such as ##, ** **, and < >.
 
-Bonus: you can use a variety of languages to format text and images in R Markdown: 
-R Markdown
-HTML
-LaTeX
+> ## Tip: Bonus! You can use a variety of languages to format text and images in R Markdown: 
+- R Markdown
+- HTML
+- LaTeX
+- CSS
+{: .callout}
 
 
 ![rmd template text](../fig/03-rmd-template-text.png)
 
-> ## CHALLENGE 2.3 - Formatting with Symbols (optional)
+> ## CHALLENGE 3.1 - Formatting with Symbols (optional)
 > In Rmd certain symbols are used to denote formatting that should happen to the text (after we "knit" or render). Before we knit, these symbols will show up seemingly "randomly" throughout the text and don't contribute to the narrative in a logical way. In the generic Rmd document, there are three types of such symbols (##, **, <>) . Each symbol represents a different kind of formatting (think of your text formatting buttons you use in Word). Can you deduce from the surrounding text how these symbols format the surrounding text?  
 > ```
 > ## R Markdown
@@ -100,6 +102,7 @@ R code chunks appear highlighted in gray throughout the rmd document. They are s
 > - Python  
 > - Bash  
 > - SQL  
+> 
 > A complete list of compatible languages can be found at: https://rmarkdown.rstudio.com/lesson-5.html   
 {: .callout}
 
@@ -125,7 +128,7 @@ Before you can render your document, you'll need to give it a file name and choo
 This is how our hmtl document will render after clicking the knit button and choosing a file name:
 ![Knit html output](../fig/03-knit-echoTRUE.PNG)
 
-> ## CHALLENGE 2.4 - echo=TRUE Function (optional)
+> ## CHALLENGE 3.2 - echo=TRUE Function (optional)
 > Can you deduce what the echo=TRUE option stands for?  
 >> ## Solution
 >> The echo=TRUE piece is knitr syntax that sets a global default for the whole paper. This piece of code specifically, `echo=TRUE`, tells the rmd document to display the R code that generates the plots & analysis when the rmd document is rendered by hitting the "knit" button. 
