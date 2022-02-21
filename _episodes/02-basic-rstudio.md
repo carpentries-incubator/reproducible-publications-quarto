@@ -119,6 +119,22 @@ If you see this default text you're good to go: ![.Rmd new file generic template
 RStudio released a new major update to their IDE in January 2020, which includes a new "visual editor" for R Markdown to supplement their original editor (which we will call the source editor) for authoring with R Markdown syntax. The new visual editor is friendlier with a graphical user interface similar to Word or Google docs that lets you choose styling options from the menu (before you had to either have the R Markdown code memorized or look it up for each of your styling choices). The second major benefit is that the new editor renders the R Markdown styling in real time so you can see a preview of your final paper appearance without needing to knit (of course you still need to knit to render your final document).
 
 ![Add image source editor](../fig/02-source-editor.PNG) 
+
+> ## CHALLENGE 2.3 - Formatting with Symbols (optional)
+> In Rmd certain symbols are used to denote formatting that should happen to the text (after we "knit" or render). Before we knit, these symbols will show up seemingly "randomly" throughout the text and don't contribute to the narrative in a logical way. In the generic Rmd document, there are three types of such symbols (##, **, <>) . Each symbol represents a different kind of formatting (think of your text formatting buttons you use in Word). Can you deduce from the surrounding text how these symbols format the surrounding text?  
+> ```
+> ## R Markdown
+>
+> This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+>
+> When you click the **Knit** button a document will be generated that includes both content as well as the >output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+> ```
+>> ## SOLUTION
+>> `##` is a heading, `**` is to bold enclosed text, and `<>` is for hyperlinks. 
+>> Don't worry about this too much right now! This is an example of R Markdown syntax for styling, we'll dive into this next.
+> {: .solution}
+{: .challenge}
+
 ![change to visual editor](../fig/02-visual-editor-spotlight.png)
 ![Add image visual editor](../fig/02-visual-editor.PNG)
 
