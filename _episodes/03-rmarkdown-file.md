@@ -69,17 +69,15 @@ bibliography: references.bib
 ### 2. Formatted text: 
 This one is simple, it's literally just text narrative formatted by using markdown (more on markdown syntax later). Markdown-formatted text is one of the benefits added above and beyond the capabilities of a regular r script. Any text section will have the default white background in the rmd document. As you might know, in a regular R file, # starts a comment. In R markdown, plain text is just plain narrative text that appears in the document. In R scripts, plain text wants to be code. In R Markdown, you will need to enclose your code in special characters. Any symbols you do see that aren’t regular grammar components are for formatting, such as ##, ** **, and < >.
 
-> ## Tip: Bonus! You can use a variety of languages to format text and images in R Markdown: 
-- R Markdown
-- HTML
-- LaTeX
-- CSS
-{: .callout}
+Bonus: you can use a variety of languages to format text and images in R Markdown: 
+R Markdown
+HTML
+LaTeX
 
 
 ![rmd template text](../fig/03-rmd-template-text.png)
 
-> ## CHALLENGE 3.1 - Formatting with Symbols (optional)
+> ## CHALLENGE 2.3 - Formatting with Symbols (optional)
 > In Rmd certain symbols are used to denote formatting that should happen to the text (after we "knit" or render). Before we knit, these symbols will show up seemingly "randomly" throughout the text and don't contribute to the narrative in a logical way. In the generic Rmd document, there are three types of such symbols (##, **, <>) . Each symbol represents a different kind of formatting (think of your text formatting buttons you use in Word). Can you deduce from the surrounding text how these symbols format the surrounding text?  
 > ```
 > ## R Markdown
@@ -97,14 +95,12 @@ This one is simple, it's literally just text narrative formatted by using markdo
 ### 3. Code Chunks: 
 R code chunks appear highlighted in gray throughout the rmd document. They are surrounded by three tick marks on either side (\`\`\`) with the starting three tick marks followed by curly brackets `{}`with some other code inside. The tick marks indicate the start of a code section and the bits found between the curly brackets `{}`indicate how R should read and display the code (more on this in the Knitr syntax episodes). These are the sections you add R code such as summary statistics, analysis, tables and plots. If you’ve already written an R script you can copy and paste your code between the few lines of required formatting to embed & run whichever piece you want at that particular spot in the document.
 
-> ## Tip: Bonus! You code with many different languages in RStudio:  
-> - R  
-> - Python  
-> - Bash  
-> - SQL  
-> 
-> A complete list of compatible languages can be found at: https://rmarkdown.rstudio.com/lesson-5.html   
-{: .callout}
+Bonus: You can use code from a number of different languages:
+R
+Python
+Bash
+SQL
+We’ll see more later, but a complete list of compatible languages can be found at: https://rmarkdown.rstudio.com/lesson-5.html 
 
 
 ![rmd template code](../fig/03-rmd-template-code.png)
@@ -121,14 +117,14 @@ Click the "knit" button
 
 ![Add or update image](../fig/03-knit-button.PNG)
 
-Before you can render your document, you'll need to give it a file name and choose what folder you want to save it to. Choose `my_first_rmd.rmd` as your file name and save it to an easily accessible directory in your file system. 
+Before you can render your document, you'll need to give it a file name and choose what folder you want to save it to. Choose `rmd-workshop-paper.rmd` as your file name and save the file to your `code` sub-folder. 
 
 ![First knit choose filename](../fig/03-knit-filename.PNG)
 
 This is how our hmtl document will render after clicking the knit button and choosing a file name:
 ![Knit html output](../fig/03-knit-echoTRUE.PNG)
 
-> ## CHALLENGE 3.2 - echo=TRUE Function (optional)
+> ## CHALLENGE 2.4 - echo=TRUE Function (optional)
 > Can you deduce what the echo=TRUE option stands for?  
 >> ## Solution
 >> The echo=TRUE piece is knitr syntax that sets a global default for the whole paper. This piece of code specifically, `echo=TRUE`, tells the rmd document to display the R code that generates the plots & analysis when the rmd document is rendered by hitting the "knit" button. 
@@ -140,7 +136,7 @@ This is how our hmtl document will render after clicking the knit button and cho
 
 We have learned how to start a new document on RStudio and we will learn good practices for project organization next. But, let’s say you are writing a paper and you already know which journal you are submitting it to? Writing it in your own style and then formatting prior to submission is time-consuming, right? The good news is that RStudio makes our lives easier. Through a package called “rticles” you can access a number of existing journals’ templates that will let you easily and quickly format and prepare your paper draft for peer review. Even if the journal you submit to does not have a template, it may be good to review several of the templates to get an idea of formatting options available to you in R Markdown.. 
 
-Let’s take a look at that! On RStudio, load the `rticles` package by using the function `library(rticles)` (remember we've already installed the package earlier!). Once you’ve loaded the package, use the plus icon at the upper-left side of your screen to create a new document or proceed with File>New File>R Markdown. This will prompt the window for creating a new R Markdown document as we saw earlier.
+Let’s take a look at that! On RStudio, load the `rticles` package by Once you’ve loaded the package is completed, use the plus icon at the upper-left side of your screen to create a new document or proceed with File>New File>R Markdown. This will prompt the window for creating a new R Markdown document as we saw earlier.
 
 Clicking on `“From Template”` will prompt a couple of dozen templates listed as {rticles}. Let’s choose the Biometrics Journal template and then, OK. 
 

@@ -11,9 +11,11 @@ URL: {{ URL }}
 BugReports: {{ BugReports }}
 Encoding: UTF-8
 Imports: 
-    magrittr,
-    glue,
-    rlang,
-    yaml,
-    jsonlite,
-    renv
+    rmarkdown,
+    knitr,
+    stringr,
+    BiocManager,
+    desc,
+    remotes,
+    renv,
+    rprojroot

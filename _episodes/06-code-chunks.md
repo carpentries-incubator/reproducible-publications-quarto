@@ -1,5 +1,5 @@
 ---
-title: "Adding Code Generated Plots and Figures"  
+title: "Code Chunks"  
 teaching: 40
 exercises: 20
 questions:
@@ -40,6 +40,8 @@ You can quickly insert chunks like these into your file with:
 - or by typing the chunk delimiters {r} and ```.  
 
 The most basic (and empty) code chunk looks like so:
+
+The most basic code chunk looks like so:
 
 ![blank Rmd code chunk](../fig/06-blank-code-chunk.PNG)
 
