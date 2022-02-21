@@ -72,7 +72,7 @@ package.
 Packages can be installed and updated from the Package tab with the Install and 
 Update buttons at the top of the tab.
 
-> ## CHALLENGE 2.2 - Installing Packages
+> ## CHALLENGE 2.1 - Installing Packages
 >
 > Install the following packages: `bookdown`, `tidyverse`, `knitr`, `rticles`,`kable` \> 
 >> ## SOLUTION 
@@ -120,7 +120,7 @@ RStudio released a new major update to their IDE in January 2020, which includes
 
 ![Add image source editor](../fig/02-source-editor.PNG) 
 
-> ## CHALLENGE 2.3 - Formatting with Symbols (optional)
+> ## CHALLENGE 2.2 - Formatting with Symbols (optional)
 > In Rmd certain symbols are used to denote formatting that should happen to the text (after we "knit" or render). Before we knit, these symbols will show up seemingly "randomly" throughout the text and don't contribute to the narrative in a logical way. In the generic Rmd document, there are three types of such symbols (##, **, <>) . Each symbol represents a different kind of formatting (think of your text formatting buttons you use in Word). Can you deduce from the surrounding text how these symbols format the surrounding text?  
 > ```
 > ## R Markdown
