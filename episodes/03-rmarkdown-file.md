@@ -95,12 +95,13 @@ LaTeX
 ### 3. Code Chunks: 
 R code chunks appear highlighted in gray throughout the rmd document. They are surrounded by three tick marks on either side (\`\`\`) with the starting three tick marks followed by curly brackets `{}`with some other code inside. The tick marks indicate the start of a code section and the bits found between the curly brackets `{}`indicate how R should read and display the code (more on this in the Knitr syntax episodes). These are the sections you add R code such as summary statistics, analysis, tables and plots. If you’ve already written an R script you can copy and paste your code between the few lines of required formatting to embed & run whichever piece you want at that particular spot in the document.
 
-Bonus: You can use code from a number of different languages:
-R
-Python
-Bash
-SQL
-We’ll see more later, but a complete list of compatible languages can be found at: https://rmarkdown.rstudio.com/lesson-5.html 
+> ## Tip: Bonus! You code with many different languages in RStudio:  
+> - R  
+> - Python  
+> - Bash  
+> - SQL  
+> A complete list of compatible languages can be found at: https://rmarkdown.rstudio.com/lesson-5.html   
+{: .callout}
 
 
 ![rmd template code](../fig/03-rmd-template-code.png)
@@ -117,7 +118,7 @@ Click the "knit" button
 
 ![Add or update image](../fig/03-knit-button.PNG)
 
-Before you can render your document, you'll need to give it a file name and choose what folder you want to save it to. Choose `rmd-workshop-paper.rmd` as your file name and save the file to your `code` sub-folder. 
+Before you can render your document, you'll need to give it a file name and choose what folder you want to save it to. Choose `my_first_rmd.rmd` as your file name and save it to an easily accessible directory in your file system. 
 
 ![First knit choose filename](../fig/03-knit-filename.PNG)
 
