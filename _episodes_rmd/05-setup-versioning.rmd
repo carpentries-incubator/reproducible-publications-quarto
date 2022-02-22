@@ -126,7 +126,7 @@ is referred to as "add" and "commit":
 
 But what do those words even mean?
 
-**add:** choose a file or file to take a "snapshot" of. Aka what files do you want to add to your next version save?
+**add:** choose a file or files to take a "snapshot" of. Aka what files do you want to add to your next version save?
 
 **Commit:** Taking a "snapshot" of a selected version of your project. The snapshot will *only* include the files you "added", typically only files that you've edited since your last commit. 
 
@@ -165,7 +165,7 @@ This pull, add, commit, push routine will become second nature. Pulling at the b
 
 ## Your first edit
 
-The first edit we will make is to the yaml file so we can practice this process.
+The first edit we will make is to the yaml file of our `DataPaper-ReproducibilityWorkshop.rmd' file so we can practice this process.
 
 In the title add "(Carpentry Workshop Version)" and make sure to save. 
 
