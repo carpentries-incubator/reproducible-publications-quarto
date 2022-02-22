@@ -139,7 +139,7 @@ Rscript -e 'knitr::knit("./_episodes_rmd/04-good-project.Rmd", output = "./_epis
 # episode 5:
 Rscript -e 'knitr::knit("./_episodes_rmd/05-setup-versioning.Rmd", output = "./_episodes/05-setup-versioning.md")'
 # episode 6:
-Rscript -e 'knitr::knit("./_episodes_rmd/06-code-chunks.Rmd", output = "./_episodes/06-code-chunks.md")'
+Rscript -e 'knitr::knit("./_episodes_rmd/07-code-chunks.Rmd", output = "./_episodes/07-code-chunks.md")'
 ~~~
 
 ## Contributing
