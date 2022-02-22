@@ -11,9 +11,4 @@ URL: {{ URL }}
 BugReports: {{ BugReports }}
 Encoding: UTF-8
 Imports: 
-    magrittr,
-    glue,
-    rlang,
-    yaml,
-    jsonlite,
-    renv
+    jsonlite
