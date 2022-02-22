@@ -11,11 +11,4 @@ URL: {{ URL }}
 BugReports: {{ BugReports }}
 Encoding: UTF-8
 Imports: 
-    rmarkdown,
-    knitr,
-    stringr,
-    BiocManager,
-    desc,
-    remotes,
-    renv,
-    rprojroot
+    jsonlite

@@ -54,6 +54,7 @@ The first three are self-explanatory, but what's the output? We saw this in the 
 We’ll see other formatting options for YAML later on including how to add bibliography information, customize our output, and change the default settings of the knit function. Below is an example of how our YAML file will look at the end of this workshop.
 
 ~~~
+#FIXME make sure this matches final paper version
 ---
 title: "Data Article: Trier social stress test and food-choice: Behavioral, self-report & hormonal data"
 author: "Felix Jan Nitsch; Manuela Sellitto; Tobias Kalenscher"
