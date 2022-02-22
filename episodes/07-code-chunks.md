@@ -1,20 +1,19 @@
 ---
+source: Rmd  
 title: "Code Chunks"  
 teaching: 40
 exercises: 20
 questions:
-- "When would I want to use code chunks?"
-- "How do I add code chunks?"
-
+- question #1?
+- question #2?
+- question #3?
 objectives:
-- "Understand the basic functions of Knitr."
-- "Learn how to add code chunks to your document."
-- "Distinguish when inline code vs. code chunks would be appropriate."
-- "Understand how to change the output characteristics of code chunks."
-
+- objective #1
+- objective #2
+- objective #3
 keypoints:
-- "FIX ME"
-- "FIX ME"
+- keypoint #1. Specific concept or syntax learned in this episode
+- keypoint #2. Specific concept or syntax learned in this episode
 ---
 
 
@@ -61,7 +60,7 @@ We’ll start by typing our our starting backticks & r between curly brackets. (
 
 ![blank Rmd code chunk](../fig/06-blank-code-chunk.PNG)
 
-Now, let's open our `03_HR_analysis.R` script in our `code` folder. Copy the code and paste it in between the two lines with backticks and `{r}.
+Now, let's open our `03_HR_analysis.R` script in our `code` folder. Copy the code and paste it in between the two lines with backticks and `{r}` in our `DataPaper-ReproducibilityWorkshop.rmd` file.
 
 ![heartrate code in chunk](../fig/06-heartrate-code.PNG)
 
@@ -268,9 +267,9 @@ Well, there is a solution to this as well! (As with most obstacles you run into 
 ## Global Knitr options
 
 Benefits of global knitr options:
-1) Set working directory so file paths (for code chunks) can be relative to the root instead of our .Rmd file
+1. Set working directory so file paths (for code chunks) can be relative to the root instead of our .Rmd file
 Global code chunk options
-3) Load libraries and data once instead of in each code chunk
+2. Load libraries and data once instead of in each code chunk
 
 
 ### Set working directory to project directory:
