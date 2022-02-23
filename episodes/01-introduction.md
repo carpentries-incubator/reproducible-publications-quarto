@@ -1,6 +1,6 @@
 ---
 title: "Scientific reproducibility: What is it for?"
-teaching: 20
+teaching: 15
 exercises: 05
 questions:
 - "What is reproducible research?"
@@ -22,7 +22,7 @@ keypoints:
 ## Warm-up
 
 Let's get into breakout rooms and discuss:
-**What is reproducible research for you?**
+What is reproducible research for you?
 Have you ever experienced issues while trying to reproduce someone else's study or even your own research?
 
 According to Curty et al. (2022) reproducible studies allow other researchers to perform the same processes and analyses to produce an identical result as the first initial researcher. Original researchers have to make available the study’s associated data, documentation, and code pipelines and workflows in a way that is sufficiently self-explanatory and well-documented so that independent investigators can reproduce/recreate the original study under the same conditions, using identical materials and procedures, and ultimately achieve consistent results and render equal outcomes.
