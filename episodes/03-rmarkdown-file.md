@@ -4,25 +4,25 @@ title: "Introduction to Working with R Markdown Files"
 teaching: FIXME
 exercises: FIXME
 questions:
-- What is the breakdown of an Rmarkdown file?
-- What are templates in Rmarkdown?
+- What is the breakdown of an R Markdown file?
+- What are templates in down?
 - How can you render the input file to the specified output format?
-- How can you find existing templates for Rmarkdown files?
+- How can you find existing templates for R Markdown files?
 - question #3?
 objectives:
-- Learn about the structure of a Rmardown file.
-- Learn how a Rmarkdown file works.
+- Learn about the structure of a R Markdown file.
+- Learn how a R Markdown file works.
 - Learn how to knit/render a rmd file into an output format.
 - Understand what templates are and the advantage of using them.
 - Learn how to start a document from a template.
 keypoints:
-- An Rmarkdown file is comprised of a YAML header, formatted text in rmd and code chunks. 
+- An R Markdown file is comprised of a YAML header, formatted text in rmd and code chunks. 
 - The knit function renders the file into the chosen output format.
 - Rstudio has some journals' templates that can save you some formatting time or you can make your own for frequent submissions.
 ---
 
 
-## Anatomy of an Rmarkdown File
+## Anatomy of an R Markdown File
 
 The key to our reproducible workflow is using R Markdown files in RStudio rather than basic scripts to dynamically “knit” both code and paper narrative. So let’s do a quick anatomy lesson on the components of an R Markdown file (YAML header, R Markdown formatted, R code chunks) and how to render them into our final formatted document.
 There are four distinct steps in the R Markdown workflow:
