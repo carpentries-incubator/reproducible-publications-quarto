@@ -63,7 +63,7 @@ We’ll start by typing our our starting backticks & r between curly brackets. (
 
 ![blank Rmd code chunk](../fig/06-blank-code-chunk.PNG)
 
-Now, let's open our `03_HR_analysis.R` script in our `code` folder. Copy the code and paste it in between the two lines with backticks and `{r}` in our `DataPaper-ReproducibilityWorkshop.rmd` file.
+Now, let's open our `03_HR_analysis.R` script in our `code` folder. Copy the code and paste it in between the two lines with backticks and `{r}.
 
 ![heartrate code in chunk](../fig/06-heartrate-code.PNG)
 
@@ -270,9 +270,9 @@ Well, there is a solution to this as well! (As with most obstacles you run into 
 ## Global Knitr options
 
 Benefits of global knitr options:
-1. Set working directory so file paths (for code chunks) can be relative to the root instead of our .Rmd file
+1) Set working directory so file paths (for code chunks) can be relative to the root instead of our .Rmd file
 Global code chunk options
-2. Load libraries and data once instead of in each code chunk
+3) Load libraries and data once instead of in each code chunk
 
 
 ### Set working directory to project directory:
