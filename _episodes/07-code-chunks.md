@@ -1,6 +1,6 @@
 ---
 source: Rmd  
-title: "Code Chunks"  
+title: "Adding Code Generated Plots and Figures"  
 teaching: 40
 exercises: 20
 questions:
