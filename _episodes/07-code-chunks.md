@@ -373,4 +373,6 @@ At this point we could go back through our R scripts and comment out (or delete)
 > We can also tweak some settings in our yaml which changes how code chunks are displayed. We're not going to get into this in the workshop, but many of the same options you set in your global code chunk settings are also configurable in the yaml. 
 {: .callout}
 
-
+> ## Time to Commit!
+> Make sure to commit your changes to GitHub.
+{: .checklist}
