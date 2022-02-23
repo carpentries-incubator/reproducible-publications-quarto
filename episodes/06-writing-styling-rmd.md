@@ -122,5 +122,5 @@ Tip: Windows users should replace in the shortcuts above `⌘` by `ctrl` and ⌥
 The visual editor allows users to insert images by browsing their location or copying and pasting it to the rmd document directly. There are also options to add html, line blocks, blockquotes, and footnotes. Up next we will learn more about how to add code chunks. In further episodes we will also learn how to insert citations and create a bibliography.
 
 > ## Time to Commit!
-> Make sure to commit your changes to GitHub.
+> Make sure to commit your changes to GitHub. Add your changed files and commit with the following message: "Added Formatting"
 {: .checklist}
