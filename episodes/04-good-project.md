@@ -36,7 +36,7 @@ members, graduate students, faculty from the same or different institutions,
 which makes it that much more difficult to keep projects organized. When you 
 throw data into the mix (sometimes huge amounts of it!), it’s integral to use 
 best practices to maintain the integrity of your analysis and to be able to 
-publish high quality and reproducible research. Using Rmarkdown is a powerful 
+publish high quality and reproducible research. Using R Markdown is a powerful 
 tool, but it can’t be fully utilized unless your project documents, scripts and 
 other files are well-organized. So let’s take a look at RStudio’s features to 
 manage projects and discuss some of the best practices when working with data 
