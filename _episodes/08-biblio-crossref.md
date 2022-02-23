@@ -9,7 +9,7 @@ questions:
 - "What are the options to display cited and uncited bibliography?"
 
 objectives:
-- "Inserting citations and listing bibliography in an RMarkdown file"
+- "Inserting citations and listing bibliography in an R Markdown file"
 - "Changing citation styles"
 - "Cross-referencing content "
 
@@ -21,7 +21,7 @@ keypoints:
 
 ## Why citing?
 
-Correctly citing and attributing publications is key to academic writing. Older versions of RStudio require [Pandoc's]("https://pandoc.org/MANUAL.html#citation-syntax") citation syntax to render bibliographies correctly. We won’t be covering this approach extensively in this workshop, since the new visual editor has made this process much more simple. You can refer to our [previous workshop on Rmarkdown]("https://ucsbcarpentry.github.io/R-markdown/06-citations-bib/index.html") pre-visual editor for more information.  
+Correctly citing and attributing publications is key to academic writing. Older versions of RStudio require [Pandoc's]("https://pandoc.org/MANUAL.html#citation-syntax") citation syntax to render bibliographies correctly. We won’t be covering this approach extensively in this workshop, since the new visual editor has made this process much more simple. You can refer to our [previous workshop on R Markdown]("https://ucsbcarpentry.github.io/R-markdown/06-citations-bib/index.html") pre-visual editor for more information.  
 
 The new visual editor in RStudio 1.4 has made citations and cross-referencing much easier, by offering different options for referencing various types of sources. Before getting into these different features, let’s first learn how you can call the citation window dialog on Rstudio and how to navigate these different options.  
 
