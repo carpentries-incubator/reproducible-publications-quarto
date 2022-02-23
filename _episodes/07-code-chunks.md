@@ -374,5 +374,5 @@ At this point we could go back through our R scripts and comment out (or delete)
 {: .callout}
 
 > ## Time to Commit!
-> Make sure to commit your changes to GitHub.
+> Make sure to commit your changes to GitHub. Add your changed files and commit with the following message: "Added Code Chunks"
 {: .checklist}
