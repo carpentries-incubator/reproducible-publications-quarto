@@ -42,7 +42,7 @@ Original investigators, therefore, must produce rich and detailed documentation 
 * The researchers can’t find some of the data they used to generate the original results, and can’t figure out which parameters they used when running their analyses.
 * The manuscript is still languishing in the drawer…
 
-According to the [U.S. National Science Foundation (NSF) subcommittee on replicability in science](https://www.nsf.gov/sbe/AC_Materials/SBE_Robust_and_Reliable_Research_Report.pdf):
+According to the [U.S. National Science Foundation (NSF) subcommittee on replicability in science](https://www.nsf.gov/sbe/AC_Materials/SBE_Robust_and_Reliable_Research_Report.pdf) (2015):
 
 Science should routinely evaluate the reproducibility of findings that enjoy a prominent role in the published literature. To make reproduction possible, efficient, and informative, researchers should sufficiently document the details of the procedures used to collect data, to convert observations into analyzable data, and to perform data analysis.
 
@@ -54,13 +54,13 @@ Reproducibility refers to the ability of a researcher to duplicate the results o
 A 2016 survey in Nature revealed that irreproducible experiments are a problem across all domains of science:
 
 ![Nature Report - 2016](../fig/01-fig2.png)
-Source: Baker, M. 1,500 scientists lift the lid on reproducibility. Nature 533, 452–454 (2016). [doi.org/10.1038/533452a](https://doi.org/10.1038/533452a)
+>>Source: Baker, M. 1,500 scientists lift the lid on reproducibility. Nature 533, 452–454 (2016). [doi.org/10.1038/533452a](https://doi.org/10.1038/533452a)
 
 
 ## Factors behind irreproducible research
 
 ![Science is not a miracle](../fig/01-fig3.png)
-Source: Then a Miracle Occurs. Copyrighted artwork by Sydney Harris Inc. 
+>>Source: Then a Miracle Occurs. Copyrighted artwork by Sydney Harris Inc. 
 
 * Not enough documentation on how experiment is conducted and data is generated
 * Data used to generate original results unavailable
@@ -73,8 +73,8 @@ Source: Then a Miracle Occurs. Copyrighted artwork by Sydney Harris Inc.
 While reproducibility is the minimum requirement and can be solved with “good enough” computational practices, replicability/robustness/generalizability of scientific findings are an even greater concern involving research misconduct, questionable research practices (p-hacking, HARKing, cherry-picking), sloppy methods, and other conscious and unconscious biases.
 
 ![How science should be](../fig/01-fig4.png)
-Source: This image was created by Scriberia for The Turing Way community DOI: [10.5281/zenodo.3
-332807](https://doi.org/10.5281/zenodo.3695300) and is used under a Creative Commons Attribution 4.0 International license.
+>>Source: This image was created by Scriberia for The Turing Way community DOI: [10.5281/zenodo.3
+332807](https://doi.org/10.5281/zenodo.3695300)
 
 If contributing to science and other researchers seems not to be compelling enough, here are 5 selfish reasons to work reproducibly according to Markowetz (2015):
 
