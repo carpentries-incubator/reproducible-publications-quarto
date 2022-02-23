@@ -235,6 +235,11 @@ We will replace type with tab and label with table-1.
 > {: .solution}
 {: .challenge}
 
+
+> ## Time to Commit!
+> Make sure to commit your changes to GitHub.
+{: .checklist}
+
 ## Citation
 
  <sup>1</sup>For more information on DOIs please see: [https://support.datacite.org/docs/doi-basics]("For more information on DOIs please see: https://support.datacite.org/docs/doi-basics")
