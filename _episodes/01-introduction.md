@@ -25,14 +25,12 @@ Let's get into breakout rooms and discuss:
 What is reproducible research for you?
 Have you ever experienced issues while trying to reproduce someone else's study or even your own research?
 
-According to Curty et al. (2022) reproducible studies allow other researchers to perform the same processes and analyses to produce an identical result as the first initial researcher. Original researchers have to make available the study’s associated data, documentation, and code pipelines and workflows in a way that is sufficiently self-explanatory and well-documented so that independent investigators can reproduce/recreate the original study under the same conditions, using identical materials and procedures, and ultimately achieve consistent results and render equal outcomes.
-
-Original investigators, therefore, must produce rich and detailed documentation for themselves and others. This includes fully specifying both in human-readable and computer-executable ways all steps taken in the study.
+Reproducible studies allow other researchers to perform the same processes and analyses to produce an identical result as the first initial researcher. Original researchers have to make available the study’s associated data, documentation, and code pipelines and workflows in a way that is sufficiently self-explanatory and well-documented so that independent investigators can reproduce/recreate the original study under the same conditions, using identical materials and procedures, and ultimately achieve consistent results and render equal outcomes. Original investigators, therefore, must produce rich and detailed documentation for themselves and others. This includes fully specifying both in human-readable and computer-executable ways all steps taken in the study.
 
 ## The importance of Reproducibility in Research
 
 ![PhD Comics cartoon](../fig/01-fig1.png)
->>Source: Comic number [1869](https://phdcomics.com/comics.php?f=1689) from [PhD Comics](https://phdcomics.com/) Copyrighted artwork by Jorge Cham.
+>Source: Comic number [1869](https://phdcomics.com/comics.php?f=1689) from [PhD Comics](https://phdcomics.com/) Copyrighted artwork by Jorge Cham.
 
 ### Discussion: A scary anecdote
 
@@ -42,7 +40,7 @@ Original investigators, therefore, must produce rich and detailed documentation 
 * The researchers can’t find some of the data they used to generate the original results, and can’t figure out which parameters they used when running their analyses.
 * The manuscript is still languishing in the drawer…
 
-According to the [U.S. National Science Foundation (NSF) subcommittee on replicability in science](https://www.nsf.gov/sbe/AC_Materials/SBE_Robust_and_Reliable_Research_Report.pdf) (2015):
+According to the [U.S. National Science Foundation (NSF)](https://www.nsf.gov/sbe/AC_Materials/SBE_Robust_and_Reliable_Research_Report.pdf)subcommittee on replicability in science (2015):
 
 Science should routinely evaluate the reproducibility of findings that enjoy a prominent role in the published literature. To make reproduction possible, efficient, and informative, researchers should sufficiently document the details of the procedures used to collect data, to convert observations into analyzable data, and to perform data analysis.
 
@@ -54,13 +52,13 @@ Reproducibility refers to the ability of a researcher to duplicate the results o
 A 2016 survey in Nature revealed that irreproducible experiments are a problem across all domains of science:
 
 ![Nature Report - 2016](../fig/01-fig2.png)
->>Source: Baker, M. 1,500 scientists lift the lid on reproducibility. Nature 533, 452–454 (2016). [doi.org/10.1038/533452a](https://doi.org/10.1038/533452a)
+>Source: Baker, M. 1,500 scientists lift the lid on reproducibility. Nature 533, 452–454 (2016). [doi.org/10.1038/533452a](https://doi.org/10.1038/533452a)
 
 
 ## Factors behind irreproducible research
 
 ![Science is not a miracle](../fig/01-fig3.png)
->>Source: Then a Miracle Occurs. Copyrighted artwork by Sydney Harris Inc. 
+>Source: Then a Miracle Occurs. Copyrighted artwork by Sydney Harris Inc. 
 
 * Not enough documentation on how experiment is conducted and data is generated
 * Data used to generate original results unavailable
@@ -73,7 +71,7 @@ A 2016 survey in Nature revealed that irreproducible experiments are a problem a
 While reproducibility is the minimum requirement and can be solved with “good enough” computational practices, replicability/robustness/generalizability of scientific findings are an even greater concern involving research misconduct, questionable research practices (p-hacking, HARKing, cherry-picking), sloppy methods, and other conscious and unconscious biases.
 
 ![How science should be](../fig/01-fig4.png)
->>Source: This image was created by Scriberia for The Turing Way community DOI: [10.5281/zenodo.3
+>Source: This image was created by Scriberia for The Turing Way community DOI: [10.5281/zenodo.3
 332807](https://doi.org/10.5281/zenodo.3695300)
 
 If contributing to science and other researchers seems not to be compelling enough, here are 5 selfish reasons to work reproducibly according to Markowetz (2015):
@@ -125,7 +123,7 @@ You can include both text and code to execute. It is a convenient tool for repro
 
 Finally, three real-world examples that motivated the authors of this lesson to value and use R Markdown:
 
-1. Greg Janee quickly put together a simple but compelling Rmarkdown document describing his [survey results](https://gjanee.github.io/name-survey/).  The ease with which he created his plots is a testament to the power of R as a data analysis environment, but the ease with which he was able to publish a page on the web is a testament to Rmarkdown and Github as a publishing environment. Notice that he did *not* have to: create plots in a tool and then export the plots as images; write any HTML; embed plot images in HTML; or create a site under Wordpress or other web hosting service.  Instead, he directly published his R code as he wrote it, and using Github, made it appear on the web with a button click.
+1. Greg Janee quickly put together a simple but compelling R Markdown document describing his [survey results](https://gjanee.github.io/name-survey/).  The ease with which he created his plots is a testament to the power of R as a data analysis environment, but the ease with which he was able to publish a page on the web is a testament to R Markdown and Github as a publishing environment. Notice that he did *not* have to: create plots in a tool and then export the plots as images; write any HTML; embed plot images in HTML; or create a site under Wordpress or other web hosting service.  Instead, he directly published his R code as he wrote it, and using Github, made it appear on the web with a button click.
 
 2. One of us wanted to create a short document that included some math formulas. The LaTeX document preparation can be used for this, but it is difficult to use and is overkill for just a few formulas in otherwise plain text. R Markdown lets you use just the best part of LaTeX---math formatting---while letting you write your text in a user-friendly way.
 
