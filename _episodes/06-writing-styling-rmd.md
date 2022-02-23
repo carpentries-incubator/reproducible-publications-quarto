@@ -22,17 +22,17 @@ keypoints:
 
 ## Formatting Rmd Documents with the Visual Editor
 
-As we mentioned earlier, the visual editor in RStudio has made RMarkdown formatting much more effortless. It provides improved productivity for composing longer-form articles and analyses with R Markdown. The visual markdown editing is available in RStudio v1.4 or higher. Markdown documents can be edited in either source or visual mode. To switch into visual mode for a given document, toggle on the compass  icon at the top-right of the document toolbar (or alternatively the ⌘⇧ F4 keyboard shortcut). This will prompt a formatting bar through which you can apply styling, add links, create tables, and others similar to functions you find in google docs and other document editors. Note that you can switch between source and visual mode at any time (editing location and undo/redo state will be preserved when you switch). Let’s try it! Feel free to follow along or just watch this quick demo. But first, make sure to have your visual editor enabled on your screen. 
+As we mentioned earlier, the visual editor in RStudio has made Rmarkdown formatting much more effortless. It provides improved productivity for composing longer-form articles and analyses with R Markdown. The visual markdown editing is available in RStudio v1.4 or higher. Markdown documents can be edited in either source or visual mode. To switch into visual mode for a given document, toggle on the compass icon at the top-right of the document toolbar (or alternatively the ⌘⇧ F4 keyboard shortcut). This will prompt a formatting bar through which you can apply styling, add links, create tables, and others similar to functions you find in google docs and other document editors. Note that you can switch between source and visual mode at any time (editing location and undo/redo state will be preserved when you switch). Let’s try it! Feel free to follow along or just watch this quick demo. But first, make sure to have your visual editor enabled on your screen. 
 
 ### Editor Toolbar
 
 The editor toolbar includes buttons for the most commonly used formatting commands:
 
-![Fig. 5.1 - Toolbar](../fig/05-toolbar.png)
+![Fig. 6.1 - Toolbar](../fig/05-toolbar.png)
 
 Additional commands are available on the Format, Insert, and Table menus:
 
-![Fig. 5.2 - Menu](../fig/05-menu.png)
+![Fig. 6.2 - Menu](../fig/05-menu.png)
 
 > ## Tip: Inserting anything with shortcuts
 > You can also use the catch-all ⌘ / shortcut to insert just about anything. Just execute the shortcut then type what you want to insert. For example: `/lis` will prompt listing options.
@@ -84,7 +84,7 @@ The CSV file contains choice consistency data for ` `r nrow(bronars_simulation_d
 If you update your dataset this value will be correct. But, remember to check if you are calling the correct dataset.
 
 
-> ## CHALLENGE 5.1 - Adding inline code
+> ## CHALLENGE 6.1 - Adding inline code
 > Suppose we would like to add some information to the sentence we have jsut adjusted in our manuscript. We would like to include the average for the variable *violation_counts* present in the same dataset. Which inline code we would have to add to following sentence?
 > 
 > The CSV file contains choice consistency data for ` `r nrow(bronars_simulation_data.csv)` ` simulated participants, that have been used to determine the power of our food-choice task design to detect choice consistency violations, which averaged ` `enter inline code here` `. 
@@ -112,10 +112,11 @@ If you update your dataset this value will be correct. But, remember to check if
 
 
 ## Keyboard Shortcuts
-As you become a more regular Rstudio user, you may also consider using some keyboard shortcuts for all basic editing tasks. Visual mode supports both traditional keyboard shortcuts (e.g. ⌘ B for bold) as well as markdown shortcuts (using markdown syntax directly). For example, enclose **bold** text in asterisks or type ## and press space to create a second level heading. Here are some of the most commonly used shortcuts:
+As you become a more regular Rstudio user, you may also consider using some keyboard shortcuts for all basic editing tasks. Visual mode supports both traditional keyboard shortcuts (e.g. `⌘ B` for bold) as well as markdown shortcuts (using markdown syntax directly). For example, enclose **bold** text in asterisks or type ## and press space to create a second level heading. Here are some of the most commonly used shortcuts for Mac users:
 
-![Fig. 5.3 - Shortcuts](../fig/05-shortcuts.png)
+![Fig. 6.3 - Shortcuts](../fig/05-shortcuts.png)
 
+Tip: Windows users should replace in the shortcuts above `⌘` by `ctrl` and ⌥⌘ by `alt (+) ctrl`.
 
 ## Other Editing Features
 The visual editor allows users to insert images by browsing their location or copying and pasting it to the rmd document directly. There are also options to add html, line blocks, blockquotes, and footnotes. Up next we will learn more about how to add code chunks. In further episodes we will also learn how to insert citations and create a bibliography.

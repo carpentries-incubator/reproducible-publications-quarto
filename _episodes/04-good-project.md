@@ -90,7 +90,7 @@ collaborator, advisor etc.)
 We’ll discuss three aspects of project management and then implement those 
 practices for the remainder of this workshop in the RStudio environment.
 
-1. File/ Folder Organization
+1. File/Folder Organization
 2. Storage & Sharing
 3. Using Version Control
 
@@ -119,6 +119,8 @@ The three principles of file-naming are:
 3. Plays nice with default ordering  
 adapted from https://datacarpentry.org/rr-organization1/01-file-naming/index.html 
 
+For more tips on file naming, check: [The Dos and Don'ts of File Naming](https://www.library.ucsb.edu/sites/default/files/dls-n01-2021-filenaming.pdf)
+
 #### **Practice good file-organization practices**  
 
 [Good Enough Practices for Scientific Computing](http://swcarpentry.github.io/good-enough-practices-in-scientific-computing/) gives the following recommendations for project organization:  
@@ -146,6 +148,8 @@ For our project we’re working in today, we used the following setup for folder
 - **README.md:** A detailed project description with all collaborators listed.
 - **CITATION.md:** Directions to cite the project.
 - **LICENSE.md:** Instructions on how the project or any components can be reused. 
+
+For more information about the README file and a customizable template, check this [handout](https://www.library.ucsb.edu/sites/default/files/dls-n03-2021-readme-navy.pdf)
 
 #### **Use relative paths**  
 This goes hand-in-hand with keeping your project within one “root” directory. If you use complete paths to say, read in your data to RStudio and then share your code with a collaborator, they won’t be able to run it because the complete path you used is unique to your system and they will receive an error that the file is not found. That is why one should always use relative paths to link to other files in the project. I.e. “where is my data file in relation to the script I’m reading the data into?” The practice of using relative paths is made easier by having a logical directory set up and keeping all project files within one root project folder. 
@@ -206,5 +210,3 @@ One of the most powerful and useful aspects of RStudio is its project management
 > ## Tip: R Project in “root” folder
 > `.Rproj` files must be in the root directory of your project folder/directory. What is the root directory again (look back at the relative paths intro)?  
 {: .callout}
-
-
