@@ -125,7 +125,7 @@ You can include both text and code to execute. It is a convenient tool for repro
 
 ### Integrates with Collaboration and Publishing Tools
 
-Another great advantage of using Rstudio for your R project is that the platform integrates with GitHub. Once you connect RStudio with your GitHub account a remote repo becomes the “upstream” remote for your local repo. In essence, it enables you push and pull commits to GitHub allowing more seamless collaboration and more effective version control. RStudio also connects with [Rpubs](https://rpubs.com/) for easy R project web publishing.  
+Another great advantage of using Rstudio for your R project is that the platform integrates with [GitHub](https://github.com). Once you connect RStudio with your GitHub account a remote repo becomes the “upstream” remote for your local repo. In essence, it enables you push and pull commits to GitHub allowing more seamless collaboration and more effective version control. RStudio also connects with [Rpubs](https://rpubs.com/) for easy R project web publishing.  
 
 
 ## Some Real-world Applications
