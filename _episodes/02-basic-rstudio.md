@@ -1,6 +1,6 @@
 ---
 source: Rmd  
-title: "Navigating RStudio andR Markdown Documents"  
+title: "Navigating RStudio and R Markdown Documents"  
 teaching: FIXME
 exercises: FIXME
 questions:
@@ -9,7 +9,7 @@ questions:
 - How is an R Markdown document configured and how do I work with it?
 objectives:
 - Key Functions in Rstudio
-- Learn how to start an R markdown document
+- Learn how to start an R Markdown document
 - Understand the workflow of an R Markdown file
 keypoints:
 - RStudio has 4 panes to organize your code and environment
