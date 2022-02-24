@@ -113,7 +113,7 @@ Before you can render your document, you'll need to give it a file name and choo
 This is how our hmtl document will render after clicking the knit button and choosing a file name:
 ![Knit html output](../fig/03-knit-echoTRUE.PNG)
 
-> ## CHALLENGE 3.1 - Fix me
+> ## CHALLENGE 3.1 - [Fix me] Create a new challenge
 > Can you deduce what the echo=TRUE option stands for?  
 >> ## Solution
 >> The echo=TRUE piece is knitr syntax that sets a global default for the whole paper. This piece of code specifically, `echo=TRUE`, tells the rmd document to display the R code that generates the plots & analysis when the rmd document is rendered by hitting the "knit" button. 
@@ -140,7 +140,7 @@ Note that along with the skeleton of the paper you will see a message on top ind
 {: .callout}
 
 
-> ## Challenge: Find a template (optional)
+> ## Challenge 3.2: Find a template (optional)
 > 
 > Find the template for the Bioinformatics Journal, what does the template look like? What sections does it contain?
 > 
