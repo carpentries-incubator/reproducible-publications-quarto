@@ -4,16 +4,17 @@ title: "Adding Code Generated Plots and Figures"
 teaching: 40
 exercises: 20
 questions:
-- question #1?
-- question #2?
-- question #3?
+- What is Knitr?
+- What are code chunks and how they are structured?
+- How can you add inline code to your report?
 objectives:
-- objective #1
-- objective #2
-- objective #3
+- Learn how to create a dynamic view of your R Markdown document.
+- Understand the anatomy of a code chunk.
+- Learn how to insert code chunks and produce code generated plots and figures.
 keypoints:
-- keypoint #1. Specific concept or syntax learned in this episode
-- keypoint #2. Specific concept or syntax learned in this episode
+- keypoint #1. Knitr will render a dynamic version of your report.
+- keypoint #2. Code chunks are runable piece of R code. Re-producing the document will re-run
+calculations.
 ---
 
 
