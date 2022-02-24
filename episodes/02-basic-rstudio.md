@@ -14,7 +14,7 @@ objectives:
 keypoints:
 - RStudio has 4 panes to organize your code and environment
 - Install packages in RStudio using the `install.packages()` function
--R Markdown documents combine text and code
+- R Markdown documents combine text and code
 ---
 
 
