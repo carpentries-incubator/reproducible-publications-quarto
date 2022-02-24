@@ -4,26 +4,26 @@ title: "Introduction to Working with R Markdown Files"
 teaching: FIXME
 exercises: FIXME
 questions:
-- What is the breakdown of anR Markdown file?
+- What is the breakdown of an R Markdown file?
 - What are templates in R Markdown?
 - How can you render the input file to the specified output format?
-- How can you find existing templates forR Markdown files?
+- How can you find existing templates for R Markdown files?
 
 objectives:
 - Learn about the structure of a Rmardown file.
-- Learn how aR Markdown file works.
+- Learn how an R Markdown file works.
 - Learn how to knit/render a rmd file into an output format.
 - Understand what templates are and the advantage of using them.
 - Learn how to start a document from a template.
 
 keypoints:
-- AnR Markdown file is comprised of a YAML header, formatted text in rmd and code chunks. 
+- An R Markdown file is comprised of a YAML header, formatted text in rmd and code chunks. 
 - The knit function renders the file into the chosen output format.
 - Rstudio has some journals' templates that can save you some formatting time or you can make your own for frequent submissions.
 ---
 
 
-## Anatomy of anR Markdown File
+## Anatomy of an R Markdown File
 
 The key to our reproducible workflow is using R Markdown files in RStudio rather than basic scripts to dynamically “knit” both code and paper narrative. So let’s do a quick anatomy lesson on the components of an R Markdown file (YAML header, R Markdown formatted, R code chunks) and how to render them into our final formatted document.
 There are four distinct steps in the R Markdown workflow:
@@ -127,7 +127,7 @@ This is how our html document will render after clicking the knit button and cho
 
 We have learned how to start a new document on RStudio and we will learn good practices for project organization next. But, let’s say you are writing a paper and you already know which journal you are submitting it to? Writing it in your own style and then formatting prior to submission is time-consuming, right? The good news is that RStudio makes our lives easier. Through a package called “rticles” you can access a number of existing journals’ templates that will let you easily and quickly format and prepare your paper draft for peer review. Even if the journal you submit to does not have a template, it may be good to review several of the templates to get an idea of formatting options available to you in R Markdown.. 
 
-Let’s take a look at that! On RStudio, load the `rticles` package by using the function `library(rticles)` (remember we've already installed the package earlier!). Once you’ve loaded the package, use the plus icon at the upper-left side of your screen to create a new document or proceed with File>New File>R Markdown. This will prompt the window for creating a new R Markdown document as we saw earlier.
+Let’s take a look at that! On RStudio, load the `rticles` package by using the function `library(rticles)` (remember we've already installed the package earlier!). Once you’ve loaded the package, use the plus icon at the upper-left side of your screen to create a new document or proceed with File > New File > R Markdown. This will prompt the window for creating a new R Markdown document as we saw earlier.
 
 Clicking on `“From Template”` will prompt a couple of dozen templates listed as {rticles}. Let’s choose the Biometrics Journal template and then, OK. 
 
