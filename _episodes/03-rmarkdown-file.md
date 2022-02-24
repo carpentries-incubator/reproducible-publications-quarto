@@ -143,21 +143,24 @@ Note that along with the skeleton of the paper you will see a message on top ind
 
 > ## Challenge: Find a template (optional):
 > 
-> Find the template for the American Chemical Society Journal, what does the template look like? What sections does it contain?
+> Find the template for the Bioinformatics Journal, what does the template look like? What sections does it contain?
 > 
 {: .challenge}
 
-> ## Discussion: What are the pros and cons of using a template? (optional) 
+> ## Discussion: What may be the pros and cons of using an existing template? (optional) 
 >
 >> ## Solution: 
 >>
 >> Pros:
->> Save time by automatically importing your journal’s formatting requirements
+>> - Formatting papers according to journals' guidelines can be very cumbersome and time-consuming. So, using a template for a specific journal will save you time!
 >>
 >> Cons: 
->> What if you need to submit to more than one journal?
->> Is the template accurate (up to date?)
->> Small number of journal templates available (contribute to the `rticles` package!)
+>> - If, along the way, you change your mind about the journal you were planning to submit to, there is no easy conversion to another template. Overwritting will cause problems.
+>> - There are only a few journal titles available.
+>> 
+>>  Tips:
+>> - Always check if the template meets the most updated guidelines in the journal website. Since this package is maintained by a community. We advise to check their GitHub page [https://github.com/rstudio/rticles](https://github.com/rstudio/rticles).
+>> - Did not find a particular template? You can recommend one to the community or become a contributor!
 > {: .solution}
 {: .challenge}
 
