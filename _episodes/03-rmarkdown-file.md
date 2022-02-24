@@ -5,7 +5,7 @@ teaching: FIXME
 exercises: FIXME
 questions:
 - What is the breakdown of an R Markdown file?
-- What are templates in down?
+- What are templates in R Markdown?
 - How can you render the input file to the specified output format?
 - How can you find existing templates for R Markdown files?
 - question #3?
