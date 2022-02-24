@@ -26,7 +26,7 @@ The answer depends on your plans to move forward. Let's explore some scenarios:
 
 #### Publishing with Rpubs 
 
-- The easiest way would be to use [Rpubs](https://rpubs.com/) which is a publishing integrated with Rstudio. Rpubs is a bare-bones web hosting service created for the sole purpose of hosting RMarkdown documents.  It provides no other services--- no support for search, collaboration, persistent identifers, or versioning.  But, it is the simplest and most direct way of getting your RMarkdown document published on the web directly from RStudio.  For a more full-featured hosting service consider GitHub and GitHub Pages, described later.
+- The easiest way would be to use [Rpubs](https://rpubs.com/) which is a publishing integrated with Rstudio. Rpubs is a bare-bones web hosting service created for the sole purpose of hosting R Markdown documents.  It provides no other services--- no support for search, collaboration, persistent identifers, or versioning.  But, it is the simplest and most direct way of getting your R Markdown document published on the web directly from RStudio.  For a more full-featured hosting service consider GitHub and GitHub Pages, described later.
 
 Notice the "Publish" button in the upper right corner of your _Knit_ output.  Click this to publish to Rpubs.  This is where you'll need an Rpubs account as mentioned in [setup](/setup.html) 
 for this workshop.  
