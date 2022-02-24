@@ -98,7 +98,11 @@ From day one, and throughout the whole research life cycle! Before you start the
 
 A published article is like the top of a pyramid, meaning that a reproducible paper/report rests on multiple levels that each contributes to its reproducibility.
 
-## What is R Markdown and how it connects to reproducible research?
+## Advantages of using RStudio for your project
+
+RStudio is an integrated development environment (IDE) for R. It includes a console, syntax-highlighting editor that supports direct code execution, as well as tools for plotting, history, debugging, collaboration, and workspace management.
+
+### Create documents using R Markdown
 
 R Markdown is a variant of Markdown, a system for writing simple, readable text that is easily converted to html which allows you to write using an easy-to-read, easy-to-write plain text format.
 
@@ -119,11 +123,16 @@ You can include both text and code to execute. It is a convenient tool for repro
 9. Refer to the corresponding code lines in the methodology section making it unnecessary to use pseudocode, high-level textual descriptions, or just too many words to describe the computational analysis.
 10. Use packages such as rticles to use templates from publishers and create submission-ready documents.
 
+### Collaboration and Publishing Integrations
+
+Another great advantage of using Rstudio for your R project is that the platform integrates with GitHub. Once you connect RStudio with your GitHub account a remote repo becomes the “upstream” remote for your local repo. In essence, it enables you push and pull commits to GitHub allowing more seamless collaboration and more effective version control. RStudio also connects with [Rpubs]((https://rpubs.com/) for easy R project web publishing.  
+
+
 ## Some Real-world Applications
 
 Finally, three real-world examples that motivated the authors of this lesson to value and use R Markdown:
 
-1. Greg Janee quickly put together a simple but compelling R Markdown document describing his [survey results](https://gjanee.github.io/name-survey/).  The ease with which he created his plots is a testament to the power of R as a data analysis environment, but the ease with which he was able to publish a page on the web is a testament to R Markdown and Github as a publishing environment. Notice that he did *not* have to: create plots in a tool and then export the plots as images; write any HTML; embed plot images in HTML; or create a site under Wordpress or other web hosting service.  Instead, he directly published his R code as he wrote it, and using Github, made it appear on the web with a button click.
+1. Greg Janee quickly put together a simple but compelling R Markdown document describing his [survey results](https://gjanee.github.io/name-survey/).  The ease with which he created his plots is a testament to the power of R as a data analysis environment, but the ease with which he was able to publish a page on the web is a testament to R Markdown and Github as a publishing environment. Notice that he did *not* have to: create plots in a tool and then export the plots as images; write any HTML; embed plot images in HTML; or create a site under Wordpress or other web hosting service.  Instead, he directly published his R code as he wrote it, and using GitHub, made it appear on the web with a button click.
 
 2. One of us wanted to create a short document that included some math formulas. The LaTeX document preparation can be used for this, but it is difficult to use and is overkill for just a few formulas in otherwise plain text. R Markdown lets you use just the best part of LaTeX---math formatting---while letting you write your text in a user-friendly way.
 
