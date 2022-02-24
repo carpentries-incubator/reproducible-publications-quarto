@@ -141,12 +141,9 @@ Note that along with the skeleton of the paper you will see a message on top ind
 > - [How to contribute to a new article template?](https://pkgs.rstudio.com/rticles/PULL_REQUEST_TEMPLATE.html)
 {: .callout}
 
-
-FIXME:
-
 > ## Challenge: Find a template (optional):
 > 
-> Find the template for ______ Journal, what does the template look like? What sections does it contain?
+> Find the template for the American Chemical Society Journal, what does the template look like? What sections does it contain?
 > 
 {: .challenge}
 
