@@ -102,7 +102,7 @@ A published article is like the top of a pyramid, meaning that a reproducible pa
 
 RStudio is an integrated development environment (IDE) for R. It includes a console, syntax-highlighting editor that supports direct code execution, as well as tools for plotting, history, debugging, collaboration, and workspace management.
 
-### Create documents using R Markdown
+### Creates documents using R Markdown
 
 R Markdown is a variant of Markdown, a system for writing simple, readable text that is easily converted to html which allows you to write using an easy-to-read, easy-to-write plain text format.
 
@@ -123,9 +123,9 @@ You can include both text and code to execute. It is a convenient tool for repro
 9. Refer to the corresponding code lines in the methodology section making it unnecessary to use pseudocode, high-level textual descriptions, or just too many words to describe the computational analysis.
 10. Use packages such as rticles to use templates from publishers and create submission-ready documents.
 
-### Collaboration and Publishing Integrations
+### Integrates with Collaboration and Publishing Tools
 
-Another great advantage of using Rstudio for your R project is that the platform integrates with GitHub. Once you connect RStudio with your GitHub account a remote repo becomes the “upstream” remote for your local repo. In essence, it enables you push and pull commits to GitHub allowing more seamless collaboration and more effective version control. RStudio also connects with [Rpubs]((https://rpubs.com/) for easy R project web publishing.  
+Another great advantage of using Rstudio for your R project is that the platform integrates with GitHub. Once you connect RStudio with your GitHub account a remote repo becomes the “upstream” remote for your local repo. In essence, it enables you push and pull commits to GitHub allowing more seamless collaboration and more effective version control. RStudio also connects with [Rpubs](https://rpubs.com/) for easy R project web publishing.  
 
 
 ## Some Real-world Applications
