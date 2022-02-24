@@ -13,8 +13,7 @@ objectives:
 - Learn how to insert code chunks and produce code generated plots and figures.
 keypoints:
 - keypoint #1. Knitr will render a dynamic version of your report.
-- keypoint #2. Code chunks are runable piece of R code. Re-producing the document will re-run
-calculations.
+- keypoint #2. Code chunks are runable piece of R code. Re-producing the document will re-run calculations.
 
 ---
 
