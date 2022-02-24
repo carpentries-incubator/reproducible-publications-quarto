@@ -4,25 +4,26 @@ title: "Introduction to Working with R Markdown Files"
 teaching: FIXME
 exercises: FIXME
 questions:
-- What is the breakdown of an R Markdown file?
-- What are templates in R Markdown?
+- What is the breakdown of an Rmarkdown file?
+- What are templates in Rmarkdown?
 - How can you render the input file to the specified output format?
-- How can you find existing templates for R Markdown files?
-- question #3?
+- How can you find existing templates for Rmarkdown files?
+
 objectives:
-- Learn about the structure of a R Markdown file.
-- Learn how a R Markdown file works.
+- Learn about the structure of a Rmardown file.
+- Learn how a Rmarkdown file works.
 - Learn how to knit/render a rmd file into an output format.
 - Understand what templates are and the advantage of using them.
 - Learn how to start a document from a template.
+
 keypoints:
-- An R Markdown file is comprised of a YAML header, formatted text in rmd and code chunks. 
+- An Rmarkdown file is comprised of a YAML header, formatted text in rmd and code chunks. 
 - The knit function renders the file into the chosen output format.
 - Rstudio has some journals' templates that can save you some formatting time or you can make your own for frequent submissions.
 ---
 
 
-## Anatomy of an R Markdown File
+## Anatomy of an Rmarkdown File
 
 The key to our reproducible workflow is using R Markdown files in RStudio rather than basic scripts to dynamically “knit” both code and paper narrative. So let’s do a quick anatomy lesson on the components of an R Markdown file (YAML header, R Markdown formatted, R code chunks) and how to render them into our final formatted document.
 There are four distinct steps in the R Markdown workflow:
@@ -56,6 +57,7 @@ We’ll see other formatting options for YAML later on including how to add bibl
 
 ~~~
 ---
+---
 title: "Data Article: Trier social stress test and food-choice: Behavioral, self-report & hormonal data"
 author: "Felix Jan Nitsch; Manuela Sellitto; Tobias Kalenscher"
 date: "June, 25 2021"
@@ -63,6 +65,14 @@ output:
   html_document:
     df_print: paged
 bibliography: references.bib
+knit: (function(rmdFile, encoding) { 
+      out_dir <- '../output';
+      rmarkdown::render(rmdFile,
+                        encoding=encoding, 
+                        output_file=file.path(dirname(rmdFile), 
+                        out_dir, 
+                        'DataPaper-ReproducibilityWorkshop.html'))})
+---
 ---
 ~~~
 
@@ -82,7 +92,7 @@ This one is simple, it's literally just text narrative formatted by using markdo
 ### 3. Code Chunks: 
 R code chunks appear highlighted in gray throughout the rmd document. They are surrounded by three tick marks on either side (\`\`\`) with the starting three tick marks followed by curly brackets `{}`with some other code inside. The tick marks indicate the start of a code section and the bits found between the curly brackets `{}`indicate how R should read and display the code (more on this in the Knitr syntax episodes). These are the sections you add R code such as summary statistics, analysis, tables and plots. If you’ve already written an R script you can copy and paste your code between the few lines of required formatting to embed & run whichever piece you want at that particular spot in the document.
 
-> ## Tip: Bonus! You may code with different languages in RStudio:  
+> ## Tip: Bonus! You code with many different languages in RStudio:  
 > - R  
 > - Python  
 > - Bash  
@@ -98,11 +108,11 @@ R code chunks appear highlighted in gray throughout the rmd document. They are s
 This is called "knitting"" and the button looks like a spool of yarn with a knitting needle. Clicking the knit button will compile the code, check for errors, and finally, output the type of file indicated in your yaml header. One nice thing about the knit button is that it saves the .Rmd document each time you run it. Your rmd document may not run and render as your indicated output if there are any errors in the document so it also functions somewhat as a code checker.
 <br>
 
-#### Try it yourself!
+#### Try it yourself
 We’re going to pause here and see what the R Markdown does when it’s rendered. We'll just use the generic template, but when we're working on our own project, knitting periodically while we're editing allows us to catch errors early. We'll continue rendering our rmd throughout the lesson to see what happens when we add our markdown and knitr syntax and to make sure we aren't making any errors.
 
-This is a little preview of what's to come in the Knitr syntax episodes later on.
-Click the "knit" button
+This is a little preview of what's to come in the later episodes:
+Click the "knit" button.
 
 ![Add or update image](../fig/03-knit-button.PNG)
 
@@ -110,16 +120,8 @@ Before you can render your document, you'll need to give it a file name and choo
 
 ![First knit choose filename](../fig/03-knit-filename.PNG)
 
-This is how our hmtl document will render after clicking the knit button and choosing a file name:
+This is how our html document will render after clicking the knit button and choosing a file name:
 ![Knit html output](../fig/03-knit-echoTRUE.PNG)
-
-> ## CHALLENGE 3.1 - [Fix me] Create a new challenge
-> Can you deduce what the echo=TRUE option stands for?  
->> ## Solution
->> The echo=TRUE piece is knitr syntax that sets a global default for the whole paper. This piece of code specifically, `echo=TRUE`, tells the rmd document to display the R code that generates the plots & analysis when the rmd document is rendered by hitting the "knit" button. 
->> Don't worry too much about this now, we'll learn more about this syntax in the Knitr Syntax episodes.
-> {: .solution}
-{: .challenge}
 
 ## Finding and Applying Existing Templates
 
@@ -135,31 +137,30 @@ Note that along with the skeleton of the paper you will see a message on top ind
 
 > ## Tip: Create your own template
 > Please remember that for this workshop we are producing a report in html and not tied to a particular journal template. You may choose other output formats such as word or pdf. Creating templates and adding other templates is beyond the scope of this workshop, but that is also possible. If you submit to the same journal frequently or use the same formatting for many of your publications, it may be worth creating your own template to save time. To learn more about how you can create templates in RStudio:
-> - [Using R Markdown Templates](https://bookdown.org/yihui/rmarkdown/document-templates.html) on the right-hand side check the [rticles package documentation](https://cran.r-project.org/web/packages/rticles/rticles.pdf)
+> - [Using R Markdown Templates](https://bookdown.org/yihui/rmarkdown/document-templates.html) on the right-hand side check the [rticles package documentation](https://cran.r-project.org/web/packages/rticles/rticles.pdf)]
 > - [How to contribute to a new article template?](https://pkgs.rstudio.com/rticles/PULL_REQUEST_TEMPLATE.html)
 {: .callout}
 
 
-> ## Challenge 3.2: Find a template (optional)
+FIXME:
+
+> ## Challenge: Find a template (optional):
 > 
-> Find the template for the Bioinformatics Journal, what does the template look like? What sections does it contain?
+> Find the template for ______ Journal, what does the template look like? What sections does it contain?
 > 
 {: .challenge}
 
-> ## Discussion: What may be the pros and cons of using an existing template? (optional) 
+> ## Discussion: What are the pros and cons of using a template? (optional) 
 >
 >> ## Solution: 
 >>
 >> Pros:
->> - Formatting papers according to journals' guidelines can be very cumbersome and time-consuming. So, using a template for a specific journal will save you time!
+>> Save time by automatically importing your journal’s formatting requirements
 >>
 >> Cons: 
->> - If, along the way, you change your mind about the journal you were planning to submit to, there is no easy conversion to another template. Overwritting will cause problems.
->> - There are only a few journal titles available.
->> 
->>  Tips:
->>  - Always check if the template meets the most updated guidelines in the journal website. Since the rticles package is maintained by a community, we advise to to check their [GitHub page](https://github.com/rstudio/rticles) for details.
->>  - Did not find a particular template? You can recommend one to the community or become a contributor! 
+>> What if you need to submit to more than one journal?
+>> Is the template accurate (up to date?)
+>> Small number of journal templates available (contribute to the `rticles` package!)
 > {: .solution}
 {: .challenge}
 

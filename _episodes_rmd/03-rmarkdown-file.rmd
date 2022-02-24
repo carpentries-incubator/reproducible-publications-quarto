@@ -8,13 +8,14 @@ questions:
 - What are templates in Rmarkdown?
 - How can you render the input file to the specified output format?
 - How can you find existing templates for Rmarkdown files?
-- question #3?
+
 objectives:
 - Learn about the structure of a Rmardown file.
 - Learn how a Rmarkdown file works.
 - Learn how to knit/render a rmd file into an output format.
 - Understand what templates are and the advantage of using them.
 - Learn how to start a document from a template.
+
 keypoints:
 - An Rmarkdown file is comprised of a YAML header, formatted text in rmd and code chunks. 
 - The knit function renders the file into the chosen output format.
@@ -60,6 +61,7 @@ We’ll see other formatting options for YAML later on including how to add bibl
 
 ~~~
 ---
+---
 title: "Data Article: Trier social stress test and food-choice: Behavioral, self-report & hormonal data"
 author: "Felix Jan Nitsch; Manuela Sellitto; Tobias Kalenscher"
 date: "June, 25 2021"
@@ -67,6 +69,14 @@ output:
   html_document:
     df_print: paged
 bibliography: references.bib
+knit: (function(rmdFile, encoding) { 
+      out_dir <- '../output';
+      rmarkdown::render(rmdFile,
+                        encoding=encoding, 
+                        output_file=file.path(dirname(rmdFile), 
+                        out_dir, 
+                        'DataPaper-ReproducibilityWorkshop.html'))})
+---
 ---
 ~~~
 
@@ -82,21 +92,6 @@ This one is simple, it's literally just text narrative formatted by using markdo
 
 
 ![rmd template text](../fig/03-rmd-template-text.png)
-
-> ## CHALLENGE 3.1 - Formatting with Symbols (optional)
-> In Rmd certain symbols are used to denote formatting that should happen to the text (after we "knit" or render). Before we knit, these symbols will show up seemingly "randomly" throughout the text and don't contribute to the narrative in a logical way. In the generic Rmd document, there are three types of such symbols (##, **, <>) . Each symbol represents a different kind of formatting (think of your text formatting buttons you use in Word). Can you deduce from the surrounding text how these symbols format the surrounding text?  
-> ```
-> ## R Markdown
->
-> This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
->
-> When you click the **Knit** button a document will be generated that includes both content as well as the >output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-> ```
->> ## SOLUTION
->> `##` is a heading, `**` is to bold enclosed text, and `<>` is for hyperlinks. 
->> Don't worry about this too much right now! This is an example of R Markdown syntax for styling, we'll dive into this next.
-> {: .solution}
-{: .challenge}
 
 ### 3. Code Chunks: 
 R code chunks appear highlighted in gray throughout the rmd document. They are surrounded by three tick marks on either side (\`\`\`) with the starting three tick marks followed by curly brackets `{}`with some other code inside. The tick marks indicate the start of a code section and the bits found between the curly brackets `{}`indicate how R should read and display the code (more on this in the Knitr syntax episodes). These are the sections you add R code such as summary statistics, analysis, tables and plots. If you’ve already written an R script you can copy and paste your code between the few lines of required formatting to embed & run whichever piece you want at that particular spot in the document.
@@ -120,8 +115,8 @@ This is called "knitting"" and the button looks like a spool of yarn with a knit
 #### Try it yourself
 We’re going to pause here and see what the R Markdown does when it’s rendered. We'll just use the generic template, but when we're working on our own project, knitting periodically while we're editing allows us to catch errors early. We'll continue rendering our rmd throughout the lesson to see what happens when we add our markdown and knitr syntax and to make sure we aren't making any errors.
 
-This is a little preview of what's to come in the Knitr syntax episodes later on.
-Click the "knit" button
+This is a little preview of what's to come in the later episodes:
+Click the "knit" button.
 
 ![Add or update image](../fig/03-knit-button.PNG)
 
@@ -129,16 +124,8 @@ Before you can render your document, you'll need to give it a file name and choo
 
 ![First knit choose filename](../fig/03-knit-filename.PNG)
 
-This is how our hmtl document will render after clicking the knit button and choosing a file name:
+This is how our html document will render after clicking the knit button and choosing a file name:
 ![Knit html output](../fig/03-knit-echoTRUE.PNG)
-
-> ## CHALLENGE 3.2 - echo=TRUE Function (optional)
-> Can you deduce what the echo=TRUE option stands for?  
->> ## Solution
->> The echo=TRUE piece is knitr syntax that sets a global default for the whole paper. This piece of code specifically, `echo=TRUE`, tells the rmd document to display the R code that generates the plots & analysis when the rmd document is rendered by hitting the "knit" button. 
->> Don't worry too much about this now, we'll learn more about this syntax in the Knitr Syntax episodes.
-> {: .solution}
-{: .challenge}
 
 ## Finding and Applying Existing Templates
 
