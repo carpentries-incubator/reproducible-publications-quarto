@@ -28,11 +28,11 @@ As we mentioned earlier, the visual editor in RStudio has made R Markdown format
 
 The editor toolbar includes buttons for the most commonly used formatting commands:
 
-![Fig. 5.1 - Toolbar](../fig/05-toolbar.png)
+![Fig. 5.1 - Toolbar](../fig/07-toolbar.png)
 
 Additional commands are available on the Format, Insert, and Table menus:
 
-![Fig. 5.2 - Menu](../fig/05-menu.png)
+![Fig. 5.2 - Menu](../fig/07-menu.png)
 
 > ## Tip: Inserting anything with shortcuts
 > You can also use the catch-all ⌘ / shortcut to insert just about anything. Just execute the shortcut then type what you want to insert. For example: `/lis` will prompt listing options.
@@ -114,7 +114,7 @@ If you update your dataset this value will be correct. But, remember to check if
 ## Keyboard Shortcuts
 As you become a more regular Rstudio user, you may also consider using some keyboard shortcuts for all basic editing tasks. Visual mode supports both traditional keyboard shortcuts (e.g. `⌘ B` for bold) as well as markdown shortcuts (using markdown syntax directly). For example, enclose **bold** text in asterisks or type ## and press space to create a second level heading. Here are some of the most commonly used shortcuts for Mac users:
 
-![Fig. 5.3 - Shortcuts](../fig/05-shortcuts.png)
+![Fig. 5.3 - Shortcuts](../fig/07-shortcuts.png)
 
 Tip: Windows users should replace in the shortcuts above `⌘` by `ctrl` and ⌥⌘ by `alt (+) ctrl`.
 
