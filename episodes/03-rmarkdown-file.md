@@ -79,25 +79,10 @@ This one is simple, it's literally just text narrative formatted by using markdo
 
 ![rmd template text](../fig/03-rmd-template-text.png)
 
-> ## CHALLENGE 3.1 - Formatting with Symbols (optional)
-> In Rmd certain symbols are used to denote formatting that should happen to the text (after we "knit" or render). Before we knit, these symbols will show up seemingly "randomly" throughout the text and don't contribute to the narrative in a logical way. In the generic Rmd document, there are three types of such symbols (##, **, <>) . Each symbol represents a different kind of formatting (think of your text formatting buttons you use in Word). Can you deduce from the surrounding text how these symbols format the surrounding text?  
-> ```
-> ## R Markdown
->
-> This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
->
-> When you click the **Knit** button a document will be generated that includes both content as well as the >output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-> ```
->> ## SOLUTION
->> `##` is a heading, `**` is to bold enclosed text, and `<>` is for hyperlinks. 
->> Don't worry about this too much right now! This is an example of R Markdown syntax for styling, we'll dive into this next.
-> {: .solution}
-{: .challenge}
-
 ### 3. Code Chunks: 
 R code chunks appear highlighted in gray throughout the rmd document. They are surrounded by three tick marks on either side (\`\`\`) with the starting three tick marks followed by curly brackets `{}`with some other code inside. The tick marks indicate the start of a code section and the bits found between the curly brackets `{}`indicate how R should read and display the code (more on this in the Knitr syntax episodes). These are the sections you add R code such as summary statistics, analysis, tables and plots. If you’ve already written an R script you can copy and paste your code between the few lines of required formatting to embed & run whichever piece you want at that particular spot in the document.
 
-> ## Tip: Bonus! You code with many different languages in RStudio:  
+> ## Tip: Bonus! You may code with different languages in RStudio:  
 > - R  
 > - Python  
 > - Bash  
@@ -128,7 +113,7 @@ Before you can render your document, you'll need to give it a file name and choo
 This is how our hmtl document will render after clicking the knit button and choosing a file name:
 ![Knit html output](../fig/03-knit-echoTRUE.PNG)
 
-> ## CHALLENGE 3.2 - echo=TRUE Function (optional)
+> ## CHALLENGE 3.1 - Fix me
 > Can you deduce what the echo=TRUE option stands for?  
 >> ## Solution
 >> The echo=TRUE piece is knitr syntax that sets a global default for the whole paper. This piece of code specifically, `echo=TRUE`, tells the rmd document to display the R code that generates the plots & analysis when the rmd document is rendered by hitting the "knit" button. 
