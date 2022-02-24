@@ -98,7 +98,7 @@ R code chunks appear highlighted in gray throughout the rmd document. They are s
 This is called "knitting"" and the button looks like a spool of yarn with a knitting needle. Clicking the knit button will compile the code, check for errors, and finally, output the type of file indicated in your yaml header. One nice thing about the knit button is that it saves the .Rmd document each time you run it. Your rmd document may not run and render as your indicated output if there are any errors in the document so it also functions somewhat as a code checker.
 <br>
 
-#### Try it yourself
+#### Try it yourself!
 We’re going to pause here and see what the R Markdown does when it’s rendered. We'll just use the generic template, but when we're working on our own project, knitting periodically while we're editing allows us to catch errors early. We'll continue rendering our rmd throughout the lesson to see what happens when we add our markdown and knitr syntax and to make sure we aren't making any errors.
 
 This is a little preview of what's to come in the Knitr syntax episodes later on.
