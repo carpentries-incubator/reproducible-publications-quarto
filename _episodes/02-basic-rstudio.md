@@ -105,7 +105,7 @@ You should see that each package was installed successfully in the dialog box.
 Once the package installs have completed, a dialog box will pop up and ask you 
 to name the file and add an author name (may already know what your name is) The default output is HTML and as the wizard indicates, it is the best way to start and in your final version or later versions you have the option of changing to pdf or word document (among many other output formats! We'll see this later).
 
-### Naming your newR Markdown Document
+### Naming your new R Markdown Document
 
 ![Name new .Rmd file](../fig/02-name-new-rmd.PNG)
 
