@@ -137,7 +137,7 @@ Note that along with the skeleton of the paper you will see a message on top ind
 
 > ## Tip: Create your own template
 > Please remember that for this workshop we are producing a report in html and not tied to a particular journal template. You may choose other output formats such as word or pdf. Creating templates and adding other templates is beyond the scope of this workshop, but that is also possible. If you submit to the same journal frequently or use the same formatting for many of your publications, it may be worth creating your own template to save time. To learn more about how you can create templates in RStudio:
-> - [Using R Markdown Templates](https://bookdown.org/yihui/rmarkdown/document-templates.html) on the right-hand side check the [rticles package documentation](https://cran.r-project.org/web/packages/rticles/rticles.pdf)]
+> - [Using R Markdown Templates](https://bookdown.org/yihui/rmarkdown/document-templates.html) on the right-hand side check the [rticles package documentation](https://cran.r-project.org/web/packages/rticles/rticles.pdf)
 > - [How to contribute to a new article template?](https://pkgs.rstudio.com/rticles/PULL_REQUEST_TEMPLATE.html)
 {: .callout}
 
@@ -159,7 +159,7 @@ Note that along with the skeleton of the paper you will see a message on top ind
 >> - There are only a few journal titles available.
 >> 
 >>  Tips:
->> - Always check if the template meets the most updated guidelines in the journal website. Since this package is maintained by a community. We advise to check their GitHub page [https://github.com/rstudio/rticles](https://github.com/rstudio/rticles).
+>> - Always check if the template meets the most updated guidelines in the journal website. Since the rticles package is maintained by a community, we advise you check their (GitHub page][https://github.com/rstudio/rticles) for more details.
 >> - Did not find a particular template? You can recommend one to the community or become a contributor!
 > {: .solution}
 {: .challenge}
