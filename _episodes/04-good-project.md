@@ -148,13 +148,13 @@ For our project we’re working in today, we used the following setup for folder
     - **/functions:** contains custom functions written for the data pre-processing  
 - **data:** this folder contains the raw and cleaned data files  
     - **/foodchoice_data:** contains the individual data files from food choice trials  
-- **output:**
+- **output:** contains processed/transformed data and all plots generated  
 	- **/data:** contains the output data file after applying custom pre-processing function  
 	- **/plots:** contains pdfs of the plots generated from the plot scripts in the code folder  
 - **report:** All files needed for the publication of the research project  
 	- **/source:** .Rmd file for the paper and additional files needed for rendering the paper  
       - **/fig:** contains the images created specifically (not through the analysis scripts) for the paper  
-	- **/output:** contains the final html output of the Rmd paper  
+	- **/output:** contains the final output of the Rmd paper  
 - **R-repro-pub.Rproj:** R project file that lives in the root directory.  
 - **README.md:** A detailed project description with all collaborators listed.
 - **CITATION.md:** Directions to cite the project.
