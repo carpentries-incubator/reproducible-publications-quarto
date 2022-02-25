@@ -8,13 +8,13 @@ questions:
 - How do you start an R Markdown document in Rstudio?
 - How is an R Markdown document configured and how do I work with it?
 objectives:
-- Key Functions in Rstudio
-- Learn how to start an R Markdown document
-- Understand the workflow of an R Markdown file
+- Understand key functions in Rstudio.
+- Learn about the structure of a Rmarkdown file.
+- Understand the workflow of an R Markdown file.
 keypoints:
-- RStudio has 4 panes to organize your code and environment
-- Install packages in RStudio using the `install.packages()` function
-- R Markdown documents combine text and code
+- RStudio has 4 panes to organize your code and environment.
+- Install packages in RStudio using the `install.packages()` function.
+- R Markdown documents combine text and code.
 ---
 
 

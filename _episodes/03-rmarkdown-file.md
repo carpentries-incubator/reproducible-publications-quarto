@@ -105,7 +105,7 @@ R code chunks appear highlighted in gray throughout the rmd document. They are s
 ![rmd template code](../fig/03-rmd-template-code.png)
 
 ### 4. Rendering your Rmd document:
-This is called "knitting"" and the button looks like a spool of yarn with a knitting needle. Clicking the knit button will compile the code, check for errors, and finally, output the type of file indicated in your yaml header. One nice thing about the knit button is that it saves the .Rmd document each time you run it. Your rmd document may not run and render as your indicated output if there are any errors in the document so it also functions somewhat as a code checker.
+This is called "knitting" and the button looks like a spool of yarn with a knitting needle. Clicking the knit button will compile the code, check for errors, and finally, output the type of file indicated in your yaml header. One nice thing about the knit button is that it saves the .Rmd document each time you run it. Your rmd document may not run and render as your indicated output if there are any errors in the document so it also functions somewhat as a code checker.
 <br>
 
 #### Try it yourself
@@ -122,6 +122,15 @@ Before you can render your document, you'll need to give it a file name and choo
 
 This is how our html document will render after clicking the knit button and choosing a file name:
 ![Knit html output](../fig/03-knit-echoTRUE.PNG)
+
+> ## CHALLENGE 3.1 - Rendering the document in another format
+> Suppose you want this .rmd document to render as a word document. What options would you have?
+> 
+>> ## Solution:
+>> 1) You may change the output format in the YAML to `word_document`, or
+>> 2) Select "Knit > "Knit to Word" on the menu.
+> {: .solution}
+{: .challenge}
 
 ## Finding and Applying Existing Templates
 
