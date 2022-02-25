@@ -123,6 +123,15 @@ Before you can render your document, you'll need to give it a file name and choo
 This is how our html document will render after clicking the knit button and choosing a file name:
 ![Knit html output](../fig/03-knit-echoTRUE.PNG)
 
+> ## CHALLENGE 3.1 - Rendering the document in another format
+> Suppose you want this .rmd document to render as a word document. What options would you have?
+> 
+>> ## Solution:
+>> 1) You may change the output format in the YAML to `word_document`, or
+>> 2) Select "Knit > "Knit to Word" on the menu.
+> {: .solution}
+{: .challenge}
+
 ## Finding and Applying Existing Templates
 
 We have learned how to start a new document on RStudio and we will learn good practices for project organization next. But, let’s say you are writing a paper and you already know which journal you are submitting it to? Writing it in your own style and then formatting prior to submission is time-consuming, right? The good news is that RStudio makes our lives easier. Through a package called “rticles” you can access a number of existing journals’ templates that will let you easily and quickly format and prepare your paper draft for peer review. Even if the journal you submit to does not have a template, it may be good to review several of the templates to get an idea of formatting options available to you in R Markdown.. 
