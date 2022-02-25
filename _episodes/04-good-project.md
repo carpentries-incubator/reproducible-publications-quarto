@@ -142,6 +142,8 @@ For more tips on file naming, check: [The Dos and Don'ts of File Naming](https:/
 
 For our project we’re working in today, we used the following setup for folders and files:
 
+![directory tree](../fig/04-directory-tree.png)
+
 - **code:** contains the scripts that generate the plots and analysis (found in `output/plots`)  
     - **/functions:** contains custom functions written for the data pre-processing  
 - **data:** this folder contains the raw and cleaned data files  
