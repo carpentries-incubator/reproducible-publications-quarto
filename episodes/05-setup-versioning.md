@@ -79,7 +79,7 @@ When you choose this option there will be a place to paste the url of the GitHub
 
 We have a repository already prepared for this workshop at [https://github.com/UCSBCarpentry/R-repro-pub](https://github.com/UCSBCarpentry/R-repro-pub) We are going to use the third option to download a repository from GitHub to work hands on. 
 
-Let’s take a second to acquaint ourselves with GitHub.
+Let’s take a second to acquaint ourselves with GitHub. [At this link](https://github.com/signup), you may sign into your GitHub account or create one if you have not already.
 
 ![GitHub](../fig/05-github.PNG)
 
