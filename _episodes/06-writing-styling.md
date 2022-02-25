@@ -51,7 +51,7 @@ In the same citation we have just worked on, let’s now add a link to it by sel
 
 ### *Adding Headings*
 
-Adding headings to a R markdown document in Rstudio is as simple as applying links. Let’s say we want the abstract section as a Heading Level 2. We can select the “abstract” then, and under “Normal” on the left-hand side of the menu, we can choose the desired level. Again, all the shortcuts will be listed next to the styling in the menu. Now apply the same heading to keywords and Level 1 to “Specifications Table” (**FIXME2**).
+Adding headings to a R Markdown document in Rstudio is as simple as applying links. Let’s say we want the abstract section as a Heading Level 2. We can select the “abstract” then, and under “Normal” on the left-hand side of the menu, we can choose the desired level. Again, all the shortcuts will be listed next to the styling in the menu. Now apply the same heading to keywords and Level 1 to “Specifications Table” (**FIXME2**).
 
 
 ### *Creating Tables*
@@ -75,7 +75,7 @@ If you have math formula in your manuscript there are three different ways you m
 
 ## Adding Inline Code
 
-You can also include `r code` directly in your text. Say you are discussing some of the summary statistics in your manuscript, R markdown makes this possible through HTML/LaTeX inline code which allows you to calculate simple expressions integrated to your narrative. Inline code enables you to insert `r code` into your document to dynamically updated portions of your text. In other words, if your data set changes for any reason the code will automatically update the calculation specified. 
+You can also include `r code` directly in your text. Say you are discussing some of the summary statistics in your manuscript, R Markdown makes this possible through HTML/LaTeX inline code which allows you to calculate simple expressions integrated to your narrative. Inline code enables you to insert `r code` into your document to dynamically updated portions of your text. In other words, if your data set changes for any reason the code will automatically update the calculation specified. 
 
 This can be helpful when referring to specific variables on your data. For example, you should include numbers that are derived from the data as code not as numbers. Thus, rather than writing “The CSV file contains choice consistency data for 10.000 simulated participants” (**FIXME8**), insert a bit of code that, when evaluated, gives the number of individuals. Please note that this insertion is not included in the visual editor, so we need to do write an expression, for example:
 
