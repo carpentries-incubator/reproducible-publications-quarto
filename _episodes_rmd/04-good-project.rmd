@@ -77,8 +77,7 @@ scripts. Let’s discuss three of those common stress points:
 {: .challenge}
 
 > ## Discussion: Antidotes
-> What are some practices you implement to keep yourself on track with your 
-> projects?
+> What are some practices you implement to keep your project materials organized?
 {: .challenge}
 
 ### Antidotes
@@ -106,14 +105,15 @@ Then, we’ll get started on our project!
 Although there is no “best” way to lay out a project, there are some general 
 principles to adhere to that will make project management easier:  
 
-#### **Practice good file-naming practices**  
+#### **Practice good file-naming**  
 The three principles of file-naming are: 
 
 1. Machine-readable
 - friendly for searching (using regular expressions/globbing)
-    - no spaces, punctions, accented characters, or case-senstitive file names
+    - no spaces, unsupported punctuation, accented characters, or case-sensitive file names
 - friendly for computing
   - deliberate use of delimiters (i.e. for splitting file names)
+    - `data-analyses-fig1.R` `-` used consistently as a separator 
   
 2. Human-readable
 - Name contains brief description of contents
@@ -123,7 +123,7 @@ The three principles of file-naming are:
 3. Plays nice with default ordering  
 adapted from https://datacarpentry.org/rr-organization1/01-file-naming/index.html 
 
-#### **Practice good file-organization practices**  
+#### **Practice good file-organization**  
 
 [Good Enough Practices for Scientific Computing](http://swcarpentry.github.io/good-enough-practices-in-scientific-computing/) gives the following recommendations for project organization:  
 1. Put each project in its own directory, which is named after the project.
