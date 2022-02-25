@@ -1,8 +1,8 @@
 ---
 source: Rmd  
 title: "Getting Your project set up with Version Control in RStudio"  
-teaching: FIXME
-exercises: FIXME
+teaching: 30
+exercises: 10
 questions:
 - How do I start or continue a project with Git versioning?
 - What are the features in the RStudio Interface for working with Git?
@@ -15,8 +15,8 @@ objectives:
 - Make our first edits in a verison controlled project
 
 keypoints:
-- keypoint #1. Specific concept or syntax learned in this episode
-- keypoint #2. Specific concept or syntax learned in this episode
+- 
+- 
 ---
 
 
@@ -83,19 +83,19 @@ Let’s take a second to acquaint ourselves with GitHub.
 
 The two main sections are files and directories and the README which should contain a narrative description of the project. 
 
-We are each going to make a copy of this repository to use for this workshop. To do so: 
+We are each going to make a copy of this repository to use for this workshop. To do so we will do what's called "forking" on GitHub. A Fork is a copy of a repository that you get to experiment with without disrupting the original project. 
 
-![Clone repository](../fig/05-clone-repo.PNG)
+In the upper right hand corner of the repository, click on the button that says "Fork" - see highlighted example below:
 
-Then, in the upper right corner, click the + button next to your profile picture. Choose `import repository`.
+![fork on GitHub](../fig/05-fork.PNG)
 
-![import repository](../fig/05-import-repo.PNG)
+If you are a member of any organizations on GitHub, you will be asked whether you want to fork to your account or to an organization. Choose your personal account for this workshop. GitHub will process for a few moments and voila! You have a copy of the workshop repository. 
 
-![import repository 2](../fig/05-import-repo-2.PNG)
+Now, click on the green `Code` drop-down and then click on the copy icon next to the repository url:
 
-![preparing repository](../fig/05-preparing-repo.PNG)
+![copy GitHub repository url](../fig/05-copy-repo.PNG)
 
-Again, click the green code button, click the copy button next to the url, and let's head back to RStudio. 
+Now, let's return to RStudio:
 
 Click File>New Project > Verison Control > Git . Now paste in your url and choose "Desktop" as your directory. 
 
@@ -115,7 +115,7 @@ There are two places we can interact with Git in the RStudio interface.
 
 Ok, but what do all the options mean? We won't go through them all, but here are the basics to get started versioning your project.
 
-### Git workflow
+### Git Workflow
 
 The most simple workflow for version control (working on your computer only)
 is referred to as "add" and "commit": 
