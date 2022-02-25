@@ -16,7 +16,7 @@ keypoints:
 - Setting the _Remote_ in your R Studio project enables _pushing_ and _pulling_ from your local copy of the repository to the repository on Github.
 ---
 
-In [episode 4](../04-good-project/) we learned about using version control as you write your publication.  In this part of the workshop we'll setup Rstudio to authenticate with Github which is necessary to _push_ your changes to Github.
+In [episode 5](../05-setup-versioning/) we learned about using version control as you write your publication.  In this part of the workshop we'll setup Rstudio to authenticate with Github which is necessary to _push_ your changes to Github.
 
 Terminology:  Git _Push_ and _Pull_
 
