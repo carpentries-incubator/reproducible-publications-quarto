@@ -9,6 +9,4 @@ title: <br> Pre-workshop Setup
 
 {% include install_instructions/r.html %}
 
-github.html
-
 {% include links.md %}
