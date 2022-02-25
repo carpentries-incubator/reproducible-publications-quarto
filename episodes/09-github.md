@@ -12,8 +12,8 @@ objectives:
 - "Connecting your project to Github."
 
 keypoints:
-- "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore (i.e. et dolore magna aliqua)."
-- "Ut enim ad minim veniam, quis nostrud `*` exercitation `#` ullamco laboris nisi ut aliquip ex ea commodo consequat."
+- Setting up R Studio to authenticate with Github using SSH Keys.
+- Setting the _Remote_ in your R Studio project enables _pushing_ and _pulling_ from your local copy of the repository to the repository on Github.
 ---
 
 In [episode 4](../04-good-project/) we learned about using version control as you write your publication.  In this part of the workshop we'll setup Rstudio to authenticate with Github which is necessary to _push_ your changes to Github.
