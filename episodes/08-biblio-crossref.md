@@ -66,7 +66,7 @@ Note that when you hover over the citation, you will preview the full reference 
 >
 > Following the same process described,
 > insert a parenthetical citation to the publication “Welcome to the tidyverse”
-> ([https://doi.org/10.21105/joss.01686]("https://doi.org/10.21105/joss.01686"))
+> ([https://doi.org/10.21105/joss.01686](https://doi.org/10.21105/joss.01686))
 > where there is a mention to this package in the data paper.
 >
 > > ## Solution
@@ -79,7 +79,7 @@ Note that when you hover over the citation, you will preview the full reference 
 > {: .solution}
 {: .challenge}
 
-Inserting citations using Crossref, DataCite or PubMed follows a very similar process to the DOI process, however; to search on their APIs you will need to input information accordingly. For Crossref, you may use keywords and author information to identify an item (e.g., Cortisol Stress Oken) and Rstudio will connect to [Crossref search]("https://search.crossref.org/") and provide related results, often not as specific as the DOI search, for cases you know exactly what you are looking for. DataCite allows searches by persistent identifiers or keywords, while PubMed searches exclusively in biomedical literature indexed in the database. If you have the PMID (PubMed reference number), which is uniquely assigned by the NIH National Library of Medicine to papers indexed in PubMed, similarly to the DOI search, it will save you time.  
+Inserting citations using Crossref, DataCite or PubMed follows a very similar process to the DOI process, however; to search on their APIs you will need to input information accordingly. For Crossref, you may use keywords and author information to identify an item (e.g., Cortisol Stress Oken) and Rstudio will connect to [Crossref search](https://search.crossref.org/) and provide related results, often not as specific as the DOI search, for cases you know exactly what you are looking for. DataCite allows searches by persistent identifiers or keywords, while PubMed searches exclusively in biomedical literature indexed in the database. If you have the PMID (PubMed reference number), which is uniquely assigned by the NIH National Library of Medicine to papers indexed in PubMed, similarly to the DOI search, it will save you time.  
 
 ## Editing Metadata & Citation Key  
 
