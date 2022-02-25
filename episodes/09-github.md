@@ -75,7 +75,7 @@ It should looks something like this:
 
 ![](../fig/09-git-remote-add.png)
 
-1. push your local repository up to git.
+- Push your local changes to your repository up to git.
 
 
 {% include links.md %}
