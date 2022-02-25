@@ -10,14 +10,16 @@ questions:
 - How do you use version control to keep track of your work?
 
 objectives:
-- Best pratices for working on research projects involving data
-- The purpose of using .Rproj files
-- Using version control in RStudio
-- Starting or continuing an R project
+- Best pratices for working on research projects involving data.
+- The purpose of using .Rproj files.
+- Using version control in RStudio.
+- Starting or continuing an R project.
 
 keypoints:
-- keypoint #1. Specific concept or syntax learned in this episode
-- keypoint #2. Specific concept or syntax learned in this episode
+- Use best practices for file and folder organization. This includes using relative file paths as opposed to complete file paths. 
+- Make sure that all data are backed up on multiple devices and that you treat raw data as read-only. 
+- We can use Git and Github to keep track of what we've done in the past, and what we plan to do in the future. 
+- Rproj files are pivotal to keeping everything bundled and organized.
 ---
 
 
