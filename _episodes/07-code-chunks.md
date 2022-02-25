@@ -5,7 +5,7 @@ teaching: 40
 exercises: 20
 questions:
 - What is Knitr?
-- What are code chunks and how they are structured?
+- What are code chunks and how are they structured?
 - How can you add inline code to your report?
 objectives:
 - Learn how to create a dynamic view of your R Markdown document.
