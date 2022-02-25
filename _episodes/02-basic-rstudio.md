@@ -90,7 +90,7 @@ Update buttons at the top of the tab.
 
 ## Starting a R Markdown File
 
-Start a new R markdown document in RStudio by clicking File \> New File \> R Markdown...
+Start a new R Markdown document in RStudio by clicking File \> New File \> R Markdown...
 
 ![Opening a new R Markdown document](../fig/02-file-navigation-rmd.PNG)
 
