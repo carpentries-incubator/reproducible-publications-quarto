@@ -44,7 +44,7 @@ The most basic (and empty) code chunk looks like so:
 
 The most basic code chunk looks like so:
 
-![blank Rmd code chunk](../fig/06-blank-code-chunk.PNG)
+![blank Rmd code chunk](../fig/07-blank-code-chunk.PNG)
 
 Other than our backticks ``` for code chunks that surround the code top and bottom, the only **required** piece is the specified language (r) placed between the curly brackets. This indicates that the language to read the code is R.
 
@@ -60,29 +60,29 @@ which are also more reproducible and easier to update. This is because, as with 
 We’ll start by typing our our starting backticks & r between curly brackets. (in your own workflow you may want to add the ending three backticks as well so you don’t forget after adding your code - it's a common mistake):
 
 
-![blank Rmd code chunk](../fig/06-blank-code-chunk.PNG)
+![blank Rmd code chunk](../fig/07-blank-code-chunk.PNG)
 
 Now, let's open our `03_HR_analysis.R` script in our `code` folder. Copy the code and paste it in between the two lines with backticks and `{r}` in our `DataPaper-ReproducibilityWorkshop.rmd` file.
 
-![heartrate code in chunk](../fig/06-heartrate-code.PNG)
+![heartrate code in chunk](../fig/07-heartrate-code.PNG)
 
 > ## Tip:
 > There's actually a button you can use in the RStudio menu to generate the code chunks automatically. Automatic code chunk generation is available for several other languages as well. Also, you can use the keyboard shortcut `ctrl`+`alt`+`I` for Windows and `command`+`option`+`I` for Mac. 
-> ![auto create code chunk](../fig/06-auto-code-chunk.PNG)
+> ![auto create code chunk](../fig/07-auto-code-chunk.PNG)
 {: .callout}
 
 Now, to check to make sure our code renders, we could click the "knit" button as we have been doing. However, with the code chunks we have other opportunities for rendering. 
 
 1) Knit button - knitting will automatically run the code in all code chunks
-![code chunk with plot1 code](../fig/06-run-code-with-knit.PNG) 
+![code chunk with plot1 code](../fig/07-run-code-with-knit.PNG) 
 
 2) Run from code chunk (green play button on the right top corner)
 
-![run from code chunk](../fig/06-heartrate-code-runfromchunk.png)
+![run from code chunk](../fig/07-heartrate-code-runfromchunk.png)
 
 3) Run menu
 
-![run code menu](../fig/06-rmd-run-options.PNG)
+![run code menu](../fig/07-rmd-run-options.PNG)
 
 4) Keyboard shortcuts: 
 
@@ -100,13 +100,13 @@ Go to previous chunk/title	| Ctrl+PgUp |	Command+PgUp
 > Use one of the above options to run your code. 
 {: .checklist}
 
-![heart rate code path error](../fig/06-HR-code-path-error.PNG)
+![heart rate code path error](../fig/07-HR-code-path-error.PNG)
 
 Hmmmm... we got an error while trying to run our code. That's because our code contains a relative path to read in the data file, but now we're running the code from the rmd document which is in a different directory so we will need to update the file path.
 
 Update the file path from: `"output/data/preprocessed-GARP-TSST-data.csv"` to `"../../output/data/preprocessed-GARP-TSST-data.csv"`
 
-![code heart rate updated file path](../fig/06-HR-code-fixed-path.PNG)
+![code heart rate updated file path](../fig/07-HR-code-fixed-path.PNG)
 
 > ## Time to Knit!
 > Let's try that again 
@@ -114,7 +114,7 @@ Update the file path from: `"output/data/preprocessed-GARP-TSST-data.csv"` to `"
 
 Ooof! That output doesn't look great.. we've got a bit more work to do.
 
-![Heart rate code no options for code chunk](../fig/06-HR-output-no-options.PNG)
+![Heart rate code no options for code chunk](../fig/07-HR-output-no-options.PNG)
 
 let's see about fixing that with code chunk rendering options. 
 
@@ -159,7 +159,7 @@ the option always follows the code chunk label (don't forget to add a `,` after 
 > 
 > What will this do?  
 >> ## SOLUTION
->> ![solution to 9.3](../fig/06-solution-9.3.PNG)    
+>> ![solution to 9.3](../fig/07-solution-9.3.PNG)    
 >>
 >> These options mean the source code will not be printed in the knit html document, messages from the code will not be printed in the knit html document, and warnings will not be printed in the knit html document (but will still output to the console). Plots, figures or whatever is printed by the code WILL show up in the final html document.  
 > {: .solution}
@@ -229,7 +229,7 @@ First, find the FIXME in the rmd document for Fig 4 (ctrl-f "Fig 4"). We need to
 
 Add your code chunk:
 
-![basic code chunk](../fig/06-blank-code-chunk.PNG)
+![basic code chunk](../fig/07-blank-code-chunk.PNG)
 
 Now, within the chunk add the code:
 ~~~
@@ -242,7 +242,7 @@ plot # To display the plot created by code in 02_hormone_analysis.R
 > Let's see if our code worked from an external script 
 {: .checklist}
 
-![Fig 4 path error](../fig/06-fig4-connection-error.PNG)
+![Fig 4 path error](../fig/07-fig4-connection-error.PNG)
 
 Shoot, we got an error and it looks quite familiar... An error reading our files due to file path... That's because the code we are now virtually running within the rmd document contains file paths to read and save the data that are relative to the directory they are located in so throw an error when run here. Don't worry if all this relative path stuff is making your head spin... It's confusing at first... But you can (and need) to get the hang of it to work in R projects. 
 
@@ -367,7 +367,7 @@ library(patchwork)
 ```
 
 It'll look like the following:
-![load libraries & data](../fig/06-load-libraries-data.PNG)
+![load libraries & data](../fig/07-load-libraries-data.PNG)
 
 At this point we could go back through our R scripts and comment out (or delete) the beginning sections where we load the data and libraries. That will save some time for the rmd document to render, because the data and libraries will only load once instead of twice. You can imagine that the more code chunks you have the more time taking this step would save. Bonus that this also works to load the data before it is called in inline code as well!
 
