@@ -103,33 +103,6 @@ Then, we’ll get started on our project!
 Although there is no “best” way to lay out a project, there are some general 
 principles to adhere to that will make project management easier:  
 
-#### **Practice good file-naming**  
-The three principles of file-naming are: 
-
-1. Machine-readable
-- Friendly for searching (using regular expressions/globbing)
-    - No spaces, unsupported punctuation, accented characters, or case-sensitive file names
-- Friendly for computing
-  - Deliberate use of delimiters (i.e. for splitting file names)
-    - `data-analyses-fig1.R` `-` used consistently as a separator 
-  
-2. Human-readable
-- Name contains brief description of content
-- Borrow from clean URL practices:
-  - "slug" i.e. the part of a url that is human readable 
-    - i.e. `data-analyses-fig1.R` 
-  
-3. Plays nice with default ordering 
-  - Use chronological or logical order:
-    - **chronological**: filename starts with date. 
-      - i.e. `2022-01-01_data_analyses.R`
-      - Use ISO 8601 date standard
-    - **logical**: filename starts with a number or keyword/number combo. 
-      - i.e. `01_data_preprocessing.R` *see code directory*
-      - i.e. `CC-101_1_data.csv` *see data directory*
-   
-Recommendations: Adapted from [https://datacarpentry.org/rr-organization1/01-file-naming/index.html](https://datacarpentry.org/rr-organization1/01-file-naming/index.html). For more tips on file naming, check: [The Dos and Don'ts of File Naming](https://www.library.ucsb.edu/sites/default/files/dls-n01-2021-filenaming.pdf)
-
 #### **Practice good file-organization**  
 
 [Good Enough Practices for Scientific Computing](http://swcarpentry.github.io/good-enough-practices-in-scientific-computing/) gives the following recommendations for project organization:  
@@ -159,6 +132,33 @@ For our project we’re working in today, we used the following setup for folder
 - **README.md:** a detailed project description with all collaborators listed.
 - **CITATION.md:** directions to cite the project.
 - **LICENSE.md:** instructions on how the project or any components can be reused. 
+
+#### **Practice good file-naming**  
+The three principles of file-naming are: 
+
+1. Machine-readable
+- Friendly for searching (using regular expressions/globbing)
+    - No spaces, unsupported punctuation, accented characters, or case-sensitive file names
+- Friendly for computing
+  - Deliberate use of delimiters (i.e. for splitting file names)
+    - `data-analyses-fig1.R` `-` used consistently as a separator 
+  
+2. Human-readable
+- Name contains brief description of content
+- Borrow from clean URL practices:
+  - "slug" i.e. the part of a url that is human readable 
+    - i.e. `data-analyses-fig1.R` 
+  
+3. Plays nice with default ordering 
+  - Use chronological or logical order:
+    - **chronological**: filename starts with date. 
+      - i.e. `2022-01-01_data_analyses.R`
+      - Use ISO 8601 date standard
+    - **logical**: filename starts with a number or keyword/number combo. 
+      - i.e. `01_data_preprocessing.R` *see code directory*
+      - i.e. `CC-101_1_data.csv` *see data directory*
+   
+Recommendations: Adapted from [https://datacarpentry.org/rr-organization1/01-file-naming/index.html](https://datacarpentry.org/rr-organization1/01-file-naming/index.html). For more tips on file naming, check: [The Dos and Don'ts of File Naming](https://www.library.ucsb.edu/sites/default/files/dls-n01-2021-filenaming.pdf)
 
 #### **Use relative paths**  
 This goes hand-in-hand with keeping your project within one “root” directory. If you use complete paths to say, read in your data to RStudio and then share your code with a collaborator, they won’t be able to run it because the complete path you used is unique to your system and they will receive an error that the file is not found. That is why one should always use relative paths to link to other files in the project. I.e. “where is my data file in relation to the script I’m reading the data into?” The practice of using relative paths is made easier by having a logical directory set up and keeping all project files within one root project folder. 
@@ -220,7 +220,7 @@ First, you have to have a directory or folder that becomes your git "repository"
 
 There are actually many ways to use Git, you could use it on GitHub only (though that suffers from lack of options and is a bit clunky), there is a Desktop interface, many serious programmers use it on command line. HOWEVER, RStudio has Git controls built in so we'll use it there - all in one place!
 
-Before we use Git in RStudio project, we must have an .RProj file so let's talk about R Projects.
+Before we use Git in RStudio project, we must have an R Projects file (.RProj) so let's talk about how R Projects works in RStudio.
 
 Who has used R Projects before?
 
