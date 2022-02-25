@@ -10,7 +10,7 @@ questions:
 - How can you find existing templates for R Markdown files?
 
 objectives:
-- Learn about the structure of a Rmardown file.
+- Learn about the structure of a R Markdown file.
 - Learn how an R Markdown file works.
 - Learn how to knit/render a rmd file into an output format.
 - Understand what templates are and the advantage of using them.
