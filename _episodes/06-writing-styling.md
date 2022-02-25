@@ -116,7 +116,7 @@ As you become a more regular Rstudio user, you may also consider using some keyb
 
 ![Fig. 6.3 - Shortcuts](../fig/06-shortcuts.png)
 
-Tip: Windows users should replace in the shortcuts above `⌘` by `ctrl` and ⌥⌘ by `alt (+) ctrl`.
+Tip: Windows users should replace in the shortcuts above `⌘` by `ctrl` and `⌥⌘` by `alt (+) ctrl`.
 
 ## Other Editing Features
 The visual editor allows users to insert images by browsing their location or copying and pasting it to the rmd document directly. There are also options to add html, line blocks, blockquotes, and footnotes. Up next we will learn more about how to add code chunks. In further episodes we will also learn how to insert citations and create a bibliography.
