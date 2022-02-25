@@ -21,7 +21,7 @@ keypoints:
 
 ## Why citing?
 
-Correctly citing and attributing publications is key to academic writing. Older versions of RStudio require [Pandoc's]("https://pandoc.org/MANUAL.html#citation-syntax") citation syntax to render bibliographies correctly. We won’t be covering this approach extensively in this workshop, since the new visual editor has made this process much more simple. You can refer to our [previous workshop on R Markdown]("https://ucsbcarpentry.github.io/R-markdown/06-citations-bib/index.html") pre-visual editor for more information.  
+Correctly citing and attributing publications is key to academic writing. Older versions of RStudio require [Pandoc's](https://pandoc.org/MANUAL.html#citation-syntax) citation syntax to render bibliographies correctly. We won’t be covering this approach extensively in this workshop, since the new visual editor has made this process much more simple. You can refer to our [previous workshop on R Markdown]("https://ucsbcarpentry.github.io/R-markdown/06-citations-bib/index.html") pre-visual editor for more information.  
 
 The new visual editor in RStudio 1.4 has made citations and cross-referencing much easier, by offering different options for referencing various types of sources. Before getting into these different features, let’s first learn how you can call the citation window dialog on Rstudio and how to navigate these different options.  
 
@@ -98,7 +98,7 @@ We have briefly mentioned that you can also edit the citation key. By default, m
 
 You might have noticed that all citations are inserted in a specific style. Can you guess which one? If you answered Chicago that is correct! By default, Rstudio via Pandoc will use a Chicago author-date format for citations and references. To use another style, you will need to specify a CSL (Citation Style Language) file in the csl metadata field in the YAML.
 
-But how can you identify which CSL you should use? You can find required formats on the [Zotero Style Repository]("https://www.zotero.org/styles"), which makes it easy to search for and download your desired style.
+But how can you identify which CSL you should use? You can find required formats on the [Zotero Style Repository](https://www.zotero.org/styles), which makes it easy to search for and download your desired style.
 
 Download the format you wish to use and call it out in the YAML. Let’s try it together! Go to the Zotero Style repo and select [American Psychological Association 7th edition]("https://www.zotero.org/styles/apa"). You will notice that it will automatically download a `apa.csl` file. Make sure to save it to your project folder in report/source folder. In the YAML we have to call the exact name of the file preceded by “csl:”
 
@@ -238,7 +238,7 @@ We will replace type with tab and label with table-1.
 
 ## Citation
 
- <sup>1</sup>For more information on DOIs please see: [https://support.datacite.org/docs/doi-basics]("For more information on DOIs please see: https://support.datacite.org/docs/doi-basics")
+ <sup>1</sup>For more information on DOIs please see: [https://support.datacite.org/docs/doi-basics](For more information on DOIs please see: https://support.datacite.org/docs/doi-basics)
  
 > ## Time to Commit!
 > Make sure to commit your changes to GitHub. Add your changed files and commit with the following message: "Added Bibliography"
