@@ -135,11 +135,12 @@ the option always follows the code chunk label (don't forget to add a `,` after 
 
 #### Some common options: 
 
+**results** = (logical or character) text output of the code can be hidden (hide or FALSE), or delineated in a certain way (default 'markup').    
 **eval** = (logical or numeric) TRUE/FALSE to evaluate (or not) or a numeric value like c(1,3) (only evaluate expressions 1 and 3).    
 **echo** =  (logical or numeric - following the same rules as above) whether to display source code or not.     
-**warning** = (logical) whether to display the warnings in the output (default:TRUE). FALSE will output warnings to the console only    
-**include** = (logical) whether to include the chunk output in the output document (default TRUE)   
-**message** = (logical) whether or not to display messages that appear when running the code (default TRUE)
+**warning** = (logical) whether to display the warnings in the output (default TRUE). FALSE will output warnings to the console only.    
+**include** = (logical) whether to include the chunk output in the output document (default TRUE).   
+**message** = (logical) whether or not to display messages that appear when running the code (default TRUE).
  
  
 > ## CHALLENGE 9.1 - Rendering Codes
@@ -155,7 +156,7 @@ the option always follows the code chunk label (don't forget to add a `,` after 
 
 > ## CHALLENGE 9.2 - add options to your code  
 > Add the following options to your code:  
-> echo = FALSE, message = FALSE, warning = FALSE, result = FALSE  
+> echo = FALSE, message = FALSE, warning = FALSE, results = FALSE  
 > 
 > What will this do?  
 >> ## SOLUTION
