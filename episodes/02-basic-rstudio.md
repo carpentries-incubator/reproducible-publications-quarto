@@ -94,7 +94,7 @@ Start a new R markdown document in RStudio by clicking File \> New File \> R Mar
 
 ![Opening a new R Markdown document](../fig/02-file-navigation-rmd.PNG)
 
-If this is the first time you have ever opened an R markdown file a dialog box 
+If this is the first time you have ever opened an R Markdown file a dialog box 
 will open up to tell you what packages need to be installed. You shouldn't see the dialog box if you installed these packages before the workshop.
 
 ![First time R Markdown install packages dialog box](../fig/02-rmd-installpackages-dialogbox.PNG)
@@ -120,7 +120,7 @@ RStudio released a new major update to their IDE in January 2020, which includes
 
 #### Source Editor
 
-The image below displays the default R markdown template in the "source editor" mode. Notice the symbols scattered throughout the text (#, *, <>). Those are examples of R markdown syntax, which is a flavor of Markdown syntax, an easy and quick, human-readable markup language for document styling. 
+The image below displays the default R Markdown template in the "source editor" mode. Notice the symbols scattered throughout the text (#, *, <>). Those are examples of R Markdown syntax, which is a flavor of Markdown syntax, an easy and quick, human-readable markup language for document styling. 
   
 ![Add image source editor](../fig/02-source-editor.PNG)  
 
@@ -136,7 +136,7 @@ The image below displays the default R markdown template in the "source editor" 
 > ```
 >> ## SOLUTION
 >> `##` is a heading, `**` is to bold enclosed text, and `<>` is for hyperlinks. 
->> Don't worry about this too much right now! This is an example of R Markdown syntax for styling, you won't need it if you stick to the visual editor, but it is recommended to get at least a basic understanding of R markdown syntax if you plan to work with `.rmd` documents frequently.
+>> Don't worry about this too much right now! This is an example of R Markdown syntax for styling, you won't need it if you stick to the visual editor, but it is recommended to get at least a basic understanding of R Markdown syntax if you plan to work with `.rmd` documents frequently.
 > {: .solution}
 {: .challenge}
 
