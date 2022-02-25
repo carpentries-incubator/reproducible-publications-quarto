@@ -15,8 +15,10 @@ objectives:
 - Make our first edits in a verison controlled project
 
 keypoints:
-- 
-- 
+- R Studio has Git version control functionality built in.
+- _Forking_ a Github repository makes a copy of the repository into your personal account on Github.
+- You can _clone_ a git repository from Github to your local disk using R Studio.
+- For this workshop each learner will work with their own _fork_ of the "[R-Repro-pub](https://github.com/UCSBCarpentry/R-repro-pub)" repository.
 ---
 
 
