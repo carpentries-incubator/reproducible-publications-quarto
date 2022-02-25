@@ -1,8 +1,8 @@
 ---
 source: Rmd  
 title: "Good Practices for Managing Projects in RStudio"  
-teaching: FIXME
-exercises: FIXME
+teaching: 20
+exercises: 10
 questions:
 - What are good research project management practices?
 - What is an R Project file?
@@ -112,11 +112,20 @@ The three principles of file-naming are:
     - `data-analyses-fig1.R` `-` used consistently as a separator 
   
 2. Human-readable
-- Name contains brief description of contents
-- borrow from Clean URL practices
-  - "slug" i.e. the part of a url that is human readable `data-analyses-fig1` 
+- Name contains brief description of content
+- borrow from clean URL practices:
+  - "slug" i.e. the part of a url that is human readable 
+    - i.e. `data-analyses-fig1.R` 
   
-3. Plays nice with default ordering  
+3. Plays nice with default ordering 
+  - Use chronological or logical order:
+    - **chronological**: filename starts with date. 
+      - i.e. `2022-01-01_data_analyses.R`
+      - Use ISO 8601 date standard
+    - **logical**: filename starts with a number or keyword/number combo. 
+      - i.e. `01_data_preprocessing.R` *see code directory*
+      - i.e. `CC-101_1_data.csv` *see data directory*
+    - **
 adapted from https://datacarpentry.org/rr-organization1/01-file-naming/index.html 
 
 For more tips on file naming, check: [The Dos and Don'ts of File Naming](https://www.library.ucsb.edu/sites/default/files/dls-n01-2021-filenaming.pdf)
