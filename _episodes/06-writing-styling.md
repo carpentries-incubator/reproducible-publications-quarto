@@ -46,7 +46,7 @@ At the very top of the document we have a recommended citation for the sample da
 
 
 ### *Adding Links*
-In the same citation we have just worked on, let’s now add a link to it by selecting and copying the doi address. Then, click on the link icon and paste the address in the URL field. Simple right? If you prefer, you can also the drop-down insert menu, or even use shortcuts. By hovering the mouse over the desired icon, you will see which keys you should use. For a complete list of editing shortcuts, [check this link]("https://rstudio.github.io/visual-markdown-editing/shortcuts.html"). Tip: if you didn’t intend to use a shortcut and want to reverse its effect, just press the backspace key.
+In the same citation we have just worked on, let’s now add a link to it by selecting and copying the doi address. Then, click on the link icon and paste the address in the URL field. Simple right? If you prefer, you can also the drop-down insert menu, or even use shortcuts. By hovering the mouse over the desired icon, you will see which keys you should use. For a complete list of editing shortcuts, [check this link](https://rstudio.github.io/visual-markdown-editing/shortcuts.html). Tip: if you didn’t intend to use a shortcut and want to reverse its effect, just press the backspace key.
 
 
 ### *Adding Headings*
