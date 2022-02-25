@@ -128,7 +128,7 @@ The three principles of file-naming are:
       - i.e. `01_data_preprocessing.R` *see code directory*
       - i.e. `CC-101_1_data.csv` *see data directory*
    
-Recommendations: adapted from [https://datacarpentry.org/rr-organization1/01-file-naming/index.html](https://datacarpentry.org/rr-organization1/01-file-naming/index.html). For more tips on file naming, check: [The Dos and Don'ts of File Naming](https://www.library.ucsb.edu/sites/default/files/dls-n01-2021-filenaming.pdf)
+Recommendations: Adapted from [https://datacarpentry.org/rr-organization1/01-file-naming/index.html](https://datacarpentry.org/rr-organization1/01-file-naming/index.html). For more tips on file naming, check: [The Dos and Don'ts of File Naming](https://www.library.ucsb.edu/sites/default/files/dls-n01-2021-filenaming.pdf)
 
 #### **Practice good file-organization**  
 
@@ -151,14 +151,14 @@ For our project we’re working in today, we used the following setup for folder
 - **output:** contains processed/transformed data and all plots generated  
 	- **/data:** contains the output data file after applying custom pre-processing function  
 	- **/plots:** contains pdfs of the plots generated from the plot scripts in the code folder  
-- **report:** All files needed for the publication of the research project  
+- **report:** all files needed for the publication of the research project  
 	- **/source:** .Rmd file for the paper and additional files needed for rendering the paper  
       - **/fig:** contains the images created specifically (not through the analysis scripts) for the paper  
 	- **/output:** contains the final output of the Rmd paper  
-- **R-repro-pub.Rproj:** R project file that lives in the root directory.  
-- **README.md:** A detailed project description with all collaborators listed.
-- **CITATION.md:** Directions to cite the project.
-- **LICENSE.md:** Instructions on how the project or any components can be reused. 
+- **R-repro-pub.Rproj:** the R project file that lives in the root directory.  
+- **README.md:** a detailed project description with all collaborators listed.
+- **CITATION.md:** directions to cite the project.
+- **LICENSE.md:** instructions on how the project or any components can be reused. 
 
 #### **Use relative paths**  
 This goes hand-in-hand with keeping your project within one “root” directory. If you use complete paths to say, read in your data to RStudio and then share your code with a collaborator, they won’t be able to run it because the complete path you used is unique to your system and they will receive an error that the file is not found. That is why one should always use relative paths to link to other files in the project. I.e. “where is my data file in relation to the script I’m reading the data into?” The practice of using relative paths is made easier by having a logical directory set up and keeping all project files within one root project folder. 
