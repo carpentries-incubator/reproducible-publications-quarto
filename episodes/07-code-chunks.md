@@ -202,7 +202,7 @@ the tag is `fig.cap` followed by a `=` and the captions within quotes `"caption 
 > > ## Solution
 > > so, you should end up with the following in your code chunk:
 > > ~~~
-> > {r fig3-heartrate, echo = FALSE, message = FALSE, warning = FALSE, result = FALSE, fig.cap = "Fig 3: Mean heart rate of stress and control groups at baseline and during intervention."}
+> > {r fig3-heartrate, echo = FALSE, message = FALSE, warning = FALSE, results = FALSE, fig.cap = "Fig 3: Mean heart rate of stress and control groups at baseline and during intervention."}
 > > ~~~
 > > {: .language-r}
 > {: .solution}
