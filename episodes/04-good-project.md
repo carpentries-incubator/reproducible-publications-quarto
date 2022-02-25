@@ -51,7 +51,7 @@ collaborators, returning to a project after a hiatus, or dealing with data and
 scripts. Let’s discuss three of those common stress points:
 
 - **File/folder disorganization**
-  - you cannot find your files on your computer (or your cloud storage)
+  - You cannot find your files on your computer (or your cloud storage)
   - Multiple versions of files with names such as "finaldraft_4.txt"
   - Path issues when trying to run code 
   - Reviewers or colleagues cannot re-run your code/analyses
@@ -107,15 +107,15 @@ principles to adhere to that will make project management easier:
 The three principles of file-naming are: 
 
 1. Machine-readable
-- friendly for searching (using regular expressions/globbing)
-    - no spaces, unsupported punctuation, accented characters, or case-sensitive file names
-- friendly for computing
-  - deliberate use of delimiters (i.e. for splitting file names)
+- Friendly for searching (using regular expressions/globbing)
+    - No spaces, unsupported punctuation, accented characters, or case-sensitive file names
+- Friendly for computing
+  - Deliberate use of delimiters (i.e. for splitting file names)
     - `data-analyses-fig1.R` `-` used consistently as a separator 
   
 2. Human-readable
 - Name contains brief description of content
-- borrow from clean URL practices:
+- Borrow from clean URL practices:
   - "slug" i.e. the part of a url that is human readable 
     - i.e. `data-analyses-fig1.R` 
   
@@ -127,10 +127,8 @@ The three principles of file-naming are:
     - **logical**: filename starts with a number or keyword/number combo. 
       - i.e. `01_data_preprocessing.R` *see code directory*
       - i.e. `CC-101_1_data.csv` *see data directory*
-    - **
-adapted from https://datacarpentry.org/rr-organization1/01-file-naming/index.html 
-
-For more tips on file naming, check: [The Dos and Don'ts of File Naming](https://www.library.ucsb.edu/sites/default/files/dls-n01-2021-filenaming.pdf)
+   
+Recommendations: adapted from [https://datacarpentry.org/rr-organization1/01-file-naming/index.html](https://datacarpentry.org/rr-organization1/01-file-naming/index.html). For more tips on file naming, check: [The Dos and Don'ts of File Naming](https://www.library.ucsb.edu/sites/default/files/dls-n01-2021-filenaming.pdf)
 
 #### **Practice good file-organization**  
 
