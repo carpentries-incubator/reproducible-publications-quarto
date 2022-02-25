@@ -105,7 +105,7 @@ R code chunks appear highlighted in gray throughout the rmd document. They are s
 ![rmd template code](../fig/03-rmd-template-code.png)
 
 ### 4. Rendering your Rmd document:
-This is called "knitting"" and the button looks like a spool of yarn with a knitting needle. Clicking the knit button will compile the code, check for errors, and finally, output the type of file indicated in your yaml header. One nice thing about the knit button is that it saves the .Rmd document each time you run it. Your rmd document may not run and render as your indicated output if there are any errors in the document so it also functions somewhat as a code checker.
+This is called "knitting" and the button looks like a spool of yarn with a knitting needle. Clicking the knit button will compile the code, check for errors, and finally, output the type of file indicated in your yaml header. One nice thing about the knit button is that it saves the .Rmd document each time you run it. Your rmd document may not run and render as your indicated output if there are any errors in the document so it also functions somewhat as a code checker.
 <br>
 
 #### Try it yourself
