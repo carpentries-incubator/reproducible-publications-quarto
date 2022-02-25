@@ -44,8 +44,6 @@ You can quickly insert chunks like these into your file with:
 
 The most basic (and empty) code chunk looks like so:
 
-The most basic code chunk looks like so:
-
 ![blank Rmd code chunk](../fig/07-blank-code-chunk.PNG)
 
 Other than our backticks ``` for code chunks that surround the code top and bottom, the only **required** piece is the specified language (r) placed between the curly brackets. This indicates that the language to read the code is R.
@@ -248,9 +246,9 @@ plot # To display the plot created by code in 02_hormone_analysis.R
 
 Shoot, we got an error and it looks quite familiar... An error reading our files due to file path... That's because the code we are now virtually running within the rmd document contains file paths to read and save the data that are relative to the directory they are located in so throw an error when run here. Don't worry if all this relative path stuff is making your head spin... It's confusing at first... But you can (and need) to get the hang of it to work in R projects. 
 
-So, that almost entirely defeats the purpose of streamlining our plot generation by running an external script because now we have to go back to the hormone analysis R script and change the relative paths to run it here... And then if we wanted to run the R script on it's own it would now have the wrong paths!!! Ugh, what can we do?
+However, we have not been able to meet our goal of streamlining our plot generation by running an external script because now we have to go back to the hormone analysis R script and change the relative paths to run it here... And then if we wanted to run the R script on it's own it would now have the wrong paths!!! Ugh, what can we do?
 
-Well, there is a solution to this as well! (As with most obstacles you run into with R) That solution is to change the working directory of our rmd document - to do that we will introduce Global knitr options.
+Well, there is a solution to this as well! (As with most obstacles you run into with R). That solution is to change the working directory of our rmd document - to do that we will introduce Global knitr options.
 
 
 > ## Tip: Many ways to run external code
