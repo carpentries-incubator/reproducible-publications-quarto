@@ -181,9 +181,9 @@ This pull, add, commit, push routine will become second nature. Pulling at the b
 >
 > > ## Solution:
 > > 1) open the .gitignore file by double-clicking on it in the file view pane, on a new line add `data/`. Save the file and don't forget to commit it.
-> > ![.gitignore file](..fig/05-gitignore-file.PNG)
+> > ![.gitignore file](../fig/05-gitignore-file.PNG)
 > > 2) Click on the settings gear in the Git tab of the environment pane. Click on `gitignore`. On a new line add `data` and click save. Don't forget to commit the .gitignore file
-> > ![.gitignore in git pane](..fig/05-gitignore-git-pane.PNG)
+> > ![.gitignore in git pane](../fig/05-gitignore-git-pane.PNG)
 > {: .solution}
 {: .challenge}
 
