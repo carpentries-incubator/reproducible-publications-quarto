@@ -7,15 +7,17 @@ questions:
 - "What is Knitr?"
 - "What are code chunks and how they are structured?"
 - "How can you run code from your rmd document?"
-- "How can you run .r scripts to generate plots in your rmd document?"
+- "What are global knitr options?"
+- "What are global chunk options?"
 objectives:
-- "Learn how to create a dynamic view of your R Markdown document."
-- "Understand the anatomy of a code chunk."
-- "Learn how to insert code chunks and produce code generated plots and figures."
+- "Understand the syntax of a code chunk."
+- "Learn how to insert run-able blocks of code to integrate into your report"
 - "Learn how to source external scripts to run within an rmd document."
+- "Learn about using global knitr options and global chunk options"
 keypoints:
 - "Knitr will render your code and R markdown-formatted text and output your document format of choice"
 - "Code chunks are runable piece of R code. Each time you knit the document, calculations and plots will be run and displayed"
+- "Options for code chunks can be set at the individual level or at the global level"
 ---
 
 
