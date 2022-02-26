@@ -162,7 +162,7 @@ This pull, add, commit, push routine will become second nature. Pulling at the b
 > 
 > Now, there are some caveats to this, so in what situations would it make sense to add data to the .gitignore and what situations would it not?
 > 
-> > Solution:
+> > ## Solution:
 > > Why and when would it be a good idea to add data files to the .gitignore?
 > > - With raw data files - since they will not be modified (remember: raw data = read only).
 > > - With sensitive data - This should absolutely not be pushed to GitHub
