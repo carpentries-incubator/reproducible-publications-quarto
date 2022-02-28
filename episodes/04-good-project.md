@@ -172,6 +172,18 @@ The three principles of file-naming are:
    
 Adapted from [https://datacarpentry.org/rr-organization1/01-file-naming/index.html](https://datacarpentry.org/rr-organization1/01-file-naming/index.html). For more tips on file naming, check: [The Dos and Don'ts of File Naming](https://www.library.ucsb.edu/sites/default/files/dls-n01-2021-filenaming.pdf).
 
+> ## Challenge: File name syntax
+> 
+> Given the filename `CC-101_1_data.csv` and `2022-01-01_data_analyses.R`, why does it make sense to use both `-` and `_` as delimiters/separators?
+> 
+> > ## Solution:
+> > In `CC-101_1_data.csv`, the `-` is used as part of the keyword that is shared between a number of files. the `_` separates it from the trial number and description. If one were to split the filename on the `_`, the keyword would be maintained and the trial number would be separated out. 
+> > In the `2022-01-01_data_analyses.R`, `-` is used for a delimiter for the date, between year month and day. `_` is used between the rest. This allows us to split on `_` which would preserve the date (separate from other file info).
+> > 
+> > It's good to strategize on the best way to name files to anticipate future uses of the information contained within the filename.
+> {: .solution}
+{: .challenge}
+
 #### **Use relative paths**  
 This goes hand-in-hand with keeping your project within one “root” directory. If you use complete paths to say, read in your data to RStudio and then share your code with a collaborator, they won’t be able to run it because the complete path you used is unique to your system and they will receive an error that the file is not found. That is why one should always use relative paths to link to other files in the project. I.e. “where is my data file in relation to the script I’m reading the data into?” The practice of using relative paths is made easier by having a logical directory set up and keeping all project files within one root project folder. 
 
@@ -188,6 +200,22 @@ df <- read.csv("C:/users/flintstone/wilma/Desktop/project23/data/foodchoice_budg
 ```
 
 In the complete path example you can see that the code is not going to be portable.  If someone other than Wilma Flintstone wanted to run the r script they would have to alter the path to match their system.
+
+> ## Challenge: relative path
+> 
+> What would be the relative path needed to refer to the `bronars.pdf` plot (located in the plots directory) from `R-repro-pub.Rproj` (located in the root directory). What is the inversed relative path?
+>
+> > ## Solution:
+> >
+> > `R-repro-pub.Rproj` to `bronars.pdf`
+> > "output/plot/bronars.pdf"
+> >
+> > `bronars.pdf`to `R-repro-pub.Rproj`
+> > "../.."
+> > ".." directs back to the directory that contains the directory of the file of interest.
+> >
+> {: .solution}
+{: .challenge}
 
 #### **Treat data as read only**  
 This is probably the most important goal of setting up a project. Data is typically time consuming and/or expensive to collect. Working with them interactively (e.g., in Excel or R) where they can be modified means you are never sure of where the data came from, or how it has been modified since collection. It is therefore a good idea to treat your data as “read-only”. However, in many cases your data will be “dirty”: it will need significant preprocessing to get into a format R (or any other programming language) will find useful. Storing these scripts in a separate folder, and creating a second “read-only” data folder to hold the “cleaned” data sets can prevent confusion between the two sets. You should have separate folders for each: raw data, code, and output data/analyses. You wouldn’t mix your clean laundry with your dirty laundry, right?  
