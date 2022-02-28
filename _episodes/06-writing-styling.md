@@ -1,7 +1,7 @@
 ---
 title: "Writing and Styling Rmd Documents"
 teaching: 10
-exercises: 05
+exercises: 10
 questions:
 - "What is the Visual Editor in Rstudio?"
 - "Which features does the Visual Editor have?"
