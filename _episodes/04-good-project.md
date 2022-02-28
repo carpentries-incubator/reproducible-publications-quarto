@@ -117,46 +117,58 @@ For our project we’re working in today, we used the following setup for folder
 
 ![directory tree](../fig/04-directory-tree.png)
 
-- **code:** contains the scripts that generate the plots and analysis (found in `output/plots`)  
-    - **/functions:** contains custom functions written for the data pre-processing  
-- **data:** this folder contains the raw and cleaned data files  
-    - **/foodchoice_data:** contains the individual data files from food choice trials  
-- **output:** contains processed/transformed data and all plots generated  
-	- **/data:** contains the output data file after applying custom pre-processing function  
-	- **/plots:** contains pdfs of the plots generated from the plot scripts in the code folder  
-- **report:** all files needed for the publication of the research project  
-	- **/source:** .Rmd file for the paper and additional files needed for rendering the paper  
-      - **/fig:** contains the images created specifically (not through the analysis scripts) for the paper  
-	- **/output:** contains the final output of the Rmd paper  
-- **R-repro-pub.Rproj:** the R project file that lives in the root directory.  
-- **README.md:** a detailed project description with all collaborators listed.
-- **CITATION.md:** directions to cite the project.
-- **LICENSE.md:** instructions on how the project or any components can be reused. 
+> ## Exercise: Take a few minutes to look through the workshop project files
+> 
+> Please take some time to look through the project files. Either the screenshot above, or you may browse the files on GitHub at <https://github.com/UCSBCarpentry/R-repro-pub>. What do each of the directories (folders) contain? What is their purpose? 
+> 
+> See the solution drop-down for an explanation of each directory's contents.
+>
+> > ## Solution:
+> > 
+> > - **code:** contains the scripts that generate the plots and analysis (found in `output/plots`)  
+> >    - **/functions:** contains custom functions written for the data pre-processing  
+> >- **data:** this folder contains the raw and cleaned data files  
+> >    - **/foodchoice_data:** contains the individual data files from food choice trials  
+> > - **output:** contains processed/transformed data and all plots generated  
+> >	- **/data:** contains the output data file after applying custom pre-processing function  
+> >	- **/plots:** contains pdfs of the plots generated from the plot scripts in the code folder  
+> > - **report:** all files needed for the publication of the research project  
+> > 	- **/source:** .Rmd file for the paper and additional files needed for rendering the paper  
+> >      - **/fig:** contains the images created specifically (not through the analysis scripts) for the paper  
+> >	- **/output:** contains the final output of the Rmd paper  
+> > - **R-repro-pub.Rproj:** the R project file that lives in the root directory.  
+> > - **README.md:** a detailed project description with all collaborators listed.
+> > - **CITATION.md:** directions to cite the project.
+> > - **LICENSE.md:** instructions on how the project or any components can be reused. 
+> >
+> {: .solution}
+{: .challenge}
 
 #### **Practice good file-naming**  
+
 The three principles of file-naming are: 
 
-1. Machine-readable
-- Friendly for searching (using regular expressions/globbing)
-    - No spaces, unsupported punctuation, accented characters, or case-sensitive file names
-- Friendly for computing
-  - Deliberate use of delimiters (i.e. for splitting file names)
-    - `data-analyses-fig1.R` `-` used consistently as a separator 
+1. Machine-readable  
+- Friendly for searching (using regular expressions/globbing)  
+    - No spaces, unsupported punctuation, accented characters, or case-sensitive file names  
+- Friendly for computing  
+  - Deliberate use of delimiters (i.e. for splitting file names)  
+    - `data-analyses-fig1.R` with `-` used consistently as a separator   
   
-2. Human-readable
-- Name contains brief description of content
-- Borrow from clean URL practices:
-  - "slug" i.e. the part of a url that is human readable 
-    - i.e. `data-analyses-fig1.R` 
+2. Human-readable  
+- Name contains brief description of content  
+- Borrow from clean URL practices:  
+  - "slug" i.e. the part of a url that is human readable     
+    - i.e. `data-analyses-fig1.R`   
   
-3. Plays nice with default ordering 
-  - Use chronological or logical order:
-    - **chronological**: filename starts with date. 
-      - i.e. `2022-01-01_data_analyses.R`
-      - Use ISO 8601 date standard
-    - **logical**: filename starts with a number or keyword/number combo. 
-      - i.e. `01_data_preprocessing.R` *see code directory*
-      - i.e. `CC-101_1_data.csv` *see data directory*
+3. Plays nice with default ordering   
+  - Use chronological or logical order:  
+    - **chronological**: filename starts with date.   
+      - i.e. `2022-01-01_data_analyses.R`  
+      - Use ISO 8601 date standard  
+    - **logical**: filename starts with a number or keyword/number combo.   
+      - i.e. `01_data_preprocessing.R` *see code directory*  
+      - i.e. `CC-101_1_data.csv` *see data directory*  
    
 Adapted from [https://datacarpentry.org/rr-organization1/01-file-naming/index.html](https://datacarpentry.org/rr-organization1/01-file-naming/index.html). For more tips on file naming, check: [The Dos and Don'ts of File Naming](https://www.library.ucsb.edu/sites/default/files/dls-n01-2021-filenaming.pdf).
 
