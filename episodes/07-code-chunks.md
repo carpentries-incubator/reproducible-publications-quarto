@@ -20,16 +20,18 @@ keypoints:
 - "Options for code chunks can be set at the individual level or at the global level"
 ---
 
+## Beyond Inline Code
 
+What if you need to use more code than just a single-line expression such as `mean()` What if you want to add a plot or other code-generated figure that requires several (or more) lines of code? That's where "Code Chunks" come into play. Code Chunks are used in R Markdown documents when more than one line of code is needed to run an analyses or output a plot or figure etc. Code chunks are processed by Knitr and the output is displayed as the document output of our choice. I.e. Knitr runs the lines of code for a plot in a code chunk and outputs the plot in the final document as html. 
 
 ## What is Knitr?
 
-Knitr is the engine in RStudio which creates the “dynamic” part of R Markdown reports. It’s specifically a package that allows the integration of R code into the html, word, pdf, or LaTex document you have specified as your output for R Markdown. It utilizes Literate Programming to make research more reproducible. There are two main ways to process code with Knitr in R Markdown documents:
+But what is Knitr? Knitr is the engine in RStudio which creates the “dynamic” part of R Markdown reports. It’s specifically a package that allows the integration of R code into the html, word, pdf, or LaTex document you have specified as your output for R Markdown. It utilizes Literate Programming to make research more reproducible. There are two main ways to process code with Knitr in R Markdown documents:
 
 1. Inline code
 2. Code Chunks
 
-We learned how to use inline code in the previous episode, so let’s now let’s dive into code chunks which allow us to integrate more substantial portions of code into our narrative. 
+Now, we already learned how to use inline code in the previous episode, so now let’s dive into code chunks which allow us to integrate more substantial portions of code into our narrative. 
 
 ## Inserting Code Chunks
 
@@ -88,6 +90,7 @@ Now, to check to make sure our code renders, we could click the "knit" button as
 
 **Task**	| **Windows & Linux**	| **macOS**
 ---       |---                  |---
+Create a code chunk | Ctrl + Alt + I | Cmd + Option + I
 Run all chunks above |	Ctrl+Alt+P	| Command+Option+P
 Run current chunk	| Ctrl+Alt+C	| Command+Option+C
 Run current chunk	| Ctrl+Shift+Enter	| Command+Shift+Enter
