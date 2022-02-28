@@ -221,13 +221,14 @@ Now that we’ve named and adjusted the rendering for our first figure, let’s 
 
 ## Run Code from an external script in a code chunk
 
-Now, we will learn how to call code from an external script instead of copying and pasting code from a code chunk in the rmd document that resides in an r script in a different directory of our project. There are at least several benefits to running code in this modular fashion instead of copy/pasting:
+Let's add another figure generated from code. This time around let's see how to run code in a code chunk from an external R script instead of unelegantly copying and pasting the code from a R script to a code chunk in our `.rmd`.
+
+There are at least a few benefits to running code in this modular fashion instead of copy/pasting:
 1. Automatic updates: if the code gets updated in the R script, it automatically be updated in the rmd document as well. 
 2. Readability: calling code externally only takes several lines of code - versus copy/pasting 50+ lines of code from our scripts.
 3. Less fussing with relative paths* - we had to change the code slightly in the first example to update the file path to the data set, with this method we won't have to modify the source code. 
 
-*unfortunately, one cannot eliminate working with relative paths, there is just the question of the greater of two evils.
-
+*unfortunately you will never be free of relative paths, but you can make it a bit easier on yourself.
 
 First, find the FIXME in the rmd document for Fig 4 (ctrl-f "Fig 4"). We need to add the code for the hormone analysis. 
 
@@ -237,9 +238,12 @@ Add your code chunk:
 
 Now, within the chunk add the code:
 ~~~
+# run the code from 02_hormone_analysis.R in the code directory
 source("../../code/02_hormone_analysis.R", local = knitr::knit_global())
-plot # To display the plot created by code in 02_hormone_analysis.R
+# display the plot created by code in 02_hormone_analysis.R
+plot 
 ~~~
+
 {: .language-r}
 
 > ## Time to Knit!
@@ -248,25 +252,21 @@ plot # To display the plot created by code in 02_hormone_analysis.R
 
 ![Fig 4 path error](../fig/07-fig4-connection-error.PNG)
 
-Shoot, we got an error and it looks quite familiar... An error reading our files due to file path... That's because the code we are now virtually running within the rmd document contains file paths to read and save the data that are relative to the directory they are located in so throw an error when run here. Don't worry if all this relative path stuff is making your head spin... It's confusing at first... But you can (and need) to get the hang of it to work in R projects. 
+Shoot, we got an error and it looks familiar... another file path error. That's because the code we are calling from within the rmd document contains file paths to read and save the data that are relative to the `code` directory where the `02_hormone_analysis.R` resides so the paths aren't correct when run from the `.rmd` file. Yesh! All sorts of relative path chaos.
 
-However, we have not been able to meet our goal of streamlining our plot generation by running an external script because now we have to go back to the hormone analysis R script and change the relative paths to run it here... And then if we wanted to run the R script on it's own it would now have the wrong paths!!! Ugh, what can we do?
+What do we do now? We could go into the `02_hormone_analysis.R` file and change the relative paths to work with the `.rmd` file, but then they won't run correctly on their own. Also, this wouldn't accomplish our goal of streamlining our plot generation by running an external script. Ugh, what can we do???
 
-Well, there is a solution to this as well! (As with most obstacles you run into with R). That solution is to change the working directory of our rmd document - to do that we will introduce Global knitr options.
+Well, there is a solution to this as well! (As with most every obstacle you run into with R). That solution is to change the working directory of our rmd document - to do that we will first introduce Global knitr options.
 
 
 > ## Tip: Many ways to run external code
-> There are at least 3-4 methods one can use to run external code, which may be useful in different contexts. 
-> 1. source()
-> 2. sys.source()
-> 3. knitr::read_chunk()
-> 4. code() *in `{r}` header
+> There are at least 3-4 methods one can use to run external code, the best choice may just depend on the context or on your personal preference. All are a bit awkward because of relative paths, but better than copy/pasting code from elsewhere in your project (in our humble opinion):
 >
-> The best solution was to use source() but call the final plot in the code chunk - not sure why this is necessary.
-> 
-> See the following links for more discussion on sourcing exteral scripts:
-> - “Source external script” https://bookdown.org/yihui/rmarkdown-cookbook/source-script.html
-> - use this option instead so plots display correctly: https://stackoverflow.com/questions/52397430/include-code-from-an-external-r-script-run-in-display-both-code-and-output
+> 1. source()   -- [see more at bookdown.org](https://bookdown.org/yihui/rmarkdown-cookbook/source-script.html)
+> 2. sys.source()   -- [see more at bookdown.org](https://bookdown.org/yihui/rmarkdown-cookbook/source-script.html)
+> 3. knitr::read_chunk()  -- [see more at stackoverflow](https://stackoverflow.com/a/52398016)
+> 4. code() *in `{r}` header [see more at stackoverflow](https://stackoverflow.com/a/52400206)
+>
 > - another helpful page: http://zevross.com/blog/2014/07/09/making-use-of-external-r-code-in-knitr-and-r-markdown/
 {: .callout}
 
