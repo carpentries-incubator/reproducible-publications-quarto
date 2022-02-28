@@ -1,8 +1,8 @@
 ---
 source: Rmd  
 title: "Navigating RStudio and R Markdown Documents"  
-teaching: FIXME
-exercises: FIXME
+teaching: 20
+exercises: 10
 questions:
 - How do you find your way around RStudio?
 - How do you start an R Markdown document in Rstudio?
