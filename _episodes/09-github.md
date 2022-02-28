@@ -1,6 +1,6 @@
 ---
 title: "Collaborating via Github"
-teaching: 25
+teaching: 15
 exercises: 10
 questions:
 - "How do I authenticate with Github?"
