@@ -74,7 +74,7 @@ Update buttons at the top of the tab.
 
 > ## CHALLENGE 2.1 - Installing Packages
 >
-> Install the following packages: `bookdown`, `tidyverse`, `knitr`, `rticles`,`BayesFactor`, `patchwork` \> 
+> Install the following packages: `bookdown`, `tidyverse`, `knitr`, `rticles`,`BayesFactor`, `patchwork`    
 >> ## SOLUTION 
 >> We can use the `install.packages()` command to install the required packages:
 >> ~~~ 
