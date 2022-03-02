@@ -158,16 +158,16 @@ This pull, add, commit, push routine will become second nature. Pulling at the b
 {: .callout}
 
 > ## Discussion: (optional) Using .gitignore files
-> a .gitignore file is used to signal to Git to NOT keep track of versions of the files included in the folder. Once instance where this is used in a data analysis project is with data files. 
+> a `.gitignore` file is used to signal to Git to NOT keep track of versions of the files included in the folder. Once instance where this is used in a data analysis project is with data files. 
 > 
 > Now, there are some caveats to this, so in what situations would it make sense to add data to the .gitignore and what situations would it not?
 > 
 > > ## Solution:
-> > Why and when would it be a good idea to add data files to the .gitignore?
+> > Why and when would it be a good idea to add data files to the `.gitignore`?
 > > - With raw data files - since they will not be modified (remember: raw data = read only).
 > > - With sensitive data - This should absolutely not be pushed to GitHub
-> > - 
-> > Why and when would it not make sense to add data files to the .gitignore?
+> >  
+> > Why and when would it not make sense to add data files to the `.gitignore` so they will be available in the Git repository.
 > > - pre-processed data files - these are the data files that are edited - processed from the raw data
 > > - small data files - may not make much of a difference whether they are tracked or not
 > > - the first time you add data files - You can't push data files to GitHub unless 
@@ -177,12 +177,14 @@ This pull, add, commit, push routine will become second nature. Pulling at the b
 
 
 > ## Challenge: (optional) Add the  files/directories to .gitignore 
-> Add the data (all of the raw data files) to the .gitignore. Hint: there are two ways to do this. Hint2: add a forward slash `/` after directories. 
+> Add the data (all of the raw data files) to the `.gitignore`.  
+> Hint: there are two ways to do this.  
+> Hint2: add a forward slash `/` after directories. 
 >
 > > ## Solution:
 > > 1) open the .gitignore file by double-clicking on it in the file view pane, on a new line add `data/`. Save the file and don't forget to commit it.
 > > ![.gitignore file](../fig/05-gitignore-file.PNG)
-> > 2) Click on the settings gear in the Git tab of the environment pane. Click on `gitignore`. On a new line add `data` and click save. Don't forget to commit the .gitignore file
+> > 2) Click on the settings gear in the Git tab of the environment pane. Click on `gitignore`. On a new line add `data` and click save. Don't forget to commit the `.gitignore` file.
 > > ![.gitignore in git pane](../fig/05-gitignore-git-pane.PNG)
 > {: .solution}
 {: .challenge}
