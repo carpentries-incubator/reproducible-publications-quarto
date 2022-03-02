@@ -47,7 +47,7 @@ To start an R project, you would navigate to `File > new project` rather than ju
 
 After choosing `New Directory` chose `new project` on the next menu options. 
 
-Then, to use version control, make sure to check the box as highlighted:
+Then, to use version control, make sure to check the "_Create a git repository_" box as highlighted in this screen shot:
 ![new project w/ version control](../fig/05-brand-new-project.PNG)
 
 *Note when you choose directory name, it will create a new directory in the directory you specified along with an .Rproj file of the same name. Avoid spaces here. underscores "_", dashes "-" or camel case "NewProject" is the recommended way to name this directory/file.
