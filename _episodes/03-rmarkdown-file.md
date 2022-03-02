@@ -2,7 +2,7 @@
 source: Rmd  
 title: "Introduction to Working with R Markdown Files"  
 teaching: 20
-exercises: 10
+exercises: 05
 questions:
 - What is the breakdown of an R Markdown file?
 - What are templates in R Markdown?
