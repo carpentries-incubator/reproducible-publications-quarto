@@ -1,5 +1,5 @@
 ---
-title: <br> Pre-workshop Setup
+title: Pre-workshop Setup
 ---
 **Requirements:**
 - install R & RStudio (see instructions below)
