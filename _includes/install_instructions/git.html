@@ -32,7 +32,7 @@ the text below accordingly.
 
     <div class="tab-content">
       <article role="tabpanel" class="tab-pane active" id="git-windows">
-          <ol>
+            <ol>
           <li>Download the Git for Windows <a href="https://gitforwindows.org/">installer</a>.</li>
           <li>Run the installer and follow the steps below:
             <ol>
@@ -63,9 +63,53 @@ the text below accordingly.
                 remove the Git Bash installation, re-run the installer and to select the "Git from the
                 command line and also from 3rd-party software" option.)
               </li>
+              {% comment %} Choosing the SSH executable {% endcomment %}
+ 	      <li>
+	      Select "Use bundled OpenSSH".
+	      </li>
+              {% comment %} Choosing HTTPS transport backend {% endcomment %}
+              <li>
+		Ensure that "Use the native Windows Secure Channel Library" is selected and click on "Next".
+	      </li>
+              {% comment %} This should mean that people stuck behind corporate firewalls that do MITM attacks
+                                 with their own root CA are still able to access remote git repos. {% endcomment %}
+              {% comment %} Configuring the line ending conversions {% endcomment %}
+              <li>
+                Ensure that "Checkout Windows-style, commit Unix-style line endings" is selected and click on "Next".
+              </li>
+              {% comment %} Configuring the terminal emulator to use with Git Bash {% endcomment %}
+              <li>
+                <strong>
+                  Ensure that "Use Windows' default console window" is selected and click on "Next".
+                </strong>
+              </li>
+              {% comment %} Configuring extra options {% endcomment %}
+              <li>
+		Ensure that "Default (fast-forward or merge) is selected and click "Next"
+              </li>
+              <li>
+		Ensure that "Git Credential Manager" is selected and click on "Next".
+              </li>
+              <li>
+		Ensure that "Enable file system caching" is selected and click on "Next".
+              </li>
+              {% comment %} Configuring experimental options {% endcomment %}
+              <li>Click on "Install".</li>
+              {% comment %} Installing {% endcomment %}
+              {% comment %} Completing the Git Setup Wizard {% endcomment %}
+              {% comment %} as of 2020-06-02, the Window will say "click Finish", but the button is labelled as "Next" {% endcomment %}
+              <li>Click on "Finish" or "Next".</li>
             </ol>
-	</li>
+          </li>
+	  </li>
         </ol>
+        <p>This will provide you with both Git and Bash in the Git Bash program.</p>
+        <h4>Video Tutorial</h4>
+        <div class="yt-wrapper2">
+        <div class="yt-wrapper">
+        <iframe type="text/html" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" src="https://www.youtube-nocookie.com/embed/339AEqk9c-8?modestbranding=1&playsinline=1&iv_load_policy=3&rel=0" class="yt-frame" allowfullscreen></iframe>
+        </div>
+        </div>
       </article>
       <article role="tabpanel" class="tab-pane" id="git-macos">
         <p>
