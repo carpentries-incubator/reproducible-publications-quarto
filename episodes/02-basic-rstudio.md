@@ -74,7 +74,7 @@ Update buttons at the top of the tab.
 
 > ## CHALLENGE 2.1 - Installing Packages
 >
-> Install the following packages: `bookdown`, `tidyverse`, `knitr`, `rticles`,`BayesFactor`, `patchwork`    
+> Install the following packages: `bookdown`, `tidyverse`, `knitr`, `rticles`,`BayesFactor`, `patchwork` , `rprojroot`    
 >> ## SOLUTION 
 >> We can use the `install.packages()` command to install the required packages:
 >> ~~~ 
@@ -84,11 +84,12 @@ Update buttons at the top of the tab.
 >> install.packages("rticles")  
 >> install.packages("BayesFactor") 
 >> install.packages("patchwork") 
+>> install.packages("rprojroot") 
 >> ~~~
 >> An alternate solution, to install multiple packages with a single 
 >> `install.packages()` command is: 
 >> ~~~
->> install.packages(c("bookdown", "tidyverse", "knitr", "rticles", "BayesFactor", "patchwork"))
+>> install.packages(c("bookdown", "tidyverse", "knitr", "rticles", "BayesFactor", "patchwork", "rprojroot"))
 >> ~~~
 > {: .solution} 
 {: .challenge}
