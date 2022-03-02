@@ -2,9 +2,12 @@
 title: Pre-workshop Setup
 ---
 **Requirements:**
-- install R & RStudio (see instructions below)
+
+- Github account (use existing or create new account)
 - install Git for Windows (Windows users only)
-- Github account (use existing or create new)
+- install R & RStudio (Two separate installations)
+
+See instructions below for all three setup requirements:
 
 {% include install_instructions/github.html %}
 
