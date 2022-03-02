@@ -74,17 +74,22 @@ Update buttons at the top of the tab.
 
 > ## CHALLENGE 2.1 - Installing Packages
 >
-> Install the following packages: `bookdown`, `tidyverse`, `knitr`, `rticles`,`kable` \> 
+> Install the following packages: `bookdown`, `tidyverse`, `knitr`, `rticles`,`BayesFactor`, `patchwork` \> 
 >> ## SOLUTION 
->> We can use the `install.packages()` command to install the required packages. 
+>> We can use the `install.packages()` command to install the required packages:
+>> ~~~ 
 >> install.packages("bookdown")
 >> install.packages("tidyverse") 
 >> install.packages("knitr") 
 >> install.packages("rticles")  
->> install.packages("kable") 
+>> install.packages("BayesFactor") 
+>> install.packages("patchwork") 
+>> ~~~
 >> An alternate solution, to install multiple packages with a single 
 >> `install.packages()` command is: 
->> install.packages(c("bookdown", "tidyverse", "knitr", "rticles", "kable"))  >
+>> ~~~
+>> install.packages(c("bookdown", "tidyverse", "knitr", "rticles", "BayesFactor", "patchwork"))
+>> ~~~
 > {: .solution} 
 {: .challenge}
 
