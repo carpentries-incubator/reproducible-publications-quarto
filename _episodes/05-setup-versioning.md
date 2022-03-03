@@ -100,6 +100,8 @@ Click File>New Project > Verison Control > Git.
 
 Ok, so if you are using Git for the first time in RStudio at this point you may be getting a notification that Git isn't set up to work with RStudio. 
 
+![Git not detected on system path](../fig/05-git-not-detected.png)
+
 To set it up we need to go to Tools > Global Options
 ![Global Options Git/SVN setup](../fig/05-setup-git-rstudio.PNG)
 
