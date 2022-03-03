@@ -121,6 +121,26 @@ Ooof! That output doesn't look great.. we've got a bit more work to do.
 
 let's see about fixing that with code chunk rendering options. 
 
+## Code Chunk Options, Names and Captions (oh my!)
+
+### Name Your Code Chunk
+
+While not necessary for running your code, it is good practice is to give a name to each code chunk and allows for more advanced options (such as cross-referencing) to work with your rmd files later on:
+
+`{r chunk-name}`
+
+Some things to keep in mind
+- The chunk name is the only value other than r in the code chunk options that doesn’t require a tag (i.e. `echo =` )
+- The chunk label has to be unique (i.e.you can't use the the same name for multiple chunks)
+
+We’ll see in a bit where this code chunk label comes in handy. But, for now let's go back and give our first code chunk a name:
+
+`{r fig3-heartrate}`
+
+> ## Tip: Don't use spaces, periods or underscores in code chunk labels
+>Try to avoid spaces, periods (.), and underscores (_) in chunk labels and paths. If you need separators, you are recommended to use hyphens (-) instead. For example, setup-options is a good label, whereas setup.options and chunk 1 are bad; fig.path = 'figures/mcmc-' is a good path for figure output, and fig.path = 'markov chain/monte carlo' is bad. See more at: [https://yihui.org/knitr/options/](https://yihui.org/knitr/options/)
+{: .callout}
+
 ### Code Chunk Options
 
 There are over 50 different code chunk options!!! Obviously we will not go over all of them, but they fall into several larger categories including: code evaluation, text output, code style, cache options, plot output and animation. We’ll talk about a few options for code evaluation, text output and plot output specifically.
@@ -129,7 +149,7 @@ There are over 50 different code chunk options!!! Obviously we will not go over 
 > Find a complete list of code chunk options on Knitr developer, Yihui Xie's, [online guide to knitr](https://yihui.org/knitr/options/). Or, you can find a brief list of all options on the R Markdown Reference guide on page 3 accesible through the RStudio Interface by navigating to the main menu bar `Help > Cheat Sheets > R Markdown Reference Guide`.
 {: .callout}
 
-Again, The chunk name is the only value other than r in the code chunk options that doesn’t require a tag (i.e. the "= VALUE" part of `option = VALUE`). So these chunk options will always require a tag whose syntax looks like:
+The chunk name is the only value other than r in the code chunk options that doesn’t require a tag (i.e. the "= VALUE" part of `option = VALUE`). So these chunk options will always require a tag whose syntax looks like:
 
 `{r chunk-label, option = VALUE}`
 
@@ -169,29 +189,9 @@ the option always follows the code chunk label (don't forget to add a `,` after 
 > {: .solution}
 {: .challenge}
 
-### Name Your Code Chunk
-
-While not necessary for running your code, it is good practice is to give a name to each code chunk and allows for more advanced options (such as cross-referencing) to work with your rmd files later on:
-
-`{r chunk-name}`
-
-Some things to keep in mind
-- The chunk name is the only value other than r in the code chunk options that doesn’t require a tag (i.e. `echo =` )
-- The chunk label has to be unique (i.e.you can't use the the same name for multiple chunks)
-
-We’ll see in a bit where this code chunk label comes in handy. But, for now let's go back and give our first code chunk a name:
-
-`{r fig3-heartrate}`
-
-> ## Tip: Don't use spaces, periods or underscores in code chunk labels
->Try to avoid spaces, periods (.), and underscores (_) in chunk labels and paths. If you need separators, you are recommended to use hyphens (-) instead. For example, setup-options is a good label, whereas setup.options and chunk 1 are bad; fig.path = 'figures/mcmc-' is a good path for figure output, and fig.path = 'markov chain/monte carlo' is bad. See more at: [https://yihui.org/knitr/options/](https://yihui.org/knitr/options/)
-{: .callout}
-
-
 ### Caption your figure output from code chunks:
 
-Again, this is an optional feature, but if you need (or want) to add captions to your
-publication, it is straightforward to do in code chunks. 
+Again, this is an optional feature, but if you need (or want) to add captions to your publication, it is straightforward to do in code chunks. 
 
 The caption information also resides between your brackets at the beginning of the chunk: `{r}`
 
