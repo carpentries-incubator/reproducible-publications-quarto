@@ -274,30 +274,62 @@ Well, there is a solution to this as well! (As with most every obstacle you run 
 
 Benefits of global knitr options:
 1. Set working directory so file paths (for code chunks) can be relative to the root instead of our .Rmd file
-Global code chunk options
-2. Load libraries and data once instead of in each code chunk
+2. Code chunk options that can be applied consistently for the whole document
+3. Load libraries and data once at the beginning of the doucment instead of in each code chunk (more concise and less rendering time)
 
 
 ### Set working directory to project directory:
 
-Ok, so let's fix these path issues we get when we try to run externally sourced code. The definition of relative paths is that they are relative to your current document or working directory. So we are having issues with connections trying to read our data files because the R scripts in our code directory (../ to get to the 'root' or .Rproj directory) are in a different location relative to our rmd document (../..) We actually wouldn't have an issue if the rmd document was only one directory level below our root as our code directory is - that would be one way to fix it. However, that may not solve all path issues and we like our directory structure the way it is. There is the option to change our root directory for the rmd document however, and we actually have to methods to do it. One is a setting option in our global knitr settings - similar to what we just did for chunk options. However, the second option is even easier - we click the menu next to the knit button and change `Knit Directory` to `Project Directory`. This will direct RStudio to change the default working directory for the rmd document from the directory where the document is located to the project directory (which is the root directory of our project where the .Rproj file is located). *NOTE this is a bit awkward because it ONLY changes the root directory for the code chunks NOT our narrative portions (think image links), but for all intents and purposes it does what we need. 
+Ok, so let's fix these path issues we get when we try to run externally sourced code. The definition of relative paths is that they are relative to your current document or working directory. So we are having issues with connections trying to read our data files because the R scripts in our code directory (../ to get to the 'root' or .Rproj directory) are in a different location relative to our rmd document (../..).  What we want to do is direct RStudio to change the default working directory for the rmd document from the directory where the document is located to the project directory (which is the root directory of our project where the .Rproj file is located). We actually have several methods to do it. 
+
+The first option is easy - we click the menu next to the knit button and change `Knit Directory` to `Project Directory`.  *NOTE this is a bit awkward because it ONLY changes the root directory for the code chunks NOT our narrative portions (think image links and inline code). 
 ![change working directory rmd file](../fig/07-change-wd.PNG)
 
-https://stackoverflow.com/questions/26994958/error-cannot-open-the-connection-in-executing-knit-html-in-rstudio 
+The second option requires a bit of code, but will overall be more reproducible (because it's not dependent on your personal RStudio IDE settings)
+This is a setting option in our global knitr settings:
 
-Ok, now that we've done that we'll have to go back and fix the Figure 3 code so it runs properly. That is about all we'll need to do with fussing around with relative paths though - thank goodness! 
+We will now navigate back up to the top of our `.rmd` document, right after the yaml. Here, we will add a new code chunk with the label `setup` and the options `echo = FALSE` (we don't need this code printed out in our final document!). Then, we'll add the following line of code:
+
+~~~
+knitr::opts_knit$set(root.dir = rprojroot::find_rstudio_root_file())
+~~~
+*notice this code uses one of our pre-installed packages `rprojroot`
+
+![global knitr settings](../fig/07-global-knitr-options.PNG)
+
+Finally, let's adjust the path in the source() function after our working directory change. 
+
+`source("../../code/02_hormone_analysis.R)` to `source("code/02_hormone_analysis.R")`
+
+Looks neater already!
+
+Ok, now that we've done that we'll have to go back and fix the Figure 3 code and the inline code we added earlier so it runs properly since the working directory has changed. 
 
 > ## Challenge 9.4
 > 
-> Fix Figure 3 so that the code runs now that we changed the working directory to the project directory instead of the directory where the rmd document lives
+> Fix the relative path in the Figure 3 code so that the chunk will run properly. Hint: We changed the working directory from the directory where the `rmd` document lives `report/source` to the project directory, aka the 'root directory'
 > 
 > > ## Solution
-> > 
-> > 1. change the relative path on the line read.csv()
+> > There are two options:
+> > 1. change the relative path on the line read.csv() from `../../output/` to `output/`
 > > 2. delete the code from the code chunk and run the code from the external R script as with Figure 4. 
 > {: .solution}
 {: .challenge}
 
+> ## Challenge 9.5
+> 
+> Fix the relative path in the inline code so that the chunk will run properly. Hint: We changed the working directory from the directory where the `rmd` document lives `report/source` to the project directory, aka the 'root directory'.
+> 
+> > ## Solution
+> > 
+> > Change the relative path for the inline code in the section of the paper that describes the bronars simulation data
+> > from `r bronars_data <- read.csv("../../data/bronars_simulation_data.csv")` to `r bronars_data <- read.csv("data/bronars_simulation_data.csv")`
+> {: .solution}
+{: .challenge}
+
+> ## Note: setting the knit directory globally with opts_knit$set
+> Setting the knit directory to the project directory with the setup code chunk as we just did adjusts the working directory for all code in the R Markdown document (code chunks and inline code), but NOT for any markdown text elements (images and hyperlinks).
+{: .callout}
 
 > ## Time to Knit!
 > Let's make sure all our file paths are correct and our code runs without errors. 
