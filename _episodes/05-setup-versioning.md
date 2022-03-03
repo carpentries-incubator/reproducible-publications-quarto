@@ -135,11 +135,17 @@ is referred to as "add" and "commit":
 
 But what do those words even mean?
 
-**add:** choose a file or files to take a "snapshot" of. Aka what files do you want to add to your next version save?
+**add:** choose a file or files to take a "snapshot" of. Aka what files do you want to add to your next version?
 
 **Commit:** Taking a "snapshot" of a selected version of your project. The snapshot will *only* include the files you "added", typically only files that you've edited since your last commit. 
 
 You may have a few to many commits in a single work session. 
+
+When you commit, you add a "commit message" aka a short line of text (recommended 50 characters or lestt) that describes the changes that were made to the file(s) you added. This helps keep your versions organized and makes it easier to go back to remember what you did or to restore your work to exactly the version needed if you make a mistake or want to implement a change.
+
+![git add commit workflow](../fig/05-git-add-commit.svg)
+
+#### Git Workflow with GitHub
 
 If we are saving our work to a version control hosting cloud platform such as GitHub, 
 our workflow gets a bit more complex, we add a "pull" and "push" step at the beginning and end of a work session. 
