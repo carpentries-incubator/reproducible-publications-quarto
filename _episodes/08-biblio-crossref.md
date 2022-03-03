@@ -208,17 +208,15 @@ the `@ref` will always remain the same. We will edit type and label type options
 - eqn : for equations
 label is replaced with the chunk label of the code chunk figure/table/equation you want to link to.  
 
-Let's try this out on our paper:  
-
-Find or search for the note: (See Table 1).  
-To add a cross reference link we will replace the "Table 1" text with:  
+For example, if we were willing to add a crossreference to a certain "Table 1", we would have to replace type with tab and label with table-1.   
 
 ```
 \@ref(tab:table-1)
  ```
  {: .language-r}
 
-We will replace type with tab and label with table-1.  
+
+Let's try that in our paper!
 
 > ## CHALLENGE 8.4: Add a Cross Reference to Figure 2
 >
