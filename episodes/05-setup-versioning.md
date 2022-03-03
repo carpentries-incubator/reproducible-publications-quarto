@@ -21,9 +21,6 @@ keypoints:
 - For this workshop each learner will work with their own _fork_ of the "[R-Repro-pub](https://github.com/UCSBCarpentry/R-repro-pub)" repository.
 ---
 
-
-
-
 ## Using R projects and Version Control in RStudio
 
 It's a two step process to work on a project in RStudio with version control. First step is to make sure your work is set up as an R Project. Secondly, and optionally, when you set up your project you can have the option to add versioning (or continue from an existing version-controlled project). 
@@ -31,9 +28,9 @@ It's a two step process to work on a project in RStudio with version control. Fi
 ## Starting an R Project
 
 There are several options for working with R projects in RStudio. If you aren't already working in an R Project, you can create a new one. There are three options here:
-1. **New Directory** - start a brand new R project .
+1. **New Directory** - start a brand new R project.
 2. **Existing Directory** - add exisiting work to a R project.
-3. **Version Control** Continue an existing R project that already uses version control (i.e. download from GitHub)
+3. **Version Control** Continue an existing R project that already uses version control (i.e. download from GitHub).
 
 ![new r project options](../fig/05-new-project.PNG)
 
@@ -99,7 +96,19 @@ Now, click on the green `Code` drop-down and then click on the copy icon next to
 
 Now, let's return to RStudio:
 
-Click File>New Project > Verison Control > Git . Now paste in your url and choose "Desktop" as your directory. 
+Click File>New Project > Verison Control > Git. 
+
+Ok, so if you are using Git for the first time in RStudio at this point you may be getting a notification that Git isn't set up to work with RStudio. 
+
+To set it up we need to go to Tools > Global Options
+![Global Options Git/SVN setup](../fig/05-setup-git-rstudio.PNG)
+
+First, make sure "Enable version control interface for RStudio projects" is checkd. Next, you must make sure that the Git executable path is correct. 
+For macs, more than likely the path will have automatically populated. In all likelihood that path is `/usr/bin/git`. Windows users may find that the correct path is also pre-populated, but it is likely that you may need to manually add it by clicking "browse". More than likely your path will be something like `C:/Program Files/Git/bin/git.exe`. If not, search for where Git for Windows was installed (Git) go into the bin folder and select the 'git.exe` file. 
+
+Ok! Now that we set that up (by the way, this is a one time set up -it will work now for all future projects in RStudio on your device), we should be able to open our project from GitHub in RStudio.
+
+So back to the url you copied from GitHub. Navigate again to `File > New Project > Version Control > Git`. Paste in your url and choose "Desktop" as your directory. 
 
 ![start my R project](../fig/05-start-my-r-project.PNG)
 
