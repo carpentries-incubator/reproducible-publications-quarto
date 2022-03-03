@@ -408,4 +408,23 @@ At this point we could go back through our R scripts and comment out (or delete)
 > We can also tweak some settings in our yaml which changes how code chunks are displayed. We're not going to get into this in the workshop, but many of the same options you set in your global code chunk settings are also configurable in the yaml. 
 {: .callout}
 
+## Adjust rendered html output directory
+
+Ok, we'll adjust _one_ thing in the yaml. You know how we said it's good practice to have code and output from the code in separate directories? Well, the html file that renders from our `.rmd` file outputs to the same `report/source` directory. So that violates our standards. It might not be the end of the world, but let's see how to change the directory that R Markdown documents output to after knitting. 
+
+This is unfortunately more difficult that one would like, but we can use the following code in the yaml to create a custom function that changes the output directory for the `.rmd` file.
+The code for our documet is as follows:
+
+~~~
+knit: (function(rmdFile, encoding) { 
+      out_dir <- '../output';
+      rmarkdown::render(rmdFile,
+                        encoding=encoding, 
+                        output_file=file.path(dirname(rmdFile), 
+                        out_dir, 
+                        'DataPaper-ReproducibilityWorkshop.html'))})
+~~~
+
+Simply copy and paste it in to the yaml. 
+
 
