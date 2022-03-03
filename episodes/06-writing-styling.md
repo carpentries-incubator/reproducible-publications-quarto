@@ -46,12 +46,12 @@ At the very top of the document we have a recommended citation for the sample da
 
 
 ### *Adding Links*
-In the same citation we have just worked on, let’s now add a link to it by selecting and copying the doi address. Then, click on the link icon and paste the address in the URL field. Simple right? If you prefer, you can also the drop-down insert menu, or even use shortcuts. By hovering the mouse over the desired icon, you will see which keys you should use. For a complete list of editing shortcuts, [check this link](https://rstudio.github.io/visual-markdown-editing/shortcuts.html). Tip: if you didn’t intend to use a shortcut and want to reverse its effect, just press the backspace key.
+In the same citation we have just worked on, let’s now add a link to it by selecting and copying the doi address (**FIXME2**). Then, click on the link icon and paste the address in the URL field. Simple right? If you prefer, you can also the drop-down insert menu, or even use shortcuts. By hovering the mouse over the desired icon, you will see which keys you should use. For a complete list of editing shortcuts, [check this link](https://rstudio.github.io/visual-markdown-editing/shortcuts.html). Tip: if you didn’t intend to use a shortcut and want to reverse its effect, just press the backspace key.
 
 
 ### *Adding Headings*
 
-Adding headings to a R Markdown document in Rstudio is as simple as applying links. Let’s say we want the abstract section as a Heading Level 2. We can select the “abstract” then, and under “Normal” on the left-hand side of the menu, we can choose the desired level. Again, all the shortcuts will be listed next to the styling in the menu. Now apply the same heading to keywords and Level 1 to “Specifications Table” (**FIXME2**).
+Adding headings to a R Markdown document in Rstudio is as simple as applying links. Let’s say we want the abstract section as a Heading Level 2. We can select the “abstract” then, and under “Normal” on the left-hand side of the menu, we can choose the desired level. Again, all the shortcuts will be listed next to the styling in the menu. Now apply the same heading to keywords and Level 2 to "Value of the Data" (**FIXME3**).
 
 
 ### *Creating Tables*
