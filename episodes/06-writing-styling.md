@@ -85,6 +85,8 @@ The CSV file contains choice consistency data for ` `r nrow(bronars_simulation_d
 
 If you update your dataset this value will be correct. But, remember to check if you are calling the correct dataset.
 
+``../../data/bronars_simulation_data.csv``
+
 
 > ## CHALLENGE 6.1 - Adding inline code
 > Suppose we would like to add some information to the sentence we have just adjusted in our manuscript. We would like to include the average for the variable *violation_counts* present in the same dataset. Which inline code we would have to add to following sentence?
