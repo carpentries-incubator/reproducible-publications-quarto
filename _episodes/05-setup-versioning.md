@@ -141,7 +141,7 @@ But what do those words even mean?
 
 You may have a few to many commits in a single work session. 
 
-When you commit, you add a "commit message" aka a short line of text (recommended 50 characters or lestt) that describes the changes that were made to the file(s) you added. This helps keep your versions organized and makes it easier to go back to remember what you did or to restore your work to exactly the version needed if you make a mistake or want to implement a change.
+When you commit, you add a "commit message" aka a short line of text (recommended 50 characters or less) that describes the changes that were made to the file(s) you added. This helps keep your versions organized and makes it easier to go back to remember what you did or to restore your work to exactly the version needed if you make a mistake or want to implement a change.
 
 ![git add commit workflow](../fig/05-git-add-commit.svg)
 
