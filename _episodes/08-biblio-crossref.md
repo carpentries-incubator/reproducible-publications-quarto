@@ -31,9 +31,8 @@ After placing your cursor where you want to insert the citation you can either c
 
 ![Citation Window](../fig/08-call-citation.png)
 
-The citation window will display different options for inserting citations, You can either find items listed in your own sources through your Bibliography folder (you should have one already in your project folder provided by us), your Zotero Library(ies) if you have the reference manager installed in your computer, or even use the lookup feature to search for publications by DOI (Digital Object Identifier), Crossref, DataCite, or PubMed ID.  
+The citation window will display different options for inserting citations, You can either find items listed in your own sources through your Bibliography folder (you should have one already in your project folder provided by us), your Zotero Library(ies) if you have the reference manager installed in your computer, or even use the lookup feature to search for publications by DOI (Digital Object Identifier), Crossref, DataCite, or PubMed ID. 
 
-![Insert Citation Window](../fig/08-call-citation-2.png)
 
 ## Understanding How Rstudio Stores and Organizes Citations  
 
