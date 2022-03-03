@@ -51,7 +51,7 @@ In the same citation we have just worked on, let’s now add a link to it by sel
 
 ### *Adding Headings*
 
-Adding headings to a R Markdown document in Rstudio is as simple as applying links. Let’s say we want the abstract section as a Heading Level 2. We can select the “abstract” then, and under “Normal” on the left-hand side of the menu, we can choose the desired level. Again, all the shortcuts will be listed next to the styling in the menu. Now apply the same heading to keywords and Level 2 to "Value of the Data" (**FIXME3**).
+Adding headings to a R Markdown document in Rstudio is as simple as applying links. Let’s say we want the abstract section as a Heading Level 2. We can select the “abstract” then, and under “Normal” on the left-hand side of the menu, we can choose the desired level. Again, all the shortcuts will be listed next to the styling in the menu. Now apply the same heading to keywords and Level 2 to "Specification Table" (**FIXME3**).
 
 
 ### *Creating Tables*
@@ -63,7 +63,7 @@ Because creating tables manually in Rmd documents could be a little painful for 
 
 ### *Creating Bullet and Numbered Lists*
 
-Again, similarly to other document editors, Rstudio allows you to turn text into bullet or numbered lists. Let’s apply a bullet list to the paragraphs specifying the values of the data reported in the data paper (**FIXME4**). Assuming we were willing to create a numbered list instead, we could have followed the same process and chosen the other icon. We can also sink or lift the listed items.
+Again, similarly to other document editors, Rstudio allows you to turn text into bullet or numbered lists. Let’s apply a bullet list to the paragraphs specifying the "Values of the Data" reported in the data paper (**FIXME4**). Assuming we were willing to create a numbered list instead, we could have followed the same process and chosen the other icon. We can also sink or lift the listed items.
 
 
 ### *Adding Images*
