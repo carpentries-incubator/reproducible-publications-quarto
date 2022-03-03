@@ -165,7 +165,7 @@ The three principles of file-naming are:
   - Use chronological or logical order:  
     - **chronological**: filename starts with date.   
       - i.e. `2022-01-01_data_analyses.R`  
-      - Use ISO 8601 date standard  
+      - Use [ISO 8601 date standard](https://en.wikipedia.org/wiki/ISO_8601)  
     - **logical**: filename starts with a number or keyword/number combo.   
       - i.e. `01_data_preprocessing.R` *see code directory*  
       - i.e. `CC-101_1_data.csv` *see data directory*  
