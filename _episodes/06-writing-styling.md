@@ -73,7 +73,7 @@ You may need to include static images to your manuscripts. For that, you can use
 
 ### *Adding Formulas*
 
-If you have math formula in your manuscript there are three different ways you may insert one. Let's look for **FIXME7** for an example. Point and click at the insert menu, use the catch-all `⌘ /` keyboard short and then get to inline math mode, or type the formula content between dollar signs `$`. You will notice that the color and font type will change, as Rstudio identifies the block as an inline equation.
+If you have math formula in your manuscript there are three different ways you may insert one. Let's look for (**FIXME7**) for an example. Point and click at the insert menu, use the catch-all `⌘ /` keyboard short and then get to inline math mode, or type the formula content between dollar signs `$`. You will notice that the color and font type will change, as Rstudio identifies the block as an inline equation.
 
 ## Adding Inline Code
 
