@@ -66,7 +66,7 @@ Note that when you hover over the citation, you will preview the full reference 
 > Following the same process described,
 > insert a parenthetical citation to the publication “Welcome to the tidyverse”
 > ([https://doi.org/10.21105/joss.01686](https://doi.org/10.21105/joss.01686))
-> where there is a mention to this package in the data paper (look for insert citation here).
+> where there is a mention to this package in the data paper. Look for: `insert citation here`
 >
 > > ## Solution
 > > ```
