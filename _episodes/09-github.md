@@ -10,6 +10,7 @@ questions:
 objectives:
 - "Authenticate with Github."
 - "Connecting your project to Github."
+- "Make changes locally and push them to Github."
 
 keypoints:
 - Setting up R Studio to authenticate with Github using SSH Keys.
@@ -47,35 +48,52 @@ Click the "New SSH Key" button in Github
 then paste it into the form.
 ![](../fig/09-github-add-new-ssh-key.png)
 
-Now you can authenticate with Github using your SSH keys.  If you want to test this you can do so on the command line with:
+Now you can authenticate with Github using your SSH keys. Test this in the terminal with:
+
 ```
 ssh -T git@github.com
 ```
-
-## Checking and Setting the "Origin" for your repository.
-
-If you forked and cloned the demonstration publication for this workshop as covered in an earlier episode then your copy of the repository should already have the "origin" set.  Once the "origin" is set you should be able to push and pull your changes to and from Github.  When you clone a repository from Github your local copy of the repository should have Github set as the "origin". 
-
-You can check this in Rstudio --> Tools --> Project Options --> Git/SVN
-
-![](../fig/09-rstudio-project-options-git-with-origin.png) 
-
-If the "Origin" field is blank then you'll need to add it from the command line interface.
-You can get the address of your repository from Github by navigating to your repository on Github.com and clicking the green "Code" button.
+## Getting your repository's URL from Github
+You can get the address of your repository from Github by navigating to your repository on Github.com and clicking the green "Code" button.  Make sure to copy the SSH form of the URL.
 
 ![](../fig/09-github-clone.png)
 
-With that address you can complete the command 
+With that address you can complete setting the origin URL in the next step. 
 
+## Checking and Setting the "Origin" for the local copy of yoiur repository.
+
+If you forked and cloned the demonstration publication for this workshop as covered in an earlier episode then your copy of the repository should already have the "origin" set.  Once the "origin" is set properly you should be able to push and pull your changes to and from Github.  When you clone a repository from Github your local copy of the repository should have Github set as the "origin".  When you're using SSH to authenticate with Github you'll need to use the SSH form of your repository's URL as your "Origin"
+
+You can check this in Rstudio --> Tools --> Project Options --> Git/SVN
+
+![](../fig/09-rstudio-project-options-git-with-https-origin.png) 
+
+If the "Origin" field has the HTTPS form of your repository's URL then you'll need to update it from the terminal with command like:
+
+![](../fig/09-git-remote-set-url.png)
+
+```
+git remote set-url origin <paste your repository address here>
+```
+
+Be sure to put **your** Github username in the URL.
+
+After you've updated the Origin URL from the command line go back to R Studio --> Tools --> Project Options --> Git/SVN to verify you have the SSH form of the URL in your "Origin" field.  It should look something like this.
+
+![](../fig/09-rstudio-project-options-git-with-ssh-origin.png) 
+
+
+
+----
+
+If the "Origin" field is blank then you'll need to add it from the terminal with command like this:
 ```
 git remote add origin <paste your repository address here>
 ```
 
-It should looks something like this:
 
-![](../fig/09-git-remote-add.png)
 
-- Push your local changes to your repository up to git.
+## Push your local changes to your repository up to git.
 
 
 {% include links.md %}
