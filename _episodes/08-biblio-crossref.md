@@ -1,5 +1,5 @@
 ---
-title: "Bibliography & Crossreferencing"
+title: "Bibliography & Citations"
 teaching: 25
 exercises: 10
 questions:
