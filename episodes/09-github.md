@@ -86,9 +86,10 @@ After you've updated the Origin URL from the command line go back to R Studio --
 
 ----
 
-If the "Origin" field is blank then you'll need to add it from the terminal with command like this:
+If the "Origin" field is blank then you'll need to add it from the terminal with a couple of terminal commands like this:
 ```
 git remote add origin <paste your repository address here>
+git fetch --set-upstream origin main
 ```
 
 ## Push your local changes up to your repository Github.
