@@ -82,16 +82,7 @@ Inserting citations using Crossref, DataCite or PubMed follows a very similar pr
 
 ## Editing Metadata & Citation Key  
 
-When hovering over this citation example we have just created, you will notice that the Encyclopedia title is missing. This can happen more often than one would like, but there is a way to workaround and to fix that. The easiest way to fix it is to open the reference.bib, locate the item and add the information. In this case, we will treat this item as a part of a book, and include the information below:  
-
-```
-booktitle = {Encyclopedia of Stress},
-```
-{: .output}
-
-When you save the reference.bib file and hover over it you will see that the reference was fixed. Note that the order of presentation of the fields is irrelevant, if included after the citation key and before the closing curly bracket and that the information will be displayed according to the document type.  
-
-We have briefly mentioned that you can also edit the citation key. By default, most citation keys will have the first author last name or the first word of the title (if no authors) followed by the year of publication. You may consider editing the citation key in case you want to simplify the entry and speed up the autocomplete option. If you choose to do so, you can simply click on the key and edit it. That change will be automatically changed in the reference.bib file. Please be advised to use this option with caution, since shortening these keys might make it confusing to identify the correct item you want to cite.  
+Not all citations are perfect shape when in import them. Sometimes we will need to perform some adjustments (e.g., include missing metadata, move content to another metadata field). If needed, we can do so by modifying the .bib file. As briefly mentioned, you can also edit citation keys. By default, most citation keys will have the first author last name or the first word of the title (if no authors), followed by the year of publication. You may consider editing the citation key in case you want to simplify the entry and speed up the autocomplete option. If you choose to do so, you can simply click on the key in the .bib file and edit it. Please be advised to use this option with caution, and to update citations to match the .bib file. 
 
 ## Changing Citation Styles
 
