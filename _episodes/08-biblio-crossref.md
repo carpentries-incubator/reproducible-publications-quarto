@@ -1,4 +1,5 @@
 ---
+source: Rmd  
 title: "Bibliography & Citations"
 teaching: 25
 exercises: 10
