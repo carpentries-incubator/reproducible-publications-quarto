@@ -81,16 +81,13 @@ You can also include `r code` directly in your text. Say you are discussing some
 
 This can be helpful when referring to specific variables on your data. For example, you should include numbers that are derived from the data as code not as numbers. Thus, rather than writing “The CSV file contains choice consistency data for 10.000 simulated participants” (**FIXME8**), replace the static number with a bit of code that, when evaluated, gives you a dynamic number if anything changes on your dataset. Please note that this insertion is not included in the visual editor, so we need to do write an expression, for example:
 
-The CSV file contains choice consistency data for ` `r nrow(bronars_simulation_data.csv)` ` simulated participants.
+The CSV file contains choice consistency data for ``r nrow(bronars_simulation_data.csv)`` simulated participants.
 
-When you knit you might get an error. Any idea why? That is because we need to make sure to import the dataset we are referring to and call it in R Markdown before the inline code can work. Let's follow this process by clicking on the dataset and choose import. You will notice that Rstudio dataset import dialog box gives you a piece of code on the lower-right corner called "code preview". Make sure to copy:
+When you knit you might get an error. Any idea why? That is because we need to make sure to import the dataset we are referring to and call it in R Markdown before the inline code can work. Let's follow this process by including:
 
+``r bronars_simulation_data <- read.csv("../../data/bronars_simulation_data.csv")``
 
-library(readr)
-bronars_simulation_data <- read_csv("data/bronars_simulation_data.csv")
-
-
-Then, close the dialog, click on the `+C` icon in the menu, to enter a R code chunk and copy that code. Time to Knit! If you update your dataset this value will match the number of rows. 
+Time to Knit! If you update your dataset this value will match the number of rows. 
 
 > ## CHALLENGE 6.1 - Adding inline code
 > Suppose we would like to add some information to the sentence we have just adjusted in our manuscript. We would like to include the average for the variable *violation_count* present in the same dataset. Which inline code we would have to add to following sentence?
