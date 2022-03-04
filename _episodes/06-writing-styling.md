@@ -83,10 +83,10 @@ This can be helpful when referring to specific variables on your data. For examp
 
 The CSV file contains choice consistency data for ` `r nrow(bronars_simulation_data.csv)` ` simulated participants.
 
-If you update your dataset this value will be correct. But, remember to check if you are calling the correct dataset.
+When you knit you might get an error. Any idea why? That is because we need to make sure to import the dataset we are calling and select it before the inline code can work. Let's follow this process by clicking on the file and choose import. Alternatively you can use the type in the console `library(readr)
+bronars_simulation_data <- read_csv("data/bronars_simulation_data.csv")` to follow this process, as we can see in the code preview box.
 
-``../../data/bronars_simulation_data.csv``
-
+If you update your dataset this value will match the number of rows. 
 
 > ## CHALLENGE 6.1 - Adding inline code
 > Suppose we would like to add some information to the sentence we have just adjusted in our manuscript. We would like to include the average for the variable *violation_counts* present in the same dataset. Which inline code we would have to add to following sentence?
