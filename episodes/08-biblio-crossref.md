@@ -1,17 +1,15 @@
 ---
-title: "Bibliography & Citations"
+title: "Bibliography & Crossreferencing"
 teaching: 25
 exercises: 10
 questions:
 - "How can you insert citations to your manuscripts using RStudio's visual editor?"
 - "How can you change citation styles?"
 - "What are the options to display cited and uncited bibliography?"
-
 objectives:
 - "Inserting citations and listing bibliography in an R Markdown file."
 - "Changing citation styles."
 - "Customizing how citations and bibliography are displayed."
-
 keypoints:
 - "Rstudio supports different lookups strategies to easy the citation process."
 - "Rstudio supports different citation styles."
