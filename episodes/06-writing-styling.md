@@ -83,8 +83,7 @@ This can be helpful when referring to specific variables on your data. For examp
 
 The CSV file contains choice consistency data for ` `r nrow(bronars_simulation_data.csv)` ` simulated participants.
 
-When you knit you might get an error. Any idea why? That is because we need to make sure to import the dataset we are calling and select it before the inline code can work. Let's follow this process by clicking on the file and choose import. Alternatively you can use the type in the console `library(readr)
-bronars_simulation_data <- read_csv("data/bronars_simulation_data.csv")` to follow this process, as we can see in the code preview box.
+When you knit you might get an error. Any idea why? That is because we need to make sure to import the dataset we are calling and select it before the inline code can work. Let's follow this process by clicking on the file and choose import. Alternatively you can use the type in the console `bronars_simulation_data <- read_csv("data/bronars_simulation_data.csv")` to follow this process, as we can see in the code preview box.
 
 If you update your dataset this value will match the number of rows. 
 
