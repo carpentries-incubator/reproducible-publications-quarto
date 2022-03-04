@@ -14,7 +14,7 @@ objectives:
 
 keypoints:
 - Setting up R Studio to authenticate with Github using SSH Keys.
-- Setting the _Remote_ in your R Studio project enables _pushing_ and _pulling_ from your local copy of the repository to the repository on Github.
+- Setting the Git repository _Origin_ in your R Studio project enables _pushing_ and _pulling_ from your local copy of the repository to the repository on Github.
 ---
 
 In [episode 5](../05-setup-versioning/) we learned about using version control as you write your publication.  In this part of the workshop we'll setup Rstudio to authenticate with Github which is necessary to _push_ your changes to Github.
@@ -91,9 +91,20 @@ If the "Origin" field is blank then you'll need to add it from the terminal with
 git remote add origin <paste your repository address here>
 ```
 
+## Push your local changes up to your repository Github.
+With authentication set up and your local copy of your repository pointing to Github as the "Origin" you should be able to make changes and _push_ them up to Github.  Let's try it and see if it works.
 
+> ## Challenge: Push to Github
+> 
+> 1. Make a change to one of the files in your project or add a new file.
+> 2. In R Studio's Git panel check the box to Stage the changed file.
+> 3. Commit the change to your Git repository.
+> 4. Click the green up arrow to _Push_ you repository changes up to Github.
+> 5. Look on [Github.com](https://github.com) to verify your changes are there.
+> 
+{: .challenge}
 
-## Push your local changes to your repository up to git.
+With the ability to synchronize your changes between Github and your local the next step is explore options for publishing your research paper.
 
 
 {% include links.md %}
