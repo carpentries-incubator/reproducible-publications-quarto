@@ -209,14 +209,14 @@ For example, if we were willing to add a crossreference to a certain "Table 1", 
 
 Let's try that in our paper!
 
-> ## CHALLENGE 8.4: Add a Cross Reference to Figure 2
+> ## CHALLENGE 8.4: Add a Cross Reference to Figure 3
 >
-> Search for or find in the text: "(See Figure 2)" and make this into a cross reference link.
+> Search for or find in the text: 'Figure 3' and make this into a cross reference link.
 >
 > > ## Solution
 > >
 > > ```
-> > \@ref(fig:fig-2)
+> > \@ref(fig:fig-3)
 > > ```
 > >  {: .language-r}
 > > *Note*: adding crossing-referencing re-names the figures, so should take the figure numbering out.
