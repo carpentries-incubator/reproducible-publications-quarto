@@ -1,5 +1,5 @@
 ---
-title: "Bibliography & Cross-Referencing"
+title: "Bibliography & Citations"
 teaching: 25
 exercises: 10
 questions:
@@ -10,7 +10,7 @@ questions:
 objectives:
 - "Inserting citations and listing bibliography in an R Markdown file."
 - "Changing citation styles."
-- "Customizing how citations and bibliography are displayed".
+- "Customizing how citations and bibliography are displayed."
 
 keypoints:
 - "Rstudio supports different lookups strategies to easy the citation process."
