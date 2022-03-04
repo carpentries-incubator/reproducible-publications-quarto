@@ -88,7 +88,7 @@ When you knit you might get an error. Any idea why? That is because we need to m
 If you update your dataset this value will match the number of rows. 
 
 > ## CHALLENGE 6.1 - Adding inline code
-> Suppose we would like to add some information to the sentence we have just adjusted in our manuscript. We would like to include the average for the variable *violation_counts* present in the same dataset. Which inline code we would have to add to following sentence?
+> Suppose we would like to add some information to the sentence we have just adjusted in our manuscript. We would like to include the average for the variable *violation_count* present in the same dataset. Which inline code we would have to add to following sentence?
 > 
 > The CSV file contains choice consistency data for ` `r nrow(bronars_simulation_data.csv)` ` simulated participants, that have been used to determine the power of our food-choice task design to detect choice consistency violations, which averaged ` `enter inline code here` `. 
 > What inline code would you enter? What number would replace the inline code?
@@ -96,7 +96,7 @@ If you update your dataset this value will match the number of rows.
 > Tip: we will need to use a `dataset$variable` syntax!
 > 
 >> ## Solution:
->> ` `r mean(bronars_simulation_data$violation_counts)` `
+>> ` `r mean(bronars_simulation_data$violation_count)` `
 >> 5.3924
 > {: .solution}
 {: .challenge}
