@@ -94,7 +94,7 @@ If you update your dataset this value will be correct. But, remember to check if
 > The CSV file contains choice consistency data for ` `r nrow(bronars_simulation_data.csv)` ` simulated participants, that have been used to determine the power of our food-choice task design to detect choice consistency violations, which averaged ` `enter inline code here` `. 
 > What inline code would you enter? What number would replace the inline code?
 > 
-> Tip: we will need to use a `dataset$variable syntax`!
+> Tip: we will need to use a `dataset$variable` syntax!
 > 
 >> ## Solution:
 >> ` `r mean(bronars_simulation_data$violation_counts)` `
