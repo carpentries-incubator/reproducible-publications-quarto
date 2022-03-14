@@ -152,10 +152,9 @@ our workflow gets a bit more complex, we add a "pull" and "push" step at the beg
 
 `Pull > add > commit > push`
 
-
-**Pull:** *download* the most recent version of the repository *from* GitHub  
+**Pull:** *download* the most recent version of the repository *from* GitHub *to* your local computer.
  
-**Push:** *upload* the most recent version of the repository *to* GitHub
+**Push:** *upload* the most recent version of the repository *to* GitHub *from* your local computer.
 
 Put a pin in pulling and pushing for now. For the time being as we edit our paper we will just stick to adding and commiting. At the end we'll see how to use push to GitHub, and you can experiment with pulling later on. 
 
