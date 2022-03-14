@@ -141,7 +141,7 @@ But what do those words even mean?
 
 You may have a few to many commits in a single work session. 
 
-When you commit, you add a "commit message" aka a short line of text (recommended 50 characters or lestt) that describes the changes that were made to the file(s) you added. This helps keep your versions organized and makes it easier to go back to remember what you did or to restore your work to exactly the version needed if you make a mistake or want to implement a change.
+When you commit, you add a "commit message" aka a short line of text (recommended 50 characters or less) that describes the changes that were made to the file(s) you added. This helps keep your versions organized and makes it easier to go back to remember what you did or to restore your work to exactly the version needed if you make a mistake or want to implement a change.
 
 ![git add commit workflow](../fig/05-git-add-commit.svg)
 
@@ -208,7 +208,7 @@ This pull, add, commit, push routine will become second nature. Pulling at the b
 
 ## Your first edit
 
-The first edit we will make is to the yaml file of our `DataPaper-ReproducibilityWorkshop.rmd' file so we can practice this process.
+Now, let's open up the report in this repository that's already been drafted. The R Markdown document for the report is located in `report/source`. It is called: `DataPaper-ReproducibilityWorkshop.rmd` The first edit we will make is to the yaml file of this draft report so we can practice using version control.
 
 In the title add "(Carpentry Workshop Version)" and make sure to save. 
 

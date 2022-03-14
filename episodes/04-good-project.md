@@ -1,7 +1,7 @@
 ---
 source: Rmd  
 title: "Good Practices for Managing Projects in RStudio"  
-teaching: 20
+teaching: 30
 exercises: 10
 questions:
 - What are good research project management practices?

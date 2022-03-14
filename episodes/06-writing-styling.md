@@ -17,12 +17,12 @@ objectives:
 keypoints:
 - "The visual editor has made formatting much easier."
 - "You can apply rmd styling without prior R Markdown knowledge."
-- "You can include inline code to narratives for basic calculations."
+- "You can include inline code to narratives for basic calculations and dynamic information."
 ---
 
 ## Formatting Rmd Documents with the Visual Editor
 
-As we mentioned earlier, the visual editor in RStudio has made R Markdown formatting much more effortless. It provides improved productivity for composing longer-form articles and analyses with R Markdown. The visual markdown editing is available in RStudio v1.4 or higher. Markdown documents can be edited in either source or visual mode. To switch into visual mode for a given document, toggle on the compass icon at the top-right of the document toolbar (alternatively for windows, the ⌘⇧ F4 keyboard shortcut). This will prompt a formatting bar through which you can apply styling, add links, create tables, and others similar to functions you find in google docs and other document editors. Note that you can switch between source and visual mode at any time (editing location and undo/redo state will be preserved when you switch). Let’s try it! Feel free to follow along or just watch this quick demo. But first, make sure to have your visual editor enabled on your screen. 
+As we mentioned earlier, the visual editor in RStudio has made R Markdown formatting much more effortless. It provides improved productivity for composing longer-form articles and analyses with R Markdown. The visual markdown editing is available in RStudio v1.4 or higher. Markdown documents can be edited in either source or visual mode. To switch into visual mode for a given document, toggle on the compass icon at the top-right of the document toolbar (alternatively for windows, the ⌘⇧ F4 keyboard shortcut). This will prompt a formatting bar through which you can apply styling, add links, create tables, and others similar to functions you find in google docs and other document editors. Note that you can switch between source and visual mode at any time (editing location and undo/redo state will be preserved when you switch). Let’s try it! Feel free to follow along or just watch this quick demo. But first, make sure to have your visual editor enabled on your screen. Also, make sure to open your `DataPaper-ReproducibilityWorkshop.Rmd` file located at the `report\source` folder
 
 ### Editor Toolbar
 
@@ -79,25 +79,26 @@ If you have math formula in your manuscript there are three different ways you m
 
 You can also include `r code` directly in your text. Say you are discussing some of the summary statistics in your manuscript, R Markdown makes this possible through HTML/LaTeX inline code which allows you to calculate simple expressions integrated to your narrative. Inline code enables you to insert `r code` into your document to dynamically updated portions of your text. In other words, if your data set changes for any reason the code will automatically update the calculation specified. 
 
-This can be helpful when referring to specific variables on your data. For example, you should include numbers that are derived from the data as code not as numbers. Thus, rather than writing “The CSV file contains choice consistency data for 10.000 simulated participants” (**FIXME8**), insert a bit of code that, when evaluated, gives the number of individuals. Please note that this insertion is not included in the visual editor, so we need to do write an expression, for example:
+This can be helpful when referring to specific variables on your data. For example, you should include numbers that are derived from the data as code not as numbers. Thus, rather than writing “The CSV file contains choice consistency data for 10.000 simulated participants” (**FIXME8**), replace the static number with a bit of code that, when evaluated, gives you a dynamic number if anything changes on your dataset. Please note that this insertion is not included in the visual editor, so we need to do write an expression, for example:
 
-The CSV file contains choice consistency data for ` `r nrow(bronars_simulation_data.csv)` ` simulated participants.
+The CSV file contains choice consistency data for ``r nrow(bronars_simulation_data.csv)`` simulated participants.
 
-If you update your dataset this value will be correct. But, remember to check if you are calling the correct dataset.
+When you knit you might get an error. Any idea why? That is because we need to make sure to import the dataset we are referring to and call it in R Markdown before the inline code can work. Let's follow this process by including:
 
-``../../data/bronars_simulation_data.csv``
+``r bronars_simulation_data <- read.csv("../../data/bronars_simulation_data.csv")``
 
+Time to Knit! If you update your dataset this value will match the number of rows. 
 
 > ## CHALLENGE 6.1 - Adding inline code
-> Suppose we would like to add some information to the sentence we have just adjusted in our manuscript. We would like to include the average for the variable *violation_counts* present in the same dataset. Which inline code we would have to add to following sentence?
+> Suppose we would like to add some information to the sentence we have just adjusted in our manuscript. We would like to include the average for the variable *violation_count* present in the same dataset. Which inline code we would have to add to following sentence?
 > 
 > The CSV file contains choice consistency data for ` `r nrow(bronars_simulation_data.csv)` ` simulated participants, that have been used to determine the power of our food-choice task design to detect choice consistency violations, which averaged ` `enter inline code here` `. 
 > What inline code would you enter? What number would replace the inline code?
 > 
-> Tip: we will need to use a `dataset$variable syntax`!
+> Tip: we will need to use a `dataset$variable` syntax!
 > 
 >> ## Solution:
->> ` `r mean(bronars_simulation_data$violation_counts)` `
+>> ` `r mean(bronars_simulation_data$violation_count)` `
 >> 5.3924
 > {: .solution}
 {: .challenge}

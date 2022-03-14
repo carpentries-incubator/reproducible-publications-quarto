@@ -1,7 +1,7 @@
 ---
 source: Rmd  
 title: "Adding Code-Generated Plots and Figures"  
-teaching: 40
+teaching: 50
 exercises: 20
 questions:
 - "What is Knitr?"
