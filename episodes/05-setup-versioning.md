@@ -166,6 +166,25 @@ Put a pin in pulling and pushing for now. For the time being as we edit our pape
 
 This pull, add, commit, push routine will become second nature. Pulling at the beginning and pushing at the end of your work session becomes a sort of ritual that marks the beginning and end of your work session. 
 
+## Your first edit
+
+Now, let's open up the report in this repository that's already been drafted. The R Markdown document for the report is located in `report/source`. It is called: `DataPaper-ReproducibilityWorkshop.rmd` The first edit we will make is to the yaml file of this draft report so we can practice using version control.
+
+In the title add "(Carpentry Workshop Version)" and make sure to save. 
+
+![first edit](../fig/05-first-edit.PNG)
+
+Now, in the Environment panel, toggle to the Git tab. You'll see the file that was edited with a check mark next to it. Click the check mark to "add" . Note that if you edited more than one file you could choose any or all of the documents to "add". 
+
+![git panel add](../fig/05-Git-panel-add.PNG)
+
+Now, click commit. A dialogue box will pop up. You'll need to add a commit message to proceed. Add something about editing the title. The difference between your files will show in the bottom panel. 
+
+![commit in RStudio](../fig/05-rstudio-commit.PNG)
+
+Hit commit and a dialogue box will show a completed commit.
+
+You made your first commit!
 
 > ## Tip: add files that don’t need to be tracked to the .gitignore
 > Such as data files, outputs, references (you want to save those, but you 
@@ -204,28 +223,6 @@ This pull, add, commit, push routine will become second nature. Pulling at the b
 > > ![.gitignore in git pane](../fig/05-gitignore-git-pane.PNG)
 > {: .solution}
 {: .challenge}
-
-
-## Your first edit
-
-Now, let's open up the report in this repository that's already been drafted. The R Markdown document for the report is located in `report/source`. It is called: `DataPaper-ReproducibilityWorkshop.rmd` The first edit we will make is to the yaml file of this draft report so we can practice using version control.
-
-In the title add "(Carpentry Workshop Version)" and make sure to save. 
-
-![first edit](../fig/05-first-edit.PNG)
-
-Now, in the Environment panel, toggle to the Git tab. You'll see the file that was edited with a check mark next to it. Click the check mark to "add" . Note that if you edited more than one file you could choose any or all of the documents to "add". 
-
-![git panel add](../fig/05-Git-panel-add.PNG)
-
-Now, click commit. A dialogue box will pop up. You'll need to add a commit message to proceed. Add something about editing the title. The difference between your files will show in the bottom panel. 
-
-![commit in RStudio](../fig/05-rstudio-commit.PNG)
-
-Hit commit and a dialogue box will show a completed commit.
-
-You made your first commit!
-
 
 
 
