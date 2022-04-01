@@ -23,36 +23,16 @@ Terminology:  Git _Push_ and _Pull_
 
 Definition: The process of syncronizing your local git repository with your git repository on Github (or other Git server).
 
-Github used to allow simple Username & Password authentication but now Github requires a more secure method of authentication.  For this workshop we'll be using the SSH Key method.  If you've used SSH authentication before with some other program or service you can likely use your existing keys.  If you do not yet have a pair of SSH keys you can create them using RStudio.
-
-
-
-1. Check for your local SSH keys.  Tools --> Global Options --> Git/SVN.  
-1. If your "SSH RSA key" field is blank then you do not yet have SSH Keys and you should generate keys by clicking the "create RSA key" button. ![](../fig/09-rstudio-global-options-git-no-ssh-keys.png)  ![](../fig/09-rstudio-create-rsa-key-button.png)
-Set your passphrase and don't forget it.  Store your passphrase in your password manager. 
-![](../fig/09-rstudio-create-rsa-key-set-passphrase.png) 
-![](../fig/09-rstudio-create-rsa-key-result.png)
-
-Click "View Public Key" in RStudio --> Tools --> Global Options --> Git/SVN and copy the public key cypher text.
-![](../fig/09-rstudio-global-options-git-with-ssh-keys.png)
-
-![](../fig/09-rstudio-public-key-display.png)
-
-Now that you have a public key you need to add it to your account on Github.
+Github used to allow simple Username & Password authentication but now Github requires a more secure method of authentication.  For this workshop we'll be using the Personal Access Token method.  The Personal Access Token (PAT) must be created for your account on github.
 
 1. Login to your Github account with your web browser. [https://github.com](https://github.com)
-1. If you have not yet added your Public SSH key to your Github account in "[Setting --> SSH and GPG keys](https://github.com/settings/keys)" do so.  <br><br>
+1. On Github.com go to your account setting -> Developer Settings -> Personal access tokens or this link: [https://github.com/settings/tokens](https://github.com/settings/tokens)
+1. Any tokens you have created in the past will be listed there and you can click "Generate new token" button.  Set an expiration date for your new token and a scope.  For this workshop the "Repo" scope should be sufficient.  Then Generate your new Token with the button at the bottom of the page.
 
-Click the "New SSH Key" button in Github 
-![](../fig/09-github-add-new-ssh-key-button.png)
-then paste it into the form.
-![](../fig/09-github-add-new-ssh-key.png)
+![](../fig/09-github-new-PAT-options.png)
+1. The next screen github shows you the new token.  **Be sure to copy it** as you only get one chance to see the token text.
 
-Now you can authenticate with Github using your SSH keys. Test this in the terminal with:
-
-```
-ssh -T git@github.com
-```
+[FIXME] If you cloned the repo from Github already in Episode 5 next step is not necessary.
 ## Getting your repository's URL from Github
 You can get the address of your repository from Github by navigating to your repository on Github.com and clicking the green "Code" button.  Make sure to copy the SSH form of the URL.
 
