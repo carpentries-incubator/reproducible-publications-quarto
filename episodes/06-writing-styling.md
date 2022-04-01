@@ -75,47 +75,6 @@ You may need to include static images to your manuscripts. For that, you can use
 
 If you have math formula in your manuscript there are three different ways you may insert one. Let's look for (**FIXME7**) for an example. Point and click at the insert menu, use the catch-all `⌘ /` keyboard short and then get to inline math mode, or type the formula content between dollar signs `$`. You will notice that the color and font type will change, as Rstudio identifies the block as an inline equation.
 
-## Adding Inline Code
-
-You can also include `r code` directly in your text. Say you are discussing some of the summary statistics in your manuscript, R Markdown makes this possible through HTML/LaTeX inline code which allows you to calculate simple expressions integrated to your narrative. Inline code enables you to insert `r code` into your document to dynamically updated portions of your text. In other words, if your data set changes for any reason the code will automatically update the calculation specified. 
-
-This can be helpful when referring to specific variables on your data. For example, you should include numbers that are derived from the data as code not as numbers. Thus, rather than writing “The CSV file contains choice consistency data for 10.000 simulated participants” (**FIXME8**), replace the static number with a bit of code that, when evaluated, gives you a dynamic number if anything changes on your dataset. Please note that this insertion is not included in the visual editor, so we need to do write an expression, for example:
-
-The CSV file contains choice consistency data for ``r nrow(bronars_simulation_data.csv)`` simulated participants.
-
-When you knit you might get an error. Any idea why? That is because we need to make sure to import the dataset we are referring to and call it in R Markdown before the inline code can work. Let's follow this process by including:
-
-``r bronars_simulation_data <- read.csv("../../data/bronars_simulation_data.csv")``
-
-Time to Knit! If you update your dataset this value will match the number of rows. 
-
-> ## CHALLENGE 6.1 - Adding inline code
-> Suppose we would like to add some information to the sentence we have just adjusted in our manuscript. We would like to include the average for the variable *violation_count* present in the same dataset. Which inline code we would have to add to following sentence?
-> 
-> The CSV file contains choice consistency data for ` `r nrow(bronars_simulation_data.csv)` ` simulated participants, that have been used to determine the power of our food-choice task design to detect choice consistency violations, which averaged ` `enter inline code here` `. 
-> What inline code would you enter? What number would replace the inline code?
-> 
-> Tip: we will need to use a `dataset$variable` syntax!
-> 
->> ## Solution:
->> ` `r mean(bronars_simulation_data$violation_count)` `
->> 5.3924
-> {: .solution}
-{: .challenge}
-
-
-> ## Important Note:
-> Make sure the file you are calling is in the right subdirectory and your working directory is set appropriately.
->
-{: .callout}
-
-
-> ## More on inline codes:
-> R Markdown will always display the results of inline code, but not the code. Inline expressions do not take knitr options.
->
-{: .callout}
-
-
 ## Keyboard Shortcuts
 As you become a more regular Rstudio user, you may also consider using some keyboard shortcuts for all basic editing tasks. Visual mode supports both traditional keyboard shortcuts (e.g. `⌘ B` for bold) as well as markdown shortcuts (using markdown syntax directly). For example, enclose **bold** text in asterisks or type ## and press space to create a second level heading. Here are some of the most commonly used shortcuts for Mac users:
 
