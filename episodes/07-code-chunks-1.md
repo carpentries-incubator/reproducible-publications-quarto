@@ -62,11 +62,15 @@ First, though, let's open a new `.rmd` document to get a look at how code chunks
 
 Again, open a new document by navigating to `File > New File > R Markdown`. Add the title `Code-Chunk-Test`. 
 
-Let's first delete the generic text because we don't need it at this point (all except the first code chunk that is - we'll get back to that in a second). We’ll start a new code chunk by typing our our starting backticks & r between curly brackets. (in your own workflow you may want to add the ending three backticks as well so you don’t forget after adding your code - it's a common mistake):
+Let's first delete the generic text because we don't need it at this point (all except the first code chunk that is - we'll get back to that in a second).
+
+FIXME - add fig of new document with just the setup code chunk
+
+ We’ll start a new code chunk by typing our our starting backticks & r between curly brackets. (in your own workflow you may want to add the ending three backticks as well so you don’t forget after adding your code - it's a common mistake):
 
 Now, let's open our `03_HR_analysis.R` script in our `code` folder. Copy the code and paste it in between the two lines with backticks and `{r}` in our `DataPaper-ReproducibilityWorkshop.rmd` file.
 
-![heartrate code in chunk](../fig/07-heartrate-code.PNG)
+FIXME update screenshot to display in new document ![heartrate code in chunk](../fig/07-heartrate-code.PNG)
 
 > ## Tip:
 > There's actually a button you can use in the RStudio menu to generate the code chunks automatically. Automatic code chunk generation is available for several other languages as well. Also, you can use the keyboard shortcut `ctrl`+`alt`+`I` for Windows and `command`+`option`+`I` for Mac. 
@@ -103,23 +107,12 @@ Go to previous chunk/title	| Ctrl+PgUp |	Command+PgUp
 > Use one of the above options to run your code. 
 {: .checklist}
 
-![heart rate code path error](../fig/07-HR-code-path-error.PNG)
+Wait... what's all that output in our document? We don't want that in our paper! 
 
-Hmmmm... we got an error while trying to run our code. That's because our code contains a relative path to read in the data file, but now we're running the code from the rmd document which is in a different directory so we will need to update the file path.
-
-Update the file path from: `"output/data/preprocessed-GARP-TSST-data.csv"` to `"../../output/data/preprocessed-GARP-TSST-data.csv"`
-
-![code heart rate updated file path](../fig/07-HR-code-fixed-path.PNG)
-
-> ## Time to Knit!
-> Let's try that again 
-{: .checklist}
-
-Ooof! That output doesn't look great.. we've got a bit more work to do.
-
+FIXME - update screenshot
 ![Heart rate code no options for code chunk](../fig/07-HR-output-no-options.PNG)
 
-let's see about fixing that with code chunk rendering options. 
+This happens because the output from running code (messages, results, warnings, etc.) get's added to the R Markdown document instead of being printed to the console. Let's see about adjusting the output to make it look better with code chunk rendering options. 
 
 ## Code Chunk Options, Names and Captions (oh my!)
 
