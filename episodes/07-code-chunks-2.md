@@ -135,37 +135,6 @@ Ok, now that we've done that we'll have to go back and fix the Figure 3 code and
 
 Now, we can have some more fun with global options:
 
-### Global Code Chunk Options:
-
-With our plots we set the options for each chunk individually. However, we may end up with quite a few code chunks in our paper and it might be a lot of work to keep track of what options we’re using throughout the paper. We can automate setting options by adding a special code chunk at the beginning of the document. Then, each code chunk we add will refer to those “global” options when it runs.
-
-To set global options that apply to every chunk in your file, we will call `knitr::opts_chunk$set()` in a new code chunk right after our yaml header (name the new code chunk `setup`.
-
-Knitr will treat each option that we add to this call as default settings for all code chunks. However, we will need to set the options for this code chunk in the first place! so we’ll use the options from our first code chunk. In the `()` after the `knitr::opts_chunk$set()` add the options:
-
-`knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, results = FALSE)`
-
-Alright! That takes care of Fig 4 as well as Fig 3. Now we could go back and remove the options we set in the individual code chunks since we’ve set the global options in the document instead (however, if we left them it would render just the same.)
-
-> ## Time to Knit!
-> Again, let's make sure our global options look right by knitting.
-{: .checklist}
-
-> ## Tip: Overiding global options  
-> What if you want most of your code chunks to render with the same options (i.e. echo = FALSE), but you just have one or two chunks that you want to tweak the options on (i.e. display code with echo = TRUE)? Good news! The global options can be overwritten on a case by case basis in each individual code chunk.
-{: .callout}
-
-> ## CHALLENGE 9.5 (optional) global & individual code chunk options  
->
-> How would appear in our html document if we knit a code chunk with the following options?  
-> `{r challenge-5, warning = TRUE, echo = TRUE}`
->
-> ...considering the global chunk settings were as listed: 
-> `knitr::opts_chunk$set(echo = FALSE, include = FALSE)`  
->> ## SOLUTION  
->> In this case, the global settings are set so neither the code nor the output will display. However, the individual chunk reverses the echo setting so the code will display, and it also indicates that any warnings the code renders should output too. The outputs of the code would still not be displayed (include = FALSE) The hypothetical situation for this configuration may be for debugging while writing the rmd document.   
-> {: .solution}  
-{: .challenge}
 
 Before we lose track of where we were with editing up our second code chunk, let's finish it up by going back and adding a caption and name:
 
