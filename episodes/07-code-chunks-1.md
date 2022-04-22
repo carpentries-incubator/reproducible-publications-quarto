@@ -56,10 +56,13 @@ Other than our backticks ``` for code chunks that surround the code top and bott
 
 ## Add a Code Chunk
 
-Ok, let's add some code! There are already some plots included in our code but as 
-static images. This time, we are going to opt to add these plots as code chunks - 
-which are also more reproducible and easier to update. This is because, as with our inline code, this assures that if there are any changes to the data, the plots update automatically. This also makes our life easier because when there’s a change we don’t have to re-generate plots, save them as images and then add them back in to our paper. This will potentially help prevent version errors as well! So we’re actually going to go ahead and add a few plots with code chunks.
-We’ll start by typing our our starting backticks & r between curly brackets. (in your own workflow you may want to add the ending three backticks as well so you don’t forget after adding your code - it's a common mistake):
+Ok, let's add some code! There are already some plots included in our code but as static images. This time, we are going to opt to add these plots as code chunks - which are also more reproducible and easier to update. This is because, as with our inline code, this assures that if there are any changes to the data, the plots update automatically. This also makes our life easier because when there’s a change we don’t have to re-generate plots, save them as images and then add them back in to our paper. This will potentially help prevent version errors as well! So we’re actually going to go ahead and add a few plots with code chunks.
+
+First, though, let's open a new `.rmd` document to get a look at how code chunks work before integrating them into our paper. 
+
+Again, open a new document by navigating to `File > New File > R Markdown`. Add the title `Code-Chunk-Test`. 
+
+Let's first delete the generic text because we don't need it at this point (all except the first code chunk that is - we'll get back to that in a second). We’ll start a new code chunk by typing our our starting backticks & r between curly brackets. (in your own workflow you may want to add the ending three backticks as well so you don’t forget after adding your code - it's a common mistake):
 
 Now, let's open our `03_HR_analysis.R` script in our `code` folder. Copy the code and paste it in between the two lines with backticks and `{r}` in our `DataPaper-ReproducibilityWorkshop.rmd` file.
 
