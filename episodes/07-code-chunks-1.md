@@ -114,11 +114,11 @@ FIXME - update screenshot
 
 This happens because the output from running code (messages, results, warnings, etc.) get's added to the R Markdown document instead of being printed to the console. Let's see about adjusting the output to make it look better with code chunk rendering options. 
 
-## Code Chunk Options, Names and Captions (oh my!)
+## Code Chunk Naming and Options
 
 ### Name Your Code Chunk
 
-While not necessary for running your code, it is good practice is to give a name to each code chunk and allows for more advanced options (such as cross-referencing) to work with your rmd files later on:
+Before we get to fixing how our code output looks, let's make sure to give our code chunk a name. While not necessary for running your code, it is good practice is to give a name to each code chunk because it gives the chunk a unique identifier which allows for more advanced options (such as cross-referencing) to work with your rmd files later on:
 
 `{r chunk-name}`
 
@@ -149,13 +149,18 @@ The chunk name is the only value other than r in the code chunk options that doe
 the option always follows the code chunk label (don't forget to add a `,` after the label either). 
 
 
-#### Some common options: 
+#### Common text output & code evaluation options: 
 
-**results** = (logical or character) text output of the code can be hidden (hide or FALSE), or delineated in a certain way (default 'markup').    
-**eval** = (logical or numeric) TRUE/FALSE to evaluate (or not) or a numeric value like c(1,3) (only evaluate expressions 1 and 3).    
-**echo** =  (logical or numeric - following the same rules as above) whether to display source code or not.     
-**warning** = (logical) whether to display the warnings in the output (default TRUE). FALSE will output warnings to the console only.    
-**include** = (logical) whether to include the chunk output in the output document (default TRUE).   
+##### Code evaluation option
+
+**include** = (logical) whether to include the chunk output in the output document (default TRUE).
+
+##### Text output options
+
+**eval** = (logical or numeric) TRUE/FALSE to evaluate (or not) or a numeric value like c(1,3) (only evaluate expressions 1 and 3). 
+**echo** =  (logical or numeric - following the same rules as above) whether to display source code or not.  
+**results** = (logical or character) text output of the code can be hidden (hide or FALSE), or delineated in a certain way (default 'markup').       
+**warning** = (logical) whether to display the warnings in the output (default TRUE). FALSE will output warnings to the console only.       
 **message** = (logical) whether or not to display messages that appear when running the code (default TRUE).
  
  
@@ -182,9 +187,9 @@ the option always follows the code chunk label (don't forget to add a `,` after 
 > {: .solution}
 {: .challenge}
 
-### Caption your figure output from code chunks:
+### Caption your code chunk output:
 
-Again, this is an optional feature, but if you need (or want) to add captions to your publication, it is straightforward to do in code chunks. 
+The options we just looked at focus on code evaluation and text output. However, we have another set of options that deal with how plot or figure outputs look at act. Many of the options start with `fig.`. The one we will use today allows us to add a caption to our figure. Again, this is an optional feature, but if you need (or want) to add captions to your publication, it is straightforward to do in code chunks. 
 
 The caption information also resides between your brackets at the beginning of the chunk: `{r}`
 
@@ -210,7 +215,17 @@ Let's knit one more time to see if our figure outputs how we'd like and has a ca
 > Let's try that again 
 {: .checklist}
 
-Now that we’ve named and adjusted the rendering for our first figure, let’s add another, but instead of copy/pasting an r script into our rmd document we will use a more elegant solution. 
+
+ADD Global options here
+
+Now we’ve learned how to create a code chunk and learned about options for adjusting how that code renders in our output document. However, let's direct our attention back to the first code chunk in this document that I asked you not to delete. 
+
+The code looks like: 
+
+
+
+
+
 
 
 
