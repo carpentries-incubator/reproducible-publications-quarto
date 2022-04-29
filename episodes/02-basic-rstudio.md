@@ -12,8 +12,8 @@ objectives:
 - Learn about the structure of a Rmarkdown file.
 - Understand the workflow of an R Markdown file.
 keypoints:
-- RStudio has 4 panes to organize your code and environment.
-- Install packages in RStudio using the `install.packages()` function.
+- RStudio has four panes to organize your code and environment.
+- Manage packages in RStudio using specific functions.
 - R Markdown documents combine text and code.
 ---
 
@@ -56,11 +56,11 @@ package written by someone else. As of this writing, there are over 10,000
 packages available on CRAN (the comprehensive R archive network). R and RStudio 
 have functionality for managing packages:
 
--   You can install packages by typing `install.packages("packagename")`, where `packagename` is the package name, in quotes.
--   You can see what packages are installed by typing `installed.packages()`
--   You can update installed packages by typing `update.packages()`
--   You can remove a package with `remove.packages("packagename")`
--   You can make a package available for use with `library(packagename)`
+-   You can *install packages* by typing `install.packages("packagename")`, where `packagename` is the package name, in quotes.
+-   You can *see what packages* are installed by typing `installed.packages()`
+-   You can *update installed packages* by typing `update.packages()`
+-   You can *remove a package* with `remove.packages("packagename")`
+-   You can *make a package available* for use with `library(packagename)`
 
 Packages can also be viewed, loaded, and detached in the Packages tab of the 
 lower right panel in RStudio. Clicking on this tab will display all of installed 
@@ -70,7 +70,7 @@ Click an empty box to load that package and click a checked box to detach that
 package.
 
 Packages can be installed and updated from the Package tab with the *Install* and 
-*Update* buttons at the top of the tab. We have asked you to install seven packages prior to the workshop following the setup instructions using the `install.packages()` command. Let's now make sure you have all of them good to go.
+*Update* buttons at the top of the tab. We have asked you to install seven packages prior to the workshop following the [setup instructions](https://github.com/UCSBCarpentry/Reproducible-Publications-with-RStudio/blob/main/setup.md) using the `install.packages()` command. Let's now make sure you have all of them good to go.
 
 > ## CHALLENGE 2.1 - Checking for Installed Packages
 > Which command would you use to check for packages ready for use?
