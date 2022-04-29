@@ -69,8 +69,8 @@ checked, the package is loaded and if it is empty, the package is not loaded.
 Click an empty box to load that package and click a checked box to detach that 
 package.
 
-Packages can be installed and updated from the Package tab with the Install and 
-Update buttons at the top of the tab. We asked you to install seven packages following the setup instructions using the `install.packages()` command. Let's now make sure you have all of them good to go.
+Packages can be installed and updated from the Package tab with the *Install* and 
+*Update* buttons at the top of the tab. We have asked you to install seven packages prior to the workshop following the setup instructions using the `install.packages()` command. Let's now make sure you have all of them good to go.
 
 > ## CHALLENGE 2.1 - Checking for Installed Packages
 > Which command would you use to check for packages ready for use?
