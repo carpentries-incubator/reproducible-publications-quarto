@@ -143,7 +143,7 @@ Let’s try!
 > 1) First, you would go to the [CRAN page for Bookdown](https://cran.r-project.org/web/packages/bookdown/citation.html), click on citation info link and copy the corresponding BibTeX entry. 
 > 2) Paste the bibtex to the "references.bib" file inside the "report/source and adjust the key as you wish.
 > 
->  We have pre-saved the bibtex for Bookdown for you and chose the most recent option available (the manual). Now that you have the citation info and you know the that key for the package is @@bookdown2022, how would you go about to add this bibliography as a no-cite?
+>  We have pre-saved the bibtex for Bookdown for you and chose the most recent option available (the manual). Now that you have the citation info and you know the that key for the package is @bookdown2022, how would you go about to add this bibliography as a no-cite?
 > 
 > > ## Solution
 > >
