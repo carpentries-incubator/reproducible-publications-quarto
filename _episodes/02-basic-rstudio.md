@@ -101,7 +101,7 @@ Start a new R Markdown document in RStudio by clicking File \> New File \> R Mar
 ![Opening a new R Markdown document](../fig/02-file-navigation-rmd.PNG)
 
 > ## Tip: Bonus! Note about R Notebooks: 
-You mat have noticed that the menu offers the option to create an R Notebook, which is essentially an interactive execution mode for R Markdown documents. Technically, R Markdown is a file, whereas R Notebook is a way to work with R Markdown files. R Notebooks do not have their own file format, they all use `.Rmd`. All R Notebooks can be 'knitted' to R Markdown outputs, and all R Markdown documents can be interfaced as a Notebook.
+You may have noticed that the menu offers the option to create an R Notebook, which is essentially an interactive execution mode for R Markdown documents. Technically, R Markdown is a file, whereas R Notebook is a way to work with R Markdown files. R Notebooks do not have their own file format, they all use `.Rmd`. All R Notebooks can be 'knitted' to R Markdown outputs, and all R Markdown documents can be interfaced as a Notebook.
 {: .callout}
 
 If this is the first time you have ever opened an R Markdown file a dialog box 
