@@ -56,8 +56,8 @@ package written by someone else. As of this writing, there are over 10,000
 packages available on CRAN (the comprehensive R archive network). R and RStudio 
 have functionality for managing packages:
 
--   You can see what packages are installed by typing `installed.packages()`
 -   You can install packages by typing `install.packages("packagename")`, where `packagename` is the package name, in quotes.
+-   You can see what packages are installed by typing `installed.packages()`
 -   You can update installed packages by typing `update.packages()`
 -   You can remove a package with `remove.packages("packagename")`
 -   You can make a package available for use with `library(packagename)`
@@ -70,26 +70,12 @@ Click an empty box to load that package and click a checked box to detach that
 package.
 
 Packages can be installed and updated from the Package tab with the Install and 
-Update buttons at the top of the tab.
+Update buttons at the top of the tab. We asked you to install seven packages following the setup instructions using the `install.packages()` command. Let's now make sure you have all of them good to go.
 
-> ## CHALLENGE 2.1 - Installing Packages
->
-> Install the following packages: `bookdown`, `tidyverse`, `knitr`, `rticles`,`BayesFactor`, `patchwork` , `rprojroot`    
->> ## SOLUTION 
->> We can use the `install.packages()` command to install the required packages:
->> ~~~ 
->> install.packages("bookdown")
->> install.packages("tidyverse") 
->> install.packages("knitr") 
->> install.packages("rticles")  
->> install.packages("BayesFactor") 
->> install.packages("patchwork") 
->> install.packages("rprojroot") 
+> ## CHALLENGE 2.1 - Checking for Installed Packages
+> Which command would you use to check for packages ready for use?
 >> ~~~
->> An alternate solution, to install multiple packages with a single 
->> `install.packages()` command is: 
->> ~~~
->> install.packages(c("bookdown", "tidyverse", "knitr", "rticles", "BayesFactor", "patchwork", "rprojroot"))
+>> To see what packages are installed, use the `installed. packages() command`. This will return a matrix with a row for each package that has been installed.
 >> ~~~
 > {: .solution} 
 {: .challenge}
