@@ -100,7 +100,27 @@ A published article is like the top of a pyramid, meaning that a reproducible pa
 
 ## Advantages of using RStudio for your project
 
-RStudio is an integrated development environment (IDE) for R. It includes a console, syntax-highlighting editor that supports direct code execution, as well as tools for plotting, history, debugging, collaboration, and workspace management.
+RStudio is an integrated development environment (IDE) for R and Python. It includes a console, syntax-highlighting editor that supports direct code execution, as well as tools for plotting, history, debugging, collaboration, and workspace management. It is a powerful tool which supports research by weaving the principles of reproducibility throughout the entire research lifecycle, from data gathering to the statistical analysis, presentation and publication of results. 
+
+### It is free and open-source
+
+Reproducibility becomes more difficult and opaque when results rely on proprietary software. Unless research code is open sourced, reproducing results on different software/hardware configurations is impossible. Rstudio is dedicated to sustainable investment in free and open-source software for data science. 
+
+### It is designed to make it easy to write and reuse code
+
+As soon as you create a new script, the windows within your RStudio session adjust automatically so you can see both your script and the results in your console when you run your syntax. It also offers the ability to call up potential syntax options while you are writing just by using the tab key.
+
+### Makes it convenient to view and interact with the objects stored in your environment
+
+RStudio has a very useful “Environment” window available which shows all of the objects that you have stored, including data; scalars, vectors, and matrices; model outputs; etc., along with a summary of the information that is stored in those objects.
+
+### Makes it easy to set your working directory and access files on your computer
+
+With RStudio, you can navigate to folders on your computer in the “Files” window, view any files you have in that folder, and set that folder as the working directory.
+
+### Integrates with Collaboration and Publishing Tools
+
+Another great advantage of using Rstudio for your R project is that the platform integrates with [GitHub](https://github.com). Once you connect RStudio with your GitHub account a remote repo becomes the “upstream” remote for your local repo. In essence, it enables you push and pull commits to GitHub allowing more seamless collaboration and more effective version control. RStudio also connects with [Rpubs](https://rpubs.com/) for easy R project web publishing.  
 
 ### Creates documents using R Markdown
 
@@ -122,10 +142,6 @@ You can include both text and code to execute. It is a convenient tool for repro
 8. If you do not make any changes to the document after creating the output document, you can be sure that the paper was executable at least at the time of submission.
 9. Refer to the corresponding code lines in the methodology section making it unnecessary to use pseudocode, high-level textual descriptions, or just too many words to describe the computational analysis.
 10. Use packages such as rticles to use templates from publishers and create submission-ready documents.
-
-### Integrates with Collaboration and Publishing Tools
-
-Another great advantage of using Rstudio for your R project is that the platform integrates with [GitHub](https://github.com). Once you connect RStudio with your GitHub account a remote repo becomes the “upstream” remote for your local repo. In essence, it enables you push and pull commits to GitHub allowing more seamless collaboration and more effective version control. RStudio also connects with [Rpubs](https://rpubs.com/) for easy R project web publishing.  
 
 
 ## Some Real-world Applications
