@@ -5,24 +5,24 @@ exercises: 10
 questions:
 - "What is the Visual Editor in Rstudio?"
 - "Which features does the Visual Editor have?"
-- "How can I can apply styling and formatting to rmd documents in Rstudio more easily?"
+- "How can I can apply styling and formatting to Rmd documents in Rstudio more easily?"
 - "How to add inline code?"
 
 objectives:
 - "Learn how to enable the visual editor."
 - "Get familiar with its basic functionalities."
-- "Apply rmd formatting and styling using the visual editor."
+- "Apply Rmd formatting and styling using the visual editor."
 - "Learn how to add inline code to your rdm document."
 
 keypoints:
 - "The visual editor has made formatting much easier."
-- "You can apply rmd styling without prior R Markdown knowledge."
+- "You can apply Rmd styling without prior R Markdown knowledge."
 - "You can include inline code to narratives for basic calculations and dynamic information."
 ---
 
 ## Formatting Rmd Documents with the Visual Editor
 
-As we mentioned earlier, the visual editor in RStudio has made R Markdown formatting much more effortless. It provides improved productivity for composing longer-form articles and analyses with R Markdown. The visual markdown editing is available in RStudio v1.4 or higher. Markdown documents can be edited in either source or visual mode. To switch into visual mode for a given document, toggle on the compass icon at the top-right of the document toolbar (alternatively for windows, the ⌘⇧ F4 keyboard shortcut). This will prompt a formatting bar through which you can apply styling, add links, create tables, and others similar to functions you find in google docs and other document editors. Note that you can switch between source and visual mode at any time (editing location and undo/redo state will be preserved when you switch). Let’s try it! Feel free to follow along or just watch this quick demo. But first, make sure to have your visual editor enabled on your screen. Also, make sure to open your `DataPaper-ReproducibilityWorkshop.Rmd` file located at the `report\source` folder
+As we mentioned earlier, the visual editor in RStudio has made R Markdown formatting much more effortless. It provides improved productivity for composing longer-form articles and analyses with R Markdown. The visual markdown editing is available in RStudio v1.4 or higher. Markdown documents can be edited in either source or visual mode. To switch into visual mode for a given document, toggle on the compass icon at the top-right of the document toolbar (alternatively for windows, the ⌘⇧ F4 keyboard shortcut). This will prompt a formatting bar through which you can apply styling, add links, create tables, and others similar to functions you find in google docs and other document editors. Note that you can switch between source and visual mode at any time (editing location and undo/redo state will be preserved when you switch). Let’s try it! Feel free to follow along or just watch this quick demo. But first, make sure to have your visual editor enabled on your screen. Also, make sure to open your `DataPaper-ReproducibilityWorkshop.rmd` file located at the `report\source` folder
 
 ### Editor Toolbar
 
@@ -56,7 +56,7 @@ Adding headings to a R Markdown document in Rstudio is as simple as applying lin
 
 ### *Creating Tables*
 
-Because creating tables manually in Rmd documents could be a little painful for beginners, Rstudio released an add-in functionality for tables back in 2018. The new visual editor, however, have made the process to create rmd tables more similar to other editors we use daily. In our template, we have the specification table with 10 rows and two columns. If we were willing to add that table, we could do that by inserting a table to a selected part of the documents and by specifying the desired number of rows and columns.  Including a caption is optional, but recommended. We can add or delete rows and columns, add a header that will be set bold by default but can be changed, and set the desired alignment. Select the desired text and click on the crossed T icon if you wish to clear formatting.
+Because creating tables manually in Rmd documents could be a little painful for beginners, Rstudio released an add-in functionality for tables back in 2018. The new visual editor, however, have made the process to create Rmd tables more similar to other editors we use daily. In our template, we have the specification table with 10 rows and two columns. If we were willing to add that table, we could do that by inserting a table to a selected part of the documents and by specifying the desired number of rows and columns.  Including a caption is optional, but recommended. We can add or delete rows and columns, add a header that will be set bold by default but can be changed, and set the desired alignment. Select the desired text and click on the crossed T icon if you wish to clear formatting.
 
 ![Clear Formatting Option](../fig/06-clearformatting.png)
 
@@ -83,7 +83,7 @@ As you become a more regular Rstudio user, you may also consider using some keyb
 Tip: Windows users should replace in the shortcuts above `⌘` by `ctrl` and `⌥⌘` by `alt (+) ctrl`.
 
 ## Other Editing Features
-The visual editor allows users to insert images by browsing their location or copying and pasting it to the rmd document directly. There are also options to add html, line blocks, blockquotes, and footnotes. Up next we will learn more about how to add code chunks. In further episodes we will also learn how to insert citations and create a bibliography.
+The visual editor allows users to insert images by browsing their location or copying and pasting it to the Rmd document directly. There are also options to add html, line blocks, blockquotes, and footnotes. Up next we will learn more about how to add code chunks. In further episodes we will also learn how to insert citations and create a bibliography.
 
 > ## Time to Commit!
 > Make sure to commit your changes to GitHub. Add your changed files and commit with the following message: "Added Formatting"
