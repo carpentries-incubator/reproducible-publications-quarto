@@ -127,21 +127,27 @@ nocite: |
 ```
 {: .output}  
 
-To demonstrate that I will add a new bibtex from my Google Scholar Library and specify the `@key` in the YAML. Note that this will force all items added in the YAML to be displayed in the bibliography.  
+To demonstrate that let's include the bibtex `@key` for an item that was not cited in the YAML. Note that this will force all items added in the YAML with this command to be listed in the bibliography.  
 
 Let’s try!
 
 > ## Challenge 8.3 - Adding references you have not cited
 >
-> Find and remove the existing in-text citation to `@peirce2007`, but list it out in the reference section.
->
+> We have used a few packages in our paper that we do not necessarily cite in text. However, it is a good practice to add them to the reference list. This practice is recommended for giving proper credit to package developers and also to inform your readers about the exact version you have used to produce your paper. 
+> 
+> Ideally we would follow this process for all packages we have installed and used to produce the paper. But for the sake of time, let's do that process for the Tidyverse package only:
+> 
+> 1) First, go to the [CRAN page for Tidyverse](https://cran.r-project.org/web/packages/tidyverse/index.html), click on citation info link and copy the corresponding BibTeX entry. 
+> 2) Paste the bibtex to the "references.bib" file inside the "report/source
+> Now that you have the citation info and the @key for the Tidyverse package, how would you go about to add this bibliography as a no-cite?
+> 
 > > ## Solution
 > >
-> > You can either delete the csl information as it is set as the default, or call it in the YAML:
+> > You should call the @Article it in the YAML, with the nocite function:
 > >
 > > ```
 > > nocite: |
-> >  @peirce2007
+> >  @Article
 > > ```
 > > {: .output}
 > >
