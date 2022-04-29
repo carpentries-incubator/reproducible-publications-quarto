@@ -90,7 +90,7 @@ You might have noticed that all citations are inserted in a specific style. Can 
 
 But how can you identify which CSL you should use? You can find required formats on the [Zotero Style Repository](https://www.zotero.org/styles), which makes it easy to search for and download your desired style.
 
-Download the format you wish to use and call it out in the YAML. Let’s try it together! Go to the Zotero Style repo and select [American Psychological Association 7th edition](https://www.zotero.org/styles/apa). You will notice that it will automatically download a `apa.csl` file. Make sure to save it to your project folder in report/source folder. In the YAML we have to call the exact name of the file preceded by “csl:”
+Download the format you wish to use and call it out in the YAML. We have pre-saved the APA CSL file in the project folder for you. But if you would like to follow the process or try another style, go to the Zotero Style repo and select [American Psychological Association 7th edition](https://www.zotero.org/styles/apa) or any other style of your choice. You will notice that it will automatically download the file (e.g. `apa.csl`). Make sure to save it to your project directory in report/source folder. In the YAML we have to call the exact name of the file preceded by “csl:”
 
 ```
 csl: apa.csl
