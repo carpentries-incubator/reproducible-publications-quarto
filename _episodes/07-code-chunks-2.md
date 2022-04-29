@@ -19,7 +19,7 @@ keypoints:
 
 ## Run Code from an external script in a code chunk
 
-Let's add another figure generated from code. This time around let's see how to run code in a code chunk from an external R script instead of unelegantly copying and pasting the code from a R script to a code chunk in our `.rmd`.
+Let's add another figure generated from code. This time around let's see how to run code in a code chunk from an external R script instead of unelegantly copying and pasting the code from a R script to a code chunk in our `.Rmd`.
 
 There are at least a few benefits to running code in this modular fashion instead of copy/pasting:
 1. Automatic updates: if the code gets updated in the R script, it automatically be updated in the Rmd document as well.
@@ -50,9 +50,9 @@ plot
 
 ![Fig 4 path error](../fig/07-fig4-connection-error.PNG)
 
-Shoot, we got an error and it looks familiar... another file path error. That's because the code we are calling from within the Rmd document contains file paths to read and save the data that are relative to the `code` directory where the `02_hormone_analysis.R` resides so the paths aren't correct when run from the `.rmd` file. Yesh! All sorts of relative path chaos.
+Shoot, we got an error and it looks familiar... another file path error. That's because the code we are calling from within the Rmd document contains file paths to read and save the data that are relative to the `code` directory where the `02_hormone_analysis.R` resides so the paths aren't correct when run from the `.Rmd` file. Yesh! All sorts of relative path chaos.
 
-What do we do now? We could go into the `02_hormone_analysis.R` file and change the relative paths to work with the `.rmd` file, but then they won't run correctly on their own. Also, this wouldn't accomplish our goal of streamlining our plot generation by running an external script. Ugh, what can we do???
+What do we do now? We could go into the `02_hormone_analysis.R` file and change the relative paths to work with the `.Rmd` file, but then they won't run correctly on their own. Also, this wouldn't accomplish our goal of streamlining our plot generation by running an external script. Ugh, what can we do???
 
 Well, there is a solution to this as well! (As with most every obstacle you run into with R). That solution is to change the working directory of our Rmd document - to do that we will first introduce Global knitr options.
 
@@ -86,7 +86,7 @@ The first option is easy - we click the menu next to the knit button and change 
 The second option requires a bit of code, but will overall be more reproducible (because it's not dependent on your personal RStudio IDE settings)
 This is a setting option in our global knitr settings:
 
-We will now navigate back up to the top of our `.rmd` document, right after the yaml. Here, we will add a new code chunk with the label `setup` and the options `echo = FALSE` (we don't need this code printed out in our final document!). Then, we'll add the following line of code:
+We will now navigate back up to the top of our `.Rmd` document, right after the yaml. Here, we will add a new code chunk with the label `setup` and the options `echo = FALSE` (we don't need this code printed out in our final document!). Then, we'll add the following line of code:
 
 ~~~
 knitr::opts_knit$set(root.dir = rprojroot::find_rstudio_root_file())
@@ -105,7 +105,7 @@ Ok, now that we've done that we'll have to go back and fix the Figure 3 code and
 
 > ## Challenge 9.4
 >
-> Fix the relative path in the Figure 3 code so that the chunk will run properly. Hint: We changed the working directory from the directory where the `rmd` document lives `report/source` to the project directory, aka the 'root directory'
+> Fix the relative path in the Figure 3 code so that the chunk will run properly. Hint: We changed the working directory from the directory where the `Rmd` document lives `report/source` to the project directory, aka the 'root directory'
 >
 > > ## Solution
 > > There are two options:
@@ -116,7 +116,7 @@ Ok, now that we've done that we'll have to go back and fix the Figure 3 code and
 
 > ## Challenge 9.5
 >
-> Fix the relative path in the inline code so that the chunk will run properly. Hint: We changed the working directory from the directory where the `rmd` document lives `report/source` to the project directory, aka the 'root directory'.
+> Fix the relative path in the inline code so that the chunk will run properly. Hint: We changed the working directory from the directory where the `Rmd` document lives `report/source` to the project directory, aka the 'root directory'.
 >
 > > ## Solution
 > >
@@ -253,9 +253,9 @@ Time to Knit! If you update your dataset this value will match the number of row
 
 ## Adjust rendered html output directory
 
-Ok, we'll adjust _one_ thing in the yaml. You know how we said it's good practice to have code and output from the code in separate directories? Well, the html file that renders from our `.rmd` file outputs to the same `report/source` directory. So that violates our standards. It might not be the end of the world, but let's see how to change the directory that R Markdown documents output to after knitting.
+Ok, we'll adjust _one_ thing in the yaml. You know how we said it's good practice to have code and output from the code in separate directories? Well, the html file that renders from our `.Rmd` file outputs to the same `report/source` directory. So that violates our standards. It might not be the end of the world, but let's see how to change the directory that R Markdown documents output to after knitting.
 
-This is unfortunately more difficult that one would like, but we can use the following code in the yaml to create a custom function that changes the output directory for the `.rmd` file.
+This is unfortunately more difficult that one would like, but we can use the following code in the yaml to create a custom function that changes the output directory for the `.Rmd` file.
 The code for our documet is as follows:
 
 ~~~
