@@ -135,19 +135,20 @@ Let’s try!
 >
 > We have used a few packages in our paper that we do not necessarily cite in text. However, it is a good practice to add them to the reference list. This practice is recommended for giving proper credit to package developers and also to inform your readers about the exact version you have used to produce your paper. 
 > 
-> Ideally we would follow this process for all packages we have installed and used to produce the paper. But for the sake of time, let's do that process for the Tidyverse package only:
+> Ideally we would follow this process for all packages we have installed and used to produce the paper. But for the sake of time, let's do that process for the Tidyverse package only.
 > 
-> 1) First, go to the [CRAN page for Tidyverse](https://cran.r-project.org/web/packages/tidyverse/index.html), click on citation info link and copy the corresponding BibTeX entry. 
-> 2) Paste the bibtex to the "references.bib" file inside the "report/source
-> Now that you have the citation info and the @key for the Tidyverse package, how would you go about to add this bibliography as a no-cite?
+> 1) First, you would go to the [CRAN page for Tidyverse](https://cran.r-project.org/web/packages/tidyverse/index.html), click on citation info link and copy the corresponding BibTeX entry. 
+> 2) Paste the bibtex to the "references.bib" file inside the "report/source and adjust the key as you wish.
+> 
+>  We have pre-saved the bibtex for Tidyverse for you. Now that you have the citation info and know the that key for the package is @Tidyverse2019, how would you go about to add this bibliography as a no-cite?
 > 
 > > ## Solution
 > >
-> > You should call the @Article it in the YAML, with the nocite function:
+> > You should call the @Tidyverse2019 it in the YAML, with the nocite function:
 > >
 > > ```
 > > nocite: |
-> >  @Article
+> >  @Tidyverse2019
 > > ```
 > > {: .output}
 > >
