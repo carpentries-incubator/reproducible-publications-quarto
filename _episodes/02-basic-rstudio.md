@@ -21,17 +21,17 @@ keypoints:
 
 ## Getting Around RStudio
 
-Throughout this lesson, we're going to teach you some of the fundamentals of 
+Throughout this lesson, we're going to teach you some of the fundamentals of
 using R Markdown as part of your RStudio workflow.
 
-We'll be using RStudio: a free, open source R Integrated Development Environment 
-(IDE). It provides a built in editor, works on all platforms 
-(including on servers) and provides many advantages such as integration with 
+We'll be using RStudio: a free, open source R Integrated Development Environment
+(IDE). It provides a built in editor, works on all platforms
+(including on servers) and provides many advantages such as integration with
 version control and project management.
 
-This lesson assumes you already have a basic understanding of R and RStudio but 
-we will do a brief tour of the IDE, review R projects and the best practices for 
-organizing your work, and how to install packages you may want to use to work 
+This lesson assumes you already have a basic understanding of R and RStudio but
+we will do a brief tour of the IDE, review R projects and the best practices for
+organizing your work, and how to install packages you may want to use to work
 with R Markdown.
 
 **Basic layout**
@@ -44,16 +44,16 @@ When you first open RStudio, you will be greeted by three panels:
 
 ![RStudio layout](../fig/02-rstudio.PNG)
 
-Once you open files, such as .Rmd files or .R files, an editor panel will also 
+Once you open files, such as .Rmd files or .R files, an editor panel will also
 open in the top left.
 
 ![RStudio layout with .R file open](../fig/02-rstudio-script.PNG)
 
 ### R Packages
 
-It is possible to add functions to R by writing a package, or by obtaining a 
-package written by someone else. As of this writing, there are over 10,000 
-packages available on CRAN (the comprehensive R archive network). R and RStudio 
+It is possible to add functions to R by writing a package, or by obtaining a
+package written by someone else. As of this writing, there are over 10,000
+packages available on CRAN (the comprehensive R archive network). R and RStudio
 have functionality for managing packages:
 
 -   You can *install packages* by typing `install.packages("packagename")`, where `packagename` is the package name, in quotes.
@@ -62,14 +62,14 @@ have functionality for managing packages:
 -   You can *remove a package* with `remove.packages("packagename")`
 -   You can *make a package available* for use with `library(packagename)`
 
-Packages can also be viewed, loaded, and detached in the Packages tab of the 
-lower right panel in RStudio. Clicking on this tab will display all of installed 
-packages with a checkbox next to them. If the box next to a package name is 
-checked, the package is loaded and if it is empty, the package is not loaded. 
-Click an empty box to load that package and click a checked box to detach that 
+Packages can also be viewed, loaded, and detached in the Packages tab of the
+lower right panel in RStudio. Clicking on this tab will display all of installed
+packages with a checkbox next to them. If the box next to a package name is
+checked, the package is loaded and if it is empty, the package is not loaded.
+Click an empty box to load that package and click a checked box to detach that
 package.
 
-Packages can be installed and updated from the Package tab with the *Install* and 
+Packages can be installed and updated from the Package tab with the *Install* and
 *Update* buttons at the top of the tab. We have asked you to install a few packages prior to the workshop following the [setup instructions](https://github.com/UCSBCarpentry/Reproducible-Publications-with-RStudio/blob/main/setup.md) using the `install.packages()` command. Let's now make sure you have all of them good to go.
 
 > ## CHALLENGE 2.1 - Checking for Installed Packages
@@ -77,7 +77,7 @@ Packages can be installed and updated from the Package tab with the *Install* an
 >> ~~~
 >> To see what packages are installed, use the `installed. packages() command`. This will return a matrix with a row for each package that has been installed.
 >> ~~~
-> {: .solution} 
+> {: .solution}
 {: .challenge}
 
 ## Starting a R Markdown File
@@ -86,11 +86,11 @@ Start a new R Markdown document in RStudio by clicking File \> New File \> R Mar
 
 ![Opening a new R Markdown document](../fig/02-file-navigation-rmd.PNG)
 
-> ## Tip: Bonus! Note about R Notebooks: 
+> ## Tip: Bonus! Note about R Notebooks:
 You may have noticed that the menu offers the option to create an R Notebook, which is essentially an interactive execution mode for R Markdown documents. Technically, R Markdown is a file, whereas R Notebook is a way to work with R Markdown files. R Notebooks do not have their own file format, they all use `.Rmd`. All R Notebooks can be 'knitted' to R Markdown outputs, and all R Markdown documents can be interfaced as a Notebook.
 {: .callout}
 
-If this is the first time you have ever opened an R Markdown file a dialog box 
+If this is the first time you have ever opened an R Markdown file a dialog box
 will open up to tell you what packages need to be installed. You shouldn't see the dialog box if you installed these packages before the workshop.
 
 ![First time R Markdown install packages dialog box](../fig/02-rmd-installpackages-dialogbox.PNG)
@@ -98,14 +98,14 @@ will open up to tell you what packages need to be installed. You shouldn't see t
 Click "Yes". The packages will take a few seconds (to a few minutes) to install.
 You should see that each package was installed successfully in the dialog box.
 
-Once the package installs have completed, a dialog box will pop up and ask you 
+Once the package installs have completed, a dialog box will pop up and ask you
 to name the file and add an author name (may already know what your name is) The default output is HTML and as the wizard indicates, it is the best way to start and in your final version or later versions you have the option of changing to pdf or word document (among many other output formats! We'll see this later).
 
 ### Naming your new R Markdown Document
 
 ![Name new .Rmd file](../fig/02-name-new-rmd.PNG)
 
-New R Markdown files will have a generic template unless you click the 
+New R Markdown files will have a generic template unless you click the
 "Create Empty Document" in the bottom left-hand corner of the dialog box.
 
 If you see this default text you're good to go: ![.Rmd new file generic template](../fig/02-rmd-new-template.PNG)
@@ -116,8 +116,8 @@ RStudio released a new major update to their IDE in January 2020, which includes
 
 #### Source Editor
 
-The image below displays the default R Markdown template in the "source editor" mode. Notice the symbols scattered throughout the text (#, *, <>). Those are examples of R Markdown syntax, which is a flavor of Markdown syntax, an easy and quick, human-readable markup language for document styling. 
-  
+The image below displays the default R Markdown template in the "source editor" mode. Notice the symbols scattered throughout the text (#, *, <>). Those are examples of R Markdown syntax, which is a flavor of Markdown syntax, an easy and quick, human-readable markup language for document styling.
+
 ![Add image source editor](../fig/02-source-editor.PNG)  
 
 
@@ -131,8 +131,8 @@ The image below displays the default R Markdown template in the "source editor" 
 > When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 > ```
 >> ## SOLUTION
->> `##` is a heading, `**` is to bold enclosed text, and `<>` is for hyperlinks. 
->> Don't worry about this too much right now! This is an example of R Markdown syntax for styling, you won't need it if you stick to the visual editor, but it is recommended to get at least a basic understanding of R Markdown syntax if you plan to work with `.rmd` documents frequently.
+>> `##` is a heading, `**` is to bold enclosed text, and `<>` is for hyperlinks.
+>> Don't worry about this too much right now! This is an example of R Markdown syntax for styling, you won't need it if you stick to the visual editor, but it is recommended to get at least a basic understanding of R Markdown syntax if you plan to work with `.Rmd` documents frequently.
 > {: .solution}
 {: .challenge}
 
@@ -148,20 +148,20 @@ You'll notice that formatting elements like headings, hyperlinks and bold have b
 
 ![Add image visual editor](../fig/02-visual-editor.PNG)  
 
-We will proceed using the visual editor during this workshop as it is more 
-user-friendly and allows us to talk about styling without needing to teach the 
-whole R Markdown syntax system. However, we highly encourage you to become 
-familiar with markdown syntax (specifically the R Markdown flavor) as it 
-increases your abilities to format and style your paper without relying on the 
+We will proceed using the visual editor during this workshop as it is more
+user-friendly and allows us to talk about styling without needing to teach the
+whole R Markdown syntax system. However, we highly encourage you to become
+familiar with markdown syntax (specifically the R Markdown flavor) as it
+increases your abilities to format and style your paper without relying on the
 visual editor options.
 
 
 > ## Tip: Resources to learn R Markdown  
-> if you want to learn how to use the source editor (as we call it) please see 
+> if you want to learn how to use the source editor (as we call it) please see
 > the the [Pandoc Markdown Documentation](https://pandoc.org/MANUAL.html#philosophy).
 > You will need to know Markdown formatting (specifically R-flavored Markdown).       
 {: .callout}
 
 
-Now we'll get into how our R Markdown file & workflow is organized and then on 
+Now we'll get into how our R Markdown file & workflow is organized and then on
 to editing and styling!

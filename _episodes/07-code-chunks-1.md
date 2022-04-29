@@ -6,13 +6,13 @@ exercises: 20
 questions:
 - "What is Knitr?"
 - "What are code chunks and how they are structured?"
-- "How can you run code from your rmd document?"
+- "How can you run code from your Rmd document?"
 - "What are global knitr options?"
 - "What are global chunk options?"
 objectives:
 - "Understand the syntax of a code chunk."
 - "Learn how to insert run-able blocks of code to integrate into your report"
-- "Learn how to source external scripts to run within an rmd document."
+- "Learn how to source external scripts to run within an Rmd document."
 - "Learn about using global knitr options and global chunk options"
 keypoints:
 - "Knitr will render your code and R markdown-formatted text and output your document format of choice"
@@ -22,7 +22,7 @@ keypoints:
 
 ## Utilizing the Code Features of R Markdown
 
-We've learned about the text-formatting options of R Markdown, now let's dive into the code portion of R Markdown documents. R Markdown flips around the defaults of code and text in the documents. Instead of priortizing the code and making you comment out (#) text, they priortize text and force you to specially signal the code portions. How do you signal to R the difference between code and text when you're not using code commments (#)? That's where "Code Chunks" come into play (Yes that's RStudio's technical name for them). Instead of R Markdown's rendering system processing the markdown styling into the final output, Code chunks are sent to a preceding stage of processing by Knitr, which "knits" the code output and text together. Secondly, rmarkdown processes the code output and displays it in the document format of our choice - i.e. Knitr runs the lines of code for a plot in a code chunk, joins it to the markdown text portions, and rmarkdown outputs that as an html document. 
+We've learned about the text-formatting options of R Markdown, now let's dive into the code portion of R Markdown documents. R Markdown flips around the defaults of code and text in the documents. Instead of priortizing the code and making you comment out (#) text, they priortize text and force you to specially signal the code portions. How do you signal to R the difference between code and text when you're not using code commments (#)? That's where "Code Chunks" come into play (Yes that's RStudio's technical name for them). Instead of R Markdown's rendering system processing the markdown styling into the final output, Code chunks are sent to a preceding stage of processing by Knitr, which "knits" the code output and text together. Secondly, rmarkdown processes the code output and displays it in the document format of our choice - i.e. Knitr runs the lines of code for a plot in a code chunk, joins it to the markdown text portions, and rmarkdown outputs that as an html document.
 
 ## What is Knitr?
 
@@ -51,13 +51,13 @@ The most basic (and empty) code chunk looks like so:
 Other than our backticks ``` for code chunks that surround the code top and bottom, the only **required** piece is the specified language (r) placed between the curly brackets. This indicates that the language to read the code is R.
 
 > ## Fun fact: Other Programming Languages
-> Although we will (mostly) be using R in this workshop, it’s possible to use other programming or markup languages. For example, we have seen that we can use LaTeX code for equations. You can also use python and a handful of other languages, so if R is not your preferred programming, but you like working in the RStudio environment, don’t despair! Other options for languages include: sql, julia, bash, and c, etc. It should be noted however, that some languages (like python) will require installing and loading additional packages. 
+> Although we will (mostly) be using R in this workshop, it’s possible to use other programming or markup languages. For example, we have seen that we can use LaTeX code for equations. You can also use python and a handful of other languages, so if R is not your preferred programming, but you like working in the RStudio environment, don’t despair! Other options for languages include: sql, julia, bash, and c, etc. It should be noted however, that some languages (like python) will require installing and loading additional packages.
 {: .callout}
 
 ## Add a Code Chunk
 
-Ok, let's add some code! There are already some plots included in our code but as 
-static images. This time, we are going to opt to add these plots as code chunks - 
+Ok, let's add some code! There are already some plots included in our code but as
+static images. This time, we are going to opt to add these plots as code chunks -
 which are also more reproducible and easier to update. This is because, as with our inline code, this assures that if there are any changes to the data, the plots update automatically. This also makes our life easier because when there’s a change we don’t have to re-generate plots, save them as images and then add them back in to our paper. This will potentially help prevent version errors as well! So we’re actually going to go ahead and add a few plots with code chunks.
 We’ll start by typing our our starting backticks & r between curly brackets. (in your own workflow you may want to add the ending three backticks as well so you don’t forget after adding your code - it's a common mistake):
 
@@ -66,14 +66,14 @@ Now, let's open our `03_HR_analysis.R` script in our `code` folder. Copy the cod
 ![heartrate code in chunk](../fig/07-heartrate-code.PNG)
 
 > ## Tip:
-> There's actually a button you can use in the RStudio menu to generate the code chunks automatically. Automatic code chunk generation is available for several other languages as well. Also, you can use the keyboard shortcut `ctrl`+`alt`+`I` for Windows and `command`+`option`+`I` for Mac. 
+> There's actually a button you can use in the RStudio menu to generate the code chunks automatically. Automatic code chunk generation is available for several other languages as well. Also, you can use the keyboard shortcut `ctrl`+`alt`+`I` for Windows and `command`+`option`+`I` for Mac.
 > ![auto create code chunk](../fig/07-auto-code-chunk.PNG)
 {: .callout}
 
-Now, to check to make sure our code renders, we could click the "knit" button as we have been doing. However, with the code chunks we have other opportunities for rendering. 
+Now, to check to make sure our code renders, we could click the "knit" button as we have been doing. However, with the code chunks we have other opportunities for rendering.
 
 1) Knit button - knitting will automatically run the code in all code chunks
-![code chunk with plot1 code](../fig/07-run-code-with-knit.PNG) 
+![code chunk with plot1 code](../fig/07-run-code-with-knit.PNG)
 
 2) Run from code chunk (green play button on the right top corner)
 
@@ -83,7 +83,7 @@ Now, to check to make sure our code renders, we could click the "knit" button as
 
 ![run code menu](../fig/07-rmd-run-options.PNG)
 
-4) Keyboard shortcuts: 
+4) Keyboard shortcuts:
 
 **Task**	| **Windows & Linux**	| **macOS**
 ---       |---                  |---
@@ -97,32 +97,32 @@ Go to next chunk/title	| Ctrl+PgDown	| Command+PgDown
 Go to previous chunk/title	| Ctrl+PgUp |	Command+PgUp
 
 > ## Time to Knit!
-> Use one of the above options to run your code. 
+> Use one of the above options to run your code.
 {: .checklist}
 
 ![heart rate code path error](../fig/07-HR-code-path-error.PNG)
 
-Hmmmm... we got an error while trying to run our code. That's because our code contains a relative path to read in the data file, but now we're running the code from the rmd document which is in a different directory so we will need to update the file path.
+Hmmmm... we got an error while trying to run our code. That's because our code contains a relative path to read in the data file, but now we're running the code from the Rmd document which is in a different directory so we will need to update the file path.
 
 Update the file path from: `"output/data/preprocessed-GARP-TSST-data.csv"` to `"../../output/data/preprocessed-GARP-TSST-data.csv"`
 
 ![code heart rate updated file path](../fig/07-HR-code-fixed-path.PNG)
 
 > ## Time to Knit!
-> Let's try that again 
+> Let's try that again
 {: .checklist}
 
 Ooof! That output doesn't look great.. we've got a bit more work to do.
 
 ![Heart rate code no options for code chunk](../fig/07-HR-output-no-options.PNG)
 
-let's see about fixing that with code chunk rendering options. 
+let's see about fixing that with code chunk rendering options.
 
 ## Code Chunk Options, Names and Captions (oh my!)
 
 ### Name Your Code Chunk
 
-While not necessary for running your code, it is good practice is to give a name to each code chunk and allows for more advanced options (such as cross-referencing) to work with your rmd files later on:
+While not necessary for running your code, it is good practice is to give a name to each code chunk and allows for more advanced options (such as cross-referencing) to work with your Rmd files later on:
 
 `{r chunk-name}`
 
@@ -150,10 +150,10 @@ The chunk name is the only value other than r in the code chunk options that doe
 
 `{r chunk-label, option = VALUE}`
 
-the option always follows the code chunk label (don't forget to add a `,` after the label either). 
+the option always follows the code chunk label (don't forget to add a `,` after the label either).
 
 
-#### Some common options: 
+#### Some common options:
 
 **results** = (logical or character) text output of the code can be hidden (hide or FALSE), or delineated in a certain way (default 'markup').    
 **eval** = (logical or numeric) TRUE/FALSE to evaluate (or not) or a numeric value like c(1,3) (only evaluate expressions 1 and 3).    
@@ -161,23 +161,23 @@ the option always follows the code chunk label (don't forget to add a `,` after 
 **warning** = (logical) whether to display the warnings in the output (default TRUE). FALSE will output warnings to the console only.    
 **include** = (logical) whether to include the chunk output in the output document (default TRUE).   
 **message** = (logical) whether or not to display messages that appear when running the code (default TRUE).
- 
- 
+
+
 > ## CHALLENGE 9.1 - Rendering Codes
 > How will some hypothetical code render given the following options?
 > `{r global-chunk-challenge, eval = TRUE, include = FALSE}`
-> 
+>
 >> ## SOLUTION
 >> The expressions in the code chunk will be evaluated, but the outputed figures/plots will not be included in the knit document.   
 >> When might you want to use this?   
->> If you need to calculate some value or do something on your dataset for a further calucation or plot, but the output is not important to be included in your paper narrative. 
+>> If you need to calculate some value or do something on your dataset for a further calucation or plot, but the output is not important to be included in your paper narrative.
 > {: .solution}
 {: .challenge}
 
 > ## CHALLENGE 9.2 - add options to your code  
 > Add the following options to your code:  
 > echo = FALSE, message = FALSE, warning = FALSE, results = FALSE  
-> 
+>
 > What will this do?  
 >> ## SOLUTION
 >> ![solution to 9.3](../fig/07-solution-9.3.PNG)    
@@ -188,7 +188,7 @@ the option always follows the code chunk label (don't forget to add a `,` after 
 
 ### Caption your figure output from code chunks:
 
-Again, this is an optional feature, but if you need (or want) to add captions to your publication, it is straightforward to do in code chunks. 
+Again, this is an optional feature, but if you need (or want) to add captions to your publication, it is straightforward to do in code chunks.
 
 The caption information also resides between your brackets at the beginning of the chunk: `{r}`
 
@@ -196,9 +196,9 @@ the tag is `fig.cap` followed by a `=` and the captions within quotes `"caption 
 
 > ## Challenge 9.3: Add a caption to Figure 3
 > Let's add a caption to our heartrate figure. Add the caption:
-> 
+>
 > > "Fig 3: Mean heart rate of stress and control groups at baseline and during intervention."
-> 
+>
 > > ## Solution
 > > so, you should end up with the following in your code chunk:
 > > ~~~
@@ -211,11 +211,7 @@ the tag is `fig.cap` followed by a `=` and the captions within quotes `"caption 
 Let's knit one more time to see if our figure outputs how we'd like and has a caption.
 
 > ## Time to Knit!
-> Let's try that again 
+> Let's try that again
 {: .checklist}
 
-Now that we’ve named and adjusted the rendering for our first figure, let’s add another, but instead of copy/pasting an r script into our rmd document we will use a more elegant solution. 
-
-
-
-
+Now that we’ve named and adjusted the rendering for our first figure, let’s add another, but instead of copy/pasting an r script into our Rmd document we will use a more elegant solution.
