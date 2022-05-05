@@ -1,4 +1,4 @@
----
+﻿---
 source: Rmd  
 title: "Adding Code-Generated Plots and Figures"  
 teaching: 50
@@ -37,6 +37,15 @@ First, we're going to talk about code chunks more substantial portions of code i
 
 Code chunks are better when you need to do something more sophisticated with your code than inline code, such as building plots or tables.  They also incorporate syntax which allows modifications to how that code is rendered and styled in your final output. We’ll learn more about that as we walk through the “anatomy” of a code chunk.
 
+### Start a new .Rmd File
+First, though, let's open a new `.rmd` document to get a look at how code chunks work before integrating them into our paper. 
+
+Again, open a new document by navigating to `File > New File > R Markdown`. Add the title `Code-Chunk-Test`. 
+
+Let's first delete the generic text because we don't need it at this point (all except the first code chunk that is - we'll get back to that in a second).
+
+FIXME - add fig of new document with just the setup code chunk
+
 ### Basic Anatomy of the Code Chunk
 
 You can quickly insert chunks like these into your file with:  
@@ -50,6 +59,8 @@ The most basic (and empty) code chunk looks like so:
 
 Other than our backticks ``` for code chunks that surround the code top and bottom, the only **required** piece is the specified language (r) placed between the curly brackets. This indicates that the language to read the code is R.
 
+Let's all start a new code chunk by typing our our starting backticks & r between curly brackets. (in your own workflow you may want to add the ending three backticks as well so you don’t forget after adding your code - it's a common mistake):
+
 > ## Fun fact: Other Programming Languages
 > Although we will (mostly) be using R in this workshop, it’s possible to use other programming or markup languages. For example, we have seen that we can use LaTeX code for equations. You can also use python and a handful of other languages, so if R is not your preferred programming, but you like working in the RStudio environment, don’t despair! Other options for languages include: sql, julia, bash, and c, etc. It should be noted however, that some languages (like python) will require installing and loading additional packages. 
 {: .callout}
@@ -57,16 +68,6 @@ Other than our backticks ``` for code chunks that surround the code top and bott
 ## Add a Code Chunk
 
 Ok, let's add some code! There are already some plots included in our code but as static images. This time, we are going to opt to add these plots as code chunks - which are also more reproducible and easier to update. This is because, as with our inline code, this assures that if there are any changes to the data, the plots update automatically. This also makes our life easier because when there’s a change we don’t have to re-generate plots, save them as images and then add them back in to our paper. This will potentially help prevent version errors as well! So we’re actually going to go ahead and add a few plots with code chunks.
-
-First, though, let's open a new `.rmd` document to get a look at how code chunks work before integrating them into our paper. 
-
-Again, open a new document by navigating to `File > New File > R Markdown`. Add the title `Code-Chunk-Test`. 
-
-Let's first delete the generic text because we don't need it at this point (all except the first code chunk that is - we'll get back to that in a second).
-
-FIXME - add fig of new document with just the setup code chunk
-
- We’ll start a new code chunk by typing our our starting backticks & r between curly brackets. (in your own workflow you may want to add the ending three backticks as well so you don’t forget after adding your code - it's a common mistake):
 
 Now, let's open our `03_HR_analysis.R` script in our `code` folder. Copy the code and paste it in between the two lines with backticks and `{r}` in our `DataPaper-ReproducibilityWorkshop.rmd` file.
 
@@ -118,7 +119,7 @@ This happens because the output from running code (messages, results, warnings, 
 
 ### Name Your Code Chunk
 
-Before we get to fixing how our code output looks, let's make sure to give our code chunk a name. While not necessary for running your code, it is good practice is to give a name to each code chunk because it gives the chunk a unique identifier which allows for more advanced options (such as cross-referencing) to work with your rmd files later on:
+Before we get to fixing how our code output looks, let's pause a second and give our code chunk a name. While not necessary for running your code, it is good practice is to give a name to each code chunk because it gives the chunk a unique identifier which allows for more advanced options (such as cross-referencing) to work with your rmd files later on:
 
 `{r chunk-name}`
 
