@@ -1,4 +1,4 @@
-﻿---
+---
 source: Rmd  
 title: "Adding Code-Generated Plots and Figures"  
 teaching: 50
