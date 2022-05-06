@@ -27,6 +27,7 @@ Current maintainers of this lesson are
 * Ian Lessing
 * Kristi Liu
 * Amanda Ho
+* Ryan Horne
 
 
 ## Authors
