@@ -1,4 +1,4 @@
----
+﻿---
 source: Rmd  
 title: "Global Code Chunk Settings & Inline Code"  
 teaching: 50
@@ -160,13 +160,14 @@ Instead, we can load libraries and data at the beginning of our document which m
 
 
 ```
-# load data
-df <- read.csv("./output/data/preprocessed-GARP-TSST-data.csv", encoding = "UTF-8")
-
 # load libraries
 library(tidyverse)
 library(BayesFactor)
 library(patchwork)
+
+# load data
+df <- read.csv("./output/data/preprocessed-GARP-TSST-data.csv", encoding = "UTF-8")
+
 ```
 
 It'll look like the following:
