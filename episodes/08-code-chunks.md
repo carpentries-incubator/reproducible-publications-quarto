@@ -1,17 +1,20 @@
 ﻿---
 source: Rmd  
-title: "Global Code Chunk Settings & Inline Code"  
+title: "Reproducible & Efficient Methods of Using Code Chunks"  
 teaching: 50
 exercises: 20
 questions:
+- "How do I run external scripts in an R Markdown document?"
 - "What are global knitr options?"
 - "What are global chunk options?"
 - "What is inline code and when to use it?"
 objectives:
-- "Learn how to source external scripts to run within an rmd document."
+- "Learn how to source external scripts to run within an rmd document to modularize your code."
 - "Learn about using global knitr options and global chunk options"
 - "Learn the syntax for inline code"
 keypoints:
+- "Learn how to externally source code `source()`"
+- "Learn how to modularize your code to make it more reproducible"
 - "Options for code chunks can be set at the individual level or at the global level"
 - "Use a setup chunk at the beginning of your document to declare global options"
 - "Use a chunk at the beginning of your document to load libraries and data globally to make your document more effiecient."
