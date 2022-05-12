@@ -170,6 +170,19 @@ df <- read.csv("./output/data/preprocessed-GARP-TSST-data.csv", encoding = "UTF-
 
 ```
 
+> ## Challenge: Order matters (optional)
+>
+> What would happen if we loaded the data before we loaded the libraries?
+> Try it out!
+>
+> > ## Solution:
+> > 
+> > We would get an error because we haven't loaded tidyverse yet!
+> > FIXME add screenshot of error
+> {: .solution}
+{: .challenge}
+
+
 It'll look like the following:
 ![load libraries & data](../fig/07-load-libraries-data.PNG)
 
