@@ -5,18 +5,18 @@ teaching: 50
 exercises: 20
 questions:
 - "How do I run external scripts in an R Markdown document?"
-- "What are global knitr options?"
-- "What are global chunk options?"
+- "How can I avoid issues with relative paths?"
+- "How can I get my R Markdown document to render faster?
 - "What is inline code and when to use it?"
 objectives:
 - "Learn how to source external scripts to run within an rmd document to modularize your code."
-- "Learn about using global knitr options and global chunk options"
-- "Learn the syntax for inline code"
+- "Learn about using global knitr options to change your `.rmd` file's working directory."
+- "Learn how to load libraries and data for use throughout the whole `.rmd` document."
+- "Learn the syntax for inline code."
 keypoints:
 - "Learn how to externally source code `source()`"
 - "Learn how to modularize your code to make it more reproducible"
-- "Options for code chunks can be set at the individual level or at the global level"
-- "Use a setup chunk at the beginning of your document to declare global options"
+- "There are options for changing the working directory of your `.rmd` document with package `rprojroot`
 - "Use a chunk at the beginning of your document to load libraries and data globally to make your document more effiecient."
 ---
 
@@ -25,9 +25,11 @@ keypoints:
 Let's add another figure generated from code. This time around let's see how to run code in a code chunk from an external R script instead of unelegantly copying and pasting the code from a R script to a code chunk in our `.rmd`.
 
 There are at least a few benefits to running code in this modular fashion instead of copy/pasting:
-1. Automatic updates: if the code gets updated in the R script, it automatically be updated in the rmd document as well. 
+1. Automatic updates: if the code gets updated in the R script, it will automatically be updated in the rmd document as well. We won't need to copy/paste code updates, which would make it easy to end up with discrepancies between our `.r` scripts and our `.rmd` paper.
+
 2. Readability: calling code externally only takes several lines of code - versus copy/pasting 50+ lines of code from our scripts.
-3. Less fussing with relative paths* - we had to change the code slightly in the first example to update the file path to the data set, with this method we won't have to modify the source code. 
+
+3. Less fussing with relative paths* - we had to change the code slightly in the first example to update the file path to the data set, which introduces variations and inconsistencies. With this method we won't have to modify the source code. 
 
 *unfortunately you will never be free of relative paths, but you can make it a bit easier on yourself.
 
