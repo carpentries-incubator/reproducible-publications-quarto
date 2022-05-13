@@ -1,4 +1,4 @@
-Rmd---
+---
 title: "Publishing your project"
 teaching: 10
 exercises: 0
