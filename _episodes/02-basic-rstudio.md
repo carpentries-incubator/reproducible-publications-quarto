@@ -93,7 +93,13 @@ You may have noticed that the menu offers the option to create an R Notebook, wh
 If this is the first time you have ever opened an R Markdown file a dialog box
 will open up to tell you what packages need to be installed. You shouldn't see the dialog box if you installed these packages before the workshop.
 
-![First time R Markdown install packages dialog box](../fig/02-rmd-installpackages-dialogbox.PNG)
+For a mac:
+![First time R Markdown install packages dialog box mac](../fig/02-install-rmd-pkg-mac.png)
+
+For windows:
+
+![First time R Markdown install packages dialog box windows](../fig/02-install-rmd-pkg-win.png)
+
 
 Click "Yes". The packages will take a few seconds (to a few minutes) to install.
 You should see that each package was installed successfully in the dialog box.
@@ -118,7 +124,7 @@ RStudio released a new major update to their IDE in January 2020, which includes
 
 The image below displays the default R Markdown template in the "source editor" mode. Notice the symbols scattered throughout the text (#, *, <>). Those are examples of R Markdown syntax, which is a flavor of Markdown syntax, an easy and quick, human-readable markup language for document styling.
 
-![Add image source editor](../fig/02-source-editor.PNG)  
+![Add image source editor](../fig/02-rmd-new-template.PNG)  
 
 
 > ## CHALLENGE 2.2 - Formatting with Symbols (optional)
@@ -141,6 +147,11 @@ The image below displays the default R Markdown template in the "source editor" 
 The new visual editor is accessible through a small button on the far right side of the script/document pane in RStudio. The icon is a protractor, but from further away it just looks like a squiggly "A". See the image below to find the visual editor button, it isn't the most obvious!
 
 ![change to visual editor](../fig/02-visual-editor-spotlight.png)  
+
+Thankfully, the newer versions of RStudio (2022 onward), have made it easier to find the button to change to visual mode:
+
+![new visual editor](../fig/02-visual-editor-updated.png)
+
 #### Visual Editor
 
 We've already touched on the visual editor and it's useful features, but now that we've switched to the visual editor take another look at your document and see what's changed.
