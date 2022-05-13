@@ -22,7 +22,7 @@ keypoints:
 
 ## Run Code from an external script in a code chunk
 
-Let's learn another technique for adding code-generated plots and figures into our document. This time around let's see how to run code in a code chunk from an external R script instead of unelegantly copying and pasting the code from a R script to a code chunk in our `.rmd`.
+Let's learn another technique for adding code-generated plots and figures into our document. This time around let's see how to run code in a code chunk from an external R script instead of somewhat awkwardly copying and pasting the code from a R script to a code chunk in our `.rmd`.
 
 There are at least a few benefits to running code in this modular fashion instead of copy/pasting:
 1. Automatic updates: if the code gets updated in the R script, it will automatically be updated in the rmd document as well. We won't need to copy/paste code updates, which would make it easy to end up with discrepancies between our `.r` scripts and our `.rmd` paper.
@@ -80,36 +80,40 @@ FIXME add screenshot of HR code in Rmd Document
 FIXME - wrong figure -> change to 3
 ![Fig 4 path error](../fig/07-fig4-connection-error.PNG)
 
-> ## Time to Knit!
+ADD chunk name and caption for Figure 3 (can use the same/copy paste)
+
+> ## Time to Run!
 > Let's see if our code worked when generated from an external script 
 {: .checklist}
 
-Shoot, we got an error and it looks familiar... another file path error. That's because the code we are calling from within the rmd document contains file paths to read and save the data that are relative to the `code` directory where the `02_hormone_analysis.R` resides so the paths aren't correct when run from the `.rmd` file. Yesh! All sorts of relative path chaos.
+Shoot, we got an error and it looks familiar... another file path error. That's because the code we are calling from within the rmd document contains file paths to read and save the data that are relative to the `code` directory where the `02_hormone_analysis.R` resides so the paths aren't correct when run from the `.rmd` file. Yesh! All sorts of relative path chaos - don't worry if you are confused.
 
-What do we do now? We could go into the `03_HR_analysis.R` file and change the relative paths to work with the `.rmd` file, but then they won't run correctly on their own. Also, this wouldn't really accomplish our goal of streamlining our plot generation. Ugh, what can we do???
+What do we do now? We could go into the `03_HR_analysis.R` file and change the relative paths to work with the `.rmd` file, but then they won't run correctly if we were to run them on their own. Also, this wouldn't really accomplish our goal of streamlining our plot generation. Ugh, what can we do???
 
-Well, there is a solution to this as well! (As with most every obstacle you run into with R). That solution is to change the working directory of our rmd document - to do that we will first introduce Global knitr options...
+Well, there is a solution to this as well! (As with most every obstacle you run into with R). That solution is to change the working directory of our rmd document - to do that we introduce additional global Knitr options.
 
 
 ## Global Knitr options
 
-Benefits of global knitr options:
+We already know about one of the benefits of global knitr options, that is using code chunk options that can be applied consistently for the whole document as we saw in the previous episode. 
+
+What are some of the additional benefits of global knitr options? There are many, but we'll cover two more:
 1. Set working directory so file paths (for code chunks) can be relative to the root instead of our .Rmd file
-2. Code chunk options that can be applied consistently for the whole document
-3. Load libraries and data once at the beginning of the doucment instead of in each code chunk (more concise and less rendering time)
+
+2. Load libraries and data once at the beginning of the doucment instead of in each code chunk (more concise and less rendering time)
 
 
 ### Set working directory to project directory:
 
-Ok, so let's fix these path issues we get when we try to run externally sourced code. The definition of relative paths is that they are relative to your current document or working directory. So we are having issues with connections trying to read our data files because the R scripts in our code directory (../ to get to the 'root' or .Rproj directory) are in a different location relative to our rmd document (../..).  What we want to do is direct RStudio to change the default working directory for the rmd document from the directory where the document is located to the project directory (which is the root directory of our project where the .Rproj file is located). We actually have several methods to do it. 
+Ok, so let's get back to fixing those path issues we get when we try to run externally sourced code. The definition of relative paths is that they are relative to your current document or working directory. So we are having issues with connections trying to read our data files because the R scripts in our code directory (../ to get to the 'root' or .Rproj directory) are in a different location relative to our rmd document (../..).  What we want to do is direct RStudio to change the default working directory for the rmd document from the directory where the document is located to the project directory (which is the root directory of our project where the .Rproj file is located). We actually have several methods to do it. 
 
-The first option is easy - we click the menu next to the knit button and change `Knit Directory` to `Project Directory`.  *NOTE this is a bit awkward because it ONLY changes the root directory for the code chunks NOT our narrative portions (think image links and inline code). 
+The first option is a simple one - we click the menu next to the knit button and change `Knit Directory` to `Project Directory`.  *NOTE this is a bit awkward because it ONLY changes the root directory for the code chunks NOT our narrative portions (think image links and inline code). 
 ![change working directory rmd file](../fig/07-change-wd.PNG)
 
 The second option requires a bit of code, but will overall be more reproducible (because it's not dependent on your personal RStudio IDE settings)
 This is a setting option in our global knitr settings:
 
-We will now navigate back up to the top of our `.rmd` document, right after the yaml. Here, we will add a new code chunk with the label `setup` and the options `echo = FALSE` (we don't need this code printed out in our final document!). Then, we'll add the following line of code:
+We will now navigate back up to the top of our `.rmd` document to the setup code chunk.  Then, we'll add the following line of code before or after our code for code chunk options:
 
 ~~~
 knitr::opts_knit$set(root.dir = rprojroot::find_rstudio_root_file())
@@ -130,13 +134,10 @@ Looks neater already!
 {: .callout}
 
 > ## Time to Knit!
-> Let's make sure all our file paths are correct and our code runs without errors. 
+> First, run the code to make sure that our file paths are correct and our code runs without errors. Good? Time to knit the document!
 {: .checklist}
 
 Now, we can have some more fun with global options:
-
-
-Before we lose track of where we were with editing up our second code chunk, let's finish it up by going back and adding a caption and name:
 
 
 ### Globally load data and packages
