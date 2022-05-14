@@ -35,7 +35,7 @@ There are at least a few benefits to running code in this modular fashion instea
 
 Again, let's test this out in our generic Rmd Document. After our first figure add a new code chunk:
 
-![basic code chunk](../fig/07-blank-code-chunk.PNG)
+![basic code chunk](../fig/08-blank-code-chunk.png)
 
 We're just going to test out the same figure again so we can verify this new method works. So, add the following code to your new chunk:
 ~~~
@@ -78,7 +78,7 @@ FIXME add screenshot of HR code in Rmd Document
 ![03-HR-analysis.R externally sourced in Rmd Document]()
 
 FIXME - wrong figure -> change to 3
-![Fig 4 path error](../fig/07-fig4-connection-error.PNG)
+![Fig 4 path error](../fig/08-connection-error.png)
 
 ADD chunk name and caption for Figure 3 (can use the same/copy paste)
 
@@ -108,7 +108,7 @@ What are some of the additional benefits of global knitr options? There are many
 Ok, so let's get back to fixing those path issues we get when we try to run externally sourced code. The definition of relative paths is that they are relative to your current document or working directory. So we are having issues with connections trying to read our data files because the R scripts in our code directory (../ to get to the 'root' or .Rproj directory) are in a different location relative to our rmd document (../..).  What we want to do is direct RStudio to change the default working directory for the rmd document from the directory where the document is located to the project directory (which is the root directory of our project where the .Rproj file is located). We actually have several methods to do it. 
 
 The first option is a simple one - we click the menu next to the knit button and change `Knit Directory` to `Project Directory`.  *NOTE this is a bit awkward because it ONLY changes the root directory for the code chunks NOT our narrative portions (think image links and inline code). 
-![change working directory rmd file](../fig/07-change-wd.PNG)
+![change working directory rmd file](../fig/08-change-wd.png)
 
 The second option requires a bit of code, but will overall be more reproducible (because it's not dependent on your personal RStudio IDE settings)
 This is a setting option in our global knitr settings:
@@ -120,7 +120,7 @@ knitr::opts_knit$set(root.dir = rprojroot::find_rstudio_root_file())
 ~~~
 *notice this code uses one of our pre-installed packages `rprojroot`
 
-![global knitr settings](../fig/07-global-knitr-options.PNG)
+![global knitr settings](../fig/08-global-knitr-options.png)
 
 Finally, let's adjust the path in the source() function after our working directory change. 
 
@@ -172,7 +172,7 @@ df <- read.csv("./output/data/preprocessed-GARP-TSST-data.csv", encoding = "UTF-
 
 
 It'll look like the following:
-![load libraries & data](../fig/07-load-libraries-data.PNG)
+![load libraries & data](../fig/08-load-libraries-data.png)
 
 At this point we could go back through our R scripts and comment out (or delete) the beginning sections where we load the data and libraries. That will save some time for the rmd document to render, because the data and libraries will only load once instead of twice. You can imagine that the more code chunks you have the more time taking this step would save. Bonus that this also works to load the data before it is called in inline code as well!
 
