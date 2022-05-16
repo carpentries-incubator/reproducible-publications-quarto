@@ -74,7 +74,6 @@ Packages can be installed and updated from the Package tab with the *Install* an
 
 > ## CHALLENGE 2.1 - Checking for Installed Packages
 > Which command would you use to check for packages ready for use?
->> ~~~
 >> ## SOLUTION
 >> To see what packages are installed, use the `installed. packages() command`. This will return a matrix with a row for each package that has been installed.
 > {: .solution}
