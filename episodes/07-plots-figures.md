@@ -6,7 +6,7 @@ exercises: 20
 questions:
 - "What is Knitr?"
 - "What are code chunks and how they are structured?"
-- "How can you run code from your rmd document?"
+- "How can you run code from your rmd document?"+
 - "What are global knitr options?"
 - "What are global chunk options?"
 objectives:
@@ -71,27 +71,25 @@ Ok, let's add some code! There are already some plots included in our code but a
 
 Now, let's open our `03_HR_analysis.R` script in our `code` folder. Copy the code and paste it in between the two lines with backticks and `{r}` in our `DataPaper-ReproducibilityWorkshop.rmd` file.
 
-FIXME update screenshot to display in new document ![heartrate code in chunk](../fig/07-heartrate-code.PNG)
+![heartrate code in chunk](../fig/07-heartrate-code.PNG)
 
 > ## Tip:
 > There's actually a button you can use in the RStudio menu to generate the code chunks automatically. Automatic code chunk generation is available for several other languages as well. Also, you can use the keyboard shortcut `ctrl`+`alt`+`I` for Windows and `command`+`option`+`I` for Mac. 
 > ![auto create code chunk](../fig/07-auto-code-chunk.PNG)
 {: .callout}
 
-Now, to check to make sure our code renders, we could click the "knit" button as we have been doing. However, with the code chunks we have other opportunities for rendering. 
+## Run the code in a code chunk
+Now, to check to make sure our code renders, we could click the "knit" button as we have been doing to check on the output of our R Mardown file. However, with the code chunks we have options for running and debugging code that don't require us to wait for the file to render. 
 
-1) Knit button - knitting will automatically run the code in all code chunks
-![code chunk with plot1 code](../fig/07-run-code-with-knit.PNG) 
+1) Run from code chunk (green play button on the right top corner). This allows us to run one specific code chunk.
 
-2) Run from code chunk (green play button on the right top corner)
+![run from code chunk](../fig/07-run-from-chunk.png)
 
-![run from code chunk](../fig/07-heartrate-code-runfromchunk.png)
-
-3) Run menu
+2) Run menu - this gives more options for running code chunks including the current one, the next one, all chunks, etc. 
 
 ![run code menu](../fig/07-rmd-run-options.PNG)
 
-4) Keyboard shortcuts: 
+3) Keyboard shortcuts: 
 
 **Task**	| **Windows & Linux**	| **macOS**
 ---       |---                  |---
@@ -104,13 +102,24 @@ Run all chunks	| Ctrl+Alt+R	| Command+Option+R
 Go to next chunk/title	| Ctrl+PgDown	| Command+PgDown
 Go to previous chunk/title	| Ctrl+PgUp |	Command+PgUp
 
+Run your code with one of the given methods. 
+
+Did it work? Look under the code chunk. You should now see a plot preview displayed beneath the code chunk if all went well. 
+
+![Code Chunk Plot Preview](../fig/07-plot-preview.png)
+
+## Knitting with Code Chunks
+
+We just saw how to run our code in our code chunks to see a preview of the code output that will render in our html document but to actually render it we need to use the Knit button. Using the knit button with code chunks is a two step process - first the code is run (all code chunks will run automatically). Second, (if there are no code errors) the document of choice will render for our whole R Markdown document. 
+
 > ## Time to Knit!
-> Use one of the above options to run your code. 
+> Now, let's knit the R Markdown file and see how our code output looks in the final html page. 
 {: .checklist}
+
+![code chunk with plot1 code](../fig/07-knit.PNG) 
 
 Wait... what's all that output in our document? We don't want that in our paper! 
 
-FIXME - update screenshot
 ![Heart rate code no options for code chunk](../fig/07-HR-output-no-options.PNG)
 
 This happens because the output from running code (messages, results, warnings, etc.) get's added to the R Markdown document instead of being printed to the console. Let's see about adjusting the output to make it look better with code chunk rendering options. 
@@ -223,9 +232,7 @@ Now we’ve learned how to create a code chunk and learned about options for adj
 
 The code looks like: 
 
-`knitr::opts_chunk$set()`
-
-FIXME add screenshot of code
+![Code Chunk Option Setup](../fig/07-setup-chunk.png)
 
 This is an option to globally set options for the entire R Markdown document. 
 
