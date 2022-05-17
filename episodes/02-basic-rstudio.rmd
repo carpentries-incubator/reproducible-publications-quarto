@@ -78,7 +78,7 @@ Update buttons at the top of the tab.
 
 > ## CHALLENGE 2.1 - Installing Packages
 >
-> Install the following packages: `bookdown`, `tidyverse`, `knitr`, `rticles`,`kable` \> 
+> Install the following packages: `bookdown`, `tidyverse`, `knitr`, `rticles`\> 
 >> ## SOLUTION 
 >> We can use the `install.packages()` command to install the required packages. 
 >> install.packages("bookdown")
