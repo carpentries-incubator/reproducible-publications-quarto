@@ -23,13 +23,13 @@ keypoints:
 
 ## Using R projects and Version Control in RStudio
 
-It's a two step process to work on a project in RStudio with version control. First step is to make sure your work is set up as an R Project. Secondly, and optionally, when you set up your project you can have the option to add versioning (or continue from an existing version-controlled project).
+Using version control is a powerful feature to make your research more reproducible and better organized. In order to use versioning while working in RStudio the first step is to make sure your work is set up as an R Project, because you may not use the versioning features in RStudio without one. There are three options for doing this depending on your given scenario.
 
-## Starting an R Project
+## Three Methods of Setting up Versioning with an R Project
 
 There are several options for working with R projects in RStudio. If you aren't already working in an R Project, you can create a new one. There are three options here:
-1. **New Directory** - start a brand new R project.
-2. **Existing Directory** - add exisiting work to a R project.
+1. **New Directory** - start a brand new R project (with the option of version control).
+2. **Existing Directory** - add existing work to a R project (with the option of setting up version control).
 3. **Version Control** Continue an existing R project that already uses version control (i.e. download from GitHub).
 
 ![new r project options](../fig/05-new-project.PNG)
@@ -55,16 +55,16 @@ Then, to use version control, make sure to check the "_Create a git repository_"
 
 ![existing project](../fig/05-existing-directory.png)
 
-We won't take the time to cover this here, but if you've already started an R project WITHOUT version control, you have the option to add version control retrospectively. You can also add existing R files to a project and version control if you've done neither. To see a tutorial of this process,  please see [episode 14 "Using Git from RStudio" in Version Control with Git](https://swcarpentry.github.io/git-novice/14-supplemental-rstudio/index.html).
+We won't take the time to cover this here, but if you've already started an R project WITHOUT version control, you have the option to add version control retrospectively. You can also add existing R files to a project and setup version control if you've done neither. To see a tutorial of this process,  please see [episode 14 "Using Git from RStudio" in Version Control with Git](https://swcarpentry.github.io/git-novice/14-supplemental-rstudio/index.html).
 
-This is by far the most labor intensive way to do it, so remember to add version control at the beginning of any new project (even if you get lazy and don't end up using it).
+This is by far the most labor intensive way to do it, so remember to add version control at the beginning of any new project.
 
 ### Continue a version-controlled project
 
 ![version controlled](../fig/05-version-control.png)
 The final option is to continue a version controlled project. This is the option we will do for our workshop.
 
-First, indicate which version control language you will be using (Subversion is another less popular language than Git)
+First, indicate which version control language you will be using (Subversion is another version control system, though less popular than Git)
 
 ![Git or Subversion](../fig/05-new-project-git.PNG)
 
@@ -96,19 +96,7 @@ Now, click on the green `Code` drop-down and then click on the copy icon next to
 
 Now, let's return to RStudio:
 
-Click File>New Project > Verison Control > Git.
-
-Ok, so if you are using Git for the first time in RStudio at this point you may be getting a notification that Git isn't set up to work with RStudio.
-
-![Git not detected on system path](../fig/05-git-not-detected.png)
-
-To set it up we need to go to Tools > Global Options
-![Global Options Git/SVN setup](../fig/05-setup-git-rstudio.PNG)
-
-First, make sure "Enable version control interface for RStudio projects" is checkd. Next, you must make sure that the Git executable path is correct.
-For macs, more than likely the path will have automatically populated. In all likelihood that path is `/usr/bin/git`. Windows users may find that the correct path is also pre-populated, but it is likely that you may need to manually add it by clicking "browse". More than likely your path will be something like `C:/Program Files/Git/bin/git.exe`. If not, search for where Git for Windows was installed (Git) go into the bin folder and select the 'git.exe` file.
-
-Ok! Now that we set that up (by the way, this is a one time set up -it will work now for all future projects in RStudio on your device), we should be able to open our project from GitHub in RStudio.
+Click `File > New Project > Verison Control > Git`.
 
 So back to the url you copied from GitHub. Navigate again to `File > New Project > Version Control > Git`. Paste in your url and choose "Desktop" as your directory.
 
@@ -117,6 +105,23 @@ So back to the url you copied from GitHub. Navigate again to `File > New Project
 
 Woo hoo! We have the project we're working on for this workshop opened in RStudio and set to use version control!
 
+> ## Git not detected on system path
+> 
+> If you are using Git for the first time in RStudio at this point you may be getting a notification that Git isn't set up to work with RStudio.
+>
+> See the solution below:
+> > ## Solution: 
+> > ![Git not detected on system path](../fig/05-git-not-detected.png)
+> >
+> > To set it up we need to go to Tools > Global Options
+> > ![Global Options Git/SVN setup](../fig/05-setup-git-rstudio.PNG)
+> >
+> > First, make sure "Enable version control interface for RStudio projects" is checked. Next, you must make sure that the Git executable path is correct.
+> > For macs, more than likely the path will have automatically populated. In all likelihood that path is `/usr/bin/git`. Windows users may find that the correct path is also pre-populated, but it is likely that you may need to manually add it by clicking "browse". More than likely your path will be something like `C:/Program Files/Git/bin/git.exe`. If not, search for where Git for Windows was installed (Git) go into the bin folder and select the 'git.exe` file.
+> > 
+> > Ok! Now that we set that up (by the way, this is a one time set up -it will work now for all future projects in RStudio on your device), we should be able to open our project from GitHub in RStudio.
+> {: .solution}
+{: .callout}
 
 Now, let's dive in to how to use version control.
 
@@ -186,16 +191,10 @@ Hit commit and a dialogue box will show a completed commit.
 
 You made your first commit!
 
-> ## Tip: add files that don’t need to be tracked to the .gitignore
-> Such as data files, outputs, references (you want to save those, but you
-> aren’t actively making changes to them so we don’t need to “track” them through
-> version control. Mostly scripts and Rmd files need tracking
-{: .callout}
-
-> ## Discussion: (optional) Using .gitignore files
-> a `.gitignore` file is used to signal to Git to NOT keep track of versions of the files included in the folder. Once instance where this is used in a data analysis project is with data files.
+> ## Discussion: (optional) Utilizing .gitignore files
+> a `.gitignore` file is used to signal to Git to NOT track versions of specific files. One instance where this is used in a data analysis project is with data files that are too large to be uploaded to GitHub.
 >
-> Now, there are some caveats to this, so in what situations would it make sense to add data to the .gitignore and what situations would it not?
+> Now, there are some caveats to this, so in what situations would it make sense to add data to the .gitignore and what situations would it not? What else could you imagine you wouldn't want to track in your research project?
 >
 > > ## Solution:
 > > Why and when would it be a good idea to add data files to the `.gitignore`?
@@ -205,13 +204,11 @@ You made your first commit!
 > > Why and when would it not make sense to add data files to the `.gitignore` so they will be available in the Git repository.
 > > - pre-processed data files - these are the data files that are edited - processed from the raw data
 > > - small data files - may not make much of a difference whether they are tracked or not
-> > - the first time you add data files - You can't push data files to GitHub unless
+> > - the first time you add data files - You can't push data files to GitHub unless they are tracked. So if you want your data on GitHub, but don't want to track it, you must make sure you push once and then add the file to the .gitignore file.
 > {: .solution}
 {: .challenge}
 
-
-
-> ## Challenge: (optional) Add the  files/directories to .gitignore
+> ## Challenge: (optional) Add the data files/directories to .gitignore
 > Add the data (all of the raw data files) to the `.gitignore`.  
 > Hint: there are two ways to do this.  
 > Hint2: add a forward slash `/` after directories.
