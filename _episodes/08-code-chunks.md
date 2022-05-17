@@ -1,4 +1,4 @@
-﻿---
+---
 source: Rmd  
 title: "Reproducible & Efficient Methods of Using Code Chunks"  
 teaching: 50
