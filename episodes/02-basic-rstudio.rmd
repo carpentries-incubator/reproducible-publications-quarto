@@ -85,10 +85,9 @@ Update buttons at the top of the tab.
 >> install.packages("tidyverse") 
 >> install.packages("knitr") 
 >> install.packages("rticles")  
->> install.packages("kable") 
 >> An alternate solution, to install multiple packages with a single 
 >> `install.packages()` command is: 
->> install.packages(c("bookdown", "tidyverse", "knitr", "rticles", "kable"))  >
+>> install.packages(c("bookdown", "tidyverse", "knitr", "rticles"))  >
 > {: .solution} 
 {: .challenge}
 
