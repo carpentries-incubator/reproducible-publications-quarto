@@ -29,7 +29,7 @@ Github used to allow simple Username & Password authentication but now Github re
 1. On Github.com go to your account setting -> Developer Settings -> Personal access tokens or this link: [https://github.com/settings/tokens](https://github.com/settings/tokens)
 1. Any tokens you have created in the past will be listed there and you can click "Generate new token" button.  Set an expiration date for your new token and a scope.  For this workshop the "Repo" scope should be sufficient.  Then Generate your new Token with the button at the bottom of the page.
 
-![](../fig/09-github-new-PAT-options.png)
+![PAT options on GitHub](../fig/10-github-new-PAT-options.png)
 * On the next screen github shows you the new token.  **Be sure to copy it** as you only get one chance to see the token text.
 
 > ## Note: 
@@ -41,7 +41,7 @@ Github used to allow simple Username & Password authentication but now Github re
 ## Getting your repository's URL from Github
 You can get the address of your repository from Github by navigating to your repository on Github.com and clicking the green "Code" button.  Make sure to copy the SSH form of the URL.
 
-![](../fig/09-github-clone.png)
+![Copy Repo URL from GitHub](../fig/10-github-clone.png)
 
 With that address you can complete setting the origin URL in the next step. 
 
@@ -61,7 +61,7 @@ Be sure **your** Github username is part of the URL.
 
 After you've updated the Origin URL from the command line go back to R Studio --> Tools --> Project Options --> Git/SVN to verify you have the "Origin" field filled in.  It should look like this.
 
-![](../fig/09-rstudio-project-options-git-with-https-origin.png) 
+![RSTudio Project Options Git/SVN](../fig/10-rstudio-project-options-git-with-https-origin.png) 
 
 
 ## Push your local changes up to your repository Github.
@@ -69,7 +69,7 @@ With authentication set up and your local copy of your repository pointing to Gi
 
 When you are prompted enter your Github username and then paste in your Personal Access Token (PAT) when prompted for your github password.
 
-![](../fig/09-git-mac-password-prompt.png)
+![RStudio PAT Password Prompt](../fig/10-git-mac-password-prompt.png)
 
  Let's try it and see if it works.
 
