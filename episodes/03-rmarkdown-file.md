@@ -138,7 +138,7 @@ Let’s take a look at that! On RStudio, load the `rticles` package by using the
 
 Clicking on `“From Template”` will prompt a couple of dozen templates listed as {rticles}. Let’s choose the Biometrics Journal template and then, OK.
 
-![Rticles Templates (Step 2)](../fig/03-rticles-template2.png)
+![Rticles Templates (Step 2)](../fig/03-rticles-template.png)
 
 Note that along with the skeleton of the paper you will see a message on top indicating additional packages you may need to install for that particular template.
 
