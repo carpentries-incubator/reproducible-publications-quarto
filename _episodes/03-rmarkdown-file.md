@@ -118,8 +118,6 @@ Click the "knit" button.
 
 Before you can render your document, you'll need to give it a file name and choose what folder you want to save it to. Choose `my_first_rmd.rmd` as your file name and save it to an easily accessible directory in your file system.
 
-![First knit choose filename](../fig/03-knit-filename.PNG)
-
 This is how our html document will render after clicking the knit button and choosing a file name:
 ![Knit html output](../fig/03-knit-echoTRUE.PNG)
 
