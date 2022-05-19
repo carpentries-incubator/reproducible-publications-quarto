@@ -32,14 +32,14 @@ Notice the "Publish" button in the upper right corner of your _Knit_ output.  Cl
 for this workshop.  
 
 Click the publish button
-![](../fig/10-publish-button-scrnshot.png)
+![Publish button in RStudio](../fig/11-publish-button-scrnshot.png)
 
 and you'll be presented with the following panels:
 
-![](../fig/10-r-studio-knit-publish-to-scrnshot.png)
+![Publish to RPubs or RStudio Connect](../fig/11-r-studio-knit-publish-to-scrnshot.png)
 (The other option in the dialog box, RStudio Connect, is a standalone publishing platform for teams to share content.  It requires purchase to host and use.)
 
-![](../fig/10-r-studio-knit-publish-confirm-scrnshot.png)
+![Confirm Publish to RPubs](../fig/11-r-studio-knit-publish-confirm-scrnshot.png)
 
 The first time you publish, RStudio will likely ask if you want to install some needed packages; say yes.  RStudio will then open up a web browser to allow you sign in to rpubs.com.
 
@@ -59,7 +59,7 @@ Another, better, but slightly more involved option for publishing an R Markdown 
 
 When you create a new R-markdown file in R Studio you are presented with a choice of Output Formats:
 
-![](../fig/10-rstudio-output-formats-scrnshot.png)
+![RStudio output formats](../fig/11-rstudio-output-formats-scrnshot.png)
 
 For the purposes of this workshop we're using HTML as the output format but other types are available.  You can render your R Markdown as a document, a presentation or a *Shiny* app.  With the default installation of R-Studio HTML output is most likely to work.  Other formats may require additional R packages and/or code libraries be installed on your computer.  R Studio also has a templating system to help with creating R Markdown files with common elements, YAML metadata and rendering instructions.  This can be very helpful for example if you want to create a weekly or monthly report documenting an ongoing experiment, study or other changing data.
 
