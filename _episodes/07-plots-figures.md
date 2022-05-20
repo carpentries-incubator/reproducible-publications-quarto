@@ -44,7 +44,7 @@ Again, open a new document by navigating to `File > New File > R Markdown`. Add 
 
 Let's first delete the generic text because we don't need it at this point (all except the first code chunk that is - we'll get back to that in a second).
 
-FIXME - add fig of new document with just the setup code chunk
+![Default RMD just setup chunk](../fig/07-setup-chunk-rmd.png)
 
 ### Basic Anatomy of the Code Chunk
 
@@ -55,7 +55,7 @@ You can quickly insert chunks like these into your file with:
 
 The most basic (and empty) code chunk looks like so:
 
-![blank Rmd code chunk](../fig/07-blank-code-chunk.PNG)
+![blank Rmd code chunk](../fig/08-blank-code-chunk.PNG)
 
 Other than our backticks ``` for code chunks that surround the code top and bottom, the only **required** piece is the specified language (r) placed between the curly brackets. This indicates that the language to read the code is R.
 
@@ -174,7 +174,7 @@ the option always follows the code chunk label (don't forget to add a `,` after 
 **message** = (logical) whether or not to display messages that appear when running the code (default TRUE).
  
  
-> ## CHALLENGE 9.1 - Rendering Codes
+> ## CHALLENGE 7.1 - Rendering Codes
 > How will some hypothetical code render given the following options?
 > `{r global-chunk-challenge, eval = TRUE, include = FALSE}`
 > 
@@ -185,13 +185,13 @@ the option always follows the code chunk label (don't forget to add a `,` after 
 > {: .solution}
 {: .challenge}
 
-> ## CHALLENGE 9.2 - add options to your code  
+> ## CHALLENGE 7.2 - add options to your code  
 > Add the following options to your code:  
 > echo = FALSE, message = FALSE, warning = FALSE, results = FALSE  
 > 
 > What will this do?  
 >> ## SOLUTION
->> ![solution to 9.3](../fig/07-solution-9.3.PNG)    
+>> ![solution to 7.2](../fig/07-solution-9.3.PNG)    
 >>
 >> These options mean the source code will not be printed in the knit html document, messages from the code will not be printed in the knit html document, and warnings will not be printed in the knit html document (but will still output to the console). Plots, figures or whatever is printed by the code WILL show up in the final html document.  
 > {: .solution}
@@ -205,7 +205,7 @@ The caption information also resides between your brackets at the beginning of t
 
 the tag is `fig.cap` followed by a `=` and the captions within quotes `"caption for figure"`
 
-> ## Challenge 9.3: Add a caption to Figure 3
+> ## Challenge 7.3: Add a caption to Figure 3
 > Let's add a caption to our heartrate figure. Add the caption:
 > 
 > > "Fig 3: Mean heart rate of stress and control groups at baseline and during intervention."
@@ -263,7 +263,7 @@ In the `()` after the `knitr::opts_chunk$set()` add the options:
 Alright! That sets us up well for adding code chunks into our paper (which we will do next)
 
 
-> ## CHALLENGE 9.5 (optional) global & individual code chunk options  
+> ## CHALLENGE 9.4 (optional) global & individual code chunk options  
 >
 > How would appear in our html document if we knit a code chunk with the following options?  
 > `{r challenge-5, warning = TRUE, echo = TRUE}`
