@@ -74,11 +74,6 @@ a repository at https://github.com/carpentries-incubator/new-lesson/ will have p
 the lesson URL https://carpentries-incubator.github.io/new-lesson/.
 
 
-## UCSB Carpentry Team Lesson Development Notes
-
-ONLY edit the .Rmd files. At the end of the readme see a script in the RStudio terminal to generate the .md automatically. Never directly edit the .md files.
-Also, see for a walkthrough on converting the google doc rough drafts to .Rmd: https://docs.google.com/document/d/1bfzVnnrVR2qr8YGb12x0MqbXglcP8XBhyxY2JonUtuY/edit?usp=sharing
-
 ## R Markdown vs. Github Markdown
 Note the two flavors of markdown are different. Some formatting tips:
 
