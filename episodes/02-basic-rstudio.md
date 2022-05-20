@@ -113,7 +113,7 @@ to name the file and add an author name (may already know what your name is) The
 New R Markdown files will have a generic template unless you click the
 "Create Empty Document" in the bottom left-hand corner of the dialog box.
 
-Note that you have the option to select *Use the current date when rendering the document*. This will generate the date dynamically each time you knit your document.
+Note that you have the option to select *Use the current date when rendering the document*. If you choose so, this will generate the date dynamically each time you knit your document and replace the rmd creation date with the inline R expression: `"`r Sys.Date()`"`. You may also consider exploring changing date formats [following these tips](https://bookdown.org/yihui/rmarkdown-cookbook/update-date.html).
 
 If you see this default text you're good to go: ![.Rmd new file generic template](../fig/02-rmd-new-template.PNG)
 
