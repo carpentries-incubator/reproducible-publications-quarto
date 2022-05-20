@@ -6,7 +6,7 @@ exercises: 20
 questions:
 - "What is Knitr?"
 - "What are code chunks and how they are structured?"
-- "How can you run code from your rmd document?"+
+- "How can you run code from your rmd document?"
 - "What are global knitr options?"
 - "What are global chunk options?"
 objectives:

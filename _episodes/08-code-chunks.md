@@ -6,7 +6,7 @@ exercises: 20
 questions:
 - "How do I run external scripts in an R Markdown document?"
 - "How can I avoid issues with relative paths?"
-- "How can I get my R Markdown document to render faster?
+- "How can I get my R Markdown document to render faster?"
 - "What is inline code and when to use it?"
 objectives:
 - "Learn how to source external scripts to run within an rmd document to modularize your code."
@@ -16,7 +16,7 @@ objectives:
 keypoints:
 - "Learn how to externally source code `source()`"
 - "Learn how to modularize your code to make it more reproducible"
-- "There are options for changing the working directory of your `.rmd` document with package `rprojroot`
+- "There are options for changing the working directory of your `.rmd` document with package `rprojroot`"
 - "Use a chunk at the beginning of your document to load libraries and data globally to make your document more effiecient."
 ---
 # *UNDER DEVELOPMENT*
