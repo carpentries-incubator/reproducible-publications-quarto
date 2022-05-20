@@ -64,7 +64,7 @@ Rstudio will search the [DOI](https://support.datacite.org/docs/doi-basics) API 
 This item will be automatically listed in your Bibliography folder, and if you want to cite this same item again you can type `@` and the first letters of the item name which will be auto-completed by Rstudio. For parenthetical citations you will have to type the key between brackets and for in-text narrative citations, you only need to type in the key.
 Note that when you hover over the citation, you will preview the full reference for the cited item that will be listed at the bottom of the manuscript. This feature helps you to identify if you have to edit anything in the .bib file your citation is calling. Also, note that all citations will be included at the end of your document under a reference list.
 
-> ## Challenge 8.1 - Insert a Citation Using the DOI Lookup Function
+> ## Challenge 9.1 - Insert a Citation Using the DOI Lookup Function
 >
 > Following the same process described,
 > insert a parenthetical citation to the publication “Welcome to the tidyverse”
@@ -102,7 +102,7 @@ csl: apa.csl
 
 Save and knit the document to see how citations and references have changed. This same process could be followed for any citation style required by the university, the journal or conference you are planning to submit your manuscript to.  
 
-> ## Challenge 8.2 - Changing the Citation Style
+> ## Challenge 9.2 - Changing the Citation Style
 >
 > How can you go back to using Chicago Style?
 >
@@ -134,7 +134,7 @@ To demonstrate that let's include the bibtex `@key` for an item that was not cit
 
 Let’s try!
 
-> ## Challenge 8.3 - Adding references you have not cited
+> ## Challenge 9.3 - Adding references you have not cited
 >
 > We have used a few packages in our paper that we do not necessarily cite in text. However, it is a good practice to add them to the reference list. This practice is recommended for giving proper credit to package developers and also to inform your readers about the exact version you have used to produce your paper. 
 > 
@@ -175,7 +175,7 @@ Cross-referencing is a useful way of directing your readers through your documen
 
 After these conditions are met, we can make cross-references within the text using the syntax `\@ref(type:label)`, where label is the chunk label and type is the environment being referenced (e.g., tab or fig). 
 
-> ## Challenge 8.4 - Cross-referencing a Figure
+> ## Challenge 9.4 - Cross-referencing a Figure
 > We would like to include a cross-reference to Figure 3, where the paper says "as via the mean heart-rate measured before and during the experimental manipulation". Based on the information about the required elements for cross-references in R Markdown, how would you go about adding a cross-reference to Figure 3? 
 >
 > > ## Solution
