@@ -22,12 +22,12 @@ Look for the tag ![good_first_issue](https://img.shields.io/badge/-good%20first%
 
 Current maintainers of this lesson are
 
-* Torin White
-* Renata Curty
-* Ian Lessing
-* Kristi Liu
-* Amanda Ho
-* Ryan Horne
+* Renata Curty (rcurty)
+* Torin White (torwhite)
+* Ian Lessing (ilessing)
+* kristi Liu (kristi-sara)
+* Amanda Ho (apandas)
+
 
 
 ## Authors
@@ -57,22 +57,12 @@ and make sure you have everything you need to begin developing your new lesson.
 Before you begin developing your new lesson,
 here are a few things we recommend you do:
 
-~~* [ ] Decide on a title for your new lesson!
-  Once you've chosen a new title, you can set the value for `lesson_title`
-  in [`_config.yml`](_config.yml)~~  
-~~* [ ] Add the URL to your built lesson pages to the repository description\*~~  
-~~* [ ] [Add relevant topic tags to your lesson repository][cdh-topic-tags].~~  
-~~* [ ] Fill in the fields marked `FIXME` in:~~  
-  ~~* this README~~  
-  ~~* [`_config.yml`](_config.yml)~~   
 * [ ] If you're going to be developing lesson material for the first time
   according to our design principles,
   consider reading the [Carpentries Curriculum Development Handbook][cdh]
 * [ ] Consult the [Lesson Example][lesson-example] website to find out more about
   working with the lesson template  -- specifically https://carpentries.github.io/lesson-example/05-rmarkdown-example/index.html 
   to see rmarkdown example
-~~* [ ] If you are planning to write your lesson in RMarkdown,
-  [create a `main` branch and set this as the default branch in your repository settings][change-default-branch]~~  
 * [ ] Update this README with relevant information about your lesson  
   and delete this section
 
