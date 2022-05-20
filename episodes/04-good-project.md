@@ -119,7 +119,7 @@ For our project we’re working in today, we used the following setup for folder
 
 > ## Exercise: Take a few minutes to look through the workshop project files
 > 
-> Please take some time to look through the project files. Either the screenshot above, or you may browse the files on GitHub at <https://github.com/UCSBCarpentry/R-repro-pub>. What do each of the directories (folders) contain? What is their purpose? 
+> Please take some time to look through the project files. Either the screenshot above, or you may browse the files on GitHub at <[https://github.com/UCSBCarpentry/Reproducible-rmd](https://github.com/UCSBCarpentry/Reproducible-rmd)>. What do each of the directories (folders) contain? What is their purpose? 
 > 
 > See the solution drop-down for an explanation of each directory's contents.
 >
