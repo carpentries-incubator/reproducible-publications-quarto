@@ -55,7 +55,7 @@ You can quickly insert chunks like these into your file with:
 
 The most basic (and empty) code chunk looks like so:
 
-![blank Rmd code chunk](../fig/08-blank-code-chunk.PNG)
+![blank Rmd code chunk](../fig/08-blank-code-chunk.png)
 
 Other than our backticks ``` for code chunks that surround the code top and bottom, the only **required** piece is the specified language (r) placed between the curly brackets. This indicates that the language to read the code is R.
 
@@ -116,7 +116,7 @@ We just saw how to run our code in our code chunks to see a preview of the code 
 > Now, let's knit the R Markdown file and see how our code output looks in the final html page. 
 {: .checklist}
 
-![code chunk with plot1 code](../fig/07-knit.PNG) 
+![code chunk with plot1 code](../fig/07-knit.png) 
 
 Wait... what's all that output in our document? We don't want that in our paper! 
 
@@ -128,7 +128,7 @@ This happens because the output from running code (messages, results, warnings, 
 
 ### Name Your Code Chunk
 
-Before we get to fixing how our code output looks, let's pause a second and give our code chunk a name. While not necessary for running your code, it is good practice is to give a name to each code chunk because it gives the chunk a unique identifier which allows for more advanced options (such as cross-referencing) to work with your rmd files later on:
+Before we get to fixing how our code output looks, let's pause a second and give our code chunk a name (also called a label). While not necessary for running your code, it is good practice is to give a name to each code chunk because it gives the chunk a unique identifier which allows for more advanced options (such as cross-referencing) to work with your rmd files later on:
 
 `{r chunk-name}`
 
@@ -152,7 +152,7 @@ There are over 50 different code chunk options!!! Obviously we will not go over 
 > Find a complete list of code chunk options on Knitr developer, Yihui Xie's, [online guide to knitr](https://yihui.org/knitr/options/). Or, you can find a brief list of all options on the R Markdown Reference guide on page 3 accesible through the RStudio Interface by navigating to the main menu bar `Help > Cheat Sheets > R Markdown Reference Guide`.
 {: .callout}
 
-The chunk name is the only value other than r in the code chunk options that doesn’t require a tag (i.e. the "= VALUE" part of `option = VALUE`). So these chunk options will always require a tag whose syntax looks like:
+The chunk name is the only value other than `r` in the code chunk options that doesn’t require a tag (i.e. the "= VALUE" part of `option = VALUE`). So chunk options will always require a tag, and the syntax will be in the form:
 
 `{r chunk-label, option = VALUE}`
 
@@ -163,7 +163,7 @@ the option always follows the code chunk label (don't forget to add a `,` after 
 
 ##### Code evaluation option
 
-**include** = (logical) whether to include the chunk output in the output document (default TRUE).
+**include** = (logical) whether to include the chunk output in the output document (defaults to TRUE).
 
 ##### Text output options
 
@@ -174,7 +174,7 @@ the option always follows the code chunk label (don't forget to add a `,` after 
 **message** = (logical) whether or not to display messages that appear when running the code (default TRUE).
  
  
-> ## CHALLENGE 7.1 - Rendering Codes
+> ## CHALLENGE 7.1 - Rendering Codes (optional)
 > How will some hypothetical code render given the following options?
 > `{r global-chunk-challenge, eval = TRUE, include = FALSE}`
 > 
@@ -208,7 +208,7 @@ the tag is `fig.cap` followed by a `=` and the captions within quotes `"caption 
 > ## Challenge 7.3: Add a caption to Figure 3
 > Let's add a caption to our heartrate figure. Add the caption:
 > 
-> > "Fig 3: Mean heart rate of stress and control groups at baseline and during intervention."
+> "Fig 3: Mean heart rate of stress and control groups at baseline and during intervention."
 > 
 > > ## Solution
 > > so, you should end up with the following in your code chunk:
@@ -218,6 +218,16 @@ the tag is `fig.cap` followed by a `=` and the captions within quotes `"caption 
 > > {: .language-r}
 > {: .solution}
 {: challenge}
+
+## More plot/figure options
+> Other options that change how a plot or figure appears often use the sytax `fig.xxx` similar to `fig.cap` Some other useful plot/figure code options include (From [Yihui Xie's page](https://yihui.org/knitr/options/#plots) ):
+> - `fig.width`, `fig.height`: (both are 7; numeric) Width and height of the plot (in inches), to be used in the graphics device.
+> - `out.width`, `out.height`: (NULL; character) Width and height of the plot in the output document, which can be different with its physical fig.width and fig.height, i.e., plots can be scaled in the output document. 
+> - `fig.align`: ('default'; character) Alignment of figures in the output document. Possible values are default, left, right, and center. The default is not to make any alignment adjustments.
+> - `fig.link`: (NULL; character) A link to be added onto the figure.
+> - `fig.alt`: (NULL; character) The alternative text to be used in the alt attribute of the <img> tags of figures in HTML output. By default, the chunk option fig.cap will be used as the alternative text if provided.
+{: .callout}
+
 
 Let's knit one more time to see if our figure outputs how we'd like and has a caption.
 
