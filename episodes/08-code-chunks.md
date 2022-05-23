@@ -21,6 +21,10 @@ keypoints:
 ---
 # *UNDER DEVELOPMENT*
 
+## Reproducible Methods for Code in R Markdown
+
+Now that we've learned the core benefit of using R Markdown documents - the integration of code with text - let's learn some more reproducible methods of working with code in R Markdown. We'll cover how to run external R scripts from within the R Markdown document, additional Global Knitr options, including setting the working directory for the R Markdown document and loading packages and data globally, as well as how to use inline code and change the knit directory for R Markdown Documents. Whew! that's a lot! Let's dig in.
+
 ## Run Code from an external script in a code chunk
 
 Let's learn another technique for adding code-generated plots and figures into our document. This time around let's see how to run code in a code chunk from an external R script instead of somewhat awkwardly copying and pasting the code from a R script to a code chunk in our `.rmd`.
@@ -39,13 +43,13 @@ Again, let's test this out in our generic Rmd Document. After our first figure a
 ![basic code chunk](../fig/08-blank-code-chunk.png)
 
 We're just going to test out the same figure again so we can verify this new method works. So, add the following code to your new chunk:
+
 ~~~
 # run the code from 03_HR_analysis.R in the code directory
-source("../../code/03_HR_analysis.R", local = knitr::knit_global())
+source("code/03_HR_analysis.R", local = knitr::knit_global())
 # display the plot created by code in 03_HR_analysis.R
 plot 
 ~~~
-
 {: .language-r}
 
 > ## Time to Knit!
@@ -62,51 +66,64 @@ Now that we've tested this code, let's add it to our actual paper:
 
 ### Add the code to our Rmd document
 
-First, find the FIXME in the rmd document for Fig 3 (ctrl-f "Fig 3"). We need to add the code for the hormone analysis.
+First, find `FIXME 8` in the rmd document for Fig 3 (ctrl-f "FIXME 8"). 
 
-Add the same code from our generic document where the FIXME is located (it's okay to copy/paste)
+Add the same code from our generic document where `FIXME 8` is located under "Previw of Research Results".
 
 ~~~
 # run the code from 03_HR_analysis.R in the code directory
-source("../../code/03_HR_analysis.R", local = knitr::knit_global())
+source("code/03_HR_analysis.R", local = knitr::knit_global())
 # display the plot created by code in 03_HR_analysis.R
 plot 
 ~~~
+{: .language-r}
 
 It should look like this:
 
-FIXME add screenshot of HR code in Rmd Document
-![03-HR-analysis.R externally sourced in Rmd Document]()
+![03-HR-analysis.R externally sourced in Rmd Document](../fig/08-HR-external-code.png)
 
-FIXME - wrong figure -> change to 3
-![Fig 4 path error](../fig/08-connection-error.png)
-
-ADD chunk name and caption for Figure 3 (can use the same/copy paste)
+ADD chunk name and caption for Figure 3 (can use the same as the copy/pasted code chunk we just tested). Remember we don't need to add options since we defined them globally.
 
 > ## Time to Run!
 > Let's see if our code worked when generated from an external script 
 {: .checklist}
 
-Shoot, we got an error and it looks familiar... another file path error. That's because the code we are calling from within the rmd document contains file paths to read and save the data that are relative to the `code` directory where the `02_hormone_analysis.R` resides so the paths aren't correct when run from the `.rmd` file. Yesh! All sorts of relative path chaos - don't worry if you are confused.
+![Error in file](../fig/08-file-connection-error.png)
 
-What do we do now? We could go into the `03_HR_analysis.R` file and change the relative paths to work with the `.rmd` file, but then they won't run correctly if we were to run them on their own. Also, this wouldn't really accomplish our goal of streamlining our plot generation. Ugh, what can we do???
+Shoot, we got an error! It's a file connection error - i.e. RStudio cannot find the R script file we are trying to run code from. This is  because the `.rmd` document for the paper we are trying to write is located in the `report/source` directory, and our relative file path only gives directions from the root folder. So, we need to amend our relative file path. Before, the new default .rmd document we created to test was located in the root directory of the project by default (i.e. the directory where the .rproj file is located). However, we decided to implement a better directory sturcture by creating a separate directory for the publication we're writing. 
 
-Well, there is a solution to this as well! (As with most every obstacle you run into with R). That solution is to change the working directory of our rmd document - to do that we introduce additional global Knitr options.
+The logical fix for this would be to adjust the relative file path to read the external script, from `code/03_HR_analysis.R` to `../../code/03_HR_analysis.R`. But hmmm... that doesn't work either (try it for yourself!)
+
+> ## Challenge 8.1 Relative Path Madness
+> change the relative path for the externally sourced code from `code/03_HR_analysis.R` to `../../code/03_HR_analysis.R`
+>
+> What is going wrong here?
+> 
+> > ## Solution:
+> > The issue is that the code we are calling from within the rmd document contains file paths to read and save the data that are relative to the code directory where the `03_HR_analysis.R` script resides so the paths aren’t correct when run from the .rmd file. Yesh! All sorts of relative path chaos - don’t worry if you are confused.
+> {: .solution}
+{: .challenge}
 
 
-## Global Knitr options
+Well, there is a solution for this as well! (As with most every obstacle you run into with R). What we will do is use a handy feature for R Markdown which allows us to change the working directory of our R Markdown document. This means whenever using relative paths in our project they can always* be relative to the root directory, allowing us to standardize our relative file path and allieviate this file connection error. To do this we will learn additional global Knitr options.
 
-We already know about one of the benefits of global knitr options, that is using code chunk options that can be applied consistently for the whole document as we saw in the previous episode. 
+*almost always
 
-What are some of the additional benefits of global knitr options? There are many, but we'll cover two more:
+## More Global Knitr Options
+
+We already know about one of the benefits of global knitr options - using code chunk options that can be applied consistently for the whole document as we saw in the previous episode. 
+
+What are some of the additional features of global knitr options? There are many, but we'll cover two more:
 1. Set working directory so file paths (for code chunks) can be relative to the root instead of our .Rmd file
 
-2. Load libraries and data once at the beginning of the doucment instead of in each code chunk (more concise and less rendering time)
+2. Load libraries and data once at the beginning of the document instead of in each code chunk (more concise and less rendering time)
 
 
 ### Set working directory to project directory:
 
 Ok, so let's get back to fixing those path issues we get when we try to run externally sourced code. The definition of relative paths is that they are relative to your current document or working directory. So we are having issues with connections trying to read our data files because the R scripts in our code directory (../ to get to the 'root' or .Rproj directory) are in a different location relative to our rmd document (../..).  What we want to do is direct RStudio to change the default working directory for the rmd document from the directory where the document is located to the project directory (which is the root directory of our project where the .Rproj file is located). We actually have several methods to do it. 
+
+FIXME FINISH EDITING BELOW --------------
 
 The first option is a simple one - we click the menu next to the knit button and change `Knit Directory` to `Project Directory`.  *NOTE this is a bit awkward because it ONLY changes the root directory for the code chunks NOT our narrative portions (think image links and inline code). 
 ![change working directory rmd file](../fig/08-change-wd.png)
@@ -159,7 +176,7 @@ df <- read.csv("./output/data/preprocessed-GARP-TSST-data.csv", encoding = "UTF-
 
 ```
 
-> ## Challenge: Order matters (optional)
+> ## Challenge 8.2: Order matters (optional)
 >
 > What would happen if we loaded the data before we loaded the libraries?
 > Try it out!
@@ -190,34 +207,23 @@ At this point we could go back through our R scripts and comment out (or delete)
 > - another helpful page: http://zevross.com/blog/2014/07/09/making-use-of-external-r-code-in-knitr-and-r-markdown/
 {: .callout}
 
-> ## Challenge: Your turn! Create Figure 4 with the external code
+> ##  8.3: Your turn! Create Figure 4 with the external code
 > 
-> First, find the FIXME in the rmd document for Fig 4 (ctrl-f "Fig 4"). We need to add the code for the hormone analysis.
+> First, find `FIXME 9` in the rmd document for Fig 4 (ctrl-f "FIXME 9"). We need to add the code for the hormone analysis.
+>
+> Make sure to give the code chunk a name: `fig4-hormones` and a caption: `"Fig 4: Cortisol and Amylase levels in stress and control groups"`
 >
 > > ## Solution:
 > > ~~~
+> > {r fig4-hormones, fig.cap = "Fig 4: Cortisol and Amylase levels in stress and control groups" }
 > > # run the code from 02_hormone_analysis.R in the code directory
 > > source("../../code/02_hormone_analysis.R", local = knitr::knit_global())
 > > # display the plot created by code in 02_hormone_analysis.R
 > > plot 
 > > ~~~
+> > {: .language -r}
 > {: .solution}
 {: .challenge}
-
-> ## Challenge 9.6: Add chunk name and caption to Figure 4
->
-> Add the caption: `Fig 4: Cortisol and Amylase levels in stress and control groups`
-> Add the name: `fig4-hormones`
->
-> > ## Solution
-> >
-> > ~~~
-> > {r fig4-hormones, fig.cap = "Fig 4: Cortisol and Amylase levels in stress and control groups" }
-> > ~~~
-> > {: .language-r}
-> {: .solution}
-{: .challenge}
-
 
 ## Inline Code
 
@@ -235,7 +241,7 @@ When you knit you might get an error. Any idea why? That is because we need to m
 
 Time to Knit! If you update your dataset this value will match the number of rows. 
 
-> ## CHALLENGE 6.1 - Adding inline code
+> ## CHALLENGE 8.3 - Adding inline code
 > Suppose we would like to add some information to the sentence we have just adjusted in our manuscript. We would like to include the average for the variable *violation_count* present in the same dataset. Which inline code we would have to add to following sentence?
 > 
 > The CSV file contains choice consistency data for ` `r nrow(bronars_simulation_data.csv)` ` simulated participants, that have been used to determine the power of our food-choice task design to detect choice consistency violations, which averaged ` `enter inline code here` `. 
@@ -248,20 +254,6 @@ Time to Knit! If you update your dataset this value will match the number of row
 >> 5.3924
 > {: .solution}
 {: .challenge}
-
-
-FIXME: is this challenge still relevant??
-> ## Challenge 9.5
-> 
-> Fix the relative path in the inline code so that the chunk will run properly. Hint: We changed the working directory from the directory where the `rmd` document lives `report/source` to the project directory, aka the 'root directory'.
-> 
-> > ## Solution
-> > 
-> > Change the relative path for the inline code in the section of the paper that describes the bronars simulation data
-> > from `r bronars_data <- read.csv("../../data/bronars_simulation_data.csv")` to `r bronars_data <- read.csv("data/bronars_simulation_data.csv")`
-> {: .solution}
-{: .challenge}
-
 
 > ## Important Note:
 > Make sure the file you are calling is in the right subdirectory and your working directory is set appropriately.

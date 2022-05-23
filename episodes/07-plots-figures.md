@@ -273,7 +273,7 @@ In the `()` after the `knitr::opts_chunk$set()` add the options:
 Alright! That sets us up well for adding code chunks into our paper (which we will do next)
 
 
-> ## CHALLENGE 9.4 (optional) global & individual code chunk options  
+> ## CHALLENGE 7.4 (optional) global & individual code chunk options  
 >
 > How would appear in our html document if we knit a code chunk with the following options?  
 > `{r challenge-5, warning = TRUE, echo = TRUE}`
