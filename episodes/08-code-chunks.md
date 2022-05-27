@@ -19,7 +19,6 @@ keypoints:
 - "There are options for changing the working directory of your `.rmd` document with package `rprojroot`"
 - "Use a chunk at the beginning of your document to load libraries and data globally to make your document more effiecient."
 ---
-# *UNDER DEVELOPMENT*
 
 ## Reproducible Methods for Code in R Markdown
 
@@ -66,9 +65,9 @@ Now that we've tested this code, let's add it to our actual paper:
 
 ### Add the code to our Rmd document
 
-First, find `FIXME 8` in the rmd document for Fig 3 (ctrl-f "FIXME 8"). 
+First, find `FIXME 9` in the rmd document for Fig 3 (ctrl-f "FIXME 9"). 
 
-Add the same code from our generic document where `FIXME 8` is located under "Previw of Research Results".
+Add the same code from our generic document where `FIXME 9` is located under "Previw of Research Results".
 
 ~~~
 # run the code from 03_HR_analysis.R in the code directory
@@ -123,24 +122,28 @@ What are some of the additional features of global knitr options? There are many
 
 Ok, so let's get back to fixing those path issues we get when we try to run externally sourced code. The definition of relative paths is that they are relative to your current document or working directory. So we are having issues with connections trying to read our data files because the R scripts in our code directory (../ to get to the 'root' or .Rproj directory) are in a different location relative to our rmd document (../..).  What we want to do is direct RStudio to change the default working directory for the rmd document from the directory where the document is located to the project directory (which is the root directory of our project where the .Rproj file is located). We actually have several methods to do it. 
 
-FIXME FINISH EDITING BELOW --------------
+### Option #1: Change the working directory through the RStudio IDE
 
-The first option is a simple one - we click the menu next to the knit button and change `Knit Directory` to `Project Directory`.  *NOTE this is a bit awkward because it ONLY changes the root directory for the code chunks NOT our narrative portions (think image links and inline code). 
-![change working directory rmd file](../fig/08-change-wd.png)
+The first option is a simple one - we click the menu next to the knit button and change `Knit Directory` to `Project Directory`.  
+![change working directory rmd file](../fig/08-change-wd.png) 
+
+Now, what might be the issue with changing the working directory through the IDE? Think about your project collaborators. -- Yes, if another colleague pulls this project down from GitHub and starts working on it, but doesn't have the same RStudio IDE settings as you, this paper won't knit. Rather than telling your colleague to change their IDE (and all your other current or future co-collaborators), it would be better that this setting be self-contained within the paper/project. So let's see how to do that.
+
+### Option #2: Change the working directory with a bit of code
 
 The second option requires a bit of code, but will overall be more reproducible (because it's not dependent on your personal RStudio IDE settings)
 This is a setting option in our global knitr settings:
 
-We will now navigate back up to the top of our `.rmd` document to the setup code chunk.  Then, we'll add the following line of code before or after our code for code chunk options:
+We will now navigate back up to the top of our `.rmd` document to the setup code chunk.  Then, we'll add the following line of code before or after our code for code chunk options (it wouldn't hurt to add a comment explaining what it does either):
 
 ~~~
 knitr::opts_knit$set(root.dir = rprojroot::find_rstudio_root_file())
 ~~~
-*notice this code uses one of our pre-installed packages `rprojroot`
+*notice this code uses one of our pre-installed packages `rprojroot` to 
 
 ![global knitr settings](../fig/08-global-knitr-options.png)
 
-Finally, let's adjust the path in the source() function after our working directory change. 
+Finally, let's re-adjust the path in the source() function after our working directory change (if you haven't already).
 
 `source("../../code/03_HR_analysis.R)` to `source("code/03_HR_analysis.R")`
 
@@ -155,14 +158,13 @@ Looks neater already!
 > First, run the code to make sure that our file paths are correct and our code runs without errors. Good? Time to knit the document!
 {: .checklist}
 
-Now, we can have some more fun with global options:
-
+Now, we can have some more fun with global options.
 
 ### Globally load data and packages
 
-We can actually make our lives easier in one other way too. So far we've loaded the library `tidyverse` and data frame `data1` we need in the first code chunk. Now if we want to replace, say Figure 3 (which we will do next), we would load `tidyverse` and the data for Figure 3, meaning we would be loading tidyverse for a second time unnecessarily. This is because once libraries and data are loaded they are available for the rest of the rmd document.
+We can make our lives easier in one other way too. So far we've loaded the library `tidyverse` and the data frame `df` we need in the first code chunk. Now if we want to add another figure (say the hormone analysis code '02_hormone_analysis.r`), which uses the same data as our first figure - we would be loading tidyverse for a second time unnecessarily. This is because once libraries and data are loaded they are available for the rest of the rmd document.
 
-Instead, we can load libraries and data at the beginning of our document which makes it available for all other figures or calculations and lets us avoid repetition. This also makes it easier for us to keep track of all the libraries and data we need to use in any given document. If anything needs to be tweaked, we don't need to search through every code chunk in our rmd document to make a change. 
+Instead, we can load libraries and data once at the beginning of our document making it available for all other figures or calculations throughout the document -  allowing us to avoid repetition in our code and saving us rendering time. This also makes it easier for us to keep track of all the libraries and data we need to use in any given document. If anything needs to be tweaked, we don't need to search through every code chunk in our rmd document to make a change - it's listed right at the top. 
 
 
 ```
@@ -172,9 +174,9 @@ library(BayesFactor)
 library(patchwork)
 
 # load data
-df <- read.csv("./output/data/preprocessed-GARP-TSST-data.csv", encoding = "UTF-8")
-
+df <- read_csv("./output/data/preprocessed-GARP-TSST-data.csv")
 ```
+{: .language-r}
 
 > ## Challenge 8.2: Order matters (optional)
 >
@@ -184,17 +186,11 @@ df <- read.csv("./output/data/preprocessed-GARP-TSST-data.csv", encoding = "UTF-
 > > ## Solution:
 > > 
 > > We would get an error because we haven't loaded tidyverse yet!
-> > FIXME add screenshot of error
+> > ![load data error](../fig/08-error-load-data.png)
 > {: .solution}
 {: .challenge}
 
-
-It'll look like the following:
-![load libraries & data](../fig/08-load-libraries-data.png)
-
 At this point we could go back through our R scripts and comment out (or delete) the beginning sections where we load the data and libraries. That will save some time for the rmd document to render, because the data and libraries will only load once instead of twice. You can imagine that the more code chunks you have the more time taking this step would save. Bonus that this also works to load the data before it is called in inline code as well!
-
-
 
 > ## Tip: Many ways to run external code
 > There are at least 3-4 methods one can use to run external code, the best choice may just depend on the context or on your personal preference. All are a bit awkward because of relative paths, but better than copy/pasting code from elsewhere in your project (in our humble opinion):
@@ -209,7 +205,7 @@ At this point we could go back through our R scripts and comment out (or delete)
 
 > ##  8.3: Your turn! Create Figure 4 with the external code
 > 
-> First, find `FIXME 9` in the rmd document for Fig 4 (ctrl-f "FIXME 9"). We need to add the code for the hormone analysis.
+> First, find `FIXME 10` in the rmd document for Fig 4 (ctrl-f "FIXME 10"). We need to add the code for the hormone analysis.
 >
 > Make sure to give the code chunk a name: `fig4-hormones` and a caption: `"Fig 4: Cortisol and Amylase levels in stress and control groups"`
 >
@@ -217,11 +213,11 @@ At this point we could go back through our R scripts and comment out (or delete)
 > > ~~~
 > > {r fig4-hormones, fig.cap = "Fig 4: Cortisol and Amylase levels in stress and control groups" }
 > > # run the code from 02_hormone_analysis.R in the code directory
-> > source("../../code/02_hormone_analysis.R", local = knitr::knit_global())
+> > source("code/02_hormone_analysis.R", local = knitr::knit_global())
 > > # display the plot created by code in 02_hormone_analysis.R
 > > plot 
 > > ~~~
-> > {: .language -r}
+> > {: .language-r}
 > {: .solution}
 {: .challenge}
 
@@ -231,13 +227,16 @@ What if you only need to make a quick calculation and adding a code chunk seems 
 
 You can also include `r code` directly in your the text portion of your document. Say you are discussing some of the summary statistics in your manuscript, R Markdown makes this possible through HTML/LaTeX inline code which allows you to calculate simple expressions integrated to your narrative. Inline code enables you to insert `r code` into your document to dynamically updated portions of your text. In other words, if your data set changes for any reason the code will automatically update the calculation specified. 
 
-This can be helpful when referring to specific variables on your data. For example, you should include numbers that are derived from the data as code not as numbers. Thus, rather than writing “The CSV file contains choice consistency data for 10.000 simulated participants” (**FIXME8**), replace the static number with a bit of code that, when evaluated, gives you a dynamic number if anything changes on your dataset. Please note that this insertion is not included in the visual editor, so we need to do write an expression, for example:
+This can be helpful when referring to specific variables on your data. For example, you should include numbers that are derived from the data as code not as numbers. Thus, rather than writing “The CSV file contains choice consistency data for 10.000 simulated participants” **(FIXME8)** , replace the static number with a bit of code that, when evaluated, gives you a dynamic number if anything changes on your dataset. Note that there is not an insert option to do this from the menu in the visual editor, so we need to insert inline code manually with  ```r ```, for example:
 
-The CSV file contains choice consistency data for ``r nrow(bronars_simulation_data.csv)`` simulated participants.
+The CSV file contains choice consistency data for ``r nrow(bronars_simulation_data)`` simulated participants.
 
-When you knit you might get an error. Any idea why? That is because we need to make sure to import the dataset we are referring to and call it in R Markdown before the inline code can work. Let's follow this process by including:
+When you knit you might get an error. Any idea why? That is because we need to make sure to import the dataset we are referring to before the inline code can work. Let's add the following to our chunk at the beginning of the document where we loaded our other data:
 
-``r bronars_simulation_data <- read.csv("../../data/bronars_simulation_data.csv")``
+~~~
+bronars_simulation_data <- read_csv("data/bronars_simulation_data.csv")
+~~~
+{: .language-r}
 
 Time to Knit! If you update your dataset this value will match the number of rows. 
 
