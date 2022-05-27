@@ -117,7 +117,7 @@ For our project we’re working in today, we used the following setup for folder
 
 ![directory tree](../fig/04-directory-tree.png)
 
-> ## Exercise: Take a few minutes to look through the workshop project files
+> ## Challenge 4.1: Take a few minutes to look through the workshop project files
 > 
 > Please take some time to look through the project files. Either the screenshot above, or you may browse the files on GitHub at <[https://github.com/UCSBCarpentry/Reproducible-rmd](https://github.com/UCSBCarpentry/Reproducible-rmd)>. What do each of the directories (folders) contain? What is their purpose? 
 > 
@@ -172,7 +172,7 @@ The three principles of file-naming are:
    
 Adapted from [https://datacarpentry.org/rr-organization1/01-file-naming/index.html](https://datacarpentry.org/rr-organization1/01-file-naming/index.html). For more tips on file naming, check: [The Dos and Don'ts of File Naming](https://www.library.ucsb.edu/sites/default/files/dls-n01-2021-filenaming.pdf).
 
-> ## Challenge: File name syntax
+> ## Challenge 4.2: File name syntax
 > 
 > Given the filename `CC-101_1_data.csv` and `2022-01-01_data_analyses.R`, why does it make sense to use both `-` and `_` as delimiters/separators?
 > 
@@ -201,7 +201,7 @@ df <- read.csv("C:/users/flintstone/wilma/Desktop/project23/data/foodchoice_budg
 
 In the complete path example you can see that the code is not going to be portable.  If someone other than Wilma Flintstone wanted to run the r script they would have to alter the path to match their system.
 
-> ## Challenge: relative path
+> ## Challenge 4.3: relative paths
 > 
 > What would be the relative path needed to refer to the `bronars.pdf` plot (located in the plots directory) from `R-repro-pub.Rproj` (located in the root directory). What is the inversed relative path?
 >
@@ -264,8 +264,8 @@ Who has used R Projects before?
 
 One of the most powerful and useful aspects of RStudio is its project management functionality. We’ll be using an R project today to complement our R Markdown document and bundle all the files needed for our paper into one self-contained, reproducible bundle. An `.Rproj` file helps keep your R scripts, data and other files together - just navigate through your file system to get to your project directory and double click on the .Rproj file. The added benefit is that the .RProj file will automatically open RStudio and start your R session in the same directory as the `.Rproj` file and remember exactly where you left off. .RProj files are powerful ways to stay organized on their own, but they also unlock the additional benefit of being able to use Git within RStudio. 
 
-> ## Tip: R Project in “root” folder
+> ## Challenge 4.4: R Project in “root” folder
 > `.Rproj` files must be in the root directory of your project folder/directory. What is the root directory again (look back at the relative paths intro)?  
-{: .callout}
+{: .challenge}
 
 
