@@ -7,7 +7,7 @@ or as a BibTeX entry:
 @Misc{,
   author = {UCSB Carpentry},
   title = {Reproducible Publications with Rstudio},
-  editor = {Renata Curty, Torin White, Ian Lessing, Kristi Liu and Amanda Ho},
+  editor = {Renata Curty, Torin White, Ian Lessing, Kristi Liu, Amanda Ho and Amelia Meyer},
   month = {March},
   year = {2022},
   url = {https://github.com/UCSBCarpentry/Reproducible-Publications-with-RStudio},
