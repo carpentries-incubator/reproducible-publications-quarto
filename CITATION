@@ -1,1 +1,14 @@
-FIXME: describe how to cite this lesson.
+You can cite this Workshop as follow:
+
+UCSB Carpentry (2022). “Reproducible Publications with Rstudio.” https://github.com/UCSBCarpentry/Reproducible-Publications-with-RStudio.
+
+or as a BibTeX entry:
+
+@Misc{,
+  author = {UCSB Carpentry},
+  title = {Reproducible Publications with Rstudio},
+  editor = {Renata Curty, Torin White, Ian Lessing, Kristi Liu and Amanda Ho},
+  month = {March},
+  year = {2022},
+  url = {https://github.com/UCSBCarpentry/Reproducible-Publications-with-RStudio},
+}
