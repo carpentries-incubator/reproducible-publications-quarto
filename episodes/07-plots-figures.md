@@ -69,12 +69,12 @@ Let's all start a new code chunk by typing our our starting backticks & r betwee
 
 Ok, let's add some code! There are already some plots included in our code but as static images. This time, we are going to opt to add these plots as code chunks - which are also more reproducible and easier to update. This is because, as with our inline code, this assures that if there are any changes to the data, the plots update automatically. This also makes our life easier because when there’s a change we don’t have to re-generate plots, save them as images and then add them back in to our paper. This will potentially help prevent version errors as well! So we’re actually going to go ahead and add a few plots with code chunks.
 
-Now, let's open our `03_HR_analysis.R` script in our `code` folder. Copy the code and paste it in between the two lines with backticks and `{r}` in our `DataPaper-ReproducibilityWorkshop.rmd` file.
+Now, let's open our `03_HR_analysis.R` script in our `code` folder. We will insert the code of this script into our current working file. To do this, copy the code and paste it in-between the two lines with backticks and `{r}`.
 
 ![heartrate code in chunk](../fig/07-heartrate-code.PNG)
 
 > ## Tip:
-> There's actually a button you can use in the RStudio menu to generate the code chunks automatically. Automatic code chunk generation is available for several other languages as well. Also, you can use the keyboard shortcut `ctrl`+`alt`+`I` for Windows and `command`+`option`+`I` for Mac. 
+> There's actually a button you can use in the RStudio menu to generate the code chunks automatically. Automatic code chunk generation is available for several other languages as well. Also, you can use the keyboard shortcut `ctrl`+`alt`+`i` for Windows and `command`+`option`+`i` for Mac. 
 > ![auto create code chunk](../fig/07-auto-code-chunk.PNG)
 {: .callout}
 
@@ -199,23 +199,24 @@ the option always follows the code chunk label (don't forget to add a `,` after 
 
 ### Caption your code chunk output:
 
-The options we just looked at focus on code evaluation and text output. However, we have another set of options that deal with how plot or figure outputs look at act. Many of the options start with `fig.`. The one we will use today allows us to add a caption to our figure. Again, this is an optional feature, but if you need (or want) to add captions to your publication, it is straightforward to do in code chunks. 
+The options we just looked at focus on code evaluation and text output. However, we have another set of options that deal with how plot or figure outputs look at act. Many of the options start with `fig`. The one we will use today allows us to add a caption to our figure. Again, this is an optional feature, but if you need (or want) to add captions to your publication, it is straightforward to do in code chunks. 
 
 The caption information also resides between your brackets at the beginning of the chunk: `{r}`
 
-the tag is `fig.cap` followed by a `=` and the captions within quotes `"caption for figure"`
+the tag is `fig.cap` followed by a `=` and the captions within quotes `"caption for figure"`.
 
-> ## Challenge 7.3: Add a caption to Figure 3
+> ## CHALLENGE 7.3: Add a caption to Figure 3
 > Let's add a caption to our heartrate figure. Add the caption:
 > 
 > "Fig 3: Mean heart rate of stress and control groups at baseline and during intervention."
-> 
-> > ## Solution
-> > so, you should end up with the following in your code chunk:
-> > ~~~
-> > {r fig3-heartrate, echo = FALSE, message = FALSE, warning = FALSE, results = FALSE, fig.cap = "Fig 3: Mean heart rate of stress and control groups at baseline and during intervention."}
-> > ~~~
-> > {: .language-r}
+>> ## SOLUTION
+>> so, you should end up with the following in your code chunk:
+>> ~~~
+>> {r fig3-heartrate, echo = FALSE, message = FALSE, warning = FALSE, results = FALSE, 
+>> fig.cap = "Fig 3: Mean heart rate of stress and control groups at baseline and during intervention."}
+>> ~~~
+>> {: .language-r}
+>> Set the option `fig.cap` to equal the text in double quotes.
 > {: .solution}
 {: challenge}
 
