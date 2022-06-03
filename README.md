@@ -20,14 +20,14 @@ Look for the tag ![good_first_issue](https://img.shields.io/badge/-good%20first%
 
 ## Maintainer(s)
 
-Current maintainers of this lesson are
+Current maintainers of this lesson are:
 
 * Renata Curty (rcurty)
 * Torin White (torwhite)
 * Ian Lessing (ilessing)
 * kristi Liu (kristi-sara)
 * Amanda Ho (apandas)
-
+* Amelia Meyer
 
 
 ## Authors
