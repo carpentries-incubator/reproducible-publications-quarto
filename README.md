@@ -1,4 +1,4 @@
-# Intro to Reproducible Publications with RStudio
+# Introduction to Reproducible Publications with RStudio
 
 [![Create a Slack Account with us](https://img.shields.io/badge/Create_Slack_Account-The_Carpentries-071159.svg)](https://swc-slack-invite.herokuapp.com/)
 
@@ -6,6 +6,8 @@
 
 We welcome all contributions to improve the lesson! Maintainers will do their best to help you if you have any
 questions, concerns, or experience any difficulties along the way.
+
+This lesson has a supplementary repository with the [project example](https://github.com/UCSBCarpentry/Reproducible-Publications-with-RStudio-Example/blob/main/README.md) used for challenges and exercises.
 
 We'd like to ask you to familiarize yourself with our [Contribution Guide](CONTRIBUTING.md) and have a look at
 the [more detailed guidelines][lesson-example] on proper formatting, ways to render the lesson locally, and even
@@ -27,7 +29,6 @@ Current maintainers of this lesson are:
 * Ian Lessing (ilessing)
 * kristi Liu (kristi-sara)
 * Amanda Ho (apandas)
-* Amelia Meyer
 
 
 ## Authors
