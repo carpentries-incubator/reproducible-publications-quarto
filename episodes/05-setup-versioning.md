@@ -72,6 +72,7 @@ When you choose this option there will be a place to paste the url of the GitHub
 
 ![continue project from GitHub](../fig/05-new-project-git-url.PNG)
 
+
 > ## Our turn!
 >
 > We have a repository already prepared for this workshop at [https://github.com/carpentries-incubator/Reproducible-Publications-with-RStudio-Example](https://github.com/carpentries-incubator/Reproducible-Publications-with-RStudio-Example). 
@@ -84,6 +85,8 @@ When you choose this option there will be a place to paste the url of the GitHub
 {: .prereq}
 
 ![GitHub](../fig/05-github.PNG)
+
+
 
 The two main sections are files and directories and the README which should contain a narrative description of the project.
 
