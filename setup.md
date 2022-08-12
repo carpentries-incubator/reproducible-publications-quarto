@@ -30,7 +30,7 @@ We will be covering the purpose of using packages and recap different ways to in
 
 1) Open R studio
 2) Select from the upper menu `Tools > Install packages...` or click on the `Packages` tab in the bottom-right section and then click on install. Either action will prompt a box dialog. 
-3) In the `Install Packages` dialog box, copy this command `bookdown, tidyverse, rticles, BayesFactor, patchwork, rprojroot` under the Packages field, make sure the option `install dependencies` is selected, keep other information unchanged, and then click `install`. 
+3) In the `Install Packages` dialog box, copy this command `bookdown, tidyverse, rticles, BayesFactor, patchwork, here` under the Packages field, make sure the option `install dependencies` is selected, keep other information unchanged, and then click `install`. 
 4) Don't be alarmed by the stop sign that will blink (and do not click on it otherwise you will cancel the process) or the red text messages. Once the process completes the cursor will be preceeded by a greater-than sign `>`.
 
 *Entering function in the console*
@@ -42,11 +42,11 @@ We will be covering the purpose of using packages and recap different ways to in
  install.packages("rticles")  
  install.packages("BayesFactor") 
  install.packages("patchwork")
- install.packages("rprojroot")``
+ install.packages("here")``
  
  or 
   
-`install.packages(c("bookdown", "tidyverse", "rticles", "BayesFactor", "patchwork", "rprojroot"))`
+`install.packages(c("bookdown", "tidyverse", "rticles", "BayesFactor", "patchwork", "here"))`
 
 2) Don't be alarmed by the stop sign that will blink (and do not click on it otherwise you will cancel the process) or the red text messages. Once the process completes the cursor will be preceeded by a greater-than sign `>`.
 
