@@ -217,6 +217,14 @@ In the complete path example you can see that the code is not going to be portab
 > {: .solution}
 {: .challenge}
 
+> ## Tip: Level up your relative paths
+> We just discussed how relative paths are a better practice when coding because we can guarantee our code will work on somebody else's system. However, relative paths can still be quite confusing to deal with, especially when you have many sub-directories in your project. One way to make things a bit easier on ourselves is to make sure the part that's *relative* to what we're referencing is always the same. 
+> We can employ a package called "here" to do this. `Here` has a function which always references the root (or top-level) directory of your project (i.e. where the .rproj file lives). Conviniently, that function is called `here()`. `here()` gives us a consistent starting path when building relative paths. We'll see how this is used later in the lesson.
+
+- Read the CRAN documentation here: [here](https://cran.r-project.org/web/packages/here/vignettes/here.html)
+- [Read more about how the `here` package can be useful for R Markdown files specifically](http://jenrichmond.rbind.io/post/how-to-use-the-here-package/)
+{: .callout}
+
 #### **Treat data as read only**  
 This is probably the most important goal of setting up a project. Data is typically time consuming and/or expensive to collect. Working with them interactively (e.g., in Excel or R) where they can be modified means you are never sure of where the data came from, or how it has been modified since collection. It is therefore a good idea to treat your data as “read-only”. However, in many cases your data will be “dirty”: it will need significant preprocessing to get into a format R (or any other programming language) will find useful. Storing these scripts in a separate folder, and creating a second “read-only” data folder to hold the “cleaned” data sets can prevent confusion between the two sets. You should have separate folders for each: raw data, code, and output data/analyses. You wouldn’t mix your clean laundry with your dirty laundry, right?  
 

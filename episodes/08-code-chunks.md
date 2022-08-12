@@ -96,15 +96,15 @@ The logical fix for this would be to adjust the relative file path to read the e
 > ## Challenge 8.1 Relative Path Madness
 > change the relative path for the externally sourced code from `code/03_HR_analysis.R` to `../../code/03_HR_analysis.R`
 >
-> What is going wrong here?
+> What was going on here? Why did we get an error when running the code this time?
 > 
 > > ## Solution:
-> > The issue is that the code we are calling from within the rmd document contains file paths to read and save the data that are relative to the code directory where the `03_HR_analysis.R` script resides so the paths aren’t correct when run from the .rmd file. Yesh! All sorts of relative path chaos - don’t worry if you are confused.
+> > The issue is that the code we are calling from within the rmd document contains file paths to read and save the data that are relative to the code directory where the `03_HR_analysis.R` script resides so the paths aren’t correct when run from the .rmd file. Yesh! 
 > {: .solution}
 {: .challenge}
 
 
-Well, there is a solution for this as well! (As with most every obstacle you run into with R). What we will do is use a handy feature for R Markdown which allows us to change the working directory of our R Markdown document. This means whenever using relative paths in our project they can always* be relative to the root directory, allowing us to standardize our relative file path and allieviate this file connection error. To do this we will learn additional global Knitr options.
+Thankfully, there is a solution for this! (As with most every obstacle you run into with R). What we will do is use a handy feature for R Markdown which allows us to change the working directory of our R Markdown document. This means whenever using relative paths in our project they can always* be relative to the root directory, allowing us to standardize our relative file path and allieviate this file connection error. To do this we will learn additional global Knitr options.
 
 *almost always
 
@@ -131,15 +131,16 @@ Now, what might be the issue with changing the working directory through the IDE
 
 ### Option #2: Change the working directory with a bit of code
 
-The second option requires a bit of code, but will overall be more reproducible (because it's not dependent on your personal RStudio IDE settings)
-This is a setting option in our global knitr settings:
+The second option requires a bit of code, but will overall be more reproducible (because it's not dependent on your personal RStudio IDE settings). To accomplish this, we will now use the `here` package introduced previously. 
+
+This is also a setting option in our global knitr settings:
 
 We will now navigate back up to the top of our `.rmd` document to the setup code chunk.  Then, we'll add the following line of code before or after our code for code chunk options (it wouldn't hurt to add a comment explaining what it does either):
 
 ~~~
-knitr::opts_knit$set(root.dir = rprojroot::find_rstudio_root_file())
+knitr::opts_knit$set(root.dir = here::here())
 ~~~
-*notice this code uses one of our pre-installed packages `rprojroot` to 
+*notice again this code uses a function from one of our pre-installed packages `here`. 
 
 ![global knitr settings](../fig/08-global-knitr-options.png)
 
