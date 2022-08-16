@@ -1,4 +1,6 @@
-# Introduction to Reproducible Publications with RStudio
+# Introduction to Reproducible Publications with RStudio (Quarto)
+
+This version is still in progress. We are updating the Rmarkdown content with Quarto.
 
 [![Create a Slack Account with us](https://img.shields.io/badge/Create_Slack_Account-The_Carpentries-071159.svg)](https://swc-slack-invite.herokuapp.com/)
 
