@@ -74,7 +74,7 @@ While reproducibility is the minimum requirement and can be solved with “good 
 >Source: This image was created by Scriberia for The Turing Way community DOI: [10.5281/zenodo.3
 332807](https://doi.org/10.5281/zenodo.3695300)
 
-If contributing to science and other researchers seems not to be compelling enough, here are 5 selfish reasons to work reproducibly according to Markowetz (2015):
+If contributing to science and other researchers seems not to be compelling enough, here are 5 selfish reasons to work reproducibly according to [Markowetz (2015)](https://doi.org/10.1186/s13059-015-0850-7):
 
 * Helps to avoid data loss and disaster
 * Makes it easier to write papers
@@ -88,6 +88,23 @@ Let’s assume that I have convinced you that reproducibility and transparency a
 
 From day one, and throughout the whole research life cycle! Before you start the project because you might have to learn tools like R or Git. While you do the analysis because if you wait too long you might lose a lot of time trying to remember what you did two months ago. When you write the paper because you want your numbers, tables, and figures to be up-to-date. When you co-author a paper, because you want to make sure that the analyses presented in a paper with your name on are sound. When you review a paper, because you can’t judge the results if you don’t know how the authors got there.
 
+[Alexander (2022)](https://tellingstorieswithdata.com/) suggests three steps towards better reproducibility:
+
+1) Ensure the entire workflow is documented. This may involve addressing questions such as:
+* How was the raw dataset obtained and is access likely to be persistent and available to others?
+* What specific steps are being taken to transform the raw data in the data that were analyzed, and how can this be made available to others?
+* What analysis has been done, which codes/scripts were used and how clearly can this be shared?
+* How has the final paper or report been built and to what extent can others follow that process themselves?
+
+2) Try to accomplish progressively with the following requirements:
+* Can you run your entire workflow again?
+* Can another person run your entire workflow again?
+* Can “future-you” run your entire workflow again?
+* Can “future-another-person” run your entire workflow again?
+
+3) Include a discussion about the limitations of the dataset, methods and workflows in the final paper or report.
+
+
 ### Levels of Reproducibility
 
 <figure>
@@ -100,7 +117,7 @@ A published article is like the top of a pyramid, meaning that a reproducible pa
 
 ## Advantages of using RStudio for your project
 
-RStudio is an integrated development environment (IDE) for R and Python. It includes a console, syntax-highlighting editor that supports direct code execution, as well as tools for plotting, history, debugging, collaboration, and workspace management. It is a powerful tool which supports research by weaving the principles of reproducibility throughout the entire research lifecycle, from data gathering to the statistical analysis, presentation and publication of results. 
+Understanding foundational aspects of RStudio enables a gradual improvement of scientific workflows and therefore, contributes to increasing research reproducibility compliance. RStudio is an integrated development environment (IDE) for R and Python. It includes a console, syntax-highlighting editor that supports direct code execution, as well as tools for plotting, history, debugging, collaboration, and workspace management. It is a powerful tool which supports research by weaving the principles of reproducibility throughout the entire research lifecycle, from data gathering to the statistical analysis, presentation and publication of results. 
 
 ### It is free and open-source
 
@@ -122,33 +139,39 @@ With RStudio, you can navigate to folders on your computer in the “Files” wi
 
 Another great advantage of using Rstudio for your R project is that the platform integrates with [GitHub](https://github.com). Once you connect RStudio with your GitHub account a remote repo becomes the “upstream” remote for your local repo. In essence, it enables you push and pull commits to GitHub allowing more seamless collaboration and more effective version control. RStudio also connects with [Rpubs](https://rpubs.com/) for easy R project web publishing.  
 
-### Creates documents using R Markdown
+### Creates documents using Quarto
 
-R Markdown is a variant of Markdown, a system for writing simple, readable text that is easily converted to html which allows you to write using an easy-to-read, easy-to-write plain text format.
+As seen, reproducibility implies sharing data, code, and workflows to produce the analysis and compute results. While writing scientific reports one may choose RStudio IDE to marry all these pieces together and taking advantage of various tools it integrates with. Having a publication while minimizing reproducibility friction can be accomplished with Quarto. [Quarto](https://quarto.org/) is a multi-language, next-generation version of R Markdown from RStudio. It includes new features and capabilities while at the same being able to render most existing Rmd files without any modification. With Quarto you can: 
 
-R Markdown belongs to the field of literate programming which is about weaving text and source code into a single document to make it easy to create reproducible web-based reports. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents and much, much more. R Markdown provides the flexibility of Markdown with the implementation of R input and output. For more details on using R Markdown check [http://rmarkdown.rstudio.com](http://rmarkdown.rstudio.com).
+* Create dynamic content with Rstudio/R, Python, Julia, and Observable.
+* Author documents as plain text markdown or Jupyter notebooks.
+* Publish high-quality articles, reports, presentations, websites, blogs, and books in HTML, PDF, MS Word, ePub, and more.
+* Author with scientific markdown, including equations, citations, crossrefs, figure panels, callouts, advanced layout, and more.
 
-The idea of literate programming shines some light on this dark area of science. This is an idea from Donald Knuth where you combine your text with your code output to create a document. This is a blend of your literature (text), and your programming (code), to create something that you can read from top to bottom. Imagine your paper - the introduction, methods, results, discussion, and conclusion, and all the bits of code that make each section. With R Markdown, you can see all the pieces of your data analysis altogether.
-
-You can include both text and code to execute. It is a convenient tool for reproducible and dynamic reports with R! With R Markdown, you are able to:
+Quarto generates a .qmd file that weaves together content and executable code into a elegantly formatted output which can be published in various formats. It is a convenient tool for reproducible and dynamic reports which will help you:
 
 1. Keep an eye on text (the paper) AND the source code. These computational steps are essential to ensure computational reproducibility.
-2. Conduct the entire analysis pipeline in an R Markdown document: data (pre-)processing, analysis, outputs, visualization.
+2. Conduct the entire analysis pipeline in an Quarto document: data (pre-)processing, analysis, outputs, visualization.
 3. Apply a formatting syntax that is part of the R ecosystem and supports LaTeX.
 4. Combine text written in Markdown and source code written in R (and other languages).
-5. Easily share R Markdown documents with colleagues, as supplemental material, or as the paper under review. Thanks to the package knitr, others can execute the document with a single click and receive, for example, HTML or PDF renderings.
+5. Easily share documents with colleagues, as supplemental material, or as the paper under review. 
 6. Get figures automatically updated if you change the underlying parameters in the code. The error-prone task of exporting figures and uploading the right figure version to another platform is thus not needed anymore.
-7. Since Markdown is a text-based format, you can also use versioning control with Git.
+7. Since it uses a text-based format, you can also use versioning control with Git.
 8. If you do not make any changes to the document after creating the output document, you can be sure that the paper was executable at least at the time of submission.
 9. Refer to the corresponding code lines in the methodology section making it unnecessary to use pseudocode, high-level textual descriptions, or just too many words to describe the computational analysis.
-10. Use packages such as rticles to use templates from publishers and create submission-ready documents.
 
+> ## Why Quarto and not R Markdown?
+>
+> This workshop was first developed and taught around R Markdown [see Reproducible Publications with RStudio](https://github.com/carpentries-incubator/Reproducible-Publications-with-RStudio/issues). [FIXME]
+> 
+> 
+{: .callout}
 
 ## Some Real-world Applications
 
-Finally, three real-world examples that motivated the authors of this lesson to value and use R Markdown:
+Finally, three real-world examples that motivated the authors of this lesson to value and use Quarto:
 
-1. Greg Janee quickly put together a simple but compelling R Markdown document describing his [survey results](https://gjanee.github.io/name-survey/).  The ease with which he created his plots is a testament to the power of R as a data analysis environment, but the ease with which he was able to publish a page on the web is a testament to R Markdown and Github as a publishing environment. Notice that he did *not* have to: create plots in a tool and then export the plots as images; write any HTML; embed plot images in HTML; or create a site under Wordpress or other web hosting service.  Instead, he directly published his R code as he wrote it, and using GitHub, made it appear on the web with a button click.
+1. [FIXME]ENTER NEW EXAMPLE WITH QUARTO!
 
 2. One of us wanted to create a short document that included some math formulas. The LaTeX document preparation can be used for this, but it is difficult to use and is overkill for just a few formulas in otherwise plain text. R Markdown lets you use just the best part of LaTeX---math formatting---while letting you write your text in a user-friendly way.
 
