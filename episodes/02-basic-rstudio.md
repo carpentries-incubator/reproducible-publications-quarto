@@ -1,20 +1,20 @@
 ---
 source: Rmd  
-title: "Navigating RStudio and R Markdown Documents"  
+title: "Navigating RStudio and Quarto Documents"  
 teaching: 20
 exercises: 10
 questions:
 - How do you find your way around RStudio?
-- How do you start an R Markdown document in Rstudio?
-- How is an R Markdown document configured and how do I work with it?
+- How do you start an Quarto document in Rstudio?
+- How is an Quarto document configured and how do I work with it?
 objectives:
 - Understand key functions in Rstudio.
-- Learn about the structure of a Rmarkdown file.
-- Understand the workflow of an R Markdown file.
+- Learn about the structure of a Quarto file.
+- Understand the workflow of an Quarto file.
 keypoints:
 - RStudio has four panes to organize your code and environment.
 - Manage packages in RStudio using specific functions.
-- R Markdown documents combine text and code.
+- Quarto documents combine text and code.
 ---
 
 
@@ -22,7 +22,7 @@ keypoints:
 ## Getting Around RStudio
 
 Throughout this lesson, we're going to teach you some of the fundamentals of
-using R Markdown as part of your RStudio workflow.
+using Quarto as part of your RStudio workflow.
 
 We'll be using RStudio: a free, open source R Integrated Development Environment
 (IDE). It provides a built in editor, works on all platforms
@@ -32,7 +32,7 @@ version control and project management.
 This lesson assumes you already have a basic understanding of R and RStudio but
 we will do a brief tour of the IDE, review R projects and the best practices for
 organizing your work, and how to install packages you may want to use to work
-with R Markdown.
+with Quarto.
 
 **Basic layout**
 
@@ -79,17 +79,14 @@ Packages can be installed and updated from the Package tab with the *Install* an
 > {: .solution}
 {: .challenge}
 
-## Starting a R Markdown File
+## Starting a Quarto
 
-Start a new R Markdown document in RStudio by clicking File \> New File \> R Markdown...
+Start a new R Markdown document in RStudio by clicking File \> New File \> Quarto...
 
-![Opening a new R Markdown document](../fig/02-file-navigation-rmd.PNG)
+![Opening a new Quarto document][FIXME - ../fig/02-file-navigation-qmd.PNG]
 
-> ## Tip: Bonus! Note about R Notebooks:
-You may have noticed that the menu offers the option to create an R Notebook, which is essentially an interactive execution mode for R Markdown documents. Technically, R Markdown is a file, whereas R Notebook is a way to work with R Markdown files. R Notebooks do not have their own file format, they all use `.Rmd`. All R Notebooks can be 'knitted' to R Markdown outputs, and all R Markdown documents can be interfaced as a Notebook.
-{: .callout}
 
-If this is the first time you have ever opened an R Markdown file a dialog box
+If this is the first time you have ever opened an Quarto file a dialog box
 will open up to tell you what packages need to be installed. You shouldn't see the dialog box if you installed these packages before the workshop.
 
 For a mac:
