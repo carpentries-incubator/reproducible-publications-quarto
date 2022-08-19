@@ -162,9 +162,7 @@ Quarto generates a .qmd file that weaves together content and executable code in
 
 > ## Why Quarto and not R Markdown?
 >
-> This workshop was first developed and taught around R Markdown [see Reproducible Publications with RStudio](https://github.com/carpentries-incubator/Reproducible-Publications-with-RStudio/issues). [FIXME]
-> 
-> 
+> As noted before, Quarto is the next generation of R Markdown which we have previously taught in a previous workshop [see Reproducible Publications with RStudio](https://github.com/carpentries-incubator/Reproducible-Publications-with-RStudio); however, the anatomy of .rmd and .qmd files are very similar. So why moving to Quarto? While compatible with Python (and bash, Julia, C, SQL), R Markdown was designed primarily for R users. Quarto does not require R. Quarto runs computations into separate pluggable language "engines", which helps make this cross language functionality easier to support. In addition, because Quarto is designed to be compatible with existing formatsyou can render most existing .Rmd and Jupyter Notebooks with Quarto without modification. This low-pain process helps the transition to Quarto.
 {: .callout}
 
 ## Some Real-world Applications
@@ -173,9 +171,9 @@ Finally, three real-world examples that motivated the authors of this lesson to 
 
 1. [FIXME]ENTER NEW EXAMPLE WITH QUARTO!
 
-2. One of us wanted to create a short document that included some math formulas. The LaTeX document preparation can be used for this, but it is difficult to use and is overkill for just a few formulas in otherwise plain text. R Markdown lets you use just the best part of LaTeX---math formatting---while letting you write your text in a user-friendly way.
+2. One of us wanted to create a short document that included some math formulas. The LaTeX document preparation can be used for this, but it is difficult to use and is overkill for just a few formulas in otherwise plain text. As we will learn, through Pandoc, Quarto lets you use just the best part of LaTeX---math formatting---while letting you write your text in a user-friendly way. The editor will automatically recognize the syntax and treat the equation as math.
 
-3. In this lesson we will be constructing a scientific paper that is based on an actual *Nature* publication and attendant survey and data.  In trying to recreate the plots the original authors created, we found it difficult and time-consuming to figure out exactly how the authors created their plots.  Out of the many columns in their data, many with similar-sounding names, which did they use?  How did they handle missing data?  Exactly what operations did they perform to compute aggregate values?  How much easier it would have been if they had published the code they used along with their paper. R Markdown allows you to do this.
+3. In this lesson we will be constructing a scientific paper that is based on an actual *Nature* publication and attendant survey and data.  In trying to recreate the plots the original authors created, we found it difficult and time-consuming to figure out exactly how the authors created their plots.  Out of the many columns in their data, many with similar-sounding names, which did they use?  How did they handle missing data?  Exactly what operations did they perform to compute aggregate values?  How much easier it would have been if they had published the code they used along with their paper. RStuido and Quarto allows you to do this.
 
 Our goal is that by the end of this workshop you will be able to create a reproducible report. This template is a short and adapted version of the data paper referenced below:
 
