@@ -83,19 +83,22 @@ Packages can be installed and updated from the Package tab with the *Install* an
 
 Start a new R Markdown document in RStudio by clicking File \> New File \> Quarto...
 
-![Opening a new Quarto document][../fig/02-file-navigation-qmd.PNG]
+![Opening a new Quarto document](../fig/02-file-navigation-qmd.PNG)
 
 
 If this is the first time you have ever opened an Quarto file a dialog box
 will open up to tell you what packages need to be installed. You shouldn't see the dialog box if you installed these packages before the workshop.
 
+
+
+
 For a mac:
-![First time R Markdown install packages dialog box mac](../fig/02-install-rmd-pkg-mac.png)
+![First time Quarto installs packages dialog box mac](../fig/02-install-rmd-pkg-mac.png)
 
 
 [FIXME - Windows users help to get an updated screenshot!]
 For windows:
-![First time R Markdown install packages dialog box windows](../fig/02-install-rmd-pkg-win.png)
+![First time Quarto installs packages dialog box windows](../fig/02-install-rmd-pkg-win.png)
 
 
 Click "Yes". The packages will take a few seconds (to a few minutes) to install.
