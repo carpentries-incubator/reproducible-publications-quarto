@@ -83,7 +83,7 @@ Packages can be installed and updated from the Package tab with the *Install* an
 
 Start a new R Markdown document in RStudio by clicking File \> New File \> Quarto...
 
-![Opening a new Quarto document][FIXME - ../fig/02-file-navigation-qmd.PNG]
+![Opening a new Quarto document][../fig/02-file-navigation-qmd.PNG]
 
 
 If this is the first time you have ever opened an Quarto file a dialog box
@@ -103,7 +103,7 @@ You should see that each package was installed successfully in the dialog box.
 Once the package installs have completed, a dialog box will pop up and ask you
 to name the file and add an author name (may already know what your name is) The default output is HTML and as the wizard indicates, it is the best way to start and in your final version or later versions you have the option of changing to pdf or word document (among many other output formats! We'll see this later).
 
-### Naming your new R Markdown Document
+### Naming your new Quarto Document
 
 ![Name new .Rmd file](../fig/02-name-new-rmd.PNG)
 
