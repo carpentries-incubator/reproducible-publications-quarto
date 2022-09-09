@@ -91,14 +91,13 @@ will open up to tell you what packages need to be installed. You shouldn't see t
 
 
 
-
 For a mac:
-![First time Quarto installs packages dialog box mac](../fig/02-install-rmd-pkg-mac.png)
+![First time Quarto installs packages dialog box mac](../fig/02-install-rmd-pkg-mac.png) [FIXME - replace image]
 
 
 [FIXME - Windows users help to get an updated screenshot!]
 For windows:
-![First time Quarto installs packages dialog box windows](../fig/02-install-rmd-pkg-win.png)
+![First time Quarto installs packages dialog box windows](../fig/02-install-rmd-pkg-win.png) [FIXME  - replace image]
 
 
 Click "Yes". The packages will take a few seconds (to a few minutes) to install.
@@ -109,36 +108,37 @@ to name the file and add an author name (may already know what your name is) The
 
 ### Naming your new Quarto Document
 
-![Name new .Rmd file](../fig/02-name-new-rmd.PNG)
+![Name new .qmd file](../fig/02-name-new-rmd.PNG) [FIXME  - replace image]
 
-New R Markdown files will have a generic template unless you click the
+New Quarto files will have a generic template unless you click the
 "Create Empty Document" in the bottom left-hand corner of the dialog box.
+[FIX ME - Add info about engine "knitr"]
 
-Note that you have the option to select *Use the current date when rendering the document*. If you choose so, this will generate the date dynamically each time you knit your document and replace the rmd creation date with the inline R expression: "\`r Sys.Date()\`". You may also consider exploring changing date formats [following these tips](https://bookdown.org/yihui/rmarkdown-cookbook/update-date.html).
+Note that you have the option to select *Use the current date when rendering the document*. If you choose so, this will generate the date dynamically each time you knit your document and replace the rmd creation date with the inline R expression: "\`r Sys.Date()\`". You may also consider exploring changing date formats [following these tips](https://bookdown.org/yihui/rmarkdown-cookbook/update-date.html). [FIXME  - no such option]
 
-If you see this default text you're good to go: ![.Rmd new file generic template](../fig/02-rmd-new-template.PNG)
+If you see this default text you're good to go: ![.Rmd new file generic template](../fig/02-rmd-new-template.PNG) [FIXME  - replace image]
 
 ### Visual Editor vs. Source Editor
 
-RStudio released a new major update to their IDE in January 2020, which includes a new "visual editor" for R Markdown to supplement their original editor (which we will call the source editor) for authoring with R Markdown syntax. The new visual editor is friendlier with a graphical user interface similar to Word or Google docs that lets you choose styling options from the menu (before you had to either have the R Markdown code memorized or look it up for each of your styling choices). Another major benefit is that the new editor renders the R Markdown styling in real time so you can preview your paper before rendering to your output format.
+RStudio released a new major update to their IDE in January 2020, which includes a new "visual editor" to supplement their original editor (which we will call the source editor) for authoring with Markdown syntax. The new visual editor is friendlier with a graphical user interface similar to Word or Google docs that lets you choose styling options from the menu (before you had to either have the R Markdown code memorized or look it up for each of your styling choices). Another major benefit is that the new editor renders the R Markdown styling in real time so you can preview your paper before rendering to your output format.
 
 #### Source Editor
 
-The image below displays the default R Markdown template in the "source editor" mode. Notice the symbols scattered throughout the text (#, *, <>). Those are examples of R Markdown syntax, which is a flavor of Markdown syntax, an easy and quick, human-readable markup language for document styling.
+The image below displays the default R Markdown template in the "source editor" mode. Notice the symbols scattered throughout the text (#, *, <>). Those are examples of R Markdown syntax, which is a flavor of Markdown syntax, an easy and quick, human-readable markup language for document styling. [FIXME - remove, no such feature in Quarto]
 
-![Add image source editor](../fig/02-rmd-new-template.PNG)  
+![Add image source editor](../fig/02-rmd-new-template.PNG) [FIXME  - replace image]
 
 
 > ## CHALLENGE 2.2 - Formatting with Symbols (optional)
-> In Rmd certain symbols are used to denote formatting that should happen to the text (after we "knit" or render). Before we knit, these symbols will show up seemingly "randomly" throughout the text and don't contribute to the narrative in a logical way. In the template Rmd document, there are three types of such symbols (##, **, <>) . Each symbol represents a different kind of formatting (think of your text formatting buttons you use in Word). Can you deduce from the surrounding text how these symbols format the surrounding text?  
+> In qmd certain symbols are used to denote formatting that should happen to the text (after we "knit" or render). Before we knit, these symbols will show up seemingly "randomly" throughout the text and don't contribute to the narrative in a logical way. In the template Rmd document, there are three types of such symbols (##, **, <>) . Each symbol represents a different kind of formatting (think of your text formatting buttons you use in Word). Can you deduce from the surrounding text how these symbols format the surrounding text?  
 > ```
-> ## R Markdown
+> ## Quarto Markdown
 >
-> This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+> This is an Quarto document which uses a simple formatting syntax for authoring HTML, PDF, MS Word documents and more. 
 >
 > When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 > ```
->> ## SOLUTION
+>> ## SOLUTION [FIXME]
 >> `##` is a heading, `**` is to bold enclosed text, and `<>` is for hyperlinks.
 >> Don't worry about this too much right now! This is an example of R Markdown syntax for styling, you won't need it if you stick to the visual editor, but it is recommended to get at least a basic understanding of R Markdown syntax if you plan to work with `.Rmd` documents frequently.
 > {: .solution}
@@ -148,18 +148,18 @@ The image below displays the default R Markdown template in the "source editor" 
 
 The new visual editor is accessible through a small button on the far right side of the script/document pane in RStudio. The icon is a protractor, but from further away it just looks like a squiggly "A". See the image below to find the visual editor button, it isn't the most obvious!
 
-![change to visual editor](../fig/02-visual-editor-spotlight.png)  
+![change to visual editor](../fig/02-visual-editor-spotlight.png)  [FIXME  - replace image]
 
 Thankfully, the newer versions of RStudio (2022 onward), have made it easier to find the button to change to visual mode:
 
-![new visual editor](../fig/02-visual-editor-updated.png)
+![new visual editor](../fig/02-visual-editor-updated.png) [FIXME  - replace image]
 
 #### Visual Editor
 
 We've already touched on the visual editor and it's useful features, but now that we've switched to the visual editor take another look at your document and see what's changed.
 You'll notice that formatting elements like headings, hyperlinks and bold have been generated automatically, giving us a preview of how our text will render. However, the visual editor does not run any code automatically, we'll have to do that manually (but we will learn how to do that later on).
 
-![Add image visual editor](../fig/02-visual-editor.PNG)  
+![Add image visual editor](../fig/02-visual-editor.PNG)  [FIXME  - replace image]
 
 We will proceed using the visual editor during this workshop as it is more
 user-friendly and allows us to talk about styling without needing to teach the
@@ -169,12 +169,11 @@ increases your abilities to format and style your paper without relying on the
 visual editor options.
 
 
-> ## Tip: Resources to learn R Markdown  
-> if you want to learn how to use the source editor (as we call it) please see
-> the the [Pandoc Markdown Documentation](https://pandoc.org/MANUAL.html#philosophy).
-> You will need to know Markdown formatting (specifically R-flavored Markdown).       
+> ## Tip: Resources to learn more about Quarto
+> If you want to learn more about the source editor (as we call it) please see
+> the the [Quarto Guide](https://quarto.org/docs/guide).
 {: .callout}
 
 
-Now we'll get into how our R Markdown file & workflow is organized and then on
+Now we'll get into how our Quarto file & workflow is organized and then on
 to editing and styling!
