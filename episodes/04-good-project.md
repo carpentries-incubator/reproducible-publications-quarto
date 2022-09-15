@@ -119,7 +119,7 @@ For our project we’re working in today, we used the following setup for folder
 
 > ## Challenge 4.1: Take a few minutes to look through the workshop project files
 > 
-> Please take some time to look through the project files. Either the screenshot above, or you may browse the files on GitHub at <[https://github.com/UCSBCarpentry/Reproducible-rmd](https://github.com/UCSBCarpentry/Reproducible-rmd)>. What do each of the directories (folders) contain? What is their purpose? 
+> Please take some time to look through the project files. Either the screenshot above, or you may browse the files on GitHub at <[https://github.com/carpentries-incubator/Reproducible-Publications-with-RStudio-Example/tree/quarto](https://github.com/carpentries-incubator/Reproducible-Publications-with-RStudio-Example/tree/quarto)>. What do each of the directories (folders) contain? What is their purpose? 
 > 
 > See the solution drop-down for an explanation of each directory's contents.
 >
@@ -133,9 +133,9 @@ For our project we’re working in today, we used the following setup for folder
 > >	- **/data:** contains the output data file after applying custom pre-processing function  
 > >	- **/plots:** contains pdfs of the plots generated from the plot scripts in the code folder  
 > > - **report:** all files needed for the publication of the research project  
-> > 	- **/source:** .Rmd file for the paper and additional files needed for rendering the paper  
+> > 	- **/source:** .qmd file for the paper and additional files needed for rendering the paper  
 > >      - **/fig:** contains the images created specifically (not through the analysis scripts) for the paper  
-> >	- **/output:** contains the final output of the Rmd paper  
+> >	- **/output:** contains the final output of the Quarto paper  
 > > - **R-repro-pub.Rproj:** the R project file that lives in the root directory.  
 > > - **README.md:** a detailed project description with all collaborators listed.
 > > - **CITATION.md:** directions to cite the project.
