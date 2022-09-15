@@ -181,7 +181,7 @@ This pull, add, commit, push routine will become second nature. Pulling at the b
 
 ## Your first edit
 
-Now, let's open up the report in this repository that's already been drafted. The R Markdown document for the report is located in `report/source`. It is called: `DataPaper-ReproducibilityWorkshop.rmd` The first edit we will make is to the yaml file of this draft report so we can practice using version control.
+Now, let's open up the report in this repository that's already been drafted. The Quarto document for the report is located in `report/source`. It is called: `DataPaper-ReproducibilityWorkshop.qmd` The first edit we will make is to the yaml file of this draft report so we can practice using version control.
 
 In the title add "(Carpentry Workshop Version)" and make sure to save.
 
