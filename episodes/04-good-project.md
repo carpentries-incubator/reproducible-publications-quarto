@@ -25,8 +25,7 @@ keypoints:
 
 
 ## Managing Research Projects in R
-Now that we’ve learned some of the basics of authoring in RStudio with 
-R Markdown documents, let’s take a step back and talk about research project 
+Now that we’ve learned some of the basics of authoring Quarto documents, let’s take a step back and talk about research project 
 management as a whole. 
 
 The ability to integrate code and narratives is a major advantage of the RStudio 
@@ -38,7 +37,7 @@ members, graduate students, faculty from the same or different institutions,
 which makes it that much more difficult to keep projects organized. When you 
 throw data into the mix (sometimes huge amounts of it!), it’s integral to use 
 best practices to maintain the integrity of your analysis and to be able to 
-publish high quality and reproducible research. Using R Markdown is a powerful 
+publish high quality and reproducible research. Quarto is a powerful 
 tool, but it can’t be fully utilized unless your project documents, scripts and 
 other files are well-organized. So let’s take a look at RStudio’s features to 
 manage projects and discuss some of the best practices when working with data 
@@ -222,7 +221,7 @@ In the complete path example you can see that the code is not going to be portab
 > We can employ a package called "here" to do this. `Here` has a function which always references the root (or top-level) directory of your project (i.e. where the .rproj file lives). Conviniently, that function is called `here()`. `here()` gives us a consistent starting path when building relative paths. We'll see how this is used later in the lesson.
 
 - Read the CRAN documentation here: [here](https://cran.r-project.org/web/packages/here/vignettes/here.html)
-- [Read more about how the `here` package can be useful for R Markdown files specifically](http://jenrichmond.rbind.io/post/how-to-use-the-here-package/)
+- [Read more about how the `here` package can be useful for R Markdown and Quarto files specifically](http://jenrichmond.rbind.io/post/how-to-use-the-here-package/)
 {: .callout}
 
 #### **Treat data as read only**  
@@ -270,7 +269,7 @@ Who has used R Projects before?
 
 ### Working in R Projects
 
-One of the most powerful and useful aspects of RStudio is its project management functionality. We’ll be using an R project today to complement our R Markdown document and bundle all the files needed for our paper into one self-contained, reproducible bundle. An `.Rproj` file helps keep your R scripts, data and other files together - just navigate through your file system to get to your project directory and double click on the .Rproj file. The added benefit is that the .RProj file will automatically open RStudio and start your R session in the same directory as the `.Rproj` file and remember exactly where you left off. .RProj files are powerful ways to stay organized on their own, but they also unlock the additional benefit of being able to use Git within RStudio. 
+One of the most powerful and useful aspects of RStudio is its project management functionality. We’ll be using an R project today to complement our Quarto document and bundle all the files needed for our paper into one self-contained, reproducible bundle. An `.Rproj` file helps keep your R scripts, data and other files together - just navigate through your file system to get to your project directory and double click on the .Rproj file. The added benefit is that the .RProj file will automatically open RStudio and start your R session in the same directory as the `.Rproj` file and remember exactly where you left off. .RProj files are powerful ways to stay organized on their own, but they also unlock the additional benefit of being able to use Git within RStudio. 
 
 > ## Challenge 4.4: R Project in “root” folder
 > `.Rproj` files must be in the root directory of your project folder/directory. What is the root directory again (look back at the relative paths intro)?  

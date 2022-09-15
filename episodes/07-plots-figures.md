@@ -6,45 +6,45 @@ exercises: 20
 questions:
 - "What is Knitr?"
 - "What are code chunks and how they are structured?"
-- "How can you run code from your rmd document?"
+- "How can you run code from your Quarto document?"
 - "What are global knitr options?"
 - "What are global chunk options?"
 objectives:
 - "Understand the syntax of a code chunk."
 - "Learn how to insert run-able blocks of code to integrate into your report"
-- "Learn how to source external scripts to run within an rmd document."
+- "Learn how to source external scripts to run within an Quarto document."
 - "Learn about using global knitr options and global chunk options"
 keypoints:
-- "Knitr will render your code and R markdown-formatted text and output your document format of choice"
+- "Knitr will render your code and markdown-formatted text and output your document format of choice"
 - "Code chunks are runable piece of R code. Each time you knit the document, calculations and plots will be run and displayed"
 - "Options for code chunks can be set at the individual level or at the global level"
 ---
 
-## Utilizing the Code Features of R Markdown
+## Utilizing the Code Features of Quarto
 
-We've learned about the text-formatting options of R Markdown, now let's dive into the code portion of R Markdown documents. R Markdown flips around the defaults of code and text in the documents. Instead of priortizing the code and making you comment out (#) text, they priortize text and force you to specially signal the code portions. How do you signal to R the difference between code and text when you're not using code commments (#)? That's where "Code Chunks" come into play (Yes that's RStudio's technical name for them). Instead of R Markdown's rendering system processing the markdown styling into the final output, Code chunks are sent to a preceding stage of processing by Knitr, which "knits" the code output and text together. Secondly, rmarkdown processes the code output and displays it in the document format of our choice - i.e. Knitr runs the lines of code for a plot in a code chunk, joins it to the markdown text portions, and rmarkdown outputs that as an html document. 
+We've learned about the text-formatting options of Quarto , now let's dive into the code portion of Quarto documents. Quarto flips the defaults of code and text - instead of priortizing the code and making you comment out (#) text such as in R scripts, they priortize text and force you to specially comment the code portions. How do you signal to R the difference between code and text when you're not using code commments (#)? That's where "Code Chunks" come into play (Yes that's RStudio's technical name for them). Instead of Quarto's rendering system processing the markdown styling into the final output, Code chunks are sent to a preceding stage of processing by Knitr, which "knits" the code output and text together. Secondly, Quarto processes the code output and displays it in the document format of our choice - i.e. Knitr runs the lines of code for a plot in a code chunk, joins it to the markdown text portions, and Quarto outputs that as an html document. 
 
 ## What is Knitr?
 
-But what is Knitr? Knitr is the engine in RStudio which creates the “dynamic” part of R Markdown reports. It’s specifically a package that allows the integration of R code into the html, word, pdf, or LaTex document you have specified as your output for R Markdown. It utilizes Literate Programming to make research more reproducible. There are two main ways to process code with Knitr in R Markdown documents:
+But what is Knitr? Knitr is the engine in RStudio which creates the “dynamic” part of Quarto reports. It’s specifically a package that allows the integration of R code into the html, word, pdf, or LaTex document you have specified as your output for Quarto. It utilizes Literate Programming to make research more reproducible. There are two main ways to process code with Knitr in Quarto documents:
 
 1. Code Chunks
 2. Inline Code
 
-First, we're going to talk about code chunks more substantial portions of code into our narrative such as figures and plots. There are a plethora of options that become available to us when using code chunks so this tends to be the more complex part of R Markdown documents. Now, sometimes you just need to do a quick calculation - like a count of total observations in your data or the mean of one of your variables. In those cases, it may not be worth setting up a code chunk to calculate those values, so after code chunks we will see how to add inline code - which allows one to add a quick line of code or single function to be executing within the text portion of the document. But let's start with code chunks.
+First, we're going to talk about code chunks more substantial portions of code into our narrative such as figures and plots. There are a plethora of options that become available to us when using code chunks so this tends to be the more complex part of Quarto documents. Now, sometimes you just need to do a quick calculation - like a count of total observations in your data or the mean of one of your variables. In those cases, it may not be worth setting up a code chunk to calculate those values, so after code chunks we will see how to add inline code - which allows one to add a quick line of code or single function to be executing within the text portion of the document. But let's start with code chunks.
 
 ## Inserting Code Chunks
 
 Code chunks are better when you need to do something more sophisticated with your code than inline code, such as building plots or tables.  They also incorporate syntax which allows modifications to how that code is rendered and styled in your final output. We’ll learn more about that as we walk through the “anatomy” of a code chunk.
 
-### Start a new .Rmd File
-First, though, let's open a new `.rmd` document to get a look at how code chunks work before integrating them into our paper. 
+### Start a new .qmd File
+First, though, let's open a new `.qmd` document to get a look at how code chunks work before integrating them into our paper. 
 
-Again, open a new document by navigating to `File > New File > R Markdown`. Add the title `Code-Chunk-Test`. 
+Again, open a new document by navigating to `File > New File > Quarto Document`. Add the title `Code-Chunk-Test`. 
 
 Let's first delete the generic text because we don't need it at this point (all except the first code chunk that is - we'll get back to that in a second).
 
-![Default RMD just setup chunk](../fig/07-setup-chunk-rmd.png)
+![Default QMD just setup chunk](../fig/07-setup-chunk-rmd.png)
 
 ### Basic Anatomy of the Code Chunk
 
@@ -55,7 +55,7 @@ You can quickly insert chunks like these into your file with:
 
 The most basic (and empty) code chunk looks like so:
 
-![blank Rmd code chunk](../fig/08-blank-code-chunk.png)
+![blank qmd code chunk](../fig/08-blank-code-chunk.png)
 
 Other than our backticks ``` for code chunks that surround the code top and bottom, the only **required** piece is the specified language (r) placed between the curly brackets. This indicates that the language to read the code is R.
 
@@ -110,10 +110,10 @@ Did it work? Look under the code chunk. You should now see a plot preview displa
 
 ## Knitting with Code Chunks
 
-We just saw how to run our code in our code chunks to see a preview of the code output that will render in our html document but to actually render it we need to use the Knit button. Using the knit button with code chunks is a two step process - first the code is run (all code chunks will run automatically). Second, (if there are no code errors) the document of choice will render for our whole R Markdown document. 
+We just saw how to run our code in our code chunks to see a preview of the code output that will render in our html document but to actually render it we need to use the Knit button. Using the knit button with code chunks is a two step process - first the code is run (all code chunks will run automatically). Second, (if there are no code errors) the document of choice will render for our whole Quarto document. 
 
 > ## Time to Knit!
-> Now, let's knit the R Markdown file and see how our code output looks in the final html page. 
+> Now, let's knit the Quarto file and see how our code output looks in the final html page. 
 {: .checklist}
 
 ![code chunk with plot1 code](../fig/07-knit.png) 
@@ -122,13 +122,13 @@ Wait... what's all that output in our document? We don't want that in our paper!
 
 ![Heart rate code no options for code chunk](../fig/07-HR-output-no-options.PNG)
 
-This happens because the output from running code (messages, results, warnings, etc.) get's added to the R Markdown document instead of being printed to the console. Let's see about adjusting the output to make it look better with code chunk rendering options. 
+This happens because the output from running code (messages, results, warnings, etc.) get's added to the Quarto document instead of being printed to the console. Let's see about adjusting the output to make it look better with code chunk rendering options. 
 
 ## Code Chunk Naming and Options
 
 ### Name Your Code Chunk
 
-Before we get to fixing how our code output looks, let's pause a second and give our code chunk a name (also called a label). While not necessary for running your code, it is good practice is to give a name to each code chunk because it gives the chunk a unique identifier which allows for more advanced options (such as cross-referencing) to work with your rmd files later on:
+Before we get to fixing how our code output looks, let's pause a second and give our code chunk a name (also called a label). While not necessary for running your code, it is good practice is to give a name to each code chunk because it gives the chunk a unique identifier which allows for more advanced options (such as cross-referencing) to work with your qmd files later on:
 
 `{r chunk-name}`
 
@@ -148,6 +148,7 @@ We’ll see in a bit where this code chunk label comes in handy. But, for now le
 
 There are over 50 different code chunk options!!! Obviously we will not go over all of them, but they fall into several larger categories including: code evaluation, text output, code style, cache options, plot output and animation. We’ll talk about a few options for code evaluation, text output and plot output specifically.
 
+#FIXME
 > ## Tip: Learn more about code chunk options
 > Find a complete list of code chunk options on Knitr developer, Yihui Xie's, [online guide to knitr](https://yihui.org/knitr/options/). Or, you can find a brief list of all options on the R Markdown Reference guide on page 3 accesible through the RStudio Interface by navigating to the main menu bar `Help > Cheat Sheets > R Markdown Reference Guide`.
 {: .callout}
@@ -245,7 +246,7 @@ The code looks like:
 
 ![Code Chunk Option Setup](../fig/07-setup-chunk.png)
 
-This is an option to globally set options for the entire R Markdown document. 
+This is an option to globally set options for the entire Quarto document. 
 
 With our first plot we set the four options that adjust how that one chunk renders. However, we may end up with quite a few code chunks in our paper. For example, if we have 10 code chunks in the final paper, can you imagine how much work it would be to add the options in manually each time? and if we need different options for different figures, it could be a lot of work to keep track of what options we’re using throughout the paper. We can automate setting options by adding this special code chunk at the beginning of the document. Then, each code chunk we add will refer to those “global” options when it runs.
 
@@ -265,7 +266,7 @@ Now, let's navigate back to our paper `` and add global options there.
 
 To set global options that apply to every chunk in your file, we will call `knitr::opts_chunk$set()` in a new code chunk right after our yaml header (name the new code chunk `setup`.
 
-Knitr will treat each option that we add to this call as default settings for all code chunks. However, we will need to set the options for this code chunk in the first place! so make sure to use `include = FALSE` as in the generic R Markdown document.
+Knitr will treat each option that we add to this call as default settings for all code chunks. However, we will need to set the options for this code chunk in the first place! so make sure to use `include = FALSE` as in the generic Quarto document.
 
 In the `()` after the `knitr::opts_chunk$set()` add the options:
 
@@ -282,7 +283,7 @@ Alright! That sets us up well for adding code chunks into our paper (which we wi
 > ...considering the global chunk settings were as listed: 
 > `knitr::opts_chunk$set(echo = FALSE, include = FALSE)`  
 >> ## SOLUTION  
->> In this case, the global settings are set so neither the code nor the output will display. However, the individual chunk reverses the echo setting so the code will display, and it also indicates that any warnings the code renders should output too. The outputs of the code would still not be displayed (include = FALSE) The hypothetical situation for this configuration may be for debugging while writing the rmd document.   
+>> In this case, the global settings are set so neither the code nor the output will display. However, the individual chunk reverses the echo setting so the code will display, and it also indicates that any warnings the code renders should output too. The outputs of the code would still not be displayed (include = FALSE) The hypothetical situation for this configuration may be for debugging while writing the qmd document.   
 > {: .solution}  
 {: .challenge}
 
