@@ -171,3 +171,7 @@ Rscript -e 'knitr::knit("./_episodes_rmd/07-code-chunks.Rmd", output = "./_episo
 ~~~
 
 
+### Releases and Roadmap
+
+- 2022-09-23 release [version 1.0](../../releases/tag/v1.0-rmarkdown) - This version compatibile with R-studio "Ghost Orchid" Release 2021.09.02 or thereabouts.
+- Fall-Winter 2022 plan to update this workshop for compatibility with [Quarto](https://quarto.org) 
