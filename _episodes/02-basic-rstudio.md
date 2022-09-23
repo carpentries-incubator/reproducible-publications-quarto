@@ -42,12 +42,13 @@ When you first open RStudio, you will be greeted by three panels:
 -   Environment/History/Connections (tabbed in upper right)
 -   Files/Plots/Packages/Help/Viewer (tabbed in lower right)
 
-![RStudio layout](../fig/02-rstudio.PNG)
+![RStudio layout](../fig/02-rstudio.PNG) **FIXME update**
 
 Once you open files, such as .Rmd files or .R files, an editor panel will also
 open in the top left.
 
-![RStudio layout with .R file open](../fig/02-rstudio-script.PNG)
+![RStudio layout with .R file open](../fig/02-rstudio-script.PNG) **FIXME update**
+
 
 ### R Packages
 
@@ -77,6 +78,7 @@ Packages can be installed and updated from the Package tab with the *Install* an
 >> ## SOLUTION
 >> To see what packages are installed, use the `installed.packages()` command. This will return a matrix with a row for each package that has been installed. 
 > {: .solution}
+> **FIXME** Add solution with packages they should have available. Remove rticles (tremplates)?.
 {: .challenge}
 
 ## Starting a Quarto
@@ -88,7 +90,6 @@ Start a new R Markdown document in RStudio by clicking File \> New File \> Quart
 
 If this is the first time you have ever opened an Quarto file a dialog box
 will open up to tell you what packages need to be installed. You shouldn't see the dialog box if you installed these packages before the workshop.
-
 
 
 For a mac:
@@ -124,7 +125,7 @@ RStudio released a new major update to their IDE in January 2020, which includes
 
 #### Source Editor
 
-The image below displays the default R Markdown template in the "source editor" mode. Notice the symbols scattered throughout the text (#, *, <>). Those are examples of R Markdown syntax, which is a flavor of Markdown syntax, an easy and quick, human-readable markup language for document styling. [FIXME - remove, no such feature in Quarto]
+The image below displays the default quarto document in the "source editor" mode. Notice the symbols scattered throughout the text (#, *, <>). Those are examples of R Markdown syntax, which is a flavor of Markdown syntax, an easy and quick, human-readable markup language for document styling. [FIXME - remove, no such feature in Quarto]
 
 ![Add image source editor](../fig/02-rmd-new-template.PNG) [FIXME  - replace image]
 
