@@ -17,7 +17,7 @@ objectives:
 - Learn how to start a document from a template.
 
 keypoints:
-- An qmd file is comprised of a YAML header, formatted text in Rmd and code chunks.
+- An qmd file is comprised of a YAML header, formatted text in qmd and code chunks.
 - The knit function renders the file into the chosen output format.
 - Rstudio has some journals' templates that can save you some formatting time or you can make your own for frequent submissions.
 ---
@@ -25,10 +25,10 @@ keypoints:
 
 ## Anatomy of an Quarto Document
 
-The key to our reproducible workflow is using R Markdown files in RStudio rather than basic scripts to dynamically “knit” both code and paper narrative. So let’s do a quick anatomy lesson on the components of an R Markdown file (YAML header, R Markdown formatted, R code chunks) and how to render them into our final formatted document.
-There are four distinct steps in the R Markdown workflow:
+The key to our reproducible workflow is using Quarto files in RStudio rather than basic scripts to dynamically “knit” both code and paper narrative. So let’s do a quick anatomy lesson on the components of an Quarto file (YAML header, Quarto formatted, R code chunks) and how to render them into our final formatted document.
+There are four distinct steps in the Quarto workflow:
 1. create a **YAML header** (optional)  
-2. write R Markdown-formatted **text**   
+2. write Quarto-formatted **text**   
 3. add R **code chunks** for embedded analysis  
 4. render the document with **Knitr**  
 <br>
@@ -48,9 +48,9 @@ Quarto default YAML header includes the following metadata surrounded by three d
 * date  
 * output  
 
-![yaml highlighted in Rmd document](../fig/03-rmd-template-yaml.png) **FIXME - REPLACE IMAGE**
+![yaml highlighted in document](../fig/03-rmd-template-yaml.png) **FIXME - REPLACE IMAGE**
 
-The first three are self-explanatory, but what's the output? We saw this in the wizard for starting a new document, by default you are able to pick from pdf, html, and word document. Basically, this allows you to export your Rmd file as a file type of your choice. There are [other options for output](https://bookdown.org/yihui/rmarkdown/output-formats.html) and even more can be added by installing certain packages, but these are the three default options.   
+The first three are self-explanatory, but what's the output? We saw this in the wizard for starting a new document, by default you are able to pick from pdf, html, and word document. Basically, this allows you to export your qmd file as a file type of your choice. There are [other options for output](https://bookdown.org/yihui/rmarkdown/output-formats.html) and even more can be added by installing certain packages, but these are the three default options.   
 <br>
 
 We’ll see other formatting options for YAML later on including how to add bibliography information, customize our output, and change the default settings of the knit function. Below is an example of how our YAML file will look at the end of this workshop.
