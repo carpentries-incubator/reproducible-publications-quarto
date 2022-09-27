@@ -33,7 +33,7 @@ There are four distinct steps in the Quarto workflow:
 4. render the document with **Knitr**  
 <br>
 
-![R Markdown Workflow](../fig/03-rmd-workflow.png) **FIXME - REPLACE IMAGE**
+![R Markdown Workflow](../fig/03-qmd-workflow.png)
 
 Let’s dig in to those more:
 
@@ -48,7 +48,7 @@ Quarto default YAML header includes the following metadata surrounded by three d
 * date  
 * output  
 
-![yaml highlighted in document](../fig/03-rmd-template-yaml.png) **FIXME - REPLACE IMAGE**
+![yaml highlighted in document](../fig/03-qmd-template-yaml.png)
 
 The first three are self-explanatory, but what's the output? We saw this in the wizard for starting a new document, by default you are able to pick from pdf, html, and word document. Basically, this allows you to export your qmd file as a file type of your choice. There are [other options for output](https://bookdown.org/yihui/rmarkdown/output-formats.html) and even more can be added by installing certain packages, but these are the three default options.   
 <br>
