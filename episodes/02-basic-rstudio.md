@@ -99,7 +99,7 @@ If you see this default text you're good to go:
 
 ### Visual Editor vs. Source Editor
 
-Remember that in the settings we chose to use the visual editor? RStudio released a new major update to their IDE in January 2020, which includes a new "visual editor" to supplement their original editor (which we will call the source editor) for authoring with Markdown syntax. The visual editor follows the is friendlier with a graphical user interface similar to Word or Google docs that lets you choose styling options from the menu (before you had to either have the R Markdown code memorized or look it up for each of your styling choices). Another major benefit is that the new editor renders the styling in real time so you can preview your paper before rendering to your output format.
+Remember that in the settings we chose to use the visual editor? RStudio released a new major update to their IDE in January 2020, which includes a new "visual editor" to supplement their original editor (which we will call the source editor) for authoring with Markdown syntax. The visual editor follows the is friendlier with a graphical user interface similar to Word or Google docs that lets you choose styling options from the menu (before you had to either have the markdown code memorized or look it up for each of your styling choices). Another major benefit is that the new editor renders the styling in real time so you can preview your paper before rendering to your output format.
 
 #### Source Editor
 
@@ -112,7 +112,7 @@ If you toggle the source button, you will display your quarto document in the "s
 > Certain symbols are used to denote formatting that should happen to the text (after we "knit" or render). Before we knit, these symbols will show up seemingly "randomly" throughout the text and don't contribute to the narrative in a logical way. In the template qmd document, there are three types of such symbols (`##, **, <>`). Each symbol represents a different kind of formatting (think of your text formatting buttons you use in Word). Can you deduce from the surrounding text how these symbols format the surrounding text?  
 >> ## SOLUTION
 >> `##` is a heading, `**` is to bold enclosed text, and `<>` is for hyperlinks.
->> Don't worry about this too much right now! This is an example of markdown syntax for styling, you won't need it if you stick to the visual editor, but it is recommended to get at least a basic understanding of R Markdown syntax if you plan to work with `.qmd` documents frequently.
+>> Don't worry about this too much right now! This is an example of markdown syntax for styling, you won't need it if you stick to the visual editor, but it is recommended to get at least a basic understanding of markdown syntax if you plan to work with `.qmd` documents frequently.
 > {: .solution}
 {: .challenge}
 
