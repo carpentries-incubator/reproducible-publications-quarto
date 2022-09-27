@@ -128,6 +128,8 @@ familiar with markdown syntax as it
 increases your abilities to format and style your paper without relying on the
 visual editor options.
 
+Note that both the visual and the source editors offer the option to display an outline of your document ![image](https://user-images.githubusercontent.com/63265343/192625580-ad6bddc1-98b7-437e-8aaf-2190651d456b.png) which make it easier to navigate long documents. 
+
 
 > ## Tip: Resources to learn more about Quarto
 > If you want to learn more about the source editor (as we call it) please see
