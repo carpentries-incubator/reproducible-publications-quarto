@@ -109,17 +109,10 @@ If you toggle the source button, you will display your quarto document in the "s
 
 
 > ## CHALLENGE 2.2 - Formatting with Symbols (optional)
-> In qmd certain symbols are used to denote formatting that should happen to the text (after we "knit" or render). Before we knit, these symbols will show up seemingly "randomly" throughout the text and don't contribute to the narrative in a logical way. In the template Rmd document, there are three types of such symbols (##, **, <>) . Each symbol represents a different kind of formatting (think of your text formatting buttons you use in Word). Can you deduce from the surrounding text how these symbols format the surrounding text?  
-> ```
-> ## Quarto Markdown
->
-> This is an Quarto document which uses a simple formatting syntax for authoring HTML, PDF, MS Word documents and more. 
->
-> When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-> ```
->> ## SOLUTION [FIXME]
+> Certain symbols are used to denote formatting that should happen to the text (after we "knit" or render). Before we knit, these symbols will show up seemingly "randomly" throughout the text and don't contribute to the narrative in a logical way. In the template qmd document, there are three types of such symbols (`##, **, <>`). Each symbol represents a different kind of formatting (think of your text formatting buttons you use in Word). Can you deduce from the surrounding text how these symbols format the surrounding text?  
+>> ## SOLUTION
 >> `##` is a heading, `**` is to bold enclosed text, and `<>` is for hyperlinks.
->> Don't worry about this too much right now! This is an example of R Markdown syntax for styling, you won't need it if you stick to the visual editor, but it is recommended to get at least a basic understanding of R Markdown syntax if you plan to work with `.Rmd` documents frequently.
+>> Don't worry about this too much right now! This is an example of R Markdown syntax for styling, you won't need it if you stick to the visual editor, but it is recommended to get at least a basic understanding of R Markdown syntax if you plan to work with `.qmd` documents frequently.
 > {: .solution}
 {: .challenge}
 
