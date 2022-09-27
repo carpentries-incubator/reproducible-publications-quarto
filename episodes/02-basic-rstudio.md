@@ -91,19 +91,21 @@ You may name your Quarto document as "My-first-qmd".
 New Quarto files will have a generic template unless you click the
 "Create Empty Document" in the bottom left-hand corner of the dialog box.
 
-We will keep all pre-selected options: HTML as the output, knitr engine and the visual editor. The output might be changed at anytime. Knitr will be the engine used to execute the R codes and to render the document in Rstudio. 
+We will keep all pre-selected options: HTML as the output, knitr engine and the visual editor. The output might be changed at anytime and we can easily switch between the visual and the source editor. Knitr will be the engine used to execute the R codes and to render the document in Rstudio.
 
-If you see this default text you're good to go: ![.qmd new file generic template](../fig/02-qmd-new-template.PNG)
+If you see this default text you're good to go: 
+
+![.qmd new file generic template](../fig/02-qmd-new-template.PNG)
 
 ### Visual Editor vs. Source Editor
 
-RStudio released a new major update to their IDE in January 2020, which includes a new "visual editor" to supplement their original editor (which we will call the source editor) for authoring with Markdown syntax. The new visual editor is friendlier with a graphical user interface similar to Word or Google docs that lets you choose styling options from the menu (before you had to either have the R Markdown code memorized or look it up for each of your styling choices). Another major benefit is that the new editor renders the R Markdown styling in real time so you can preview your paper before rendering to your output format.
+Remember that in the settings we chose to use the visual editor? RStudio released a new major update to their IDE in January 2020, which includes a new "visual editor" to supplement their original editor (which we will call the source editor) for authoring with Markdown syntax. The visual editor follows the is friendlier with a graphical user interface similar to Word or Google docs that lets you choose styling options from the menu (before you had to either have the R Markdown code memorized or look it up for each of your styling choices). Another major benefit is that the new editor renders the styling in real time so you can preview your paper before rendering to your output format.
 
 #### Source Editor
 
-The image below displays the default quarto document in the "source editor" mode. Notice the symbols scattered throughout the text (#, *, <>). Those are examples of R Markdown syntax, which is a flavor of Markdown syntax, an easy and quick, human-readable markup language for document styling. [FIXME - remove, no such feature in Quarto]
+If you toggle the source button, you will display your quarto document in the "source editor" mode. Notice the symbols scattered throughout the text (#, *, <>). Those are examples of markdown syntax, an easy and quick, human-readable markup language for document styling.
 
-![Add image source editor](../fig/02-rmd-new-template.PNG) [FIXME  - replace image]
+![Add image source editor](../fig/02-qmd-source.PNG)
 
 
 > ## CHALLENGE 2.2 - Formatting with Symbols (optional)
