@@ -112,31 +112,19 @@ If you toggle the source button, you will display your quarto document in the "s
 > Certain symbols are used to denote formatting that should happen to the text (after we "knit" or render). Before we knit, these symbols will show up seemingly "randomly" throughout the text and don't contribute to the narrative in a logical way. In the template qmd document, there are three types of such symbols (`##, **, <>`). Each symbol represents a different kind of formatting (think of your text formatting buttons you use in Word). Can you deduce from the surrounding text how these symbols format the surrounding text?  
 >> ## SOLUTION
 >> `##` is a heading, `**` is to bold enclosed text, and `<>` is for hyperlinks.
->> Don't worry about this too much right now! This is an example of R Markdown syntax for styling, you won't need it if you stick to the visual editor, but it is recommended to get at least a basic understanding of R Markdown syntax if you plan to work with `.qmd` documents frequently.
+>> Don't worry about this too much right now! This is an example of markdown syntax for styling, you won't need it if you stick to the visual editor, but it is recommended to get at least a basic understanding of R Markdown syntax if you plan to work with `.qmd` documents frequently.
 > {: .solution}
 {: .challenge}
 
-#### Switch to the visual editor
-
-The new visual editor is accessible through a small button on the far right side of the script/document pane in RStudio. The icon is a protractor, but from further away it just looks like a squiggly "A". See the image below to find the visual editor button, it isn't the most obvious!
-
-![change to visual editor](../fig/02-visual-editor-spotlight.png)  [FIXME  - replace image]
-
-Thankfully, the newer versions of RStudio (2022 onward), have made it easier to find the button to change to visual mode:
-
-![new visual editor](../fig/02-visual-editor-updated.png) [FIXME  - replace image]
 
 #### Visual Editor
 
-We've already touched on the visual editor and it's useful features, but now that we've switched to the visual editor take another look at your document and see what's changed.
-You'll notice that formatting elements like headings, hyperlinks and bold have been generated automatically, giving us a preview of how our text will render. However, the visual editor does not run any code automatically, we'll have to do that manually (but we will learn how to do that later on).
-
-![Add image visual editor](../fig/02-visual-editor.PNG)  [FIXME  - replace image]
+Let's switch back to the visual editor. You'll notice that formatting elements like headings, hyperlinks and bold have been generated automatically, giving us a preview of how our text will render. However, the visual editor does not run any code automatically, we'll have to do that manually (but we will learn how to do that later on).
 
 We will proceed using the visual editor during this workshop as it is more
 user-friendly and allows us to talk about styling without needing to teach the
-whole R Markdown syntax system. However, we highly encourage you to become
-familiar with markdown syntax (specifically the R Markdown flavor) as it
+whole markdown syntax system. However, we highly encourage you to become
+familiar with markdown syntax as it
 increases your abilities to format and style your paper without relying on the
 visual editor options.
 
