@@ -10,7 +10,7 @@ questions:
 - "How can you cross-reference content?"
 
 objectives:
-- "Inserting citations and listing bibliography in an R Markdown file."
+- "Inserting citations and listing bibliography in an Quarto Document file."
 - "Changing citation styles."
 - "Customizing how citations and bibliography are displayed."
 - "Add cross-referencing directing your readers through your document."
@@ -26,7 +26,7 @@ keypoints:
 
 Correctly citing and attributing publications is key to academic writing. Older versions of RStudio require [Pandoc's](https://pandoc.org/MANUAL.html#citation-syntax) citation syntax to render bibliographies correctly. We won’t be covering this approach extensively in this workshop, since the new visual editor has made this process much more simple. You can refer to our [previous workshop on R Markdown](https://ucsbcarpentry.github.io/R-markdown/06-citations-bib/index.html) pre-visual editor for more information.  
 
-The new visual editor in RStudio 1.4 has made citations and cross-referencing much easier, by offering different options for referencing various types of sources. Before getting into these different features, let’s first learn how you can call the citation window dialog on Rstudio and how to navigate these different options.  
+The new visual editor has made citations and cross-referencing much easier, by offering different options for referencing various types of sources. Before getting into these different features, let’s first learn how you can call the citation window dialog on Rstudio and how to navigate these different options.  
 
 ## Calling Citation Options on Rstudio  
 
