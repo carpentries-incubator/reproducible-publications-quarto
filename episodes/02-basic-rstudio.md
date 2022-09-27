@@ -18,7 +18,6 @@ keypoints:
 ---
 
 
-
 ## Getting Around RStudio
 
 Throughout this lesson, we're going to teach you some of the fundamentals of
@@ -42,16 +41,17 @@ When you first open RStudio, you will be greeted by three panels:
 -   Environment/History/Connections (tabbed in upper right)
 -   Files/Plots/Packages/Help/Viewer (tabbed in lower right)
 
-![RStudio layout](../fig/02-rstudio.PNG) **FIXME update**
+![RStudio layout](../fig/02-rstudio.PNG) 
 
 Once you open files, such as .Rmd files or .R files, an editor panel will also
 open in the top left.
 
-![RStudio layout with .R file open](../fig/02-rstudio-script.PNG) **FIXME update**
+![RStudio layout with .R file open](../fig/02-rstudio-script.PNG) 
 
 
 ### R Packages
 
+Packages are the fundamental units of reproducible R code. They include reusable R functions, the documentation that describes how to use them, and sample data. They are collections of R functions, data, and compiled code in a well-defined format. The directory where packages are stored is called the library.
 It is possible to add functions to R by writing a package, or by obtaining a
 package written by someone else. As of this writing, there are over 10,000
 packages available on CRAN (the comprehensive R archive network). R and RStudio
@@ -78,38 +78,13 @@ Packages can be installed and updated from the Package tab with the *Install* an
 >> ## SOLUTION
 >> To see what packages are installed, use the `installed.packages()` command. This will return a matrix with a row for each package that has been installed. 
 > {: .solution}
-> **FIXME** Add solution with packages they should have available. Remove rticles (tremplates)?.
 {: .challenge}
 
-## Starting a Quarto
+## Starting and naming Quarto Document
 
-Start a new R Markdown document in RStudio by clicking File \> New File \> Quarto...
+Start a new Quarto document in RStudio by clicking File \> New File \> Quarto Document...
 
-![Opening a new Quarto document](../fig/02-file-navigation-qmd.PNG)
-
-
-If this is the first time you have ever opened an Quarto file a dialog box
-will open up to tell you what packages need to be installed. You shouldn't see the dialog box if you installed these packages before the workshop.
-
-
-For a mac:
-![First time Quarto installs packages dialog box mac](../fig/02-install-rmd-pkg-mac.png) [FIXME - replace image]
-
-
-[FIXME - Windows users help to get an updated screenshot!]
-For windows:
-![First time Quarto installs packages dialog box windows](../fig/02-install-rmd-pkg-win.png) [FIXME  - replace image]
-
-
-Click "Yes". The packages will take a few seconds (to a few minutes) to install.
-You should see that each package was installed successfully in the dialog box.
-
-Once the package installs have completed, a dialog box will pop up and ask you
-to name the file and add an author name (may already know what your name is) The default output is HTML and as the wizard indicates, it is the best way to start and in your final version or later versions you have the option of changing to pdf or word document (among many other output formats! We'll see this later).
-
-### Naming your new Quarto Document
-
-![Name new .qmd file](../fig/02-name-new-rmd.PNG) [FIXME  - replace image]
+![Name new .qmd file](../fig/02-name-new-qmd.PNG)
 
 New Quarto files will have a generic template unless you click the
 "Create Empty Document" in the bottom left-hand corner of the dialog box.
