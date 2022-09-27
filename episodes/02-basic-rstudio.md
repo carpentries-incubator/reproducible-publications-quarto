@@ -43,7 +43,7 @@ When you first open RStudio, you will be greeted by three panels:
 
 ![RStudio layout](../fig/02-rstudio.PNG) 
 
-Once you open files, such as .Rmd files or .R files, an editor panel will also
+Once you open files, such as .qmd, .rmd or .R files, an editor panel will also
 open in the top left.
 
 ![RStudio layout with .R file open](../fig/02-rstudio-script.PNG) 
