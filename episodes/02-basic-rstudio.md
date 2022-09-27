@@ -80,19 +80,20 @@ Packages can be installed and updated from the Package tab with the *Install* an
 > {: .solution}
 {: .challenge}
 
-## Starting and naming Quarto Document
+## Starting and Naming a new Quarto Document
 
 Start a new Quarto document in RStudio by clicking File \> New File \> Quarto Document...
 
 ![Name new .qmd file](../fig/02-name-new-qmd.PNG)
 
+You may name your Quarto document as "My-first-qmd".
+
 New Quarto files will have a generic template unless you click the
 "Create Empty Document" in the bottom left-hand corner of the dialog box.
-[FIX ME - Add info about engine "knitr"]
 
-Note that you have the option to select *Use the current date when rendering the document*. If you choose so, this will generate the date dynamically each time you knit your document and replace the rmd creation date with the inline R expression: "\`r Sys.Date()\`". You may also consider exploring changing date formats [following these tips](https://bookdown.org/yihui/rmarkdown-cookbook/update-date.html). [FIXME  - no such option]
+We will keep all pre-selected options: HTML as the output, knitr engine and the visual editor. The output might be changed at anytime. Knitr will be the engine used to execute the R codes and to render the document in Rstudio. 
 
-If you see this default text you're good to go: ![.Rmd new file generic template](../fig/02-rmd-new-template.PNG) [FIXME  - replace image]
+If you see this default text you're good to go: ![.qmd new file generic template](../fig/02-qmd-new-template.PNG)
 
 ### Visual Editor vs. Source Editor
 
