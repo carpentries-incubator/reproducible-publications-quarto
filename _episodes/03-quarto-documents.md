@@ -115,8 +115,9 @@ Click the "render" button.
 
 Before you can render your document, you'll need to give it a file name and choose what folder you want to save it to. Choose `my_first_qmd.qmd` as your file name and save it to an easily accessible directory in your file system.
 
-This is how our html document will render after clicking the knit button and choosing a file name:
-![Knit html output](../fig/03-knit-echoTRUE.PNG) **FIXME - REPLACE**
+Your document should render like that: <br>
+
+![Render html output](../fig/03-render-html.PNG) <br>
 
 > ## CHALLENGE 3.1 - Rendering the document in another format
 > Suppose you want this .qmd document to render as a word document. What options would you have?
