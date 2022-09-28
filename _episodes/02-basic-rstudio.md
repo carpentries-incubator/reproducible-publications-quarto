@@ -109,7 +109,7 @@ If you toggle the source button, you will display your quarto document in the "s
 
 
 > ## CHALLENGE 2.2 - Formatting with Symbols (optional)
-> Certain symbols are used to denote formatting that should happen to the text (after we "knit" or render). Before we knit, these symbols will show up seemingly "randomly" throughout the text and don't contribute to the narrative in a logical way. In the template qmd document, there are three types of such symbols (`##, **, <>`). Each symbol represents a different kind of formatting (think of your text formatting buttons you use in Word). Can you deduce from the surrounding text how these symbols format the surrounding text?  
+> Certain symbols are used to denote formatting that should happen to the text (after render it). Before that, these symbols will show up seemingly "randomly" throughout the text and don't contribute to the narrative in a logical way. In the template qmd document, there are three types of such symbols (`##, **, <>`). Each symbol represents a different kind of formatting (think of your text formatting buttons you use in Word). Can you deduce from the surrounding text how these symbols format the surrounding text?  
 >> ## SOLUTION
 >> `##` is a heading, `**` is to bold enclosed text, and `<>` is for hyperlinks.
 >> Don't worry about this too much right now! This is an example of markdown syntax for styling, you won't need it if you stick to the visual editor, but it is recommended to get at least a basic understanding of markdown syntax if you plan to work with `.qmd` documents frequently.
