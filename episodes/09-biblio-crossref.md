@@ -61,7 +61,7 @@ The DOI lookup uses the [persistent identifier](https://www.library.ucsb.edu/sit
 
 Rstudio will search the [DOI](https://support.datacite.org/docs/doi-basics) API and list the only matching result and you can insert it. After confirming this is the citation you would like to include, you can modify the key, if you would like to simplify it, and also choose if you would like to insert it as a in-text citation, meaning you would like to have the last name of the author(s) followed by a page number enclosed in parentheses. i.e., Kirschbaum and Hellhammer (2007), but in this case, we will uncheck that option since we won’t include authors as part of the narrative. Instead we would like to insert a parenthetical citation, where authors and year will be displayed inside the parentheses such as (Kirschbaum and Hellhammer 2007). You may insert more than one citation by selecting multiple items.  
 
-This item will be automatically listed in your Bibliography folder, and if you want to cite this same item again you can type `@` and the first letters of the item name which will be auto-completed by Rstudio. For parenthetical citations you will have to type the key between brackets and for in-text narrative citations, you only need to type in the key.
+This item will be automatically listed in your references.bib file and will help you manage your citations more efficiently. Pretty cool, huh? If you want to cite this same item again you can type `@` and the first letters of the item name which will be auto-completed by Rstudio. For parenthetical citations you will have to type the key between brackets and for in-text narrative citations, you only need to type in the key.
 Note that when you hover over the citation, you will preview the full reference for the cited item that will be listed at the bottom of the manuscript. This feature helps you to identify if you have to edit anything in the .bib file your citation is calling. Also, note that all citations will be included at the end of your document under a reference list.
 
 > ## Challenge 9.1 - Insert a Citation Using the DOI Lookup Function
@@ -69,11 +69,12 @@ Note that when you hover over the citation, you will preview the full reference 
 > Following the same process described,
 > insert a parenthetical citation to the publication “Welcome to the tidyverse”
 > ([https://doi.org/10.21105/joss.01686](https://doi.org/10.21105/joss.01686))
-> where there is a mention to this package in the data paper. Look for: `insert citation here`
+> where there is a mention to this package in the data paper. Look for: `add citation here`
 >
 > > ## Solution
 > > ```
 > > [@wickham2019]
+> > render the document and voiala!
 > > (Wickham et al., 2019)
 > > ```
 > > {: .output}
@@ -85,11 +86,11 @@ Inserting citations using Crossref, DataCite or PubMed follows a very similar pr
 
 ## Editing Metadata & Citation Key  
 
-Not all citations are perfect shape when in import them. Sometimes we will need to perform some adjustments (e.g., include missing metadata, move content to another metadata field). If needed, we can do so by modifying the .bib file. As briefly mentioned, you can also edit citation keys. By default, most citation keys will have the first author last name or the first word of the title (if no authors), followed by the year of publication. You may consider editing the citation key in case you want to simplify the entry and speed up the autocomplete option. If you choose to do so, you can simply click on the key in the .bib file and edit it. Please be advised to use this option with caution, and to update citations to match the .bib file. 
+Not all citations are in perfect shape when we import them. You may have to adjust them (e.g., include missing metadata, move content to another metadata field). If needed, we can do so by modifying the .bib file. As briefly mentioned, you can also edit citation keys. By default, most citation keys will have the first author last name or the first word of the title (if no authors), followed by the year of publication. You may consider editing the citation key in case you want to simplify the entry and speed up the autocomplete option. If you choose to do so, you can simply click on the key in the .bib file and edit it. Please be advised to use this option with caution, and to update citations to match the .bib file. 
 
 ## Changing Citation Styles
 
-You might have noticed that all citations are inserted in a specific style. Can you guess which one? If you answered Chicago that is correct! By default, Rstudio via Pandoc will use a Chicago author-date format for citations and references. To use another style, you will need to specify a CSL (Citation Style Language) file in the csl metadata field in the YAML.
+You might have noticed that all citations are inserted in a specific style. Can you guess which one? If you answered Chicago, that is correct! By default, Rstudio uses a Chicago author-date format for citations and references. To use another style, you will need to specify a CSL (Citation Style Language) file in the csl metadata field in the YAML.
 
 But how can you identify which CSL you should use? You can find required formats on the [Zotero Style Repository](https://www.zotero.org/styles), which makes it easy to search for and download your desired style.
 
@@ -100,7 +101,7 @@ csl: apa.csl
 ```
 {: .output}  
 
-Save and knit the document to see how citations and references have changed. This same process could be followed for any citation style required by the university, the journal or conference you are planning to submit your manuscript to.  
+Save and render the document to see how citations and references have changed. This same process could be followed for any citation style required by the university, the journal or conference you are planning to submit your manuscript to.  
 
 > ## Challenge 9.2 - Changing the Citation Style
 >
@@ -165,15 +166,7 @@ Let’s try!
 
 ## Adding Cross-referencing
 
-Cross-referencing is a useful way of directing your readers through your document, and can be automatically done within R Markdown once you have the Bookdown package installed. To use cross-references, you will need:
-
-- A labeled code chunk: This provides the identifier for referencing the figure generated by the chunk for the figure (which we accomplished in the previous episodes).
-
-- A bookdown output format: Cross-referencing is provided as an extension in bookdown. We must therefore use an output format from bookdown (e.g., html_document2, pdf_document2, and word_document2, etc.) in the YAML output field.
-
-- A caption to your figure (or table): Figures without a caption will be included directly as images and will therefore not be a numbered figure.
-
-After these conditions are met, we can make cross-references within the text using the syntax `\@ref(type:label)`, where label is the chunk label and type is the environment being referenced (e.g., tab or fig). 
+Cross-referencing is a useful way of directing your readers through your document, and can be automatically done within Quarto through. 
 
 > ## Challenge 9.4 - Cross-referencing a Figure
 > We would like to include a cross-reference to Figure 3, where the paper says "as via the mean heart-rate measured before and during the experimental manipulation". Based on the information about the required elements for cross-references in R Markdown, how would you go about adding a cross-reference to Figure 3? 
