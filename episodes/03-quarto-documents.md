@@ -88,7 +88,7 @@ This one is simple, it's literally just text narrative formatted by using markdo
 {: .callout}
 
 
-![Rmd template text](../fig/03-rmd-template-text.png) **FIXME - REPLACE**
+![qmd template text](../fig/03-qmd-template-text.png)<br>
 
 ### 3. Code Chunks:
 R code chunks appear highlighted in gray throughout the qmd document. They are surrounded by three tick marks on either side (\`\`\`) **in source mode** with the starting three tick marks followed by curly brackets `{}`with some other code inside. The tick marks indicate the start of a code section and the bits found between the curly brackets `{}`indicate how R should read and display the code (more on this in the Knitr syntax episodes). These are the sections you add R code such as summary statistics, analysis, tables and plots. If you’ve already written an R script you can copy and paste your code between the few lines of required formatting to embed & run whichever piece you want at that particular spot in the document.
