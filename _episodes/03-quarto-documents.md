@@ -129,24 +129,33 @@ Your document should render like that: <br>
 > {: .solution}
 {: .challenge}
 
-## Finding and Applying Existing Templates
+## Creating Pre-formatted Papers
 
-We have learned how to start a new document on RStudio and we will learn good practices for project organization next. But, let’s say you are writing a paper and you already know which journal you are submitting it to? Writing it in your own style and then formatting prior to submission is time-consuming, right? RStudio gives us a hand with that. 
+We have learned how to start a new document on RStudio and we will learn good practices for project organization next. But, let’s say you are writing a paper and you already know which journal you are submitting it to? Writing it in your own style and then formatting prior to submission will duplicate your work, right? The good news is that RStudio can give us a hand with that. 
 
-You may use the terminal on RStudio to call existing journals’ formats that will let you prepare your paper more easily for submission. 
+Quarto offers some journal formats and made them available within the quarto-journals GitHub organization, including:
 
+- Association of Computing Machinery	
+- American Chemical Society	
+- Biophysical journal	
+- Elsevier Journals
+- American Statistical Association Journals
+- Journal of Statistical Software
+- Public Library of Science
 
-> ## Tip: Create your own template
-> Please remember that for this workshop we are producing a report in html and not tied to a particular journal template. You may choose other output formats such as word or pdf. Creating templates and adding other templates is beyond the scope of this workshop, but that is also possible. If you submit to the same journal frequently or use the same formatting for many of your publications, it may be worth creating your own template to save time. To learn more about how you can create templates in RStudio:
-> - [Using R Markdown Templates](https://bookdown.org/yihui/rmarkdown/document-templates.html) on the right-hand side check the [rticles package documentation](https://cran.r-project.org/web/packages/rticles/rticles.pdf)
-> - [How to contribute to a new article template?](https://pkgs.rstudio.com/rticles/PULL_REQUEST_TEMPLATE.html)
-{: .callout}
+This list is expected to rapidly grow with new contributions submitted to the [Quarto Journal Templates repository](https://github.com/quarto-journals). You may also create your own templates following [these guidelines](https://quarto.org/docs/journals/templates.html).  
 
-> ## Challenge: Find a template (optional): **FIXME - REPLACE**
->
-> Find the template for the Bioinformatics Journal, what does the template look like? What sections does it contain?
->
-{: .challenge}
+**FIXME Quarto uses a template command that can be called in the terminal to create an article in any of these formats. For example:**
+
+`Terminal
+quarto use template quarto-journals/acm
+quarto use template quarto-journals/acs
+quarto use template quarto-journals/biophysical-journal
+quarto use template quarto-journals/elsevier
+quarto use template quarto-journals/jasa
+quarto use template quarto-journals/jss
+quarto use template quarto-journals/plos`
+
 
 > ## Discussion: What may be the pros and cons of using an existing template? (optional)
 >
@@ -160,7 +169,6 @@ You may use the terminal on RStudio to call existing journals’ formats that wi
 >> - There are only a few journal titles available.
 >>
 >>  Tips:
->> - Always check if the template meets the most updated guidelines in the journal website. Since the rticles package is maintained by a community, we advise you check their (GitHub page][https://github.com/rstudio/rticles) for more details.
->> - Did not find a particular template? You can recommend one to the community or become a contributor!
+>> - Always check if the template meets the most updated guidelines in the journal website. Since these templates are maintained by a community, we advise you check their [GitHub page](https://github.com/quarto-journals/article-format-template/issues) for more details.
 > {: .solution}
 {: .challenge}
