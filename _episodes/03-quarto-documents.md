@@ -129,17 +129,12 @@ Your document should render like that: <br>
 > {: .solution}
 {: .challenge}
 
-## Finding and Applying Existing Templates **FIXME -UPDATE**
+## Finding and Applying Existing Templates
 
-We have learned how to start a new document on RStudio and we will learn good practices for project organization next. But, let’s say you are writing a paper and you already know which journal you are submitting it to? Writing it in your own style and then formatting prior to submission is time-consuming, right? The good news is that RStudio makes our lives easier. Through a package called “rticles” you can access a number of existing journals’ templates that will let you easily and quickly format and prepare your paper draft for peer review. Even if the journal you submit to does not have a template, it may be good to review several of the templates to get an idea of formatting options available to you in R Markdown..
+We have learned how to start a new document on RStudio and we will learn good practices for project organization next. But, let’s say you are writing a paper and you already know which journal you are submitting it to? Writing it in your own style and then formatting prior to submission is time-consuming, right? RStudio gives us a hand with that. 
 
-Let’s take a look at that! On RStudio, load the `rticles` package by using the function `library(rticles)` (remember we've already installed the package earlier!). Once you’ve loaded the package, use the plus icon at the upper-left side of your screen to create a new document or proceed with File > New File > R Markdown. This will prompt the window for creating a new R Markdown document as we saw earlier.
+You may use the terminal on RStudio to call existing journals’ formats that will let you prepare your paper more easily for submission. 
 
-Clicking on `“From Template”` will prompt a couple of dozen templates listed as {rticles}. Let’s choose the Biometrics Journal template and then, OK.
-
-![Rticles Templates (Step 2)](../fig/03-rticles-template.png)
-
-Note that along with the skeleton of the paper you will see a message on top indicating additional packages you may need to install for that particular template.
 
 > ## Tip: Create your own template
 > Please remember that for this workshop we are producing a report in html and not tied to a particular journal template. You may choose other output formats such as word or pdf. Creating templates and adding other templates is beyond the scope of this workshop, but that is also possible. If you submit to the same journal frequently or use the same formatting for many of your publications, it may be worth creating your own template to save time. To learn more about how you can create templates in RStudio:
