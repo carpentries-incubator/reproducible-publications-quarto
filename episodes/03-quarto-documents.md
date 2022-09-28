@@ -12,25 +12,25 @@ questions:
 objectives:
 - Learn about the structure of a quarto document.
 - Learn how an quarto document works.
-- Learn how to knit/render a .qmd file into an output format.
+- Learn how to render a .qmd file into an output format.
 - Understand what templates are and the advantage of using them.
 - Learn how to start a document from a template.
 
 keypoints:
 - An qmd file is comprised of a YAML header, formatted text in qmd and code chunks.
-- The knit function renders the file into the chosen output format.
+- The render function converts the file into the chosen output format.
 - Rstudio has some journals' templates that can save you some formatting time or you can make your own for frequent submissions.
 ---
 
 
 ## Anatomy of an Quarto Document
 
-The key to our reproducible workflow is using Quarto files in RStudio rather than basic scripts to dynamically “knit” both code and paper narrative. So let’s do a quick anatomy lesson on the components of an Quarto file (YAML header, Quarto formatted, R code chunks) and how to render them into our final formatted document.
+The key to our reproducible workflow is using Quarto files in RStudio rather than basic scripts to dynamically render both code and paper narrative. So let’s do a quick anatomy lesson on the components of an Quarto file (YAML header, Quarto formatted, R code chunks) and how to render them into our final formatted document.
 There are four distinct steps in the Quarto workflow:
 1. create a **YAML header** (optional)  
 2. write Quarto-formatted **text**   
 3. add R **code chunks** for embedded analysis  
-4. render the document with **Knitr**  
+4. render the document with the selected engine **(Knitr in this example)**  
 <br>
 
 ![Quarto Workflow](../fig/03-qmd-workflow.png)
