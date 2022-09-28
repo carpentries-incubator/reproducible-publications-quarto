@@ -33,7 +33,7 @@ There are four distinct steps in the Quarto workflow:
 4. render the document with **Knitr**  
 <br>
 
-![R Markdown Workflow](../fig/03-qmd-workflow.png)
+![Quarto Workflow](../fig/03-qmd-workflow.png)
 
 Let’s dig in to those more:
 
@@ -53,7 +53,7 @@ Quarto default YAML header includes the following metadata surrounded by three d
 The first three are self-explanatory, but what's the output? We saw this in the wizard for starting a new document, by default you are able to pick from pdf, html, and word document. Basically, this allows you to export your qmd file as a file type of your choice. There are [other options for output](https://bookdown.org/yihui/rmarkdown/output-formats.html) and even more can be added by installing certain packages, but these are the three default options.   
 <br>
 
-We’ll see other formatting options for YAML later on including how to add bibliography information, customize our output, and change the default settings of the knit function. Below is an example of how our YAML file will look at the end of this workshop.
+We’ll see other formatting options for YAML later on including how to add bibliography information, customize our output, and change the default settings of the knit function. Below is an example of how our YAML file will look at the end of this workshop. **FIXME - replace the YAML**
 
 ~~~
 ---
@@ -77,6 +77,7 @@ knit: (function(rmdFile, encoding) {
 ~~~
 
 ### 2. Formatted text:
+**FIXME**
 This one is simple, it's literally just text narrative formatted by using markdown (more on markdown syntax later). Markdown-formatted text is one of the benefits added above and beyond the capabilities of a regular r script. Any text section will have the default white background in the qmd document. As you might know, in a regular R file, # starts a comment. In Quarto, plain text is just plain narrative text that appears in the document. In R scripts, plain text wants to be code. In Quarto, you will need to enclose your code in special characters. Any symbols you do see that aren’t regular grammar components are for formatting, such as ##, ** **, and < >.
 
 > ## Tip: Bonus! You can use a variety of languages to format text and images in Quarto:
@@ -87,7 +88,7 @@ This one is simple, it's literally just text narrative formatted by using markdo
 {: .callout}
 
 
-![Rmd template text](../fig/03-rmd-template-text.png) **FIXME - REPLACE YAML**
+![Rmd template text](../fig/03-rmd-template-text.png) **FIXME - REPLACE**
 
 ### 3. Code Chunks:
 R code chunks appear highlighted in gray throughout the qmd document. They are surrounded by three tick marks on either side (\`\`\`) **in source mode** with the starting three tick marks followed by curly brackets `{}`with some other code inside. The tick marks indicate the start of a code section and the bits found between the curly brackets `{}`indicate how R should read and display the code (more on this in the Knitr syntax episodes). These are the sections you add R code such as summary statistics, analysis, tables and plots. If you’ve already written an R script you can copy and paste your code between the few lines of required formatting to embed & run whichever piece you want at that particular spot in the document.
@@ -102,7 +103,7 @@ R code chunks appear highlighted in gray throughout the qmd document. They are s
 {: .callout}
 
 
-![rmd template code](../fig/03-rmd-template-code.png) **FIXME - REPLACE YAML**
+![rmd template code](../fig/03-rmd-template-code.png) **FIXME - REPLACE**
 
 ### 4. Rendering your Qmd document:
 This is called "knitting" and the button looks like a spool of yarn with a knitting needle. Clicking the knit button will compile the code, check for errors, and finally, output the type of file indicated in your yaml header. One nice thing about the knit button is that it saves the .qmd document each time you run it. Your qmd document may not run and render as your indicated output if there are any errors in the document so it also functions somewhat as a code checker.
@@ -114,12 +115,12 @@ We’re going to pause here and see what the Quarto document does when it’s re
 This is a little preview of what's to come in the later episodes:
 Click the "knit" button.
 
-![Add or update image](../fig/03-knit-button.PNG)
+![Add or update image](../fig/03-knit-button.PNG)**FIXME - REPLACE**
 
 Before you can render your document, you'll need to give it a file name and choose what folder you want to save it to. Choose `my_first_qmd.qmd` as your file name and save it to an easily accessible directory in your file system.
 
 This is how our html document will render after clicking the knit button and choosing a file name:
-![Knit html output](../fig/03-knit-echoTRUE.PNG)
+![Knit html output](../fig/03-knit-echoTRUE.PNG) **FIXME - REPLACE**
 
 > ## CHALLENGE 3.1 - Rendering the document in another format
 > Suppose you want this .qmd document to render as a word document. What options would you have?
@@ -130,7 +131,7 @@ This is how our html document will render after clicking the knit button and cho
 > {: .solution}
 {: .challenge}
 
-## Finding and Applying Existing Templates
+## Finding and Applying Existing Templates **FIXME -UPDATE**
 
 We have learned how to start a new document on RStudio and we will learn good practices for project organization next. But, let’s say you are writing a paper and you already know which journal you are submitting it to? Writing it in your own style and then formatting prior to submission is time-consuming, right? The good news is that RStudio makes our lives easier. Through a package called “rticles” you can access a number of existing journals’ templates that will let you easily and quickly format and prepare your paper draft for peer review. Even if the journal you submit to does not have a template, it may be good to review several of the templates to get an idea of formatting options available to you in R Markdown..
 
@@ -148,7 +149,7 @@ Note that along with the skeleton of the paper you will see a message on top ind
 > - [How to contribute to a new article template?](https://pkgs.rstudio.com/rticles/PULL_REQUEST_TEMPLATE.html)
 {: .callout}
 
-> ## Challenge: Find a template (optional):
+> ## Challenge: Find a template (optional): **FIXME - REPLACE**
 >
 > Find the template for the Bioinformatics Journal, what does the template look like? What sections does it contain?
 >
