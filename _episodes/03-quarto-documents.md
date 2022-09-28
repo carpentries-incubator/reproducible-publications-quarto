@@ -117,7 +117,7 @@ Before you can render your document, you'll need to give it a file name and choo
 
 Your document should render like that: <br>
 
-![Render html output](../fig/03-render-html.PNG) <br>
+![Render html output](../fig/03-render-html.png) <br>
 
 > ## CHALLENGE 3.1 - Rendering the document in another format
 > Suppose you want this .qmd document to render as a word document. What options would you have?
