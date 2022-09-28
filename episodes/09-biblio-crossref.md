@@ -162,11 +162,17 @@ Let’s try!
 > ## Important Info:
 > Does the indentation matter? Yes, you have to indent at least one space and the citation key should turn green to work.  
 > In case you are including a citation to `nocite` that you have not cited in the document, you have to make sure first that the bib file is in your Bibliography folder.
-{: .checklist}  
+{: .checklist} 
+
 
 ## Adding Cross-referencing
 
-Cross-referencing is a useful way of directing your readers through your document, and can be automatically done within Quarto through. 
+Cross-referencing is a useful way of directing your readers through your document, and can be automatically accomplished in Quarto. Quarto enables you to create cross-references to figures, tables, equations, sections, code listings, theorems, proofs, and more. For more examples on how to cross-reference different objects, [visit](https://quarto.org/docs/authoring/cross-references.html). 
+
+Essentially, every cross-referenceable entity requires a label (unique identifier) and a caption (description). Let's say we want to cross-reference Figure 1. **(FIXME)**
+
+`![Figure 1](Fig1.jpg){#fig1}`
+
 
 > ## Challenge 9.4 - Cross-referencing a Figure
 > We would like to include a cross-reference to Figure 3, where the paper says "as via the mean heart-rate measured before and during the experimental manipulation". Based on the information about the required elements for cross-references in R Markdown, how would you go about adding a cross-reference to Figure 3? 
