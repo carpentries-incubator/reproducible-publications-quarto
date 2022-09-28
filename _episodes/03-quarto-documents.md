@@ -120,14 +120,14 @@ Your document should render like that: <br>
 ![Render html output](../fig/03-render-html.png) <br>
 
 
-``> ## CHALLENGE 3.1 - Rendering the document in another format
+> ## CHALLENGE 3.1 - Rendering the document in another format
 > Suppose you want this .qmd document to render as a word document. What options would you have?
 >
 >> ## Solution:
->> 1) You may change the output format in the YAML to `word_document`, or
->> 2) Select "Knit > "Knit to Word" on the menu.
+>> You may change the output format in the YAML to `docx`. 
+>> Note that to preview word documents you need to have MS Word, Libre or Open Office installed on your machine. 
 > {: .solution}
-{: .challenge}`` **FIXME - DOES NOT WORK FOR QUARTO. IT WOULD REQUIRE ADDITIONAL INSTALLS**
+{: .challenge}
 
 ## Finding and Applying Existing Templates **FIXME -UPDATE**
 
