@@ -137,11 +137,11 @@ With RStudio, you can navigate to folders on your computer in the “Files” wi
 
 ### Integrates with Collaboration and Publishing Tools
 
-Another great advantage of using Rstudio for your R project is that the platform integrates with [GitHub](https://github.com). Once you connect RStudio with your GitHub account a remote repo becomes the “upstream” remote for your local repo. In essence, it enables you push and pull commits to GitHub allowing more seamless collaboration and more effective version control. RStudio also connects with [Rpubs](https://rpubs.com/) for easy R project web publishing.  
+Another great advantage of using Rstudio for your R project is that the platform integrates with [GitHub](https://github.com). Once you connect RStudio with your GitHub account a remote repo becomes the “upstream” remote for your local repo. In essence, it enables you to push and pull commits to GitHub, allowing more seamless collaboration and more effective version control. RStudio also connects with [Rpubs](https://rpubs.com/) for easy R project web publishing.  
 
 ### Creates documents using Quarto
 
-As seen, reproducibility implies sharing data, code, and workflows to produce the analysis and compute results. While writing scientific reports one may choose RStudio IDE to marry all these pieces together and taking advantage of various tools it integrates with. Having a publication while minimizing reproducibility friction can be accomplished with Quarto. [Quarto](https://quarto.org/) is a multi-language, next-generation version of R Markdown from RStudio. It includes new features and capabilities while at the same being able to render most existing Rmd files without any modification. With Quarto you can: 
+As seen, reproducibility implies sharing data, code, and workflows to produce the analysis and compute results. While writing scientific reports one may choose RStudio IDE to marry all these pieces together and take advantage of various tools it integrates with. Having a publication while minimizing reproducibility friction can be accomplished with Quarto. [Quarto](https://quarto.org/) is a multi-language, next-generation version of R Markdown from RStudio. It includes new features and capabilities while at the same being able to render most existing Rmd files without any modification. With Quarto you can: 
 
 * Create dynamic content with Rstudio/R, Python, Julia, and Observable.
 * Author documents as plain text markdown or Jupyter notebooks.
@@ -151,7 +151,7 @@ As seen, reproducibility implies sharing data, code, and workflows to produce th
 Quarto generates a .qmd file that weaves together content and executable code into a elegantly formatted output which can be published in various formats. It is a convenient tool for reproducible and dynamic reports which will help you:
 
 1. Keep an eye on text (the paper) AND the source code. These computational steps are essential to ensure computational reproducibility.
-2. Conduct the entire analysis pipeline in an Quarto document: data (pre-)processing, analysis, outputs, visualization.
+2. Conduct the entire analysis pipeline in a Quarto document: data (pre-)processing, analysis, outputs, visualization.
 3. Apply a formatting syntax that is part of the R ecosystem and supports LaTeX.
 4. Combine text written in Markdown and source code written in R (and other languages).
 5. Easily share documents with colleagues, as supplemental material, or as the paper under review. 
@@ -162,7 +162,7 @@ Quarto generates a .qmd file that weaves together content and executable code in
 
 > ## Why Quarto and not R Markdown?
 >
-> As noted before, Quarto is the next generation of R Markdown which we have previously taught in a previous workshop [see Reproducible Publications with RStudio](https://github.com/carpentries-incubator/Reproducible-Publications-with-RStudio); however, the anatomy of .rmd and .qmd files are very similar. So why moving to Quarto? While compatible with Python (and bash, Julia, C, SQL), R Markdown was designed primarily for R users. Quarto does not require R. Quarto runs computations into separate pluggable language "engines", which helps make this cross language functionality easier to support. In addition, because Quarto is designed to be compatible with existing formatsyou can render most existing .Rmd and Jupyter Notebooks with Quarto without modification. This low-pain process helps the transition to Quarto.
+> As noted before, Quarto is the next generation of R Markdown which we have previously taught in a previous workshop [see Reproducible Publications with RStudio](https://github.com/carpentries-incubator/Reproducible-Publications-with-RStudio); however, the anatomy of .rmd and .qmd files are very similar. So why move to Quarto? While compatible with Python (and bash, Julia, C, SQL), R Markdown was designed primarily for R users. Quarto does not require R. Quarto runs computations into separate pluggable language "engines", which helps make this cross language functionality easier to support. In addition, because Quarto is designed to be compatible with existing formatsyou can render most existing .Rmd and Jupyter Notebooks with Quarto without modification. This low-pain process helps the transition to Quarto.
 {: .callout}
 
 ## Some Real-world Applications
@@ -173,7 +173,7 @@ Finally, three real-world examples that motivated the authors of this lesson to 
 
 2. One of us wanted to create a short document that included some math formulas. The LaTeX document preparation can be used for this, but it is difficult to use and is overkill for just a few formulas in otherwise plain text. As we will learn, through Pandoc, Quarto lets you use just the best part of LaTeX---math formatting---while letting you write your text in a user-friendly way. The editor will automatically recognize the syntax and treat the equation as math.
 
-3. In this lesson we will be constructing a scientific paper that is based on an actual *Nature* publication and attendant survey and data.  In trying to recreate the plots the original authors created, we found it difficult and time-consuming to figure out exactly how the authors created their plots.  Out of the many columns in their data, many with similar-sounding names, which did they use?  How did they handle missing data?  Exactly what operations did they perform to compute aggregate values?  How much easier it would have been if they had published the code they used along with their paper. RStuido and Quarto allows you to do this.
+3. In this lesson we will be constructing a scientific paper that is based on an actual *Nature* publication and attendant survey and data.  In trying to recreate the plots the original authors created, we found it difficult and time-consuming to figure out exactly how the authors created their plots.  Out of the many columns in their data, many with similar-sounding names, which did they use?  How did they handle missing data?  Exactly what operations did they perform to compute aggregate values?  How much easier it would have been if they had published the code they used along with their paper. RStudio and Quarto allow you to do this.
 
 Our goal is that by the end of this workshop you will be able to create a reproducible report. This template is a short and adapted version of the data paper referenced below:
 
