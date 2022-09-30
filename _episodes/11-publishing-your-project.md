@@ -58,7 +58,7 @@ Another, better, but slightly more involved option for publishing a Quarto docum
 
 When you create a new Quarto file in R Studio recall that you are presented with a choice of Output Formats:
 
-![RStudio output formats](../fig/02-new-name-qmd.PNG)
+![RStudio output formats](../fig/02-name-new-qmd.PNG)
 
 For the purposes of this workshop we've been using HTML as the output format but other types are available.  You can render your Quarto as a document, a presentation or a *Shiny* app.  With the default installation of RStudio HTML output is most likely to work.  Other formats may require additional R packages and/or code libraries be installed on your computer.  RStudio also has a templating system to help with creating Quarto files with common elements, YAML metadata and rendering instructions.  This can be very helpful for example if you want to create a weekly or monthly report documenting an ongoing experiment, study or other changing data.
 
