@@ -17,18 +17,18 @@ objectives:
 - Learn how to start a document .
 
 keypoints:
-- An qmd file is comprised of a YAML header, formatted text in qmd and code chunks.
+- An qmd file is comprised of a YAML header, formatted text in qmd and code blocks.
 - The render function converts the file into the chosen output format.
 - Rstudio has some journals' formats that can save you some time or you can make your own for frequent submissions.
 ---
 
 
 ## Anatomy of an Quarto Document
-The key to our reproducible workflow is using Quarto files in RStudio rather than basic scripts to dynamically render both code and paper narrative. So let’s do a quick anatomy lesson on the components of an Quarto file (YAML header, Quarto formatted, R code chunks) and how to render them into our final formatted document.
+The key to our reproducible workflow is using Quarto files in RStudio rather than basic scripts to dynamically render both code and paper narrative. So let’s do a quick anatomy lesson on the components of an Quarto file (YAML header, Quarto formatted, R code blocks; also known as "code chunks") and how to render them into our final formatted document.
 There are four distinct steps in the Quarto workflow:
 1. create a **YAML header** (optional)  
 2. write Quarto-formatted **text**   
-3. add R **code chunks** for embedded analysis  
+3. add R **code blocks** for embedded analysis  
 4. render the document with the selected engine **(Knitr in this example)**  
 <br>
 
@@ -86,8 +86,8 @@ This one is simple, it's literally just text narrative formatted by using markdo
 {: .callout}
 
 
-### 3. Code Chunks:
-R code chunks appear highlighted in gray throughout the qmd document. They are surrounded by three tick marks on either side (\`\`\`) **in source mode** with the starting three tick marks followed by curly brackets `{}`with some other code inside. The tick marks indicate the start of a code section and the bits found between the curly brackets `{}`indicate how R should read and display the code (more on this in the Knitr syntax episodes). These are the sections you add R code such as summary statistics, analysis, tables and plots. If you’ve already written an R script you can copy and paste your code between the few lines of required formatting to embed & run whichever piece you want at that particular spot in the document.
+### 3. Code Blocks:
+Code blocks appear highlighted in gray throughout the qmd document. They are surrounded by three tick marks on either side (\`\`\`) **in source mode** with the starting three tick marks followed by curly brackets `{}`with some other code inside. The tick marks indicate the start of a code section and the bits found between the curly brackets `{}`indicate how R should read and display the code (more on this in the Knitr syntax episodes). These are the sections you add R code such as summary statistics, analysis, tables and plots. If you’ve already written an R script you can copy and paste your code between the few lines of required formatting to embed & run whichever piece you want at that particular spot in the document.
 
 > ## Tip: Bonus! You may code with many different languages in RStudio:  
 > - R  
