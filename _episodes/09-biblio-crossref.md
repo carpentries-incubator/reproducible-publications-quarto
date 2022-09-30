@@ -196,7 +196,7 @@ If you wish to add a cross-reference to a figure that was generated via code blo
 `
 And then, enter the @fig-id where you want to note the corss-referece in your paper. 
 
-> ## Challenge 9.4 - Adding cross-reference for a code block figure.
+> ## Challenge 9.4 - Adding cross-reference for a code block figure
 > Your turn! Include a cross-reference to Figure 3.
 >
 > > ## Solution
