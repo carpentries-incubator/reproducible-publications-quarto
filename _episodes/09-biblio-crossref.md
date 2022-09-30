@@ -171,7 +171,7 @@ Cross-referencing is a useful way of directing your readers through your documen
 
 Essentially, every cross-referenceable entity requires a caption (description), the object info, and a label (unique identifier. Let's say we want to cross-reference Figure 1 in the paper. To do so, we will need to first create an id for it. If we are in the visual mode, we can double click the image, click the "Attributes" tab, and enter #fig1 as the ID.
 
-![Inserting cross-referencing](../fig/09-inserting-crossref.png=100x20) <br>
+![Inserting cross-referencing](../fig/09-inserting-crossref.png) <br>
 
 
 Alternatively, in the source mode, we can enter that same ID in front of the figure name, by typing in {#fig-fig1}
