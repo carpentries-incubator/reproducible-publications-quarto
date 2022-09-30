@@ -167,7 +167,7 @@ Let’s try!
 
 ## Adding Cross-referencing
 
-Cross-referencing is a useful way of directing your readers through your document, and it can be accomplished in Quarto. You may create cross-references to figures, tables, equations, sections, code listings, theorems, proofs, and more. We will cover how you can cross-reference figures, for examples of different objects, [visit](https://quarto.org/docs/authoring/cross-references.html). 
+Cross-referencing is a useful way of directing your readers through your document, and it can be accomplished in Quarto. You may create cross-references to figures, tables, equations, sections, code listings, theorems, proofs, and more. 
 
 Essentially, every cross-referenceable entity requires a caption (description), the object info, and a label (unique identifier. Let's say we want to cross-reference Figure 1 in the paper. To do so, we will need to first create an id for it. If we are in the visual mode, we can double click the image, click the "Attributes" tab, and enter #fig1 as the ID.
 
@@ -179,19 +179,23 @@ Alternatively, in the source mode, we can enter that same ID in front of the fig
 `![Experimental timeline and measurements.](fig/Fig1.jpg){#fig-fig1}`
 
 
-
 Ok, but how can you call that in another part of the paper? You may enter the key below using the unique identifier, but instead of the hash `#` it should be preceeded by an at `@`:
 
 `@fig-fig1`
 
+If you do not start you label with `fig-`, Quarto will interpret it as a citation and won't render correctly. Click `Render` and see how it displays. 
 
-> ## Challenge 9.4 - Cross-referencing a Figure
-> Your turn! Include a cross-reference to Figure 3, where the paper says "as via the mean heart-rate measured before and during the experimental manipulation". 
+You may follow ta similar approach to add cross-references for sections `(sec-)/(@sec-)`, equations  `(eq-)/(@eq-)` and tables `(tbl-)/(@tbl-). For more information on how to cross-reference different types of objects, [visit](https://quarto.org/docs/authoring/cross-references.html).
+
+
+
+> ## Challenge 9.4 - Adding cross-reference created through a code block 
+> Your turn! Include a cross-reference to Figure 3
 >
 > > ## Solution
 > >
 > > ```
-> > as via the mean heart-rate measured before and during the experimental manipulation (See 
+> >  
 > > ```
 > > {: .output}
 > >
