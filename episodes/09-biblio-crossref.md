@@ -187,21 +187,23 @@ If you do not start you label with `fig-`, Quarto will interpret it as a citatio
 
 You may follow a similar approach to add cross-references for sections `(#sec-)/(@sec-)`, equations  `(#eq-)/(@eq-)` and tables `(#tbl-)/(@tbl-)`. For more information on how to cross-reference different types of objects, visit [Quarto- Cross References](https://quarto.org/docs/authoring/cross-references.html). **[FIXME - the panel insert cross-references in the GUI seems not to be working. Add a note if that remains true before the day of the workshop]**
 
-If you wish to add a cross-reference to a figure that was generated via code block, you have to enter something the label (id) and caption
-`
-```{r}
-#| label: fig-id
-#| fig-cap: "figure caption here"
-```
-`
-And then, enter the @fig-id where you want to note the corss-referece in your paper. 
+If you wish to add a cross-reference to a figure that was generated via code block, you have to enter something the label (id) and caption at the beggining of the figure code block.
 
-> ## Challenge 9.4 - Adding cross-reference for a code block figure
-> Your turn! Include a cross-reference to Figure 3.
+`
+#| label: fig-id
+#| fig-cap: "figure caption here" 
+`
+And then, enter the @fig-id where you want to note the cross-referece in your paper. 
+
+> ## Challenge 9.4 - Adding cross-reference for code block figures
+> Your turn! Include a cross-reference to Figure 3. In a previous lesson we added a caption for figure 3: `fig-cap = "Fig 3: Mean heart rate of stress and control groups at baseline and during intervention.`. How we would have to tweek that a bit to make the cross-referencing render correctly?
 >
 > > ## Solution
-> >
+> > 1) Add a label (id) e.g. `#| label: fig-fig3`
+> > 2) Make sure the caption is correctly represented `#| fig-cap: "Fig 3: Mean heart rate of stress and control groups at baseline and during intervention"`
+> > 3) Call the figure using the assigned id `@fig-fig3`
 > > 
+> > **FIXME: Add screenshot**
 > >
 > > {: .output}
 > >
