@@ -185,7 +185,7 @@ Ok, but how can you call that in another part of the paper? You may enter the ke
 
 If you do not start you label with `fig-`, Quarto will interpret it as a citation and won't render correctly. Click `Render` and see how it displays. 
 
-You may follow ta similar approach to add cross-references for sections `(sec-)/(@sec-)`, equations  `(eq-)/(@eq-)` and tables `(tbl-)/(@tbl-). For more information on how to cross-reference different types of objects, visti [Quarto- Cross References](https://quarto.org/docs/authoring/cross-references.html).
+You may follow ta similar approach to add cross-references for sections `(#sec-)/(@sec-)`, equations  `(#eq-)/(@eq-)` and tables `(#tbl-)/(@tbl-)`. For more information on how to cross-reference different types of objects, visit [Quarto- Cross References](https://quarto.org/docs/authoring/cross-references.html).
 
 
 
