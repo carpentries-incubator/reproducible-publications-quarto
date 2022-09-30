@@ -167,23 +167,28 @@ Let’s try!
 
 ## Adding Cross-referencing
 
-Cross-referencing is a useful way of directing your readers through your document, and can be automatically accomplished in Quarto. Quarto enables you to create cross-references to figures, tables, equations, sections, code listings, theorems, proofs, and more. For more examples on how to cross-reference different objects, [visit](https://quarto.org/docs/authoring/cross-references.html). 
+Cross-referencing is a useful way of directing your readers through your document, and it can be accomplished in Quarto. You may create cross-references to figures, tables, equations, sections, code listings, theorems, proofs, and more. We will cover how you can cross-reference figures, for examples of different objects, [visit](https://quarto.org/docs/authoring/cross-references.html). 
 
-Essentially, every cross-referenceable entity requires a label (unique identifier) and a caption (description). Let's say we want to cross-reference Figure 1. **(FIXME)**
+Essentially, every cross-referenceable entity requires a label (unique identifier) and a caption (description). Let's say we want to cross-reference Figure 1 in the paper. To do so, we will need to first create an id for it. If we are in the visual mode, we can double click the image, click the "Attributes" tab, and enter #fig1 as the ID.
+
+![Inserting cross-referencing](../fig/09-inserting-crossref.png)
+
+
+Alternatively, in the source mode, we can enter that same ID in front of the figure name, by typing in: {#fig1}
 
 `![Figure 1](Fig1.jpg){#fig1}`
 
+Now, you may enter this key in any part of the paper you would like to reference Figure 1, by entering:
+
+
 
 > ## Challenge 9.4 - Cross-referencing a Figure
-> We would like to include a cross-reference to Figure 3, where the paper says "as via the mean heart-rate measured before and during the experimental manipulation". Based on the information about the required elements for cross-references in R Markdown, how would you go about adding a cross-reference to Figure 3? 
+> Your turn! Include a cross-reference to Figure 3, where the paper says "as via the mean heart-rate measured before and during the experimental manipulation". 
 >
 > > ## Solution
 > >
 > > ```
-> > 1) Make sure to include to the YMAL
-> > `output:
-     bookdown::html_document2: default`
-> > 2) Look it up for the passage "as via the mean heart-rate measured before and during the experimental manipulation" in your paper and add `see Figure  \@ref(fig:fig3-heartrate)`
+> > as via the mean heart-rate measured before and during the experimental manipulation (See 
 > > ```
 > > {: .output}
 > >
