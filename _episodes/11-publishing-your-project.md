@@ -19,16 +19,16 @@ keypoints:
 
 ## What is Next?
 
-Once you have completed your Rmd manuscript following all the best practices for reproducibility, including organizing your project files what is next?
+Once you have completed your Rmd manuscript following all the best practices for reproducibility, including organizing your project files, what is next?
 The answer depends on your plans to move forward. Let's explore some scenarios:
 
 ### If you plan to share your insights with your community right away
 
 #### Publishing with Rpubs
 
-- The easiest way would be to use [Rpubs](https://rpubs.com/) which is a publishing integrated with Rstudio. Rpubs is a bare-bones web hosting service created for the sole purpose of hosting R Markdown documents.  It provides no other services--- no support for search, collaboration, persistent identifers, or versioning.  But, it is the simplest and most direct way of getting your R Markdown document published on the web directly from RStudio.  For a more full-featured hosting service consider GitHub and GitHub Pages, described later.
+- The easiest way would be to use [Rpubs](https://rpubs.com/), which is integrated with Rstudio. Rpubs is a bare-bones, free web hosting service created for the sole purpose of hosting R Markdown documents.  It provides no other services--- no support for search, collaboration, persistent identifers, or versioning.  But, it is the simplest and most direct way of getting your R Markdown document published on the web directly from RStudio.  For a more full-featured hosting service consider GitHub and GitHub Pages, described later.
 
-Notice the "Publish" button in the upper right corner of your _Knit_ output.  Click this to publish to Rpubs.  This is where you'll need an Rpubs account as mentioned in [setup](/setup.html)
+Notice the circular blue "Publish" button in the upper right corner of your _Knit_ output.  Click this to publish to Rpubs.  This is where you'll need an Rpubs account as mentioned in [setup](/setup.html)
 for this workshop.  
 
 Click the blue publish button
@@ -46,8 +46,7 @@ The first time you publish, RStudio will likely ask if you want to install some 
 At the end of the publish process your paper will be live on the internet
 with a URL similar to: `https://rpubs.com/yourname/678624`
 
-RStudio also saves an HTML version of your *knit* document to your local file system.  Look for it in the *results*
-directory in the same directory as the R-markdown file in your R-Studio project directory.  
+RStudio also saves an HTML version of your *knit* document to your local file system.  Look for it in the same directory as the R-markdown file in your R-Studio project directory.  
 This html document is self-contained and highly portable.  Images are encoded directly into the HTML so you can easily move it to any web hosting you have available.
 
 
