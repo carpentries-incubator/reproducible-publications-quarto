@@ -42,7 +42,7 @@ We will be covering the purpose of using packages and recap different ways to in
  install.packages("rticles")  
  install.packages("BayesFactor") 
  install.packages("patchwork")
- install.packages("here")``
+ install.packages("here")`
  
  or 
   
