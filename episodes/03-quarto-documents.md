@@ -7,19 +7,19 @@ questions:
 - What is the breakdown of an Quarto document?
 - What are templates in Quarto?
 - How can you render the input file to the specified output format?
-- How can you find existing templates for qmd document?
+- How can you create pre-formatted for qmd document based on journal templates?
 
 objectives:
 - Learn about the structure of a quarto document.
 - Learn how an quarto document works.
 - Learn how to render a .qmd file into an output format.
-- Understand what templates are and the advantage of using them.
-- Learn how to start a document from a template.
+- Understand what are jornal formats are and the advantage of using them.
+- Learn how to start a document .
 
 keypoints:
 - An qmd file is comprised of a YAML header, formatted text in qmd and code chunks.
 - The render function converts the file into the chosen output format.
-- Rstudio has some journals' templates that can save you some formatting time or you can make your own for frequent submissions.
+- Rstudio has some journals' formats that can save you some time or you can make your own for frequent submissions.
 ---
 
 
@@ -131,7 +131,7 @@ Your document should render like that: <br>
 
 ## Creating Pre-formatted Papers
 
-We have learned how to start a new document on RStudio and we will learn good practices for project organization next. But, let’s say you are writing a paper and you already know which journal you are submitting it to? Writing it in your own style and then formatting prior to submission will duplicate your work, right? The good news is that RStudio can give us a hand with that. 
+We have learned how to start a new document on RStudio and we will learn good practices for project organization next. But, let’s say you are writing a paper having a journal in mind? Writing it in your own style and then formatting prior to submission will duplicate your work, right? The good news is that RStudio can give us a hand with that. 
 
 Quarto offers some journal formats and made them available within the quarto-journals GitHub organization, including:
 
