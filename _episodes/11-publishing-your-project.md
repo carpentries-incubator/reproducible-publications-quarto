@@ -31,10 +31,10 @@ The answer depends on your plans to move forward. Let's explore some scenarios:
 Notice the "Publish" button in the upper right corner of your _Knit_ output.  Click this to publish to Rpubs.  This is where you'll need an Rpubs account as mentioned in [setup](/setup.html)
 for this workshop.  
 
-Click the publish button
-![Publish button in RStudio](../fig/11-publish-button-scrnshot.png)
+Click the blue publish button
+![Publish button in RStudio](../fig/11-publish-button-scrnshot-2.png)
 
-and you'll be presented with the following panels:
+(if a little menu pops up, select "Publish Document...") and you'll be presented with the following panels:
 
 ![Publish to RPubs or RStudio Connect](../fig/11-r-studio-knit-publish-to-scrnshot.png)
 (The other option in the dialog box, RStudio Connect, is a standalone publishing platform for teams to share content.  It requires purchase to host and use.)
