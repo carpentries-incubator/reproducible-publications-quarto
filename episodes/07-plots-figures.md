@@ -146,7 +146,9 @@ Code chunk options in Quarto are added within code chunks and always have the fo
 **warning** = (logical) whether to display the warnings in the output (default TRUE). FALSE will output warnings to the console only.       
 **message** = (logical) whether or not to display messages that appear when running the code (default TRUE).
 
-Ok, let's use some of the options above to improve the look of our Quarto document. Add the following options one-by-one to see how they change your output: 
+#### Using code chunk options for clean Quarto Documents
+
+Ok, let's use some of the options above to improve the look of our Quarto document. Add the following options one-by-one to see how they change your output (click `Render` after each option you add): 
 
 - echo: false 
 - message: false 
@@ -154,6 +156,8 @@ Ok, let's use some of the options above to improve the look of our Quarto docume
 - results: false
 
 These options mean the source code will not be printed in the knit html document, messages from the code will not be printed in the knit html document, and warnings will not be printed in the knit html document (but will still output to the console). Plots, figures or whatever is printed by the code WILL show up in the final html document.  
+
+Now we are seeing what we would like: a figure without other output to show in our paper. 
  
 > ## CHALLENGE 7.1 - Rendering Codes (optional)
 > How will some hypothetical code render given the following options?
@@ -193,9 +197,11 @@ We’ll see in a bit where this code block label comes in handy. But, for now le
 
 The options we just looked at focus on code evaluation and text output. However, we have another set of options that deal with how plot or figure outputs look at act. Many of the options start with `fig`. The one we will use today allows us to add a caption to our figure. Again, this is an optional feature, but if you need (or want) to add captions to your publication, it is straightforward to do in code chunks. 
 
-The caption information also resides between your brackets at the beginning of the chunk: `{r}`
+The caption information also resides at the top of a code chunk using the `#|` syntax as such:
 
-the tag is `fig.cap` followed by a `=` and the captions within quotes `"caption for figure"`.
+`#| fig.cap: "Figure Caption Here"
+
+*Make sure not to forget to put the caption within quotes `""`
 
 > ## CHALLENGE 7.3: Add a caption to Figure 3
 > Let's add a caption to our heartrate figure. Add the caption:
@@ -222,16 +228,60 @@ the tag is `fig.cap` followed by a `=` and the captions within quotes `"caption 
 {: .callout}
 
 
-Let's knit one more time to see if our figure outputs how we'd like and has a caption.
+Let's render one more time to see if our figure outputs how we'd like and has a caption.
 
-> ## Time to Knit!
+> ## Time to Render!
 > Let's try that again 
 {: .checklist}
 
 
-### Global Code Chunk Options:
+## Inline Code
 
-Now we’ve learned how to create a code chunk and learned about options for adjusting how that code renders in our output document. However, let's direct our attention back to the first code chunk in this document that I asked you not to delete. 
+What if you only need to make a quick calculation and adding a code chunk seems a little overkill?
+
+You can also include `r code` directly in your the text portion of your document. Say you are discussing some of the summary statistics in your manuscript, Quarto makes this possible through HTML/LaTeX inline code which allows you to calculate simple expressions integrated to your narrative. Inline code enables you to insert `r code` into your document to dynamically updated portions of your text. In other words, if your data set changes for any reason the code will automatically update the calculation specified. 
+
+This can be helpful when referring to specific variables on your data. For example, you should include numbers that are derived from the data as code not as numbers. Thus, rather than writing “The CSV file contains choice consistency data for 10.000 simulated participants” **(FIXME8)** , replace the static number with a bit of code that, when evaluated, gives you a dynamic number if anything changes on your dataset. Note that there is not an insert option to do this from the menu in the visual editor, so we need to insert inline code manually with  ```r ```, for example:
+
+The CSV file contains choice consistency data for ``r nrow(bronars_simulation_data)`` simulated participants.
+
+When you knit you might get an error. Any idea why? That is because we need to make sure to import the dataset we are referring to before the inline code can work. Let's add the following to our chunk at the beginning of the document where we loaded our other data:
+
+~~~
+bronars_simulation_data <- read_csv("data/bronars_simulation_data.csv")
+~~~
+{: .language-r}
+
+Time to Knit! If you update your dataset this value will match the number of rows. 
+
+> ## CHALLENGE 8.3 - Adding inline code
+> Suppose we would like to add some information to the sentence we have just adjusted in our manuscript. We would like to include the average for the variable *violation_count* present in the same dataset. Which inline code we would have to add to following sentence?
+> 
+> The CSV file contains choice consistency data for ` `r nrow(bronars_simulation_data.csv)` ` simulated participants, that have been used to determine the power of our food-choice task design to detect choice consistency violations, which averaged ` `enter inline code here` `. 
+> What inline code would you enter? What number would replace the inline code?
+> 
+> Tip: we will need to use a `dataset$variable` syntax!
+> 
+>> ## Solution:
+>> ` `r mean(bronars_simulation_data$violation_count)` `
+>> 5.3924
+> {: .solution}
+{: .challenge}
+
+> ## Important Note:
+> Make sure the file you are calling is in the right subdirectory and your working directory is set appropriately.
+>
+{: .callout}
+
+
+> ## More on inline codes:
+> Quarto will always display the results of inline code, but not the code. Inline expressions do not take knitr options.
+>
+{: .callout}
+
+
+
+### Global Code Chunk Options:
 
 The code looks like: 
 
