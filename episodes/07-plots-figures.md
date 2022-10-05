@@ -199,7 +199,7 @@ The options we just looked at focus on code evaluation and text output. However,
 
 The caption information also resides at the top of a code chunk using the `#|` syntax as such:
 
-`#| fig.cap: "Figure Caption Here"
+`#| fig.cap: "Figure Caption Here"`
 
 *Make sure not to forget to put the caption within quotes `""`
 
@@ -216,7 +216,7 @@ The caption information also resides at the top of a code chunk using the `#|` s
 >> {: .language-r}
 >> Set the option `fig.cap` to equal the text in double quotes.
 > {: .solution}
-{: challenge}
+{: .challenge}
 
 ## More plot/figure options
 > Other options that change how a plot or figure appears often use the sytax `fig.xxx` similar to `fig.cap` Some other useful plot/figure code options include (From [Yihui Xie's page](https://yihui.org/knitr/options/#plots) ):
