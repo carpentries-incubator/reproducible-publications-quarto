@@ -234,6 +234,32 @@ Let's render one more time to see if our figure outputs how we'd like and has a 
 > Let's try that again 
 {: .checklist}
 
+## Add the code to our Paper
+
+We tested the code for our heart rate plot in a new qmd document to save time on rendering while we experimented with it (for our paper it can take 1-2 min to render and that adds up!). Now let's add the code into our paper document. Navigate to `FIXME 9` and create a new code chunk. Copy and paste the code from the test document into the paper. Go ahead and run the code to make sure it works. 
+
+Well shoot! We're getting an error:
+
+![directory error code block](../fig/07-path-code-error.png)
+
+If we go to the bottom of the code chunk we'll see more details on the error:
+
+![path error details](../fig/07-path-error-details.png)
+
+This is a path error. The reason we're seeing this is that our paper is located in the report/source directory while our test document was automatically created in the project root directory. The path from the report/source directory to the data we're trying to read is not correct any longer. 
+
+We can fix this by adding the correct relative path:
+
+```
+df <- read_csv("../../output/data/preprocessed-GARP-TSST-data.csv")
+```
+Instead of:
+```
+df <- read_csv("output/data/preprocessed-GARP-TSST-data.csv")
+```
+
+Run the code again to make sure it works properly. Great! Let's move on to inline code.
+
 
 ## Inline Code
 
@@ -281,52 +307,7 @@ Time to Knit! If you update your dataset this value will match the number of row
 
 
 
-### Global Code Chunk Options:
 
-The code looks like: 
-
-![Code Chunk Option Setup](../fig/07-setup-chunk.png)
-
-This is an option to globally set options for the entire Quarto document. 
-
-With our first plot we set the four options that adjust how that one chunk renders. However, we may end up with quite a few code chunks in our paper. For example, if we have 10 code chunks in the final paper, can you imagine how much work it would be to add the options in manually each time? and if we need different options for different figures, it could be a lot of work to keep track of what options we’re using throughout the paper. We can automate setting options by adding this special code chunk at the beginning of the document. Then, each code chunk we add will refer to those “global” options when it runs.
-
-To test this, let's add the options we put in our code chunk (and make sure to delete them from the code chunk with the heart rate code)
-
-In the `()` after the `knitr::opts_chunk$set()` add the options:
-
-`knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, results = FALSE)`
-
-> ## Tip: Overiding global options  
-> What if you want most of your code chunks to render with the same options (i.e. echo = FALSE), but you just have one or two chunks that you want to tweak the options on (i.e. display code with echo = TRUE)? Good news! The global options can be overwritten on a case by case basis in each individual code chunk. Test this by adding `echo = TRUE` to your code chunk in your document and knitting. Did you override the global settings successfully?
-{: .callout}
-
-#### Add global options to our paper
-
-Now, let's navigate back to our paper `` and add global options there. 
-
-To set global options that apply to every chunk in your file, we will call `knitr::opts_chunk$set()` in a new code chunk right after our yaml header (name the new code chunk `setup`.
-
-Knitr will treat each option that we add to this call as default settings for all code chunks. However, we will need to set the options for this code chunk in the first place! so make sure to use `include = FALSE` as in the generic Quarto document.
-
-In the `()` after the `knitr::opts_chunk$set()` add the options:
-
-`knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, results = FALSE)`
-
-Alright! That sets us up well for adding code chunks into our paper (which we will do next)
-
-
-> ## CHALLENGE 7.4 (optional) global & individual code chunk options  
->
-> How would appear in our html document if we knit a code chunk with the following options?  
-> `{r challenge-5, warning = TRUE, echo = TRUE}`
->
-> ...considering the global chunk settings were as listed: 
-> `knitr::opts_chunk$set(echo = FALSE, include = FALSE)`  
->> ## SOLUTION  
->> In this case, the global settings are set so neither the code nor the output will display. However, the individual chunk reverses the echo setting so the code will display, and it also indicates that any warnings the code renders should output too. The outputs of the code would still not be displayed (include = FALSE) The hypothetical situation for this configuration may be for debugging while writing the qmd document.   
-> {: .solution}  
-{: .challenge}
 
 
 
