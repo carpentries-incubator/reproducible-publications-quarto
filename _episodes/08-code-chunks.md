@@ -22,91 +22,53 @@ keypoints:
 
 ## Reproducible Methods for Coding in Quarto
 
-Now that we've learned the core benefit of using Quarto documents - the integration of code with text - let's learn some more reproducible methods of working with code in Quarto. We'll cover how to run external R scripts from within the Quarto document, additional Global Knitr options, including setting the working directory for the Quarto document and loading packages and data globally, as well as how to use inline code and change the knit directory for Quarto documents. Whew! that's a lot! Let's dig in.
+Now that we've learned the core benefit of using Quarto documents - the integration of code with text - let's learn some next level methods of working with code in Quarto. We'll cover how to add Global Knitr options to the yaml, run external R scripts from within the Quarto document, setting the working and output directories for the Quarto document and loading packages and data globally. Whew! that's a lot! Let's dig in.
 
-## Run Code from an external script in a code chunk
+### Global Code Chunk Options:
 
-Let's learn another technique for adding code-generated plots and figures into our document. This time around let's see how to run code in a code chunk from an external R script instead of somewhat awkwardly copying and pasting the code from a R script to a code chunk in our `.qmd`.
+There is an option to globally set options for the entire Quarto document rather than have to specify in each code chunk. This is helpful when you consistently want to use the same options and when you have many code chunks within a document. Additionally, adding global code options will allow you and collaborators to have a better idea of how you've configured your document. 
 
-There are at least a few benefits to running code in this modular fashion instead of copy/pasting:
-1. Automatic updates: if the code gets updated in the R script, it will automatically be updated in the Quarto document as well. We won't need to copy/paste code updates, which would make it easy to end up with discrepancies between our `.r` scripts and our `.qmd` paper.
+In Quarto, the way to configure global code chunk options is in the yaml. We haven't done much with the yaml up until this point, but now we'll be working with it a bit. 
 
-2. Readability: calling code externally only takes several lines of code - versus copy/pasting 50+ lines of code from our scripts.
+In the yaml of our document we can set global options with `execute`. 
 
-3. Less fussing with relative paths* - we had to change the code slightly in the first example to update the file path to the data set, which introduces variations and inconsistencies. With this method we won't have to modify the source code. 
-
-*unfortunately you will never be free of relative paths, but you can make it a bit easier on yourself.
-
-Again, let's test this out in our generic Quarto document. After our first figure add a new code chunk:
-
-![basic code chunk](../fig/08-blank-code-chunk.png)
-
-We're just going to test out the same figure again so we can verify this new method works. So, add the following code to your new chunk:
-
+```
 ~~~
-# run the code from 03_HR_analysis.R in the code directory
-source("code/03_HR_analysis.R", local = knitr::knit_global())
-# display the plot created by code in 03_HR_analysis.R
-plot 
+...
+execute: 
+      echo: false
 ~~~
-{: .language-r}
+```
 
-> ## Time to Knit!
-> Let's see if our code worked when generated from an external script 
-{: .checklist}
+Additional options can be further nested under execute. 
 
-Our plot should look exactly the same as the first copy-pasted one. 
+Let's see how it looks in our paper to add the options from our first code chunk: 
 
-
-Success! And you'll notice that the global code chunk options were applied to this second code chunk as well. 
+!(global Quarto code options)[../fig/08-global-code-options.png]
 
 
-Now that we've tested this code, let's add it to our actual paper: 
+> ## Tip: Overiding global options  
+> What if you want most of your code chunks to render with the same options (i.e. echo: false), but you just have one or two chunks that you want to tweak the options on (i.e. display code with echo: true)? Good news! The global options can be overwritten on a case by case basis in each individual code chunk. Test this by adding `#| echo: true` to your code chunk in your document and knitting. Did you override the global settings successfully?
+{: .callout}
 
-### Add the code to our Quarto document
 
-First, find `FIXME 9` in the Quarto document for Fig 3 (ctrl-f "FIXME 9"). 
-
-Add the same code from our generic document where `FIXME 9` is located under "Previw of Research Results".
-
-~~~
-# run the code from 03_HR_analysis.R in the code directory
-source("code/03_HR_analysis.R", local = knitr::knit_global())
-# display the plot created by code in 03_HR_analysis.R
-plot 
-~~~
-{: .language-r}
-
-It should look like this:
-
-![03-HR-analysis.R externally sourced in Qmd Document](../fig/08-HR-external-code.png)
-
-ADD chunk name and caption for Figure 3 (can use the same as the copy/pasted code chunk we just tested). Remember we don't need to add options since we defined them globally.
-
-> ## Time to Run!
-> Let's see if our code worked when generated from an external script 
-{: .checklist}
-
-![Error in file](../fig/08-file-connection-error.png)
-
-Shoot, we got an error! It's a file connection error - i.e. RStudio cannot find the R script file we are trying to run code from. This is  because the `.qmd` document for the paper we are trying to write is located in the `report/source` directory, and our relative file path only gives directions from the root folder. So, we need to amend our relative file path. Before, the new default .qmd document we created to test was located in the root directory of the project by default (i.e. the directory where the .rproj file is located). However, we decided to implement a better directory sturcture by creating a separate directory for the publication we're writing. 
-
-The logical fix for this would be to adjust the relative file path to read the external script, from `code/03_HR_analysis.R` to `../../code/03_HR_analysis.R`. But hmmm... that doesn't work either (try it for yourself!)
-
-> ## Challenge 8.1 Relative Path Madness
-> change the relative path for the externally sourced code from `code/03_HR_analysis.R` to `../../code/03_HR_analysis.R`
+> ## CHALLENGE 7.4 (optional) global & individual code chunk options  
 >
-> What was going on here? Why did we get an error when running the code this time?
-> 
-> > ## Solution:
-> > The issue is that the code we are calling from within the qmd document contains file paths to read and save the data that are relative to the code directory where the `03_HR_analysis.R` script resides so the paths aren’t correct when run from the .qmd file. Yesh! 
-> {: .solution}
+> How would appear in our html document if we knit a code chunk with the following options?  
+> `{r challenge-5, warning: true, echo: true}`
+>
+> ...considering the global chunk settings were as listed: 
+> ```
+> ~~~
+> execute:
+>      echo: false
+>      include: false
+> ~~~
+> ``` 
+>> ## SOLUTION  
+>> In this case, the global settings are set so neither the code nor the output will display. However, the individual chunk reverses the echo setting so the code will display, and it also indicates that any warnings the code renders should output too. The outputs of the code would still not be displayed (include: false) The hypothetical situation for this configuration may be for debugging while writing the qmd document.   
+> {: .solution}  
 {: .challenge}
-
-
-Thankfully, there is a solution for this! (As with most every obstacle you run into with R). What we will do is use a handy feature for Quarto which allows us to change the working directory of our Quarto document. This means whenever using relative paths in our project they can always* be relative to the root directory, allowing us to standardize our relative file path and allieviate this file connection error. To do this we will learn additional global Knitr options.
-
-*almost always
 
 ## More Global Knitr Options
 
@@ -115,12 +77,15 @@ We already know about one of the benefits of global knitr options - using code c
 What are some of the additional features of global knitr options? There are many, but we'll cover two more:
 1. Set working directory so file paths (for code chunks) can be relative to the root instead of our .Qmd file
 
+2. Set output directory. By default, rendered Quarto documents are saved to the same directory as the qmd document. We would like to keep to good conventions by using a separate output directory.
+
 2. Load libraries and data once at the beginning of the document instead of in each code chunk (more concise and less rendering time)
+
 
 
 ### Set working directory to project directory:
 
-Ok, so let's get back to fixing those path issues we get when we try to run externally sourced code. The definition of relative paths is that they are relative to your current document or working directory. So we are having issues with connections trying to read our data files because the R scripts in our code directory (../ to get to the 'root' or .Rproj directory) are in a different location relative to our qmd document (../..).  What we want to do is direct RStudio to change the default working directory for the qmd document from the directory where the document is located to the project directory (which is the root directory of our project where the .Rproj file is located). We actually have several methods to do it. 
+Ok, so you know how we had to change the path in the code chunk we copied into our document so that the relative path was correct for reading in data? This happened because in Quarto documents, the working directory is wherever the qmd document is located. We can simplify things by designating the working directory for our document relative to the root project directory instead. This will clear up some of our confusion with relative paths across our whole R project. 
 
 ### Option #1: Change the working directory through the RStudio IDE
 
@@ -222,53 +187,97 @@ At this point we could go back through our R scripts and comment out (or delete)
 > {: .solution}
 {: .challenge}
 
-## Inline Code
 
-What if you only need to make a quick calculation and adding a code chunk seems a little overkill?
-
-You can also include `r code` directly in your the text portion of your document. Say you are discussing some of the summary statistics in your manuscript, Quarto makes this possible through HTML/LaTeX inline code which allows you to calculate simple expressions integrated to your narrative. Inline code enables you to insert `r code` into your document to dynamically updated portions of your text. In other words, if your data set changes for any reason the code will automatically update the calculation specified. 
-
-This can be helpful when referring to specific variables on your data. For example, you should include numbers that are derived from the data as code not as numbers. Thus, rather than writing “The CSV file contains choice consistency data for 10.000 simulated participants” **(FIXME8)** , replace the static number with a bit of code that, when evaluated, gives you a dynamic number if anything changes on your dataset. Note that there is not an insert option to do this from the menu in the visual editor, so we need to insert inline code manually with  ```r ```, for example:
-
-The CSV file contains choice consistency data for ``r nrow(bronars_simulation_data)`` simulated participants.
-
-When you knit you might get an error. Any idea why? That is because we need to make sure to import the dataset we are referring to before the inline code can work. Let's add the following to our chunk at the beginning of the document where we loaded our other data:
-
-~~~
-bronars_simulation_data <- read_csv("data/bronars_simulation_data.csv")
-~~~
-{: .language-r}
-
-Time to Knit! If you update your dataset this value will match the number of rows. 
-
-> ## CHALLENGE 8.3 - Adding inline code
-> Suppose we would like to add some information to the sentence we have just adjusted in our manuscript. We would like to include the average for the variable *violation_count* present in the same dataset. Which inline code we would have to add to following sentence?
-> 
-> The CSV file contains choice consistency data for ` `r nrow(bronars_simulation_data.csv)` ` simulated participants, that have been used to determine the power of our food-choice task design to detect choice consistency violations, which averaged ` `enter inline code here` `. 
-> What inline code would you enter? What number would replace the inline code?
-> 
-> Tip: we will need to use a `dataset$variable` syntax!
-> 
->> ## Solution:
->> ` `r mean(bronars_simulation_data$violation_count)` `
->> 5.3924
-> {: .solution}
-{: .challenge}
-
-> ## Important Note:
-> Make sure the file you are calling is in the right subdirectory and your working directory is set appropriately.
->
-{: .callout}
-
-
-> ## More on inline codes:
-> Quarto will always display the results of inline code, but not the code. Inline expressions do not take knitr options.
->
-{: .callout}
 
 > ## Tip: Yaml chunk options
 > We can also tweak some settings in our yaml which changes how code chunks are displayed. We're not going to get into this in the workshop, but many of the same options you set in your global code chunk settings are also configurable in the yaml. 
 {: .callout}
+
+## Run Code from an external script in a code chunk
+
+Let's learn another technique for adding code-generated plots and figures into our document. This time around let's see how to run code in a code chunk from an external R script instead of somewhat awkwardly copying and pasting the code from a R script to a code chunk in our `.qmd`.
+
+There are at least a few benefits to running code in this modular fashion instead of copy/pasting:
+1. Automatic updates: if the code gets updated in the R script, it will automatically be updated in the Quarto document as well. We won't need to copy/paste code updates, which would make it easy to end up with discrepancies between our `.r` scripts and our `.qmd` paper.
+
+2. Readability: calling code externally only takes several lines of code - versus copy/pasting 50+ lines of code from our scripts.
+
+3. Less fussing with relative paths* - we had to change the code slightly in the first example to update the file path to the data set, which introduces variations and inconsistencies. With this method we won't have to modify the source code. 
+
+*unfortunately you will never be free of relative paths, but you can make it a bit easier on yourself.
+
+Again, let's test this out in our generic Quarto document. After our first figure add a new code chunk:
+
+![basic code chunk](../fig/08-blank-code-chunk.png)
+
+We're just going to test out the same figure again so we can verify this new method works. So, add the following code to your new chunk:
+
+~~~
+# run the code from 03_HR_analysis.R in the code directory
+source("code/03_HR_analysis.R", local = knitr::knit_global())
+# display the plot created by code in 03_HR_analysis.R
+plot 
+~~~
+{: .language-r}
+
+> ## Time to Knit!
+> Let's see if our code worked when generated from an external script 
+{: .checklist}
+
+Our plot should look exactly the same as the first copy-pasted one. 
+
+
+Success! And you'll notice that the global code chunk options were applied to this second code chunk as well. 
+
+
+Now that we've tested this code, let's add it to our actual paper: 
+
+### Add the code to our Quarto document
+
+First, find `FIXME 9` in the Quarto document for Fig 3 (ctrl-f "FIXME 9"). 
+
+Add the same code from our generic document where `FIXME 9` is located under "Previw of Research Results".
+
+~~~
+# run the code from 03_HR_analysis.R in the code directory
+source("code/03_HR_analysis.R", local = knitr::knit_global())
+# display the plot created by code in 03_HR_analysis.R
+plot 
+~~~
+{: .language-r}
+
+It should look like this:
+
+![03-HR-analysis.R externally sourced in Qmd Document](../fig/08-HR-external-code.png)
+
+ADD chunk name and caption for Figure 3 (can use the same as the copy/pasted code chunk we just tested). Remember we don't need to add options since we defined them globally.
+
+> ## Time to Run!
+> Let's see if our code worked when generated from an external script 
+{: .checklist}
+
+![Error in file](../fig/08-file-connection-error.png)
+
+Shoot, we got an error! It's a file connection error - i.e. RStudio cannot find the R script file we are trying to run code from. This is  because the `.qmd` document for the paper we are trying to write is located in the `report/source` directory, and our relative file path only gives directions from the root folder. So, we need to amend our relative file path. Before, the new default .qmd document we created to test was located in the root directory of the project by default (i.e. the directory where the .rproj file is located). However, we decided to implement a better directory sturcture by creating a separate directory for the publication we're writing. 
+
+The logical fix for this would be to adjust the relative file path to read the external script, from `code/03_HR_analysis.R` to `../../code/03_HR_analysis.R`. But hmmm... that doesn't work either (try it for yourself!)
+
+> ## Challenge 8.1 Relative Path Madness
+> change the relative path for the externally sourced code from `code/03_HR_analysis.R` to `../../code/03_HR_analysis.R`
+>
+> What was going on here? Why did we get an error when running the code this time?
+> 
+> > ## Solution:
+> > The issue is that the code we are calling from within the qmd document contains file paths to read and save the data that are relative to the code directory where the `03_HR_analysis.R` script resides so the paths aren’t correct when run from the .qmd file. Yesh! 
+> {: .solution}
+{: .challenge}
+
+
+Thankfully, there is a solution for this! (As with most every obstacle you run into with R). What we will do is use a handy feature for Quarto which allows us to change the working directory of our Quarto document. This means whenever using relative paths in our project they can always* be relative to the root directory, allowing us to standardize our relative file path and allieviate this file connection error. To do this we will learn additional global Knitr options.
+
+*almost always
+
+
 
 ## Adjust rendered html output directory
 
