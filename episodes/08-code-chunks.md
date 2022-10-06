@@ -44,7 +44,13 @@ Additional options can be further nested under execute.
 
 Let's see how it looks in our paper to add the options from our first code chunk: 
 
-!(global Quarto code options)[../fig/08-global-code-options.png]
+![global Quarto code options](../fig/08-global-code-options.png)
+
+> ## Tip: R Markdown global options syntax works in Quarto
+> If you've previously used R markdown and have old documents or don't want to learn a new workflow quite yet, Quarto is backwards compatible with R Markdown, so you may also use the old `chunk$set` syntax as below:
+> ![R Markdown global code options](../fig/07-setup-chunk.png)
+>
+{: .callout}
 
 
 > ## Tip: Overiding global options  
@@ -70,67 +76,62 @@ Let's see how it looks in our paper to add the options from our first code chunk
 > {: .solution}  
 {: .challenge}
 
-## More Global Knitr Options
+## More Global Quarto Options
 
 We already know about one of the benefits of global knitr options - using code chunk options that can be applied consistently for the whole document as we saw in the previous episode. 
 
-What are some of the additional features of global knitr options? There are many, but we'll cover two more:
+What are some of the additional features of global knitr options? There are many, but we'll cover several more:
 1. Set working directory so file paths (for code chunks) can be relative to the root instead of our .Qmd file
 
-2. Set output directory. By default, rendered Quarto documents are saved to the same directory as the qmd document. We would like to keep to good conventions by using a separate output directory.
+3. Load libraries and data once at the beginning of the document instead of in each code chunk (more concise and less rendering time)
 
-2. Load libraries and data once at the beginning of the document instead of in each code chunk (more concise and less rendering time)
+### Project level vs Document level settings
 
+With Quarto we gain the additional functionality of being able to define *project* level global settings in addition to *document* level settings. This means that the settings we choose will be applied to *all* Quarto documents within our R project. 
+
+We already saw how to adjust document level settings by adding some code to the document yaml at the top of the Qmd file. How do we edit project level settings? That's where the `_quarto.yml` file that lives in our project root directory comes in. 
+
+Opening the `_quarto.yml` file in our project root we see the following default settings:
+
+![]()
+
+#### Project-level or document-level? What's best?
+
+We have the option of adding the execution global code chunk settings we added to our paper to the global documents. This is optional however, and since we have only one Quarto document we'll refrain. The change we *must* make in project-level settings that is listed above is setting the working directory and output directory. It simply doesn't work when added in the document-level yaml. Additionally, we'll see how to load libraries and data one time for all the code chunks within one of our Quarto documents. This cannot be added to project-level settings. Why? because this isn't done in the yaml metadata - it's done within a code chunk at the beginning of a document. Confused? It may take a bit to learn the best ways to configure your documents, but don't worry, we'll walk you through the basics.   
 
 
 ### Set working directory to project directory:
 
-Ok, so you know how we had to change the path in the code chunk we copied into our document so that the relative path was correct for reading in data? This happened because in Quarto documents, the working directory is wherever the qmd document is located. We can simplify things by designating the working directory for our document relative to the root project directory instead. This will clear up some of our confusion with relative paths across our whole R project. 
-
-### Option #1: Change the working directory through the RStudio IDE
-
-The first option is a simple one - we click the menu next to the knit button and change `Knit Directory` to `Project Directory`.  
-![change working directory qmd file](../fig/08-change-wd.png) 
-
-Now, what might be the issue with changing the working directory through the IDE? Think about your project collaborators. -- Yes, if another colleague pulls this project down from GitHub and starts working on it, but doesn't have the same RStudio IDE settings as you, this paper won't knit. Rather than telling your colleague to change their IDE (and all your other current or future co-collaborators), it would be better that this setting be self-contained within the paper/project. So let's see how to do that.
-
-### Option #2: Change the working directory with a bit of code
-
-The second option requires a bit of code, but will overall be more reproducible (because it's not dependent on your personal RStudio IDE settings). To accomplish this, we will now use the `here` package introduced previously. 
-
-This is also a setting option in our global knitr settings:
-
-We will now navigate back up to the top of our `.qmd` document to the setup code chunk.  Then, we'll add the following line of code before or after our code for code chunk options (it wouldn't hurt to add a comment explaining what it does either):
-
-~~~
-knitr::opts_knit$set(root.dir = here::here())
-~~~
-*notice again this code uses a function from one of our pre-installed packages `here`. 
-
-![global knitr settings](../fig/08-global-knitr-options.png)
-
-Finally, let's re-adjust the path in the source() function after our working directory change (if you haven't already).
-
-`source("../../code/03_HR_analysis.R)` to `source("code/03_HR_analysis.R")`
-
-Looks neater already!
+Ok, so you know how we had to change the path in the code chunk we copied into our document so that the relative path was correct for reading in data? This happened because in Quarto documents, the working directory is wherever the qmd document is located but our code is located in a different folder. This means they have different relative paths to locate and read the data we want to work with. We can simplify things by designating the working directory for our document relative to the root project directory instead. What this does is let all files work relative to the project root instead of each other, standardizing the relative paths. Note that this is mainly important for code chunks - text portions of Quarto documents are not affected. This will clear up some of our confusion with relative paths across our whole R project. 
 
 
-> ## Note: setting the knit directory globally with opts_knit$set
-> Setting the knit directory to the project directory with the setup code chunk as we just did adjusts the working directory for all code in the Quarto document (code chunks and inline code), but NOT for any markdown text elements (images and hyperlinks).
+
+> ## Note: R Markdown method for setting working directory also works in Quarto
+>
+> Again, all R Markdown syntax is backward compatible with Quarto so it is possible to use the "old" method to set the working directory. This would be the workaround to set the working directory if you don't wish to use the Quarto project `_quarto.yml` file. 
+>  
+> To simplify it further, one can use the `here` package available in RStudio. 
+>
+>This is a setting option in  global knitr settings. The following code would be used in a code chunk at the top of your Quarto document:
+>
+> ~~~
+> knitr::opts_knit$set(root.dir = here::here())
+> ~~~
+> ![global knitr settings](../fig/08-global-knitr-options.png)
+
+Now, we would change the relative path in our code chunk back to what it was before, but let's hold tight. We're going to introduce another way to run code! But first, let's see how to globally load data and packages.
+
+> ## Note: Changing the working directory only applies to code
+> Setting the working directory to the project directory we just did adjusts the working directory for all code in the Quarto document (code chunks and inline code), but NOT for any markdown text elements (images and hyperlinks).
 {: .callout}
-
-> ## Time to Knit!
-> First, run the code to make sure that our file paths are correct and our code runs without errors. Good? Time to knit the document!
-{: .checklist}
 
 Now, we can have some more fun with global options.
 
 ### Globally load data and packages
 
-We can make our lives easier in one other way too. So far we've loaded the library `tidyverse` and the data frame `df` we need in the first code chunk. Now if we want to add another figure (say the hormone analysis code '02_hormone_analysis.r`), which uses the same data as our first figure - we would be loading tidyverse for a second time unnecessarily. This is because once libraries and data are loaded they are available for the rest of the qmd document.
+We can improve organization and rendering speed in our documents by learning how to globally load data and packages. So far we've loaded the library `tidyverse` and the data frame `df` we need in the first code chunk. Now if we want to add another figure (say the hormone analysis code '02_hormone_analysis.r`), which uses the same data as our first figure - we would be loading tidyverse and the data for a second time. This is unnecessary because once libraries and data are loaded in a Quarto document they are available for use in the rest of the code in the document following.
 
-Instead, we can load libraries and data once at the beginning of our document making it available for all other figures or calculations throughout the document -  allowing us to avoid repetition in our code and saving us rendering time. This also makes it easier for us to keep track of all the libraries and data we need to use in any given document. If anything needs to be tweaked, we don't need to search through every code chunk in our qmd document to make a change - it's listed right at the top. 
+Best practice is to load libraries and data once at the beginning of our document making it available for all other figures or calculations throughout the document -  allowing us to avoid repetition in our code and saving us rendering time. This also makes it easier for us to keep track of all the libraries and data we need to use in any given document for ourselves and collaborators. If anything needs to be tweaked, we don't need to search through every code chunk in our qmd document to make a change - it's listed right at the top. 
 
 
 ```
@@ -156,42 +157,8 @@ df <- read_csv("./output/data/preprocessed-GARP-TSST-data.csv")
 > {: .solution}
 {: .challenge}
 
-At this point we could go back through our R scripts and comment out (or delete) the beginning sections where we load the data and libraries. That will save some time for the qmd document to render, because the data and libraries will only load once instead of twice. You can imagine that the more code chunks you have the more time taking this step would save. Bonus that this also works to load the data before it is called in inline code as well!
+At this point we could go back through our R scripts and comment out (or delete) the beginning sections where we load the data and libraries (you will see this is already done in most of the scripts in the code folder). You can imagine that the more code chunks you have the more time taking this step would save. Bonus that this also works to load the data before it is called in inline code as well!
 
-> ## Tip: Many ways to run external code
-> There are at least 3-4 methods one can use to run external code, the best choice may just depend on the context or on your personal preference. All are a bit awkward because of relative paths, but better than copy/pasting code from elsewhere in your project (in our humble opinion):
->
-> 1. source()   -- [see more at bookdown.org](https://bookdown.org/yihui/rmarkdown-cookbook/source-script.html)
-> 2. sys.source()   -- [see more at bookdown.org](https://bookdown.org/yihui/rmarkdown-cookbook/source-script.html)
-> 3. knitr::read_chunk()  -- [see more at stackoverflow](https://stackoverflow.com/a/52398016)
-> 4. code() *in `{r}` header [see more at stackoverflow](https://stackoverflow.com/a/52400206)
->
-> - another helpful page: http://zevross.com/blog/2014/07/09/making-use-of-external-r-code-in-knitr-and-r-markdown/
-{: .callout}
-
-> ##  8.3: Your turn! Create Figure 4 with the external code
-> 
-> First, find `FIXME 10` in the qmd document for Fig 4 (ctrl-f "FIXME 10"). We need to add the code for the hormone analysis.
->
-> Make sure to give the code chunk a name: `fig4-hormones` and a caption: `"Fig 4: Cortisol and Amylase levels in stress and control groups"`
->
-> > ## Solution:
-> > ~~~
-> > {r fig4-hormones, fig.cap = "Fig 4: Cortisol and Amylase levels in stress and control groups" }
-> > # run the code from 02_hormone_analysis.R in the code directory
-> > source("code/02_hormone_analysis.R", local = knitr::knit_global())
-> > # display the plot created by code in 02_hormone_analysis.R
-> > plot 
-> > ~~~
-> > {: .language-r}
-> {: .solution}
-{: .challenge}
-
-
-
-> ## Tip: Yaml chunk options
-> We can also tweak some settings in our yaml which changes how code chunks are displayed. We're not going to get into this in the workshop, but many of the same options you set in your global code chunk settings are also configurable in the yaml. 
-{: .callout}
 
 ## Run Code from an external script in a code chunk
 
@@ -256,44 +223,38 @@ ADD chunk name and caption for Figure 3 (can use the same as the copy/pasted cod
 > Let's see if our code worked when generated from an external script 
 {: .checklist}
 
-![Error in file](../fig/08-file-connection-error.png)
 
-Shoot, we got an error! It's a file connection error - i.e. RStudio cannot find the R script file we are trying to run code from. This is  because the `.qmd` document for the paper we are trying to write is located in the `report/source` directory, and our relative file path only gives directions from the root folder. So, we need to amend our relative file path. Before, the new default .qmd document we created to test was located in the root directory of the project by default (i.e. the directory where the .rproj file is located). However, we decided to implement a better directory sturcture by creating a separate directory for the publication we're writing. 
-
-The logical fix for this would be to adjust the relative file path to read the external script, from `code/03_HR_analysis.R` to `../../code/03_HR_analysis.R`. But hmmm... that doesn't work either (try it for yourself!)
-
-> ## Challenge 8.1 Relative Path Madness
-> change the relative path for the externally sourced code from `code/03_HR_analysis.R` to `../../code/03_HR_analysis.R`
+> ## Tip: Many ways to run external code
+> There are at least 3-4 methods one can use to run external code, the best choice may just depend on the context or on your personal preference. All are a bit awkward because of relative paths, but better than copy/pasting code from elsewhere in your project (in our humble opinion):
 >
-> What was going on here? Why did we get an error when running the code this time?
+> 1. source()   -- [see more at bookdown.org](https://bookdown.org/yihui/rmarkdown-cookbook/source-script.html)
+> 2. sys.source()   -- [see more at bookdown.org](https://bookdown.org/yihui/rmarkdown-cookbook/source-script.html)
+> 3. knitr::read_chunk()  -- [see more at stackoverflow](https://stackoverflow.com/a/52398016)
+> 4. code() *in `{r}` header [see more at stackoverflow](https://stackoverflow.com/a/52400206)
+>
+> - another helpful page: http://zevross.com/blog/2014/07/09/making-use-of-external-r-code-in-knitr-and-r-markdown/
+{: .callout}
+
+> ##  8.3: Your turn! Create Figure 4 with the external code
 > 
+> First, find `FIXME 10` in the qmd document for Fig 4 (ctrl-f "FIXME 10"). We need to add the code for the hormone analysis.
+>
+> Make sure to give the code chunk a name: `fig4-hormones` and a caption: `"Fig 4: Cortisol and Amylase levels in stress and control groups"`
+>
 > > ## Solution:
-> > The issue is that the code we are calling from within the qmd document contains file paths to read and save the data that are relative to the code directory where the `03_HR_analysis.R` script resides so the paths aren’t correct when run from the .qmd file. Yesh! 
+> > ~~~
+> > {r fig4-hormones, fig.cap = "Fig 4: Cortisol and Amylase levels in stress and control groups" }
+> > # run the code from 02_hormone_analysis.R in the code directory
+> > source("code/02_hormone_analysis.R", local = knitr::knit_global())
+> > # display the plot created by code in 02_hormone_analysis.R
+> > plot 
+> > ~~~
+> > {: .language-r}
 > {: .solution}
 {: .challenge}
 
 
-Thankfully, there is a solution for this! (As with most every obstacle you run into with R). What we will do is use a handy feature for Quarto which allows us to change the working directory of our Quarto document. This means whenever using relative paths in our project they can always* be relative to the root directory, allowing us to standardize our relative file path and allieviate this file connection error. To do this we will learn additional global Knitr options.
+> ## Tip: Yaml chunk options
+> We can also tweak some settings in our yaml which changes how code chunks are displayed. We're not going to get into this in the workshop, but many of the same options you set in your global code chunk settings are also configurable in the yaml. 
+{: .callout}
 
-*almost always
-
-
-
-## Adjust rendered html output directory
-
-Ok, we'll adjust _one_ thing in the yaml. You know how we said it's good practice to have code and output from the code in separate directories? Well, the html file that renders from our `.qmd` file outputs to the same `report/source` directory. So that violates our standards. It might not be the end of the world, but let's see how to change the directory that Quarto documents output to after knitting. 
-
-This is unfortunately more difficult that one would like, but we can use the following code in the yaml to create a custom function that changes the output directory for the `.qmd` file.
-The code for our documet is as follows:
-## FIXME
-~~~
-knit: (function(rmdFile, encoding) { 
-      out_dir <- '../output';
-      rmarkdown::render(rmdFile,
-                        encoding=encoding, 
-                        output_file=file.path(dirname(rmdFile), 
-                        out_dir, 
-                        'DataPaper-ReproducibilityWorkshop.html'))})
-~~~
-
-Simply copy and paste it in to the yaml. 
