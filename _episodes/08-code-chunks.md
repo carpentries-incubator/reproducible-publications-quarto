@@ -61,7 +61,12 @@ Let's see how it looks in our paper to add the options from our first code chunk
 > ## CHALLENGE 7.4 (optional) global & individual code chunk options  
 >
 > How would appear in our html document if we knit a code chunk with the following options?  
-> `{r challenge-5, warning: true, echo: true}`
+> ```
+> {r} 
+> #| warning: true
+> #| echo: true
+> ...
+> ```
 >
 > ...considering the global chunk settings were as listed: 
 > ```
@@ -93,7 +98,7 @@ We already saw how to adjust document level settings by adding some code to the 
 
 Opening the `_quarto.yml` file in our project root we see the following default settings:
 
-![]()
+![New Quarto yml file](../fig/08-quarto.yml-new.png)
 
 #### Project-level or document-level? What's best?
 
@@ -104,7 +109,19 @@ We have the option of adding the execution global code chunk settings we added t
 
 Ok, so you know how we had to change the path in the code chunk we copied into our document so that the relative path was correct for reading in data? This happened because in Quarto documents, the working directory is wherever the qmd document is located but our code is located in a different folder. This means they have different relative paths to locate and read the data we want to work with. We can simplify things by designating the working directory for our document relative to the root project directory instead. What this does is let all files work relative to the project root instead of each other, standardizing the relative paths. Note that this is mainly important for code chunks - text portions of Quarto documents are not affected. This will clear up some of our confusion with relative paths across our whole R project. 
 
+We must change the working directory at the project level yaml settings. So we'll navigate to our _quarto.yml document in our root project directory and open it. 
 
+We'll add the following settings to the yml file:
+~~~
+...
+project: 
+  execute-dir: project
+...
+~~~
+
+So the yml file should now look something like this:
+
+![Quarto yml project setting](../fig/08-quarto.yml-project.png)
 
 > ## Note: R Markdown method for setting working directory also works in Quarto
 >
@@ -117,7 +134,7 @@ Ok, so you know how we had to change the path in the code chunk we copied into o
 > ~~~
 > knitr::opts_knit$set(root.dir = here::here())
 > ~~~
-> ![global knitr settings](../fig/08-global-knitr-options.png)
+{: .callout}
 
 Now, we would change the relative path in our code chunk back to what it was before, but let's hold tight. We're going to introduce another way to run code! But first, let's see how to globally load data and packages.
 
