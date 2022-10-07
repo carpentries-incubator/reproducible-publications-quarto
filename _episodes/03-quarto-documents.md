@@ -147,15 +147,6 @@ This list is expected to rapidly grow with new contributions submitted to the [Q
 
 **FIXME Quarto uses a template command that can be called in the terminal to create an article in any of these formats. For example:**
 
-`Terminal
-quarto use template quarto-journals/acm
-quarto use template quarto-journals/acs
-quarto use template quarto-journals/biophysical-journal
-quarto use template quarto-journals/elsevier
-quarto use template quarto-journals/jasa
-quarto use template quarto-journals/jss
-quarto use template quarto-journals/plos`
-
 
 > ## Discussion: What may be the pros and cons of using an existing template? (optional)
 >
