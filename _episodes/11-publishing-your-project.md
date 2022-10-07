@@ -34,7 +34,12 @@ Click the blue publish button
 
 ![Publish button in RStudio](../fig/11-publish-button-scrnshot-2.png)
 
-(if a little menu pops up, select "Publish Document...") and you'll be presented with the following panels:
+If you click on the carrot, you might get the warning below: 
+
+`** Installing R Package Dependencies for Publishing: 'packrat', 'rsconnect', 'markdown'
+[1/3] Installing packrat...`
+
+Wait for the installation to be completed. If a little menu pops up, select "Publish Document..." and you'll be presented with the following panels:
 
 ![Publish to RPubs or RStudio Connect](../fig/11-r-studio-knit-publish-to-scrnshot.png)
 
