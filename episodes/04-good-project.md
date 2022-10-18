@@ -262,10 +262,15 @@ Ok, now let’s talk about implementing version control in your project through 
 
 There are actually many ways to use Git, you could use it on GitHub only (though that suffers from lack of options and is a bit clunky), there is a Desktop interface, many serious programmers use it on command line. HOWEVER, RStudio has Git controls built in so we'll use it there - all in one place!
 
-Before we use Git in RStudio project, we must have an R Projects file (.RProj) so let's talk about how R Projects works in RStudio.
+### Project Environments in R
 
-Who has used R Projects before?
+Environments are a rather advanced topic in programming, but we will introduce some capabilities for projects in R that increase the reproducibility of your code. Essentially, a project environment allows us to save (or take a snapshot) of our R version and dependencies - aka what packages/package versions are required to run our code without error. This can be important when you are collaborating with others and may be unsure of whether you are working with the same R and package versions. Another common issue is if you try to run very old code from a previous project - the older the code, the more likely that errors will crop up or that the code will no longer run as it used to. To take advantage of project environments we will use a package called `renv` which is the successor of `packrat` which used to be the de facto package in R for managing environments. 
 
+However, as noted in this [RStudio article on renv](https://rstudio.github.io/renv/articles/renv.html), using `renv` does not automatically make your project reproducibile, nor is it bullet-proof. Sometimes other factors come into play that may alter the results of your code despite using `renv`, such as operating systems,  compilers etc. To go one step further in assuring reproducibility, many use 'containers' such as Docker or Kubernetes. However, that is beyond the scope of this workshop.
+
+We will see in episode 8 how one can implement project environments with `renv` to increase reproducibility with R projects.
+
+Before we use Git and environments in RStudio project, we must be working in an R Project so let's talk about how R Projects work in RStudio.
 
 ### Working in R & Quarto Projects
 
