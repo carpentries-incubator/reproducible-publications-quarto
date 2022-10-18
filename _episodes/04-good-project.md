@@ -267,9 +267,15 @@ Before we use Git in RStudio project, we must have an R Projects file (.RProj) s
 Who has used R Projects before?
 
 
-### Working in R Projects
+### Working in R & Quarto Projects
+
+#### R Project
 
 One of the most powerful and useful aspects of RStudio is its project management functionality. We’ll be using an R project today to complement our Quarto document and bundle all the files needed for our paper into one self-contained, reproducible bundle. An `.Rproj` file helps keep your R scripts, data and other files together - just navigate through your file system to get to your project directory and double click on the .Rproj file. The added benefit is that the .RProj file will automatically open RStudio and start your R session in the same directory as the `.Rproj` file and remember exactly where you left off. .RProj files are powerful ways to stay organized on their own, but they also unlock the additional benefit of being able to use Git within RStudio. 
+
+#### Quarto Projects
+
+Perhaps, confusing but we have an additional "type" of project in the RStudio ecosystem called a Quarto project. Thankfully, we don't necessarily have to pick between using R and Quarto projects because a Quarto project is just an R project - with some additional capabilities. That addition is enhanced project and style controls in the form of a YAML file called `_quarto.yml` . To keep things simple, if you are going to use Quarto documents, use Quarto Projects, if you aren't, stick to an R project. And no worries, you can always add a `_quarto.yml` file if you have just an R Project which can retroactively turn your project into a Quarto project. Let's see how to create a Quarto project in the next episode. ->
 
 > ## Challenge 4.4: R Project in “root” folder
 > `.Rproj` files must be in the root directory of your project folder/directory. What is the root directory again (look back at the relative paths intro)?  
