@@ -11,18 +11,18 @@ questions:
 objectives:
 - "Learn how to enable the visual editor."
 - "Get familiar with its basic functionalities."
-- "Apply Rmd formatting and styling using the visual editor."
+- "Apply formatting and styling using the visual editor."
 - "Learn how to add inline code to your rdm document."
 
 keypoints:
 - "The visual editor has made formatting much easier."
-- "You can apply Qmd styling without prior R Markdown knowledge."
+- "You can apply Qmd styling without prior Quarto knowledge."
 - "You can include inline code to narratives for basic calculations and dynamic information."
 ---
 
-## Formatting Rmd Documents with the Visual Editor
+## Formatting Qmd Documents with the Visual Editor
 
-As we mentioned earlier, the visual editor in RStudio makes formatting much more effortless. It provides improved productivity for composing longer-form articles and analyses with Quarto. Markdown documents can be edited in either source or visual mode. To switch into visual mode for a given document, toggle on the visual option at the top-left of the document toolbar (alternatively for windows, the ⌘⇧ F4 keyboard shortcut). This will prompt a formatting bar through which you can apply styling, add links, create tables, and others similar to functions you find in google docs and other document editors. Note that you can switch between source and visual mode at any time (editing location and undo/redo state will be preserved when you switch). Let’s try it! Feel free to follow along or just watch this quick demo. But first, make sure to have your visual editor enabled on your screen. Also, make sure to open your `DataPaper-ReproducibilityWorkshop.rmd` file located at the `report\source` folder
+As we mentioned earlier, the visual editor in RStudio makes formatting much more effortless. It provides improved productivity for composing longer-form articles and analyses with Quarto. Markdown documents can be edited in either source or visual mode. To switch into visual mode for a given document, toggle on the visual option at the top-left of the document toolbar (alternatively for windows, the ⌘⇧ F4 keyboard shortcut). This will prompt a formatting bar through which you can apply styling, add links, create tables, and others similar to functions you find in google docs and other document editors. Note that you can switch between source and visual mode at any time (editing location and undo/redo state will be preserved when you switch). Let’s try it! Feel free to follow along or just watch this quick demo. But first, make sure to have your visual editor enabled on your screen. Also, make sure to open your `DataPaper-ReproducibilityWorkshop.qmd` file located at the `report\source` folder
 
 ### Editor Toolbar
 
