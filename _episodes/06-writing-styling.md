@@ -85,9 +85,24 @@ Tip: Windows users should replace in the shortcuts above `‚åò` by `ctrl` and `‚å
 ## Other Editing Features
 The visual editor allows users to insert images by browsing their location or copying and pasting it to the Qmd document directly. There are also options to add html, line blocks, blockquotes, and footnotes. Up next we will learn more about how to add code chunks. In further episodes we will also learn how to insert citations and create a bibliography.
 
-## More Advanced Styling
+## More Styling Using Semicolons (Demonstration Only)
 
-Quarto also allows some cool advanced styling. We won't have time to cover those extensively, but let's take a look at some options:
+Quarto also allows some cool styling using semicolons. We won't have time to cover those extensively, but let's take a look at a few options. 
+
+### *Adding borders around text*
+
+We can create clusters of content and add a border around the text using a div:
+
+`::: {.border}
+Example of some content with a border.
+:::`
+
+![Text with borders](../fig/06-text-borders.png)
+
+
+### *Dividing content in separate columns*
+
+
 
 
 
