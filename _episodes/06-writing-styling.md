@@ -93,14 +93,12 @@ Quarto also allows some cool styling using semicolons. We won't have time to cov
 
 We can create clusters of content and add a border around the text using a div:
 
-`::: {.border}`
-`Example of some content with a border.`
-`:::`
+![Text with borders](../fig/06-source-borders.png)
 
 ![Text with borders](../fig/06-text-borders.png)
 
 
-### *Dividing content in separate columns*
+### *Dividing content into separate columns*
 
 
 
