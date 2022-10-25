@@ -24,7 +24,30 @@ keypoints:
 
 Now that we've learned the core benefit of using Quarto documents - the integration of code with text - let's learn some next level methods of working with code in Quarto. We'll cover how to add Global Knitr options to the yaml, run external R scripts from within the Quarto document, setting the working and output directories for the Quarto document and loading packages and data globally. Whew! that's a lot! Let's dig in.
 
-### Global Code Chunk Options:
+## Global Quarto Options
+
+We already know about one of the benefits of global knitr options - using code chunk options that can be applied consistently for the whole document as we saw in the previous episode. 
+
+What are some of the additional features of global knitr options? There are many, but we'll cover several more:
+1. Set working directory so file paths (for code chunks) can be relative to the root instead of our .Qmd file
+
+3. Load libraries and data once at the beginning of the document instead of in each code chunk (more concise and less rendering time)
+
+### Project level vs Document level settings
+
+With Quarto we gain the additional functionality of being able to define *project* level global settings in addition to *document* level settings. This means that the settings we choose will be applied to *all* Quarto documents within our R project. 
+
+We already saw how to adjust document level settings by adding some code to the document yaml at the top of the Qmd file. How do we edit project level settings? That's where the `_quarto.yml` file that lives in our project root directory comes in. 
+
+Opening the `_quarto.yml` file in our project root we see the following default settings:
+
+![New Quarto yml file](../fig/08-quarto.yml-new.png)
+
+### Project-level or document-level? What's best?
+
+We have the option of adding the execution global code chunk settings we added to our paper to the global documents. This is optional however, and since we have only one Quarto document we'll refrain. The change we *must* make in project-level settings that is listed above is setting the working directory and output directory. It simply doesn't work when added in the document-level yaml. Additionally, we'll see how to load libraries and data one time for all the code chunks within one of our Quarto documents. This cannot be added to project-level settings. Why? because this isn't done in the yaml metadata - it's done within a code chunk at the beginning of a document. Confused? It may take a bit to learn the best ways to configure your documents, but don't worry, we'll walk you through the basics.  
+
+### Document level setting - Global Code Chunk Options:
 
 There is an option to globally set options for the entire Quarto document rather than have to specify in each code chunk. This is helpful when you consistently want to use the same options and when you have many code chunks within a document. Additionally, adding global code options will allow you and collaborators to have a better idea of how you've configured your document. 
 
@@ -81,28 +104,7 @@ Let's see how it looks in our paper to add the options from our first code chunk
 > {: .solution}  
 {: .challenge}
 
-## More Global Quarto Options
-
-We already know about one of the benefits of global knitr options - using code chunk options that can be applied consistently for the whole document as we saw in the previous episode. 
-
-What are some of the additional features of global knitr options? There are many, but we'll cover several more:
-1. Set working directory so file paths (for code chunks) can be relative to the root instead of our .Qmd file
-
-3. Load libraries and data once at the beginning of the document instead of in each code chunk (more concise and less rendering time)
-
-### Project level vs Document level settings
-
-With Quarto we gain the additional functionality of being able to define *project* level global settings in addition to *document* level settings. This means that the settings we choose will be applied to *all* Quarto documents within our R project. 
-
-We already saw how to adjust document level settings by adding some code to the document yaml at the top of the Qmd file. How do we edit project level settings? That's where the `_quarto.yml` file that lives in our project root directory comes in. 
-
-Opening the `_quarto.yml` file in our project root we see the following default settings:
-
-![New Quarto yml file](../fig/08-quarto.yml-new.png)
-
-#### Project-level or document-level? What's best?
-
-We have the option of adding the execution global code chunk settings we added to our paper to the global documents. This is optional however, and since we have only one Quarto document we'll refrain. The change we *must* make in project-level settings that is listed above is setting the working directory and output directory. It simply doesn't work when added in the document-level yaml. Additionally, we'll see how to load libraries and data one time for all the code chunks within one of our Quarto documents. This cannot be added to project-level settings. Why? because this isn't done in the yaml metadata - it's done within a code chunk at the beginning of a document. Confused? It may take a bit to learn the best ways to configure your documents, but don't worry, we'll walk you through the basics.   
+ 
 
 
 ### Set working directory to project directory:
