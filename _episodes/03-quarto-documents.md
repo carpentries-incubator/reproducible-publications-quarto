@@ -129,9 +129,9 @@ Your document should render like that: <br>
 > {: .solution}
 {: .challenge}
 
-## Creating Pre-formatted Papers
+## Creating Pre-formatted Papers (Demonstration Only)
 
-We have learned how to start a new document on RStudio and we will learn good practices for project organization next. But, let’s say you are writing a paper having a journal in mind? Writing it in your own style and then formatting prior to submission will duplicate your work, right? The good news is that RStudio can give us a hand with that. 
+We have learned how to start a new document on RStudio and we will learn good practices for project organization next. But, let’s say you are writing a paper having a journal in mind? Writing it in your own style and then formatting prior to submission will duplicate your work, right? The good news is that RStudio and Quarto can give us a hand with that. 
 
 Quarto offers some journal formats and made them available within the quarto-journals GitHub organization, including:
 
@@ -145,7 +145,16 @@ Quarto offers some journal formats and made them available within the quarto-jou
 
 This list is expected to rapidly grow with new contributions submitted to the [Quarto Journal Templates repository](https://github.com/quarto-journals). You may also create your own templates following [these guidelines](https://quarto.org/docs/journals/templates.html).  
 
-**FIXME Quarto uses a template command that can be called in the terminal to create an article in any of these formats. For example:**
+Before we can call and start using a template we need to ensure we have the right Quarto version, because these templates require features in Quarto 1.2, so you will currently need [pre-release versions of Quarto](https://quarto.org/docs/download/prerelease.html). We should be good with that for this workshop, but if you are using a lab computer later on, you may need to update that!
+
+Quarto uses a template command that can be called in the terminal to create an article in any of these formats. Suppose you want to use the Elsevier template. In Rstudio, in the terminal (if not showing, `Tools>Terminal`), type `quarto use template quarto-journals/elsevier`. Then, follow the steps below:
+
+- 1) Trust the authors: `? Do you trust the authors of this template (Y/n) › Yes`
+- 2) Give a name to the directory ` ? Directory name: › elsevier-template`
+
+This should create a folder with the following files as in the figure below:
+
+![Journal-Templates](../fig/03-journal-template.png) <br>
 
 
 > ## Discussion: What may be the pros and cons of using an existing template? (optional)
