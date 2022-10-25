@@ -100,8 +100,9 @@ We can create clusters of content and add a border around the text using a div:
 
 ### *Dividing content into separate columns*
 
+We might also want to separate content into two or more columns. To accomplish that we should use a similar 
 
-
+continue **(FIXME)**
 
 
 
