@@ -22,38 +22,46 @@ keypoints:
 
 ## Reproducible Methods for Coding in Quarto
 
-Now that we've learned the core benefit of using Quarto documents - the integration of code with text - let's learn some next level methods of working with code in Quarto. We'll cover how to add Global Knitr options to the yaml, run external R scripts from within the Quarto document, setting the working and output directories for the Quarto document and loading packages and data globally. Whew! that's a lot! Let's dig in.
+Now that we've learned the core benefit of using Quarto documents - the integration of code with text - let's learn some next level methods of working with code in Quarto. We'll cover how to add Global Knitr options to the yaml, run external R scripts from within the Quarto document, setting the working directory for the Quarto document and loading packages and data globally. Whew! that's a lot! Let's dig in.
 
 ## Global Quarto Options
 
-We already know about one of the benefits of global knitr options - using code chunk options that can be applied consistently for the whole document as we saw in the previous episode. 
+We've seen that we have pretty fine-tuned control of how our code output looks in our document using code chunk options. Now, let's learn how to take those controls to the next level by learning how to apply them "globally" over our whole document or even all the documents in your project.
 
-What are some of the additional features of global knitr options? There are many, but we'll cover several more:
-1. Set working directory so file paths (for code chunks) can be relative to the root instead of our .Qmd file
-
+What are some of features of global knitr options? There are many, but we'll cover several of the most relevant and useful ones here:
+1. Set global options for code chunks so we don't have to repeat them in each chunk
+2. Set working directory so file paths (for code chunks) are easier to work with
 3. Load libraries and data once at the beginning of the document instead of in each code chunk (more concise and less rendering time)
 
 ### Project level vs Document level settings
 
-With Quarto we gain the additional functionality of being able to define *project* level global settings in addition to *document* level settings. This means that the settings we choose will be applied to *all* Quarto documents within our R project. 
+With Quarto we have the functionality and flexibility of being able to define *project* level global settings in addition to *document* level settings. This means that the settings we choose will be applied to either one specific Quarto document or *all* Quarto documents within our R project. 
 
-We already saw how to adjust document level settings by adding some code to the document yaml at the top of the Qmd file. How do we edit project level settings? That's where the `_quarto.yml` file that lives in our project root directory comes in. 
+How do we use document level settings?. How do we edit project level settings? That's where the yaml at the top of our documents and/or the `_quarto.yml` file that lives in our project root directory comes in. 
+
+At the top of our .Qmd document we see the yaml 
+
+## FIXME ADD image
 
 Opening the `_quarto.yml` file in our project root we see the following default settings:
 
 ![New Quarto yml file](../fig/08-quarto.yml-new.png)
 
-### Project-level or document-level? What's best?
+### Project and Document settings Hierarchy
 
-We have the option of adding the execution global code chunk settings we added to our paper to the global documents. This is optional however, and since we have only one Quarto document we'll refrain. The change we *must* make in project-level settings that is listed above is setting the working directory and output directory. It simply doesn't work when added in the document-level yaml. Additionally, we'll see how to load libraries and data one time for all the code chunks within one of our Quarto documents. This cannot be added to project-level settings. Why? because this isn't done in the yaml metadata - it's done within a code chunk at the beginning of a document. Confused? It may take a bit to learn the best ways to configure your documents, but don't worry, we'll walk you through the basics.  
+FIXME add image of cascading options. 
 
-### Document level setting - Global Code Chunk Options:
+
+
+## Document level setting 
+
+### Global Code Chunk Options:
 
 There is an option to globally set options for the entire Quarto document rather than have to specify in each code chunk. This is helpful when you consistently want to use the same options and when you have many code chunks within a document. Additionally, adding global code options will allow you and collaborators to have a better idea of how you've configured your document. 
 
-In Quarto, the way to configure global code chunk options is in the yaml. We haven't done much with the yaml up until this point, but now we'll be working with it a bit. 
+In Quarto, the way to configure global code chunk options is in the yaml header.
 
-In the yaml of our document we can set global options with `execute`. 
+In the yaml header of our document we can set global options with `execute`. 
 
 ```
 ~~~
@@ -105,11 +113,11 @@ Let's see how it looks in our paper to add the options from our first code chunk
 {: .challenge}
 
  
-
+## Project level settings
 
 ### Set working directory to project directory:
 
-Ok, so you know how we had to change the path in the code chunk we copied into our document so that the relative path was correct for reading in data? This happened because in Quarto documents, the working directory is wherever the qmd document is located but our code is located in a different folder. This means they have different relative paths to locate and read the data we want to work with. We can simplify things by designating the working directory for our document relative to the root project directory instead. What this does is let all files work relative to the project root instead of each other, standardizing the relative paths. Note that this is mainly important for code chunks - text portions of Quarto documents are not affected. This will clear up some of our confusion with relative paths across our whole R project. 
+Ok, so you know how we had to change the file path in the code chunk we copied into our document so that the relative path was correct for reading in data? This happened because in Quarto documents, the working directory is wherever the qmd document is located but our code is located in a different folder. This means they have different relative paths to locate and read the data we want to work with. We can simplify things by designating the working directory for our document relative to the root project directory instead. What this does is let all files work relative to the project root instead of each other, standardizing the relative paths. Note that this is mainly important for code chunks - text portions of Quarto documents are not affected. This will clear up some of our confusion with relative paths across our whole R project. 
 
 We must change the working directory at the project level yaml settings. So we'll navigate to our _quarto.yml document in our root project directory and open it. 
 
@@ -144,7 +152,11 @@ Now, we would change the relative path in our code chunk back to what it was bef
 > Setting the working directory to the project directory we just did adjusts the working directory for all code in the Quarto document (code chunks and inline code), but NOT for any markdown text elements (images and hyperlinks).
 {: .callout}
 
-Now, we can have some more fun with global options.
+> ## Tip: Yaml chunk options
+> We can also tweak some settings in our yaml which changes how code chunks are displayed. We're not going to get into this in the workshop, but many of the same options you set in your global code chunk settings are also configurable in the yaml. 
+{: .callout}
+
+## Code improvements
 
 ### Globally load data and packages
 
@@ -196,7 +208,7 @@ Again, let's test this out in our generic Quarto document. After our first figur
 
 ![basic code chunk](../fig/08-blank-code-chunk.png)
 
-We're just going to test out the same figure again so we can verify this new method works. So, add the following code to your new chunk:
+We're just going to test out the same figure again so we can verify this new method works. So in the heart rate anlysis code chunk, delete the existing code and add the following instead:
 
 ~~~
 # run the code from 03_HR_analysis.R in the code directory
@@ -213,10 +225,7 @@ plot
 Our plot should look exactly the same as the first copy-pasted one. 
 
 
-Success! And you'll notice that the global code chunk options were applied to this second code chunk as well. 
-
-
-Now that we've tested this code, let's add it to our actual paper: 
+Success! And you'll notice that the global code chunk options were applied to this code chunk as well. 
 
 ### Add the code to our Quarto document
 
@@ -244,12 +253,11 @@ ADD chunk name and caption for Figure 3 (can use the same as the copy/pasted cod
 
 
 > ## Tip: Many ways to run external code
-> There are at least 3-4 methods one can use to run external code, the best choice may just depend on the context or on your personal preference. All are a bit awkward because of relative paths, but better than copy/pasting code from elsewhere in your project (in our humble opinion):
+> There are at least 3-4 methods one can use to run external code, the best choice may just depend on the context or on your personal preference. There's no method that's a clear winner, because there's an awkward quirk or another to each of them, but better than copy/pasting code from elsewhere in your project (in our humble opinion):
 >
 > 1. source()   -- [see more at bookdown.org](https://bookdown.org/yihui/rmarkdown-cookbook/source-script.html)
 > 2. sys.source()   -- [see more at bookdown.org](https://bookdown.org/yihui/rmarkdown-cookbook/source-script.html)
 > 3. knitr::read_chunk()  -- [see more at stackoverflow](https://stackoverflow.com/a/52398016)
-> 4. code() *in `{r}` header [see more at stackoverflow](https://stackoverflow.com/a/52400206)
 >
 > - another helpful page: http://zevross.com/blog/2014/07/09/making-use-of-external-r-code-in-knitr-and-r-markdown/
 {: .callout}
@@ -273,7 +281,5 @@ ADD chunk name and caption for Figure 3 (can use the same as the copy/pasted cod
 {: .challenge}
 
 
-> ## Tip: Yaml chunk options
-> We can also tweak some settings in our yaml which changes how code chunks are displayed. We're not going to get into this in the workshop, but many of the same options you set in your global code chunk settings are also configurable in the yaml. 
-{: .callout}
+
 
