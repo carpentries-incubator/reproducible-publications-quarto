@@ -145,7 +145,7 @@ Quarto offers some journal formats and made them available within the quarto-jou
 
 This list is expected to rapidly grow with new contributions submitted to the [Quarto Journal Templates repository](https://github.com/quarto-journals). You may also create your own templates following [these guidelines](https://quarto.org/docs/journals/templates.html).  
 
-Before we can call and start using a template we need to ensure we have the right Quarto version, because these templates require features in Quarto 1.2, so you will currently need [pre-release versions of Quarto](https://quarto.org/docs/download/prerelease.html). We should be good with that for this workshop, but if you are using a lab computer later on, you may need to update that!
+Journal templates require features of Quarto version 1.2 so we need to ensure we have the right Quarto version.  You can check your Quarto version in the Terminal with command: `quarto --version`.  We should be good with that for this workshop, but if you are using a lab computer later on, you may need to update Quarto.  See: [pre-release versions of Quarto](https://quarto.org/docs/download/prerelease.html)
 
 Quarto uses a template command that can be called in the terminal to create an article in any of these formats. Suppose you want to use the Elsevier template. In Rstudio, in the terminal (if not showing, select `Tools > Terminal > New`), type `quarto use template quarto-journals/elsevier`. Then, follow the steps below:
 
@@ -157,9 +157,9 @@ This will install the extension and create an example qmd file and bibiography w
 ![Journal-Templates](../fig/03-journal-template.png) <br>
 
 
-Locate the directory you have saved the template. You can make a copy of `elsevier-template.qmd` document or rename it as start writing your paper following the journal's formatting requirements.
+Locate the directory where you have saved the template. You can make a copy of `elsevier-template.qmd` document or rename it as start writing your paper following the journal's formatting requirements.
 
-It is beyond the scope of this workshop to cover journal templates more extensively, but if you want to explore further how to apply templates, apply styling and even create your own templates, check these [GitHub page](https://github.com/quarto-journals/article-format-template). 
+It is beyond the scope of this workshop to cover journal templates more extensively, but if you want to explore further how to apply templates, apply styling and even create your own templates, check the [Quarto Journals GitHub page](https://github.com/quarto-journals/article-format-template). 
 
 > ## Tip
 > Before proceeding always check if the template of interest meets the most updated guidelines in the journal website, since these templates are maintained by the Quarto community, not the journal editors.
