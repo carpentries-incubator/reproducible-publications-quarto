@@ -82,12 +82,15 @@ As you become a more regular Rstudio user, you may also consider using some keyb
 
 Tip: Windows users should replace in the shortcuts above `⌘` by `ctrl` and `⌥⌘` by `alt (+) ctrl`.
 
-## More Advanced Styling
-
-**FIXME**
-
 ## Other Editing Features
 The visual editor allows users to insert images by browsing their location or copying and pasting it to the Qmd document directly. There are also options to add html, line blocks, blockquotes, and footnotes. Up next we will learn more about how to add code chunks. In further episodes we will also learn how to insert citations and create a bibliography.
+
+## More Advanced Styling
+
+Quarto also allows some cool advanced styling. We won't have time to cover those extensively, but let's take a look at some options:
+
+
+
 
 > ## Time to Commit!
 > Make sure to commit your changes to GitHub. Add your changed files and commit with the following message: "Added Formatting"
