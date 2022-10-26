@@ -22,7 +22,9 @@ keypoints:
 
 ## Formatting Qmd Documents with the Visual Editor
 
-As we mentioned earlier, the visual editor in RStudio makes formatting much more effortless. It provides improved productivity for composing longer-form articles and analyses with Quarto. Markdown documents can be edited in either source or visual mode. To switch into visual mode for a given document, toggle on the visual option at the top-left of the document toolbar (alternatively for windows, the ⌘⇧ F4 keyboard shortcut). This will prompt a formatting bar through which you can apply styling, add links, create tables, and others similar to functions you find in google docs and other document editors. Note that you can switch between source and visual mode at any time (editing location and undo/redo state will be preserved when you switch). Let’s try it! Feel free to follow along or just watch this quick demo. But first, make sure to have your visual editor enabled on your screen. Also, make sure to open your `DataPaper-ReproducibilityWorkshop.qmd` file located at the `report\source` folder
+As we mentioned earlier, the visual editor in RStudio makes formatting much more effortless. It provides improved productivity for composing longer-form articles and analyses with Quarto. Markdown documents can be edited in either source or visual mode. To switch into visual mode for a given document, toggle on the visual option at the top-left of the document toolbar (alternatively for windows, the ⌘⇧ F4 keyboard shortcut). This will prompt a formatting bar through which you can apply styling, add links, create tables, and others similar to functions you find in google docs and other document editors. Note that you can switch between source and visual mode at any time (editing location and undo/redo state will be preserved when you switch). Let’s try it! Feel free to follow along or just watch this quick demo. But first, make sure to have your visual editor enabled on your screen. Also, make sure to open your `DataPaper-ReproducibilityWorkshop.qmd` file located at the `report\source` folder.
+
+If you'd like to learn more about markdown basics and use the source mode to format you documents check [Quarto's markdown basics](https://quarto.org/docs/authoring/markdown-basics.html).
 
 ### Editor Toolbar
 
@@ -38,6 +40,8 @@ Additional commands are available on the Format, Insert, and Table menus:
 > You can also use the catch-all ⌘ / shortcut to insert just about anything. Just execute the shortcut then type what you want to insert. For example: `/lis` will prompt listing options.
 >
 {: .callout}
+
+Let's get some formatting done in our example paper. We will look for some **FIXMEs** and replace with the recommended style so we can all produce a similar output at the end of the workshop.
 
 
 ### *Applying Emphasis*
@@ -100,7 +104,8 @@ We can create clusters of content and add a border around the text using a div:
 
 ### *Dividing content into separate columns*
 
-We might also want to separate content into two or more columns. To accomplish that we should use a similar 
+If we want to separate content into two or more columns that could be accomplished with a similar approach as above.
+
 
 continue **(FIXME)**
 
