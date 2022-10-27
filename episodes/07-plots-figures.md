@@ -22,7 +22,7 @@ keypoints:
 
 ## Utilizing the Code Features of Quarto
 
-We've learned about the text-formatting options of Quarto , now let's dive into the code portion of Quarto documents. Quarto flips the defaults of code and text - instead of priortizing the code and making you comment out (#) text such as in R scripts, they priortize text and force you to specially comment the code portions. How do you signal to R the difference between code and text when you're not using code commments (#)? That's where code chunks (or "code chunks" as RStudio calls them) come into play. Instead of Quarto's rendering system processing the markdown styling into the final output, Code chunks are sent to a preceding stage of processing by Knitr, which "knits" the code output and text together. Secondly, Quarto processes the code output and displays it in the document format of our choice - i.e. Knitr runs the lines of code for a plot in a code chunk, joins it to the markdown text portions, and Quarto outputs that as an html document. 
+We've learned about the text-formatting options of Quarto, now let's dive into the code portion of Quarto documents. Quarto flips the defaults of code and text - instead of priortizing the code and making you comment out (#) text such as in R scripts, they priortize text and force you to specially comment the code portions. How do you signal to R the difference between code and text when you're not using code commments (#)? That's where code chunks (or "code chunks" as RStudio calls them) come into play. Instead of Quarto's rendering system processing the markdown styling into the final output, Code chunks are sent to a preceding stage of processing by Knitr, which "knits" the code output and text together. Secondly, Quarto processes the code output and displays it in the document format of our choice - i.e. Knitr runs the lines of code for a plot in a code chunk, joins it to the markdown text portions, and Quarto outputs that as an html document. 
 
 ## What is Knitr?
 
@@ -31,11 +31,11 @@ But what is Knitr? Knitr is the engine in RStudio which creates the “dynamic�
 1. Code Chunks
 2. Inline Code
 
-First, we're going to talk about code chunks for including substantial portions of code into our narrative such as to generate figures and plots. There are a plethora of options that become available to us when using code chunks so this tends to be the more complex part of Quarto documents. Now, sometimes you just need to do a quick calculation - like a count of total observations in your data or the mean of one of your variables. In those cases, it may not be worth setting up a code chunk to calculate those values, so after code chunkss we will see how to add inline code - which allows one to add a quick line of code or single function to be executing within the text portion of the document. But let's start with code chunkss.
+First, we're going to talk about code chunks for including substantial portions of code into our narrative such as to generate figures and plots. There are a plethora of options that become available to us when using code chunks so this tends to be the more complex part of Quarto documents. Now, sometimes you just need to do a quick calculation - like a count of total observations in your data or the mean of one of your variables. In those cases, it may not be worth setting up a code chunk to calculate those values, so after code chunks we will see how to add inline code - which allows one to add a quick line of code or single function to be executing within the text portion of the document. But let's start with code chunks.
 
 ## Inserting Code Chunks
 
-Code chunks (also called "code chunkss") are the preferred option when you need to do something more sophisticated with your code than inline code, such as building plots or tables.  They also incorporate syntax which allows modifications to how that code is rendered and styled in your final output. We’ll learn more about that as we walk through the “anatomy” of a code chunk.
+Code chunks (also called "code blocks") are the preferred option when you need to do something more sophisticated with your code than inline code, such as building plots or tables.  They also incorporate syntax which allows modifications to how that code is rendered and styled in your final output. We’ll learn more about that as we walk through the “anatomy” of a code chunk.
 
 ### Start a new .qmd File
 First, though, let's open a new `.qmd` document to get a look at how code chunk work before integrating them into our paper. 
@@ -48,7 +48,7 @@ Let's first delete the generic text because we don't need it at this point (all 
 
 ### Basic Anatomy of a Code Chunk
 
-You can quickly insert chunkss like these into your file with:  
+You can quickly insert chunks like these into your file with:  
 - the keyboard shortcut Ctrl + Alt + I (OS X: Cmd + Option + I)  
 - the Add Chunk command in the editor toolbar  
 - or by typing the code chunk delimiters {r} and ```.  
@@ -304,17 +304,3 @@ Time to Knit! If you update your dataset this value will match the number of row
 > Quarto will always display the results of inline code, but not the code. Inline expressions do not take knitr options.
 >
 {: .callout}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
