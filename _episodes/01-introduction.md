@@ -21,7 +21,7 @@ keypoints:
 
 ## Warm-up
 
-Let's get into breakout rooms and discuss:
+Let's discuss:
 What is reproducible research for you?
 Have you ever experienced issues while trying to reproduce someone else's study or even your own research?
 
