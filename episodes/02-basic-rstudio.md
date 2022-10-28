@@ -80,7 +80,7 @@ Packages can be installed and updated from the Package tab with the *Install* an
 > {: .solution}
 {: .challenge}
 
-## Starting and Naming a new Quarto Document
+## Starting and Naming a New Quarto Document
 
 Start a new Quarto document in RStudio by clicking File \> New File \> Quarto Document...
 
@@ -132,8 +132,8 @@ Note that both the visual and the source editors offer the option to display an 
 
 
 > ## Tip: Resources to learn more about Quarto
-> If you want to learn more about the source editor (as we call it) please see
-> the the [Quarto Guide](https://quarto.org/docs/guide).
+> If you want to learn more about the source editor, please see
+> the [Quarto Guide](https://quarto.org/docs/guide).
 {: .callout}
 
 
