@@ -3,7 +3,7 @@ title: "Writing and Styling Qmd Documents"
 teaching: 10
 exercises: 10
 questions:
-- "What is the Visual Editor in Rstudio?"
+- "What is the Visual Editor in RStudio?"
 - "Which features does the Visual Editor have?"
 - "How can I can apply styling and formatting to Qmd documents in Rstudio more easily?"
 - "How to add inline code?"
