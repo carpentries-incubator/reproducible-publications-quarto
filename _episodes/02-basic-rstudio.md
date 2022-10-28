@@ -99,7 +99,7 @@ If you see this default text you're good to go:
 
 ### Visual Editor vs. Source Editor
 
-Remember that in the settings we chose to use the visual editor? RStudio released a new major update to their IDE in January 2020, which includes a new "visual editor" to supplement their original editor (which we will call the source editor) for authoring with Markdown syntax. The visual editor follows the is friendlier with a graphical user interface similar to Word or Google docs that lets you choose styling options from the menu (before you had to either have the markdown code memorized or look it up for each of your styling choices). Another major benefit is that the new editor renders the styling in real time so you can preview your paper before rendering to your output format.
+Remember that in the settings we chose to use the visual editor? RStudio released a new major update to their IDE in January 2020, which includes a new "visual editor" to supplement their original editor (which we will call the source editor) for authoring with markdown syntax. The visual editor follows the WYSIWYG "what you see is what you get" approach similarly to Word or Google docs that lets you choose styling options from the menu (before you had to either have the markdown code memorized or look it up for each of your styling choices). Another major benefit is that the new editor renders the styling in real time so you can preview your paper before rendering to your output format.
 
 #### Source Editor
 
@@ -119,7 +119,7 @@ If you toggle the source button, you will display your quarto document in the "s
 
 #### Visual Editor
 
-Let's switch back to the visual editor. You'll notice that formatting elements like headings, hyperlinks and bold have been generated automatically, giving us a preview of how our text will render. However, the visual editor does not run any code automatically, we'll have to do that manually (but we will learn how to do that later on).
+Let's switch back to the visual editor. You'll notice that formatting elements like headings, hyperlinks and bold have been generated automatically, giving us a preview of how our text will render. The  However, the visual editor does not run any code automatically, we'll have to do that manually (but we will learn how to do that later on).
 
 We will proceed using the visual editor during this workshop as it is more
 user-friendly and allows us to talk about styling without needing to teach the
