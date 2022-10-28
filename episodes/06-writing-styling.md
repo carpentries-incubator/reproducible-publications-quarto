@@ -102,18 +102,26 @@ We won't have time to cover these extensively, but let's take a look at a few ex
 
 We can create clusters of content and add a border around the text using a div:
 
-![Text with borders in source](../fig/06-source-borders.png)
+If we type: <br>
 
-![Text with borders rendered](../fig/06-text-borders.png)
+![Text with borders in source](../fig/06-source-borders.png) <br>
+
+We will get: <br>
+
+![Text with borders rendered](../fig/06-text-borders.png) <br>
 
 
 ### *Dividing content into separate columns*
 
 If we want to separate content into two or more columns that could be accomplished with a similar approach as above.
 
-![Two columns in source](../fig/06-source-twocolumns.png)
+If we type: <br>
 
-![Two columns rendered](../fig/06-twocolumns.png)
+![Two columns in source](../fig/06-source-twocolumns.png) <br>
+
+We will get: <br>
+
+![Two columns rendered](../fig/06-twocolumns.png) <br>
 
 
 If you would like to explore more the *Fence Divs* and othere cool Quarto functionalities check their [Divs and Spans documentation](https://quarto.org/docs/authoring/markdown-basics.html#divs-and-spans).
