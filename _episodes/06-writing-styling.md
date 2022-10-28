@@ -89,9 +89,14 @@ Tip: Windows users should replace in the shortcuts above `‚åò` by `ctrl` and `‚å
 ## Other Editing Features
 The visual editor allows users to insert images by browsing their location or copying and pasting it to the Qmd document directly. There are also options to add html, line blocks, blockquotes, and footnotes. Up next we will learn more about how to add code chunks. In further episodes we will also learn how to insert citations and create a bibliography.
 
-## More Styling Using Semicolons (Demonstration Only)
+## Bonus Content: More Styling with Fence Divs (Demonstration Only)
 
-Quarto also allows some cool styling using semicolons. We won't have time to cover those extensively, but let's take a look at a few options. 
+Quarto also allows some cool styling using colons to create *fenced divs*. The advantage of using fenced divs is that you may section styling/layout to pieces of your content more easily and using an unified and syntax across different types of outputs. Essentially, these will adopt the following structure:
+
+- Start and end with an equal number of colons `:` being minimum of 3 `:::`
+- Add curly brackets to indicate the start/end of a class or name, e.g., `{.class}`
+
+We won't have time to cover these extensively, but let's take a look at a few examples. 
 
 ### *Adding borders around text*
 
@@ -105,9 +110,6 @@ We can create clusters of content and add a border around the text using a div:
 ### *Dividing content into separate columns*
 
 If we want to separate content into two or more columns that could be accomplished with a similar approach as above.
-
-
-continue **(FIXME)**
 
 
 
