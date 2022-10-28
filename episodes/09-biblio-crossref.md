@@ -187,8 +187,6 @@ If you do not start you label with `fig-`, Quarto will interpret it as a citatio
 
 You may follow a similar approach to add cross-references for sections `(#sec-)/(@sec-)`, equations  `(#eq-)/(@eq-)` and tables `(#tbl-)/(@tbl-)`. For more information on how to cross-reference different types of objects, visit [Quarto - Cross References](https://quarto.org/docs/authoring/cross-references.html). 
 
-**[FIXME - the panel insert cross-references in the GUI seems not to be working. Add a note if that remains true before the day of the workshop]**
-
 If you wish to add a cross-reference to a figure that was generated via code block, you have to provide a label (id) and a caption at the beggining of the figure code block.
 
 `
