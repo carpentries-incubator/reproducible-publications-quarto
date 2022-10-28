@@ -52,7 +52,7 @@ Quarto default YAML header includes the following metadata surrounded by three d
 The first three are self-explanatory, but what's the output? We saw this in the wizard for starting a new document, by default you are able to pick from pdf, html, and word document. Basically, this allows you to export your qmd file as a file type of your choice. There are [other options for output](https://bookdown.org/yihui/rmarkdown/output-formats.html) and even more can be added by installing certain packages, but these are the three default options.   
 <br>
 
-We’ll see other formatting options for YAML later on including how to add bibliography information, customize our output, and change the default settings of the knit function. Below is an example of how our YAML file will look at the end of this workshop. **FIXME - replace the YAML**
+We’ll see other formatting options for YAML later on including how to add bibliography information, customize our output, and change the default settings of the knit function. Below is an example of how our YAML file will look at the end of this workshop. **FIXME - update the YAML**
 
 ~~~
 ---
@@ -126,8 +126,12 @@ Your document should render like that: <br>
 >> ## Solution:
 >> You may change the output format in the YAML to `docx`. 
 >> Note that to preview word documents you need to have MS Word, Libre or Open Office installed on your machine. 
+>> Alternatively, you may enter the following command in the terminal:
+>> `quarto render my_first_qmd.qmd --to docx
 > {: .solution}
 {: .challenge}
+
+**Note:** In order to create PDFs you will need to install a recent distribution of LaTeX. We recommend the use of TinyTeX , which you can install with the following command: `quarto install tool tinytex`.  
 
 ## Creating Pre-formatted Papers (Demonstration Only)
 
