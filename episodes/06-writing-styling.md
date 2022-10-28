@@ -105,14 +105,14 @@ We can create clusters of content and add a border around the text using a div:
 If we type: <br>
 
 ~~~
----
----
 
----
----
+::: {.border}
+
+Example of some content with a border.
+
+:::
+
 ~~~
-
-![Text with borders in source](../fig/06-source-borders.png) <br>
 
 We will get: <br>
 
@@ -126,8 +126,7 @@ If we want to separate content into two or more columns that could be accomplish
 If we type: <br>
 
 ~~~
----
----
+
 :::: {. columns}
 ::: {.column width="50%"}
 Some content in left column
@@ -136,8 +135,7 @@ Some content in left column
 Some Content in right column
 :::
 ::::
----
----
+
 ~~~
 
 We will get: <br>
