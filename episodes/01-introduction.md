@@ -119,6 +119,8 @@ A published article is like the top of a pyramid, meaning that a reproducible pa
 
 Understanding foundational aspects of RStudio enables a gradual improvement of scientific workflows and therefore, contributes to increasing research reproducibility compliance. RStudio is an integrated development environment (IDE) for R and Python. It includes a console, syntax-highlighting editor that supports direct code execution, as well as tools for plotting, history, debugging, collaboration, and workspace management. It is a powerful tool which supports research by weaving the principles of reproducibility throughout the entire research lifecycle, from data gathering to the statistical analysis, presentation and publication of results. 
 
+RStudio is soon beoming [Posit](https://posit.co/), but that won't change how you interact with the interface and its functionalities. This is only a branding change to better represent the broader focus and larger community that the IDE serves, which is no longer exclusively linked to R.
+
 ### It is free and open-source
 
 Reproducibility becomes more difficult and opaque when results rely on proprietary software. Unless research code is open sourced, reproducing results on different software/hardware configurations is impossible. Rstudio is dedicated to sustainable investment in free and open-source software for data science. 
@@ -160,9 +162,15 @@ Quarto generates a .qmd file that weaves together content and executable code in
 8. If you do not make any changes to the document after creating the output document, you can be sure that the paper was executable at least at the time of submission.
 9. Refer to the corresponding code lines in the methodology section making it unnecessary to use pseudocode, high-level textual descriptions, or just too many words to describe the computational analysis.
 
+> ## Why it is called Quarto?
+> 
+Developers picked a name that had meaning in the history of publishing and landed on Quarto, which is the format of a book or pamphlet produced from full sheets printed with eight pages of text, four to a side, then folded twice to produce four leaves.
+{: .callout}
+
+
 > ## Why Quarto and not R Markdown?
 >
-> As noted before, Quarto is the next generation of R Markdown which we have previously taught in a previous workshop [see Reproducible Publications with RStudio](https://github.com/carpentries-incubator/Reproducible-Publications-with-RStudio); however, the anatomy of .rmd and .qmd files are very similar. So why move to Quarto? While compatible with Python (and bash, Julia, C, SQL), R Markdown was designed primarily for R users. Quarto does not require R. Quarto runs computations into separate pluggable language "engines", which helps make this cross language functionality easier to support. In addition, because Quarto is designed to be compatible with existing formats you can render most existing .Rmd and Jupyter Notebooks with Quarto without modification. This low-pain process helps the transition to Quarto.
+> As noted before, Quarto is the next generation of R Markdown which we have previously taught in a previous workshop [see Reproducible Publications with RStudio](https://github.com/carpentries-incubator/Reproducible-Publications-with-RStudio); however, the anatomy of .rmd and .qmd files are very similar. So why move to Quarto? While compatible with Python (and bash, Julia, C, SQL), R Markdown was designed primarily for R users. Quarto does not require R. Quarto runs computations into separate pluggable language "engines", which helps make this cross language functionality easier to support and reduces infrastrucutre intensivity with built-in applications. In addition, because Quarto is designed to be compatible with existing formats you can render most existing .Rmd and Jupyter Notebooks with Quarto without modification. This low-pain process helps the transition to Quarto. 
 {: .callout}
 
 ## Some Real-world Applications
