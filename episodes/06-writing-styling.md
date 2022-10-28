@@ -91,9 +91,9 @@ The visual editor allows users to insert images by browsing their location or co
 
 ## Bonus Content: More Styling with Fence Divs (Demonstration Only)
 
-Quarto also allows some cool styling using colons to create *fenced divs*. The advantage of using fenced divs is that you may section styling/layout to pieces of your content more easily and using an unified and syntax across different types of outputs. Essentially, these will adopt the following structure:
+Quarto also allows some cool styling using colons to create *fenced divs*. The advantage of using fenced divs is that you may section styling/layout to pieces of your content more easily, using an unified and syntax, while also protecting and preserving formatting across different types of outputs. Essentially, these will adopt the following structure:
 
-- Start and end with an equal number of colons `:` being minimum of 3 `:::`
+- Start and end with an equal number of colons being minimum of 3 `:::`
 - Add curly brackets to indicate the start/end of a class or name, e.g., `{.class}`
 
 We won't have time to cover these extensively, but let's take a look at a few examples. 
@@ -102,16 +102,21 @@ We won't have time to cover these extensively, but let's take a look at a few ex
 
 We can create clusters of content and add a border around the text using a div:
 
-![Text with borders](../fig/06-source-borders.png)
+![Text with borders in source](../fig/06-source-borders.png)
 
-![Text with borders](../fig/06-text-borders.png)
+![Text with borders rendered](../fig/06-text-borders.png)
 
 
 ### *Dividing content into separate columns*
 
 If we want to separate content into two or more columns that could be accomplished with a similar approach as above.
 
+![Two columns in source](../fig/06-source-twocolumns.png)
 
+![Two columns rendered](../fig/06-twocolumns.png)
+
+
+If you would like to explore more the *Fence Divs* and othere cool Quarto functionalities check their [Divs and Spans documentation](https://quarto.org/docs/authoring/markdown-basics.html#divs-and-spans).
 
 > ## Time to Commit!
 > Make sure to commit your changes to GitHub. Add your changed files and commit with the following message: "Added Formatting"
