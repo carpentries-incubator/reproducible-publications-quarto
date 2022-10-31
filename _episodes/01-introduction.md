@@ -49,7 +49,7 @@ Reproducibility refers to the ability of a researcher to duplicate the results o
 
 ### Why all the talk about reproducible research?
 
-A 2016 survey in Nature revealed that irreproducible experiments are a problem across all domains of science:
+Many studies claim results that cannot be reproduced. This problem has attracted increased attention in recent years, with supporting evidence that research is often not reproducible. A 2016 survey in Nature revealed that irreproducible experiments are a problem across all domains of science:
 
 ![Nature Report - 2016](../fig/01-fig2.png)
 >Source: Baker, M. 1,500 scientists lift the lid on reproducibility. Nature 533, 452–454 (2016). [doi.org/10.1038/533452a](https://doi.org/10.1038/533452a)
@@ -119,7 +119,7 @@ A published article is like the top of a pyramid, meaning that a reproducible pa
 
 Understanding foundational aspects of RStudio enables a gradual improvement of scientific workflows and therefore, contributes to increasing research reproducibility compliance. RStudio is an integrated development environment (IDE) for R and Python. It includes a console, syntax-highlighting editor that supports direct code execution, as well as tools for plotting, history, debugging, collaboration, and workspace management. It is a powerful tool which supports research by weaving the principles of reproducibility throughout the entire research lifecycle, from data gathering to the statistical analysis, presentation and publication of results. 
 
-RStudio is soon beoming [Posit](https://posit.co/), but that won't change how you interact with the interface and its functionalities. This is only a branding change to better represent the broader focus and larger community that the IDE serves, which is no longer exclusively linked to R.
+RStudio is soon becoming [Posit](https://posit.co/), but that won't change how you interact with the interface and its functionalities. This name change is only a re-branding to better represent the broader focus and larger community that the IDE serves, which is no longer exclusively linked to R.
 
 ### It is free and open-source
 
