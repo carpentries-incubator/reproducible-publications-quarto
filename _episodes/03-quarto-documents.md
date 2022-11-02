@@ -119,6 +119,10 @@ Your document should render like that: <br>
 
 ![Render html output](../fig/03-render-html.png) <br>
 
+> ## Warning: Enable Pop-ups!
+> If using the Jupyter Hub RStudio set up, you may not see your preview until you enable pop-ups, since the webrowser of your choice may block pop-ups by default.
+{: .callout}
+
 
 > ## CHALLENGE 3.1 - Rendering the document in another format
 > Suppose you want this .qmd document to render as a word document. What options would you have?
@@ -131,7 +135,11 @@ Your document should render like that: <br>
 > {: .solution}
 {: .challenge}
 
-**Note:** In order to create PDFs you will need to install a recent distribution of LaTeX. We recommend the use of TinyTeX , which you can install with the following command: `quarto install tool tinytex`.  
+
+> ## Note about PDFs 
+> In order to create PDFs you will need to install a recent distribution of LaTeX. We recommend the use of TinyTeX, which you can install with the following command: `quarto install tool tinytex`. 
+{: .callout}
+ 
 
 ## Creating Pre-formatted Papers (Demonstration Only)
 
