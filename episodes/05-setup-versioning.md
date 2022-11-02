@@ -36,7 +36,10 @@ There are several options for working with R projects in RStudio. If you aren't 
 
 The third option would be a project already under version control but options 1 and 2 will also give you the opportunity to use or add versioning to the project. Let's see how that would work.
 
-### Starting a R Project with Version Control
+---
+
+### Starting a R Project with Version Control 
+#### Method #1
 
 To start an R project, you would navigate to `File > new project` rather than just `File > new file`.
 
@@ -51,7 +54,10 @@ Then, to use version control, make sure to check the "_Create a git repository_"
 
 *Optionally, check the box in the bottom left corner "Open in new session" if you want it to appear in a new RStudio window.
 
+---
+
 ### Add versioning to an existing project
+#### Method #2
 
 ![existing project](../fig/05-existing-directory.png)
 
@@ -59,7 +65,10 @@ We won't take the time to cover this here, but if you've already started an R pr
 
 This is by far the most labor intensive way to do it, so remember to add version control at the beginning of any new project.
 
+---
+
 ### Continue a version-controlled project
+#### Method #3
 
 ![version controlled](../fig/05-version-control.png)
 The final option is to continue a version controlled project. This is the option we will do for our workshop.
@@ -76,11 +85,8 @@ When you choose this option there will be a place to paste the url of the GitHub
 > ## Our turn!
 >
 > We have a repository already prepared for this workshop at [https://github.com/carpentries-incubator/Reproducible-Publications-with-RStudio-Example](https://github.com/carpentries-incubator/Reproducible-Publications-with-RStudio-Example). 
-> We are going to use the third option to download a repository from GitHub to work hands on. This is pre-requisite if you would like to follow along.
+> We are going to use the third option to download this repository from GitHub and work with it hands on. You will need this repo in your working environment if you would like to follow along through this workshop.
 > Let’s take a second to acquaint ourselves with GitHub. [At this link](https://github.com/signup), you may sign into your GitHub account or create one if you have not already.
-> ~~~
-> code
-> ~~~
 > {: .source}
 {: .prereq}
 
@@ -92,11 +98,11 @@ The two main sections are files and directories and the README which should cont
 
 We are each going to make a copy of this repository to use for this workshop. To do so we will do what's called "forking" on GitHub. A Fork is a copy of a repository that you get to experiment with without disrupting the original project.
 
-In the upper right hand corner of the repository, click on the button that says "Fork" - see highlighted example below:
+On Github in the upper right hand corner of the repository, click on the button that says "Fork" - see highlighted example below:
 
 ![fork on GitHub](../fig/05-fork.PNG)
 
-If you are a member of any organizations on GitHub, you will be asked whether you want to fork to your account or to an organization. Choose your personal account for this workshop. GitHub will process for a few moments and voila! You have a copy of the workshop repository.
+If you are a member of any organizations on GitHub, you will be asked whether you want to fork to your account or to an organization. Choose your personal account for this workshop. Un-check the option to "Copy the Main branch Only" as you want all branches. ![fork all branches](../fig/05-git-fork-all-branches.png) GitHub will process for a few moments and voila! You have your own copy of the workshop example repository.
 
 Now, click on the green `Code` drop-down and then click on the copy icon next to the repository url:
 
@@ -108,11 +114,18 @@ Click `File > New Project > Verison Control > Git`.
 
 So back to the url you copied from GitHub. Navigate again to `File > New Project > Version Control > Git`. Paste in your url and choose "Desktop" as your directory.
 
-![start my R project](../fig/05-start-my-r-project.PNG)
+![start my R project](../fig/05-git-new-project-clone.png)
 
 One more step: Make sure to select the quarto branch in RStudio (on your local instance or Jupyter Hub) on the Git tab. 
 
 ![Select Quarto Branch](../fig/05-selecting-quarto-branch.png)
+
+If you're working in the JupyterHub environment you will need to configure Git with your name and email before you'll be able to commit the changes you make during this workshop.  Substitute your name and email address in the commands below and past them into the Terminal panel of RStudio.
+
+```
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+```
 
 
 Woo hoo! We have the project we're working on for this workshop opened in RStudio and set to use version control!
