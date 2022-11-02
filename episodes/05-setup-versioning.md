@@ -110,6 +110,10 @@ So back to the url you copied from GitHub. Navigate again to `File > New Project
 
 ![start my R project](../fig/05-start-my-r-project.PNG)
 
+One more step: Make sure to select the quarto branch in RStudio (on your local instance or Jupyter Hub) on the Git tab. 
+
+![Select Quarto Branch](../fig=05-selecting-quarto-branch.png)
+
 
 Woo hoo! We have the project we're working on for this workshop opened in RStudio and set to use version control!
 
