@@ -120,7 +120,7 @@ One more step: Make sure to select the quarto branch in RStudio (on your local i
 
 ![Select Quarto Branch](../fig/05-selecting-quarto-branch.png)
 
-If you're working in the JupyterHub environment you will need to configure Git with your name and email before you'll be able to commit the changes you make during this workshop.  Substitute your name and email address in the commands below and past them into the Terminal panel of RStudio.
+If you're working in the JupyterHub environment you will need to configure Git with your name and email before you'll be able to commit the changes you make during this workshop.  Substitute your name and email address in the commands below and paste them into the Terminal panel of RStudio.
 
 ```
 git config --global user.email "you@example.com"
