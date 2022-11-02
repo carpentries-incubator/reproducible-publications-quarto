@@ -21,7 +21,7 @@ keypoints:
 ## Getting Around RStudio
 
 Throughout this lesson, we're going to teach you some of the fundamentals of
-using Quarto as part of your RStudio workflow.
+using Quarto as part of your RStudio workflow. 
 
 We'll be using RStudio: a free, open source R Integrated Development Environment
 (IDE). It provides a built in editor, works on all platforms
@@ -30,8 +30,10 @@ version control and project management.
 
 This lesson assumes you already have a basic understanding of R and RStudio but
 we will do a brief tour of the IDE, review R projects and the best practices for
-organizing your work, and how to install packages you may want to use to work
-with Quarto.
+organizing your work, and how to install or check packages you need to follow along.
+
+Now, let's open RStudio. You may access it through the Jupyter Hub instance [https://carpentryworkshop.lsit.ucsb.edu](https://carpentryworkshop.lsit.ucsb.edu). After passing authentication, choose `RStudio`. If you want to follow along using your local RStudio, make sure you use IDE version RStudio v2022. 07.1 or later and that it is running [Quarto version 1.2 or above](https://quarto.org/docs/download/prerelease.html). If you need to check that, for RStudio, choose `Help` and `About RStudio`. For the Quarto version checking, type in `packageVersion("quarto")` on the console. 
+  
 
 **Basic layout**
 
