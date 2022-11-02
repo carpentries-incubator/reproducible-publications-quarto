@@ -153,7 +153,7 @@ Now, let's dive in to how to use version control.
 ## Using Version Control in RStudio
 
 There are two places we can interact with Git in the RStudio interface.
-1. Menu bar ![Git menu bar](../fig/05-git-top-menu.PNG)
+1. Menu bar ![Git menu bar](../fig/05-git-top-menu.PNG) <br>
 2. Environment/History pane ![git environment panel](../fig/05-git-environment-window.PNG)
 
 Ok, but what do all the options mean? We won't go through them all, but here are the basics to get started versioning your project.
