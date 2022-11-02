@@ -54,6 +54,31 @@ with a URL similar to: `https://rpubs.com/yourname/678624`
 
 RStudio also saves an HTML version of your *knit* document to your local file system.  Look for it in the same directory as the Quarto file in your R-Studio project directory.  This html document is self-contained and highly portable.  Images are encoded directly into the HTML so you can easily move it to any web hosting you have available.
 
+#### Publishing with Quarto Pub
+
+[Quarto Pub](https://quartopub.com/) is a free publishing service ideal for publishing blogs, course or project websites, books, presentations, and personal hobby sites developed in Quarto. All documents and sites published to Quarto Pub are publicly visible, so be mindful you should only publish content you wish to share publicly. Also, there is a limit of 100 MB per publication and a soft limit of 10 GB per month.
+
+There are two approaches to publish content to Quarto Pub:
+
+1. Use the `quarto publish command` to publish content rendered on your local machine 
+
+or 
+
+2. If you are using GitHub, you can use a GitHub Action to automatically render your project and publish the resulting content whenever your code changes.
+
+As we are getting started we will cover briefly only the first approach. If you'd like to explore the second option, check [Quarto Pub's documentation](https://quarto.org/docs/publishing/quarto-pub.html).
+
+
+##### Publish Command
+
+1. From the directory where your project is located, execute the quarto publish command for Quarto Pub, type:
+
+`quarto publish quarto-pub document.qmd`
+
+In our case, that would be `quarto publish quarto-pub DataPaper-ReproducibilityWorkshop.qmd`
+
+2. As it is our first time publishing in Quarto Pub the command above will prompt you to authenticate. After confirming that you want to publish, your content will be rendered and deployed, and then a browser opened to view your site.
+
 
 #### Publishing as website on GitHub
 
