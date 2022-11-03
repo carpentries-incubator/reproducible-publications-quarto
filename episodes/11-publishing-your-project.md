@@ -82,9 +82,11 @@ In our case, that would be `quarto publish quarto-pub DataPaper-ReproducibilityW
 
 2. As it is our first time publishing in Quarto Pub the command above will prompt you to authenticate. We will need to confirm the authorization and create a Quarto Pub account to first. 
 
-3. Then, you will be offered the option to change the document type if you'd like. And after the confirmation the terminal will display a rendering to publish task and your document will be published in Quarto Pub.
+3. Then, you will be offered the option to change the document type if you'd like. And after the confirmation there will be some action on the terminal for rendering the document will be published in Quarto Pub.
 
-If there is time, try it yourself now!
+![Quarto Pub Publish Example](../fig/11-quartopub-publishexample.png) <br>
+
+If there is time, we encourage you to try it yourself.
 
 #### Publishing as website on GitHub
 
