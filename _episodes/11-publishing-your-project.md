@@ -73,9 +73,13 @@ As we are getting started we will cover briefly only the first approach. If you'
 
 1. From the directory where your project is located, execute the quarto publish command for Quarto Pub, type:
 
-`quarto publish quarto-pub document.qmd`
+`quarto publish quarto-pub your-document.qmd`
 
-In our case, that would be `quarto publish quarto-pub DataPaper-ReproducibilityWorkshop.qmd`
+In our case, that would be `quarto publish quarto-pub DataPaper-ReproducibilityWorkshop.qmd`. But wait, first we have to ensure we are using the right path to call the document which is in the report folder. So, we can type in the terminal `cd report` before proceeding.
+
+![Quarto Pub Publish command](../fig/11-quartopub-publishcommand.png)
+
+We will need to confirm the authorization and create a Quarto Pub account to proceed. 
 
 2. As it is our first time publishing in Quarto Pub the command above will prompt you to authenticate. After confirming that you want to publish, your content will be rendered and deployed, and then a browser opened to view your site.
 
