@@ -110,7 +110,7 @@ Now, click on the green `Code` drop-down and then click on the copy icon next to
 
 Now, let's return to RStudio:
 
-Click `File > New Project > Verison Control > Git`.
+Click `File > New Project > Version Control > Git`.
 
 So back to the url you copied from GitHub. Navigate again to `File > New Project > Version Control > Git`. Paste in your url and choose "Desktop" as your directory.
 
