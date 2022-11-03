@@ -27,7 +27,7 @@ Once you have completed your Quarto manuscript following all the best practices 
 
 - The easiest way would be to use [Rpubs](https://rpubs.com/), which is integrated with Rstudio. Rpubs is a bare-bones, free web hosting service created for the sole purpose of hosting R Markdown documents.  It provides no other services--- no support for search, collaboration, persistent identifers, or versioning.  But, it is the simplest and most direct way of getting your R Markdown (and now Quarto) document published on the web directly from RStudio.  For a more full-featured hosting service consider GitHub and GitHub Pages, described later.
 
-Notice the circular blue "Publish" button in the upper right corner of your _Knit_ output.  Click this to publish to Rpubs.  This is where you'll need an Rpubs account as mentioned in [setup](/setup.html)
+Notice the circular blue "Publish" button in the upper right corner of your _Render_ output.  Click this to publish to Rpubs.  This is where you'll need an Rpubs account as mentioned in [setup](/setup.html)
 for this workshop.  
 
 Click the blue publish button
@@ -79,10 +79,12 @@ In our case, that would be `quarto publish quarto-pub DataPaper-ReproducibilityW
 
 ![Quarto Pub Publish command](../fig/11-quartopub-publishcommand.png)
 
-We will need to confirm the authorization and create a Quarto Pub account to proceed. 
 
-2. As it is our first time publishing in Quarto Pub the command above will prompt you to authenticate. After confirming that you want to publish, your content will be rendered and deployed, and then a browser opened to view your site.
+2. As it is our first time publishing in Quarto Pub the command above will prompt you to authenticate. We will need to confirm the authorization and create a Quarto Pub account to first. 
 
+3. Then, you will be offered the option to change the document type if you'd like. And after the confirmation the terminal will display a rendering to publish task and your document will be published in Quarto Pub.
+
+If there is time, try it yourself now!
 
 #### Publishing as website on GitHub
 
@@ -95,7 +97,6 @@ When you create a new Quarto file in R Studio recall that you are presented with
 ![RStudio output formats](../fig/02-name-new-qmd.PNG)
 
 For the purposes of this workshop we've been using HTML as the output format but other types are available.  You can render your Quarto as a document, a presentation or a *Shiny* app.  With the default installation of RStudio HTML output is most likely to work.  Other formats may require additional R packages and/or code libraries be installed on your computer.  RStudio also has a templating system to help with creating Quarto files with common elements, YAML metadata and rendering instructions.  This can be very helpful for example if you want to create a weekly or monthly report documenting an ongoing experiment, study or other changing data.
-
 
 
 ### If you are willing to publish your manuscript through a peer-reviewed journal
