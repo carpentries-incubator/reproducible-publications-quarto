@@ -202,6 +202,8 @@ Now, let's open up the report in this repository that's already been drafted. Th
 
 In the title add "(Carpentry Workshop Version)" and make sure to save it.
 
+![git panel add](../fig/05-editing.png)
+
 Now, in the Environment panel, toggle to the Git tab. You'll see the file that was edited with a check mark next to it. Click the check mark to "add" . Note that if you edited more than one file you could choose any or all of the documents to "add".
 
 ![git panel add](../fig/05-first-edit.PNG)
