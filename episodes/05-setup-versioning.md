@@ -210,7 +210,7 @@ Now, in the Environment panel, toggle to the Git tab. You'll see the file that w
 
 Now, click commit. A dialogue box will pop up. You'll need to add a commit message to proceed. Add something about editing the title. The difference between your files will show in the bottom panel.
 
-![commit in RStudio](../fig/05-rstudio-commit.PNG)
+![commit in RStudio](../fig/05-rstudio-commit.png)
 
 Hit commit and a dialogue box will show a completed commit. Warning: **DO NOT PUSH** anything yet!
 
