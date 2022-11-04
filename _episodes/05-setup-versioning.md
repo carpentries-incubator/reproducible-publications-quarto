@@ -17,7 +17,7 @@ objectives:
 keypoints:
 - R Studio has Git version control functionality built in.
 - _Forking_ a Github repository makes a copy of the repository into your personal account on Github.
-- You can _clone_ a git repository from Github to your local disk using R Studio.
+- You can _clone_ a git repository from Github to your local disk using RStudio.
 - For this workshop each learner will work with their own _fork_ of the "[R-Repro-pub](https://github.com/UCSBCarpentry/R-repro-pub)" repository.
 ---
 
@@ -61,7 +61,7 @@ Then, to use version control, make sure to check the "_Create a git repository_"
 
 ![existing project](../fig/05-existing-directory.png)
 
-We won't take the time to cover this here, but if you've already started an R project WITHOUT version control, you have the option to add version control retrospectively. You can also add existing R files to a project and setup version control if you've done neither. To see a tutorial of this process,  please see [episode 14 "Using Git from RStudio" in Version Control with Git](https://swcarpentry.github.io/git-novice/14-supplemental-rstudio/index.html).
+We won't take the time to cover this here, but if you've already started a Quarto project WITHOUT version control, you have the option to add version control retrospectively. You can also add existing R files to a project and setup version control if you've done neither. To see a tutorial of this process,  please see [episode 14 "Using Git from RStudio" in Version Control with Git](https://swcarpentry.github.io/git-novice/14-supplemental-rstudio/index.html).
 
 This is by far the most labor intensive way to do it, so remember to add version control at the beginning of any new project.
 
@@ -198,7 +198,7 @@ This pull, add, commit, push routine will become second nature. Pulling at the b
 
 ## Your first edit
 
-Now, let's open up the report in this repository that's already been drafted. The Quarto document for the report is located in `report/source`. It is called: `DataPaper-ReproducibilityWorkshop.qmd` The first edit we will make is to the yaml file of this draft report so we can practice using version control.
+Now, let's open up the report in this repository that's already been drafted. The Quarto document for the report is located in `report`. It is called: `DataPaper-ReproducibilityWorkshop.qmd` The first edit we will make is to the yaml file of this draft report so we can practice using version control.
 
 In the title add "(Carpentry Workshop Version)" and make sure to save.
 
