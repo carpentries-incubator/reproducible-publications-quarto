@@ -131,9 +131,9 @@ For our project we’re working in today, we used the following setup for folder
 > > - **output:** contains processed/transformed data and all plots generated  
 > >	- **/data:** contains the output data file after applying custom pre-processing function  
 > >	- **/plots:** contains pdfs of the plots generated from the plot scripts in the code folder  
-> > - **report:** all files needed for the publication of the research project  
-> > 	- **/source:** .qmd file for the paper and additional files needed for rendering the paper  
-> >      - **/fig:** contains the images created specifically (not through the analysis scripts) for the paper  
+> > - **report:** all files needed for the publication of the research project, including:  
+> > 	            - .qmd file for the paper and additional files needed for rendering the paper  
+> >               - images created specifically (not through the analysis scripts) for the paper  
 > >	- **/output:** contains the final output of the Quarto paper  
 > > - **R-repro-pub.Rproj:** the R project file that lives in the root directory.  
 > > - **README.md:** a detailed project description with all collaborators listed.
@@ -285,5 +285,3 @@ Perhaps, confusing but we have an additional "type" of project in the RStudio ec
 > ## Challenge 4.4: R Project in “root” folder
 > `.Rproj` files must be in the root directory of your project folder/directory. What is the root directory again (look back at the relative paths intro)?  
 {: .challenge}
-
-
