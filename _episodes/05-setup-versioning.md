@@ -212,7 +212,7 @@ Now, click commit. A dialogue box will pop up. You'll need to add a commit messa
 
 ![commit in RStudio](../fig/05-rstudio-commit.PNG)
 
-Hit commit and a dialogue box will show a completed commit.
+Hit commit and a dialogue box will show a completed commit. Warning: **DO NOT PUSH** anything yet!
 
 You made your first commit!
 
