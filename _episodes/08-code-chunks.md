@@ -4,21 +4,46 @@ title: "Reproducible & Efficient Methods of Using Code Chunks"
 teaching: 50
 exercises: 20
 questions:
+- "How can I enhance reproducibility amongst collaborators, present and future?"
 - "How do I run external scripts in an Quarto document?"
 - "How can I avoid issues with relative paths?"
 - "How can I get my Quarto document to render faster?"
 - "What is inline code and when to use it?"
 objectives:
+- "Learn how to use renv in an RStudio project"
 - "Learn how to source external scripts to run within an qmd document to modularize your code."
 - "Learn about using global knitr options to change your `.qmd` file's working directory."
 - "Learn how to load libraries and data for use throughout the whole `.qmd` document."
 - "Learn the syntax for inline code."
 keypoints:
+- "renv is a handy tool for capturing your project's package dependencies"
 - "Learn how to externally source code `source()`"
 - "Learn how to modularize your code to make it more reproducible"
 - "There are options for changing the working directory of your `.qmd` document with package `rprojroot`"
-- "Use a chunk at the beginning of your document to load libraries and data globally to make your document more effiecient."
+- "Use a chunk at the beginning of your document to load libraries and data globally to make your document more efficient."
 ---
+
+## Enhancing reproducibility with renv
+
+renv is an R package that keeps track of your project's dependencies, specifically, the version of the R interpreter your project is using and the versions of any packages referenced by your scripts.  In our workshop project, renv has already been set up--- you can tell by the presence of a file `renv.lock` in the project's root directory.  This file records package versions and other information.
+
+Every time you open a project for which renv has been set up, renv automatically runs and checks that the package versions you have installed on your machine match those of the project.  If they match, there is nothing to do (perhaps that fortunately happened in your case today).  But if there are any mismatches (as might have happened to you today), renv will print a warning resembling the following:
+
+* Project '~/Desktop/myproject' loaded. [renv 0.16.0]
+* The project library is out of sync with the lockfile.
+* Use `renv::restore()` to install packages recorded in the lockfile.
+
+If this happens, simply run `renv::restore()` from the console pane to download and install the package versions needed to match the project.  For example, if the project uses tidyverse 1.3.2 and you have an older version tidyverse 1.3.1 installed on our computer, renv will upgrade your RStudio installation to tidyverse 1.3.2.  (This works conversely as well: if the project uses an older version of a package you have installed, renv will attempt to download and install the older version for yo.  renv ensures that all versions of packages remain installed on your computer, available to be used by projects as needed.)
+
+A few more points on using renv.  To start using renv on a new project, run these commands in the console pane:
+
+```
+install.packages("renv")
+library(renv)
+renv::init()
+```
+
+This creates the initial `renv.lock` file.  Then, whenever you start using a new package (or otherwise change your project's dependencies), run `renv::snapshot()` to update the lockfile.  Finally, if you are using git and start using renv, you will notice that renv creates several files and directories in addition to `renv.lock`.  Go ahead and commit the files to your project's git repository.
 
 ## Reproducible Methods for Coding in Quarto
 
