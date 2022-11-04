@@ -23,6 +23,10 @@ keypoints:
 - "Use a chunk at the beginning of your document to load libraries and data globally to make your document more efficient."
 ---
 
+## Reproducible Methods for Coding in Quarto
+
+Now that we've learned the core benefit of using Quarto documents - the integration of code with text - let's learn some next level methods of working with code in Quarto. We'll cover how to use virtual environments with renv, how to add Global Knitr options to the yaml, run external R scripts from within the Quarto document, setting the working directory for the Quarto document and loading packages and data globally. Whew! that's a lot! Let's dig in.
+
 ## Enhancing reproducibility with renv
 
 renv is an R package that keeps track of your project's dependencies, specifically, the version of the R interpreter your project is using and the versions of any packages referenced by your R scripts.  renv can also download and install package versions according to a project's requirements.  This makes it easy for a downstream user to run an R project in the same environment in which it was originally developed.
@@ -49,9 +53,7 @@ renv::init()
 
 This creates the initial `renv.lock` file.  Then, whenever you start using a new package (or otherwise change your project's dependencies), run `renv::snapshot()` to update the lockfile.  Finally, if you are using git and start using renv, you will notice that renv creates several files and directories in addition to `renv.lock`.  Go ahead and commit the files to your project's git repository.
 
-## Reproducible Methods for Coding in Quarto
 
-Now that we've learned the core benefit of using Quarto documents - the integration of code with text - let's learn some next level methods of working with code in Quarto. We'll cover how to add Global Knitr options to the yaml, run external R scripts from within the Quarto document, setting the working directory for the Quarto document and loading packages and data globally. Whew! that's a lot! Let's dig in.
 
 ## Global Quarto Options
 
@@ -68,9 +70,9 @@ With Quarto we have the functionality and flexibility of being able to define *p
 
 How do we use document level settings?. How do we edit project level settings? That's where the yaml at the top of our documents and/or the `_quarto.yml` file that lives in our project root directory comes in. 
 
-At the top of our .Qmd document we see the yaml 
+At the top of our .Qmd document we see the yaml:
 
-## FIXME ADD image
+![Qmd yaml header](../fig/08-yaml-header.png)
 
 Opening the `_quarto.yml` file in our project root we see the following default settings:
 
