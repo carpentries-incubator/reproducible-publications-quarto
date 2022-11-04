@@ -200,13 +200,11 @@ This pull, add, commit, push routine will become second nature. Pulling at the b
 
 Now, let's open up the report in this repository that's already been drafted. The Quarto document for the report is located in `report`. It is called: `DataPaper-ReproducibilityWorkshop.qmd` The first edit we will make is to the yaml file of this draft report so we can practice using version control.
 
-In the title add "(Carpentry Workshop Version)" and make sure to save.
-
-![first edit](../fig/05-first-edit.PNG)
+In the title add "(Carpentry Workshop Version)" and make sure to save it.
 
 Now, in the Environment panel, toggle to the Git tab. You'll see the file that was edited with a check mark next to it. Click the check mark to "add" . Note that if you edited more than one file you could choose any or all of the documents to "add".
 
-![git panel add](../fig/05-Git-panel-add.PNG)
+![git panel add](../fig/05-first-edit.PNG)
 
 Now, click commit. A dialogue box will pop up. You'll need to add a commit message to proceed. Add something about editing the title. The difference between your files will show in the bottom panel.
 
