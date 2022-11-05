@@ -12,7 +12,7 @@ objectives:
 - "Learn how to enable the visual editor."
 - "Get familiar with its basic functionalities."
 - "Apply formatting and styling using the visual editor."
-- "Learn how to add inline code to your rdm document."
+- "Learn how to add inline code to your qdm document."
 
 keypoints:
 - "The visual editor has made formatting much easier."
@@ -146,5 +146,5 @@ We will get: <br>
 If you would like to explore more the *Fence Divs* and othere cool Quarto functionalities check their [Divs and Spans documentation](https://quarto.org/docs/authoring/markdown-basics.html#divs-and-spans).
 
 > ## Time to Commit!
-> Make sure to commit your changes to GitHub. Add your changed files and commit with the following message: "Added Formatting"
+> Make sure to render and then commit your changes to GitHub. Add your changed files and commit with the following message: "Added Formatting"
 {: .checklist}
