@@ -116,13 +116,13 @@ Let's see how it looks in our paper to add the options from our first code chunk
 
 
 > ## Tip: Overiding global options  
-> What if you want most of your code chunks to render with the same options (i.e. echo: false), but you just have one or two chunks that you want to tweak the options on (i.e. display code with echo: true)? Good news! The global options can be overwritten on a case by case basis in each individual code chunk. Test this by adding `#| echo: true` to your code chunk in your document and knitting. Did you override the global settings successfully?
+> What if you want most of your code chunks to render with the same options (i.e. echo: false), but you just have one or two chunks that you want to tweak the options on (i.e. display code with echo: true)? Good news! The global options can be overwritten on a case by case basis in each individual code chunk. Test this by adding `#| echo: true` to your code chunk in your document and rendering. Did you override the global settings successfully?
 {: .callout}
 
 
 > ## CHALLENGE 7.4 (optional) global & individual code chunk options  
 >
-> How would appear in our html document if we knit a code chunk with the following options?  
+> How would appear in our html document if we render a code chunk with the following options?  
 > ```
 > {r} 
 > #| warning: true
@@ -259,7 +259,7 @@ plot
 ~~~
 {: .language-r}
 
-> ## Time to Knit!
+> ## Time to Render!
 > Let's see if our code worked when generated from an external script 
 {: .checklist}
 
@@ -300,7 +300,6 @@ ADD chunk name and caption for Figure 3 (can use the same as the copy/pasted cod
 > 2. sys.source()   -- [see more at bookdown.org](https://bookdown.org/yihui/rmarkdown-cookbook/source-script.html)
 > 3. knitr::read_chunk()  -- [see more at stackoverflow](https://stackoverflow.com/a/52398016)
 >
-> - another helpful page: http://zevross.com/blog/2014/07/09/making-use-of-external-r-code-in-knitr-and-r-markdown/
 {: .callout}
 
 > ##  8.3: Your turn! Create Figure 4 with the external code
@@ -320,3 +319,7 @@ ADD chunk name and caption for Figure 3 (can use the same as the copy/pasted cod
 > > {: .language-r}
 > {: .solution}
 {: .challenge}
+
+> ## Time to Commit!
+> Now, let's commit the changes you have made. 
+{: .checklist}
