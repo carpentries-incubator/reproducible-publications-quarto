@@ -271,14 +271,17 @@ This can be helpful when referring to specific variables on your data. For examp
 
 The CSV file contains choice consistency data for ``r nrow(bronars_simulation_data)`` simulated participants.
 
-When you knit you might get an error. Any idea why? That is because we need to make sure to import the dataset we are referring to before the inline code can work. Let's add the following to our chunk at the beginning of the document where we loaded our other data:
+When you render you might get an error. Any idea why? That is because we need to make sure to import the dataset we are referring to before the inline code can work. Let's add the following to our chunk at the beginning of the document where we loaded our other data:
 
 ~~~
 bronars_simulation_data <- read_csv("data/bronars_simulation_data.csv")
 ~~~
 {: .language-r}
 
-Time to Knit! If you update your dataset this value will match the number of rows. 
+
+> ## Time to Render!
+> If you update your dataset this value will match the number of rows. 
+{: .checklist}
 
 > ## CHALLENGE 8.3 - Adding inline code
 > Suppose we would like to add some information to the sentence we have just adjusted in our manuscript. We would like to include the average for the variable *violation_count* present in the same dataset. Which inline code we would have to add to following sentence?
@@ -304,3 +307,7 @@ Time to Knit! If you update your dataset this value will match the number of row
 > Quarto will always display the results of inline code, but not the code. Inline expressions do not take knitr options.
 >
 {: .callout}
+
+> ## Time to Commit!
+> Now, let's commit the changes you have made. 
+{: .checklist}
