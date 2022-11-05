@@ -16,13 +16,13 @@ objectives:
 - "Learn about using global knitr options and global execution options"
 keypoints:
 - "Knitr will render your code and markdown-formatted text and output your document format of choice"
-- "Code chunks are runable piece of R code. Each time you knit the document, calculations and plots will be run and displayed"
+- "Code chunks are runable piece of R code. Each time you render/knit the document, calculations and plots will be run and displayed"
 - "Options for code chunks can be set at the individual level or at the global level"
 ---
 
 ## Utilizing the Code Features of Quarto
 
-We've learned about the text-formatting options of Quarto, now let's dive into the code portion of Quarto documents. Quarto flips the defaults of code and text - instead of priortizing the code and making you comment out (#) text such as in R scripts, they priortize text and force you to specially comment the code portions. How do you signal to R the difference between code and text when you're not using code commments (#)? That's where code chunks (or "code chunks" as RStudio calls them) come into play. Instead of Quarto's rendering system processing the markdown styling into the final output, Code chunks are sent to a preceding stage of processing by Knitr, which "knits" the code output and text together. Secondly, Quarto processes the code output and displays it in the document format of our choice - i.e. Knitr runs the lines of code for a plot in a code chunk, joins it to the markdown text portions, and Quarto outputs that as an html document. 
+We've learned about the text-formatting options of Quarto, now let's dive into the code portion of Quarto documents. Quarto flips the defaults of code and text - instead of priortizing the code and making you comment out (#) text such as in R scripts, they priortize text and force you to specially comment the code portions. How do you signal to R the difference between code and text when you're not using code commments (#)? That's where code chunks (or "code chunks" as RStudio calls them) come into play. Instead of Quarto's rendering system processing the markdown styling into the final output, Code chunks are sent to a preceding stage of processing by Knitr, which "knits"/render the code output and text together. Secondly, Quarto processes the code output and displays it in the document format of our choice - i.e. Knitr runs the lines of code for a plot in a code chunk, joins it to the markdown text portions, and Quarto outputs that as an html document. 
 
 ## What is Knitr?
 
@@ -74,7 +74,7 @@ Now, let's open our `03_HR_analysis.R` script in our `code` folder. We will inse
 ![heartrate code in chunk](../fig/07-heartrate-code.PNG)
 
 > ## Tip:
-> There's actually a button you can use in the RStudio menu to generate the code chunks (though they are referred to as "Code Chunks" in RStudio) automatically. Automatic code chunk generation is available for several other languages as well. Also, you can use the keyboard shortcut `ctrl`+`alt`+`i` for Windows and `command`+`option`+`i` for Mac. 
+> There's actually a button you can use in the RStudio menu to generate the code chunks automatically. Automatic code chunk generation is available for several other languages as well. Also, you can use the keyboard shortcut `ctrl`+`alt`+`i` for Windows and `command`+`option`+`i` for Mac. 
 > ![auto create code chunk](../fig/07-auto-code-chunk.PNG)
 {: .callout}
 
@@ -110,10 +110,10 @@ Did it work? Look under the code chunk. You should now see a plot preview displa
 
 ## Rendering Code Chunks
 
-We just saw how to run our code in our code chunks to see a preview of the code output that will render in our html document but to actually render it we need to use the Knit button. Using the `Render` button with code chunks is a two step process - first the code is run (all code chunks will run automatically). Second, (if there are no code errors) the document of choice will render for our whole Quarto document. 
+We just saw how to run our code in our code chunks to see a preview of the code output that will render in our html document but to actually render it we need to use the Render button. Using the `Render` button with code chunks is a two step process - first the code is run (all code chunks will run automatically). Second, (if there are no code errors) the document of choice will render for our whole Quarto document. 
 
-> ## Time to Knit!
-> Now, let's knit the Quarto file and see how our code output looks in the final html page. 
+> ## Time to Render!
+> Now, let's Render the Quarto file and see how our code output looks in the final html page. 
 {: .checklist}
 
 ![code chunk with plot1 code](../fig/07-render.png) 
@@ -131,9 +131,6 @@ There are over 50 different code chunk options!!! Obviously we will not go over 
 Code chunk options in Quarto are added within code chunks and always have the following format:
 
 `#| option: option-text`
-
-
-
 
 
 
@@ -155,7 +152,7 @@ Ok, let's use some of the options above to improve the look of our Quarto docume
 - warning: false
 - results: false
 
-These options mean the source code will not be printed in the knit html document, messages from the code will not be printed in the knit html document, and warnings will not be printed in the knit html document (but will still output to the console). Plots, figures or whatever is printed by the code WILL show up in the final html document.  
+These options mean the source code will not be printed in the rendered html document, messages from the code will not be printed in the rendered html document, and warnings will not be printed in the html document (but will still output to the console). Plots, figures or whatever is printed by the code WILL show up in the final html document.  
 
 Now we are seeing what we would like: a figure without other output to show in our paper. 
  
@@ -164,15 +161,14 @@ Now we are seeing what we would like: a figure without other output to show in o
 > `{r global-chunk-challenge, eval = TRUE, include = FALSE}`
 > 
 >> ## SOLUTION
->> The expressions in the code chunk will be evaluated, but the outputed figures/plots will not be included in the knit document.   
+>> The expressions in the code chunk will be evaluated, but the outputed figures/plots will not be included in the rendered document.   
 >> When might you want to use this?   
 >> If you need to calculate some value or do something on your dataset for a further calucation or plot, but the output is not important to be included in your paper narrative. 
 > {: .solution}
 {: .challenge}
 
-#FIXME
-> ## Tip: Learn more about code chunk options
-> Find a complete list of code chunk options on Knitr developer, Yihui Xie's, [online guide to knitr](https://yihui.org/knitr/options/). Or, you can find a brief list of all options on the R Markdown Reference guide on page 3 accesible through the RStudio Interface by navigating to the main menu bar `Help > Cheat Sheets > R Markdown Reference Guide`.
+> ## Tip:
+> Find a complete list of code chunk options on Knitr developer, Yihui Xie's, [online guide to knitr](https://yihui.org/knitr/options/). 
 {: .callout}
 
 ### Label Your Code Chunk
@@ -190,7 +186,7 @@ We’ll see in a bit where this code chunk label comes in handy. But, for now le
 `#| label: fig3-heartrate`
 
 > ## Tip: Don't use spaces, periods or underscores in code chunk labels
->Try to avoid spaces, periods (.), and underscores (_) in chunk labels and paths. If you need separators, you are recommended to use hyphens (-) instead. For example, setup-options is a good label, whereas setup.options and chunk 1 are bad; fig.path = 'figures/mcmc-' is a good path for figure output, and fig.path = 'markov chain/monte carlo' is bad. See more at: [https://yihui.org/knitr/options/](https://yihui.org/knitr/options/)
+> Avoid spaces, periods `(.)`, and underscores `(_)` in chunk labels and paths. If you need separators, you are recommended to use hyphens `(-)` instead. For example, setup-options is a good label, whereas setup.options and chunk 1 are bad; fig.path = 'figures/mcmc-' is a good path for figure output, and fig.path = 'markov chain/monte carlo' is bad. See more at: [https://yihui.org/knitr/options/](https://yihui.org/knitr/options/)
 {: .callout}
 
 ### Caption your code chunk output:
@@ -201,7 +197,7 @@ The caption information also resides at the top of a code chunk using the `#|` s
 
 `#| fig.cap: "Figure Caption Here"`
 
-*Make sure not to forget to put the caption within quotes `""`
+**Don't forget to put the caption within quotes `""`.**
 
 > ## CHALLENGE 7.3: Add a caption to Figure 3
 > Let's add a caption to our heartrate figure. Add the caption:
