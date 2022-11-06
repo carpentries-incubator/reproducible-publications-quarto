@@ -82,7 +82,7 @@ scripts. Let’s discuss three of those common stress points:
 A good project layout will ultimately make your life easier:
 - It will help ensure the integrity of your data
 - It makes it simpler to share your code with someone else (a lab-mate, 
-collaborator, advisor etc.)
+collaborator, advisor, etc.)
 - It allows you to easily upload your code with your manuscript submission
 - It makes it easier to pick the project back up after a break.
 - It makes your research reproducible!
@@ -184,21 +184,26 @@ Adapted from [https://datacarpentry.org/rr-organization1/01-file-naming/index.ht
 {: .challenge}
 
 #### **Use relative paths**  
-This goes hand-in-hand with keeping your project within one “root” directory. If you use complete paths to say, read in your data to RStudio and then share your code with a collaborator, they won’t be able to run it because the complete path you used is unique to your system and they will receive an error that the file is not found. That is why one should always use relative paths to link to other files in the project. I.e. “where is my data file in relation to the script I’m reading the data into?” The practice of using relative paths is made easier by having a logical directory set up and keeping all project files within one root project folder. 
+This goes hand-in-hand with keeping your project within one “root” directory. If you use complete paths to say, read in your data to RStudio and then share your code with a collaborator, they won’t be able to run it because the complete path you used is unique to your system and they will receive an error that the file is not found. That is why one should always use relative paths to link to other files in the project, i.e. “where is my data file in relation to the script I’m reading the data into?”. The practice of using relative paths is made easier by having a logical directory set up and keeping all project files within one root project folder. 
 
-Assuming your R script is in a `code` directory and your data file is in a `data` directory then 
- an example of a relative path to read your data would be:
+Assuming your R script is in a `code` directory and your data file is in a `data` directory then an example of a relative path to read your data would be:
+
 ```
 df <- read.csv("../data/foodchoice_budgetlines.csv", encoding = "UTF-8")
 ```
 
-whereas a complete path might look like:
+Whereas a complete path might look like:
+
+Windows: 
 
 ```
-df <- read.csv("C:/users/flintstone/wilma/Desktop/project23/data/foodchoice_budgetlines.csv", encoding = "UTF-8")
+df <- read.csv("C:/Users/wilma/Desktop/project23/data/foodchoice_budgetlines.csv", encoding = "UTF-8")
 ```
 
-In the complete path example you can see that the code is not going to be portable.  If someone other than Wilma Flintstone wanted to run the r script they would have to alter the path to match their system.
+If the example was on a Mac or Linux computer you would hage `home` instead of `C:`   
+
+
+In the complete path example you can see that the code is not going to be portable. If someone other than Wilma Flintstone wanted to run the r script they would have to alter the path to match their system.
 
 > ## Challenge 4.3: relative paths
 > 
@@ -280,7 +285,7 @@ One of the most powerful and useful aspects of RStudio is its project management
 
 #### Quarto Projects
 
-Perhaps, confusing but we have an additional "type" of project in the RStudio ecosystem called a Quarto project. Thankfully, we don't necessarily have to pick between using R and Quarto projects because a Quarto project is just an R project - with some additional capabilities. That addition is enhanced project and style controls in the form of a YAML file called `_quarto.yml` . To keep things simple, if you are going to use Quarto documents, use Quarto Projects, if you aren't, stick to an R project. And no worries, you can always add a `_quarto.yml` file if you have just an R Project which can retroactively turn your project into a Quarto project. Let's see how to create a Quarto project in the next episode. ->
+Perhaps, confusing but we have an additional "type" of project in the RStudio ecosystem called a Quarto project. Thankfully, we don't necessarily have to pick between using R and Quarto projects because a Quarto project is just an R project - with some additional capabilities. That addition is enhanced project and style controls in the form of a YAML file called `_quarto.yml` . To keep things simple, if you are going to use Quarto documents, use Quarto Projects, if you aren't, stick to an R project. And no worries, you can always add a `_quarto.yml` file if you have just an R Project which can retroactively turn your project into a Quarto project. Let's see how to create a Quarto project in the next episode. 
 
 > ## Challenge 4.4: R Project in “root” folder
 > `.Rproj` files must be in the root directory of your project folder/directory. What is the root directory again (look back at the relative paths intro)?  
