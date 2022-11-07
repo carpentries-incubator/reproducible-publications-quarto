@@ -127,7 +127,7 @@ If we type: <br>
 
 ~~~
 
-:::: {. columns}
+:::: {.columns}
 ::: {.column width="50%"}
 Some content in left column
 :::
