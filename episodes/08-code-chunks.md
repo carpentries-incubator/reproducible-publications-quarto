@@ -109,7 +109,7 @@ Let's see how it looks in our paper to add the options from our first code chunk
 ![global Quarto code options](../fig/08-global-code-options.png)
 
 > ## Tip: R Markdown global options syntax works in Quarto
-> If you've previously used R markdown and have old documents or don't want to learn a new workflow quite yet, Quarto is backwards compatible with R Markdown, so you may also use the old `chunk$set` syntax as below:
+> If you've previously used R Markdown and have old documents or don't want to learn a new workflow quite yet, Quarto is backwards compatible with R Markdown, so you may also use the old `chunk$set` syntax as below:
 > ![R Markdown global code options](../fig/07-setup-chunk.png)
 >
 {: .callout}
