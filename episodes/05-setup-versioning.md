@@ -112,10 +112,11 @@ Now, let's return to RStudio:
 
 Click `File > New Project > Version Control > Git`.
 
-So back to the url you copied from GitHub. Navigate again to `File > New Project > Version Control > Git`. Paste in your url and choose "Desktop" as your directory.
+So back to the url you copied from GitHub. Navigate again to `File > New Project > Version Control > Git`. Paste in your url and click the "Create Project" button.
 
 ![start my R project](../fig/05-git-new-project-clone.png)
 
+Now you have cloned a copy of your git repo from Github to your working environment.  
 One more step: Make sure to select the quarto branch in RStudio (on your local instance or Jupyter Hub) on the Git tab. 
 
 ![Select Quarto Branch](../fig/05-selecting-quarto-branch.png)
@@ -198,7 +199,7 @@ This pull, add, commit, push routine will become second nature. Pulling at the b
 
 ## Your first edit
 
-Now, let's open up the report in this repository that's already been drafted. The Quarto document for the report is located in `report`. It is called: `DataPaper-ReproducibilityWorkshop.qmd` The first edit we will make is to the yaml file of this draft report so we can practice using version control.
+Now, let's open up the report in this repository that's already been drafted. You will find it in the `report` directory with filename: `DataPaper-ReproducibilityWorkshop.qmd`.  Open it up and we will make an edit to the yaml front matter of this draft report so we can practice using version control.
 
 In the title add "(Carpentry Workshop Version)" and make sure to save it.
 
