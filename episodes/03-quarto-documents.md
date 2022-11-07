@@ -30,7 +30,7 @@ There are four distinct steps in the Quarto workflow:
 2. write Quarto-formatted **text**   
 3. add R **code blocks** for embedded analysis  
 4. render the document with the selected engine **(Knitr in this example)**  
-<br>
+
 
 ![Quarto Workflow](../fig/03-qmd-workflow.png)
 
@@ -49,10 +49,10 @@ Quarto default YAML header includes the following metadata surrounded by three d
 
 ![yaml highlighted in document](../fig/03-qmd-template-yaml.png)
 
-The first three are self-explanatory, but what's the output? We saw this in the wizard for starting a new document, by default you are able to pick from pdf, html, and word document. Basically, this allows you to export your qmd file as a file type of your choice. There are [other options for output](https://bookdown.org/yihui/rmarkdown/output-formats.html) and even more can be added by installing certain packages, but these are the three default options.   
+The format is selected in the wizard for starting a new document. You are able to pick from pdf, html, and word document. Basically, this allows you to export your qmd file as a file type of your choice. There are [other options for output format](https://bookdown.org/yihui/rmarkdown/output-formats.html) and even more can be added by installing certain packages, but these are the three default options.   
 <br>
 
-We’ll see other formatting options for YAML later on including how to add bibliography information, customize our output, and change the default settings of the knit function. Below is an example of how our YAML file will look at the end of this workshop. 
+We’ll see other formatting options for YAML later on including how to add bibliography information, customize our output, and change the default settings for executing your code. Below is an example of how our YAML file will look at the end of this workshop. 
 ~~~
 ---
 ---
