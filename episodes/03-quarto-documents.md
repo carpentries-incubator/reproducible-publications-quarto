@@ -14,7 +14,7 @@ objectives:
 - Learn how an quarto document works.
 - Learn how to render a .qmd file into an output format.
 - Understand what are jornal formats are and the advantage of using them.
-- Learn how to start a document .
+- Learn how to start a Quarto document in RStudio.
 
 keypoints:
 - An qmd file is comprised of a YAML header, formatted text in qmd and code blocks.
@@ -52,25 +52,17 @@ Quarto default YAML header includes the following metadata surrounded by three d
 The first three are self-explanatory, but what's the output? We saw this in the wizard for starting a new document, by default you are able to pick from pdf, html, and word document. Basically, this allows you to export your qmd file as a file type of your choice. There are [other options for output](https://bookdown.org/yihui/rmarkdown/output-formats.html) and even more can be added by installing certain packages, but these are the three default options.   
 <br>
 
-We’ll see other formatting options for YAML later on including how to add bibliography information, customize our output, and change the default settings of the knit function. Below is an example of how our YAML file will look at the end of this workshop. **FIXME - update the YAML**
-
+We’ll see other formatting options for YAML later on including how to add bibliography information, customize our output, and change the default settings of the knit function. Below is an example of how our YAML file will look at the end of this workshop. 
 ~~~
 ---
 ---
-title: "Data Article: Trier social stress test and food-choice: Behavioral, self-report & hormonal data"
+title: "Data Article: Trier social stress test and food-choice: Behavioral, self-report & hormonal data (Carpentry Workshop Version)"
 author: "Felix Jan Nitsch; Manuela Sellitto; Tobias Kalenscher"
-date: "June, 25 2021"
-output:
-  html_document:
-    df_print: paged
+format: html
+editor: visual
 bibliography: references.bib
-knit: (function(rmdFile, encoding) {
-      out_dir <- '../output';
-      rmarkdown::render(rmdFile,
-                        encoding=encoding,
-                        output_file=file.path(dirname(rmdFile),
-                        out_dir,
-                        'DataPaper-ReproducibilityWorkshop.html'))})
+execute:
+  echo: true
 ---
 ---
 ~~~
