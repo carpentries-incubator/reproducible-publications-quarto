@@ -4,7 +4,7 @@ title: "Introduction to Working with Quarto documents"
 teaching: 20
 exercises: 05
 questions:
-- What is the breakdown of an Quarto document?
+- What is the breakdown of a Quarto document?
 - What are templates in Quarto?
 - How can you render the input file to the specified output format?
 - How can you create pre-formatted for qmd document based on journal templates?
@@ -23,7 +23,7 @@ keypoints:
 ---
 
 
-## Anatomy of an Quarto Document
+## Anatomy of a Quarto Document
 The key to our reproducible workflow is using Quarto files in RStudio rather than basic scripts to dynamically render both code and paper narrative. So let’s do a quick anatomy lesson on the components of an Quarto file (YAML header, Quarto formatted, R code blocks; also known as "code chunks") and how to render them into our final formatted document.
 There are four distinct steps in the Quarto workflow:
 1. create a **YAML header** (optional)  
