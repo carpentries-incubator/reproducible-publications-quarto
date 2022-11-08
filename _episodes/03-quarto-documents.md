@@ -100,8 +100,8 @@ Let's take a look at the Quarto document template we have just created to see ho
 Simply put, rendering is the process of converting a document into a file format or a medium that is paginated or has the concept of pages. Clicking the render button will compile the code, check for errors, and finally, output the type of file indicated in your yaml header. You may select the option "Render on Save" to see a preview of your document every time you save edits. Attention: your qmd document may not run and render as your indicated output if there are any errors in the document so it also functions somewhat as a code checker.
 <br>
 
-#### Try it yourself
-We’re going to pause here and see what the Quarto document does when it’s rendered. We'll just use the generic template, but when we're working on our own project, knitting periodically while we're editing allows us to catch errors early. We'll continue rendering our qmd throughout the lesson to see what happens when we add our markdown and knitr syntax and to make sure we aren't making any errors.
+#### Try it yourself!
+We’re going to pause here and see what the Quarto document does when it’s rendered. We'll just use the generic template, but when we're working on our own project, rendering periodically while we're editing allows us to catch any mistakes early. We'll continue rendering our qmd throughout the lesson to see what happens when we add our markdown and knitr syntax and to make sure we aren't making any errors.
 
 This is a little preview of what's to come in the later episodes:
 Click the "render" button.
@@ -148,7 +148,7 @@ Quarto offers some journal formats and made them available within the quarto-jou
 - Journal of Statistical Software
 - Public Library of Science
 
-This list is expected to rapidly grow with new contributions submitted to the [Quarto Journal Templates repository](https://github.com/quarto-journals). You may also create your own templates following [these guidelines](https://quarto.org/docs/journals/templates.html).  
+This list is expected to rapidly grow with new contributions submitted to the [Quarto Journal Templates Repository](https://github.com/quarto-journals). You may also create your own templates following [these guidelines](https://quarto.org/docs/journals/templates.html).  
 
 Journal templates require features of Quarto version 1.2 so we need to ensure we have the right Quarto version.  You can check your Quarto version in the Terminal with command: `quarto --version`.  We should be good with that for this workshop, but if you are using a lab computer later on, you may need to update Quarto.  See: [pre-release versions of Quarto](https://quarto.org/docs/download/prerelease.html)
 
