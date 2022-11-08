@@ -150,17 +150,8 @@ Let's see how it looks in our paper to add the options from our first code chunk
 
 Ok, so you know how we had to change the file path in the code chunk we copied into our document so that the relative path was correct for reading in data? This happened because in Quarto documents, the working directory is wherever the qmd document is located but our code is located in a different folder. This means they have different relative paths to locate and read the data we want to work with. We can simplify things by designating the working directory for our document relative to the root project directory instead. What this does is let all files work relative to the project root instead of each other, standardizing the relative paths. Note that this is mainly important for code chunks - text portions of Quarto documents are not affected. This will clear up some of our confusion with relative paths across our whole R project. 
 
-The more straightforward way to mitigate this problem and avoid path issues is create a self-contained file, by adding `self-contained: true` to the YAML. 
 
-~~~
-...
-format:
-  html:
-    self-contained: true
-...
-~~~
-
-But it also good to learn how one could accomplish that by changing the working directory at the project level yaml settings. So we'll navigate to our _quarto.yml document in our root project directory and open it. 
+So one should learn how to accomplish that by changing the working directory at the project level yaml settings. So we'll navigate to our _quarto.yml document in our root project directory and open it. 
 
 We'll add the following settings to the yml file:
 ~~~
