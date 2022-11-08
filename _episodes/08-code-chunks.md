@@ -259,20 +259,12 @@ plot
 ~~~
 {: .language-r}
 
-> ## Time to Render!
-> Let's see if our code worked when generated from an external script 
-{: .checklist}
-
-Our plot should look exactly the same as the first copy-pasted one. 
-
-
-Success! And you'll notice that the global code chunk options were applied to this code chunk as well. 
 
 ### Add the code to our Quarto document
 
 First, find `FIXME 9` in the Quarto document for Fig 3 (ctrl-f "FIXME 9"). 
 
-Add the same code from our generic document where `FIXME 9` is located under "Previw of Research Results".
+Add the following code where `FIXME 9` is located under "Previw of Research Results".
 
 ~~~
 # run the code from 03_HR_analysis.R in the code directory
@@ -286,12 +278,22 @@ It should look like this:
 
 ![03-HR-analysis.R externally sourced in Qmd Document](../fig/08-HR-external-code.png)
 
-ADD chunk name and caption for Figure 3 (can use the same as the copy/pasted code chunk we just tested). Remember we don't need to add options since we defined them globally.
+DON'T forget to add chunk name and caption for Figure 3 (we can use the same name and caption as before). Remember we don't need to add options since we defined them globally.
 
 > ## Time to Run!
 > Let's see if our code worked when generated from an external script 
 {: .checklist}
 
+> ## Time to Render!
+> If the code ran without error, let's render the whole document again and take a look.
+{: .checklist}
+
+Our plot should look exactly the same as the first copy-pasted one. 
+
+
+Success! And you'll notice that the global code chunk options were applied to this code chunk as well*. 
+
+* Note: As of November 2022, Quarto has not implemented global options for `results`. This will need to be added to each code chunk if needed until further notice.
 
 > ## Tip: Many ways to run external code
 > There are at least 3-4 methods one can use to run external code, the best choice may just depend on the context or on your personal preference. There's no method that's a clear winner, because there's an awkward quirk or another to each of them, but better than copy/pasting code from elsewhere in your project (in our humble opinion):
