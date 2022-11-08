@@ -127,7 +127,7 @@ Reproducibility becomes more difficult and opaque when results rely on proprieta
 
 ### It is designed to make it easy to write and reuse code
 
-As soon as you create a new script, the windows within your RStudio session adjust automatically so you can see both your script and the results in your console when you run your syntax. It also offers the ability to call up potential syntax options while you are writing just by using the tab key.
+As soon as you create a new script, the windows/panes within your RStudio session adjust automatically so you can see both your script and the results in your console when you run your syntax. It also offers the ability to call up potential syntax options while you are writing just by using the tab key.
 
 ### Makes it convenient to view and interact with the objects stored in your environment
 
@@ -137,9 +137,9 @@ RStudio has a very useful “Environment” window available which shows all of 
 
 With RStudio, you can navigate to folders on your computer in the “Files” window, view any files you have in that folder, and set that folder as the working directory.
 
-### Integrates with Collaboration and Publishing Tools
+### Integrates with collaboration and publishing tools
 
-Another great advantage of using Rstudio for your R project is that the platform integrates with [GitHub](https://github.com). Once you connect RStudio with your GitHub account a remote repo becomes the “upstream” remote for your local repo. In essence, it enables you to push and pull commits to GitHub, allowing more seamless collaboration and more effective version control. RStudio also connects with [Rpubs](https://rpubs.com/) for easy R project web publishing.  
+Another great advantage of using RStudio for your R project is that the platform integrates with [GitHub](https://github.com). Once you connect RStudio with your GitHub account a remote repo becomes the “upstream” remote for your local repo. In essence, it enables you to push and pull commits to GitHub, allowing more seamless collaboration and more effective version control. RStudio also connects with [Rpubs](https://rpubs.com/) and [Quarto Pub](https://quartopub.com/) for easy R project web publishing.  
 
 ### Creates documents using Quarto
 
@@ -155,7 +155,7 @@ Quarto generates a .qmd file that weaves together content and executable code in
 1. Keep an eye on text (the paper) AND the source code. These computational steps are essential to ensure computational reproducibility.
 2. Conduct the entire analysis pipeline in a Quarto document: data (pre-)processing, analysis, outputs, visualization.
 3. Apply a formatting syntax that is part of the R ecosystem and supports LaTeX.
-4. Combine text written in Markdown and source code written in R (and other languages).
+4. Combine text written in markdown and source code written in R (and other languages).
 5. Easily share documents with colleagues, as supplemental material, or as the paper under review. 
 6. Get figures automatically updated if you change the underlying parameters in the code. The error-prone task of exporting figures and uploading the right figure version to another platform is thus not needed anymore.
 7. Since it uses a text-based format, you can also use versioning control with Git.
@@ -181,7 +181,7 @@ Finally, three real-world examples that motivated the authors of this lesson to 
 
 2. One of us wanted to create a short document that included some math formulas. The LaTeX document preparation can be used for this, but it is difficult to use and is overkill for just a few formulas in otherwise plain text. As we will learn, through Pandoc, Quarto lets you use just the best part of LaTeX---math formatting---while letting you write your text in a user-friendly way. The editor will automatically recognize the syntax and treat the equation as math.
 
-3. In a past version of this workshop we struggled with a scientific paper published in the journal *Nature*.  In trying to recreate the plots the original authors created, we found it difficult and time-consuming to figure out exactly how the authors created their plots.  Out of the many columns in their data, many with similar-sounding names, which did they use?  How did they handle missing data?  Exactly what operations did they perform to compute aggregate values?  How much easier it would have been if they had published the code they used along with their paper. RStudio and Quarto allow you to do this.
+3. In a past version of this workshop we struggled with a scientific paper published in a reputable journal.  In trying to recreate the plots the original authors created, we found it difficult and time-consuming to figure out exactly how the authors created their plots.  Out of the many columns in their data, many with similar-sounding names, which did they use?  How did they handle missing data?  Exactly what operations did they perform to compute aggregate values?  How much easier it would have been if they had published the code they used along with their paper. RStudio and Quarto allow you to do this.
 
 Our goal is that by the end of this workshop you will be able to create a reproducible report. This template is a short and adapted version of the data paper referenced below:
 
