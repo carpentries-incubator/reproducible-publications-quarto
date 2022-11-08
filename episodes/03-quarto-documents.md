@@ -44,8 +44,7 @@ YAML, pronounced "Yeah-mul" stands for "YAML Ain't Markup Language". YAML is a h
 Quarto default YAML header includes the following metadata surrounded by three dashes `---`:
 * title  
 * author  
-* date  
-* output  
+* format 
 
 ![yaml highlighted in document](../fig/03-qmd-template-yaml.png)
 
@@ -63,6 +62,7 @@ editor: visual
 bibliography: references.bib
 execute:
   echo: true
+  ...
 ---
 ---
 ~~~
