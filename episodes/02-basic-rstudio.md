@@ -12,7 +12,7 @@ objectives:
 - Learn about the structure of a Quarto file.
 - Understand the workflow of an Quarto file.
 keypoints:
-- RStudio has four panes to organize your code and environment.
+- RStudio has four panels to organize your code and environment.
 - Manage packages in RStudio using specific functions.
 - Quarto documents combine text and code.
 ---
