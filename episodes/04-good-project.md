@@ -200,7 +200,7 @@ Windows:
 df <- read.csv("C:/Users/wilma/Desktop/project23/data/foodchoice_budgetlines.csv", encoding = "UTF-8")
 ```
 
-If the example was on a Mac or Linux computer you would hage `home` instead of `C:`   
+If the example was on a Mac or Linux computer you would have `home` instead of `C:`   
 
 
 In the complete path example you can see that the code is not going to be portable. If someone other than Wilma Flintstone wanted to run the r script they would have to alter the path to match their system.
