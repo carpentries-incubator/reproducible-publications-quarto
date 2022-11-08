@@ -114,7 +114,7 @@ Example of some content with a border.
 
 ~~~
 
-We will get: <br>
+When we render it, we will get: <br>
 
 ![Text with borders rendered](../fig/06-text-borders.png) <br>
 
@@ -138,7 +138,7 @@ Some Content in right column
 
 ~~~
 
-We will get: <br>
+When we render it, we will get: <br>
 
 ![Two columns rendered](../fig/06-twocolumns.png) <br>
 
