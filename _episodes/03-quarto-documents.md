@@ -45,6 +45,7 @@ Quarto default YAML header includes the following metadata surrounded by three d
 * title  
 * author  
 * format 
+* editor
 
 ![yaml highlighted in document](../fig/03-qmd-template-yaml.png)
 
