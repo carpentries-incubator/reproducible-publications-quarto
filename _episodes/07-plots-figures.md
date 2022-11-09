@@ -242,7 +242,7 @@ If we go to the bottom of the code chunk we'll see more details on the error:
 
 ![path error details](../fig/07-path-error-details.png)
 
-This is a path error. The reason we're seeing this is that our paper is located in the report/source directory while our test document was automatically created in the project root directory. The path from the report/source directory to the data we're trying to read is not correct any longer. 
+This is a path error. The reason we're seeing this is that our paper is located in the report directory while our test document was automatically created in the project root directory. The path from the report directory to the data we're trying to read is not correct any longer. 
 
 We can fix this by adding the correct relative path:
 
