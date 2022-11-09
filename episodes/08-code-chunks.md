@@ -255,7 +255,7 @@ plot
 
 First, find `FIXME 9` in the Quarto document for Fig 3 (ctrl-f "FIXME 9"). 
 
-Add the following code where `FIXME 9` is located under "Previw of Research Results".
+Add the following code where `FIXME 9` is located under "Preview of Research Results".
 
 ~~~
 # run the code from 03_HR_analysis.R in the code directory
