@@ -212,5 +212,5 @@ And then, enter the @fig-id where you want to note the cross-referece in your pa
 
  
 > ## Time to Commit!
-> Make sure to commit your changes to GitHub. Add your changed files and commit with the following message: "Added Bibliography"
+> Make sure to commit your changes with Git. Add your changed files and commit with the following message: "Added Bibliography"
 {: .checklist}
