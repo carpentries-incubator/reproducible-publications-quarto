@@ -39,7 +39,7 @@ Github used to allow simple Username & Password authentication but now Github re
 
 
 ## Getting your repository's URL from Github
-You can get the address of your repository from Github by navigating to your repository on Github.com and clicking the green "Code" button.  Make sure to copy the SSH form of the URL.
+You can get the address of your repository from Github by navigating to your repository on Github.com and clicking the green "Code" button.  
 
 ![Copy Repo URL from GitHub](../fig/10-github-clone.png)
 
