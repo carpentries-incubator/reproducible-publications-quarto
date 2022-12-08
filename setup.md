@@ -7,7 +7,8 @@ title: Pre-workshop Setup
 
 - Github account (use existing or create new account) 
 - Install Git for Windows (Windows users only) 
-- Install R & RStudio (Two separate installations)
+- Install R & RStudio (Two separate installations: if you are on a windows device, you may need Rtools)
+- Install <a href="https://quarto.org/docs/get-started/">Quarto CLI (version 1.2)</a> 
 
 See instructions below for these requirements:
 
@@ -23,6 +24,15 @@ See instructions below for these requirements:
 
 **PART II:** Install Packages in Rstudio
 
+**Here's where we check the quarto version**
+Make sure your quarto version is at least 1.2, 
+
+~~~
+`quarto --version`
+~~~
+{.source}
+
+
 Install the following packages in RStudio: `bookdown`, `tidyverse`, `rticles`,`BayesFactor`, `patchwork` , `rprojroot`. 
 We will be covering the purpose of using packages and recap different ways to install and manage them in RStudio. Nonetheless, pre-installating the packages we will be using for this workshop will save us some precious time since installation time may vary among learners. Here are the steps for two possible approaches you may follow for completing this process: 
 
@@ -37,7 +47,6 @@ We will be covering the purpose of using packages and recap different ways to in
 ~~~
 
 `install.packages("bookdown")
- install.packages("quarto")
  install.packages("tidyverse") 
  install.packages("BayesFactor") 
  install.packages("patchwork")
@@ -50,7 +59,7 @@ We will be covering the purpose of using packages and recap different ways to in
 
 ~~~
   
-`install.packages(c("bookdown","quarto", "tidyverse", "BayesFactor", "patchwork", "here"))`
+`install.packages(c("bookdown", "tidyverse", "BayesFactor", "patchwork", "here"))`
 
 ~~~
 {: .source}
