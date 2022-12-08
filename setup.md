@@ -17,7 +17,7 @@ The quarto document will not render without the most updated versions. <b>The Qu
 {: .keypoints}
 
 
-You can check if you have the correct Quarto version by typing the following in the Rstudio console: 
+You can check if you have the correct Quarto version by typing the following in the Rstudio terminal: 
 
 
 ~~~
