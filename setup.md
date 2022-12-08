@@ -10,6 +10,11 @@ title: Pre-workshop Setup
 - Install R & RStudio (Two separate installations: if you are on a windows device, you may need Rtools)
 - Install <a href="https://quarto.org/docs/get-started/">Quarto CLI (version 1.2)</a> 
 
+~~~
+If you already have Rstudio and R installed, please check if you have the most updated 2022.07 Rstudio and at least R version 4.2, along with Quarto version 1.2. The quarto document will not render without the most updated versions. 
+~~~
+{: .prereq}
+
 See instructions below for these requirements:
 
 {% include install_instructions/github.html %}
