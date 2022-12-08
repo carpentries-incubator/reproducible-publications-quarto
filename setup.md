@@ -1,45 +1,25 @@
 ---
 title: Pre-workshop Setup
----
-**Requirements:**
+---**Requirements:**
 
 <h2><b>PART I:Install Software and create GitHub Account</b></h2>
 
-- Github account (use existing or create new account) 
-- Install Git for Windows (Windows users only) 
-- Install R & RStudio (Two separate installations: if you are on a windows device, you may need Rtools)
-- Install <a href="https://quarto.org/docs/get-started/">Quarto CLI (version 1.2)</a> 
+- Create Github account (use existing or create new account) 
+- Install Git  
+- Install R & RStudio (Two separate installations: if you are on a windows device, you may need <a href="https://cran.r-project.org/bin/windows/Rtools/">Rtools</a>)
+- Install <a href="https://quarto.org/docs/get-started/">Quarto CLI (version 1.2)</a>
 
-> ## Quarto 
->
-If you already have Rstudio and R installed, please check if you have the most updated <b>2022.07</b> Rstudio and at least R version <b>4.2</b>, along with Quarto version <b>1.2</b>. 
-The quarto document will not render without the most updated versions. <b>The Quarto Package is not the CLI</b> 
-{: .keypoints}
-
-
-You can check if you have the correct Quarto version by typing the following in the Rstudio terminal: 
-
-
-~~~
-quarto --version
-~~~
-{: .source}
-
-Your output should be: 
-
-~~~
-quarto --version
-1.2.269
-~~~
-{: .output}
-
-
-
-See instructions below for these requirements:
 
 {% include install_instructions/github.html %}
 
 {% include install_instructions/git.html %}
+
+
+<br>
+
+
+<h2><b>PART II: Install R/Rstudio and Quarto</b></h2>
+
 
 {% include install_instructions/r.html %}
 
@@ -48,7 +28,39 @@ See instructions below for these requirements:
 <br>
 
 
-<h2><b>PART II: Install Packages in Rstudio</b></h2>
+## Quarto 
+
+You will need to install Quarto from <a href="https://quarto.org/docs/get-started/">Quarto.org</a>. Open the Setup Wizard to begin the install.
+Keep the defaults and select <b>Next</b> until the install Finishes.
+
+> ## Version clarifications on Quarto and R/Rstudio
+>
+If you already have Rstudio and R installed, please check if you have the most updated <b>2022.07</b> Rstudio and at least R version <b>4.2</b>, along with Quarto version <b>1.2</b>. The quarto document will not render without the most updated versions. <b>The Quarto Package is not the CLI</b>
+{: .keypoints} 
+
+
+You can check if you have the correct Quarto version by typing the following in the Rstudio terminal:
+
+
+~~~
+quarto --version
+~~~
+{: .source}
+
+Your output should be:
+
+~~~
+quarto --version
+1.2.269
+~~~
+{: .output}
+
+<br>
+
+## R Packages
+
+We will be using a feature called <a href="https://rstudio.github.io/renv/articles/renv.html">Renv</a>. Renv helps manage library paths and project specific states.
+However, in case there are issues with the workflow, we will use the following packages in the workshop. 
 
 
 Install the following packages in RStudio: `bookdown`, `tidyverse`, `rticles`,`BayesFactor`, `patchwork` , `rprojroot`. 
