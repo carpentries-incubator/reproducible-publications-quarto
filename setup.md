@@ -38,6 +38,7 @@ Keep the defaults and select <b>Next</b> until the install Finishes.
 If you already have Rstudio and R installed, please check if you have the most updated <b>2022.07</b> Rstudio and at least R version <b>4.2</b>, along with Quarto version <b>1.2</b>. The quarto document will not render without the most updated versions. <b>The Quarto Package is not the CLI</b>
 {: .keypoints} 
 
+<br>
 
 You can check if you have the correct Quarto version by typing the following in the Rstudio terminal:
 
