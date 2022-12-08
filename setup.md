@@ -33,20 +33,27 @@ We will be covering the purpose of using packages and recap different ways to in
 3) In the `Install Packages` dialog box, copy this command `bookdown, tidyverse, rticles, BayesFactor, patchwork, here` under the Packages field, make sure the option `install dependencies` is selected, keep other information unchanged, and then click `install`. 
 4) Don't be alarmed by the stop sign that will blink (and do not click on it otherwise you will cancel the process) or the red text messages. Once the process completes the cursor will be preceeded by a greater-than sign `>`.
 
-*Entering function in the console*
-
 1) Copy and paste one of the following functions to the console and wait for the process to complete:
+~~~
 
 `install.packages("bookdown")
+ install.packages("quarto")
  install.packages("tidyverse") 
- install.packages("rticles")  
  install.packages("BayesFactor") 
  install.packages("patchwork")
- install.packages("here")``
+ install.packages("here")`
+
+~~~
+{: .source}
  
  or 
+
+~~~
   
-`install.packages(c("bookdown", "tidyverse", "rticles", "BayesFactor", "patchwork", "here"))`
+`install.packages(c("bookdown","quarto", "tidyverse", "BayesFactor", "patchwork", "here"))`
+
+~~~
+{: .source}
 
 2) Don't be alarmed by the stop sign that will blink (and do not click on it otherwise you will cancel the process) or the red text messages. Once the process completes the cursor will be preceeded by a greater-than sign `>`.
 
