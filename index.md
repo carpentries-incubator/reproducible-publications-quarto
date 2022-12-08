@@ -11,7 +11,7 @@ Participants will build on their research and analytical skills with R Studio by
 
 > ## Prerequisites:
 >
-> Some familiarity or experience in R/RStudio is recommended but not required.
+> Experience in R/RStudio is recommended but not required. Experience, if not, familiarity, with using Version Control with Git is required. You will need a <a href="https://github.com/">GitHub Account</a> to fork and pull the example repo.
 {: .prereq}
 
 {% include links.md %}
