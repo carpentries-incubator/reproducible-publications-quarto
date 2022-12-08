@@ -2,7 +2,9 @@
 title: Pre-workshop Setup
 ---
 
-<h2><b>PART I:Install Software and create GitHub Account</b></h2>
+<h2><b>PART I:Install Git and create GitHub Account</b></h2>
+
+We will need the following account(s) and software for this workshop: 
 
 - Create Github account (use existing or create new account) 
 - Install Git  
@@ -30,8 +32,9 @@ title: Pre-workshop Setup
 
 ## Quarto 
 
+Quarto is a scientific and technical publishing system build on Pandoc, which we will be using in Rstudio.
 You will need to install Quarto from <a href="https://quarto.org/docs/get-started/">Quarto.org</a>. Open the Setup Wizard to begin the install.
-Keep the defaults and select <b>Next</b> until the install Finishes.
+Keep the defaults and select <b>Next</b> until the install finishes.
 
 > ## Version clarifications on Quarto and R/Rstudio
 >
