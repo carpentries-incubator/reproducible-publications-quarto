@@ -2,4 +2,4 @@
 title: Pre-workshop Setup
 ---
 
-## For November 2022 workshop please use the [Pre-workshop Setup Instructions](https://ucsbcarpentry.github.io/2022-11-8-ucsb-reproducible-pubs/setup.html)
+## For the Dec 11, Asian Student Counsil Symposium workshop please use the [Pre-workshop Setup Instructions](https://carpentries-incubator.github.io/Reproducible-Publications-with-RStudio/setup.html)

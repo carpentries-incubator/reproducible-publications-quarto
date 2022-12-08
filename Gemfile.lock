@@ -49,6 +49,7 @@ GEM
     faraday-rack (1.0.0)
     faraday-retry (1.0.3)
     ffi (1.15.5)
+    ffi (1.15.5-x64-mingw-ucrt)
     forwardable-extended (2.6.0)
     gemoji (3.0.1)
     github-pages (226)
@@ -233,6 +234,8 @@ GEM
     multipart-post (2.1.1)
     nokogiri (1.13.5-arm64-darwin)
       racc (~> 1.4)
+    nokogiri (1.13.5-x64-mingw-ucrt)
+      racc (~> 1.4)
     octokit (4.22.0)
       faraday (>= 0.9)
       sawyer (~> 0.8.0, >= 0.5.3)
@@ -269,14 +272,17 @@ GEM
       unf_ext
     unf_ext (0.0.8.1)
     unicode-display_width (1.8.0)
+    wdm (0.1.1)
     webrick (1.7.0)
     zeitwerk (2.5.4)
 
 PLATFORMS
   arm64-darwin-21
+  x64-mingw-ucrt
 
 DEPENDENCIES
   github-pages
+  wdm (>= 0.1.0)
   webrick (>= 1.6.1)
 
 RUBY VERSION
