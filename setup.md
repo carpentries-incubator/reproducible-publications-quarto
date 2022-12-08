@@ -1,6 +1,6 @@
 ---
 title: Pre-workshop Setup
----**Requirements:**
+---
 
 <h2><b>PART I:Install Software and create GitHub Account</b></h2>
 
