@@ -3,7 +3,7 @@ title: Pre-workshop Setup
 ---
 **Requirements:**
 
-**PART I:** Install Software and create GitHub Account
+<h2><b>PART I:Install Software and create GitHub Account</b></h2>
 
 - Github account (use existing or create new account) 
 - Install Git for Windows (Windows users only) 
@@ -45,9 +45,10 @@ See instructions below for these requirements:
 
 {% include links.md %}
 
+<br>
 
 
-**PART II:** Install Packages in Rstudio
+<h2><b>PART II: Install Packages in Rstudio</b></h2>
 
 
 Install the following packages in RStudio: `bookdown`, `tidyverse`, `rticles`,`BayesFactor`, `patchwork` , `rprojroot`. 
@@ -63,11 +64,11 @@ We will be covering the purpose of using packages and recap different ways to in
 1) Copy and paste one of the following functions to the console and wait for the process to complete:
 ~~~
 
-`install.packages("bookdown")
+ install.packages("bookdown")
  install.packages("tidyverse") 
  install.packages("BayesFactor") 
  install.packages("patchwork")
- install.packages("here")`
+ install.packages("here")
 
 ~~~
 {: .source}
@@ -76,7 +77,7 @@ We will be covering the purpose of using packages and recap different ways to in
 
 ~~~
   
-`install.packages(c("bookdown", "tidyverse", "BayesFactor", "patchwork", "here"))`
+ install.packages(c("bookdown", "tidyverse", "BayesFactor", "patchwork", "here"))
 
 ~~~
 {: .source}
