@@ -3,17 +3,30 @@ title: Pre-workshop Setup
 ---
 **Requirements:**
 
-**PART I:** Install Software
+**PART I:** Install Software and create GitHub Account
 
 - Github account (use existing or create new account) 
 - Install Git for Windows (Windows users only) 
 - Install R & RStudio (Two separate installations: if you are on a windows device, you may need Rtools)
 - Install <a href="https://quarto.org/docs/get-started/">Quarto CLI (version 1.2)</a> 
 
+> ## Quarto
+> ~~~
+> If you already have Rstudio and R installed, please check if you have the most updated 2022.07 Rstudio and at least R version 4.2, along with Quarto version 1.2. 
+> The quarto document will not render without the most updated versions. <b>The Quarto Package is not the CLI</b> 
+> ~~~
+> {: .source}
+{: .keypoint}
+
+You can check if you have the correct Quarto version by typing the following in the Rstudio console: 
+
 ~~~
-If you already have Rstudio and R installed, please check if you have the most updated 2022.07 Rstudio and at least R version 4.2, along with Quarto version 1.2. The quarto document will not render without the most updated versions. 
+`quarto --version`
 ~~~
-{: .prereq}
+{.source}
+
+
+
 
 See instructions below for these requirements:
 
@@ -28,14 +41,6 @@ See instructions below for these requirements:
 
 
 **PART II:** Install Packages in Rstudio
-
-**Here's where we check the quarto version**
-Make sure your quarto version is at least 1.2, 
-
-~~~
-`quarto --version`
-~~~
-{.source}
 
 
 Install the following packages in RStudio: `bookdown`, `tidyverse`, `rticles`,`BayesFactor`, `patchwork` , `rprojroot`. 
