@@ -42,7 +42,14 @@ Additional commands are available on the Format, Insert, and Table menus:
 {: .callout}
 
 Let's get some formatting done in our example paper. We will look for some **FIXMEs** and replace with the recommended style so we can all produce a similar output at the end of the workshop.
+<br>
 
+
+> ## Rendering Documents 
+> When you do your first render, the pop-up may be blocked by your browser. You can unblock the pop-up or in the <b>Background Jobs</b> pane,
+> find the local host url and copy+paste that into your browser. 
+>
+{: .keypoints}
 
 ### *Applying Emphasis*
 
