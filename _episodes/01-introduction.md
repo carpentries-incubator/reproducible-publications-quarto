@@ -193,4 +193,4 @@ Nitsch, F. J., Sellitto, M., & Kalenscher, T. (2021). Trier social stress test a
 We will be also using a simplified version of the project directory containing data files and scripts available through Open Science Framework: [https://doi.org/10.17605/OSF.IO/6MVQ7](https://doi.org/10.17605/OSF.IO/6MVQ7).
 
 The paper template and project files are used exclusively for instruction purposes with permission from the authors.
-{:.callout_info
+{:.callout}
