@@ -184,12 +184,13 @@ Finally, three real-world examples that motivated the authors of this lesson to 
 3. In a past version of this workshop we struggled with a scientific paper published in a reputable journal.  In trying to recreate the plots the original authors created, we found it difficult and time-consuming to figure out exactly how the authors created their plots.  Out of the many columns in their data, many with similar-sounding names, which did they use?  How did they handle missing data?  Exactly what operations did they perform to compute aggregate values?  How much easier it would have been if they had published the code they used along with their paper. RStudio and Quarto allow you to do this.
 
 
-> ## Workshop Example 
-> Our goal is that by the end of this workshop you will be able to create a reproducible report. Throughout this workshop, we will be using a shorter and adapted version of the data paper referenced below:
+> ## A Note About the Workshop Example 
+> 
+Our goal is that by the end of this workshop you will be able to create a reproducible report. Throughout this workshop, we will be using a shorter and adapted version of the data paper referenced below:
 
 Nitsch, F. J., Sellitto, M., & Kalenscher, T. (2021). Trier social stress test and food-choice: Behavioral, self-report & hormonal data. *Data in brief*, 37, 107245. [https://doi.org/10.1016/j.dib.2021.107245](https://doi.org/10.1016/j.dib.2021.107245)
 
 We will be also using a simplified version of the project directory containing data files and scripts available through Open Science Framework: [https://doi.org/10.17605/OSF.IO/6MVQ7](https://doi.org/10.17605/OSF.IO/6MVQ7).
 
 The paper template and project files are used exclusively for instruction purposes with permission from the authors.
-{:.callout
+{:.callout_info
