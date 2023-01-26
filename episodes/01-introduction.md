@@ -186,11 +186,8 @@ Finally, three real-world examples that motivated the authors of this lesson to 
 
 > ## A Note About the Workshop Example
 >   
-> Our goal is that by the end of this workshop you will be able to create a reproducible report. Throughout this workshop, we will be using a shorter and adapted version of the data paper referenced below:
-
-> Nitsch, F. J., Sellitto, M., & Kalenscher, T. (2021). Trier social stress test and food-choice: Behavioral, self-report & hormonal data. *Data in brief*, 37, 107245. [https://doi.org/10.1016/j.dib.2021.107245](https://doi.org/10.1016/j.dib.2021.107245)
-
-> We will be also using a simplified version of the project directory containing data files and scripts available through Open Science Framework: [https://doi.org/10.17605/OSF.IO/6MVQ7](https://doi.org/10.17605/OSF.IO/6MVQ7).
-
-> The paper template and project files are used exclusively for instruction purposes with permission from the authors.
+> Our goal is that by the end of this workshop you will be able to create a reproducible report using data and code we will provide. Throughout this workshop, we will be using a shorter and adapted version of the data paper referenced below:
+Nitsch, F. J., Sellitto, M., & Kalenscher, T. (2021). Trier social stress test and food-choice: Behavioral, self-report & hormonal data. *Data in brief*, 37, 107245. [https://doi.org/10.1016/j.dib.2021.107245](https://doi.org/10.1016/j.dib.2021.107245)
+We will be also using a simplified version of the project directory containing data files and scripts published by the authors on Open Science Framework: [https://doi.org/10.17605/OSF.IO/6MVQ7](https://doi.org/10.17605/OSF.IO/6MVQ7).
+The paper template and project files are used exclusively for instruction purposes with permission from the authors.
 {: .callout}
