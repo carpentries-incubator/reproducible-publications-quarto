@@ -62,7 +62,7 @@ In the same citation we have just worked on, let’s now add a link to it by sel
 
 ### *Adding Headings*
 
-Adding headings to a a Quarto markdown document in Rstudio is as simple as applying links. Let’s say we want the abstract section as a Heading Level 2. We can select the “abstract” then, and under “Normal” on the left-hand side of the menu, we can choose the desired level. Again, all the shortcuts will be listed next to the styling in the menu. Now apply the same heading to keywords and Level 2 to "Specification Table" (**FIXME3**).
+Adding headings to a a Quarto markdown document in Rstudio is as simple as applying links. Let’s say we want the abstract section as a Heading Level 2. We can select the “abstract” then, and under “Normal” on the left-hand side of the menu, we can choose the desired level. Again, all the shortcuts will be listed next to the styling in the menu. Now apply the same heading to keywords and Level 2 to "Value of the Data" (**FIXME3**).
 
 
 ### *Creating Tables*
@@ -79,12 +79,12 @@ Again, similarly to other document editors, Rstudio allows you to turn text into
 
 ### *Adding Images*
 
-You may need to include static images to your manuscripts. For that, you can use the insert image function, click on the painting icon or even use the shortcut that shows right next to the function in the menu. After browsing and upload the desired image you may also specify the caption and the image title, as well as adjust dimensions if needed. Let's insert two images Fig. 1 (**FIXME5**) and Fig. 2 (**FIXME6**).  
+You may need to include static images to your manuscripts. For that, you can use the insert image function, click on the painting icon or even use the shortcut that shows right next to the function in the menu. After browsing and upload the desired image you may also specify the caption and the image title, as well as adjust dimensions if needed. Let's insert image for Fig. 1 (**FIXME5**).  
 
 
 ### *Adding Formulas*
 
-If you have math formula in your manuscript there are three different ways you may insert one. Let's look for (**FIXME7**) for an example. Point and click at the insert menu, use the catch-all `⌘ /` keyboard short and then get to inline math mode, or type the formula content between dollar signs `$`. You will notice that the color and font type will change, as Rstudio identifies the block as an inline equation.
+If you have math formula in your manuscript there are three different ways you may insert one. Let's look for (**FIXME6**) for an example. Point and click at the insert menu, use the catch-all `⌘ /` keyboard short and then get to inline math mode, or type the formula content between dollar signs `$`. You will notice that the color and font type will change, as Rstudio identifies the block as an inline equation.
 
 ## Keyboard Shortcuts
 As you become a more regular Rstudio user, you may also consider using some keyboard shortcuts for all basic editing tasks. Visual mode supports both traditional keyboard shortcuts (e.g. `⌘ B` for bold) as well as markdown shortcuts (using markdown syntax directly). For example, enclose **bold** text in asterisks or type ## and press space to create a second level heading. Here are some of the most commonly used shortcuts for Mac users:
