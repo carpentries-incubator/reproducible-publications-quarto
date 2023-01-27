@@ -253,9 +253,9 @@ plot
 
 ### Add the code to our Quarto document
 
-First, find `FIXME 9` in the Quarto document for Fig 3 (ctrl-f "FIXME 9"). 
+First, find `FIXME 8` in the Quarto document for Fig 3 (ctrl-f "FIXME 8"). 
 
-Add the following code where `FIXME 9` is located under "Preview of Research Results".
+Add the following code where `FIXME 8` is located under "Preview of Research Results".
 
 ~~~
 # run the code from 03_HR_analysis.R in the code directory
@@ -297,7 +297,7 @@ Success! And you'll notice that the global code chunk options were applied to th
 
 > ##  8.3: Your turn! Create Figure 4 with the external code
 > 
-> First, find `FIXME 10` in the qmd document for Fig 4 (ctrl-f "FIXME 10"). We need to add the code for the hormone analysis.
+> First, find `FIXME 9` in the qmd document for Fig 4 (ctrl-f "FIXME 9"). We need to add the code for the hormone analysis.
 >
 > Make sure to give the code chunk a name: `fig4-hormones` and a caption: `"Fig 4: Cortisol and Amylase levels in stress and control groups"`
 >
