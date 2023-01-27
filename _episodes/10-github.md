@@ -45,7 +45,7 @@ You can get the address of your repository from Github by navigating to your rep
 
 With that address you can complete setting the origin URL in the next step. 
 
-## Checking and Setting the "Origin" for the local copy of yoiur repository.
+## Checking and Setting the "Origin" for the local copy of your repository.
 
 If you forked and cloned the demonstration publication for this workshop as covered in an earlier episode then your copy of the repository should already have the "origin" set.  Once the "origin" is set properly you should be able to push and pull your changes to and from Github.  When you clone a repository from Github your local copy of the repository should have Github set as the "origin".  
 
