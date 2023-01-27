@@ -232,7 +232,7 @@ Let's render one more time to see if our figure outputs how we'd like and has a 
 
 ## Add the code to our Paper
 
-We tested the code for our heart rate plot in a new qmd document to save time on rendering while we experimented with it (for our paper it can take 1-2 min to render and that adds up!). Now let's add the code into our paper document. Navigate to `FIXME 9` and create a new code chunk. Copy and paste the code from the test document into the paper. Go ahead and run the code to make sure it works. 
+We tested the code for our heart rate plot in a new qmd document to save time on rendering while we experimented with it (for our paper it can take 1-2 min to render and that adds up!). Now let's add the code into our paper document. Navigate to `FIXME 8` and create a new code chunk. Copy and paste the code from the test document into the paper. Go ahead and run the code to make sure it works. 
 
 Well shoot! We're getting an error:
 
@@ -263,7 +263,7 @@ What if you only need to make a quick calculation and adding a code chunk seems 
 
 You can also include `r code` directly in your the text portion of your document. Say you are discussing some of the summary statistics in your manuscript, Quarto makes this possible through HTML/LaTeX inline code which allows you to calculate simple expressions integrated to your narrative. Inline code enables you to insert `r code` into your document to dynamically updated portions of your text. In other words, if your data set changes for any reason the code will automatically update the calculation specified. 
 
-This can be helpful when referring to specific variables on your data. For example, you should include numbers that are derived from the data as code not as numbers. Thus, rather than writing “The CSV file contains choice consistency data for 10.000 simulated participants” **(FIXME8)** , replace the static number with a bit of code that, when evaluated, gives you a dynamic number if anything changes on your dataset. Note that there is not an insert option to do this from the menu in the visual editor, so we need to insert inline code manually with  ```r ```, for example:
+This can be helpful when referring to specific variables on your data. For example, you should include numbers that are derived from the data as code not as numbers. Thus, rather than writing “The CSV file contains choice consistency data for 10.000 simulated participants” **(FIXME7)** , replace the static number with a bit of code that, when evaluated, gives you a dynamic number if anything changes on your dataset. Note that there is not an insert option to do this from the menu in the visual editor, so we need to insert inline code manually with  ```r ```, for example:
 
 The CSV file contains choice consistency data for ``r nrow(bronars_simulation_data)`` simulated participants.
 
