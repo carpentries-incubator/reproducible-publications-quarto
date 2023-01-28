@@ -84,7 +84,7 @@ When you choose this option there will be a place to paste the url of the GitHub
 
 > ## Our turn!
 >
-> We have a repository already prepared for this workshop at [https://github.com/carpentries-incubator/Reproducible-Publications-with-RStudio-Example](https://github.com/carpentries-incubator/Reproducible-Publications-with-RStudio-Example). 
+> We have a repository already prepared for this workshop at [https://github.com/UCSBCarpentry/Quarto-Project-Example](https://github.com/UCSBCarpentry/Quarto-Project-Example). 
 > We are going to use the third option to download this repository from GitHub and work with it hands on. You will need this repo in your working environment if you would like to follow along through this workshop.
 > Let’s take a second to acquaint ourselves with GitHub. [At this link](https://github.com/signup), you may sign into your GitHub account or create one if you have not already.
 > {: .source}
