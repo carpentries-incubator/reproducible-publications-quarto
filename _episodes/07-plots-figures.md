@@ -51,7 +51,7 @@ Let's all start a new code chunk by typing our our starting backticks & r betwee
 > ## Tip: Four ways to insert code chunks
 > - the Add Chunk button in the editor toolbar  (looks like a green square with a C)
 > - the Insert > Code Chunk menu option in the editor toolbar
-> - by typing the code chunk delimiters {r} and ```. *If you are in "editor" mode you will need to remember to end the code chunk with ending backticks as well ```.  
+> - by typing the code chunk delimiters {r} and \```. *If you are in "editor" mode you will need to remember to end the code chunk with ending backticks as well \```.  
 > - the keyboard shortcut 
 >       - Ctrl + Alt + I (Windows)
 >       - Cmd + Option + I (Mac) 
