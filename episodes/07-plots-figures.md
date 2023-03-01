@@ -41,12 +41,21 @@ Code chunks (also called "code blocks") are the preferred option when you need t
 
 Ok, let's add some code! There are already some plots included in our code but as static images. Now, we will add some additional plots, but generated straight from R code - which are also more reproducible and easier to update than static images. Using code to generated images directly assures us that if there are any changes to the data or code the plots will update automatically. We also don't have to generate the new plots, save them as images, and then add them back in to our paper. Not only is this a time-saver, but it helps to prevent version errors as well! 
 
-Navigate to the end of the paper where it says "Example 8". This is where we will add our first code chunk.
+Navigate to the end of the paper where it says **"Example 8"**. This is where we will add our first code chunk.
 
-You can quickly insert chunks like these into your file with:   
-- the Add Chunk command in the editor toolbar  (looks like a green square with a C)
-- or by typing the code chunk delimiters {r} and ```.  
-- the keyboard shortcut Ctrl + Alt + I (OS X: Cmd + Option + I) 
+Let's all start a new code chunk by typing our our starting backticks & r between curly brackets or by using the buttons available in the editor toolbar.  
+
+> ![auto create code chunk](../fig/07-auto-code-chunk.PNG)  
+
+
+> ## Tip: Four ways to insert code chunks
+> - the Add Chunk button in the editor toolbar  (looks like a green square with a C)
+> - the Insert > Code Chunk menu option in the editor toolbar
+> - by typing the code chunk delimiters {r} and ```. *If you are in "editor" mode you will need to remember to end the code chunk with ending backticks as well ```.  
+> - the keyboard shortcut 
+>       - Ctrl + Alt + I (Windows)
+>       - Cmd + Option + I (Mac) 
+{: .callout}
 
 ### Basic Anatomy of a Code Chunk
 
@@ -56,16 +65,10 @@ The most basic (empty) code chunk looks like so:
 
 Other than backticks ``` for code chunks that surround the code top and bottom, the only **required** piece is the specified language (r) placed between the curly brackets. This indicates that the language to read the code is R.
 
-Let's all start a new code chunk by typing our our starting backticks & r between curly brackets. (in your own workflow you may want to add the ending three backticks as well so you don’t forget after adding your code - it's a common mistake):
-
 > ## Fun fact: Other Programming Languages
 > Although we will (mostly) be using R in this workshop, it’s possible to use other programming or markup languages. For example, we have seen that we can use LaTeX code for equations. You can also use python and a handful of other languages, so if R is not your preferred programming, but you like working in the RStudio environment, don’t despair! Other options for languages include: sql, julia, bash, and c, etc. It should be noted however, that some languages (like python) will require installing and loading additional packages. 
 {: .callout}
 
-> ## Tip:
-> There's actually a button you can use in the RStudio menu to generate the code chunks automatically. Automatic code chunk generation is available for several other languages as well. Also, you can use the keyboard shortcut `ctrl`+`alt`+`i` for Windows and `command`+`option`+`i` for Mac. 
-> ![auto create code chunk](../fig/07-auto-code-chunk.PNG)
-{: .callout}
 
 ## Add the code to our Paper
 
@@ -97,12 +100,7 @@ Run all chunks	| Ctrl+Alt+R	| Command+Option+R
 Go to next chunk/title	| Ctrl+PgDown	| Command+PgDown
 Go to previous chunk/title	| Ctrl+PgUp |	Command+PgUp
 
-Run your code with one of the given methods. 
-
-Did it work? Look under the code chunk. You should now see a plot preview displayed beneath the code chunk if all went well. 
-
-![Code Chunk Plot Preview](../fig/07-plot-preview.png)
-
+Run your code with one of the given methods.
 
 Well shoot! We're getting an error:
 
@@ -126,12 +124,16 @@ Instead of:
 df <- read_csv("output/data/preprocessed-GARP-TSST-data.csv")
 ```
 
-Run the code again to make sure it works properly. Great! Let's move on to inline code.
+Run the code again to make sure it works properly. 
+
+Did it work? Look under the code chunk. You should now see a plot preview displayed beneath the code chunk if all went well. 
+
+![Code Chunk Plot Preview](../fig/07-plot-preview.png)
 
 
 ## Rendering Code Chunks
 
-We just saw how to run our code in our code chunks to see a preview of the code output that will render in our html document but to actually render it we need to use the Render button. Using the `Render` button with code chunks is a two step process - first the code is run (all code chunks will run automatically). Second, (if there are no code errors) the document of choice will render for our whole Quarto document. 
+We just saw how to run our code in our code chunks to test that it works and to see a preview of the code output that will render in our html document but to *actually* render the final we need to use the Render button as with. Using the `Render` button with code chunks is a two step process - first the code is run (all code chunks will run automatically). Second, (if there are no code errors) the document of choice will render for our whole Quarto document. 
 
 > ## Time to Render!
 > Now, let's Render the Quarto file and see how our code output looks in the final html page. 
