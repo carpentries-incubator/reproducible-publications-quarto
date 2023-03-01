@@ -20,7 +20,7 @@ keypoints:
 - "Options for code chunks can be set at the individual level or at the global level"
 ---
 
-## Utilizing the Code Features of Quarto
+## Code in Quarto Documents
 
 We've learned about the text-formatting options of Quarto, now let's dive into the code portion of Quarto documents. Quarto flips the defaults of code and text - instead of priortizing the code and making you comment out (#) text such as in R scripts, they priortize text and force you to specially comment the code portions. How do you signal to R the difference between code and text when you're not using code commments (#)? That's where code chunks (or "code chunks" as RStudio calls them) come into play. Instead of Quarto's rendering system processing the markdown styling into the final output, Code chunks are sent to a preceding stage of processing by Knitr, which "knits"/render the code output and text together. Secondly, Quarto processes the code output and displays it in the document format of our choice - i.e. Knitr runs the lines of code for a plot in a code chunk, joins it to the markdown text portions, and Quarto outputs that as an html document. 
 
@@ -33,25 +33,22 @@ But what is Knitr? Knitr is the engine in RStudio which creates the “dynamic�
 
 First, we're going to talk about code chunks for including substantial portions of code into our narrative such as to generate figures and plots. There are a plethora of options that become available to us when using code chunks so this tends to be the more complex part of Quarto documents. Now, sometimes you just need to do a quick calculation - like a count of total observations in your data or the mean of one of your variables. In those cases, it may not be worth setting up a code chunk to calculate those values, so after code chunks we will see how to add inline code - which allows one to add a quick line of code or single function to be executing within the text portion of the document. But let's start with code chunks.
 
-## Inserting Code Chunks
+## Using Code Chunks
 
 Code chunks (also called "code blocks") are the preferred option when you need to do something more sophisticated with your code than inline code, such as building plots or tables.  They also incorporate syntax which allows modifications to how that code is rendered and styled in your final output. We’ll learn more about that as we walk through the “anatomy” of a code chunk.
 
-### Start a new .qmd File
-First, though, let's open a new `.qmd` document to get a look at how code chunk work before integrating them into our paper. 
+### Add a Code Chunk
 
-Again, open a new document by navigating to `File > New File > Quarto Document`. Add the title `test-code`. 
+Ok, let's add some code! There are already some plots included in our code but as static images. Now, we will add some additional plots, but generated straight from R code - which are also more reproducible and easier to update than static images. Using code to generated images directly assures us that if there are any changes to the data or code the plots will update automatically. We also don't have to generate the new plots, save them as images, and then add them back in to our paper. Not only is this a time-saver, but it helps to prevent version errors as well! 
 
-Let's first delete the generic text because we don't need it at this point (all except the first code chunk that is - we'll get back to that in a second).
+Navigate to the end of the paper where it says "Example 8". This is where we will add our first code chunk.
 
-![Default QMD just setup chunk](../fig/07-empty-qmd-doc.png)
+You can quickly insert chunks like these into your file with:   
+- the Add Chunk command in the editor toolbar  (looks like a green square with a C)
+- or by typing the code chunk delimiters {r} and ```.  
+- the keyboard shortcut Ctrl + Alt + I (OS X: Cmd + Option + I) 
 
 ### Basic Anatomy of a Code Chunk
-
-You can quickly insert chunks like these into your file with:  
-- the keyboard shortcut Ctrl + Alt + I (OS X: Cmd + Option + I)  
-- the Add Chunk command in the editor toolbar  
-- or by typing the code chunk delimiters {r} and ```.  
 
 The most basic (empty) code chunk looks like so:
 
@@ -65,18 +62,16 @@ Let's all start a new code chunk by typing our our starting backticks & r betwee
 > Although we will (mostly) be using R in this workshop, it’s possible to use other programming or markup languages. For example, we have seen that we can use LaTeX code for equations. You can also use python and a handful of other languages, so if R is not your preferred programming, but you like working in the RStudio environment, don’t despair! Other options for languages include: sql, julia, bash, and c, etc. It should be noted however, that some languages (like python) will require installing and loading additional packages. 
 {: .callout}
 
-## Add a Code Chunk
-
-Ok, let's add some code! There are already some plots included in our code but as static images. Now, we will add some additional plots, but generated straight from R code - which are also more reproducible and easier to update than static images. Using code to generated images directly assures us that if there are any changes to the data or code the plots will update automatically. We also don't have to generate the new plots, save them as images, and then add them back in to our paper. Not only is this a time-saver, but it helps to prevent version errors as well! 
-
-Now, let's open our `03_HR_analysis.R` script in our `code` folder. We will insert the code of this script into our current working file. To do this, copy the code and paste it in-between the two lines with backticks and `{r}`.
-
-![heartrate code in chunk](../fig/07-heartrate-code.PNG)
-
 > ## Tip:
 > There's actually a button you can use in the RStudio menu to generate the code chunks automatically. Automatic code chunk generation is available for several other languages as well. Also, you can use the keyboard shortcut `ctrl`+`alt`+`i` for Windows and `command`+`option`+`i` for Mac. 
 > ![auto create code chunk](../fig/07-auto-code-chunk.PNG)
 {: .callout}
+
+## Add the code to our Paper
+
+Now, let's open our `03_HR_analysis.R` script in our `code` folder. We will insert the code of this script into our current working file. To do this, copy the code and paste it in-between the two lines with backticks and `{r}`.
+
+![heartrate code in chunk](../fig/07-heartrate-code.PNG)
 
 ## Run the code in a code chunk
 Now, to check to make sure our code renders, we could click the "Render" button as we have been doing to check on the output of our Quarto file. However, with code chunks we have other options for running and debugging code that don't require us to wait for the file to render. 
@@ -108,6 +103,32 @@ Did it work? Look under the code chunk. You should now see a plot preview displa
 
 ![Code Chunk Plot Preview](../fig/07-plot-preview.png)
 
+
+Well shoot! We're getting an error:
+
+![directory error code chunk](../fig/07-path-code-error.png)
+
+If we go to the bottom of the code chunk we'll see more details on the error:
+
+![path error details](../fig/07-path-error-details.png)
+
+This is a path error. The reason we're seeing this is that our paper is located in the report/source directory while our test document was automatically created in the project root directory. The path from the report/source directory to the data we're trying to read is not correct any longer. 
+
+### Fixing Relative Path Errors
+
+We can fix this by adding the correct relative path:
+
+```
+df <- read_csv("../output/data/preprocessed-GARP-TSST-data.csv")
+```
+Instead of:
+```
+df <- read_csv("output/data/preprocessed-GARP-TSST-data.csv")
+```
+
+Run the code again to make sure it works properly. Great! Let's move on to inline code.
+
+
 ## Rendering Code Chunks
 
 We just saw how to run our code in our code chunks to see a preview of the code output that will render in our html document but to actually render it we need to use the Render button. Using the `Render` button with code chunks is a two step process - first the code is run (all code chunks will run automatically). Second, (if there are no code errors) the document of choice will render for our whole Quarto document. 
@@ -131,7 +152,6 @@ There are over 50 different code chunk options!!! Obviously we will not go over 
 Code chunk options in Quarto are added within code chunks and always have the following format:
 
 `#| option: option-text`
-
 
 
 ### Common code chunk options: 
@@ -230,31 +250,7 @@ Let's render one more time to see if our figure outputs how we'd like and has a 
 > Let's try that again 
 {: .checklist}
 
-## Add the code to our Paper
 
-We tested the code for our heart rate plot in a new qmd document to save time on rendering while we experimented with it (for our paper it can take 1-2 min to render and that adds up!). Now let's add the code into our paper document. Navigate to `Example 8` and create a new code chunk. Copy and paste the code from the test document into the paper. Go ahead and run the code to make sure it works. 
-
-Well shoot! We're getting an error:
-
-![directory error code chunk](../fig/07-path-code-error.png)
-
-If we go to the bottom of the code chunk we'll see more details on the error:
-
-![path error details](../fig/07-path-error-details.png)
-
-This is a path error. The reason we're seeing this is that our paper is located in the report directory while our test document was automatically created in the project root directory. The path from the report directory to the data we're trying to read is not correct any longer. 
-
-We can fix this by adding the correct relative path:
-
-```
-df <- read_csv("../output/data/preprocessed-GARP-TSST-data.csv")
-```
-Instead of:
-```
-df <- read_csv("output/data/preprocessed-GARP-TSST-data.csv")
-```
-
-Run the code again to make sure it works properly. Great! Let's move on to inline code.
 
 
 ## Inline Code
