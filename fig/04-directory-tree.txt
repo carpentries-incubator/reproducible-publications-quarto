@@ -1,69 +1,27 @@
 .
 ├── CITATION.md
 ├── LICENSE.md
-├── R-repro-pub.Rproj
 ├── README.md
+├── Reproducible-Publications-with-RStudio-Example.Rproj
 ├── code
 │   ├── 01_data_preprocessing.R
 │   ├── 02_hormone_analysis.R
 │   ├── 03_HR_analysis.R
-│   ├── 04_selfreport_analysis.R
-│   ├── 05_CCEI_analysis.R
-│   ├── 06_trait_analysis.R
-│   ├── 07_bronars_plot.R
 │   └── functions
 │       └── GARP_funcs.R
 ├── data
 │   ├── GARP-TSST-mastersheet.xlsx
-│   ├── bronars_simulation_data.csv
-│   ├── foodchoice_budgetlines.csv
-│   ├── foodchoice_data
-│   │   ├── CC-101_1_data.csv
-│   │   ├── CC-101_2_data.csv
-│   │   ├── CC-101_3_data.csv
-│   │   ├── CC-102_1_data.csv
-│   │   ├── CC-102_2_data.csv
-│   │   ├── CC-102_3_data.csv
-│   │   ├── CC-103_1_data.csv
-│   │   ├── CC-103_2_data.csv
-│   │   ├── CC-103_3_data.csv
-│   │   ├── ...
-│   └── online_data_cleaned.xlsx
+│   └── bronars_simulation_data.csv
 ├── output
 │   ├── data
 │   │   └── preprocessed-GARP-TSST-data.csv
 │   └── plots
-│       ├── bronars.pdf
-│       ├── ccei.pdf
 │       ├── heartrate.pdf
-│       ├── hormones.pdf
-│       ├── selfreport.pdf
-│       └── tics_ccei.pdf
+│       └── hormones.pdf
 └── report
-    ├── output
-    │   └── DataPaper-ReproducibilityWorkshop.html
-    └── source
-        ├── DataPaper-ReproducibilityWorkshop.Rmd
-        ├── DataPaper-ReproducibilityWorkshop.html
-        ├── DataPaper-ReproducibilityWorkshop.qmd
-        ├── DataPaper-ReproducibilityWorkshop_files
-        │   └── libs
-        │       ├── bootstrap
-        │       │   ├── bootstrap-icons.css
-        │       │   ├── bootstrap-icons.woff
-        │       │   ├── bootstrap.min.css
-        │       │   └── bootstrap.min.js
-        │       ├── clipboard
-        │       │   └── clipboard.min.js
-        │       └── quarto-html
-        │           ├── anchor.min.js
-        │           ├── popper.min.js
-        │           ├── quarto-syntax-highlighting.css
-        │           ├── quarto.js
-        │           ├── tippy.css
-        │           └── tippy.umd.min.js
-        ├── apa.csl
-        ├── fig
-        │   ├── Fig1.jpg
-        │   └── Fig2.jpg
-        └── references.bib
+    ├── DataPaper-ReproducibilityWorkshop.html
+    ├── DataPaper-ReproducibilityWorkshop.qmd
+    ├── apa.csl
+    ├── fig
+    │   └── Fig1.jpg
+    └── references.bib
