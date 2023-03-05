@@ -97,13 +97,11 @@ Let's take a look at the Quarto document template we have just created to see ho
 
 > ## A note about coding approaches in RStudio: 
 > When writing code in Rstudio, there are different workflows you can use, including writing code directly in the console, using a separate R script, or writing your code in a .qmd file. The best approach depends on your specific needs and preferences:
-
-> 1. *Writing code directly in the console* is useful when you want to execute code immediately to see the effect of a statement, make a quick change or calculation. However, keeping track of your written code can be challenging, especially if it takes multiple lines. Additionally, if you need to run the same code multiple times, you'll have to rewrite it each time, which can be inconvenient if you plan to reuse it.
-
-> 2. *Using a separate R script* is a more organized way to write and save code, and you can easily reuse it later or share it with others. You can easily edit and rerun the script if you need to modify the code. However, running code in a script requires more steps than running code in the console, and it can be more challenging to modify code interactively.
-
-> 3. *Using a .qmd file* combines the advantages of both the console and R script. A .qmd file allows you to write . R code and text in the same document make it easier to organize and document your work. Additionally, you can run the code directly in the paper, which makes it easier to modify and rerun code interactively.
-
+> 
+> - *Writing code directly in the console* is useful when you want to execute code immediately to see the effect of a statement, make a quick change or calculation. However, keeping track of your written code can be challenging, especially if it takes multiple lines. Additionally, if you need to run the same code multiple times, you'll have to rewrite it each time, which can be inconvenient if you plan to reuse it.
+> - *Using a separate R script* is a more organized way to write and save code, and you can easily reuse it later or share it with others. You can easily edit and rerun the script if you need to modify the code. However, running code in a script requires more steps than running code in the console, and it can be more challenging to modify code interactively.
+> - *Using a .qmd file* combines the advantages of both the console and R script. A .qmd file allows you to write . R code and text in the same document make it easier to organize and document your work. Additionally, you can run the code directly in the paper, which makes it easier to modify and rerun code interactively.
+>
 > We will use the third approach for most of this workshop since we focus on creating a reproducible paper.
 {: .callout}
 
