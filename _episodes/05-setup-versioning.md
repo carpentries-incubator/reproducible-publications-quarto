@@ -102,7 +102,7 @@ On Github in the upper right hand corner of the repository, click on the button 
 
 ![fork on GitHub](../fig/05-fork.PNG)
 
-If you are a member of any organizations on GitHub, you will be asked whether you want to fork to your account or to an organization. Choose your personal account for this workshop. Un-check the option to "Copy the Main branch Only" as you want all branches. ![fork all branches](../fig/05-git-fork-all-branches.png) GitHub will process for a few moments and voila! You have your own copy of the workshop example repository.
+If you are a member of any organizations on GitHub, you will be asked whether you want to fork to your account or to an organization. Choose your personal account for this workshop.  GitHub will process for a few moments and voila! You have your own copy of the workshop example repository.
 
 Now, click on the green `Code` drop-down and then click on the copy icon next to the repository url:
 
@@ -117,9 +117,6 @@ So back to the url you copied from GitHub. Navigate again to `File > New Project
 ![start my R project](../fig/05-git-new-project-clone.png)
 
 Now you have cloned a copy of your git repo from Github to your working environment.  
-One more step: Make sure to select the quarto branch in RStudio (on your local instance or Jupyter Hub) on the Git tab. 
-
-![Select Quarto Branch](../fig/05-selecting-quarto-branch.png)
 
 If you're working in the JupyterHub environment you will need to configure Git with your name and email before you'll be able to commit the changes you make during this workshop.  Substitute your name and email address in the commands below and paste them into the Terminal panel of RStudio.
 
