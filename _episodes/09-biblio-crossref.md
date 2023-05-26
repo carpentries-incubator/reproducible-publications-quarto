@@ -164,6 +164,12 @@ Let’s try!
 > In case you are including a citation to `nocite` that you have not cited in the document, you have to make sure first that the bib file is in your Bibliography folder.
 {: .checklist} 
 
+> ## Tip:
+>> Depending on the bibliography style in use, BibTeX converts all characters in the title to lowercase, with the exception of the first character. If you want to override this, wrap the character(s) you want to show in upper case, in curly braces. 
+>> ```
+>> title = "Pascal, {C}, {Java}: were they all conceived in {ETH}?" 
+>> ``` 
+{: .checklist} 
 
 ## Adding Cross-referencing
 
