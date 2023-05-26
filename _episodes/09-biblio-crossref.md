@@ -165,7 +165,7 @@ Let’s try!
 {: .checklist} 
 
 > ## Tip:
->> Depending on the bibliography style in use, BibTeX converts all characters in the title to lowercase, with the exception of the first character. If you want to override this, wrap the character(s) you want to show in upper case, in curly braces. 
+>> Depending on the bibliography style, BibTeX converts all characters in the title to lowercase, except for the first character. If you want to override this, wrap the character(s) you wish to show in upper case, in curly braces.
 >> ```
 >> title = "Pascal, {C}, {Java}: were they all conceived in {ETH}?" 
 >> ``` 
