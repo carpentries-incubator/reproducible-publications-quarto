@@ -2,3 +2,4 @@
 Gemfile.lock
 .vendor/
 _site/
+.Rproj.user
