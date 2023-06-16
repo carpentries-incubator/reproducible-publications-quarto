@@ -17,6 +17,110 @@ keypoints:
 - Setting the Git repository _Origin_ in your R Studio project enables _pushing_ and _pulling_ from your local copy of the repository to the repository on Github.
 ---
 
+**This needs attention! Content moved from ep. 5 from the previous workshop version.**
+
+Now, let's dive in to how to use version control.
+
+## Using Version Control in RStudio
+
+There are two places we can interact with Git in the RStudio interface.
+1. Menu bar ![Git menu bar](../fig/05-git-top-menu.PNG) <br>
+2. Environment/History pane ![git environment panel](../fig/05-git-environment-window.PNG)
+
+Ok, but what do all the options mean? We won't go through them all, but here are the basics to get started versioning your project.
+
+### Git Workflow
+
+The most simple workflow for version control (working on your computer only)
+is referred to as "add" and "commit":
+
+But what do those words even mean?
+
+**add:** choose a file or files to take a "snapshot" of. Aka what files do you want to add to your next version?
+
+**Commit:** Taking a "snapshot" of a selected version of your project. The snapshot will *only* include the files you "added", typically only files that you've edited since your last commit.
+
+You may have a few to many commits in a single work session.
+
+When you commit, you add a "commit message" aka a short line of text (recommended 50 characters or less) that describes the changes that were made to the file(s) you added. This helps keep your versions organized and makes it easier to go back to remember what you did or to restore your work to exactly the version needed if you make a mistake or want to implement a change.
+
+![git add commit workflow](../fig/05-git-add-commit.svg)
+
+#### Git Workflow with GitHub
+
+If we are saving our work to a version control hosting cloud platform such as GitHub,
+our workflow gets a bit more complex, we add a "pull" and "push" step at the beginning and end of a work session.
+
+`Pull > add > commit > push`
+
+**Pull:** *download* the most recent version of the repository *from* GitHub *to* your local computer.
+
+**Push:** *upload* the most recent version of the repository *to* GitHub *from* your local computer.
+
+Put a pin in pulling and pushing for now. For the time being as we edit our paper we will just stick to adding and commiting. At the end we'll see how to use push to GitHub, and you can experiment with pulling later on.
+
+### Tips for working with Git
+
+- You should pull each time you start working on your project after a hiatus, or before each edit if you know a team member is working at the same time.
+- Commit frequently, each commit should be a distinct set of edits which you can summarize in 50 characters or less. Don’t add a bunch of unrelated edits to the same commit, it makes it harder to look back through your “snapshots” and find the right one if you need to.
+- At the end of your work session (or more frequently if you are working at the same time as team members), “push” your commits to the remote repository - this is the only way your local changes get added to your team’s remote repository.
+
+This pull, add, commit, push routine will become second nature. Pulling at the beginning and pushing at the end of your work session becomes a sort of ritual that marks the beginning and end of your work session.
+
+## Your first edit
+
+Now, let's open up the report in this repository that's already been drafted. You will find it in the `report` directory with filename: `DataPaper-ReproducibilityWorkshop.qmd`.  Open it up and we will make an edit to the yaml front matter of this draft report so we can practice using version control.
+
+In the title add "(Carpentry Workshop Version)" and make sure to save it.
+
+![git panel add](../fig/05-editing.png)
+
+Now, in the Environment panel, toggle to the Git tab. You'll see the file that was edited with a check mark next to it. Click the check mark to "add" . Note that if you edited more than one file you could choose any or all of the documents to "add".
+
+![git panel add](../fig/05-first-edit.PNG)
+
+Now, click commit. A dialogue box will pop up. You'll need to add a commit message to proceed. Add something about editing the title. The difference between your files will show in the bottom panel.
+
+![commit in RStudio](../fig/05-rstudio-commit.png)
+
+Hit commit and a dialogue box will show a completed commit. Warning: **DO NOT PUSH** anything yet!
+
+You made your first commit!
+
+> ## Discussion: (optional) Utilizing .gitignore files
+> a `.gitignore` file is used to signal to Git to NOT track versions of specific files. One instance where this is used in a data analysis project is with data files that are too large to be uploaded to GitHub.
+>
+> Now, there are some caveats to this, so in what situations would it make sense to add data to the .gitignore and what situations would it not? What else could you imagine you wouldn't want to track in your research project?
+>
+> > ## Solution:
+> > Why and when would it be a good idea to add data files to the `.gitignore`?
+> > - With raw data files - since they will not be modified (remember: raw data = read only).
+> > - With sensitive data - This should absolutely not be pushed to GitHub
+> >  
+> > Why and when would it not make sense to add data files to the `.gitignore` so they will be available in the Git repository.
+> > - pre-processed data files - these are the data files that are edited - processed from the raw data
+> > - small data files - may not make much of a difference whether they are tracked or not
+> > - the first time you add data files - You can't push data files to GitHub unless they are tracked. So if you want your data on GitHub, but don't want to track it, you must make sure you push once and then add the file to the .gitignore file.
+> {: .solution}
+{: .challenge}
+
+> ## Challenge: (optional) Add the data files/directories to .gitignore
+> Add the data (all of the raw data files) to the `.gitignore`.  
+> Hint: there are two ways to do this.  
+> Hint2: add a forward slash `/` after directories.
+>
+> > ## Solution:
+> > 1) open the .gitignore file by double-clicking on it in the file view pane, on a new line add `data/`. Save the file and don't forget to commit it.
+> > ![.gitignore file](../fig/05-gitignore-file.PNG)
+> > 2) Click on the settings gear in the Git tab of the environment pane. Click on `gitignore`. On a new line add `data` and click save. Don't forget to commit the `.gitignore` file.
+> > ![.gitignore in git pane](../fig/05-gitignore-git-pane.PNG)
+> {: .solution}
+{: .challenge}
+
+**Need to check for flow**
+
+
+
 In [episode 5](../05-setup-versioning/) we learned about using version control as you write your publication.  In this part of the workshop we'll setup Rstudio to authenticate with Github which is necessary to _push_ your changes to Github.
 
 Terminology:  Git _Push_ and _Pull_
