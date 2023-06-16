@@ -4,19 +4,16 @@ title: "Getting fancy with code chunks"
 teaching: 50
 exercises: 20
 questions:
-- "How can I enhance reproducibility amongst collaborators, present and future?"
 - "How do I run external scripts in an Quarto document?"
 - "How can I avoid issues with relative paths?"
 - "How can I get my Quarto document to render faster?"
 - "What is inline code and when to use it?"
 objectives:
-- "Learn how to use renv in an RStudio project"
 - "Learn how to source external scripts to run within an qmd document to modularize your code."
 - "Learn about using global knitr options to change your `.qmd` file's working directory."
 - "Learn how to load libraries and data for use throughout the whole `.qmd` document."
 - "Learn the syntax for inline code."
 keypoints:
-- "renv is a handy tool for capturing your project's package dependencies"
 - "Learn how to externally source code `source()`"
 - "Learn how to modularize your code to make it more reproducible"
 - "There are options for changing the working directory of your `.qmd` document with package `rprojroot`"

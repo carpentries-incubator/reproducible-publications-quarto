@@ -1,19 +1,19 @@
 ---
-title: "Renv"
+title: "Creating and sharing reproducible environments using Renv"
 teaching: 15
 exercises: 10
 questions:
+- "How can I enhance reproducibility amongst collaborators, present and future?"
 - "What is Renv?"
 - "How Renv can support reproducibility?"
 
 objectives:
-- "Add."
-- "Add."
-- "Add."
+- "Learn how to use renv in an RStudio project"
+
 
 keypoints:
-- Add.
-- Add.
+- "renv is a handy tool for capturing your project's package dependencies"
+
 ---
 
 ## Enhancing reproducibility with renv
