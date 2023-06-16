@@ -1,6 +1,6 @@
 ---
 source: Rmd  
-title: "Reproducible & Efficient Methods of Using Code Chunks"  
+title: "Getting fancy with code chunks"  
 teaching: 50
 exercises: 20
 questions:
