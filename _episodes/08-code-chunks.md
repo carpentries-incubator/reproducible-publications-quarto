@@ -27,33 +27,6 @@ keypoints:
 
 Now that we've learned the core benefit of using Quarto documents - the integration of code with text - let's learn some next level methods of working with code in Quarto. We'll cover how to use virtual environments with renv, how to add Global Knitr options to the yaml, run external R scripts from within the Quarto document, setting the working directory for the Quarto document and loading packages and data globally. Whew! that's a lot! Let's dig in.
 
-## Enhancing reproducibility with renv
-
-renv is an R package that keeps track of your project's dependencies, specifically, the version of the R interpreter your project is using and the versions of any packages referenced by your R scripts.  renv can also download and install package versions according to a project's requirements.  This makes it easy for a downstream user to run an R project in the same environment in which it was originally developed.
-
-In our workshop project, renv has already been set up--- you can tell by the presence of a file `renv.lock` in the project's root directory.  This file records package versions and other information.
-
-Every time you open a project for which renv has been set up, renv automatically runs and checks that the package versions you have installed on your computer match those of the project.  If they match, there is nothing to do (perhaps that was the case for you today).  But if there are any mismatches (as might have happened to you today), renv will print a warning resembling the following:
-
-```
-* Project '~/Desktop/myproject' loaded. [renv 0.16.0]
-* The project library is out of sync with the lockfile.
-* Use `renv::restore()` to install packages recorded in the lockfile.
-```
-
-If this happens, simply run `renv::restore()` from the console pane to download and install the package versions needed to match the project's requirements.  For example, if the project uses tidyverse 1.3.2 and you have an older version tidyverse 1.3.1 installed on your computer, renv will upgrade your RStudio installation to tidyverse 1.3.2.  (This works conversely as well: if the project uses an older version of a package you have installed, renv will attempt to download and install the older version for you.  Don't worry about losing the newer version.  renv ensures that all versions of all packages remain installed on your computer, available to be used by projects as needed.)
-
-A few more points on using renv.  To start using renv on a new project, run these commands in the console pane:
-
-```
-install.packages("renv")
-library(renv)
-renv::init()
-```
-
-This creates the initial `renv.lock` file.  Then, whenever you start using a new package (or otherwise change your project's dependencies), run `renv::snapshot()` to update the lockfile.  Finally, if you are using git and start using renv, you will notice that renv creates several files and directories in addition to `renv.lock`.  Go ahead and commit the files to your project's git repository.
-
-
 
 ## Global Quarto Options
 
