@@ -119,7 +119,6 @@ A published article is like the top of a pyramid, meaning that a reproducible pa
 
 RStudio is an integrated development environment (IDE) for R and other programming languages such as Python that provide many tools to support code development. It includes a console, syntax-highlighting editor that supports direct code execution, as well as tools for plotting, history, debugging, collaboration, and workspace management. Writing scripts to conduct your analysis is a powerful way to weave the principles of reproducibility throughout the entire research lifecycle, from data gathering to the statistical analysis, presentation and publication of results. 
 
-RStudio is soon becoming [Posit](https://posit.co/), but that won't change how you interact with the interface and its functionalities. This name change is only a re-branding to better represent the broader focus and larger community that the IDE serves, which is no longer exclusively linked to R.
 
 ### It is free and open-source
 
