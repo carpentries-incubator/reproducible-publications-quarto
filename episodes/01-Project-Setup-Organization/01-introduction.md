@@ -119,7 +119,6 @@ A published article is like the top of a pyramid, meaning that a reproducible pa
 
 RStudio is an integrated development environment (IDE) for R and other programming languages such as Python that provide many tools to support code development. It includes a console, syntax-highlighting editor that supports direct code execution, as well as tools for plotting, history, debugging, collaboration, and workspace management. Writing scripts to conduct your analysis is a powerful way to weave the principles of reproducibility throughout the entire research lifecycle, from data gathering to the statistical analysis, presentation and publication of results. 
 
-
 ### It is free and open-source
 
 Reproducibility becomes more difficult and opaque when results rely on proprietary software. Unless research code is open sourced, reproducing results on different software/hardware configurations is impossible. Rstudio is dedicated to sustainable investment in free and open-source software for data science. 
@@ -134,8 +133,8 @@ RStudio has a very useful “Environment” window available which shows all of 
 
 ### Makes it easy to set your working directory and access files on your computer
 
-With RStudio, you can navigate to folders on your computer in the “Files” window, view any files you have in that folder, and set that folder as the working directory.
+With RStudio, you can navigate to folders on your computer in the “Files” window, view any files you have in that folder, or go to your working directory. You can also create projects that help with setting your working directory and work with relative paths to external files (such as input data, figures) so it can be also used on other machines. 
 
 ### Integrates with collaboration and publishing tools
 
-Another great advantage of using RStudio for your R project is that the platform integrates with [GitHub](https://github.com). Once you connect RStudio with your GitHub account a remote repo becomes the “upstream” remote for your local repo. In essence, it enables you to push and pull commits to GitHub, allowing more seamless collaboration and more effective version control. RStudio also connects with [Rpubs](https://rpubs.com/) and [Quarto Pub](https://quartopub.com/) for easy R project web publishing.  
+Another great advantage of using RStudio for your R project is that the platform integrates with [GitHub](https://github.com). Once you connect RStudio with your GitHub account a remote repo becomes the “upstream” remote for your local repo. In essence, it enables you to push and pull commits to GitHub, allowing more seamless collaboration and more effective version control. RStudio also connects with [Rpubs](https://rpubs.com/) and [Quarto Pub](https://quartopub.com/) for easy R project web publishing.
