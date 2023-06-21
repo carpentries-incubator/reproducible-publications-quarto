@@ -29,7 +29,7 @@ Reproducible studies allow other researchers to perform the same processes and a
 
 ## The importance of Reproducibility in Research
 
-![PhD Comics cartoon](../fig/01-fig1.png)
+![PhD Comics cartoon](../../../fig/01-fig1.png)
 >Source: Comic number [1869](https://phdcomics.com/comics.php?f=1689) from [PhD Comics](https://phdcomics.com/) Copyrighted artwork by Jorge Cham.
 
 ### Discussion: A scary anecdote
@@ -51,13 +51,13 @@ Reproducibility refers to the ability of a researcher to duplicate the results o
 
 Many studies claim results that cannot be reproduced. This problem has attracted increased attention in recent years, with supporting evidence that research is often not reproducible. A 2016 survey in Nature revealed that irreproducible experiments are a problem across all domains of science:
 
-![Nature Report - 2016](../fig/01-fig2.png)
+![Nature Report - 2016](../../fig/01-fig2.png)
 >Source: Baker, M. 1,500 scientists lift the lid on reproducibility. Nature 533, 452–454 (2016). [doi.org/10.1038/533452a](https://doi.org/10.1038/533452a)
 
 
 ## Factors behind irreproducible research
 
-![Science is not a miracle](../fig/01-fig3.png)
+![Science is not a miracle](../../fig/01-fig3.png)
 >Source: Then a Miracle Occurs. Copyrighted artwork by Sydney Harris Inc. 
 
 * Not enough documentation on how experiment is conducted and data is generated
@@ -70,7 +70,7 @@ Many studies claim results that cannot be reproduced. This problem has attracted
 
 While reproducibility is the minimum requirement and can be solved with “good enough” computational practices, replicability/robustness/generalizability of scientific findings are an even greater concern involving research misconduct, questionable research practices (p-hacking, HARKing, cherry-picking), sloppy methods, and other conscious and unconscious biases.
 
-![How science should be](../fig/01-fig4.png)
+![How science should be](../../fig/01-fig4.png)
 >Source: This image was created by Scriberia for The Turing Way community DOI: [10.5281/zenodo.3
 332807](https://doi.org/10.5281/zenodo.3695300)
 
@@ -108,10 +108,10 @@ From day one, and throughout the whole research life cycle! Before you start the
 ### Levels of Reproducibility
 
 <figure>
-<img src="../fig/01-fig5.png" width = "400" height = "300">
+<img src="../../fig/01-fig5.png" width = "400" height = "300">
 </figure>
 
-<!--![Levels of Reproducibility](../fig/01-fig5.png){width=50%}-->
+<!--![Levels of Reproducibility](../../fig/01-fig5.png){width=50%}-->
 
 A published article is like the top of a pyramid, meaning that a reproducible paper/report rests on multiple levels that each contributes to its reproducibility.
 
