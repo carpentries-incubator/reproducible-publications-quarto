@@ -29,7 +29,7 @@ Reproducible studies allow other researchers to perform the same processes and a
 
 ## The importance of Reproducibility in Research
 
-![PhD Comics cartoon](../../../fig/01-fig1.png)
+![PhD Comics cartoon](../../fig/01-fig1.png)
 >Source: Comic number [1869](https://phdcomics.com/comics.php?f=1689) from [PhD Comics](https://phdcomics.com/) Copyrighted artwork by Jorge Cham.
 
 ### Discussion: A scary anecdote
