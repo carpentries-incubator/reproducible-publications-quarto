@@ -124,7 +124,7 @@ So back to the url you copied from GitHub. Navigate again to `File > New Project
 
 Now you have cloned a copy of your git repo from Github to your working environment.  
 
-If you're working in the JupyterHub environment you will need to configure Git with your name and email before you'll be able to commit the changes you make during this workshop.  Substitute your name and email address in the commands below and paste them into the Terminal panel of RStudio.
+If you're working in the JupyterHub environment or have not yet used Git on your machine, you will need to configure your Git identity with your name and email before you'll be able to commit the changes you make during this workshop.  Substitute your name and email address in the commands below and paste them into the Terminal panel of RStudio.
 
 ```
 git config --global user.email "you@example.com"
