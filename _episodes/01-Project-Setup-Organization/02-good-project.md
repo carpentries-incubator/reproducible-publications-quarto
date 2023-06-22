@@ -27,7 +27,7 @@ keypoints:
 ## Managing Research Projects
 
 
-The ability to integrate code and narratives is a major advantage of the RStudio 
+The ability to integrate code and narratives is a major advantage of quarto and the RStudio 
 environment, especially considering the scientific process is naturally 
 incremental, and many projects start life as random notes, some code, then a 
 manuscript, and eventually everything ends up a bit mixed together. To 
@@ -43,6 +43,7 @@ manage projects and discuss some of the best practices when working with data
 and collaborators. 
 
 ## Research Project Stress Points
+
 We often have organizational or logistical stress points in our research that 
 may become breaking points, especially when it comes to working with 
 collaborators, returning to a project after a hiatus, or dealing with data and 
@@ -113,7 +114,7 @@ principles to adhere to that will make project management easier:
 
 For our project we’re working in today, we used the following setup for folders and files:
 
-![directory tree](../fig/04-directory-tree.png)
+![directory tree](../../fig/04-directory-tree.png)
 
 > ## Challenge 4.1: Take a few minutes to look through the workshop project files
 > 
