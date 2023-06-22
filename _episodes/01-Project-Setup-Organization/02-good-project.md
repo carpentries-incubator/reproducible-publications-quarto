@@ -10,15 +10,15 @@ questions:
 - How do you use version control to keep track of your work?
 
 objectives:
-- Best pratices for working on research projects involving data.
-- The purpose of using .Rproj files.
+- Best practices for working on research projects involving data.
+- The purpose of using RStudio Projects (`.Rproj` files).
 - Using version control in RStudio.
 - Starting or continuing an R project.
 
 keypoints:
 - Use best practices for file and folder organization. This includes using relative file paths as opposed to complete file paths. 
 - Make sure that all data are backed up on multiple devices and that you treat raw data as read-only. 
-- We can use Git and Github to keep track of what we've done in the past, and what we plan to do in the future. 
+- We can use Git and GitHub to keep track of what we've done in the past, and what we plan to do in the future. 
 - Rproj files are pivotal to keeping everything bundled and organized.
 ---
 
@@ -62,7 +62,7 @@ scripts. Let’s discuss three of those common stress points:
   - Difficult to know if you have the latest version of documents
 - **Losing track of project status**
   - You cannot remember where you are in a project after being away for an 
-  extended period (or what you worked on the previous day...no judgement)
+  extended period (or what you worked on the previous day...no judgment)
   - You aren’t sure what you should be working on next
   - You have various to-do notes spread across your office or home 
   (or never write them down in the first place)
@@ -185,7 +185,7 @@ Adapted from [https://datacarpentry.org/rr-organization1/01-file-naming/index.ht
 
 #### **Use relative paths**  
 
-This goes hand-in-hand with keeping your project within one “root” directory. If you use complete paths to say, read in your data to RStudio and then share your code with a collaborator, they won’t be able to run it because the complete path you used is unique to your system and they will receive an error that the file is not found. That is why one should always use relative paths to link to other files in the project, i.e. “where is my data file in relation to the script I’m reading the data into?”. The practice of using relative paths is made easier by having a directory set up and keeping all project files within one root project folder. This is where using `RStudio Project` can help. When you create a Project in RStudio, in the background RStudio will automatically create a “root” folder and set it as you working directory in R. Since in R relative paths are relative to your working directory, this will ease referring to external input or output files (data, images, plots, ...) in a consistent manner across your project.
+This goes hand-in-hand with keeping your project within one “root” directory. If you use complete paths to say, read in your data to RStudio and then share your code with a collaborator, they won’t be able to run it because the complete path you used is unique to your system and they will receive an error that the file is not found. That is why one should always use relative paths to link to other files in the project, i.e. “where is my data file in relation to the script I’m reading the data into?”. The practice of using relative paths is made easier by having a directory set up and keeping all project files within one root project folder. 
 
 Assuming your R script is in a `code` directory and your data file is in a `data` directory then an example of a relative path to read your data would be:
 
@@ -204,7 +204,7 @@ df <- read.csv("C:/Users/wilma/Desktop/project23/data/foodchoice_budgetlines.csv
 If the example was on a Mac or Linux computer you would have `home` instead of `C:`   
 
 
-In the complete path example you can see that the code is not going to be portable. If someone other than Wilma Flintstone wanted to run the r script they would have to alter the path to match their system.
+In the complete path example you can see that the code is not going to be portable. If someone other than Wilma Flintstone wanted to run the R script they would have to alter the path to match their system.
 
 > ## Challenge 4.3: relative paths
 > 
@@ -224,7 +224,10 @@ In the complete path example you can see that the code is not going to be portab
 
 > ## Tip: Level up your relative paths
 > We just discussed how relative paths are a better practice when coding because we can guarantee our code will work on somebody else's system. However, relative paths can still be quite confusing to deal with, especially when you have many sub-directories in your project. One way to make things a bit easier on ourselves is to make sure the part that's *relative* to what we're referencing is always the same. 
-> We can employ a package called "here" to do this. `Here` has a function which always references the root (or top-level) directory of your project (i.e. where the .rproj file lives). Conviniently, that function is called `here()`. `here()` gives us a consistent starting path when building relative paths. We'll see how this is used later in the lesson.
+> This is where using `RStudio Project` can help. When you create a Project in RStudio, in the background RStudio will automatically create a “root” folder and set it as you working directory in R. Since in R relative paths are relative to your working directory, this will ease referring to external input or output files (data, images, plots, ...) in a consistent manner across your project by always having your relative paths reletaive to the top level folder and help to encapsualte your work within this folder. This means you can move this folder around on your machin or to another machine and the paths will still be valid.
+
+
+a package called "here" to do this. `Here` has a function which always references the root (or top-level) directory of your project (i.e. where the .rproj file lives). Conviniently, that function is called `here()`. `here()` gives us a consistent starting path when building relative paths. We'll see how this is used later in the lesson.
 
 - Read the CRAN documentation here: [here](https://cran.r-project.org/web/packages/here/vignettes/here.html)
 - [Read more about how the `here` package can be useful for R Markdown and Quarto files specifically](http://jenrichmond.rbind.io/post/how-to-use-the-here-package/)
@@ -272,7 +275,7 @@ There are actually many ways to use Git, you could use it on GitHub only (though
 
 Environments are a rather advanced topic in programming, but we will introduce some capabilities for projects in R that increase the reproducibility of your code. Essentially, a project environment allows us to save (or take a snapshot) of our R version and dependencies - aka what packages/package versions are required to run our code without error. This can be important when you are collaborating with others and may be unsure of whether you are working with the same R and package versions. Another common issue is if you try to run very old code from a previous project - the older the code, the more likely that errors will crop up or that the code will no longer run as it used to. To take advantage of project environments we will use a package called `renv` which is the successor of `packrat` which used to be the de facto package in R for managing environments. 
 
-However, as noted in this [RStudio article on renv](https://rstudio.github.io/renv/articles/renv.html), using `renv` does not automatically make your project reproducibile, nor is it bullet-proof. Sometimes other factors come into play that may alter the results of your code despite using `renv`, such as operating systems,  compilers etc. To go one step further in assuring reproducibility, many use 'containers' such as Docker or Kubernetes. However, that is beyond the scope of this workshop.
+However, as noted in this [RStudio article on renv](https://rstudio.github.io/renv/articles/renv.html), using `renv` does not automatically make your project reproducible, nor is it bullet-proof. Sometimes other factors come into play that may alter the results of your code despite using `renv`, such as operating systems,  compilers etc. To go one step further in assuring reproducibility, many use 'containers' such as Docker or Kubernetes. However, that is beyond the scope of this workshop.
 
 We will see in episode 8 how one can implement project environments with `renv` to increase reproducibility with R projects.
 
