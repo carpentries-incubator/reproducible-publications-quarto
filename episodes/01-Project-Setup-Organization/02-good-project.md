@@ -184,7 +184,6 @@ Adapted from [https://datacarpentry.org/rr-organization1/01-file-naming/index.ht
 {: .challenge}
 
 #### **Use relative paths**  
-
 This goes hand-in-hand with keeping your project within one “root” directory. If you use complete paths to say, read in your data to RStudio and then share your code with a collaborator, they won’t be able to run it because the complete path you used is unique to your system and they will receive an error that the file is not found. That is why one should always use relative paths to link to other files in the project, i.e. “where is my data file in relation to the script I’m reading the data into?”. The practice of using relative paths is made easier by having a directory set up and keeping all project files within one root project folder. 
 
 Assuming your R script is in a `code` directory and your data file is in a `data` directory then an example of a relative path to read your data would be:
@@ -224,29 +223,29 @@ In the complete path example you can see that the code is not going to be portab
 
 > ## Tip: Level up your relative paths
 > We just discussed how relative paths are a better practice when coding because we can guarantee our code will work on somebody else's system. However, relative paths can still be quite confusing to deal with, especially when you have many sub-directories in your project. One way to make things a bit easier on ourselves is to make sure the part that's *relative* to what we're referencing is always the same. 
-> This is where using `RStudio Project` can help. When you create a Project in RStudio, in the background RStudio will automatically create a “root” folder and set it as you working directory in R. Since in R relative paths are relative to your working directory, this will ease referring to external input or output files (data, images, plots, ...) in a consistent manner across your project by always having your relative paths reletaive to the top level folder and help to encapsualte your work within this folder. This means you can move this folder around on your machin or to another machine and the paths will still be valid.
+> This is where using `RStudio Project` can help. When you create a Project in RStudio, in the background RStudio will automatically create a “root” folder and set it as you working directory in R. Since in R relative paths are relative to your working directory, this will ease referring to external input or output files (data, images, plots, ...) in a consistent manner across your project by always having your relative paths relative to the top level folder and help to encapsualte your work within this folder. So with a Rpoject setup, the relative path in the previous example will now be:
 
+```
+df <- read.csv("data/foodchoice_budgetlines.csv", encoding = "UTF-8")
+```
 
-a package called "here" to do this. `Here` has a function which always references the root (or top-level) directory of your project (i.e. where the .rproj file lives). Conviniently, that function is called `here()`. `here()` gives us a consistent starting path when building relative paths. We'll see how this is used later in the lesson.
+In the end this means you can move this folder around on your machine or to another machine and all the paths will still be valid.
 
-- Read the CRAN documentation here: [here](https://cran.r-project.org/web/packages/here/vignettes/here.html)
-- [Read more about how the `here` package can be useful for R Markdown and Quarto files specifically](http://jenrichmond.rbind.io/post/how-to-use-the-here-package/)
 {: .callout}
 
 #### **Treat data as read only**  
-This is probably the most important goal of setting up a project. Data is typically time consuming and/or expensive to collect. Working with them interactively (e.g., in Excel or R) where they can be modified means you are never sure of where the data came from, or how it has been modified since collection. It is therefore a good idea to treat your data as “read-only”. However, in many cases your data will be “dirty”: it will need significant preprocessing to get into a format R (or any other programming language) will find useful. Storing these scripts in a separate folder, and creating a second “read-only” data folder to hold the “cleaned” data sets can prevent confusion between the two sets. You should have separate folders for each: raw data, code, and output data/analyses. You wouldn’t mix your clean laundry with your dirty laundry, right?  
+This is probably the most important goal of setting up a project. Data is typically time consuming and/or expensive to collect. Working with them interactively (e.g., in Excel or R) where they can be modified means you are never sure of where the data came from, or how it has been modified since collection. It is therefore a good idea to treat your data as "read-only". However, in many cases your data will be “dirty”: it will need significant preprocessing to get into a format R (or any other programming language) will find useful. Storing these cleaning scripts in a separate folder (e.g. code), and creating a second data folder to hold the "cleaned" data sets can prevent confusion between the two sets. You should have separate folders for each: raw data, code, and output data/analyses. You wouldn’t mix your clean laundry with your dirty laundry, right?  
 
 #### **Treat generated output as disposable**
-Anything generated by your scripts should be treated as disposable: it should all be able to be regenerated from your scripts.
+Anything generated by your scripts should be treated as disposable: it should all be able to be regenerated from your scripts (and the raw data).
 There are lots of different ways to manage this output. Having an output folder with different sub-directories for each separate analysis makes it easier later. Since many analyses are exploratory and don’t end up being used in the final project, and some of the analyses get shared between projects.  
 
 #### **Include a README file**
-
 For more information about the README file and a customizable template, check this [handout](https://www.library.ucsb.edu/sites/default/files/dls-n03-2021-readme-navy.pdf). Make sure to include citation and license information both for your data [see creative commons license]([https://creativecommons.org/licenses/) and software ([see license types on Github](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository)). This information will be critical for others to reuse and correctly attribute your work. You may also consider adding a separate citation and license file to your project folder. 
 
 Again, there are no hard and fast rules here, but remember, it is important at least to keep your raw data files separate and to make sure they don’t get overridden after you use a script to clean your data. It’s also very helpful to keep the different files generated by your analysis organized in a folder.
 
-*what’s this .Rproj file? We’ll explain in a bit.
+*what’s this `.Rproj` file? We’ll explain in a bit.
 
 
 ## Storage and Sharing
