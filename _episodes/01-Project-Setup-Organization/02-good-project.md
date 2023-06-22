@@ -24,9 +24,8 @@ keypoints:
 
 
 
-## Managing Research Projects in R
-Now that we’ve learned some of the basics of authoring Quarto documents, let’s take a step back and talk about research project 
-management as a whole. 
+## Managing Research Projects
+
 
 The ability to integrate code and narratives is a major advantage of the RStudio 
 environment, especially considering the scientific process is naturally 
