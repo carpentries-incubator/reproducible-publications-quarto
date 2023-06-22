@@ -258,7 +258,7 @@ At the very least, you should backup your project into cloud storage (either pro
 
 ### Version Control hosting services 
 
-If your research project involves code, the best way to make sure you have your work backed up AND keep track of your code and data is to use a version control hosting service such as GitHub - though we'd recommend using version control for any large projects. 
+If your research project involves code, the best way to make sure you have your work backed up AND keep track of your code is to use a version control hosting service such as GitHub. Note that out of the box git is not optimized to handle large files and therefore we do not recommend to use this tool to version data beyond maybe small data sets in a text based format such as csv.
 
 The main three version control hosting services are GitHub, GitLab, and BitBucket, to see a comparison of the available options, see this comparison on [LinkedIn](https://www.linkedin.com/pulse/demystifying-git-vs-github-atlassian-bitbucket-gitlab-pawan-verma?trk=read_related_article-card_title.)  
 
