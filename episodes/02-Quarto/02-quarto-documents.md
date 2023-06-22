@@ -68,17 +68,6 @@ Finally, three real-world examples that motivated the authors of this lesson to 
 3. In a past version of this workshop we struggled with a scientific paper published in a reputable journal.  In trying to recreate the plots the original authors created, we found it difficult and time-consuming to figure out exactly how the authors created their plots.  Out of the many columns in their data, many with similar-sounding names, which did they use?  How did they handle missing data?  Exactly what operations did they perform to compute aggregate values?  How much easier it would have been if they had published the code they used along with their paper. RStudio and Quarto allow you to do this.
 
 
-## A Note About the Workshop Example
-   
-Our goal is that by the end of this workshop you will be able to create a reproducible report using data and code we will provide. Throughout this workshop, we will be using a shorter and adapted version of the data paper:
-
-Nitsch, F. J., Sellitto, M., & Kalenscher, T. (2021). Trier social stress test and food-choice: Behavioral, self-report & hormonal data. *Data in brief*, 37, 107245. [https://doi.org/10.1016/j.dib.2021.107245](https://doi.org/10.1016/j.dib.2021.107245). 
-
-We will be also using a simplified version of the project directory containing data files and scripts published by the authors on Open Science Framework: [https://doi.org/10.17605/OSF.IO/6MVQ7](https://doi.org/10.17605/OSF.IO/6MVQ7).
-
-The adapted paper template and project directory are used exclusively for instruction purposes with permission from the authors.
-
-
 ## Anatomy of a Quarto Document
 The key to our reproducible workflow is using Quarto files in RStudio rather than basic scripts to dynamically render both code and paper narrative. So let’s do a quick anatomy lesson on the components of an Quarto file (YAML header, Quarto formatted, R code blocks; also known as "code chunks") and how to render them into our final formatted document.
 There are four distinct steps in the Quarto workflow:
