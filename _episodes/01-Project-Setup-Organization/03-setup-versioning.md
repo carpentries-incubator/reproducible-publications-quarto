@@ -32,7 +32,7 @@ There are several options for working with R projects in RStudio. If you aren't 
 2. **Existing Directory** - add existing work to a R project (with the option of setting up version control).
 3. **Version Control** Continue an existing R project that already uses version control (i.e. download from GitHub).
 
-![new r project options](../fig/05-new-project.PNG)
+![new r project options](../../fig/05-new-project.PNG)
 
 The third option would be a project already under version control but options 1 and 2 will also give you the opportunity to use or add versioning to the project. Let's see how that would work.
 
@@ -43,12 +43,12 @@ The third option would be a project already under version control but options 1 
 
 To start an R project, you would navigate to `File > new project` rather than just `File > new file`.
 
-![New directory](../fig/05-new-directory.png)
+![New directory](../../fig/05-new-directory.png)
 
 After choosing `New Directory` chose `new project` on the next menu options.
 
 Then, to use version control, make sure to check the "_Create a git repository_" box as highlighted in this screen shot:
-![new project w/ version control](../fig/05-brand-new-project.PNG)
+![new project w/ version control](../../fig/05-brand-new-project.PNG)
 
 *Note when you choose directory name, it will create a new directory in the directory you specified along with an .Rproj file of the same name. Avoid spaces here. underscores "_", dashes "-" or camel case "NewProject" is the recommended way to name this directory/file.
 
@@ -59,7 +59,7 @@ Then, to use version control, make sure to check the "_Create a git repository_"
 ### Add versioning to an existing project
 #### Method #2
 
-![existing project](../fig/05-existing-directory.png)
+![existing project](../../fig/05-existing-directory.png)
 
 We won't take the time to cover this here, but if you've already started a Quarto project WITHOUT version control, you have the option to add version control retrospectively. You can also add existing R files to a project and setup version control if you've done neither. To see a tutorial of this process,  please see [episode 14 "Using Git from RStudio" in Version Control with Git](https://swcarpentry.github.io/git-novice/14-supplemental-rstudio/index.html).
 
@@ -70,16 +70,16 @@ This is by far the most labor intensive way to do it, so remember to add version
 ### Continue a version-controlled project
 #### Method #3
 
-![version controlled](../fig/05-version-control.png)
+![version controlled](../../fig/05-version-control.png)
 The final option is to continue a version controlled project. This is the option we will do for our workshop.
 
 First, indicate which version control language you will be using (Subversion is another version control system, though less popular than Git)
 
-![Git or Subversion](../fig/05-new-project-git.PNG)
+![Git or Subversion](../../fig/05-new-project-git.PNG)
 
 When you choose this option there will be a place to paste the url of the GitHub (or other hosting platform) url. The name of the repository will automatically populate. Just choose which directory on your computer you wish to save the project directory and your good to go!
 
-![continue project from GitHub](../fig/05-new-project-git-url.PNG)
+![continue project from GitHub](../../fig/05-new-project-git-url.PNG)
 
 
 > ## Our turn!
@@ -90,7 +90,7 @@ When you choose this option there will be a place to paste the url of the GitHub
 > {: .source}
 {: .prereq}
 
-![GitHub](../fig/05-github.PNG)
+![GitHub](../../fig/05-github.PNG)
 
 
 
@@ -100,13 +100,13 @@ We are each going to make a copy of this repository to use for this workshop. To
 
 On Github in the upper right hand corner of the repository, click on the button that says "Fork" - see highlighted example below:
 
-![fork on GitHub](../fig/05-fork.PNG)
+![fork on GitHub](../../fig/05-fork.PNG)
 
 If you are a member of any organizations on GitHub, you will be asked whether you want to fork to your account or to an organization. Choose your personal account for this workshop.  GitHub will process for a few moments and voila! You have your own copy of the workshop example repository.
 
 Now, click on the green `Code` drop-down and then click on the copy icon next to the repository url:
 
-![copy GitHub repository url](../fig/05-copy-repo.PNG)
+![copy GitHub repository url](../../fig/05-copy-repo.PNG)
 
 Now, let's return to RStudio:
 
@@ -114,7 +114,7 @@ Click `File > New Project > Version Control > Git`.
 
 So back to the url you copied from GitHub. Navigate again to `File > New Project > Version Control > Git`. Paste in your url and click the "Create Project" button.
 
-![start my R project](../fig/05-git-new-project-clone.png)
+![start my R project](../../fig/05-git-new-project-clone.png)
 
 Now you have cloned a copy of your git repo from Github to your working environment.  
 
@@ -134,10 +134,10 @@ Woo hoo! We have the project we're working on for this workshop opened in RStudi
 >
 > See the solution below:
 > > ## Solution: 
-> > ![Git not detected on system path](../fig/05-git-not-detected.png)
+> > ![Git not detected on system path](../../fig/05-git-not-detected.png)
 > >
 > > To set it up we need to go to Tools > Global Options
-> > ![Global Options Git/SVN setup](../fig/05-setup-git-rstudio.PNG)
+> > ![Global Options Git/SVN setup](../../fig/05-setup-git-rstudio.PNG)
 > >
 > > First, make sure "Enable version control interface for RStudio projects" is checked. Next, you must make sure that the Git executable path is correct.
 > > For macs, more than likely the path will have automatically populated. In all likelihood that path is `/usr/bin/git`. Windows users may find that the correct path is also pre-populated, but it is likely that you may need to manually add it by clicking "browse". More than likely your path will be something like `C:/Program Files/Git/bin/git.exe`. If not, search for where Git for Windows was installed (Git) go into the bin folder and select the 'git.exe` file.
