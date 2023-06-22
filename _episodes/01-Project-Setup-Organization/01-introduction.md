@@ -138,3 +138,15 @@ With RStudio, you can navigate to folders on your computer in the “Files” wi
 ### Integrates with collaboration and publishing tools
 
 Another great advantage of using RStudio for your R project is that the platform integrates with the version control system [git](https://git-scm.com/) and code repository service [GitHub](https://github.com). Once you connect RStudio with a repository on GitHub (remote) you can bring its content to your local machine, update it and share changes in a streamlined way. In git jargon, it means it enables you to `push` and `pull` commits to GitHub, allowing more seamless collaboration and more effective version control. RStudio also provides tools to render documents (html, pdf, ...) directly from Rmarkdown and quarto notebooks, and directly connects with [Rpubs](https://rpubs.com/) and [Quarto Pub](https://quartopub.com/) for easy R project web publishing.
+
+
+## A Note About the Workshop Example
+   
+Our goal is that by the end of this workshop you will be able to create a reproducible report using data and code we will provide. Throughout this workshop, we will be using a shorter and adapted version of the data paper:
+
+Nitsch, F. J., Sellitto, M., & Kalenscher, T. (2021). Trier social stress test and food-choice: Behavioral, self-report & hormonal data. *Data in brief*, 37, 107245. [https://doi.org/10.1016/j.dib.2021.107245](https://doi.org/10.1016/j.dib.2021.107245). 
+
+We will be also using a simplified version of the project directory containing data files and scripts published by the authors on Open Science Framework: [https://doi.org/10.17605/OSF.IO/6MVQ7](https://doi.org/10.17605/OSF.IO/6MVQ7).
+
+The adapted paper template and project directory are used exclusively for instruction purposes with permission from the authors.
+
