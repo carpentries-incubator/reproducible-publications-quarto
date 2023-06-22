@@ -36,8 +36,11 @@ There are several options for working with RStudio projects and enabling version
 ![new r project options](../../fig/05-new-project.PNG)
 
 <br>
+
 _Of course if an existing RStudio project is already under version control, then opening the project will be the only thing you need to do!_
 
+
+Let's see how this setup would work.
 
 ---
 
