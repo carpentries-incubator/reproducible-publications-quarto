@@ -12,29 +12,32 @@ objectives:
 - Copy an existing project on Github to make contributions
 - Open a project with Git versioning in RStudio
 - Learn the basics of Git - pull, add, commit, push
-- Make our first edits in a verison controlled project
+- Make our first edits in a version controlled project
 
 keypoints:
 - R Studio has Git version control functionality built in.
-- _Forking_ a Github repository makes a copy of the repository into your personal account on Github.
+- _Forking_ a GitHub repository makes a copy of the repository into your personal account on Github.
 - You can _clone_ a git repository from Github to your local disk using RStudio.
 - For this workshop each learner will work with their own _fork_ of the "[R-Repro-pub](https://github.com/UCSBCarpentry/R-repro-pub)" repository.
 ---
 
-## Using R projects and Version Control in RStudio
+## Using RStudio projects and Version Control in RStudio
 
 Using version control is a powerful feature to make your research more reproducible and better organized. In order to use versioning while working in RStudio the first step is to make sure your work is set up as an R Project, because you may not use the versioning features in RStudio without one. There are three options for doing this depending on your given scenario.
 
-## Three Methods of Setting up Versioning with an R Project
+## Three Methods of Setting up an RStudio Project with version control
 
-There are several options for working with R projects in RStudio. If you aren't already working in an R Project, you can create a new one. There are three options here:
-1. **New Directory** - start a brand new R project (with the option of version control).
-2. **Existing Directory** - add existing work to a R project (with the option of setting up version control).
-3. **Version Control** Continue an existing R project that already uses version control (i.e. download from GitHub).
+There are several options for working with RStudio projects and enabling version control. If you aren't already working in an R Project, you can create a new one. There are three options here:
+
+1. **New Directory** - start a brand new RStudio project (with the option of version control).
+2. **Existing Directory** - add existing work to a RStudio project (with the option of setting up version control).
+3. **Version Control** Continue an existing RStudio project that already uses version control (i.e. download it from GitHub).
 
 ![new r project options](../../fig/05-new-project.PNG)
 
-The third option would be a project already under version control but options 1 and 2 will also give you the opportunity to use or add versioning to the project. Let's see how that would work.
+<br>
+_Of course if an existing RStudio project is already under version control, then opening the project will be the only thing you need to do!_
+
 
 ---
 
