@@ -53,7 +53,7 @@ Renv enables you to maintain the specific versions of packages your project depe
 * Reproducibility: You can restore your R library exactly as specified in the renv.lock file. 
 
 
-### How does renv work?
+## How does renv work?
 
 In our workshop project, renv has already been set up, and you can confirm it by checking the file `renv.lock` in the project's root directory which we will be describing in more detail later on. **(Note: Need to review. Are we keeping it as part of the setup????)**
 
@@ -121,10 +121,10 @@ If this happens, simply run `renv::restore()` from the console pane to download 
 
 In sum, in order to collaborate using renv, one should:
 
-* Initialize renv in your project using `renv::init( )`
-* Share your project sources, including `renv.lock`, `.Rprofile`, and `renv/activate.R` and ensure that collaborators download and install the right version of renv when starting the project.
+* Initialize renv using `renv::init( )`
+* Share project sources (data and code), and include `renv.lock`, `.Rprofile`, and `renv/activate.R` to ensure that collaborators download and install the right version of renv when starting the project.
 * When a collaborator opens the project, renv will automatically bootstrap and download the appropriate version of renv.
 * If updates are made save them with `renv::snapshot( )`
 * After that, collaborators can use `renv::restore( )` to restore the project library on their machine.
 
-**ADD CHALLENGE**
+**ADD CHALLENGE/HANDS ON COMPONENT**
