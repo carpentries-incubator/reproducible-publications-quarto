@@ -3,3 +3,4 @@ Gemfile.lock
 .vendor/
 _site/
 Reproducible-Publications-with-RStudio-Quarto.Rproj
+.Rproj.user
