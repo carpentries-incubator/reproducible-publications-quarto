@@ -137,7 +137,7 @@ With RStudio, you can navigate to folders on your computer in the “Files” wi
 
 ### Integrates with collaboration and publishing tools
 
-Another great advantage of using RStudio for your R project is that the platform integrates with the version control system [git](https://git-scm.com/) and code repository service [GitHub](https://github.com). Once you connect RStudio with a repository on GitHub (remote) you can bring its content to your local machine, update it and share changes in a streamlined way. In git jargon, it means it enables you to `push` and `pull` commits to GitHub, allowing more seamless collaboration and more effective version control. RStudio also provides tools to render documents (html, pdf, ...) directly from Rmarkdown and quarto notebooks, and directly connects with [Rpubs](https://rpubs.com/) and [Quarto Pub](https://quartopub.com/) for easy R project web publishing.
+Another great advantage of using RStudio for your R project is that the platform integrates with the version control system [git](https://git-scm.com/) and code repository service [GitHub](https://github.com). Once you connect RStudio with a repository on GitHub (remote) you can bring its content to your local machine, update it and share changes in a streamlined way. In git jargon, it means it enables you to `push` and `pull` commits to GitHub, allowing more seamless collaboration and more effective version control. RStudio also provides tools to render documents (html, pdf, ...) directly from Rmarkdown and Quarto notebooks, and directly connects with [Rpubs](https://rpubs.com/) and [Quarto Pub](https://quartopub.com/) for easy R project web publishing.
 
 
 ## A Note About the Workshop Example

@@ -23,11 +23,9 @@ keypoints:
 ---
 
 
-
 ## Managing Research Projects
 
-
-The ability to integrate code and narratives is a major advantage of quarto and the RStudio 
+The ability to integrate code and narratives is a major advantage of Quarto and the RStudio 
 environment, especially considering the scientific process is naturally 
 incremental, and many projects start life as random notes, some code, then a 
 manuscript, and eventually everything ends up a bit mixed together. To 

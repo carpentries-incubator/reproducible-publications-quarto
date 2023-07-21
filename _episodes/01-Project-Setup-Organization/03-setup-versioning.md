@@ -67,7 +67,7 @@ Then, to use version control, make sure to check the "_Create a git repository_"
 
 ![existing project](../../fig/05-existing-directory.png)
 
-We won't take the time to cover this here, but if you've already started a Quarto project WITHOUT version control, you have the option to add version control retrospectively. You can also add existing R files to a project and setup version control if you've done neither. To see a tutorial of this process,  please see [episode 14 "Using Git from RStudio" in Version Control with Git](https://swcarpentry.github.io/git-novice/14-supplemental-rstudio/index.html).
+We won't take the time to cover this here, but if you've already started a Quarto project WITHOUT version control, you have the option to add version control retrospectively. You can also add existing R files to a project and setup version control if you've done neither. To see a tutorial of this process, please see [episode 14 "Using Git from RStudio" in Version Control with Git](https://swcarpentry.github.io/git-novice/14-supplemental-rstudio/index.html).
 
 This is by far the most labor intensive way to do it, so remember to add version control at the beginning of any new project.
 
@@ -89,7 +89,7 @@ When you choose this option there will be a place to paste the url of the GitHub
 
 
 > ## Our turn!
->
+> ### Getting the files for the hands-on part of the workshop: 
 > We have a repository already prepared for this workshop at [https://github.com/UCSBCarpentry/Quarto-Project-Example](https://github.com/UCSBCarpentry/Quarto-Project-Example). 
 > We are going to use the third option to download this repository from GitHub and work with it hands on. You will need this repo in your working environment if you would like to follow along through this workshop.
 > Let’s take a second to acquaint ourselves with GitHub. [At this link](https://github.com/signup), you may sign into your GitHub account or create one if you have not already.
@@ -97,7 +97,6 @@ When you choose this option there will be a place to paste the url of the GitHub
 {: .prereq}
 
 ![GitHub](../../fig/05-github.PNG)
-
 
 
 The two main sections are files and directories and the README which should contain a narrative description of the project.
@@ -130,7 +129,6 @@ If you're working in the JupyterHub environment or have not yet used Git on your
 git config --global user.email "you@example.com"
 git config --global user.name "Your Name"
 ```
-
 
 Woo hoo! We have the project we're working on for this workshop opened in RStudio and set to use version control!
 
