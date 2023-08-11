@@ -4,6 +4,9 @@
 
 ## Contributing
 
+### 2023-08-11 note:
+_This version of the workshop is no longer being maintained or updated.  Instead we are working on re-vamping this workshop for Quarto.  We'll be submitting the re-vamped workshop to Carpentries Incubator.  Contact us if you interested in teaching the Quarto version of this workshop or have a related project._
+
 We welcome all contributions to improve the lesson! Maintainers will do their best to help you if you have any
 questions, concerns, or experience any difficulties along the way.
 
@@ -174,4 +177,4 @@ Rscript -e 'knitr::knit("./_episodes_rmd/07-code-chunks.Rmd", output = "./_episo
 ### Releases and Roadmap
 
 - 2022-09-23 release [version 1.0](../../releases/tag/v1.0-rmarkdown) - This version compatibile with R-studio "Ghost Orchid" Release 2021.09.02 or thereabouts.
-- Fall-Winter 2022 plan to update this workshop for compatibility with [Quarto](https://quarto.org) 
+- Fall-Winter 2023 work is underway to update this workshop for compatibility with [Quarto](https://quarto.org) with a planned release to the community late 2023.
