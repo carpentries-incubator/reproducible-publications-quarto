@@ -9,7 +9,7 @@ We will need the following account(s) and software for this workshop:
 - Create Github account (use existing or create new account) 
 - Install Git  
 - Install R & RStudio (Two separate installations: if you are on a windows device, you may need <a href="https://cran.r-project.org/bin/windows/Rtools/">Rtools</a>)
-- Install <a href="https://quarto.org/docs/get-started/">Quarto CLI (version 1.2)</a>
+- Install <a href="https://quarto.org/docs/get-started/">Quarto CLI (version 1.3)</a>
 
 
 {% include install_instructions/github.html %}
@@ -38,7 +38,7 @@ Keep the defaults and select <b>Next</b> until the install finishes.
 
 > ## Version clarifications on Quarto and R/Rstudio
 >
-If you already have Rstudio and R installed, please check if you have the most updated <b>2023.06</b> Rstudio and at least R version <b>4.2</b>, along with Quarto version <b>1.3</b>. The quarto document will not render without the most updated versions. <b>The Quarto Package is not the CLI</b>
+If you already have Rstudio and R installed, please check if you have the most updated <b>2023.06</b> Rstudio and at least R version <b>4.3</b>, along with Quarto version <b>1.3</b>. The quarto document will not render without the most updated versions. <b>The Quarto Package is not the CLI</b>
 {: .keypoints} 
 
 <br>
