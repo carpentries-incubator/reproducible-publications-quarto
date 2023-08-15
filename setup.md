@@ -38,7 +38,7 @@ Keep the defaults and select <b>Next</b> until the install finishes.
 
 > ## Version clarifications on Quarto and R/Rstudio
 >
-If you already have Rstudio and R installed, please check if you have the most updated <b>2022.07</b> Rstudio and at least R version <b>4.2</b>, along with Quarto version <b>1.2</b>. The quarto document will not render without the most updated versions. <b>The Quarto Package is not the CLI</b>
+If you already have Rstudio and R installed, please check if you have the most updated <b>2023.06</b> Rstudio and at least R version <b>4.2</b>, along with Quarto version <b>1.3</b>. The quarto document will not render without the most updated versions. <b>The Quarto Package is not the CLI</b>
 {: .keypoints} 
 
 <br>
@@ -55,7 +55,7 @@ Your output should be:
 
 ~~~
 quarto --version
-1.2.269
+1.3.361
 ~~~
 {: .output}
 
