@@ -31,7 +31,7 @@ But what is Knitr? Knitr is the engine in RStudio which creates the “dynamic�
 1. Code Chunks
 2. Inline Code
 
-First, we're going to talk about code chunks for including substantial portions of code into our narrative such as to generate figures and plots. There are a plethora of options that become available to us when using code chunks so this tends to be the more complex part of Quarto documents. Now, sometimes you just need to do a quick calculation - like a count of total observations in your data or the mean of one of your variables. In those cases, it may not be worth setting up a code chunk to calculate those values, so after code chunks we will see how to add inline code - which allows one to add a quick line of code or single function to be executing within the text portion of the document. But let's start with code chunks.
+First, we're going to talk about code chunks for including substantial portions of code into our narrative, such as generating figures and plots. There are a plethora of options that become available to us when using code chunks so this tends to be the more complex part of Quarto documents. Now, sometimes you just need to do a quick calculation - like a count of total observations in your data or the mean of one of your variables. In those cases, it may not be worth setting up a code chunk to calculate those values, so after code chunks, we will see how to add inline code - which allows one to add a quick line of code or a single function to be executed within the text portion of the document. But let's start with code chunks.
 
 ## Using Code Chunks
 
@@ -39,7 +39,7 @@ Code chunks (also called "code blocks") are the preferred option when you need t
 
 ### Add a Code Chunk
 
-Ok, let's add some code! There are already some plots included in our code but as static images. Now, we will add some additional plots, but generated straight from R code - which are also more reproducible and easier to update than static images. Using code to generated images directly assures us that if there are any changes to the data or code the plots will update automatically. We also don't have to generate the new plots, save them as images, and then add them back in to our paper. Not only is this a time-saver, but it helps to prevent version errors as well! 
+Ok, let's add some code! There are already some plots included in our code but as static images. Now, we will add some additional plots, but generated straight from R code - which are also more reproducible and easier to update than static images. Using code to generate images directly assures us that if there are any changes to the data or code the plots will update automatically. We also don't have to generate the new plots, save them as images, and then add them back into our paper. Not only is this a time-saver, but it also helps prevent version errors! 
 
 Navigate to the end of the paper where it says **"Example 8"**. This is where we will add our first code chunk.
 
@@ -66,7 +66,7 @@ The most basic (empty) code chunk looks like so:
 Other than backticks ``` for code chunks that surround the code top and bottom, the only **required** piece is the specified language (r) placed between the curly brackets. This indicates that the language to read the code is R.
 
 > ## Fun fact: Other Programming Languages
-> Although we will (mostly) be using R in this workshop, it’s possible to use other programming or markup languages. For example, we have seen that we can use LaTeX code for equations. You can also use python and a handful of other languages, so if R is not your preferred programming, but you like working in the RStudio environment, don’t despair! Other options for languages include: sql, julia, bash, and c, etc. It should be noted however, that some languages (like python) will require installing and loading additional packages. 
+> Although we will (mostly) be using R in this workshop, it’s possible to use other programming or markup languages. For example, we have seen that we can use LaTeX code for equations. You can also use Python and a handful of other languages, so if R is not your preferred programming but you like working in the RStudio environment, don’t despair! Other options for languages include: sql, julia, bash, and c, etc. It should be noted, however, that some languages (like Python) will require installing and loading additional packages. 
 {: .callout}
 
 
@@ -83,7 +83,7 @@ Now, to check to make sure our code renders, we could click the "Render" button 
 
 ![run from code chunk](../fig/07-run-from-chunk.png)
 
-2) Run menu - this gives more options for running code chunks (chunks) including the current one, the next one, all chunks, etc. 
+2) Run menu - this gives more options for running code chunks (chunks), including the current one, the next one, all chunks, etc. 
 
 ![run code menu](../fig/07-run-options.png)
 
@@ -102,7 +102,7 @@ Go to previous chunk/title	| Ctrl+PgUp |	Command+PgUp
 
 Run your code with one of the given methods.
 
-Well shoot! We're getting an error:
+Well, shoot! We're getting an error:
 
 ![directory error code chunk](../fig/07-path-code-error.png)
 
@@ -145,11 +145,11 @@ Wait... what's all that output in our document? We don't want that in our paper!
 
 ![Heart rate code no options for code chunk](../fig/07-HR-output-no-options.PNG)
 
-This happens because the output from running code (messages, results, warnings, etc.) get's added to the Quarto document instead of being printed to the console. Let's see about adjusting the output to make it look better with code chunk rendering options. 
+This happens because the output from the running code (messages, results, warnings, etc.) gets added to the Quarto document instead of being printed to the console. Let's see about adjusting the output to make it look better with code chunk rendering options. 
 
 ## Code Chunk Options
 
-There are over 50 different code chunk options!!! Obviously we will not go over all of them, but they fall into several larger categories including: code evaluation, text output, code style, cache options, plot output and animation. We’ll talk about a few options for code evaluation, text output and plot output specifically.
+There are over 50 different code chunk options!!! Obviously, we will not go over all of them, but they fall into several larger categories, including: code evaluation, text output, code style, cache options, plot output, and animation. We’ll discuss a few options for code evaluation, text output, and plot output.
 
 Code chunk options in Quarto are added within code chunks and always have the following format:
 
@@ -201,7 +201,7 @@ Before we get to fixing how our code output looks, let's pause a second and give
 
 Some things to keep in mind
 - The chunk label syntax is always `#| label: chunk-label` with `chunk-label` replaced with your own text
-- The chunk label has to be unique (i.e. you can't use the the same name for multiple chunks)
+- The chunk label has to be unique (i.e. you can't use the same name for multiple chunks)
 
 We’ll see in a bit where this code chunk label comes in handy. But, for now let's go back and give our first code chunk a name:
 
@@ -259,7 +259,7 @@ Let's render one more time to see if our figure outputs how we'd like and has a 
 
 What if you only need to make a quick calculation and adding a code chunk seems a little overkill?
 
-You can also include `r code` directly in your the text portion of your document. Say you are discussing some of the summary statistics in your manuscript, Quarto makes this possible through HTML/LaTeX inline code which allows you to calculate simple expressions integrated to your narrative. Inline code enables you to insert `r code` into your document to dynamically updated portions of your text. In other words, if your data set changes for any reason the code will automatically update the calculation specified. 
+You can also include `r code` directly in the text portion of your document. Say you are discussing some of the summary statistics in your manuscript, Quarto makes this possible through HTML/LaTeX inline code which allows you to calculate simple expressions integrated into your narrative. Inline code enables you to insert `r code` into your document to dynamically updated portions of your text. In other words, if your data set changes for any reason the code will automatically update the calculation specified. 
 
 This can be helpful when referring to specific variables on your data. For example, you should include numbers that are derived from the data as code not as numbers. Thus, rather than writing “The CSV file contains choice consistency data for 10.000 simulated participants” **(Example 7)** , replace the static number with a bit of code that, when evaluated, gives you a dynamic number if anything changes on your dataset. Note that there is not an insert option to do this from the menu in the visual editor, so we need to insert inline code manually with  ```r ```, for example:
 
