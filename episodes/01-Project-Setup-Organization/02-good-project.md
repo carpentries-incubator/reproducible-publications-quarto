@@ -10,25 +10,22 @@ questions:
 - How do you use version control to keep track of your work?
 
 objectives:
-- Best pratices for working on research projects involving data.
-- The purpose of using .Rproj files.
+- Best practices for working on research projects involving data.
+- The purpose of using RStudio Projects (`.Rproj` files).
 - Using version control in RStudio.
 - Starting or continuing an R project.
 
 keypoints:
 - Use best practices for file and folder organization. This includes using relative file paths as opposed to complete file paths. 
 - Make sure that all data are backed up on multiple devices and that you treat raw data as read-only. 
-- We can use Git and Github to keep track of what we've done in the past, and what we plan to do in the future. 
+- We can use Git and GitHub to keep track of what we've done in the past, and what we plan to do in the future. 
 - Rproj files are pivotal to keeping everything bundled and organized.
 ---
 
 
+## Managing Research Projects
 
-## Managing Research Projects in R
-Now that we’ve learned some of the basics of authoring Quarto documents, let’s take a step back and talk about research project 
-management as a whole. 
-
-The ability to integrate code and narratives is a major advantage of the RStudio 
+The ability to integrate code and narratives is a major advantage of Quarto and the RStudio 
 environment, especially considering the scientific process is naturally 
 incremental, and many projects start life as random notes, some code, then a 
 manuscript, and eventually everything ends up a bit mixed together. To 
@@ -44,6 +41,7 @@ manage projects and discuss some of the best practices when working with data
 and collaborators. 
 
 ## Research Project Stress Points
+
 We often have organizational or logistical stress points in our research that 
 may become breaking points, especially when it comes to working with 
 collaborators, returning to a project after a hiatus, or dealing with data and 
@@ -62,7 +60,7 @@ scripts. Let’s discuss three of those common stress points:
   - Difficult to know if you have the latest version of documents
 - **Losing track of project status**
   - You cannot remember where you are in a project after being away for an 
-  extended period (or what you worked on the previous day...no judgement)
+  extended period (or what you worked on the previous day...no judgment)
   - You aren’t sure what you should be working on next
   - You have various to-do notes spread across your office or home 
   (or never write them down in the first place)
@@ -114,7 +112,7 @@ principles to adhere to that will make project management easier:
 
 For our project we’re working in today, we used the following setup for folders and files:
 
-![directory tree](../fig/04-directory-tree.png)
+![directory tree](../../fig/04-directory-tree.png)
 
 > ## Challenge 4.1: Take a few minutes to look through the workshop project files
 > 
@@ -184,7 +182,7 @@ Adapted from [https://datacarpentry.org/rr-organization1/01-file-naming/index.ht
 {: .challenge}
 
 #### **Use relative paths**  
-This goes hand-in-hand with keeping your project within one “root” directory. If you use complete paths to say, read in your data to RStudio and then share your code with a collaborator, they won’t be able to run it because the complete path you used is unique to your system and they will receive an error that the file is not found. That is why one should always use relative paths to link to other files in the project, i.e. “where is my data file in relation to the script I’m reading the data into?”. The practice of using relative paths is made easier by having a logical directory set up and keeping all project files within one root project folder. 
+This goes hand-in-hand with keeping your project within one “root” directory. If you use complete paths to say, read in your data to RStudio and then share your code with a collaborator, they won’t be able to run it because the complete path you used is unique to your system and they will receive an error that the file is not found. That is why one should always use relative paths to link to other files in the project, i.e. “where is my data file in relation to the script I’m reading the data into?”. The practice of using relative paths is made easier by having a directory set up and keeping all project files within one root project folder. 
 
 Assuming your R script is in a `code` directory and your data file is in a `data` directory then an example of a relative path to read your data would be:
 
@@ -203,7 +201,7 @@ df <- read.csv("C:/Users/wilma/Desktop/project23/data/foodchoice_budgetlines.csv
 If the example was on a Mac or Linux computer you would have `home` instead of `C:`   
 
 
-In the complete path example you can see that the code is not going to be portable. If someone other than Wilma Flintstone wanted to run the r script they would have to alter the path to match their system.
+In the complete path example you can see that the code is not going to be portable. If someone other than Wilma Flintstone wanted to run the R script they would have to alter the path to match their system.
 
 > ## Challenge 4.3: relative paths
 > 
@@ -223,39 +221,42 @@ In the complete path example you can see that the code is not going to be portab
 
 > ## Tip: Level up your relative paths
 > We just discussed how relative paths are a better practice when coding because we can guarantee our code will work on somebody else's system. However, relative paths can still be quite confusing to deal with, especially when you have many sub-directories in your project. One way to make things a bit easier on ourselves is to make sure the part that's *relative* to what we're referencing is always the same. 
-> We can employ a package called "here" to do this. `Here` has a function which always references the root (or top-level) directory of your project (i.e. where the .rproj file lives). Conviniently, that function is called `here()`. `here()` gives us a consistent starting path when building relative paths. We'll see how this is used later in the lesson.
+> This is where using `RStudio Project` can help. When you create a Project in RStudio, in the background RStudio will automatically create a “root” folder and set it as you working directory in R. Since in R relative paths are relative to your working directory, this will ease referring to external input or output files (data, images, plots, ...) in a consistent manner across your project by always having your relative paths relative to the top level folder and help to encapsualte your work within this folder. So with a Rpoject setup, the relative path in the previous example will now be:
 
-- Read the CRAN documentation here: [here](https://cran.r-project.org/web/packages/here/vignettes/here.html)
-- [Read more about how the `here` package can be useful for R Markdown and Quarto files specifically](http://jenrichmond.rbind.io/post/how-to-use-the-here-package/)
+```
+df <- read.csv("data/foodchoice_budgetlines.csv", encoding = "UTF-8")
+```
+
+In the end this means you can move this folder around on your machine or to another machine and all the paths will still be valid.
+
 {: .callout}
 
 #### **Treat data as read only**  
-This is probably the most important goal of setting up a project. Data is typically time consuming and/or expensive to collect. Working with them interactively (e.g., in Excel or R) where they can be modified means you are never sure of where the data came from, or how it has been modified since collection. It is therefore a good idea to treat your data as “read-only”. However, in many cases your data will be “dirty”: it will need significant preprocessing to get into a format R (or any other programming language) will find useful. Storing these scripts in a separate folder, and creating a second “read-only” data folder to hold the “cleaned” data sets can prevent confusion between the two sets. You should have separate folders for each: raw data, code, and output data/analyses. You wouldn’t mix your clean laundry with your dirty laundry, right?  
+This is probably the most important goal of setting up a project. Data is typically time consuming and/or expensive to collect. Working with them interactively (e.g., in Excel or R) where they can be modified means you are never sure of where the data came from, or how it has been modified since collection. It is therefore a good idea to treat your data as "read-only". However, in many cases your data will be “dirty”: it will need significant preprocessing to get into a format R (or any other programming language) will find useful. Storing these cleaning scripts in a separate folder (e.g. code), and creating a second data folder to hold the "cleaned" data sets can prevent confusion between the two sets. You should have separate folders for each: raw data, code, and output data/analyses. You wouldn’t mix your clean laundry with your dirty laundry, right?  
 
 #### **Treat generated output as disposable**
-Anything generated by your scripts should be treated as disposable: it should all be able to be regenerated from your scripts.
+Anything generated by your scripts should be treated as disposable: it should all be able to be regenerated from your scripts (and the raw data).
 There are lots of different ways to manage this output. Having an output folder with different sub-directories for each separate analysis makes it easier later. Since many analyses are exploratory and don’t end up being used in the final project, and some of the analyses get shared between projects.  
 
 #### **Include a README file**
-
 For more information about the README file and a customizable template, check this [handout](https://www.library.ucsb.edu/sites/default/files/dls-n03-2021-readme-navy.pdf). Make sure to include citation and license information both for your data [see creative commons license]([https://creativecommons.org/licenses/) and software ([see license types on Github](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository)). This information will be critical for others to reuse and correctly attribute your work. You may also consider adding a separate citation and license file to your project folder. 
 
-Again, there are no hard and fast rules here, but remember, it is important at least to keep your raw data files separate and to make sure they don’t get overridden after you use a script to clean your data. It’s also very helpful to keep the different files generated by your analysis organized in a folder.
+Again, there are no hard and fast rules here, but remember, it is important at least to keep your raw data files separate and to make sure they don’t get overwritten after you use a script to clean your data. It’s also very helpful to keep the different files generated by your analysis organized in a folder.
 
-*what’s this .Rproj file? We’ll explain in a bit.
+*what’s this `.Rproj` file? We’ll explain in a bit.
 
 
 ## Storage and Sharing
 
 ### Backup your work
 
-Having a solid backup plan in case of emergencies (say your hard drive on your computer fails) is essential. The general guideline for back ups is to adhere to the [3-2-1 principal](https://www.uschamber.com/co/run/technology/3-2-1-backup-rule) which dictates that you should have 3 copies, on 2 different media, with 1 copy offsite. Your decision on backups will be based on your own personal tolerance but we recommend at minimum to avoid only having a copy of your project on your personal, work computer or a lab computer at all costs. 
+Having a solid backup plan in case of emergencies (say your hard drive on your computer fails) is essential. The general guideline for back ups is to adhere to the [3-2-1 principle](https://www.uschamber.com/co/run/technology/3-2-1-backup-rule) which dictates that you should have 3 copies, on 2 different media, with 1 copy offsite. Your decision on backups will be based on your own personal tolerance but we recommend at minimum to avoid only having a copy of your project on your personal, work computer or a lab computer at all costs. 
 
 At the very least, you should backup your project into cloud storage (either provided by your university or paid for yourself). Common cloud storage platforms include Google drive, Box, OneDrive, Dropbox, etc. Backing up a project on a local device to cloud storage allows you to meet two of the 3-2-1 criteria (2 different media and 1 offsite). If you're working with at least one collaborator and they also keep an up-to-date copy of the project on their computer, you're set!
 
 ### Version Control hosting services 
 
-If your research project involves code, the best way to make sure you have your work backed up AND keep track of your code and data is to use a version control hosting service such as GitHub - though we'd recommend using version control for any large projects. 
+If your research project involves code, the best way to make sure you have your work backed up AND keep track of your code is to use a version control hosting service such as GitHub. Note that out-of-the-box Git and thus GitHub are not optimized to handle large files and therefore we do not recommend to use these tools to version data beyond maybe small data sets in a text-based format such as csv files.
 
 The main three version control hosting services are GitHub, GitLab, and BitBucket, to see a comparison of the available options, see this comparison on [LinkedIn](https://www.linkedin.com/pulse/demystifying-git-vs-github-atlassian-bitbucket-gitlab-pawan-verma?trk=read_related_article-card_title.)  
 
@@ -267,26 +268,26 @@ Ok, now let’s talk about implementing version control in your project through 
 
 There are actually many ways to use Git, you could use it on GitHub only (though that suffers from lack of options and is a bit clunky), there is a Desktop interface, many serious programmers use it on command line. HOWEVER, RStudio has Git controls built in so we'll use it there - all in one place!
 
-### Project Environments in R
+## Project Environments in R
 
 Environments are a rather advanced topic in programming, but we will introduce some capabilities for projects in R that increase the reproducibility of your code. Essentially, a project environment allows us to save (or take a snapshot) of our R version and dependencies - aka what packages/package versions are required to run our code without error. This can be important when you are collaborating with others and may be unsure of whether you are working with the same R and package versions. Another common issue is if you try to run very old code from a previous project - the older the code, the more likely that errors will crop up or that the code will no longer run as it used to. To take advantage of project environments we will use a package called `renv` which is the successor of `packrat` which used to be the de facto package in R for managing environments. 
 
-However, as noted in this [RStudio article on renv](https://rstudio.github.io/renv/articles/renv.html), using `renv` does not automatically make your project reproducibile, nor is it bullet-proof. Sometimes other factors come into play that may alter the results of your code despite using `renv`, such as operating systems,  compilers etc. To go one step further in assuring reproducibility, many use 'containers' such as Docker or Kubernetes. However, that is beyond the scope of this workshop.
+However, as noted in this [RStudio article on renv](https://rstudio.github.io/renv/articles/renv.html), using `renv` does not automatically make your project reproducible, nor is it bullet-proof. Sometimes other factors come into play that may alter the results of your code despite using `renv`, such as operating systems,  compilers etc. To go one step further in assuring reproducibility, many use 'containers' such as Docker or Kubernetes. However, that is beyond the scope of this workshop.
 
 We will see in episode 8 how one can implement project environments with `renv` to increase reproducibility with R projects.
 
 Before we use Git and environments in RStudio project, we must be working in an R Project so let's talk about how R Projects work in RStudio.
 
-### Working in R & Quarto Projects
+### Working in RStudio & Quarto Projects
 
-#### R Project
+#### RStudio Project
 
-One of the most powerful and useful aspects of RStudio is its project management functionality. We’ll be using an R project today to complement our Quarto document and bundle all the files needed for our paper into one self-contained, reproducible bundle. An `.Rproj` file helps keep your R scripts, data and other files together - just navigate through your file system to get to your project directory and double click on the .Rproj file. The added benefit is that the .RProj file will automatically open RStudio and start your R session in the same directory as the `.Rproj` file and remember exactly where you left off. .RProj files are powerful ways to stay organized on their own, but they also unlock the additional benefit of being able to use Git within RStudio. 
+As mentioned earlier, one of the most powerful and useful aspects of RStudio is its project management functionality. We’ll be using an RStudio project today to complement our Quarto document and bundle all the files needed for our paper into one self-contained, reproducible bundle. An `.Rproj` file helps keep your R scripts, data and other files together - just navigate through your file system to get to your project directory and double click on the .Rproj file. The added benefit is that the .RProj file will automatically open RStudio and start your R session in the same directory as the `.Rproj` file and remember exactly where you left off. .RProj files are powerful ways to stay organized on their own, but they also unlock the additional benefit of being able to use Git within RStudio. 
 
 #### Quarto Projects
 
-Perhaps, confusing but we have an additional "type" of project in the RStudio ecosystem called a Quarto project. Thankfully, we don't necessarily have to pick between using R and Quarto projects because a Quarto project is just an R project - with some additional capabilities. That addition is enhanced project and style controls in the form of a YAML file called `_quarto.yml` . To keep things simple, if you are going to use Quarto documents, use Quarto Projects, if you aren't, stick to an R project. And no worries, you can always add a `_quarto.yml` file if you have just an R Project which can retroactively turn your project into a Quarto project. Let's see how to create a Quarto project in the next episode. 
+Perhaps, confusing but we have an additional "type" of project in the RStudio ecosystem called a Quarto project. Thankfully, we don't necessarily have to pick between using RStudio and Quarto projects because a Quarto project is just an RStudio project - with some additional capabilities. That addition is enhanced project and style controls in the form of a YAML file called `_quarto.yml` . To keep things simple, if you are going to use Quarto documents, use Quarto Projects, if you aren't, stick to an R project. And no worries, you can always add a `_quarto.yml` file if you have just an RStudio Project which can retroactively turn your project into a Quarto project. Let's see how to create a Quarto project in the next episode. 
 
 > ## Challenge 4.4: R Project in “root” folder
-> `.Rproj` files must be in the root directory of your project folder/directory. What is the root directory again (look back at the relative paths intro)?  
+> `.Rproj` files must be at the top level of the root directory of your project folder/directory. What is the root directory again (look back at the relative paths intro)?  
 {: .challenge}
