@@ -221,7 +221,7 @@ The caption information also resides at the top of a code chunk using the `#|` s
 
 **Don't forget to put the caption within quotes `""`.**
 
-> ## CHALLENGE 7.3: Add a caption to Figure 3
+> ## CHALLENGE 7.2: Add a caption to Figure 3
 > Let's add a caption to our heartrate figure. Add the caption:
 > 
 > "Fig 3: Mean heart rate of stress and control groups at baseline and during intervention."
@@ -277,7 +277,7 @@ bronars_simulation_data <- read_csv("data/bronars_simulation_data.csv")
 > If you update your dataset this value will match the number of rows. 
 {: .checklist}
 
-> ## CHALLENGE 8.3 - Adding inline code
+> ## CHALLENGE 7.3 - Adding inline code
 > Suppose we would like to add some information to the sentence we have just adjusted in our manuscript. We would like to include the average for the variable *violation_count* present in the same dataset. Which inline code we would have to add to following sentence?
 > 
 > The CSV file contains choice consistency data for ` `r nrow(bronars_simulation_data.csv)` ` simulated participants, that have been used to determine the power of our food-choice task design to detect choice consistency violations, which averaged ` `enter inline code here` `. 
