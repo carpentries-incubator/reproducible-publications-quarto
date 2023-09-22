@@ -29,7 +29,7 @@ Reproducible studies allow other researchers to perform the same processes and a
 
 ## The importance of Reproducibility in Research
 
-![PhD Comics cartoon](../fig/01-fig1.png)
+![PhD Comics cartoon](../../fig/01-fig1.png)
 >Source: Comic number [1869](https://phdcomics.com/comics.php?f=1689) from [PhD Comics](https://phdcomics.com/) Copyrighted artwork by Jorge Cham.
 
 ### Discussion: A scary anecdote
@@ -51,13 +51,13 @@ Reproducibility refers to the ability of a researcher to duplicate the results o
 
 Many studies claim results that cannot be reproduced. This problem has attracted increased attention in recent years, with supporting evidence that research is often not reproducible. A 2016 survey in Nature revealed that irreproducible experiments are a problem across all domains of science:
 
-![Nature Report - 2016](../fig/01-fig2.png)
+![Nature Report - 2016](../../fig/01-fig2.png)
 >Source: Baker, M. 1,500 scientists lift the lid on reproducibility. Nature 533, 452–454 (2016). [doi.org/10.1038/533452a](https://doi.org/10.1038/533452a)
 
 
 ## Factors behind irreproducible research
 
-![Science is not a miracle](../fig/01-fig3.png)
+![Science is not a miracle](../../fig/01-fig3.png)
 >Source: Then a Miracle Occurs. Copyrighted artwork by Sydney Harris Inc. 
 
 * Not enough documentation on how experiment is conducted and data is generated
@@ -70,7 +70,7 @@ Many studies claim results that cannot be reproduced. This problem has attracted
 
 While reproducibility is the minimum requirement and can be solved with “good enough” computational practices, replicability/robustness/generalizability of scientific findings are an even greater concern involving research misconduct, questionable research practices (p-hacking, HARKing, cherry-picking), sloppy methods, and other conscious and unconscious biases.
 
-![How science should be](../fig/01-fig4.png)
+![How science should be](../../fig/01-fig4.png)
 >Source: This image was created by Scriberia for The Turing Way community DOI: [10.5281/zenodo.3
 332807](https://doi.org/10.5281/zenodo.3695300)
 
@@ -108,18 +108,16 @@ From day one, and throughout the whole research life cycle! Before you start the
 ### Levels of Reproducibility
 
 <figure>
-<img src="../fig/01-fig5.png" width = "400" height = "300">
+<img src="../../fig/01-fig5.png" width = "400" height = "300">
 </figure>
 
-<!--![Levels of Reproducibility](../fig/01-fig5.png){width=50%}-->
+<!--![Levels of Reproducibility](../../fig/01-fig5.png){width=50%}-->
 
 A published article is like the top of a pyramid, meaning that a reproducible paper/report rests on multiple levels that each contributes to its reproducibility.
 
 ## Advantages of using RStudio for your project
 
-Understanding foundational aspects of RStudio enables a gradual improvement of scientific workflows and therefore, contributes to increasing research reproducibility compliance. RStudio is an integrated development environment (IDE) for R and Python. It includes a console, syntax-highlighting editor that supports direct code execution, as well as tools for plotting, history, debugging, collaboration, and workspace management. It is a powerful tool which supports research by weaving the principles of reproducibility throughout the entire research lifecycle, from data gathering to the statistical analysis, presentation and publication of results. 
-
-RStudio is soon becoming [Posit](https://posit.co/), but that won't change how you interact with the interface and its functionalities. This name change is only a re-branding to better represent the broader focus and larger community that the IDE serves, which is no longer exclusively linked to R.
+RStudio is an integrated development environment (IDE) for R and other programming languages such as Python that provide many tools to support code development. It includes a console, syntax-highlighting editor that supports direct code execution, as well as tools for plotting, history, debugging, collaboration, and workspace management. Writing scripts to conduct your analysis is a powerful way to weave the principles of reproducibility throughout the entire research lifecycle, from data gathering to the statistical analysis, presentation and publication of results. 
 
 ### It is free and open-source
 
@@ -135,8 +133,20 @@ RStudio has a very useful “Environment” window available which shows all of 
 
 ### Makes it easy to set your working directory and access files on your computer
 
-With RStudio, you can navigate to folders on your computer in the “Files” window, view any files you have in that folder, and set that folder as the working directory.
+With RStudio, you can navigate to folders on your computer in the “Files” window, view any files you have in that folder, or go to your working directory. You can also create projects that help with setting your working directory and work with relative paths to external files (such as input data, figures) so it can be also used on other machines. 
 
 ### Integrates with collaboration and publishing tools
 
-Another great advantage of using RStudio for your R project is that the platform integrates with [GitHub](https://github.com). Once you connect RStudio with your GitHub account a remote repo becomes the “upstream” remote for your local repo. In essence, it enables you to push and pull commits to GitHub, allowing more seamless collaboration and more effective version control. RStudio also connects with [Rpubs](https://rpubs.com/) and [Quarto Pub](https://quartopub.com/) for easy R project web publishing.  
+Another great advantage of using RStudio for your R project is that the platform integrates with the version control system [git](https://git-scm.com/) and code repository service [GitHub](https://github.com). Once you connect RStudio with a repository on GitHub (remote) you can bring its content to your local machine, update it and share changes in a streamlined way. In git jargon, it means it enables you to `push` and `pull` commits to GitHub, allowing more seamless collaboration and more effective version control. RStudio also provides tools to render documents (html, pdf, ...) directly from Rmarkdown and Quarto notebooks, and directly connects with [Rpubs](https://rpubs.com/) and [Quarto Pub](https://quartopub.com/) for easy R project web publishing.
+
+
+## A Note About the Workshop Example
+   
+Our goal is that by the end of this workshop you will be able to create a reproducible report using data and code we will provide. Throughout this workshop, we will be using a shorter and adapted version of the data paper:
+
+Nitsch, F. J., Sellitto, M., & Kalenscher, T. (2021). Trier social stress test and food-choice: Behavioral, self-report & hormonal data. *Data in brief*, 37, 107245. [https://doi.org/10.1016/j.dib.2021.107245](https://doi.org/10.1016/j.dib.2021.107245). 
+
+We will be also using a simplified version of the project directory containing data files and scripts published by the authors on Open Science Framework: [https://doi.org/10.17605/OSF.IO/6MVQ7](https://doi.org/10.17605/OSF.IO/6MVQ7).
+
+The adapted paper template and project directory are used exclusively for instruction purposes with permission from the authors.
+
