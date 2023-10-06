@@ -139,6 +139,22 @@ With RStudio, you can navigate to folders on your computer in the “Files” wi
 
 Another great advantage of using RStudio for your R project is that the platform integrates with the version control system [git](https://git-scm.com/) and code repository service [GitHub](https://github.com). Once you connect RStudio with a repository on GitHub (remote) you can bring its content to your local machine, update it and share changes in a streamlined way. In git jargon, it means it enables you to `push` and `pull` commits to GitHub, allowing more seamless collaboration and more effective version control. RStudio also provides tools to render documents (html, pdf, ...) directly from Rmarkdown and Quarto notebooks, and directly connects with [Rpubs](https://rpubs.com/) and [Quarto Pub](https://quartopub.com/) for easy R project web publishing.
 
+## Quarto advantages for your reproduciblity
+
+We will talk more about what is Quarto in the next episode, but in a nutshell quarto documents enable you to blend your analysis and the story  associated with it by mixing text (using the markdown syntax) and code that is executable. You can render those documents in various formats (html, docx, ...) binding documentation, code, and outputs such as figures. It is a great vector for reproducibility as it make it easy to update your results according to new information. For example if you find new data, you can re-render the quarto with the new data and the plots and other outputs computed will update accordingly.
+
+> ## Why it is called Quarto?
+> 
+Developers picked a name that had meaning in the history of publishing and landed on Quarto, which is the format of a book or pamphlet produced from full sheets printed with eight pages of text, four to a side, then folded twice to produce four leaves.
+{: .callout}
+
+
+> ## Why Quarto and not R Markdown?
+>
+> As noted before, Quarto is the next generation of R Markdown which was the subject of a previous workshop [see Reproducible Publications with RStudio](https://github.com/carpentries-incubator/Reproducible-Publications-with-RStudio); and, the anatomy of `.rmd` and `.qmd` files are very similar. So why move to Quarto? While compatible with Python (and bash, Julia, C, SQL), R Markdown was designed primarily for R users. **Quarto does not require R.** Quarto runs computations into separate pluggable language "engine", which helps make this cross language functionality easier to support and reduces infrastrucutre intensivity with built-in applications. In addition, because Quarto is designed to be compatible with existing formats you can render most existing `.Rmd` and Jupyter Notebooks with Quarto without modification. This low-pain process helps the transition to Quarto. 
+{: .callout}
+
+
 
 ## A Note About the Workshop Example
    
