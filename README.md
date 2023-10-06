@@ -5,10 +5,10 @@
 ## Contributing
 
 ### 2023-08-11 note:
-_This version of the workshop is no longer being maintained or updated.  Instead we are working on re-vamping this workshop for Quarto.  We'll be submitting the re-vamped workshop to Carpentries Incubator.  Contact us if you interested in teaching the Quarto version of this workshop or have a related project._
+_This version of the workshop is no longer being maintained or updated.  Instead, we are working on re-vamping this workshop for Quarto [see repo](https://github.com/UCSBCarpentry/Reproducible-Publications-with-RStudio-Quarto).  We'll be submitting the re-vamped workshop to Carpentries Incubator when completed.  Contact us if you are interested in teaching the Quarto version of this workshop or have a related project. We are actively working on the new version of this workshop
 
 We welcome all contributions to improve the lesson! Maintainers will do their best to help you if you have any
-questions, concerns, or experience any difficulties along the way.
+questions, concerns, or experience any difficulties along the way. Please submit issues [here](https://github.com/UCSBCarpentry/Reproducible-Publications-with-RStudio-Quarto/issues).
 
 This lesson has a supplementary repository with the [project example](https://github.com/carpentries-incubator/Reproducible-Publications-with-RStudio-Example) used for challenges and exercises.
 
@@ -20,7 +20,7 @@ Please see the current list of [issues](https://github.com/carpentries-incubator
 repository. For making your contribution, we use the GitHub flow, which is
 nicely explained in the chapter [Contributing to a Project](http://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project) in Pro Git
 by Scott Chacon.
-Look for the tag ![good_first_issue](https://img.shields.io/badge/-good%20first%20issue-gold.svg). This indicates that the maintainers will welcome a pull request fixing this issue.
+Look for the tag![good_first_issue](https://img.shields.io/badge/-good%20first%20issue-gold.svg). This indicates that the maintainers will welcome a pull request fixing this issue.
 
 
 ## Maintainer(s)
