@@ -46,16 +46,6 @@ Quarto generates a .qmd file that weaves together content and executable code in
 8. If you do not make any changes to the document after creating the output document, you can be sure that the paper was executable at least at the time of submission.
 9. Refer to the corresponding code lines in the methodology section making it unnecessary to use pseudocode, high-level textual descriptions, or just too many words to describe the computational analysis.
 
-> ## Why it is called Quarto?
-> 
-Developers picked a name that had meaning in the history of publishing and landed on Quarto, which is the format of a book or pamphlet produced from full sheets printed with eight pages of text, four to a side, then folded twice to produce four leaves.
-{: .callout}
-
-
-> ## Why Quarto and not R Markdown?
->
-> As noted before, Quarto is the next generation of R Markdown which was the subject of a previous workshop [see Reproducible Publications with RStudio](https://github.com/carpentries-incubator/Reproducible-Publications-with-RStudio); and, the anatomy of `.rmd` and `.qmd` files are very similar. So why move to Quarto? While compatible with Python (and bash, Julia, C, SQL), R Markdown was designed primarily for R users. **Quarto does not require R.** Quarto runs computations into separate pluggable language "engine", which helps make this cross language functionality easier to support and reduces infrastrucutre intensivity with built-in applications. In addition, because Quarto is designed to be compatible with existing formats you can render most existing `.Rmd` and Jupyter Notebooks with Quarto without modification. This low-pain process helps the transition to Quarto. 
-{: .callout}
 
 ## Some Real-world Applications
 
