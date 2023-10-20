@@ -25,15 +25,14 @@ Just sharing your code, data, and workflow does not magically make your research
 
 A first step to help prevent this problem is to carefully document the hardware and versions of software used in your analyses so that others can recreate that computing environment if needed.
 
-In R, you can accomplish that by running the `sessionInfo()` function. This will create a snapshot of your computational environment, including your OS, R session/version, packages, their versions and where they were installed from (e.g., CRAN, GitHub or local Libraries). This information should be integrated to your README and project documentation. 
+In R, you can accomplish that by running the `sessionInfo()` (<https://cran.r-project.org/web/packages/details/vignettes/sessioninfo.html>) function. This will create a snapshot of your computational environment, including your OS, R session/version, packages, their versions and where they were installed from (e.g., CRAN, GitHub or local Libraries). This information should be integrated to your README and project documentation. 
 
 After using this function, you will print:
 
 
-
 [add image]
 
-Try it yourself! 
+Try it yourself and check which versions you are using for each of the packages you have installed.  
 
 
 ## Avoiding the Dependency Hell
@@ -85,7 +84,7 @@ groundhog.library(pkgs, '2023-12-01')
 ```
 The advantage of this approach? When you run or make any edits to your script in the future, you can stick with your original date choice or update that by changing that date accordingly.
 
-And if you're going all out with multiple groundhog.library() calls, you can set the date as a variable, making your script even more dynamic.
+And if you're going all out with multiple `groundhog.library()` calls, you can set the date as a variable, making your script even more dynamic.
 
 ```{r}
 groundhog.day <- '2023-12-01'
@@ -94,10 +93,10 @@ groundhog.library(pkgs, groundhog.day)
 
 ### Using GroundHog in Existing Scripts
 
-Assume you developed a script months ago before you knew Groundhog even existed. The good news is that you can still apply it retroactively. To do so, you will need to set a groundhog day and adjust the library loading to groundhog.library.
+Assume you developed a script months ago before you knew Groundhog even existed. The good news is that you can still apply it retroactively. To do so, you will need to set a groundhog day and adjust the library loading to `groundhog.library`.
 The key question is: what date should you choose? We advise you to try the data the script was created or last saved as a proxy. If the documentation includes that information, go for it and test if things will render correctly. If not, try a month before or later, and it should work. See why documenting your work matters? We want to avoid guessing games.  
 
-Let's see what our code in our .qmd file would look like after applying Groundhog.
+After applying Groundhog, let's see what our code in our .qmd file would look like.
 
 
 
