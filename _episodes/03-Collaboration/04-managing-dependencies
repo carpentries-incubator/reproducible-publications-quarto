@@ -33,6 +33,7 @@ After using this function, you will print:
 [add image]
 
 Try it yourself and check which versions you are using for each of the packages you have installed.  
+You may save it as a .txt file and save it in your project folder using the following command: `sessionInfo() %>% capture.output(file="session_info.txt")`
 
 
 ## Avoiding the Dependency Hell
