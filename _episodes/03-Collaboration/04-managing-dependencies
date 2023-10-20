@@ -23,22 +23,24 @@ keypoints:
 
 Just sharing your code, data, and workflow does not magically make your research reproducible if we don’t know what language the code is written in or if functions change or are deprecated in newer versions, breaking your code.
 
+Therefore, you should ask yourself: \* What are the versions of the packages used for my project? \* Will my project be usable on other systems or in the future? \* How do you deal with projects requiring different versions of a package?
+
 A first step to help prevent this problem is to carefully document the hardware and versions of software used in your analyses so that others can recreate that computing environment if needed.
 
-In R, you can accomplish that by running the `sessionInfo()` (<https://cran.r-project.org/web/packages/details/vignettes/sessioninfo.html>) function. This will create a snapshot of your computational environment, including your OS, R session/version, packages, their versions and where they were installed from (e.g., CRAN, GitHub or local Libraries). This information should be integrated to your README and project documentation. 
+In R, you can accomplish that by running the `sessionInfo()` (<https://cran.r-project.org/web/packages/details/vignettes/sessioninfo.html>) function. This will create a snapshot of your computational environment, including your OS, R session/version, packages, their versions, and where they were installed from (e.g., CRAN, GitHub, or local Libraries). This information should be integrated to your README and project documentation. 
 
 After using this function, you will print:
 
 
 [add image]
 
-Try it yourself and check which versions you are using for each of the packages you have installed.  
+Try it yourself and check which versions you are using for each of the packages you have installed for the workshop.  
 You may save it as a .txt file and save it in your project folder using the following command: `sessionInfo() %>% capture.output(file="session_info.txt")`
 
 
 ## Avoiding the Dependency Hell
 
-Assume you have followed all the recommended practices to create reproducible projects. You chose RStudio/R, a free and open-source software; you have used relative paths and produced clean and clear code; your project directory and data files follow name conventions and are well-organized and beautifully documented. You have also documented your environment as advised above.
+Assume you have followed all the recommended practices to create reproducible projects. You chose RStudio/R, a free and open-source software; you have used relative paths and produced clean and clear code; your project directory and data files follow name conventions and are well-organized and beautifully documented. You have also documented your computational environment as advised above.
 
 Is that all? Well, not quite. Imagine investing significant time and effort into completing sophisticated data analysis, only to face a frustrating situation. When R gets upgraded and new package versions are released, everything suddenly starts crashing down. How can you ensure that the packages you rely on for your project remain on the same version consistently, even in the future?
 
@@ -50,10 +52,10 @@ Let's say you're working on a data analysis project and have two R packages you'
 
 `"package X" version 1.0.0 depends on "package Z" version 2.0.0. "package Y" version 1.5.0 depends on "package Z" version 1.0.0.`
 
-You start your project by installing the latest versions of both packages. At this point, everything works fine, and you can proceed with your analysis using both packages. However, a few months later, you must reproduce your analysis and reinstall the packages. Unknown to you, "package Z" has been updated since your last installation, and the new version is incompatible with the older version that "package Y" depends on. When you try to run your analysis, you encounter errors or unexpected behavior because "package Y" is no longer compatible with the updated version of "package Z." This mismatch in dependencies can result in reproducibility issues, making it challenging to replicate your previous results.
+You start your project by installing the latest versions of both packages. At this point, everything works fine, and you can proceed with your analysis using both packages. However, a few months later, you must reproduce your analysis and reinstall the packages. Unknown to you, "package Z" has been updated since your last installation, and the new version is incompatible with the older version that "package Y" depends on. When you try to run your analysis, you encounter errors or unexpected behavior because "package Y" is no longer compatible with the updated version of "package Z." 
+This mismatch in dependencies can result in reproducibility issues, making it challenging to replicate your previous results.
 
-Therefore, you should ask yourself: \* What are the versions of the packages used for my project? \* Will my project be usable on other systems or in the future? \* How do you deal with projects requiring different versions of a package?
-
+You may think I can still look at the `sessionInfo()` .txt file and install older packages to make things work again, right? Well, that will require some extra work and affect your other projects that may rely on similar packages. 
 
 ## Enhancing reproducibility with Groundhog
 
