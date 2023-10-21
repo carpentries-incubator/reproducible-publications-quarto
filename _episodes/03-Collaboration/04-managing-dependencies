@@ -8,15 +8,15 @@ questions:
 - "How to make my code reproducible in the future?"
 
 objectives:
-- "Understand the relevance of documenting the computational environment used in your project"
-- "Recognize the importance of managing dependencies for RStudio projects"
-- "Understand how to setup Groundhog to support R code reproducibility"
+- "Understand the relevance of documenting the computational environment used in your project."
+- "Recognize the importance of managing dependencies for RStudio projects."
+- "Understand how to setup Groundhog to support R code reproducibility."
 
 
 keypoints:
-- "Run the `sessionInfo()` function to take a snapshot of your computational environment"
-- "Groundhog is a handy tool for capturing your project's package dependencies"
-- "Make your R scripts reproducible by replacing library(pkg) with groundhog.library(pkg,date)"
+- "Run the `sessionInfo()` function to take a snapshot of your computational environment."
+- "Groundhog is a handy tool for capturing your project's package dependencies."
+- "Make your R scripts reproducible by replacing `library(pkg)` with `groundhog.library(pkg,date)`."
 ---
 
 ## Documenting your Computational Environment
@@ -55,9 +55,9 @@ Let's say you're working on a data analysis project and have two R packages you'
 You start your project by installing the latest versions of both packages. At this point, everything works fine, and you can proceed with your analysis using both packages. However, a few months later, you must reproduce your analysis and reinstall the packages. Unknown to you, "package Z" has been updated since your last installation, and the new version is incompatible with the older version that "package Y" depends on. When you try to run your analysis, you encounter errors or unexpected behavior because "package Y" is no longer compatible with the updated version of "package Z." 
 This mismatch in dependencies can result in reproducibility issues, making it challenging to replicate your previous results.
 
-You may think I can still look at the `sessionInfo()` .txt file and install older packages to make things work again, right? Well, that will require some extra work and affect your other projects that may rely on similar packages. 
+You may think I can still look at the `sessionInfo()` .txt file and install older packages to make things work again, right? Well, that will require some extra work and affect your other projects that may rely the same packages with different versions. In this case, we need to take an additional action avoid this problem.  
 
-## Enhancing reproducibility with Groundhog
+## Enhancing Reproducibility with Groundhog
 
 R/RStudio offers a vast ecosystem of packages and libraries that cater to a wide range of data manipulation, visualization, and analysis needs. However, harnessing the full potential of R often involves juggling a multitude of dependencies, which can lead to complex versioning issues, compatibility challenges, and time-consuming troubleshooting.
 
@@ -109,7 +109,7 @@ After applying Groundhog, let's see what our code in our .qmd file would look li
 
 ### Other Packages that Support Code Reproducibility in R 
 
-Groundhog is only one solution to help you circumvent the dependency hell in R. It is beyond the scope of this workshop to explore other options available, but we list packages you may consider exploring: 
+Groundhog is only one solution to help you circumvent the dependency hell in R. While it is simple to implement and relatively effective, it may not be the best option depending on your project goals.  It is beyond the scope of this workshop to explore other packages available for dependency management in R, but if this is a topic you would like to explore further, below, we list packages you may consider exploring: 
 
 
 | Package                                                                 | Description                                                                                                                                                                                                        |
