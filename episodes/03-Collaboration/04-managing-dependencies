@@ -3,15 +3,14 @@ title: "Managing Dependencies in R/RStudio"
 teaching: 15
 exercises: 5
 questions:
+- "How can I avoid the dependency hell problem and make my code reproducible in the future?"
 - "How can I document my computational environment?"
 - "How can I manage package and software dependencies in RStudio?"
-- "How to make my code reproducible in the future?"
 
 objectives:
 - "Understand the relevance of documenting the computational environment used in your project."
 - "Recognize the importance of managing dependencies for RStudio projects."
 - "Understand how to setup Groundhog to support R code reproducibility."
-
 
 keypoints:
 - "Run the `sessionInfo()` function to take a snapshot of your computational environment."
