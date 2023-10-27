@@ -22,11 +22,17 @@ keypoints:
 
 ## Code in Quarto Documents
 
-We've learned about the text-formatting options of Quarto, now let's dive into the code portion of Quarto documents. Quarto flips the defaults of code and text - instead of priortizing the code and making you comment out (#) text such as in R scripts, they priortize text and force you to specially comment the code portions. How do you signal to R the difference between code and text when you're not using code commments (#)? That's where code chunks (or "code chunks" as RStudio calls them) come into play. Instead of Quarto's rendering system processing the markdown styling into the final output, Code chunks are sent to a preceding stage of processing by Knitr, which "knits"/render the code output and text together. Secondly, Quarto processes the code output and displays it in the document format of our choice - i.e. Knitr runs the lines of code for a plot in a code chunk, joins it to the markdown text portions, and Quarto outputs that as an html document. 
+We've learned about the text-formatting options of Quarto, now let's dive into the code portion of Quarto documents. As we've seen so far, Quarto flips the default in R scripts of prioritizing code over text - instead of needing to use comments to add text such as in R scripts, Quarto Documents are "text-first" and necessiate use of special syntax to add code. In Quarto documents, the syntax to signal the switch to code is called "code chunks". Code chunks are interpreted by Knitr. But what is Knitr? 
 
 ## What is Knitr?
 
-But what is Knitr? Knitr is the engine in RStudio which creates the “dynamic” part of Quarto reports. It’s specifically a package that allows the integration of R code into the html, word, pdf, or LaTex document you have specified as your output for Quarto. It utilizes Literate Programming to make research more reproducible. There are two main ways to process code with Knitr in Quarto documents:
+But what is Knitr? Knitr is the engine in RStudio which creates the “dynamic” part of Quarto reports. More specifically, it's a package that allows the integration of R code into the html, word, pdf, or LaTeX document you have specified as your output for Quarto. It utilizes Literate Programming to make research more reproducible. 
+
+## How it works
+
+Code chunks are sent to a preceding stage of processing by Knitr, which "knits"/renders the code output and text together. Secondly, Quarto processes the code output and displays it in the document format of our choice - i.e. Knitr runs the lines of code for a plot in a code chunk, joins it to the markdown text portions, and then Quarto outputs the "knitted" text and render code together into an html document. 
+
+There are two main ways to process code with Knitr in Quarto documents:
 
 1. Code Chunks
 2. Inline Code
