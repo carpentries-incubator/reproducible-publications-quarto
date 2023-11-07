@@ -30,11 +30,11 @@ If you'd like to learn more about markdown basics and use the source mode to for
 
 The editor toolbar includes buttons for the most commonly used formatting commands:
 
-![Fig. 6.1 - Toolbar](../fig/06-toolbar.png)
+![Fig. 6.1 - Toolbar](../../fig/06-toolbar.png)
 
 Additional commands are available on the Format, Insert, and Table menus:
 
-![Fig. 6.2 - Menu](../fig/06-menu.png)
+![Fig. 6.2 - Menu](../../fig/06-menu.png)
 
 > ## Tip: Inserting anything with shortcuts
 > You can also use the catch-all ⌘ / shortcut to insert just about anything. Just execute the shortcut then type what you want to insert. For example: `/lis` will prompt listing options.
@@ -69,7 +69,7 @@ Adding headings to a a Quarto markdown document in Rstudio is as simple as apply
 
 Because creating tables manually in qmd documents could be a little painful for beginners, Rstudio released an add-in functionality for tables back in 2018. The new visual editor, however, have made the process to create qmd tables more similar to other editors we use daily. In our template, we have the specification table with 10 rows and two columns. If we were willing to add that table, we could do that by inserting a table to a selected part of the documents and by specifying the desired number of rows and columns.  Including a caption is optional, but recommended. We can add or delete rows and columns, add a header that will be set bold by default but can be changed, and set the desired alignment. Select the desired text and click on the crossed T icon if you wish to clear formatting.
 
-![Clear Formatting Option](../fig/06-clearformatting.png)
+![Clear Formatting Option](../../fig/06-clearformatting.png)
 
 
 ### *Creating Bullet and Numbered Lists*
@@ -89,7 +89,7 @@ If you have math formula in your manuscript there are three different ways you m
 ## Keyboard Shortcuts
 As you become a more regular Rstudio user, you may also consider using some keyboard shortcuts for all basic editing tasks. Visual mode supports both traditional keyboard shortcuts (e.g. `⌘ B` for bold) as well as markdown shortcuts (using markdown syntax directly). For example, enclose **bold** text in asterisks or type ## and press space to create a second level heading. Here are some of the most commonly used shortcuts for Mac users:
 
-![Fig. 6.3 - Shortcuts](../fig/06-shortcuts.png)
+![Fig. 6.3 - Shortcuts](../../fig/06-shortcuts.png)
 
 Tip: Windows users should replace in the shortcuts above `⌘` by `ctrl` and `⌥⌘` by `alt (+) ctrl`.
 
@@ -123,7 +123,7 @@ Example of some content with a border.
 
 When we render it, we will get: <br>
 
-![Text with borders rendered](../fig/06-text-borders.png) <br>
+![Text with borders rendered](../../fig/06-text-borders.png) <br>
 
 
 ### *Dividing content into separate columns*
@@ -147,7 +147,7 @@ Some Content in right column
 
 When we render it, we will get: <br>
 
-![Two columns rendered](../fig/06-twocolumns.png) <br>
+![Two columns rendered](../../fig/06-twocolumns.png) <br>
 
 
 If you would like to explore more the *Fence Divs* and other cool functionalities check the [Divs and Spans documentation](https://quarto.org/docs/authoring/markdown-basics.html#divs-and-spans).
