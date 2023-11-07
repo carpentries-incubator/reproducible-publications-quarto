@@ -43,12 +43,12 @@ When you first open RStudio, you will be greeted by three panels:
 -   Environment/History/Connections (tabbed in upper right)
 -   Files/Plots/Packages/Help/Viewer (tabbed in lower right)
 
-![RStudio layout](../fig/02-rstudio.PNG) 
+![RStudio layout](../../fig/02-rstudio.PNG) 
 
 Once you open files, such as .qmd, .rmd or .R files, an editor panel will also
 open in the top left.
 
-![RStudio layout with .R file open](../fig/02-rstudio-script.PNG) 
+![RStudio layout with .R file open](../../fig/02-rstudio-script.PNG) 
 
 
 ### R Packages
@@ -86,7 +86,7 @@ Packages can be installed and updated from the Package tab with the *Install* an
 
 Start a new Quarto document in RStudio by clicking File \> New File \> Quarto Document...
 
-![Name new .qmd file](../fig/02-name-new-qmd.PNG)
+![Name new .qmd file](../../fig/02-name-new-qmd.PNG)
 
 You may name your Quarto document as "My-first-qmd".
 
@@ -97,7 +97,7 @@ We will keep all pre-selected options: HTML as the output, knitr engine and the 
 
 If you see this default text you're good to go: 
 
-![.qmd new file generic template](../fig/02-qmd-new-template.PNG)
+![.qmd new file generic template](../../fig/02-qmd-new-template.PNG)
 
 ### Visual Editor vs. Source Editor
 
@@ -107,7 +107,7 @@ Remember that in the settings we chose to use the visual editor? RStudio release
 
 If you toggle the source button, you will display your quarto document in the "source editor" mode. Notice the symbols scattered throughout the text (#, *, <>). Those are examples of markdown syntax, an easy and quick, human-readable markup language for document styling.
 
-![Add image source editor](../fig/02-qmd-source.PNG)
+![Add image source editor](../../fig/02-qmd-source.PNG)
 
 
 > ## CHALLENGE 2.2 - Formatting with Symbols (optional)

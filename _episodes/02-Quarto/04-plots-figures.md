@@ -45,7 +45,7 @@ Navigate to the end of the paper where it says **"Example 8"**. This is where we
 
 Let's all start a new code chunk by typing our our starting backticks & r between curly brackets or by using the buttons available in the editor toolbar.  
 
-> ![auto create code chunk](../fig/07-auto-code-chunk.PNG)  
+> ![auto create code chunk](../../fig/07-auto-code-chunk.PNG)  
 
 
 > ## Tip: Four ways to insert code chunks
@@ -61,7 +61,7 @@ Let's all start a new code chunk by typing our our starting backticks & r betwee
 
 The most basic (empty) code chunk looks like so:
 
-![blank qmd code chunk](../fig/08-blank-code-chunk.png)
+![blank qmd code chunk](../../fig/08-blank-code-chunk.png)
 
 Other than backticks ``` for code chunks that surround the code top and bottom, the only **required** piece is the specified language (r) placed between the curly brackets. This indicates that the language to read the code is R.
 
@@ -74,18 +74,18 @@ Other than backticks ``` for code chunks that surround the code top and bottom, 
 
 Now, let's open our `03_HR_analysis.R` script in our `code` folder. We will insert the code of this script into our current working file. To do this, copy the code and paste it in-between the two lines with backticks and `{r}`.
 
-![heartrate code in chunk](../fig/07-heartrate-code.PNG)
+![heartrate code in chunk](../../fig/07-heartrate-code.PNG)
 
 ## Run the code in a code chunk
 Now, to check to make sure our code renders, we could click the "Render" button as we have been doing to check on the output of our Quarto file. However, with code chunks we have other options for running and debugging code that don't require us to wait for the file to render. 
 
 1) Run from code chunk (green play button on the right top corner). This allows us to run one specific code chunk.
 
-![run from code chunk](../fig/07-run-from-chunk.png)
+![run from code chunk](../../fig/07-run-from-chunk.png)
 
 2) Run menu - this gives more options for running code chunks (chunks), including the current one, the next one, all chunks, etc. 
 
-![run code menu](../fig/07-run-options.png)
+![run code menu](../../fig/07-run-options.png)
 
 3) Keyboard shortcuts: 
 
@@ -104,11 +104,11 @@ Run your code with one of the given methods.
 
 Well, shoot! We're getting an error:
 
-![directory error code chunk](../fig/07-path-code-error.png)
+![directory error code chunk](../../fig/07-path-code-error.png)
 
 If we go to the bottom of the code chunk we'll see more details on the error:
 
-![path error details](../fig/07-path-error-details.png)
+![path error details](../../fig/07-path-error-details.png)
 
 This is a path error. The reason we're seeing this is that our paper is located in the report/source directory while our test document was automatically created in the project root directory. The path from the report/source directory to the data we're trying to read is not correct any longer. 
 
@@ -128,7 +128,7 @@ Run the code again to make sure it works properly.
 
 Did it work? Look under the code chunk. You should now see a plot preview displayed beneath the code chunk if all went well. 
 
-![Code Chunk Plot Preview](../fig/07-plot-preview.png)
+![Code Chunk Plot Preview](../../fig/07-plot-preview.png)
 
 
 ## Rendering Code Chunks
@@ -139,11 +139,11 @@ We just saw how to run our code in our code chunks to test that it works and to 
 > Now, let's Render the Quarto file and see how our code output looks in the final html page. 
 {: .checklist}
 
-![code chunk with plot1 code](../fig/07-render.png) 
+![code chunk with plot1 code](../../fig/07-render.png) 
 
 Wait... what's all that output in our document? We don't want that in our paper! 
 
-![Heart rate code no options for code chunk](../fig/07-HR-output-no-options.PNG)
+![Heart rate code no options for code chunk](../../fig/07-HR-output-no-options.PNG)
 
 This happens because the output from the running code (messages, results, warnings, etc.) gets added to the Quarto document instead of being printed to the console. Let's see about adjusting the output to make it look better with code chunk rendering options. 
 
@@ -197,7 +197,7 @@ Now we are seeing what we would like: a figure without other output to show in o
 
 Before we get to fixing how our code output looks, let's pause a second and give our code chunk a label. While not required for running your code, it is good practice is to give a name to each code chunk because a label is an unique identifier which allows for more advanced options (such as cross-referencing) to work with your qmd files later on:
 
-![code chun k label](../fig/07-code-label.png)
+![code chun k label](../../fig/07-code-label.png)
 
 Some things to keep in mind
 - The chunk label syntax is always `#| label: chunk-label` with `chunk-label` replaced with your own text

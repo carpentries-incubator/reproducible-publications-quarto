@@ -68,7 +68,7 @@ There are four distinct steps in the Quarto workflow:
 4. render the document with the selected engine **(Knitr in this example)**  
 
 
-![Quarto Workflow](../fig/03-qmd-workflow.png)
+![Quarto Workflow](../../fig/03-qmd-workflow.png)
 
 Let’s dig into those more:
 
@@ -83,7 +83,7 @@ Quarto default YAML header includes the following metadata surrounded by three d
 * format 
 * editor
 
-![yaml highlighted in document](../fig/03-qmd-template-yaml.png)
+![yaml highlighted in document](../../fig/03-qmd-template-yaml.png)
 
 The format is selected in the wizard for starting a new document. You are able to pick from pdf, html, and word document. Basically, this allows you to export your qmd file as a file type of your choice. There are [other options for output format](https://bookdown.org/yihui/rmarkdown/output-formats.html) and even more can be added by installing certain packages, but these are the three default options.   
 <br>
@@ -129,7 +129,7 @@ Code blocks appear highlighted in gray throughout the qmd document. They are sur
 
 Let's take a look at the Quarto document template we have just created to see how formatted text and code are represented.
 
-![qmd template text](../fig/03-qmd-template-text.png)<br>
+![qmd template text](../../fig/03-qmd-template-text.png)<br>
 
 > ## A note about coding approaches in RStudio: 
 > When writing code in Rstudio, there are different workflows you can use, including writing code directly in the console, using a separate R script, or writing your code in a .qmd file. The best approach depends on your specific needs and preferences:
@@ -155,7 +155,7 @@ Before you can render your document, you'll need to give it a file name and choo
 
 Your document should render like this: <br>
 
-![Render html output](../fig/03-render-html.png) <br>
+![Render html output](../../fig/03-render-html.png) <br>
 
 > ## Warning: Enable Pop-ups!
 > If using the Jupyter Hub RStudio setup, you may not see your preview until you enable pop-ups since the web browser of your choice may block pop-ups by default.
@@ -204,7 +204,7 @@ Quarto uses a template command that can be called in the terminal to create an a
 
 This will install the extension and create an example qmd file and bibiography with all required files that you can use as a starting place for your article:
 
-![Journal-Templates](../fig/03-journal-template.png) <br>
+![Journal-Templates](../../fig/03-journal-template.png) <br>
 
 
 Locate the directory where you have saved the template. You can make a copy of `elsevier-template.qmd` document or rename it as start writing your paper following the journal's formatting requirements.
