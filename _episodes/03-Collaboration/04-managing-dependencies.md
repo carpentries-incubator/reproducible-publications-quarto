@@ -2,21 +2,27 @@
 title: "Managing Dependencies in R/RStudio"
 teaching: 15
 exercises: 5
+
 questions:
+
 - "How can I avoid the dependency hell problem and make my code reproducible in the future?"
 - "How can I document my computational environment?"
 - "How can I manage package and software dependencies in RStudio?"
 
 objectives:
+
 - "Understand the relevance of documenting the computational environment used in your project."
 - "Recognize the importance of managing dependencies for RStudio projects."
 - "Understand how to setup Groundhog to support R code reproducibility."
 
 keypoints:
+
 - "Run the `sessionInfo()` function to take a snapshot of your computational environment."
 - "Groundhog is a handy tool for capturing your project's package dependencies."
 - "Make your R scripts reproducible by replacing `library(pkg)` with `groundhog.library(pkg,date)`."
+
 ---
+
 
 ## Documenting your Computational Environment
 
@@ -26,7 +32,7 @@ Therefore, you should ask yourself: \* What are the versions of the packages use
 
 Reproducibility is a spectrum that encompasses several actions. A first step to help prevent this problem is to carefully document the hardware and versions of software used in your analyses so that others can recreate that computing environment if needed.
 
-In R, you can accomplish that by running the `sessionInfo()` (<https://cran.r-project.org/web/packages/details/vignettes/sessioninfo.html>) function. This will create a snapshot of your computational environment, including your OS, R session/version, packages, their versions, and where they were installed from (e.g., CRAN, GitHub, or local Libraries). This information should be integrated into your README and project documentation. 
+In R, you can accomplish that by running the `sessionInfo()` function. [see CRAN Docs](https://cran.r-project.org/web/packages/details/vignettes/sessioninfo.html) This will create a snapshot of your computational environment, including your OS, R session/version, packages, their versions, and where they were installed from (e.g., CRAN, GitHub, or local Libraries). This information should be integrated into your README and project documentation.
 
 After using this function, you will print:
 
