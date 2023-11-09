@@ -32,7 +32,7 @@ for this workshop.
 
 Click the blue publish button
 
-![Publish button in RStudio](../fig/11-publish-button-scrnshot-2.png)
+![Publish button in RStudio](../../fig/11-publish-button-scrnshot-2.png)
 
 If you click on the carrot, you might get the warning below: 
 
@@ -41,11 +41,11 @@ If you click on the carrot, you might get the warning below:
 
 Wait for the installation to be completed. If a little menu pops up, select "Publish Document..." and you'll be presented with the following panels:
 
-![Publish to RPubs or RStudio Connect](../fig/11-r-studio-knit-publish-to-scrnshot.png)
+![Publish to RPubs or RStudio Connect](../../fig/11-r-studio-knit-publish-to-scrnshot.png)
 
 (The other option in the dialog box, RStudio Connect, is a standalone publishing platform for teams to share content.  It requires purchase to host and use.)
 
-![Confirm Publish to RPubs](../fig/11-r-studio-knit-publish-confirm-scrnshot.png)
+![Confirm Publish to RPubs](../../fig/11-r-studio-knit-publish-confirm-scrnshot.png)
 
 The first time you publish, RStudio will likely ask if you want to install some needed packages; say yes.  RStudio will then open up a web browser to allow you sign in to rpubs.com.
 
@@ -77,14 +77,14 @@ As we are getting started we will cover briefly only the first approach. If you'
 
 In our case, that would be `quarto publish quarto-pub DataPaper-ReproducibilityWorkshop.qmd`. But wait, first we have to ensure we are using the right path to call the document which is in the report folder. So, we can type in the terminal `cd report` before proceeding.
 
-![Quarto Pub Publish command](../fig/11-quartopub-publishcommand.png)
+![Quarto Pub Publish command](../../fig/11-quartopub-publishcommand.png)
 
 
 2. As it is our first time publishing in Quarto Pub the command above will prompt you to authenticate. We will need to confirm the authorization and create a Quarto Pub account to first. 
 
 3. Then, you will be offered the option to change the document type if you'd like. And after the confirmation there will be some action on the terminal for rendering the document will be published in Quarto Pub.
 
-![Quarto Pub Publish Example](../fig/11-quartopub-publishexample.png) <br>
+![Quarto Pub Publish Example](../../fig/11-quartopub-publishexample.png) <br>
 
 If there is time, we encourage you to try it yourself.
 
@@ -96,7 +96,7 @@ Another, better, but slightly more involved option for publishing a Quarto docum
 
 When you create a new Quarto file in R Studio recall that you are presented with a choice of Output Formats:
 
-![RStudio output formats](../fig/02-name-new-qmd.PNG)
+![RStudio output formats](../../fig/02-name-new-qmd.PNG)
 
 For the purposes of this workshop we've been using HTML as the output format but other types are available.  You can render your Quarto as a document, a presentation or a *Shiny* app.  With the default installation of RStudio HTML output is most likely to work.  Other formats may require additional R packages and/or code libraries be installed on your computer.  RStudio also has a templating system to help with creating Quarto files with common elements, YAML metadata and rendering instructions.  This can be very helpful for example if you want to create a weekly or monthly report documenting an ongoing experiment, study or other changing data.
 

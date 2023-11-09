@@ -42,17 +42,17 @@ How do we use document level settings?. How do we edit project level settings? T
 
 At the top of our .Qmd document we see the yaml:
 
-![Qmd yaml header](../fig/08-yaml-header.png)
+![Qmd yaml header](../../fig/08-yaml-header.png)
 
 Opening the `_quarto.yml` file in our project root we see the following default settings:
 
-![New Quarto yml file](../fig/08-quarto.yml-new.png)
+![New Quarto yml file](../../fig/08-quarto.yml-new.png)
 
 ### Project and Document settings Hierarchy
 
 Similar to CSS, Quarto uses a cascading style of options. Starting from the project-level `_quart0.yml` document, Quarto gathers all specified options ending with the document-level options. All are combined and applied to the specific Quarto document. If there are any options that differ between the documents, the more specific option wins - i.e. the document-level option will be applied. 
 
-![options hierarchy](../fig/08-cascading-options.png)
+![options hierarchy](../../fig/08-cascading-options.png)
 
 ## Document level setting 
 
@@ -76,11 +76,11 @@ Additional options can be further nested under execute.
 
 Let's see how it looks in our paper to add the options from our first code chunk: 
 
-![global Quarto code options](../fig/08-global-code-options.png)
+![global Quarto code options](../../fig/08-global-code-options.png)
 
 > ## Tip: R Markdown global options syntax works in Quarto
 > If you've previously used R Markdown and have old documents or don't want to learn a new workflow quite yet, Quarto is backwards compatible with R Markdown, so you may also use the old `chunk$set` syntax as below:
-> ![R Markdown global code options](../fig/07-setup-chunk.png)
+> ![R Markdown global code options](../../fig/07-setup-chunk.png)
 >
 {: .callout}
 
@@ -133,7 +133,7 @@ project:
 
 So the yml file should now look something like this:
 
-![Quarto yml project setting](../fig/08-quarto.yml-project.png)
+![Quarto yml project setting](../../fig/08-quarto.yml-project.png)
 
 > ## Note: R Markdown method for setting working directory also works in Quarto
 >
@@ -186,7 +186,7 @@ df <- read_csv("./output/data/preprocessed-GARP-TSST-data.csv")
 > > ## Solution:
 > > 
 > > We would get an error because we haven't loaded tidyverse yet!
-> > ![load data error](../fig/08-error-load-data.png)
+> > ![load data error](../../fig/08-error-load-data.png)
 > {: .solution}
 {: .challenge}
 
@@ -208,7 +208,7 @@ There are at least a few benefits to running code in this modular fashion instea
 
 Again, let's test this out in our generic Quarto document. After our first figure add a new code chunk:
 
-![basic code chunk](../fig/08-blank-code-chunk.png)
+![basic code chunk](../../fig/08-blank-code-chunk.png)
 
 We're just going to test out the same figure again so we can verify this new method works. So in the heart rate anlysis code chunk, delete the existing code and add the following instead:
 
@@ -237,7 +237,7 @@ plot
 
 It should look like this:
 
-![03-HR-analysis.R externally sourced in Qmd Document](../fig/08-HR-external-code.png)
+![03-HR-analysis.R externally sourced in Qmd Document](../../fig/08-HR-external-code.png)
 
 DON'T forget to add chunk name and caption for Figure 3 (we can use the same name and caption as before). Remember we don't need to add options since we defined them globally.
 
