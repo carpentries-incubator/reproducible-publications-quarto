@@ -24,8 +24,8 @@ Now, let's dive in to how to use version control.
 ## Using Version Control in RStudio
 
 There are two places we can interact with Git in the RStudio interface.
-1. Menu bar ![Git menu bar](../fig/05-git-top-menu.PNG) <br>
-2. Environment/History pane ![git environment panel](../fig/05-git-environment-window.PNG)
+1. Menu bar ![Git menu bar](../../fig/05-git-top-menu.PNG) <br>
+2. Environment/History pane ![git environment panel](../../fig/05-git-environment-window.PNG)
 
 Ok, but what do all the options mean? We won't go through them all, but here are the basics to get started versioning your project.
 
@@ -44,7 +44,7 @@ You may have a few to many commits in a single work session.
 
 When you commit, you add a "commit message" aka a short line of text (recommended 50 characters or less) that describes the changes that were made to the file(s) you added. This helps keep your versions organized and makes it easier to go back to remember what you did or to restore your work to exactly the version needed if you make a mistake or want to implement a change.
 
-![git add commit workflow](../fig/05-git-add-commit.svg)
+![git add commit workflow](../../fig/05-git-add-commit.svg)
 
 #### Git Workflow with GitHub
 
@@ -73,15 +73,15 @@ Now, let's open up the report in this repository that's already been drafted. Yo
 
 In the title add "(Carpentry Workshop Version)" and make sure to save it.
 
-![git panel add](../fig/05-editing.png)
+![git panel add](../../fig/05-editing.png)
 
 Now, in the Environment panel, toggle to the Git tab. You'll see the file that was edited with a check mark next to it. Click the check mark to "add" . Note that if you edited more than one file you could choose any or all of the documents to "add".
 
-![git panel add](../fig/05-first-edit.PNG)
+![git panel add](../../fig/05-first-edit.PNG)
 
 Now, click commit. A dialogue box will pop up. You'll need to add a commit message to proceed. Add something about editing the title. The difference between your files will show in the bottom panel.
 
-![commit in RStudio](../fig/05-rstudio-commit.png)
+![commit in RStudio](../../fig/05-rstudio-commit.png)
 
 Hit commit and a dialogue box will show a completed commit. Warning: **DO NOT PUSH** anything yet!
 
@@ -111,9 +111,9 @@ You made your first commit!
 >
 > > ## Solution:
 > > 1) open the .gitignore file by double-clicking on it in the file view pane, on a new line add `data/`. Save the file and don't forget to commit it.
-> > ![.gitignore file](../fig/05-gitignore-file.PNG)
+> > ![.gitignore file](../../fig/05-gitignore-file.PNG)
 > > 2) Click on the settings gear in the Git tab of the environment pane. Click on `gitignore`. On a new line add `data` and click save. Don't forget to commit the `.gitignore` file.
-> > ![.gitignore in git pane](../fig/05-gitignore-git-pane.PNG)
+> > ![.gitignore in git pane](../../fig/05-gitignore-git-pane.PNG)
 > {: .solution}
 {: .challenge}
 
@@ -133,7 +133,7 @@ Github used to allow simple Username & Password authentication but now Github re
 1. On Github.com go to your account setting -> Developer Settings -> Personal access tokens or this link: [https://github.com/settings/tokens](https://github.com/settings/tokens)
 1. Any tokens you have created in the past will be listed there and you can click "Generate new token" button.  Set an expiration date for your new token and a scope.  For this workshop the "Repo" scope should be sufficient.  Then Generate your new Token with the button at the bottom of the page.
 
-![PAT options on GitHub](../fig/10-github-new-PAT-options.png)
+![PAT options on GitHub](../../fig/10-github-new-PAT-options.png)
 * On the next screen github shows you the new token.  **Be sure to copy it** as you only get one chance to see the token text.
 
 > ## Note: 
@@ -145,7 +145,7 @@ Github used to allow simple Username & Password authentication but now Github re
 ## Getting your repository's URL from Github
 You can get the address of your repository from Github by navigating to your repository on Github.com and clicking the green "Code" button.  
 
-![Copy Repo URL from GitHub](../fig/10-github-clone.png)
+![Copy Repo URL from GitHub](../../fig/10-github-clone.png)
 
 With that address you can complete setting the origin URL in the next step. 
 
@@ -165,7 +165,7 @@ Be sure **your** Github username is part of the URL.
 
 After you've updated the Origin URL from the command line go back to R Studio --> Tools --> Project Options --> Git/SVN to verify you have the "Origin" field filled in.  It should look like this.
 
-![RSTudio Project Options Git/SVN](../fig/10-rstudio-project-options-git-with-https-origin.png) 
+![RSTudio Project Options Git/SVN](../../fig/10-rstudio-project-options-git-with-https-origin.png) 
 
 
 ## Push your local changes up to your repository Github.
@@ -173,7 +173,7 @@ With authentication set up and your local copy of your repository pointing to Gi
 
 When you are prompted enter your Github username and then paste in your Personal Access Token (PAT) when prompted for your github password.
 
-![RStudio PAT Password Prompt](../fig/10-git-mac-password-prompt.png)
+![RStudio PAT Password Prompt](../../fig/10-git-mac-password-prompt.png)
 
  Let's try it and see if it works.
 

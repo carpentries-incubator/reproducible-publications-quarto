@@ -60,14 +60,14 @@ In our workshop project, renv has already been set up, and you can confirm it by
 But let's take a step back and first understand how the R system typically handles packages you install to use in your project.
 A package is a collection of functions, data, and compiled code in a well-defined format, while libraries are the location where packages live. You may have multiple projects with different dependencies when using R, but calling packages from the same library. By default, we have two libraries, System and User:
 
-![Understanding how the R System works](../fig/renv-fig1.png)
+![Understanding how the R System works](../../fig/renv-fig1.png)
 
 The problem with this approach is that, most likely, you will be handling multiple projects in different points in time and with unique dependencies. Every time you start a fresh project and use the `install.packages()` function in R, you will be grabbing the latest version of a given package available in CRAN or another repository and re-installing it, replacing the package in your environment, and potentially causing issues when you re-run your code and render your Quarto documents using earlier versions of that same package.
 
 Renv creates a local project library for each project encapsulating dependencies so you can easily re-run results for each project using the original versions of packages.   
 
 
-![Project local library](../fig/renv-fig2.png)
+![Project local library](../../fig/renv-fig2.png)
 
 
 ## Using renv
@@ -78,11 +78,11 @@ Now that you know about renv we always recommend you always set it up when start
 
 1) When creating a new project using the new project wizard, make sure to select the option `Use renv with this project`:
 
-![Renv for new project](../fig/renv-fig3.png)
+![Renv for new project](../../fig/renv-fig3.png)
 
 2) If you missed the step described above but suddenly realized you would rather not continue without renv, don't worry. You may also enable renv by clicking Tools>Project Options...>Environments and selecting to use renv for this project: 
 
-![Environments](../fig/renv-fig4.png)
+![Environments](../../fig/renv-fig4.png)
 
 3) Another alternative is to install the renv package, then load it and run the `renv::init()` command in the console pane:
 
@@ -95,12 +95,12 @@ renv::init()
 This creates the initial `renv.lock` file. The renv.lock is a JavaScript Object Notation (JSON) file generated in the project directory, which records the precise versions of each package that was installed, along with other metadata such as package sources and checksums. The example below helps us to understand the anatomy of a renv.lock file:
 
 
-![Anatomy of a renv.lock file](../fig/renv-fig4.png)
+![Anatomy of a renv.lock file](../../fig/renv-fig4.png)
 
 
 This process will also create a `.Rprofile`, which is used to activate renv for new R sessions, and an renv folder containing the files specified below:
 
-![Renv](../fig/renv-fig6.png)
+![Renv](../../fig/renv-fig6.png)
 
 
 What if you need to update packages for your project? Then, whenever you start using a new package (or otherwise change your project's dependencies), run `renv::snapshot()` to update the lockfile.  Finally, if you are using git and start using renv, you will notice that renv creates several files and directories in addition to `renv.lock`. When done, you should commit the files to your project's git repository.
