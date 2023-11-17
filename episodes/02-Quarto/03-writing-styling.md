@@ -152,6 +152,6 @@ When we render it, we will get: <br>
 
 If you would like to explore more the *Fence Divs* and other cool functionalities check the [Divs and Spans documentation](https://quarto.org/docs/authoring/markdown-basics.html#divs-and-spans).
 
-> ## Time to Commit!
-> Make sure to render and then commit your changes to GitHub. Add your changed files and commit with the following message: "Added Formatting"
+> ## Time to Render!
+> Let's see how your document looks like.
 {: .checklist}

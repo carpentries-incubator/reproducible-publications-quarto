@@ -282,7 +282,3 @@ Success! And you'll notice that the global code chunk options were applied to th
 > > {: .language-r}
 > {: .solution}
 {: .challenge}
-
-> ## Time to Commit!
-> Now, let's commit the changes you have made. 
-{: .checklist}
