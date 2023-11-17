@@ -307,7 +307,3 @@ bronars_simulation_data <- read_csv("data/bronars_simulation_data.csv")
 > Quarto will always display the results of inline code, but not the code. Inline expressions do not take knitr options.
 >
 {: .callout}
-
-> ## Time to Commit!
-> Now, let's commit the changes you have made. 
-{: .checklist}
