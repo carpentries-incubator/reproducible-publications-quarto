@@ -9,7 +9,7 @@ We will need the following account(s) and software for this workshop:
 - Create Github account (use existing or create new account) 
 - Install Git  
 - Install R & RStudio (Two separate installations: if you are on a windows device, you may need <a href="https://cran.r-project.org/bin/windows/Rtools/">Rtools</a>)
-- Install <a href="https://quarto.org/docs/get-started/">Quarto CLI (version 1.3)</a>
+- Install <a href="https://quarto.org/docs/get-started/">Quarto CLI (version 1.3.45)</a>
 
 
 {% include install_instructions/github.html %}
@@ -55,7 +55,7 @@ Your output should be:
 
 ~~~
 quarto --version
-1.3.361
+1.3.45
 ~~~
 {: .output}
 
@@ -84,7 +84,6 @@ We will be covering the purpose of using packages and recap different ways to in
  install.packages("tidyverse") 
  install.packages("BayesFactor") 
  install.packages("patchwork")
- install.packages("here")
 
 ~~~
 {: .source}
@@ -93,7 +92,7 @@ We will be covering the purpose of using packages and recap different ways to in
 
 ~~~
   
- install.packages(c("bookdown", "tidyverse", "BayesFactor", "patchwork", "here"))
+ install.packages(c("bookdown", "tidyverse", "BayesFactor", "patchwork"))
 
 ~~~
 {: .source}
