@@ -63,10 +63,6 @@ quarto --version
 
 ## R Packages
 
-We will be using a feature called <a href="https://rstudio.github.io/renv/articles/renv.html">Renv</a>. Renv helps manage library paths and project specific states.
-However, in case there are issues with the workflow, we will use the following packages in the workshop. 
-
-
 Install the following packages in RStudio: `bookdown`, `tidyverse`,`BayesFactor`, `patchwork`. 
 We will be covering the purpose of using packages and recap different ways to install and manage them in RStudio. Nonetheless, pre-installating the packages we will be using for this workshop will save us some precious time since installation time may vary among learners. Here are the steps for two possible approaches you may follow for completing this process: 
 
