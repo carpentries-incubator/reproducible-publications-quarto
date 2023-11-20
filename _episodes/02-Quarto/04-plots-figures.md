@@ -22,7 +22,7 @@ keypoints:
 
 ## Code in Quarto Documents
 
-We've learned about the text-formatting options of Quarto, now let's dive into the code portion of Quarto documents. As we've seen so far, Quarto flips the default in R scripts of prioritizing code over text - instead of needing to use comments to add text such as in R scripts, Quarto Documents are "text-first" and necessiate use of special syntax to add code. In Quarto documents, the syntax to signal the switch to code is called "code chunks". Code chunks are interpreted by Knitr. But what is Knitr? 
+We've learned about the text-formatting options for Quarto in RStudio, now let's dive into the code portion of Quarto documents. As we've seen so far, Quarto flips the "code first" default of R scripts by prioritizing code over text. Instead of using comments to add text, Quarto Documents use a "text-first" default and require use of special syntax to add code. In Quarto documents, the syntax to signal the switch to code is called "code chunks" in RStudio (referred to as "code cells" in other environments). Code chunks are interpreted by Knitr. But first, what is Knitr? 
 
 ## What is Knitr?
 
@@ -30,22 +30,24 @@ But what is Knitr? Knitr is the engine in RStudio which creates the “dynamic�
 
 ## How it works
 
-Code chunks are sent to a preceding stage of processing by Knitr, which "knits"/renders the code output and text together. Secondly, Quarto processes the code output and displays it in the document format of our choice - i.e. Knitr runs the lines of code for a plot in a code chunk, joins it to the markdown text portions, and then Quarto outputs the "knitted" text and render code together into an html document. 
+First, code chunks are sent to a preceding stage of processing by Knitr, which runs the code and generates any plots or figures and then "knits" the code output and text together. Next, Quarto outputs the "knitted" text and rendered code together into an html document (or other document type as indicated in your configuration file). 
 
-There are two main ways to process code with Knitr in Quarto documents:
+There are two ways to add code to Quarto documents:
 
 1. Code Chunks
 2. Inline Code
 
-First, we're going to talk about code chunks for including substantial portions of code into our narrative, such as generating figures and plots. There are a plethora of options that become available to us when using code chunks so this tends to be the more complex part of Quarto documents. Now, sometimes you just need to do a quick calculation - like a count of total observations in your data or the mean of one of your variables. In those cases, it may not be worth setting up a code chunk to calculate those values, so after code chunks, we will see how to add inline code - which allows one to add a quick line of code or a single function to be executed within the text portion of the document. But let's start with code chunks.
+First, we're going to talk about code chunks for including substantial portions of code into our narrative, such as generating figures and plots. There are a plethora of options that become available to us when using code chunks so this tends to be the more complex part of Quarto documents. 
+
+But sometimes you just need to do a quick calculation to add to your narrative - such as a count of total observations in your data or the mean of one of your variables. In those cases, it may not be worth setting up a code chunk to calculate those values, so Quarto also provides the ability to use inline code.  
 
 ## Using Code Chunks
 
-Code chunks (also called "code blocks") are the preferred option when you need to do something more sophisticated with your code than inline code, such as building plots or tables.  They also incorporate syntax which allows modifications to how that code is rendered and styled in your final output. We’ll learn more about that as we walk through the “anatomy” of a code chunk.
+Code chunks (also called "code blocks" or "code cells") are the preferred option when you need to write more than a line or two of code, such as building plots or tables. More than just a vehicle to run code, they also allow modifications to how code is rendered and styled in your final output. We’ll learn more about that as we walk through the “anatomy” of a code chunk.
 
 ### Add a Code Chunk
 
-Ok, let's add some code! There are already some plots included in our code but as static images. Now, we will add some additional plots, but generated straight from R code - which are also more reproducible and easier to update than static images. Using code to generate images directly assures us that if there are any changes to the data or code the plots will update automatically. We also don't have to generate the new plots, save them as images, and then add them back into our paper. Not only is this a time-saver, but it also helps prevent version errors! 
+Ok, let's get to some code! There are already some plots included in our code but as static images. Now, we will add some additional plots, but generated straight from R code - which are also more reproducible and easier to update than static images. Using code to generate images directly assures us that if there are any changes to the data or code the plots will update automatically. We also don't have to generate the new plots, save them as images, and then add them back into our paper. Not only is this a time-saver, but it also helps prevent versioning errors! 
 
 Navigate to the end of the paper where it says **"Example 8"**. This is where we will add our first code chunk.
 
@@ -69,7 +71,7 @@ The most basic (empty) code chunk looks like so:
 
 ![blank qmd code chunk](../../fig/08-blank-code-chunk.png)
 
-Other than backticks ``` for code chunks that surround the code top and bottom, the only **required** piece is the specified language (r) placed between the curly brackets. This indicates that the language to read the code is R.
+Can you tell the subtle differences between the visual and source mode in RStudio? That's right - the backticks ```. As seen in this image, the only **required** syntax for a code chunk are the backticks preceding and ending (seen only in source mode) and the specified language (in our case 'r') placed between the curly brackets. 
 
 > ## Fun fact: Other Programming Languages
 > Although we will (mostly) be using R in this workshop, it’s possible to use other programming or markup languages. For example, we have seen that we can use LaTeX code for equations. You can also use Python and a handful of other languages, so if R is not your preferred programming but you like working in the RStudio environment, don’t despair! Other options for languages include: sql, julia, bash, and c, etc. It should be noted, however, that some languages (like Python) will require installing and loading additional packages. 
