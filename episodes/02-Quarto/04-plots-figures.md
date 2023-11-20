@@ -73,29 +73,83 @@ The most basic (empty) code chunk looks like so:
 
 Can you tell the subtle differences between the visual and source mode in RStudio? That's right - the backticks ```. As seen in this image, the only **required** syntax for a code chunk are the backticks preceding and ending (seen only in source mode) and the specified language (in our case 'r') placed between the curly brackets. 
 
+Unless indicated otherwise, we will continue working in **visual mode**.
+
 > ## Fun fact: Other Programming Languages
-> Although we will (mostly) be using R in this workshop, it’s possible to use other programming or markup languages. For example, we have seen that we can use LaTeX code for equations. You can also use Python and a handful of other languages, so if R is not your preferred programming but you like working in the RStudio environment, don’t despair! Other options for languages include: sql, julia, bash, and c, etc. It should be noted, however, that some languages (like Python) will require installing and loading additional packages. 
+> Although we will (mostly) be using R in this workshop, it’s possible to use other programming or markup languages. For example, we have seen that we can use LaTeX code for equations. You can also use Python and a handful of other languages, so if R is not your preferred programming but you like working in the RStudio environment, don’t despair! Other options for include: sql, julia, bash, and c, etc. It should be noted, however, that some languages (like Python) will require installing and loading additional packages. 
 {: .callout}
 
 
 ## Add the code to our Paper
 
-Now, let's open our `03_HR_analysis.R` script in our `code` folder. We will insert the code of this script into our current working file. To do this, copy the code and paste it in-between the two lines with backticks and `{r}`.
+Now, let's add our first code by copying and pasting the code found below into the our empty code chunk (aslo found in the `code` folder as `03_HR_analysis.R`. 
 
-![heartrate code in chunk](../../fig/07-heartrate-code.PNG)
+~~~  
+library(tidyverse)
+library(BayesFactor)
 
-## Run the code in a code chunk
-Now, to check to make sure our code renders, we could click the "Render" button as we have been doing to check on the output of our Quarto file. However, with code chunks we have other options for running and debugging code that don't require us to wait for the file to render. 
+#Read data
+df <- read_csv("data/processed/preprocessed-GARP-TSST-data.csv")
 
-1) Run from code chunk (green play button on the right top corner). This allows us to run one specific code chunk.
+#Convert df to long-format
+df_long <- df %>%
+  pivot_longer(cols = c(HR_Baseline_Average, HR_TSST_Average),
+               names_to = "Measurement",
+               values_to = "HR")
+
+#Drop missing values
+df_long <- df_long %>% drop_na(HR)
+
+#Make sure columns are coded as factors for analysis
+df_long$VPN <- as.factor(df_long$VPN)
+df_long$Measurement <- as.factor(df_long$Measurement)
+df_long$Condition <- as.factor(df_long$Condition)
+
+#Bayesian Analysis
+BF <- anovaBF(formula = HR ~ Measurement*Condition + VPN,
+              data = df_long,
+              whichRandom = "VPN")
+
+#Evidence for interaction term
+BF_interaction <- BF[4]/BF[3]
+
+BF_interaction
+
+#Summarize to mean / SEM for plot
+df_long2 <- df_long %>%
+  group_by(Measurement, Condition) %>%
+  summarize(mean_value = mean(HR, na.rm = T),
+            sem = sd(HR, na.rm = T)/sqrt(n()))
+
+#Create plot
+plot <- ggplot(df_long2, aes(Measurement, mean_value, group = Condition, color = Condition)) +
+  geom_pointrange(aes(ymin=mean_value-sem, ymax= mean_value+sem)) +
+  geom_line() +
+  theme_classic() +
+  scale_x_discrete(labels = c("Baseline",
+                              "TSST-G/Control")) +
+  ylab("Mean Heartrate (BPM)") +
+  scale_colour_grey(start = 0.5, end = 0.2) +
+  theme(legend.position = "top")  
+~~~
+{: .language-r}  
+
+## Run the code in a code chunk 
+To make sure our code renders, we could click the "Render" button as we have been doing to check if the document generates successfully. However, with code chunks we have other options for running and debugging code that don't require us to wait for the file to render. This is particularily useful as we add more code to the document and the render time increases. Let's explore our options:
+
+### 1) Run from code chunk 
+
+See green play button on the right top corner? This allows us to run code from that specific code chunk.
 
 ![run from code chunk](../../fig/07-run-from-chunk.png)
 
-2) Run menu - this gives more options for running code chunks (chunks), including the current one, the next one, all chunks, etc. 
+### 2) Run menu
+In the editor menu there is an icon that says Run with an arrow pointing left. This menu provides more options for running code chunks, including the current chunk, the next chunk, all chunks, etc. 
 
 ![run code menu](../../fig/07-run-options.png)
 
-3) Keyboard shortcuts: 
+### 3) Keyboard shortcuts: 
+Of course, there are shortcuts to do all of the actions found in the Run menu (that is if you can remember them all).
 
 **Task**	| **Windows & Linux**	| **macOS**
 ---       |---                  |---
@@ -108,9 +162,14 @@ Run all chunks	| Ctrl+Alt+R	| Command+Option+R
 Go to next chunk/title	| Ctrl+PgDown	| Command+PgDown
 Go to previous chunk/title	| Ctrl+PgUp |	Command+PgUp
 
-Run your code with one of the given methods.
+Run your first code chunk with one of the three options given above. 
 
 Well, shoot! We're getting an error:
+
+~~~
+Error: 'data/processed/preprocessed-GARP-TSST-data.csv' does not exist in current working directory ('/Users/torinw/Documents/Quarto-Project-Example/report').
+~~~
+{: .error}
 
 ![directory error code chunk](../../fig/07-path-code-error.png)
 
@@ -118,7 +177,7 @@ If we go to the bottom of the code chunk we'll see more details on the error:
 
 ![path error details](../../fig/07-path-error-details.png)
 
-This is a path error. The reason we're seeing this is that our paper is located in the report/source directory while our test document was automatically created in the project root directory. The path from the report/source directory to the data we're trying to read is not correct any longer. 
+This is a path error. But why are we seeing this error? Unfortunately, there is a slight discrepancy between the behavior of regular R scripts run in R projects and Quarto projects. R scripts will always use the root folder of the project as the working directory, while Quarto documents use the folder where the qmd file is located as the working directory. If you were learning on your own you may have been majorly confused by this minute difference. No worries, we'll see how to change the default working directory in the next episode. 
 
 ### Fixing Relative Path Errors
 
