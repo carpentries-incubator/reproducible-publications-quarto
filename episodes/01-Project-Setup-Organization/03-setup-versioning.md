@@ -208,13 +208,17 @@ Now, in the Environment panel, toggle to the Git tab. You'll see the file that w
 
 ![git panel add](../../fig/05-first-edit.PNG)
 
+Have you noticed the blue 'M' icon in the Git Tab before you add your commit message and stage your edits? Do you know what it means? That 'M' indicates tracked files that have been modified. However, there are other flags depending on your interactions with project files—such as deletions, renames, or additions. Additionally, files might be ignored and, therefore, not tracked at all, as illustrated below.
+
+![git panel add](../../fig/05-git-icons.png)
+
 Now, click commit. A dialogue box will pop up. You'll need to add a commit message to proceed. Add something about editing the title. The difference between your files will show in the bottom panel.
 
 ![commit in RStudio](../../fig/05-rstudio-commit.png)
 
 Hit commit and a dialogue box will show a completed commit. Warning: **DO NOT PUSH** anything yet!
 
-You made your first commit!
+Congrats! You made your first commit!
 
 > ## Discussion: (optional) Utilizing .gitignore files
 > a `.gitignore` file is used to signal to Git to NOT track versions of specific files. One instance where this is used in a data analysis project is with data files that are too large to be uploaded to GitHub.
