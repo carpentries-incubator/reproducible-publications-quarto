@@ -1,7 +1,7 @@
 ---
 source: Rmd  
 title: "Good Practices for Managing Projects in RStudio"  
-teaching: 30
+teaching: 20
 exercises: 10
 questions:
 - What are good research project management practices?
@@ -114,7 +114,7 @@ For our project we’re working in today, we used the following setup for folder
 
 ![directory tree](../../fig/04-directory-tree.png)
 
-> ## Challenge 4.1: Take a few minutes to look through the workshop project files
+> ## Challenge 1: Take a few minutes to look through the workshop project files
 > 
 > Please take some time to look through the project files. Either the screenshot above, or you may browse the files on GitHub at <[https://github.com/carpentries-incubator/Reproducible-Publications-with-RStudio-Example/tree/quarto](https://github.com/carpentries-incubator/Reproducible-Publications-with-RStudio-Example/tree/quarto)>. What do each of the directories (folders) contain? What is their purpose? 
 > 
@@ -167,7 +167,7 @@ The three principles of file-naming are:
    
 Adapted from [https://datacarpentry.org/rr-organization1/01-file-naming/index.html](https://datacarpentry.org/rr-organization1/01-file-naming/index.html). For more tips on file naming, check: [The Dos and Don'ts of File Naming](https://www.library.ucsb.edu/sites/default/files/dls-n01-2021-filenaming.pdf).
 
-> ## Challenge 4.2: File name syntax
+> ## Challenge 2: File name syntax
 > 
 > Given the filename `CC-101_1_data.csv` and `2022-01-01_data_analyses.R`, why does it make sense to use both `-` and `_` as delimiters/separators?
 > 
@@ -201,7 +201,7 @@ If the example was on a Mac or Linux computer you would have `home` instead of `
 
 In the complete path example you can see that the code is not going to be portable. If someone other than Wilma Flintstone wanted to run the R script they would have to alter the path to match their system.
 
-> ## Challenge 4.3: relative paths
+> ## Challenge 3: relative paths
 > 
 > What would be the relative path needed to refer to the `bronars.pdf` plot (located in the plots directory) from `R-repro-pub.Rproj` (located in the root directory). What is the inversed relative path?
 >
@@ -286,6 +286,6 @@ As mentioned earlier, one of the most powerful and useful aspects of RStudio is 
 
 Perhaps, confusing but we have an additional "type" of project in the RStudio ecosystem called a Quarto project. Thankfully, we don't necessarily have to pick between using RStudio and Quarto projects because a Quarto project is just an RStudio project - with some additional capabilities. That addition is enhanced project and style controls in the form of a YAML file called `_quarto.yml` . To keep things simple, if you are going to use Quarto documents, use Quarto Projects, if you aren't, stick to an R project. And no worries, you can always add a `_quarto.yml` file if you have just an RStudio Project which can retroactively turn your project into a Quarto project. Let's see how to create a Quarto project in the next episode. 
 
-> ## Challenge 4.4: R Project in “root” folder
+> ## Challenge 4: R Project in “root” folder
 > `.Rproj` files must be at the top level of the root directory of your project folder/directory. What is the root directory again (look back at the relative paths intro)?  
 {: .challenge}

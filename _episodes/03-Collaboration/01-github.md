@@ -1,7 +1,7 @@
 ---
 title: "Collaborating via Github"
-teaching: 15
-exercises: 10
+teaching: 20
+exercises: 15
 questions:
 - "How do I authenticate with Github?"
 - "How do I put my project on Github?"
@@ -16,10 +16,6 @@ keypoints:
 - Setting up R Studio to authenticate with Github using a Personal Authentication Token (PAT).
 - Setting the Git repository _Origin_ in your R Studio project enables _pushing_ and _pulling_ from your local copy of the repository to the repository on Github.
 ---
-
-**This needs attention! Content moved from ep. 5 from the previous workshop version.**
-
-Now, let's dive in to how to use version control.
 
 ## Using Version Control in RStudio
 
@@ -104,7 +100,7 @@ You made your first commit!
 > {: .solution}
 {: .challenge}
 
-> ## Challenge: (optional) Add the data files/directories to .gitignore
+> ## Challenge 1 (optional): Add the data files/directories to .gitignore
 > Add the data (all of the raw data files) to the `.gitignore`.  
 > Hint: there are two ways to do this.  
 > Hint2: add a forward slash `/` after directories.
@@ -117,11 +113,7 @@ You made your first commit!
 > {: .solution}
 {: .challenge}
 
-**Need to check for flow**
-
-
-
-In [episode 5](../05-setup-versioning/) we learned about using version control as you write your publication.  In this part of the workshop we'll setup Rstudio to authenticate with Github which is necessary to _push_ your changes to Github.
+In Episode "Getting Your project set up with Version Control in RStudio" (../03-setup-versioning) we learned about using version control as you write your publication.  In this part of the workshop we'll setup Rstudio to authenticate with Github which is necessary to _push_ your changes to Github.
 
 Terminology:  Git _Push_ and _Pull_
 
@@ -177,7 +169,7 @@ When you are prompted enter your Github username and then paste in your Personal
 
  Let's try it and see if it works.
 
-> ## Challenge: Push to Github
+> ## Challenge 2: Push to Github
 > 
 > 1. Make a change to one of the files in your project or add a new file.
 > 2. In R Studio's Git panel check the box to Stage the changed file.

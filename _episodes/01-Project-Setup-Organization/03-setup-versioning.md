@@ -1,7 +1,7 @@
 ---
 source: Rmd  
 title: "Getting Your project set up with Version Control in RStudio"  
-teaching: 30
+teaching: 20
 exercises: 10
 questions:
 - How do I start or continue a project with Git versioning?

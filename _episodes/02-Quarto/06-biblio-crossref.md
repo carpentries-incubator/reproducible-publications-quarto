@@ -64,7 +64,7 @@ Rstudio will search the [DOI](https://support.datacite.org/docs/doi-basics) API 
 This item will be automatically listed in your references.bib file and will help you manage your citations more efficiently. Pretty cool, huh? If you want to cite this same item again you can type `@` and the first letters of the item name which will be auto-completed by Rstudio. For parenthetical citations you will have to type the key between brackets and for in-text narrative citations, you only need to type in the key.
 Note that when you hover over the citation, you will preview the full reference for the cited item that will be listed at the bottom of the manuscript. This feature helps you to identify if you have to edit anything in the .bib file your citation is calling. Also, note that all citations will be included at the end of your document under a reference list.
 
-> ## Challenge 9.1 - Insert a Citation Using the DOI Lookup Function
+> ## Challenge 1 - Insert a Citation Using the DOI Lookup Function
 >
 > Following the same process described,
 > insert a parenthetical citation to the publication “Welcome to the tidyverse”
@@ -103,7 +103,7 @@ csl: apa.csl
 
 Save and render the document to see how citations and references have changed. This same process could be followed for any citation style required by the university, the journal or conference you are planning to submit your manuscript to.  
 
-> ## Challenge 9.2 - Changing the Citation Style
+> ## Challenge 2 - Changing the Citation Style
 >
 > How can you go back to using Chicago Style?
 >
@@ -135,7 +135,7 @@ To demonstrate that let's include the bibtex `@key` for an item that was not cit
 
 Let’s try!
 
-> ## Challenge 9.3 - Adding references you have not cited
+> ## Challenge 3 (optional): Adding references you have not cited
 >
 > We have used a few packages in our paper that we do not necessarily
 > cite in text. However, it is a good practice to add them to the
@@ -205,14 +205,14 @@ If you wish to add a cross-reference to a figure that was generated via code blo
 `
 And then, enter the @fig-id where you want to note the cross-referece in your paper. 
 
-> ## Challenge 9.4 - Adding cross-reference for code block figures
+> ## Challenge 4: Adding cross-reference for code block figures
 > Your turn! Include a cross-reference to Figure 3. In a previous lesson we added a caption for figure 3: `fig-cap = "Fig 3: Mean heart rate of stress and control groups at baseline and during intervention.`. How we would have to tweek that a bit to make the cross-referencing render correctly?
 >
 > > ## Solution:
 > > 1) Add a label (id) e.g. `#| label: fig-fig3`
 > > 2) Make sure the caption is correctly represented `#| fig-cap: "Fig 3: Mean heart rate of stress and control groups at baseline and during intervention"`
 > > 3) Call the figure using the assigned id `@fig-fig3`
-> > 
+> > 4) Render it to check how it looks like. 
 > > **FIXME: Add screenshot**
 > >
 > > {: .output}
