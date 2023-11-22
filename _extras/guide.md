@@ -10,7 +10,7 @@ title: "Instructor Notes"
 - During Episode 5, when creating a project from GitHub, mention or quickly show that they also have the option to create a new project from scratch and set up a GitHub repository. If there is time, and depending on the entry knowledge level of the cohort, there could be some more explanation on the differences between these two. 
 - During Episode 9, remember learners that Zotero will be only enabled for those who have an account. 
 - Also on Episode 9, some learners may experience issues with the DOI lookup feature. This seems to be a bug with the IDE, or some underlying unreliability of the services providing the DOIs. See open issue: https://github.com/rstudio/rstudio/issues/9863
-- Cheasheets to recommend:[DataCamp](https://images.datacamp.com/image/upload/v1676540721/Marketing/Blog/Quarto_Cheat_Sheet.pdf) and [Rstudio - Quarto]
-(https://rstudio.github.io/cheatsheets/html/quarto.html).
+- Cheasheets to recommend:(DataCamp)[https://images.datacamp.com/image/upload/v1676540721/Marketing/Blog/Quarto_Cheat_Sheet.pdf] and (Rstudio - Quarto)
+[https://rstudio.github.io/cheatsheets/html/quarto.html].
 
 {% include links.md %}
