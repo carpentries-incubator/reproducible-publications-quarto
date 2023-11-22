@@ -17,7 +17,7 @@ keypoints:
 - Setting the Git repository _Origin_ in your R Studio project enables _pushing_ and _pulling_ from your local copy of the repository to the repository on Github.
 ---
 
-In Episode "Getting Your project set up with Version Control in RStudio" (../03-setup-versioning) we learned about using version control as you write your publication.  In this part of the workshop we'll setup Rstudio to authenticate with Github which is necessary to _push_ your changes to Github.
+In Episode [Getting your project set up with Version Control in RStudio](../03-setup-versioning) we learned about using version control as you write your publication.  In this part of the workshop we'll setup Rstudio to authenticate with Github which is necessary to _push_ your changes to Github.
 
 Terminology:  Git _Push_ and _Pull_
 
