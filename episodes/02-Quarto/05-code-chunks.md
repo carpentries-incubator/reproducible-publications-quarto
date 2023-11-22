@@ -1,8 +1,8 @@
 ---
 source: Rmd  
 title: "Getting fancy with code chunks"  
-teaching: 50
-exercises: 20
+teaching: 40
+exercises: 10
 questions:
 - "How do I run external scripts in an Quarto document?"
 - "How can I avoid issues with relative paths?"
@@ -90,7 +90,7 @@ Let's see how it looks in our paper to add the options from our first code chunk
 {: .callout}
 
 
-> ## CHALLENGE 7.4 (optional) global & individual code chunk options  
+> ## CHALLENGE 1 (optional) global & individual code chunk options  
 >
 > How would appear in our html document if we render a code chunk with the following options?  
 > ```
@@ -178,7 +178,7 @@ df <- read_csv("./output/data/preprocessed-GARP-TSST-data.csv")
 ```
 {: .language-r}
 
-> ## Challenge 8.2: Order matters (optional)
+> ## Challenge 2: Order matters (optional)
 >
 > What would happen if we loaded the data before we loaded the libraries?
 > Try it out!
@@ -239,7 +239,7 @@ It should look like this:
 
 ![03-HR-analysis.R externally sourced in Qmd Document](../../fig/08-HR-external-code.png)
 
-DON'T forget to add chunk name and caption for Figure 3 (we can use the same name and caption as before). Remember we don't need to add options since we defined them globally.
+**Attention:** DON'T forget to add chunk name and caption for Figure 3 (we can use the same name and caption as before). Remember we don't need to add options since we defined them globally.
 
 > ## Time to Run!
 > Let's see if our code worked when generated from an external script 
@@ -265,7 +265,7 @@ Success! And you'll notice that the global code chunk options were applied to th
 >
 {: .callout}
 
-> ##  8.3: Your turn! Create Figure 4 with the external code
+> ## Challenge 3: Your turn! Create Figure 4 with the external code
 > 
 > First, find `Example 9` in the qmd document for Fig 4 (ctrl-f "Example 9"). We need to add the code for the hormone analysis.
 >

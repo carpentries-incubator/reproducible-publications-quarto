@@ -1,8 +1,8 @@
 ---
 source: Rmd  
 title: "Navigating RStudio and Quarto Documents"  
-teaching: 20
-exercises: 10
+teaching: 15
+exercises: 05
 questions:
 - How do you find your way around RStudio?
 - How do you start an Quarto document in Rstudio?
@@ -75,7 +75,7 @@ package.
 Packages can be installed and updated from the Package tab with the *Install* and
 *Update* buttons at the top of the tab. We have asked you to install a few packages prior to the workshop following the [setup instructions](https://github.com/UCSBCarpentry/Reproducible-Publications-with-RStudio/blob/main/setup.md) using the `install.packages()` command. Let's now make sure you have all of them good to go.
 
-> ## CHALLENGE 2.1 - Checking for Installed Packages
+> ## CHALLENGE 1 - Checking for Installed Packages
 > Which command would you use to check for packages ready for use?
 >> ## SOLUTION
 >> To see what packages are installed, use the `installed.packages()` command. This will return a matrix with a row for each package that has been installed. 
@@ -114,7 +114,7 @@ If you toggle the source button, you will display your quarto document in the "s
 ![Add image source editor](../../fig/02-qmd-source.PNG)
 
 
-> ## CHALLENGE 2.2 - Formatting with Symbols (optional)
+> ## CHALLENGE 2 - Formatting with Symbols (optional)
 > Certain symbols are used to denote formatting that should happen to the text (after render it). Before that, these symbols will show up seemingly "randomly" throughout the text and don't contribute to the narrative in a logical way. In the template qmd document, there are three types of such symbols (`##, **, <>`). Each symbol represents a different kind of formatting (think of your text formatting buttons you use in Word). Can you deduce from the surrounding text how these symbols format the surrounding text?  
 >> ## SOLUTION
 >> `##` is a heading, `**` is to bold enclosed text, and `<>` is for hyperlinks.
