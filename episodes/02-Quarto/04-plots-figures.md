@@ -184,11 +184,11 @@ This is a path error. But why are we seeing this error? Unfortunately, there is 
 We can fix this by adding the correct relative path:
 
 ```
-df <- read_csv("../output/data/preprocessed-GARP-TSST-data.csv")
+df <- read_csv("../data/processed/preprocessed-GARP-TSST-data.csv")
 ```
 Instead of:
 ```
-df <- read_csv("output/data/preprocessed-GARP-TSST-data.csv")
+df <- read_csv("data/processed/preprocessed-GARP-TSST-data.csv")
 ```
 
 Run the code again to make sure it works properly. 
