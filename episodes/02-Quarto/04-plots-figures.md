@@ -262,7 +262,7 @@ Now we are seeing what we would like: a figure without other output to show in o
 
 Before we get to fixing how our code output looks, let's pause a second and give our code chunk a label. While not required for running your code, it is good practice is to give a name to each code chunk because a label is an unique identifier which allows for more advanced options (such as cross-referencing) to work with your qmd files later on:
 
-![code chun k label](../../fig/07-code-label.png)
+![code chunk label](../../fig/07-code-label.png)
 
 Some things to keep in mind
 - The chunk label syntax is always `#| label: chunk-label` with `chunk-label` replaced with your own text
@@ -318,8 +318,6 @@ Let's render one more time to see if our figure outputs how we'd like and has a 
 {: .checklist}
 
 
-
-
 ## Inline Code
 
 What if you only need to make a quick calculation and adding a code chunk seems a little overkill?
@@ -333,7 +331,7 @@ The CSV file contains choice consistency data for ``r nrow(bronars_simulation_da
 When you render you might get an error. Any idea why? That is because we need to make sure to import the dataset we are referring to before the inline code can work. Let's add the following to our chunk at the beginning of the document where we loaded our other data:
 
 ~~~
-bronars_simulation_data <- read_csv("data/bronars_simulation_data.csv")
+bronars_simulation_data <- read_csv("../data/raw/bronars_simulation_data.csv")
 ~~~
 {: .language-r}
 
