@@ -83,7 +83,8 @@ Packages can be installed and updated from the Package tab with the *Install* an
 {: .challenge}
 
 > ## Still missing the packages for this workshop?
-> You may use them using `install.packagesinstall.packages(c("bookdown", "tidyverse", "BayesFactor", "patchwork", "here")`
+> Use the command below:
+`install.packagesinstall.packages(c("bookdown", "tidyverse", "BayesFactor", "patchwork", "here")`
 {: .callout}
 
 ## Starting and Naming a New Quarto Document
