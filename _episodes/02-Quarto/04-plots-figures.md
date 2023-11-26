@@ -173,15 +173,15 @@ Error: 'data/processed/preprocessed-GARP-TSST-data.csv' does not exist in curren
 
 ![directory error code chunk](../../fig/07-path-code-error.png)
 
-If we go to the bottom of the code chunk we'll see more details on the error:
+If we go to the bottom of the code chunk or check the console we'll see more details on the error:
 
 ![path error details](../../fig/07-path-error-details.png)
 
-This is a path error. But why are we seeing this error? Unfortunately, there is a slight discrepancy between the behavior of regular R scripts run in R projects and Quarto projects. R scripts will always use the root folder of the project as the working directory, while Quarto documents use the folder where the qmd file is located as the working directory. If you were learning on your own you may have been majorly confused by this minute difference. No worries, we'll see how to change the default working directory in the next episode. 
+This is a path error. But why are we seeing this error? Unfortunately, there is a slight discrepancy between the behavior of regular R scripts run in R projects and Quarto projects. R scripts will always use the root folder of the project as the working directory, while Quarto documents use the folder where the qmd file is located as the working directory. If you were learning on your own you may have been majorly confused by this minute difference. No worries, we'll see how to change the default working directory globally in the next episode. 
 
 ### Fixing Relative Path Errors
 
-We can fix this by adding the correct relative path:
+For now, we can fix this error by adding the correct relative path:
 
 ```
 df <- read_csv("../data/processed/preprocessed-GARP-TSST-data.csv")
