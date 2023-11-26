@@ -206,8 +206,6 @@ We just saw how to run our code in our code chunks to test that it works and to 
 > Now, let's Render the Quarto file and see how our code output looks in the final html page. 
 {: .checklist}
 
-![code chunk with plot1 code](../../fig/07-render.png) 
-
 Wait... what's all that output in our document? We don't want that in our paper! 
 
 ![Heart rate code no options for code chunk](../../fig/07-HR-output-no-options.PNG)
