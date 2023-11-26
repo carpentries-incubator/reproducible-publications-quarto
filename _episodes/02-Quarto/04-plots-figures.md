@@ -322,11 +322,11 @@ Let's render one more time to see if our figure outputs how we'd like and has a 
 
 What if you only need to make a quick calculation and adding a code chunk seems a little overkill?
 
-You can also include `r code` directly in the text portion of your document. Say you are discussing some of the summary statistics in your manuscript, Quarto makes this possible through HTML/LaTeX inline code which allows you to calculate simple expressions integrated into your narrative. Inline code enables you to insert `r code` into your document to dynamically updated portions of your text. In other words, if your data set changes for any reason the code will automatically update the calculation specified. 
+You can also include `r code` directly in the text portion of your document by enclosing it between single backticks. Say you are discussing some of the summary statistics in your manuscript, Quarto makes this possible through HTML/LaTeX inline code which allows you to calculate simple expressions integrated into your narrative. Inline code enables you to insert \`r code`\ into your document to dynamically updated portions of your text. In other words, if your data set changes for any reason the code will automatically update the calculation specified. 
 
-This can be helpful when referring to specific variables on your data. For example, you should include numbers that are derived from the data as code not as numbers. Thus, rather than writing “The CSV file contains choice consistency data for 10.000 simulated participants” **(Example 7)** , replace the static number with a bit of code that, when evaluated, gives you a dynamic number if anything changes on your dataset. Note that there is not an insert option to do this from the menu in the visual editor, so we need to insert inline code manually with  ```r ```, for example:
+This can be helpful when referring to specific variables on your data. For example, you should include numbers that are derived from the data as code not as numbers. Thus, rather than writing “The CSV file contains choice consistency data for 10.000 simulated participants” **(Example 7)** , replace the static number with a bit of code that, when evaluated, gives you a dynamic number if anything changes on your dataset. Note that there is not an insert option to do this from the menu in the visual editor, so we need to insert inline code manually, for example:
 
-The CSV file contains choice consistency data for ``r nrow(bronars_simulation_data)`` simulated participants.
+The CSV file contains choice consistency data for \`r nrow(bronars_simulation_data)`\ simulated participants.
 
 When you render you might get an error. Any idea why? That is because we need to make sure to import the dataset we are referring to before the inline code can work. Let's add the following to our chunk at the beginning of the document where we loaded our other data:
 
@@ -343,13 +343,13 @@ bronars_simulation_data <- read_csv("../data/raw/bronars_simulation_data.csv")
 > ## CHALLENGE 3 - Adding inline code
 > Suppose we would like to add some information to the sentence we have just adjusted in our manuscript. We would like to include the average for the variable *violation_count* present in the same dataset. Which inline code we would have to add to following sentence?
 > 
-> The CSV file contains choice consistency data for ` `r nrow(bronars_simulation_data.csv)` ` simulated participants, that have been used to determine the power of our food-choice task design to detect choice consistency violations, which averaged ` `enter inline code here` `. 
+> The CSV file contains choice consistency data for `r nrow(bronars_simulation_data.csv)` simulated participants, that have been used to determine the power of our food-choice task design to detect choice consistency violations, which averaged ` `enter inline code here` `. 
 > What inline code would you enter? What number would replace the inline code?
 > 
 > Tip: we will need to use a `dataset$variable` syntax!
 > 
 >> ## Solution:
->> ` `r mean(bronars_simulation_data$violation_count)` `
+>> \`r mean(bronars_simulation_data$violation_count)`\
 >> 5.3924
 > {: .solution}
 {: .challenge}
