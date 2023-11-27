@@ -27,7 +27,7 @@ keypoints:
 
 ### Creates documents using Quarto
 
-As seen, reproducibility implies sharing data, code, and workflows to produce the analysis and compute results. While writing scientific reports, one may choose RStudio IDE to marry all these pieces together and take advantage of the various tools it integrates with. Having a publication while minimizing reproducibility friction can be accomplished with Quarto. [Quarto](https://quarto.org/) is a multi-language, next-generation version of R Markdown from RStudio. It includes new features and capabilities while being able to render most existing Rmd files without any modification. With Quarto, you can: 
+As seen, reproducibility implies sharing data, code, and workflows to produce the analysis and compute results. While writing scientific reports, one may choose RStudio IDE to marry all these pieces together and take advantage of the various tools it integrates with. Having a publication while minimizing reproducibility friction can be accomplished with Quarto. [Quarto](https://quarto.org/) is a multi-language, next-generation version of R Markdown from Posit. It includes new features and capabilities while being able to render most existing Rmd files without any modification. With Quarto, you can: 
 
 * Create dynamic content with Rstudio/R, Python, Julia, and Observable.
 * Author documents as plain text markdown or Jupyter notebooks.
