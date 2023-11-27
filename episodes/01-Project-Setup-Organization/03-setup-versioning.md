@@ -12,26 +12,26 @@ objectives:
 - Copy an existing project on Github to make contributions
 - Open a project with Git versioning in RStudio
 - Learn the basics of Git - pull, add, commit, push
-- Make our first edits in a version controlled project
+- Make our first edits in a version-controlled project
 
 keypoints:
 - R Studio has Git version control functionality built in.
-- _Forking_ a GitHub repository makes a copy of the repository into your personal account on Github.
+- _Forking_ a GitHub repository makes a copy of the repository into your personal account on GitHub.
 - You can _clone_ a git repository from Github to your local disk using RStudio.
-- For this workshop each learner will work with their own _fork_ of the "[R-Repro-pub](https://github.com/UCSBCarpentry/R-repro-pub)" repository.
+- For this workshop, each learner will work with their own _fork_ of the "[R-Repro-pub](https://github.com/UCSBCarpentry/R-repro-pub)" repository.
 ---
 
 ## Using RStudio projects and Version Control in RStudio
 
-Using version control is a powerful feature to make your research more reproducible and better organized. In order to use versioning while working in RStudio the first step is to make sure your work is set up as an R Project, because you may not use the versioning features in RStudio without one. There are three options for doing this depending on your given scenario.
+Using version control is a powerful feature to make your research more reproducible and better organized. In order to use versioning while working in RStudio, the first step is to make sure your work is set up as an R Project because you may not use the versioning features in RStudio without one. There are three options for doing this, depending on your given scenario.
 
 ## Three Methods of Setting up an RStudio Project with version control
 
-There are several options for working with RStudio projects and enabling version control. If you aren't already working in an R Project, you can create a new one. There are three options here:
+There are several options for working with RStudio projects and enabling version control. You can create a new one if you aren't already working on an R Project. There are three options here:
 
 1. **New Directory** - start a brand new RStudio project (with the option of version control).
-2. **Existing Directory** - add existing work to a RStudio project (with the option of setting up version control).
-3. **Version Control** Continue an existing RStudio project that already uses version control (i.e. download it from GitHub).
+2. **Existing Directory** - add existing work to a project in RStudio (with the option of setting up version control).
+3. **Version Control** Continue an existing RStudio project that already uses version control (i.e., download it from GitHub).
 
 ![new r project options](../../fig/05-new-project.PNG)
 
@@ -51,14 +51,14 @@ To start an R project, you would navigate to `File > new project` rather than ju
 
 ![New directory](../../fig/05-new-directory.png)
 
-After choosing `New Directory` chose `new project` on the next menu options.
+After choosing `New Directory`, choose `new project` on the next menu options.
 
-Then, to use version control, make sure to check the "_Create a git repository_" box as highlighted in this screen shot:
+Then, to use version control, make sure to check the "_Create a git repository_" box as highlighted in this screenshot:
 ![new project w/ version control](../../fig/05-brand-new-project.PNG)
 
 *Note when you choose directory name, it will create a new directory in the directory you specified along with an .Rproj file of the same name. Avoid spaces here. underscores "_", dashes "-" or camel case "NewProject" is the recommended way to name this directory/file.
 
-*Optionally, check the box in the bottom left corner "Open in new session" if you want it to appear in a new RStudio window.
+*Optionally, check the box in the bottom left corner, "Open in new session," if you want it to appear in a new RStudio window.
 
 ---
 
@@ -67,9 +67,9 @@ Then, to use version control, make sure to check the "_Create a git repository_"
 
 ![existing project](../../fig/05-existing-directory.png)
 
-We won't take the time to cover this here, but if you've already started a Quarto project WITHOUT version control, you have the option to add version control retrospectively. You can also add existing R files to a project and setup version control if you've done neither. To see a tutorial of this process, please see [episode 14 "Using Git from RStudio" in Version Control with Git](https://swcarpentry.github.io/git-novice/14-supplemental-rstudio/index.html).
+We won't take the time to cover this here, but if you've already started a Quarto project WITHOUT version control, you have the option to add version control retrospectively. You can also add existing R files to a project and set up version control if you've done neither. To see a tutorial of this process, please see [episode 14 "Using Git from RStudio" in Version Control with Git](https://swcarpentry.github.io/git-novice/14-supplemental-rstudio/index.html).
 
-This is by far the most labor intensive way to do it, so remember to add version control at the beginning of any new project.
+This is by far the most labor-intensive way to do it, so remember to add version control at the beginning of any new project.
 
 ---
 
@@ -77,13 +77,13 @@ This is by far the most labor intensive way to do it, so remember to add version
 #### Method #3
 
 ![version controlled](../../fig/05-version-control.png)
-The final option is to continue a version controlled project. This is the option we will do for our workshop.
+The final option is to continue a version-controlled project. This is the option we will do for our workshop.
 
 First, indicate which version control language you will be using (Subversion is another version control system, though less popular than Git)
 
 ![Git or Subversion](../../fig/05-new-project-git.PNG)
 
-When you choose this option there will be a place to paste the url of the GitHub (or other hosting platform) url. The name of the repository will automatically populate. Just choose which directory on your computer you wish to save the project directory and your good to go!
+When you choose this option, there will be a place to paste the GitHub (or another hosting platform) URL. The name of the repository will automatically populate. Just choose which directory on your computer you wish to save the project directory, and you are good to go!
 
 ![continue project from GitHub](../../fig/05-new-project-git-url.PNG)
 
@@ -91,7 +91,7 @@ When you choose this option there will be a place to paste the url of the GitHub
 > ## Our turn!
 > ### Getting the files for the hands-on part of the workshop: 
 > We have a repository already prepared for this workshop at [https://github.com/UCSBCarpentry/Quarto-Project-Example](https://github.com/UCSBCarpentry/Quarto-Project-Example). 
-> We are going to use the third option to download this repository from GitHub and work with it hands on. You will need this repo in your working environment if you would like to follow along through this workshop.
+> We are going to use the third option to download this repository from GitHub and work with it hands-on. You will need this repo in your working environment if you would like to follow along through this workshop.
 > Let’s take a second to acquaint ourselves with GitHub. [At this link](https://github.com/signup), you may sign into your GitHub account or create one if you have not already.
 > {: .source}
 {: .prereq}
@@ -99,17 +99,17 @@ When you choose this option there will be a place to paste the url of the GitHub
 ![GitHub](../../fig/05-github.PNG)
 
 
-The two main sections are files and directories and the README which should contain a narrative description of the project.
+The two main sections are files and directories and the README, which should contain a narrative description of the project.
 
-We are each going to make a copy of this repository to use for this workshop. To do so we will do what's called "forking" on GitHub. A Fork is a copy of a repository that you get to experiment with without disrupting the original project.
+We are each going to make a copy of this repository to use for this workshop. To do so, we will do what's called "forking" on GitHub. A Fork is a copy of a repository that you get to experiment with without disrupting the original project.
 
-On Github in the upper right hand corner of the repository, click on the button that says "Fork" - see highlighted example below:
+On Github, in the upper right-hand corner of the repository, click on the button that says "Fork" - see highlighted example below:
 
 ![fork on GitHub](../../fig/05-fork.PNG)
 
-If you are a member of any organizations on GitHub, you will be asked whether you want to fork to your account or to an organization. Choose your personal account for this workshop.  GitHub will process for a few moments and voila! You have your own copy of the workshop example repository.
+If you are a member of any organizations on GitHub, you will be asked whether you want to fork to your account or to an organization. Choose your personal account for this workshop.  GitHub will process it for a few moments, and voila! You have your own copy of the workshop example repository.
 
-Now, click on the green `Code` drop-down and then click on the copy icon next to the repository url:
+Now, click on the green `Code` drop-down and then click on the copy icon next to the repository URL:
 
 ![copy GitHub repository url](../../fig/05-copy-repo.PNG)
 
@@ -117,11 +117,11 @@ Now, let's return to RStudio:
 
 Click `File > New Project > Version Control > Git`.
 
-So back to the url you copied from GitHub. Navigate again to `File > New Project > Version Control > Git`. Paste in your url and click the "Create Project" button.
+So, back to the URL you copied from GitHub. Navigate again to `File > New Project > Version Control > Git`. Paste in your URL and click the "Create Project" button.
 
 ![start my R project](../../fig/05-git-new-project-clone.png)
 
-Now you have cloned a copy of your git repo from Github to your working environment.  
+Now, you have cloned a copy of your git repo from Github to your working environment.  
 
 If you're working in the JupyterHub environment or have not yet used Git on your machine, you will need to configure your Git identity with your name and email before you'll be able to commit the changes you make during this workshop.  Substitute your name and email address in the commands below and paste them into the Terminal panel of RStudio.
 
@@ -132,21 +132,21 @@ git config --global user.name "Your Name"
 
 Woo hoo! We have the project we're working on for this workshop opened in RStudio and set to use version control!
 
-> ## Git not detected on system path
+> ## Git not detected on the system path
 > 
-> If you are using Git for the first time in RStudio at this point you may be getting a notification that Git isn't set up to work with RStudio.
+> If you are using Git for the first time in RStudio, you may be getting a notification that Git isn't set up to work with RStudio.
 >
 > See the solution below:
 > > ## Solution: 
 > > ![Git not detected on system path](../../fig/05-git-not-detected.png)
 > >
-> > To set it up we need to go to Tools > Global Options
+> > To set it up, we need to go to Tools > Global Options
 > > ![Global Options Git/SVN setup](../../fig/05-setup-git-rstudio.PNG)
 > >
 > > First, make sure "Enable version control interface for RStudio projects" is checked. Next, you must make sure that the Git executable path is correct.
-> > For macs, more than likely the path will have automatically populated. In all likelihood that path is `/usr/bin/git`. Windows users may find that the correct path is also pre-populated, but it is likely that you may need to manually add it by clicking "browse". More than likely your path will be something like `C:/Program Files/Git/bin/git.exe`. If not, search for where Git for Windows was installed (Git) go into the bin folder and select the 'git.exe` file.
+> > For Macs, more than likely, the path will be automatically populated. In all likelihood, that path is `/usr/bin/git`. Windows users may find that the correct path is also pre-populated, but it is likely that you may need to manually add it by clicking "browse". More than likely, your path will be something like `C:/Program Files/Git/bin/git.exe`. If not, search for where Git for Windows was installed (Git), go into the bin folder, and select the 'git.exe` file.
 > > 
-> > Ok! Now that we set that up (by the way, this is a one time set up -it will work now for all future projects in RStudio on your device), we should be able to open our project from GitHub in RStudio.
+> > Ok! Now that we set that up. By the way, this is a one-time set up that, from now on, will for all future projects in RStudio on your device. We should be able to open our project from GitHub in RStudio.
 > {: .solution}
 {: .callout}
 
@@ -165,13 +165,13 @@ is referred to as "add" and "commit":
 
 But what do those words even mean?
 
-**add:** choose a file or files to take a "snapshot" of. Aka what files do you want to add to your next version?
+**Add:** Choose a file or files to take a "snapshot" of. What files do you want to add to your next version?
 
-**Commit:** Taking a "snapshot" of a selected version of your project. The snapshot will *only* include the files you "added", typically only files that you've edited since your last commit.
+**Commit:** Take a "snapshot" of a selected version of your project. The snapshot will *only* include the files you "added", typically only files that you've edited since your last commit.
 
-You may have a few to many commits in a single work session.
+You may have a few too many commits in a single work session.
 
-When you commit, you add a "commit message" aka a short line of text (recommended 50 characters or less) that describes the changes that were made to the file(s) you added. This helps keep your versions organized and makes it easier to go back to remember what you did or to restore your work to exactly the version needed if you make a mistake or want to implement a change.
+When you commit, you add a "commit message," a.k .a. a short line of text (recommended 50 characters or less) that describes the changes that were made to the file(s) you added. This helps keep your versions organized and makes it easier to remember what you did or restore your work to exactly the version needed if you make a mistake or want to implement a change.
 
 ![git add commit workflow](../../fig/05-git-add-commit.svg)
 
@@ -186,29 +186,29 @@ our workflow gets a bit more complex, we add a "pull" and "push" step at the beg
 
 **Push:** *upload* the most recent version of the repository *to* GitHub *from* your local computer.
 
-Put a pin in pulling and pushing for now. For the time being as we edit our paper we will just stick to adding and commiting. At the end we'll see how to use push to GitHub, and you can experiment with pulling later on.
+Put a pin in pulling and pushing for now. For the time being, as we edit our paper, we will just stick to adding and committing. In the end, we'll see how to use push to GitHub, and you can experiment with pulling later on.
 
 ### Tips for working with Git
 
-- You should pull each time you start working on your project after a hiatus, or before each edit if you know a team member is working at the same time.
-- Commit frequently, each commit should be a distinct set of edits which you can summarize in 50 characters or less. Don’t add a bunch of unrelated edits to the same commit, it makes it harder to look back through your “snapshots” and find the right one if you need to.
+- You should pull each time you start working on your project after a hiatus or before each edit if you know a team member is working at the same time.
+- Commit frequently; each commit should be a distinct set of edits that you can summarize in 50 characters or less. Don’t add a bunch of unrelated edits to the same commit; it makes it harder to look back through your “snapshots” and find the right one if you need to.
 - At the end of your work session (or more frequently if you are working at the same time as team members), “push” your commits to the remote repository - this is the only way your local changes get added to your team’s remote repository.
 
 This pull, add, commit, push routine will become second nature. Pulling at the beginning and pushing at the end of your work session becomes a sort of ritual that marks the beginning and end of your work session.
 
 ## Your first edit
 
-Now, let's open up the report in this repository that's already been drafted. You will find it in the `report` directory with filename: `DataPaper-ReproducibilityWorkshop.qmd`.  Open it up and we will make an edit to the yaml front matter of this draft report so we can practice using version control.
+Now, let's open up the report in this already-drafted repository. You will find it in the `report` directory with the filename: `DataPaper-ReproducibilityWorkshop.qmd`.  Open it up, and we will make an edit to the YAML front matter of this draft report so we can practice using version control.
 
 In the title add "(Carpentry Workshop Version)" and make sure to save it.
 
 ![git panel add](../../fig/05-editing.png)
 
-Now, in the Environment panel, toggle to the Git tab. You'll see the file that was edited with a check mark next to it. Click the check mark to "add" . Note that if you edited more than one file you could choose any or all of the documents to "add".
+Now, in the Environment panel, toggle to the Git tab. You'll see the file that was edited with a checkmark next to it. Click the check mark to "add". Note that if you edited more than one file, you could choose any or all of the documents to "add".
 
 ![git panel add](../../fig/05-first-edit.PNG)
 
-Have you noticed the blue 'M' icon in the Git Tab before you add your commit message and stage your edits? Do you know what it means? That 'M' indicates tracked files that have been modified. However, there are other flags depending on your interactions with project files—such as deletions, renames, or additions. Additionally, files might be ignored and, therefore, not tracked at all, as illustrated below.
+Have you noticed the blue 'M' icon in the Git Tab before you added your commit message and staged your edits? Do you know what it means? That 'M' indicates tracked files that have been modified. However, there are other flags depending on your interactions with project files—such as deletions, renames, or additions. Additionally, files might be ignored and not tracked at all, as illustrated below.
 
 ![git panel add](../../fig/05-git-icons.png)
 
@@ -216,24 +216,24 @@ Now, click commit. A dialogue box will pop up. You'll need to add a commit messa
 
 ![commit in RStudio](../../fig/05-rstudio-commit.png)
 
-Hit commit and a dialogue box will show a completed commit. Warning: **DO NOT PUSH** anything yet!
+Hit commit, and a dialogue box will show a completed commit. Warning: **DO NOT PUSH** anything yet!
 
 Congrats! You made your first commit!
 
 > ## Discussion: (optional) Utilizing .gitignore files
-> a `.gitignore` file is used to signal to Git to NOT track versions of specific files. One instance where this is used in a data analysis project is with data files that are too large to be uploaded to GitHub.
+> a `.gitignore` file is used to signal to Git NOT to track versions of specific files. One instance where this is used in a data analysis project is with data files that are too large to be uploaded to GitHub.
 >
-> Now, there are some caveats to this, so in what situations would it make sense to add data to the .gitignore and what situations would it not? What else could you imagine you wouldn't want to track in your research project?
+> Now, there are some caveats to this, so in what situations would it make sense to add data to the .gitignore, and in what situations would it not? What else could you imagine you wouldn't want to track in your research project?
 >
 > > ## Solution:
 > > Why and when would it be a good idea to add data files to the `.gitignore`?
-> > - With raw data files - since they will not be modified (remember: raw data = read only).
+> > - With raw data files - since they will not be modified (remember: raw data = read-only).
 > > - With sensitive data - This should absolutely not be pushed to GitHub
 > >  
-> > Why and when would it not make sense to add data files to the `.gitignore` so they will be available in the Git repository.
+> > Why and when would it not make sense to add data files to the `.gitignore` so they will be available in the Git repository?
 > > - pre-processed data files - these are the data files that are edited - processed from the raw data
 > > - small data files - may not make much of a difference whether they are tracked or not
-> > - the first time you add data files - You can't push data files to GitHub unless they are tracked. So if you want your data on GitHub, but don't want to track it, you must make sure you push once and then add the file to the .gitignore file.
+> > - the first time you add data files - You can't push data files to GitHub unless they are tracked. So, if you want your data on GitHub but don't want to track it, you must make sure you push once and then add the file to the .gitignore file.
 > {: .solution}
 {: .challenge}
 
@@ -243,9 +243,9 @@ Congrats! You made your first commit!
 > Hint2: add a forward slash `/` after directories.
 >
 > > ## Solution:
-> > 1) open the .gitignore file by double-clicking on it in the file view pane, on a new line add `data/`. Save the file and don't forget to commit it.
+> > 1) Open the .gitignore file by double-clicking on it in the file view pane; on a new line add `data/`. Save the file, and don't forget to commit it.
 > > ![.gitignore file](../../fig/05-gitignore-file.PNG)
-> > 2) Click on the settings gear in the Git tab of the environment pane. Click on `gitignore`. On a new line add `data` and click save. Don't forget to commit the `.gitignore` file.
+> > 2) Click on the settings gear in the Git tab of the environment pane. Click on `gitignore`. On a new line, add `data` and click save. Don't forget to commit the `.gitignore` file.
 > > ![.gitignore in git pane](../../fig/05-gitignore-git-pane.PNG)
 > {: .solution}
 {: .challenge}
