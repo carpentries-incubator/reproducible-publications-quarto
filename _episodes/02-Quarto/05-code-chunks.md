@@ -50,7 +50,7 @@ Opening the `_quarto.yml` file in our project root we see the following default 
 
 ### Project and Document settings Hierarchy
 
-Similar to CSS, Quarto uses a cascading style of options. Starting from the project-level `_quart0.yml` document, Quarto gathers all specified options ending with the document-level options. All are combined and applied to the specific Quarto document. If there are any options that differ between the documents, the more specific option wins - i.e. the document-level option will be applied. 
+Similar to CSS, Quarto uses a cascading style of options. Starting from the project-level `_quarto.yml` document, Quarto gathers all specified options ending with the document-level options. All are combined and applied to the specific Quarto document. If there are any options that differ between the documents, the more specific option wins - i.e. the document-level option will be applied. 
 
 ![options hierarchy](../../fig/08-cascading-options.png)
 
