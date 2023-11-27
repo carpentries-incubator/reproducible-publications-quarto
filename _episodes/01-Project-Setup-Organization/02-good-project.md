@@ -6,7 +6,7 @@ exercises: 10
 questions:
 - What are good research project management practices?
 - What is an R Project file?
-- How do you start a new or open an existing R Project?
+- How do you start a new R Project or open an existing one?
 - How do you use version control to keep track of your work?
 
 objectives:
@@ -18,7 +18,7 @@ objectives:
 keypoints:
 - Use best practices for file and folder organization. This includes using relative file paths as opposed to complete file paths. 
 - Make sure that all data are backed up on multiple devices and that you treat raw data as read-only. 
-- We can use Git and GitHub to keep track of what we've done in the past, and what we plan to do in the future. 
+- We can use Git and GitHub to keep track of what we've done in the past and what we plan to do in the future. 
 - Rproj files are pivotal to keeping everything bundled and organized.
 ---
 
@@ -28,16 +28,16 @@ keypoints:
 The ability to integrate code and narratives is a major advantage of Quarto and the RStudio 
 environment, especially considering the scientific process is naturally 
 incremental, and many projects start life as random notes, some code, then a 
-manuscript, and eventually everything ends up a bit mixed together. To 
-complicate things further, we are often working with other collaborators, lab 
-members, graduate students, faculty from the same or different institutions, 
+manuscript, and eventually, everything ends up a bit mixed together. To 
+complicate things further, we often work with other collaborators, lab 
+members, graduate students, and faculty from the same or different institutions, 
 which makes it that much more difficult to keep projects organized. When you 
 throw data into the mix (sometimes huge amounts of it!), it’s integral to use 
 best practices to maintain the integrity of your analysis and to be able to 
-publish high quality and reproducible research. Quarto is a powerful 
-tool, but it can’t be fully utilized unless your project documents, scripts and 
-other files are well-organized. So let’s take a look at RStudio’s features to 
-manage projects and discuss some of the best practices when working with data 
+publish high-quality and reproducible research. Quarto is a powerful 
+tool that can’t be fully utilized unless your project documents, scripts and 
+other files are well-organized. So, let’s take a look at RStudio’s features for
+managing projects and discuss some of the best practices when working with data 
 and collaborators. 
 
 ## Research Project Stress Points
@@ -151,9 +151,9 @@ The three principles of file naming are:
     - `data-analyses-fig1.R` with `-` used consistently as a separator   
   
 2. Human-readable  
-- Name contains a brief description of content  
+- Name contains a brief description of the content  
 - Borrow from clean URL practices:  
-  - "slug," i.e. the part of a URL that is human-readable     
+  - "slug," i.e., the part of a URL that is human-readable     
     - i.e. `data-analyses-fig1.R`   
   
 3. Plays nice with default ordering   
@@ -180,7 +180,7 @@ Adapted from [https://datacarpentry.org/rr-organization1/01-file-naming/index.ht
 {: .challenge}
 
 #### **Use relative paths**  
-This goes hand-in-hand with keeping your project within one “root” directory. If you use complete paths to say, read in your data to RStudio and then share your code with a collaborator, they won’t be able to run it because the complete path you used is unique to your system and they will receive an error that the file is not found. That is why one should always use relative paths to link to other files in the project, i.e., “where is my data file in relation to the script I’m reading the data into?”. The practice of using relative paths is made easier by having a directory set up and keeping all project files within one root project folder. 
+This goes hand-in-hand with keeping your project within one “root” directory. If you use complete paths to, say, read your data to RStudio and then share your code with a collaborator, they won’t be able to run it because the complete path you used is unique to your system, and they will receive an error that the file is not found. That is why one should always use relative paths to link to other files in the project, i.e., “Where is my data file in relation to the script I’m reading the data into?”. The practice of using relative paths is made easier by having a directory set up and keeping all project files within one root project folder. 
 
 Assuming your R script is in a `code` directory and your data file is in a `data` directory, then an example of a relative path to read your data would be:
 
@@ -239,7 +239,7 @@ There are lots of different ways to manage this output. Having an output folder 
 #### **Include a README file**
 For more information about the README file and a customizable template, check this [handout](https://www.library.ucsb.edu/sites/default/files/dls-n03-2021-readme-navy.pdf). Make sure to include citation and license information both for your data [see creative commons license]([https://creativecommons.org/licenses/) and software ([see license types on Github](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository)). This information will be critical for others to reuse and correctly attribute your work. You may also consider adding a separate citation and license file to your project folder. 
 
-Again, there are no hard and fast rules here, but remember, it is important to keep your raw data files separate and ensure they don’t get overwritten after you use a script to clean your data. It’s also very helpful to keep the different files generated by your analysis organized in a folder.
+Again, there are no hard and fast rules here, but remember, keeping your raw data files separate is important to ensure they don’t get overwritten after you use a script to clean your data. It’s also very helpful to keep the different files generated by your analysis organized in a folder.
 
 *what’s this `.Rproj` file? We’ll explain in a bit.
 
