@@ -243,7 +243,7 @@ These options mean the source code will not be printed in the rendered html docu
 
 Now we are seeing what we would like: a figure without other output to show in our paper. 
  
-> ## CHALLENGE 1 - Rendering Codes (optional)
+> ## CHALLENGE 1 - Rendering Codes (Optional)
 > How will some hypothetical code render given the following options?
 > `{r global-chunk-challenge, eval = TRUE, include = FALSE}`
 > 
@@ -286,7 +286,7 @@ The caption information also resides at the top of a code chunk using the `#|` s
 
 **Don't forget to put the caption within quotes `""`.**
 
-> ## CHALLENGE 2: Add a caption to Figure 3
+> ## CHALLENGE 2 (Not Optional): Add a caption to Figure 3
 > Let's add a caption to our heartrate figure. Add the caption:
 > 
 > "Fig 3: Mean heart rate of stress and control groups at baseline and during intervention."
