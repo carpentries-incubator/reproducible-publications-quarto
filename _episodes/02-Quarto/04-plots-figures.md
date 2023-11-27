@@ -5,41 +5,41 @@ teaching: 30
 exercises: 10
 questions:
 - "What is Knitr?"
-- "What are code chunks and how they are structured?"
+- "What are code chunks and how are they structured?"
 - "How can you run code from your Quarto document?"
 - "What are global knitr options?"
 - "What are global execution options?"
 objectives:
 - "Understand the syntax of a code chunk."
 - "Learn how to insert run-able chunks of code to integrate into your report"
-- "Learn how to source external scripts to run within an Quarto document."
+- "Learn how to source external scripts to run within a Quarto document."
 - "Learn about using global knitr options and global execution options"
 keypoints:
 - "Knitr will render your code and markdown-formatted text and output your document format of choice"
-- "Code chunks are runable piece of R code. Each time you render/knit the document, calculations and plots will be run and displayed"
+- "Code chunks are runnable pieces of R code. Each time you render/knit the document, calculations, and plots will be run and displayed"
 - "Options for code chunks can be set at the individual level or at the global level"
 ---
 
 ## Code in Quarto Documents
 
-We've learned about the text-formatting options for Quarto in RStudio, now let's dive into the code portion of Quarto documents. As we've seen so far, Quarto flips the "code first" default of R scripts by prioritizing code over text. Instead of using comments to add text, Quarto Documents use a "text-first" default and require use of special syntax to add code. In Quarto documents, the syntax to signal the switch to code is called "code chunks" in RStudio (referred to as "code cells" in other environments). Code chunks are interpreted by Knitr. But first, what is Knitr? 
+We've learned about the text-formatting options for Quarto in RStudio. Now, let's dive into the code portion of Quarto documents. As we've seen so far, Quarto flips the "code first" default of R scripts by prioritizing code over text. Instead of using comments to add text, Quarto Documents uses a "text-first" default and requires the use of special syntax to add code. In Quarto documents, the syntax to signal the switch to code is called "code chunks" in RStudio (referred to as "code cells" in other environments). Code chunks are interpreted by Knitr. But first, what is Knitr? 
 
 ## What is Knitr?
 
-But what is Knitr? Knitr is the engine in RStudio which creates the “dynamic” part of Quarto reports. More specifically, it's a package that allows the integration of R code into the html, word, pdf, or LaTeX document you have specified as your output for Quarto. It utilizes Literate Programming to make research more reproducible. 
+But what is Knitr? Knitr is the engine in RStudio, which creates the “dynamic” part of Quarto reports. More specifically, it's a package that allows the integration of R code into the HTML, word, PDF, or LaTeX document you have specified as your output for Quarto. It utilizes Literate Programming to make research more reproducible. 
 
 ## How it works
 
-First, code chunks are sent to a preceding stage of processing by Knitr, which runs the code and generates any plots or figures and then "knits" the code output and text together. Next, Quarto outputs the "knitted" text and rendered code together into an html document (or other document type as indicated in your configuration file). 
+First, code chunks are sent to a preceding stage of processing by Knitr, which runs the code, generates any plots or figures, and then "knits" the code output and text together. Next, Quarto outputs the "knitted" text and rendered code into an HTML document (or other document type indicated in your configuration file). 
 
 There are two ways to add code to Quarto documents:
 
 1. Code Chunks
 2. Inline Code
 
-First, we're going to talk about code chunks for including substantial portions of code into our narrative, such as generating figures and plots. There are a plethora of options that become available to us when using code chunks so this tends to be the more complex part of Quarto documents. 
+First, we're going to talk about code chunks for including substantial portions of code into our narrative, such as generating figures and plots. A plethora of options become available to us when using code chunks, so this tends to be the more complex part of Quarto documents. 
 
-But sometimes you just need to do a quick calculation to add to your narrative - such as a count of total observations in your data or the mean of one of your variables. In those cases, it may not be worth setting up a code chunk to calculate those values, so Quarto also provides the ability to use inline code.  
+But sometimes, you just need to do a quick calculation to add to your narrative - such as a count of total observations in your data or the mean of one of your variables. In those cases, it may not be worth setting up a code chunk to calculate those values, so Quarto also provides the ability to use inline code.  
 
 ## Using Code Chunks
 
@@ -47,11 +47,11 @@ Code chunks (also called "code blocks" or "code cells") are the preferred option
 
 ### Add a Code Chunk
 
-Ok, let's get to some code! There are already some plots included in our code but as static images. Now, we will add some additional plots, but generated straight from R code - which are also more reproducible and easier to update than static images. Using code to generate images directly assures us that if there are any changes to the data or code the plots will update automatically. We also don't have to generate the new plots, save them as images, and then add them back into our paper. Not only is this a time-saver, but it also helps prevent versioning errors! 
+Ok, let's get to some code! Some plots have already been included in our code but as static images. Now, we will add some additional plots generated straight from R code - which are also more reproducible and easier to update than static images. Using code to generate images directly assures us that if there are any changes to the data or code the plots will update automatically. We also don't have to generate the new plots, save them as images, and then add them back into our paper. Not only is this a time-saver, but it also helps prevent versioning errors! 
 
 Navigate to the end of the paper where it says **"Example 8"**. This is where we will add our first code chunk.
 
-Let's all start a new code chunk by typing our our starting backticks & r between curly brackets or by using the buttons available in the editor toolbar.  
+Let's start a new code chunk by typing our starting backticks & r between curly brackets or using the buttons in the editor toolbar.  
 
 ![auto create code chunk](../../fig/07-auto-code-chunk.PNG){: .image-with-shadow}  
 
@@ -59,7 +59,7 @@ Let's all start a new code chunk by typing our our starting backticks & r betwee
 > ## Tip: Four ways to insert code chunks
 > - the Add Chunk button in the editor toolbar  (looks like a green square with a C)
 > - the Insert > Code Chunk menu option in the editor toolbar
-> - by typing the code chunk delimiters {r} and \`\`\`. *If you are in "editor" mode you will need to remember to end the code chunk with ending backticks as well \`\`\`.  
+> - by typing the code chunk delimiters {r} and \`\`\`. *If you are in "editor" mode, you will need to remember to end the code chunk with ending backticks as well \`\`\`.  
 > - the keyboard shortcut 
 >       - Ctrl + Alt + I (Windows)
 >       - Cmd + Option + I (Mac) 
@@ -67,22 +67,22 @@ Let's all start a new code chunk by typing our our starting backticks & r betwee
 
 ### Basic Anatomy of a Code Chunk
 
-The most basic (empty) code chunk looks like so:
+The most basic (empty) code chunk looks like this:
 
 ![blank qmd code chunk](../../fig/08-blank-code-chunk.png){: .image-with-shadow}
 
-Can you tell the subtle differences between the visual and source mode in RStudio? That's right - the backticks ```. As seen in this image, the only **required** syntax for a code chunk are the backticks preceding and ending (seen only in source mode) and the specified language (in our case 'r') placed between the curly brackets. 
+Can you tell the subtle differences between the visual and source modes in RStudio? That's right - the backticks ```. As seen in this image, the only **required** syntax for a code chunk are the backticks preceding and ending (seen only in source mode) and the specified language (in our case, 'r') placed between the curly brackets. 
 
 Unless indicated otherwise, we will continue working in **visual mode**.
 
 > ## Fun fact: Other Programming Languages
-> Although we will (mostly) be using R in this workshop, it’s possible to use other programming or markup languages. For example, we have seen that we can use LaTeX code for equations. You can also use Python and a handful of other languages, so if R is not your preferred programming but you like working in the RStudio environment, don’t despair! Other options for include: sql, julia, bash, and c, etc. It should be noted, however, that some languages (like Python) will require installing and loading additional packages. 
+> Although we will (mostly) be using R in this workshop, it’s possible to use other programming or markup languages. For example, we have seen that we can use LaTeX code for equations. You can also use Python and a handful of other languages, so if R is not your preferred programming but you like working in the RStudio environment, don’t despair! Other options include SQL, Julia, bash, c, etc. It should be noted, however, that some languages (like Python) will require installing and loading additional packages. 
 {: .callout}
 
 
 ## Add the code to our Paper
 
-Now, let's add our first code by copying and pasting the code found below into the our empty code chunk (aslo found in the `code` folder as `03_HR_analysis.R`. 
+Now, let's add our first code by copying and pasting the code found below into our empty code chunk (also found in the `code` folder as `03_HR_analysis.R`. 
 
 ~~~  
 library(tidyverse)
@@ -140,21 +140,21 @@ ggsave("../output/plots/heartrate.pdf", plot, width = 4, height = 3)
 {: .language-r}  
 
 ## Run the code in a code chunk 
-To make sure our code renders, we could click the "Render" button as we have been doing to check if the document generates successfully. However, with code chunks we have other options for running and debugging code that don't require us to wait for the file to render. This is particularily useful as we add more code to the document and the render time increases. Let's explore our options:
+To make sure our code renders, we could click the "Render" button as we have been doing to check if the document generates successfully. However, with code chunks, we have other options for running and debugging code that don't require us to wait for the file to render. This is particularly useful as we add more code to the document, and the render time increases. Let's explore our options:
 
 ### 1) Run from code chunk 
 
-See green play button on the right top corner? This allows us to run code from that specific code chunk.
+See the green play button on the top right corner? This allows us to run code from that specific code chunk.
 
 ![run from code chunk](../../fig/07-run-from-chunk.png){: .image-with-shadow}
 
 ### 2) Run menu
-In the editor menu there is an icon that says Run with an arrow pointing left. This menu provides more options for running code chunks, including the current chunk, the next chunk, all chunks, etc. 
+In the editor menu, there is an icon that says Run with an arrow pointing left. This menu provides more options for running code chunks, including the current chunk, the next chunk, all chunks, etc. 
 
 ![run code menu](../../fig/07-run-options.png){: .image-with-shadow}
 
 ### 3) Keyboard shortcuts: 
-Of course, there are shortcuts to do all of the actions found in the Run menu (that is if you can remember them all).
+Of course, there are shortcuts to all of the actions found in the Run menu (that is, if you can remember them all).
 
 **Task**	| **Windows & Linux**	| **macOS**
 ---       |---                  |---
@@ -172,17 +172,17 @@ Run your first code chunk with one of the three options given above.
 Well, shoot! We're getting an error:
 
 ~~~
-Error: 'data/processed/preprocessed-GARP-TSST-data.csv' does not exist in current working directory ('/Users/rcurty-local/Documents/GitHub-Repos/Quarto-Project-Example/report').
+Error: 'data/processed/preprocessed-GARP-TSST-data.csv' does not exist in the current working directory ('/Users/rcurty-local/Documents/GitHub-Repos/Quarto-Project-Example/report').
 ~~~
 {: .error}
 
 ![directory error code chunk](../../fig/07-path-code-error.png){: .image-with-shadow}
 
-If we go to the bottom of the code chunk or check the console we'll see more details on the error:
+If we go to the bottom of the code chunk or check the console, we'll see more details on the error:
 
 ![path error details](../../fig/07-path-error-details.png){: .image-with-shadow}
 
-This is a path error. But why are we seeing this error? Unfortunately, there is a slight discrepancy between the behavior of regular R scripts run in R projects and Quarto projects. R scripts will always use the root folder of the project as the working directory, while Quarto documents use the folder where the qmd file is located as the working directory. If you were learning on your own you may have been majorly confused by this minute difference. No worries, we'll see how to change the default working directory globally in the next episode. 
+This is a path error. But why are we seeing this error? Unfortunately, a slight discrepancy exists between the behavior of regular R scripts run in R projects and Quarto projects. R scripts will always use the project's root folder as the working directory, while Quarto documents use the folder where the qmd file is located as the working directory. If you were learning on your own, you may have been majorly confused by this minute difference. No worries, we'll see how to change the default working directory globally in the next episode. 
 
 ### Fixing Relative Path Errors
 
@@ -198,17 +198,17 @@ df <- read_csv("data/processed/preprocessed-GARP-TSST-data.csv")
 
 Run the code again to make sure it works properly. 
 
-Did it work? Look under the code chunk. You should now see a plot preview displayed beneath the code chunk if all went well. 
+Did it work? Look under the code chunk. If all goes well, You should see a plot preview beneath the code chunk. 
 
 ![Code Chunk Plot Preview](../../fig/07-plot-preview.png){: .image-with-shadow}
 
 
 ## Rendering Code Chunks
 
-We just saw how to run our code in our code chunks to test that it works and to see a preview of the code output that will render in our html document but to *actually* render the final we need to use the Render button as with. Using the `Render` button with code chunks is a two step process - first the code is run (all code chunks will run automatically). Second, (if there are no code errors) the document of choice will render for our whole Quarto document. 
+We just saw how to run our code in our code chunks to test that it works and to see a preview of the code output that will render in our HTML document, but to *actually* render the final, we need to use the Render button as with. Using the `Render` button with code chunks is a two-step process - first, the code is run (all code chunks will run automatically). Second, (if there are no code errors) the document of choice will render for our whole Quarto document. 
 
 > ## Time to Render!
-> Now, let's Render the Quarto file and see how our code output looks in the final html page. 
+> Now, let's Render the Quarto file and see how our code output looks on the final HTML page. 
 {: .checklist}
 
 
@@ -220,7 +220,7 @@ This happens because the output from the running code (messages, results, warnin
 
 ## Code Chunk Options
 
-There are over 50 different code chunk options!!! Obviously, we will not go over all of them, but they fall into several larger categories, including: code evaluation, text output, code style, cache options, plot output, and animation. We’ll discuss a few options for code evaluation, text output, and plot output.
+There are over 50 different code chunk options!!! Obviously, we will not go over all of them, but they fall into several larger categories, including code evaluation, text output, code style, cache options, plot output, and animation. We’ll discuss a few options for code evaluation, text output, and plot output.
 
 Code chunk options in Quarto are added within code chunks and always have the following format:
 
@@ -232,53 +232,53 @@ Code chunk options in Quarto are added within code chunks and always have the fo
 **include** = (logical) whether to include the chunk output in the output document (defaults to TRUE).  
 **eval** = (logical or numeric) TRUE/FALSE to evaluate (or not) or a numeric value like c(1,3) (only evaluate expressions 1 and 3).   
 **echo** =  (logical or numeric - following the same rules as above) whether to display source code or not.  
-**results** = (logical or character) text output of the code can be hidden (hide or FALSE), or delineated in a certain way (default 'markup').       
+**results** = (logical or character) text output of the code can be hidden (hide or FALSE) or delineated in a certain way (default 'markup').       
 **warning** = (logical) whether to display the warnings in the output (default TRUE). FALSE will output warnings to the console only.       
 **message** = (logical) whether or not to display messages that appear when running the code (default TRUE).
 
 #### Using code chunk options for clean Quarto Documents
 
-Ok, let's use some of the options above to improve the look of our Quarto document. Add the following options one-by-one to see how they change your output (click `Render` after each option you add): 
+Ok, let's use some of the options above to improve the look of our Quarto document. Add the following options one by one to see how they change your output (click `Render` after each option you add): 
 
 - echo: false 
 - message: false 
 - warning: false
 - results: false
 
-These options mean the source code will not be printed in the rendered html document, messages from the code will not be printed in the rendered html document, and warnings will not be printed in the html document (but will still output to the console). Plots, figures or whatever is printed by the code WILL show up in the final html document.  
+These options mean the source code will not be printed in the rendered HTML document, messages from the code will not be printed in the rendered HTML document, and warnings will not be printed in the HTML document (but will still output to the console). Plots, figures or whatever is printed by the code WILL show up in the final html document.  
 
-Now we are seeing what we would like: a figure without other output to show in our paper. 
+Now, we are seeing what we would like: a figure without other output to show in our paper. 
  
 > ## CHALLENGE 1 - Rendering Codes (Optional)
 > How will some hypothetical code render given the following options? Try it out with the code we just added to visualize the styling change.
 > `{r global-chunk-challenge, eval = TRUE, include = FALSE}`
 > 
 >> ## SOLUTION
->> The expressions in the code chunk will be evaluated, but the outputed figures/plots will not be included in the rendered document.   
+>> The expressions in the code chunk will be evaluated, but the outputted figures/plots will not be included in the rendered document.   
 >> When might you want to use this?   
->> If you need to calculate some value or do something on your dataset for a further calucation or plot, but the output is not important to be included in your paper narrative. 
+>> If you need to calculate some value or do something on your dataset for a further calculation or plot, the output is not important to include in your paper narrative. 
 > {: .solution}
 {: .challenge}
 
 > ## Tip:
-> Find a complete list of code chunk options on Knitr developer, Yihui Xie's, [online guide to knitr](https://yihui.org/knitr/options/). 
+> Find a complete list of code chunk options on Knitr developer Yihui Xie's [online guide to knitr](https://yihui.org/knitr/options/). 
 {: .callout}
 
 ### Label Your Code Chunk
 
-Before we get to fixing how our code output looks, let's pause a second and give our code chunk a label. While not required for running your code, it is good practice is to give a name to each code chunk because a label is an unique identifier which allows for more advanced options (such as cross-referencing) to work with your qmd files later on:
+Before we get to fixing how our code output looks, let's pause a second and give our code chunk a label. While not required for running your code, it is good practice to give a name to each code chunk because a label is a unique identifier that allows for more advanced options (such as cross-referencing) to work with your qmd files later on:
 
 ![code chunk label](../../fig/07-code-label.png)
 
 Some things to keep in mind
 - The chunk label syntax is always `#| label: chunk-label` with `chunk-label` replaced with your own text
-- The chunk label has to be unique (i.e. you can't use the same name for multiple chunks)
+- The chunk label has to be unique (i.e., you can't use the same name for multiple chunks)
 
-We’ll see in a bit where this code chunk label comes in handy. But, for now let's go back and give our first code chunk a name:
+We’ll see in a bit where this code chunk label comes in handy. But, for now, let's go back and give our first code chunk a name:
 
 `#| label: fig3-heartrate`
 
-> ## Tip: Don't use spaces, periods or underscores in code chunk labels
+> ## Tip: Don't use spaces, periods, or underscores in code chunk labels
 > Avoid spaces, periods `(.)`, and underscores `(_)` in chunk labels and paths. If you need separators, you are recommended to use hyphens `(-)` instead. For example, setup-options is a good label, whereas setup.options and chunk 1 are bad; fig.path = 'figures/mcmc-' is a good path for figure output, and fig.path = 'markov chain/monte carlo' is bad. See more at: [https://yihui.org/knitr/options/](https://yihui.org/knitr/options/)
 {: .callout}
 
@@ -301,12 +301,12 @@ The caption information also resides at the top of a code chunk using the `#|` s
 >> fig.cap = "Fig 3: Mean heart rate of stress and control groups at baseline and during intervention."}
 >> ~~~
 >> {: .language-r}
->> Set the option `fig.cap` to equal the text in double quotes.
+>> Set the option `fig.cap` to equal the text in double-quotes.
 > {: .solution}
 {: .challenge}
 
 ## More plot/figure options
-> Other options that change how a plot or figure appears often use the sytax `fig.xxx` similar to `fig.cap` Some other useful plot/figure code options include (From [Yihui Xie's page](https://yihui.org/knitr/options/#plots) ):
+> Other options that change how a plot or figure appears often use the syntax `fig.xxx` similar to `fig.cap` Some other useful plot/figure code options include (From [Yihui Xie's page](https://yihui.org/knitr/options/#plots) ):
 > - `fig.width`, `fig.height`: (both are 7; numeric) Width and height of the plot (in inches), to be used in the graphics device.
 > - `out.width`, `out.height`: (NULL; character) Width and height of the plot in the output document, which can be different with its physical fig.width and fig.height, i.e., plots can be scaled in the output document. 
 > - `fig.align`: ('default'; character) Alignment of figures in the output document. Possible values are default, left, right, and center. The default is not to make any alignment adjustments.
@@ -324,15 +324,15 @@ Let's render one more time to see if our figure outputs how we'd like and has a 
 
 ## Inline Code
 
-What if you only need to make a quick calculation and adding a code chunk seems a little overkill?
+What if you only need to make a quick calculation, and adding a code chunk seems a little overkill?
 
-You can also include `r code` directly in the text portion of your document by enclosing it between single backticks. Say you are discussing some of the summary statistics in your manuscript, Quarto makes this possible through HTML/LaTeX inline code which allows you to calculate simple expressions integrated into your narrative. Inline code enables you to insert \`r code`\ into your document to dynamically updated portions of your text. In other words, if your data set changes for any reason the code will automatically update the calculation specified. 
+You can also include `r code` directly in the text portion of your document by enclosing it between single backticks. Say you are discussing some of the summary statistics in your manuscript, Quarto makes this possible through HTML/LaTeX inline code, which allows you to calculate simple expressions integrated into your narrative. Inline code enables you to insert \`r code`\ into your document to update portions of your text dynamically. In other words, if your data set changes, the code will automatically update the specified calculation. 
 
-This can be helpful when referring to specific variables on your data. For example, you should include numbers that are derived from the data as code not as numbers. Thus, rather than writing “The CSV file contains choice consistency data for 10.000 simulated participants” **(Example 7)** , replace the static number with a bit of code that, when evaluated, gives you a dynamic number if anything changes on your dataset. Note that there is not an insert option to do this from the menu in the visual editor, so we need to insert inline code manually, for example:
+This can be helpful when referring to specific variables in your data. For example, you should include numbers that are derived from the data as code, not as numbers. Thus, rather than writing “The CSV file contains choice consistency data for 10.000 simulated participants” **(Example 7)**, replace the static number with a bit of code that, when evaluated, gives you a dynamic number if anything changes on your dataset. Note that there is not an insert option to do this from the menu in the visual editor, so we need to insert inline code manually, for example:
 
 The CSV file contains choice consistency data for \`r nrow(bronars_simulation_data)`\ simulated participants.
 
-When you render you might get an error. Any idea why? That is because we need to make sure to import the dataset we are referring to before the inline code can work. Let's add the following to our chunk at the beginning of the document where we loaded our other data:
+When you render, you might get an error. Any idea why? That is because we need to make sure to import the dataset we are referring to before the inline code can work. Let's add the following to our chunk at the beginning of the document where we loaded our other data:
 
 ~~~
 bronars_simulation_data <- read_csv("../data/raw/bronars_simulation_data.csv")
@@ -341,13 +341,13 @@ bronars_simulation_data <- read_csv("../data/raw/bronars_simulation_data.csv")
 
 
 > ## Time to Render!
-> If you update your dataset this value will match the number of rows. 
+> If you update your dataset, this value will match the number of rows. 
 {: .checklist}
 
 > ## CHALLENGE 3 - Adding inline code
-> Suppose we would like to add some information to the sentence we have just adjusted in our manuscript. We would like to include the average for the variable *violation_count* present in the same dataset. Which inline code we would have to add to following sentence?
+> Suppose we would like to add some information to the sentence we have just adjusted in our manuscript. We would like to include the average for the variable *violation_count* present in the same dataset. Which inline code would we have to add to the following sentence?
 > 
-> The CSV file contains choice consistency data for `r nrow(bronars_simulation_data.csv)` simulated participants, that have been used to determine the power of our food-choice task design to detect choice consistency violations, which averaged ` `enter inline code here` `. 
+> The CSV file contains choice consistency data for `r nrow(bronars_simulation_data.csv)` simulated participants that have been used to determine the power of our food-choice task design to detect choice consistency violations, which averaged ` `enter inline code here` `. 
 > What inline code would you enter? What number would replace the inline code?
 > 
 > Tip: we will need to use a `dataset$variable` syntax!
@@ -365,6 +365,6 @@ bronars_simulation_data <- read_csv("../data/raw/bronars_simulation_data.csv")
 
 
 > ## More on inline codes:
-> Quarto will always display the results of inline code, but not the code. Inline expressions do not take knitr options.
+> Quarto will always display the results of the inline code but not the code. Inline expressions do not take knitr options.
 >
 {: .callout}
