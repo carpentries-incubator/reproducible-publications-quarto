@@ -58,19 +58,19 @@ Similar to CSS, Quarto uses a cascading style of options. Starting from the proj
 
 ### Global Code Chunk Options:
 
-There is an option to globally set options for the entire Quarto document rather than have to specify in each code chunk. This is helpful when you consistently want to use the same options and when you have many code chunks within a document. Additionally, adding global code options will allow you and collaborators to have a better idea of how you've configured your document. 
+There is an option to set options for the entire Quarto document rather than have to specify in each code chunk. This is helpful when you consistently want to use the same options and when you have many code chunks within a document. Additionally, adding global code options will allow you and collaborators to have a better idea of how you've configured your document. 
 
 In Quarto, the way to configure global code chunk options is in the yaml header.
 
-In the yaml header of our document we can set global options with `execute`. 
+In the yaml header of our document we can set global code execution options with `execute`. 
 
-```
+
 ~~~
 ...
 execute: 
       echo: false
 ~~~
-```
+
 
 Additional options can be further nested under execute. 
 
