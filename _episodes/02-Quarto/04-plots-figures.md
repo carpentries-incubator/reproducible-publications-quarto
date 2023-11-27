@@ -167,7 +167,7 @@ Run your first code chunk with one of the three options given above.
 Well, shoot! We're getting an error:
 
 ~~~
-Error: 'data/processed/preprocessed-GARP-TSST-data.csv' does not exist in current working directory ('/Users/torinw/Documents/Quarto-Project-Example/report').
+Error: 'data/processed/preprocessed-GARP-TSST-data.csv' does not exist in current working directory ('/Users/rcurty-local/Documents/GitHub-Repos/Quarto-Project-Example/report').
 ~~~
 {: .error}
 
