@@ -174,7 +174,7 @@ library(BayesFactor)
 library(patchwork)
 
 # load data
-df <- read_csv("./output/data/preprocessed-GARP-TSST-data.csv")
+df <- read_csv("./data/processsed/preprocessed-GARP-TSST-data.csv")
 ```
 {: .language-r}
 
