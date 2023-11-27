@@ -89,8 +89,8 @@ The format is selected in the wizard for starting a new document. You are able t
 <br>
 
 We’ll see other formatting options for YAML later on including how to add bibliography information, customize our output, and change the default settings for executing your code. Below is an example of how our YAML file will look at the end of this workshop. 
+
 ~~~
----
 ---
 title: "Data Article: Trier social stress test and food-choice: Behavioral, self-report & hormonal data (Carpentry Workshop Version)"
 author: "Felix Jan Nitsch; Manuela Sellitto; Tobias Kalenscher"
@@ -100,7 +100,6 @@ bibliography: references.bib
 execute:
   echo: true
   ...
----
 ---
 ~~~
 
