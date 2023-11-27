@@ -38,7 +38,7 @@ What are some of features of global knitr options? There are many, but we'll cov
 
 With Quarto we have the functionality and flexibility of being able to define *project* level global settings in addition to *document* level settings. This means that the settings we choose will be applied to either one specific Quarto document or *all* Quarto documents within our R project. 
 
-How do we use document level settings?. How do we edit project level settings? That's where the yaml at the top of our documents and/or the `_quarto.yml` file that lives in our project root directory comes in. 
+How do we use document level settings? How do we edit project level settings? That's where the yaml at the top of our documents and/or the `_quarto.yml` file that lives in our project root directory comes in. 
 
 At the top of our .Qmd document we see the yaml:
 
