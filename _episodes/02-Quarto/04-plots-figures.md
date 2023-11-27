@@ -286,12 +286,10 @@ The caption information also resides at the top of a code chunk using the `#|` s
 
 **Don't forget to put the caption within quotes `""`.**
 
-> ## CHALLENGE 2 (Not Optional): Add a caption to Figure 3
-> Let's add a caption to our heartrate figure. Add the caption:
-> 
-> "Fig 3: Mean heart rate of stress and control groups at baseline and during intervention."
+> ## CHALLENGE 2 (Not Optional): Adding a caption and making Figure 3 cleaner 
+> Let's add the following caption: "Fig 3: Mean heart rate of stress and control groups at baseline and during intervention." and ensure only the figure will be displayed in the html document. 
 >> ## SOLUTION
->> so, you should end up with the following in your code chunk:
+>> So, you should end up with the following in your code chunk:
 >> ~~~
 >> {r fig3-heartrate, echo = FALSE, message = FALSE, warning = FALSE, results = FALSE, 
 >> fig.cap = "Fig 3: Mean heart rate of stress and control groups at baseline and during intervention."}
