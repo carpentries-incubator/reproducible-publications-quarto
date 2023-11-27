@@ -53,7 +53,7 @@ Navigate to the end of the paper where it says **"Example 8"**. This is where we
 
 Let's all start a new code chunk by typing our our starting backticks & r between curly brackets or by using the buttons available in the editor toolbar.  
 
-> ![auto create code chunk](../../fig/07-auto-code-chunk.PNG)  
+![auto create code chunk](../../fig/07-auto-code-chunk.PNG){: .image-with-shadow}  
 
 
 > ## Tip: Four ways to insert code chunks
@@ -69,7 +69,7 @@ Let's all start a new code chunk by typing our our starting backticks & r betwee
 
 The most basic (empty) code chunk looks like so:
 
-![blank qmd code chunk](../../fig/08-blank-code-chunk.png)
+![blank qmd code chunk](../../fig/08-blank-code-chunk.png){: .image-with-shadow}
 
 Can you tell the subtle differences between the visual and source mode in RStudio? That's right - the backticks ```. As seen in this image, the only **required** syntax for a code chunk are the backticks preceding and ending (seen only in source mode) and the specified language (in our case 'r') placed between the curly brackets. 
 
@@ -131,6 +131,11 @@ plot <- ggplot(df_long2, aes(Measurement, mean_value, group = Condition, color =
   ylab("Mean Heartrate (BPM)") +
   scale_colour_grey(start = 0.5, end = 0.2) +
   theme(legend.position = "top")  
+
+#Print and save plots  
+plot
+
+ggsave("../output/plots/heartrate.pdf", plot, width = 4, height = 3)
 ~~~
 {: .language-r}  
 
@@ -141,12 +146,12 @@ To make sure our code renders, we could click the "Render" button as we have bee
 
 See green play button on the right top corner? This allows us to run code from that specific code chunk.
 
-![run from code chunk](../../fig/07-run-from-chunk.png)
+![run from code chunk](../../fig/07-run-from-chunk.png){: .image-with-shadow}
 
 ### 2) Run menu
 In the editor menu there is an icon that says Run with an arrow pointing left. This menu provides more options for running code chunks, including the current chunk, the next chunk, all chunks, etc. 
 
-![run code menu](../../fig/07-run-options.png)
+![run code menu](../../fig/07-run-options.png){: .image-with-shadow}
 
 ### 3) Keyboard shortcuts: 
 Of course, there are shortcuts to do all of the actions found in the Run menu (that is if you can remember them all).
@@ -171,11 +176,11 @@ Error: 'data/processed/preprocessed-GARP-TSST-data.csv' does not exist in curren
 ~~~
 {: .error}
 
-![directory error code chunk](../../fig/07-path-code-error.png)
+![directory error code chunk](../../fig/07-path-code-error.png){: .image-with-shadow}
 
 If we go to the bottom of the code chunk or check the console we'll see more details on the error:
 
-![path error details](../../fig/07-path-error-details.png)
+![path error details](../../fig/07-path-error-details.png){: .image-with-shadow}
 
 This is a path error. But why are we seeing this error? Unfortunately, there is a slight discrepancy between the behavior of regular R scripts run in R projects and Quarto projects. R scripts will always use the root folder of the project as the working directory, while Quarto documents use the folder where the qmd file is located as the working directory. If you were learning on your own you may have been majorly confused by this minute difference. No worries, we'll see how to change the default working directory globally in the next episode. 
 
@@ -195,7 +200,7 @@ Run the code again to make sure it works properly.
 
 Did it work? Look under the code chunk. You should now see a plot preview displayed beneath the code chunk if all went well. 
 
-![Code Chunk Plot Preview](../../fig/07-plot-preview.png)
+![Code Chunk Plot Preview](../../fig/07-plot-preview.png){: .image-with-shadow}
 
 
 ## Rendering Code Chunks
@@ -206,9 +211,10 @@ We just saw how to run our code in our code chunks to test that it works and to 
 > Now, let's Render the Quarto file and see how our code output looks in the final html page. 
 {: .checklist}
 
+
 Wait... what's all that output in our document? We don't want that in our paper! 
 
-![Heart rate code no options for code chunk](../../fig/07-HR-output-no-options.PNG)
+![Heart rate code no options for code chunk](../../fig/07-HR-output-no-options.PNG){: .image-with-shadow}
 
 This happens because the output from the running code (messages, results, warnings, etc.) gets added to the Quarto document instead of being printed to the console. Let's see about adjusting the output to make it look better with code chunk rendering options. 
 
@@ -244,7 +250,7 @@ These options mean the source code will not be printed in the rendered html docu
 Now we are seeing what we would like: a figure without other output to show in our paper. 
  
 > ## CHALLENGE 1 - Rendering Codes (Optional)
-> How will some hypothetical code render given the following options?
+> How will some hypothetical code render given the following options? Try it out with the code we just added to visualize the styling change.
 > `{r global-chunk-challenge, eval = TRUE, include = FALSE}`
 > 
 >> ## SOLUTION
