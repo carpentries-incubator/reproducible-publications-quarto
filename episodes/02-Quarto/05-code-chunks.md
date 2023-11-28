@@ -254,7 +254,7 @@ Our plot should look exactly the same as the first copy-pasted one.
 
 Success! And you'll notice that the global code chunk options were applied to this code chunk as well*. 
 
-* Note: As of November 2022, Quarto has not implemented global options for `results`. This will need to be added to each code chunk if needed until further notice.
+* Note: As of November 2023, Quarto has not implemented global options for `results`. This will need to be added to each code chunk if needed until further notice.
 
 > ## Tip: Many ways to run external code
 > There are at least 3-4 methods one can use to run external code, the best choice may just depend on the context or on your personal preference. There's no method that's a clear winner, because there's an awkward quirk or another to each of them, but better than copy/pasting code from elsewhere in your project (in our humble opinion):
