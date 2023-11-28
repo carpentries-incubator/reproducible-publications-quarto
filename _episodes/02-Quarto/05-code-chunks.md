@@ -58,19 +58,19 @@ Similar to CSS, Quarto uses a cascading style of options. Starting from the proj
 
 ### Global Code Chunk Options:
 
-There is an option to globally set options for the entire Quarto document rather than having to specify in each code chunk. This is helpful when you consistently want to use the same options and when you have many code chunks within a document. Additionally, adding global code options will allow you and your collaborators to understand better how you've configured your document. 
+
+There is an option to set options for the entire Quarto document rather than have to specify in each code chunk. This is helpful when you consistently want to use the same options and when you have many code chunks within a document. Additionally, adding global code options will allow you and collaborators to have a better idea of how you've configured your document. 
 
 In Quarto, the way to configure global code chunk options is in the YAML header.
 
 In the YAML header of our document, we can set global options with `execute`. 
 
-```
 ~~~
 ...
 execute: 
       echo: false
 ~~~
-```
+
 
 Additional options can be further nested under execute. 
 
@@ -137,8 +137,8 @@ Now, we would change the relative path in our code chunk back to what it was bef
 > Setting the working directory to the project directory we just did adjust the working directory for all code in the Quarto document (code chunks and inline code), but NOT for any markdown text elements (images and hyperlinks).
 {: .callout}
 
-> ## Tip: Yaml chunk options
-> We can also tweak some settings in our YAML that change how code chunks are displayed. We're not going to get into this in the workshop, but many of the same options you set in your global code chunk settings are also configurable in the YAML. 
+> ## Tip: Yaml code chunk options
+> We can also tweak some code chunk settings at the project level in the `_quarto.yml` file which changes how code chunks are displayed for the entire project. We're not going to get into this in the workshop, but many of the same options you set in your global code chunk settings are also configurable in the `_quarto.yml` YAML. 
 {: .callout}
 
 ## Code improvements
@@ -237,7 +237,7 @@ Our plot should look exactly the same as the first copy-pasted one.
 
 Success! You'll notice that the global code chunk options were also applied to this code chunk.*. 
 
-* Note: As of November 2022, Quarto has not implemented global options for `results`. This will need to be added to each code chunk if needed until further notice.
+* Note: As of November 2023, Quarto has not implemented global options for `results`. This will need to be added to each code chunk if needed until further notice.
 
 > ## Tip: Many ways to run external code
 > There are at least 3-4 methods one can use to run external code; the best choice may depend on the context or your personal preference. There's no method that's a clear winner because there's an awkward quirk or another to each of them, but better than copy/pasting code from elsewhere in your project (in our humble opinion):
