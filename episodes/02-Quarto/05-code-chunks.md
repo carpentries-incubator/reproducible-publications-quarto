@@ -154,8 +154,8 @@ Now, we would change the relative path in our code chunk back to what it was bef
 > Setting the working directory to the project directory we just did adjusts the working directory for all code in the Quarto document (code chunks and inline code), but NOT for any markdown text elements (images and hyperlinks).
 {: .callout}
 
-> ## Tip: Yaml chunk options
-> We can also tweak some settings in our yaml which changes how code chunks are displayed. We're not going to get into this in the workshop, but many of the same options you set in your global code chunk settings are also configurable in the yaml. 
+> ## Tip: Yaml code chunk options
+> We can also tweak some code chunk settings at the project level in the `_quarto.yml` file which changes how code chunks are displayed for the entire project. We're not going to get into this in the workshop, but many of the same options you set in your global code chunk settings are also configurable in the `_quarto.yml` yaml. 
 {: .callout}
 
 ## Code improvements
