@@ -38,11 +38,7 @@ What are some of the features of global knitr options? There are many, but we'll
 
 With Quarto, we have the functionality and flexibility of being able to define *project* level global settings in addition to *document* level settings. This means that the settings we choose will be applied to either one specific Quarto document or *all* Quarto documents within our R project. 
 
-<<<<<<< HEAD
-How do we use document level settings? How do we edit project level settings? That's where the yaml at the top of our documents and/or the `_quarto.yml` file that lives in our project root directory comes in. 
-=======
 How do we use document-level settings? How do we edit project-level settings? That's where the YAML comes in at the top of our documents and/or the `_quarto.yml` file that lives in our project root directory. 
->>>>>>> 6a89906b (polishing and #110)
 
 At the top of our .Qmd document, we see the YAML:
 
@@ -62,20 +58,11 @@ Similar to CSS, Quarto uses a cascading style of options. Starting from the proj
 
 ### Global Code Chunk Options:
 
-<<<<<<< HEAD
-There is an option to set options for the entire Quarto document rather than have to specify in each code chunk. This is helpful when you consistently want to use the same options and when you have many code chunks within a document. Additionally, adding global code options will allow you and collaborators to have a better idea of how you've configured your document. 
-=======
 There is an option to globally set options for the entire Quarto document rather than having to specify in each code chunk. This is helpful when you consistently want to use the same options and when you have many code chunks within a document. Additionally, adding global code options will allow you and your collaborators to understand better how you've configured your document. 
->>>>>>> 6a89906b (polishing and #110)
 
 In Quarto, the way to configure global code chunk options is in the YAML header.
 
-<<<<<<< HEAD
-In the yaml header of our document we can set global code execution options with `execute`. 
-
-=======
 In the YAML header of our document, we can set global options with `execute`. 
->>>>>>> 6a89906b (polishing and #110)
 
 ~~~
 ...
@@ -149,13 +136,9 @@ Now, we would change the relative path in our code chunk back to what it was bef
 > Setting the working directory to the project directory we just did adjust the working directory for all code in the Quarto document (code chunks and inline code), but NOT for any markdown text elements (images and hyperlinks).
 {: .callout}
 
-<<<<<<< HEAD
 > ## Tip: Yaml code chunk options
 > We can also tweak some code chunk settings at the project level in the `_quarto.yml` file which changes how code chunks are displayed for the entire project. We're not going to get into this in the workshop, but many of the same options you set in your global code chunk settings are also configurable in the `_quarto.yml` yaml. 
-=======
-> ## Tip: Yaml chunk options
-> We can also tweak some settings in our YAML that change how code chunks are displayed. We're not going to get into this in the workshop, but many of the same options you set in your global code chunk settings are also configurable in the YAML. 
->>>>>>> 6a89906b (polishing and #110)
+
 {: .callout}
 
 ## Code improvements
