@@ -138,8 +138,7 @@ Now, we would change the relative path in our code chunk back to what it was bef
 {: .callout}
 
 > ## Tip: Yaml code chunk options
-> We can also tweak some code chunk settings at the project level in the `_quarto.yml` file which changes how code chunks are displayed for the entire project. We're not going to get into this in the workshop, but many of the same options you set in your global code chunk settings are also configurable in the `_quarto.yml` yaml. 
-
+> We can also tweak some code chunk settings at the project level in the `_quarto.yml` file which changes how code chunks are displayed for the entire project. We're not going to get into this in the workshop, but many of the same options you set in your global code chunk settings are also configurable in the `_quarto.yml` YAML. 
 {: .callout}
 
 ## Code improvements
