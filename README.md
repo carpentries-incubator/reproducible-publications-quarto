@@ -28,10 +28,9 @@ Current maintainers of this lesson are:
 
 * Renata Curty (rcurty)
 * Torin White (torwhite)
+* Julian Brun (brunj7)
 * Ian Lessing (ilessing)
 * kristi Liu (kristi-sara)
-* Amanda Ho (apandas)
-
 
 ## Authors
 
