@@ -1,6 +1,6 @@
 ---
 source: Rmd  
-title: "Adding Code-Generated Plots and Figures"  
+title: "OLD - Adding Code-Generated Plots and Figures THIS EPISODE TO BE RETIRED"  
 teaching: 30
 exercises: 10
 questions:
