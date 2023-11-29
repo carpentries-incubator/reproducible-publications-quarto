@@ -1,6 +1,6 @@
 ---
 source: Rmd  
-title: "Getting fancy with code chunks"  
+title: "OLD - Getting fancy with code chunks  THIS EPISODE TO BE RETIRED"  
 teaching: 40
 exercises: 10
 questions:
