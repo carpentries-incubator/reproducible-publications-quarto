@@ -185,7 +185,7 @@ This goes hand-in-hand with keeping your project within one “root” directory
 Assuming your R script is in a `code` directory and your data file is in a `data` directory, then an example of a relative path to read your data would be:
 
 ```
-df <- read.csv("../data/foodchoice_budgetlines.csv", encoding = "UTF-8")
+df <- read.csv("../data/foodchoice_budgetlines.csv")
 ```
 
 Whereas a complete path might look like:
@@ -193,7 +193,7 @@ Whereas a complete path might look like:
 Windows: 
 
 ```
-df <- read.csv("C:/Users/wilma/Desktop/project23/data/foodchoice_budgetlines.csv", encoding = "UTF-8")
+df <- read.csv("C:/Users/wilma/Desktop/project23/data/foodchoice_budgetlines.csv")
 ```
 
 If the example were on a Mac or Linux computer, you would have `home` instead of `C:`   
@@ -222,7 +222,7 @@ In the complete path example, you can see that the code is not going to be porta
 > This is where using the `RStudio Project` can help. When you create a Project in RStudio, in the background, RStudio will automatically create a “root” folder and set it as your working directory in R. Since in R relative paths are relative to your working directory, this will ease referring to external input or output files (data, images, plots, ...) in a consistent manner across your project by always having your relative paths relative to the top level folder and help to encapsulate your work within this folder. So with an Rpoject setup, the relative path in the previous example will now be:
 
 ```
-df <- read.csv("data/foodchoice_budgetlines.csv", encoding = "UTF-8")
+df <- read.csv("data/foodchoice_budgetlines.csv")
 ```
 
 In the end, this means you can move this folder around on your machine or to another machine, and all the paths will still be valid.
