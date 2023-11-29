@@ -1,6 +1,6 @@
 ---
 source: Rmd  
-title: "Advanced Code Chunk Options"  
+title: "NEW EPISODE - 02-06 Advanced Code Chunk Options"  
 teaching: 00
 exercises: 00
 questions:
