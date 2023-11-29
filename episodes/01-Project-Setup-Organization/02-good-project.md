@@ -116,7 +116,7 @@ For the project we’re working on today, we used the following setup for folder
 
 > ## Challenge 1: Take a few minutes to look through the workshop project files
 > 
-> Please take some time to look through the project files. Either the screenshot above or you may browse the files on GitHub at <[https://github.com/carpentries-incubator/Reproducible-Publications-with-RStudio-Example/tree/quarto](https://github.com/carpentries-incubator/Reproducible-Publications-with-RStudio-Example/tree/quarto)>. What do each of the directories (folders) contain? What is their purpose? 
+> Please take some time to look through the project files. Either the screenshot above or you may browse the files on GitHub at <[https://github.com/UCSBCarpentry/Quarto-Project-Example](https://github.com/UCSBCarpentry/Quarto-Project-Example)>. What do each of the directories (folders) contain? What is their purpose? 
 > 
 > See the solution drop-down for an explanation of each directory's contents.
 >
