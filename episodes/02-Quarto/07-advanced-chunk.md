@@ -4,22 +4,22 @@ title: "NEW EPISODE - 02-07 Advanced Code Chunk Options"
 teaching: 00
 exercises: 00
 questions:
-- "How to apply global options at the project-level?"
+#- "How to apply global options at the project-level?"
 - "How to globally load data and packages?"
 - "How to run code from an external script in a code chunk?"
 - "How do I run external scripts in a Quarto document?"
 objectives:
 - "Learn how to source external scripts to run within an qmd document to modularize your code."
-- "Learn about using global options for project level settings."
+#- "Learn about using global options for project level settings."
 - "Learn how to load libraries and data for use throughout the whole `.qmd` document."
 keypoints:
 - "Learn how to externally source code `source()`"
 - "Learn how to modularize your code to make it more reproducible"
-- "Use a chunk at the beginning of your document to load libraries and data globally to make your document more efficiently."
+- "Use a chunk at the beginning of your document to load libraries and data to make your document more efficiently."
 ---
 
 
-### Globally Load Data and Packages
+### Best Practices for Loading Data and Packages 
 
 We can improve organization and rendering speed in our documents by learning how to load data and packages. So far, we've loaded the library `tidyverse` and the data frame `df` we need in the first code chunk. Now, if we want to add another figure (say the hormone analysis code '02_hormone_analysis.r`), which uses the same data as our first figure - we would be loading tidyverse and the data for a second time. This is unnecessary because once libraries and data are loaded in a Quarto document, they are available for use in the rest of the code in the following document.
 
