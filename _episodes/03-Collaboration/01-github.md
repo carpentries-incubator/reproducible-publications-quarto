@@ -17,22 +17,61 @@ keypoints:
 - Setting the Git repository _Origin_ in your R Studio project enables _pushing_ and _pulling_ from your local copy of the repository to the repository on GitHub.
 ---
 
-> ## Synchronizing Your Project With Your Repository
+## Synchronizing Your Local changes Your Repository on Github
 
-In Episode [Getting your project set up with Version Control in RStudio](../03-setup-versioning), we learned about using version control as you write your publication.  In this part of the workshop, we'll set up Rstudio to authenticate with GitHub, which is necessary to _push_ your changes to GitHub.
+In Episode 3: [ Getting your project set up with Version Control in RStudio](../01-Project-Setup-Organization/03-setup-versioning), we learned about using version control as you write your publication.  In this part of the workshop, we will set up Rstudio to authenticate with GitHub, which is necessary to _push_ your changes to GitHub.
 
 Terminology:  Git _Push_ and _Pull_
 
 Definition: The process of synchronizing your local git repository with your git repository on GitHub (or other Git server).
 
-GitHub used to allow simple Username & Password authentication, but now GitHub requires a more secure method of authentication.  For this workshop, we'll be using the Personal Access Token method.  The Personal Access Token (PAT) must be created for your account on GitHub.  You'll use the PAT to authenticate instead of your GitHub account password.
+GitHub requires a more secure method of authentication than a simple Username and Password.  For this workshop, we'll be using a Personal Access Token (PAT) method which you will setup for your account on GitHub.  We will configure RStudio to use your PAT to authenticate with GitHub so you can download and upload your RStudio code edits to GitHub.
 
-1. Login to your GitHub account with your web browser. [https://GitHub.com](https://GitHub.com)
-1. On GitHub.com go to your account setting -> Developer Settings -> Personal access tokens or this link: [https://GitHub.com/settings/tokens](https://GitHub.com/settings/tokens)
-1. Any tokens you have created in the past will be listed there, and you can click "Generate new token" button.  Set an expiration date for your new token and a scope.  For this workshop, the scope of "Repo" should be sufficient.  Then, Generate your new Token with the button at the bottom of the page.
+
+### Setting up your GitHub Personal Access Token (PAT)
+
+In your RStudio console enter following command:
+
+`usethis::create_github_token()`
+
+This will open your web browser and, after logging in if necessary, you'll be on Github settings page to create a PAT. Most of the options have already been set for us, we only need to update:
+
+- the Note field by describing what is the token for. We recommend a combination describing the computer the PAT will be used on and what it is going to be used for. 
+
+For example: 
+
+> RStudio on MacBookAir for Reproducibility Workshop
+
+- Set expiration to 90 days. Note that GitHub will send you an email when it’s time to renew your token that is about to expire. It is easier to not let the token expire, otherwise you will have to regenerate a new one and do all the setup again.
+
 
 ![PAT options on GitHub](../../fig/10-GitHub-new-PAT-options.png)
+
+
+You can leave all the other options as selected. Click on the green Generate token button at the bottom of the page.
+
 * On the next screen GitHub shows you the new token.  **Be sure to copy it** as you only get one chance to see the token text.
+ This is the only time you will be able to see it, so do not close this page before you are done with the setup! Copy your PAT to your clipboard. Return to RStudio and run the following command in the R console:
+
+`gitcreds::gitcreds_set()`
+
+This will prompt you to paste the PAT you just copied from GitHub. Paste your PAT and hit Enter. You you should see a few lines letting you know that the token has been setup.
+
+To check your work you can run the following command in your R console:
+
+`usethis::git_sitrep()`
+
+if the output shows the line `Personal access token for 'https://github.com': '<discovered>'`
+
+then you know you've succeeded in connecting RStuido with Github.
+
+Note that if you use several computers/servers, you will have to do those steps again on each machine.
+
+
+
+
+
+
 
 > ## Note: 
 >
@@ -70,11 +109,7 @@ After you've updated the Origin URL from the command line, go back to R Studio -
 ## Push your local changes up to your repository GitHub.
 With authentication set up and your local copy of your repository pointing to GitHub as the "Origin" you should be able to make changes locally and _push_ them up to GitHub.  
 
-When prompted, enter your GitHub username and paste into your Personal Access Token (PAT) when prompted for your GitHub password.
-
-![RStudio PAT Password Prompt](../../fig/10-git-mac-password-prompt.png)
-
- Let's try it and see if it works.
+Let's try it and see if it works.
 
 > ## Challenge 2: Push to GitHub
 > 
@@ -86,7 +121,7 @@ When prompted, enter your GitHub username and paste into your Personal Access To
 > 
 {: .challenge}
 
-With the ability to synchronize your changes between GitHub and your local, the next step is to explore options for publishing your research paper.
+With the ability to synchronize your changes between GitHub and your local repo, the next step is to explore options for publishing your research paper.
 
 
 {% include links.md %}
