@@ -19,7 +19,7 @@ keypoints:
 - "Setting your working directory at the project level can effectively mitigate path-related challenges encountered while working on Quarto documents."
 ---
 
-## Introduction to Code in Quarto & Kntir Engine
+## Introduction to Code in Quarto & Knitr Engine
 
 We've learned about the text-formatting options for Quarto in RStudio. Now, let's dive into the code portion of Quarto documents. As we've seen so far, Quarto flips the "code first" default of R scripts which prioritizes code over text. Instead of using comments to add text, Quarto Documents uses a "text-first" default and requires the use of special syntax to add code. In Quarto documents, the syntax to signal the switch to code is called "code chunks" in RStudio (referred to as "code cells" in other environments). Code chunks are interpreted by Knitr. But first, what is Knitr? 
 
