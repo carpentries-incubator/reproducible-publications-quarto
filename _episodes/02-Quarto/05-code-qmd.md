@@ -131,8 +131,7 @@ plot <- ggplot(df_long2, aes(Measurement, mean_value, group = Condition, color =
 
 #Print and save plots  
 plot
-
-ggsave("../output/plots/heartrate.pdf", plot, width = 4, height = 3)
+ggsave("output/heartrate.pdf", plot, width = 4, height = 3)
 ~~~
 {: .language-r}  
 
