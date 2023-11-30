@@ -104,4 +104,40 @@ For the purposes of this workshop we've been using HTML as the output format but
 ### If you are willing to publish your manuscript through a peer-reviewed journal
 - Most journals now request the underlying data, code and documentation to be shared along with the manuscript, so in that case you will have that handy. Whenever possible, give preference to *open-access* journals with data sharing recommendations to foster open science, transparency and research reproducibility. The [TOP Factor](https://topfactor.org/journals) allows you to search by journal title and/or discipline and will rank journals compliance with those principles.
 - If your chosen journal does not require nor recommend a particular process for making your project data available (some will dictate what, where and how project data should be uploaded), you may still consider depositing your project files in a reliable data repository and cross-reference paper and project data, ideally with a formal citation containing a [Persistent Identifier](https://www.library.ucsb.edu/sites/default/files/dls_n4_pids_navy.pdf)(e.g., DOI, ARK, handle, Purl) to avoid link rot.
-- In terms of data repositories, there are many options available, and they can be disciplinary, institutional or generalist (e.g., Zenodo, Figshare). For a compreheensive list of options available please refer to the [Registry of Research Data Repositories]([https://www.re3data.org/). At UCSB Library we support [Dryad](https://datadryad.org/stash). If Dryad is not suitable for your needs, [Research Data Services](https://www.library.ucsb.edu/research-data-services) can assist you finding a more optimal solution for archiving your project data.   
+- In terms of data repositories, there are many options available, and they can be disciplinary, institutional or generalist (e.g., Zenodo, Figshare). For a compreheensive list of options available please refer to the [Registry of Research Data Repositories]([https://www.re3data.org/). At UCSB Library we support [Dryad](https://datadryad.org/stash). If Dryad is not suitable for your needs, [Research Data Services](https://www.library.ucsb.edu/research-data-services) can assist you finding a more optimal solution for archiving your project data.
+
+## Creating Pre-formatted Papers (Optional)
+
+We have learned how to start a new document on RStudio and we will learn good practices for project organization next. But, let’s say you are writing a paper having a journal in mind. Writing it in your own style and then formatting it prior to submission will duplicate your work, right? The good news is that RStudio and Quarto can give us a hand with that. 
+
+Quarto offers some journal formats and made them available within the quarto-journals GitHub organization, including:
+
+- Association of Computing Machinery	
+- American Chemical Society	
+- Biophysical journal	
+- Elsevier Journals
+- American Statistical Association Journals
+- Journal of Statistical Software
+- Public Library of Science
+
+This list is expected to rapidly grow with new contributions submitted to the [Quarto Journal Templates Repository](https://github.com/quarto-journals). You may also create your own templates following [these guidelines](https://quarto.org/docs/journals/templates.html).  
+
+Journal templates require features of Quarto version 1.2 so we need to ensure we have the right Quarto version.  You can check your Quarto version in the Terminal with command: `quarto --version`.  We should be good with that for this workshop, but if you are using a lab computer later on, you may need to update Quarto.  See: [pre-release versions of Quarto](https://quarto.org/docs/download/prerelease.html)
+
+Quarto uses a template command that can be called in the terminal to create an article in any of these formats. Suppose you want to use the Elsevier template. In Rstudio, in the terminal (if not showing, select `Tools > Terminal > New`), type `quarto use template quarto-journals/elsevier`. Then, follow the steps below:
+
+- 1) Trust the authors: `? Do you trust the authors of this template (Y/n) › Yes`
+- 2) Give a name to the directory ` ? Directory name: › elsevier-template`
+
+This will install the extension and create an example qmd file and bibiography with all required files that you can use as a starting place for your article:
+
+![Journal-Templates](../../fig/03-journal-template.png) <br>
+
+
+Locate the directory where you have saved the template. You can make a copy of `elsevier-template.qmd` document or rename it as start writing your paper following the journal's formatting requirements.
+
+It is beyond the scope of this workshop to cover journal templates more extensively, but if you want to explore further how to apply templates, apply styling and even create your own templates, check the [Quarto Journals GitHub page](https://github.com/quarto-journals/article-format-template). 
+
+> ## Tip
+> Before proceeding always check if the template of interest meets the most updated guidelines in the journal website, since these templates are maintained by the Quarto community, not the journal editors.
+{: .callout}
