@@ -2,6 +2,7 @@
 title: "Scientific reproducibility: What is it for?"
 teaching: 10
 exercises: 00
+start: true
 questions:
 - "What is reproducible research?"
 - "How can RStudio help research to be more reproducible?"

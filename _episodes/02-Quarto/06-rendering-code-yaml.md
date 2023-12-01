@@ -3,6 +3,7 @@ source: Rmd
 title: "NEW EPISODE - 02-06 Rendering & Customizing Code Outputs"  
 teaching: 00
 exercises: 00
+start: true
 questions:
 - "How to render code in Quarto documents?"
 - "How to apply code chunk options at the document level to customize your code?"
