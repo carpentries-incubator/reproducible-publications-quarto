@@ -6,15 +6,19 @@ questions:
 - "What are the options for you to publish your project?"
 - "What free and open publishing resources are available?"
 - "What aspects should guide your choice?"
+- "How can you create qmd documents using journal templates?"
 
 objectives:
 - "Identify different ways you can publish your project."
 - "Overview of some free and open resources available."
 - "Learn which factors should guide your decision-making process."
+- "Understand what journal templates are and their advantages."
+
 
 keypoints:
 - "You may choose to share and publish your data project before publishing its associated manuscript."
 - "Sharing the code, data and documentation is necessary to allow for inspection and research reproducibility."
+- "The quarto-journals GitHub organization has journal article formats available for use."
 ---
 
 ## What is Next?
