@@ -6,23 +6,19 @@ exercises: 05
 questions:
 - What is Quarto?
 - What is the breakdown of a Quarto document?
-- What are templates in Quarto?
 - How can you render the input file to the specified output format?
-- How can you create pre-formatted for qmd document based on journal templates?
 
 objectives:
 - Understand what Quarto is and its applications.
 - Learn about the structure of a quarto document.
 - Learn how a quarto document works.
 - Learn how to render a .qmd file into an output format.
-- Understand what are journal formats are and the advantages of using them.
 - Learn how to start a Quarto document in RStudio.
 
 keypoints:
-- Quarto let you create reproducible documents.
-- An qmd file is comprised of a YAML header, formatted text in qmd and code blocks.
+- Quarto lets you create reproducible documents.
+- An qmd file is comprised of a YAML header, formatted text in qmd, and code blocks.
 - The render function converts the file into the chosen output format.
-- Rstudio has some journal formats that can save you some time, or you can make your own for frequent submissions.
 ---
 
 ### Creates documents using Quarto
