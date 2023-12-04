@@ -1,6 +1,6 @@
 ---
 source: Rmd  
-title: "NEW EPISODE - 02-06 Rendering & Customizing Code Outputs"  
+title: "Rendering & Customizing Code Outputs"  
 teaching: 10
 exercises: 10
 questions:
