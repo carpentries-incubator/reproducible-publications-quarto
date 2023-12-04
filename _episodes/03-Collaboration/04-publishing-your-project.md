@@ -64,7 +64,7 @@ RStudio also saves an HTML version of your *knit* document to your local file sy
 
 There are two approaches to publish content to Quarto Pub:
 
-1. Use the `quarto publish command` to publish content rendered on your local machine 
+1. Use the `quarto publish` command to publish content rendered on your local machine 
 
 or 
 
