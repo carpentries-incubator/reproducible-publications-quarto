@@ -203,19 +203,18 @@ If you wish to add a cross-reference to a figure that was generated via code blo
 #| label: fig-id
 #| fig-cap: "figure caption here" 
 `
-And then, enter the @fig-id where you want to note the cross-referece in your paper. 
+And then, enter the @fig-id where you want to note the cross-reference in your paper. 
 
 > ## Challenge 4: Adding cross-reference for code block figures
-> Your turn! Include a cross-reference to Figure 3. In a previous lesson, we added a caption for figure 3: `fig-cap = "Fig 3: Mean heart rate of stress and control groups at baseline and during intervention.`. How we would have to tweek that a bit to make the cross-referencing render correctly?
+> Your turn! Include a cross-reference to Figure 3. 
 >
 > > ## Solution:
-> > 1) Add a label (id) e.g., `#| label: fig-fig3`
-> > 2) Make sure the caption is correctly represented `#| fig-cap: "Fig 3: Mean heart rate of stress and control groups at baseline and during intervention"`
-> > 3) Call the figure using the assigned id `@fig-fig3`
-> > 4) Render it to check what it looks like. 
-> > **FIXME: Add screenshot**
+> > Make sure you have added a label (id). If you missed that step, now it is the time to add `#| label: fig-heartrate`
+> > Call the figure using the assigned id `@fig-heartrate`
 > >
 > > {: .output}
 > >
 > {: .solution}
 {: .challenge}
+
+You may also cross-reference, equations `@eq-` and sections `@sec-` within a document. To further explore these and other options check [https://quarto.org/docs/authoring/cross-references.html](https://quarto.org/docs/authoring/cross-references.html). 
