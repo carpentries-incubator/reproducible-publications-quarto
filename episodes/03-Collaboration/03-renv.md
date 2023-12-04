@@ -1,6 +1,6 @@
 ---
 title: "Creating and sharing reproducible environments using renv"
-teaching: 15
+teaching: 20
 exercises: 10
 questions:
 - "How can I manage package and software dependencies in RStudio?"
