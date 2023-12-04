@@ -64,9 +64,12 @@ Now, we are seeing what we would like: a figure without other output to show in 
  
 > ## CHALLENGE 1 - Rendering Codes (Optional)
 > Given the following options, How will some hypothetical code render? Try it out with the code we just added to visualize the styling change.
+> ~~~
+```{r}
 > `{r}
 #| eval: TRUE
 #| include: FALSE`
+> ~~~
 > 
 >> ## SOLUTION
 >> The expressions in the code chunk will be evaluated, but the outputted figures/plots will not be included in the rendered document.   
@@ -148,7 +151,7 @@ Let's render one more time to see if our figure outputs how we'd like and has a 
 
 We have already learned how to create, run and customize code chunks, but what if you only need to make a quick calculation, and adding a code chunk seems a little overkill?
 
-Sometimes you just need to do a quick calculation to add to your narrative - such as a count of total observations in your data or the mean of one of your variables. In those cases, it may not be worth setting up a code chunk to calculate those values, so Quarto also provides the ability to use inline code.
+Sometimes, you just need to do a quick calculation to add to your narrative - such as a count of total observations in your data or the mean of one of your variables. In those cases, it may not be worth setting up a code chunk to calculate those values, so Quarto also provides the ability to use inline code.
 
 If that is the case, you can include `r code` directly in the text portion of your document by enclosing it between single backticks. Say you are discussing some of the summary statistics in your manuscript, Quarto makes this possible through HTML/LaTeX inline code, which allows you to calculate simple expressions integrated into your narrative. Inline code enables you to insert \`r code`\ into your document to update portions of your text dynamically. In other words, if your data set changes, the code will automatically update the specified calculation. 
 
