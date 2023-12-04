@@ -1,5 +1,5 @@
 ---
-title: "Creating and sharing reproducible environments using renv"
+title: "Creating and sharing reproducible environments with renv"
 teaching: 20
 exercises: 10
 questions:
