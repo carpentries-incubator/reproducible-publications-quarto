@@ -1,8 +1,8 @@
 ---
 source: Rmd  
 title: "Adding Code to Quarto Documents"  
-teaching: 10
-exercises: 10
+teaching: 15
+exercises: 15
 questions:
 - "What is Knitr and how it works?"
 - "What are code chunks, and how are they structured?"
