@@ -65,7 +65,9 @@ Now, we are seeing what we would like: a figure without other output to show in 
  
 > ## CHALLENGE 1 - Rendering Codes (Optional)
 > How will some hypothetical code render given the following options? Try it out with the code we just added to visualize the styling change.
-> `{r global-chunk-challenge, eval = TRUE, include = FALSE}`
+> `{r}
+> #| eval: TRUE
+> #| include: FALSE`
 > 
 >> ## SOLUTION
 >> The expressions in the code chunk will be evaluated, but the outputted figures/plots will not be included in the rendered document.   
@@ -90,7 +92,9 @@ Some things to keep in mind
 
 We’ll see in a bit where this code chunk label comes in handy. But, for now, let's go back and give our first code chunk a name:
 
-`#| label: fig3-heartrate`
+`#| label: fig-heartrate`
+
+When naming your code chunks that will produce figures or tables, use `fig-` and `tbl-`. We will learn how these will allow for cross-references.
 
 > ## Tip: Don't use spaces, periods, or underscores in code chunk labels
 > Avoid spaces, periods `(.)`, and underscores `(_)` in chunk labels and paths. If you need separators, you are recommended to use hyphens `(-)` instead. For example, setup-options is a good label, whereas setup.options and chunk 1 are bad; fig.path = 'figures/mcmc-' is a good path for figure output, and fig.path = 'markov chain/monte carlo' is bad. See more at: [https://yihui.org/knitr/options/](https://yihui.org/knitr/options/)
@@ -106,13 +110,18 @@ The caption information also resides at the top of a code chunk using the `#|` s
 
 **Don't forget to put the caption within quotes `""`.**
 
-> ## CHALLENGE 2 (Not Optional): Adding a caption and making Figure 3 cleaner 
-> Let's add the following caption: "Fig 3: Mean heart rate of stress and control groups at baseline and during intervention." and ensure only the figure will be displayed in the html document. 
+> ## CHALLENGE 2: Adding a caption and cleaning up unwanted content for Figure 3
+> Let's add the following caption: "Mean heart rate of stress and control groups at baseline and during intervention." and ensure only the figure and the caption will be displayed in the html document. 
 >> ## SOLUTION
 >> So, you should end up with the following in your code chunk:
 >> ~~~
->> {r fig3-heartrate, echo = FALSE, message = FALSE, warning = FALSE, results = FALSE, 
->> fig.cap = "Fig 3: Mean heart rate of stress and control groups at baseline and during intervention."}
+```{r}
+#| label: fig-heartrate
+#| echo: false
+#| message: false
+#| warning: false
+#| results: false 
+#| fig.cap: "Mean heart rate of stress and control groups at baseline and during intervention."
 >> ~~~
 >> {: .language-r}
 >> Set the option `fig.cap` to equal the text in double-quotes.
