@@ -66,9 +66,8 @@ Now, we are seeing what we would like: a figure without other output to show in 
 > Given the following options, How will some hypothetical code render? Try it out with the code we just added to visualize the styling change.
 > ~~~
 ```{r}
-> `{r}
 #| eval: TRUE
-#| include: FALSE`
+#| include: FALSE
 > ~~~
 > 
 >> ## SOLUTION
