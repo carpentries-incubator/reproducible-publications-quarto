@@ -216,5 +216,3 @@ And then, enter the @fig-id where you want to note the cross-reference in your p
 > >
 > {: .solution}
 {: .challenge}
-
-You may also cross-reference, equations `@eq-` and sections `@sec-` within a document. To further explore these and other options check [https://quarto.org/docs/authoring/cross-references.html](https://quarto.org/docs/authoring/cross-references.html). 
