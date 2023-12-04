@@ -1,6 +1,6 @@
 ---
 source: Rmd  
-title: "NEW EPISODE - 02-05 Adding Code to Quarto Documents"  
+title: "Adding Code to Quarto Documents"  
 teaching: 10
 exercises: 10
 questions:
