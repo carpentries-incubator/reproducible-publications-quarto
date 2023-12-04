@@ -1,12 +1,12 @@
 ---
 source: Rmd  
 title: "NEW EPISODE - 02-05 Adding Code to Quarto Documents"  
-teaching: 00
-exercises: 00
+teaching: 10
+exercises: 10
 questions:
 - "What is Knitr and how it works?"
-- "What are code chunks and how are they structured?"
-- "How to add and run code chunks?"
+- "What are code chunks, and how are they structured?"
+- "How do you add and run code chunks?"
 - "How can I avoid issues with relative paths?"
 objectives:
 - "Understand how knitr integrates code and text."
@@ -21,7 +21,7 @@ keypoints:
 
 ## Introduction to Code in Quarto & Knitr Engine
 
-We've learned about the text-formatting options for Quarto in RStudio. Now, let's dive into the code portion of Quarto documents. As we've seen so far, Quarto flips the "code first" default of R scripts which prioritizes code over text. Instead of using comments to add text, Quarto Documents uses a "text-first" default and requires the use of special syntax to add code. In Quarto documents, the syntax to signal the switch to code is called "code chunks" in RStudio (referred to as "code cells" in other environments). Code chunks are interpreted by Knitr. But first, what is Knitr? 
+We've learned about the text-formatting options for Quarto in RStudio. Now, let's dive into the code portion of Quarto documents. As we've seen so far, Quarto flips the "code first" default of R scripts, prioritizing code over text. Instead of using comments to add text, Quarto Documents uses a "text-first" default and requires the use of special syntax to add code. In Quarto documents, the syntax to signal the switch to code is called "code chunks" in RStudio (referred to as "code cells" in other environments). Code chunks are interpreted by Knitr. But first, what is Knitr? 
 
 ## What is Knitr?
 
@@ -29,7 +29,7 @@ Knitr is the engine in RStudio, which creates the “dynamic” part of Quarto r
 
 ## How it works?
 
-First, code chunks are sent to a preceding stage of processing by Knitr, which runs the code, generates any plots or figures, and then "knits" the code output and text together. Next, Quarto outputs the "knitted" text and rendered code into an HTML document (or other document type indicated in your configuration file). 
+First, code chunks are sent to a preceding stage of processing by Knitr, which runs the code, generates any plots or figures, and then "knits" the code output and text together. Next, Quarto outputs the "knitted" text and renders code into an HTML document (or another document type indicated in your configuration file). 
 
 There are two ways to add code to Quarto documents:
 
@@ -196,17 +196,17 @@ df <- read_csv("data/processed/preprocessed-GARP-TSST-data.csv")
 
 Run the code again to make sure it works properly. 
 
-Did it work? Look under the code chunk. If all goes well, You should see a plot preview beneath the code chunk. 
+Did it work? Look under the code chunk. You should see a plot preview beneath the code chunk if all goes well. 
 
 ![Code Chunk Plot Preview](../../fig/07-plot-preview.png){: .image-with-shadow}
 
 
 ### Set Working Directory in Quarto Documents
 
-Okay, so you know how we had to change the file path in the code chunk we copied into our document so that the relative path was correct for reading the data? This happened because, in Quarto documents, the working directory is wherever the qmd document is located, but our code is located in a different folder. This means they have different relative paths to locate and read the data we want to work with. We can simplify things by designating the working directory for our document relative to the root project directory instead. This lets all files work relative to the project root instead of each other, standardizing the relative paths. Note that this is mainly important for code chunks - text portions of Quarto documents are not affected. This will clarify some of our confusion with relative paths across our R project. 
+Okay, remember how we changed the file path in the code chunk we copied into our document to correct the relative path for reading the data? This happened because, in Quarto documents, the working directory is wherever the qmd document is located, but our code is located in a different folder. This means they have different relative paths to locate and read the data we want to work with. We can simplify things by designating the working directory for our document relative to the root project directory instead. This lets all files work relative to the project root instead of each other, standardizing the relative paths. Note that this is mainly important for code chunks - text portions of Quarto documents are not affected. This will clarify some of our confusion with relative paths across our R project. 
 
 
-So one should learn how to accomplish that by changing the working directory at the project level YAML settings. So we'll navigate to our _quarto.yml document in our root project directory and open it. 
+So, one should learn how to accomplish that by changing the working directory at the project level YAML settings. So we'll navigate to our _quarto.yml document in our root project directory and open it. 
 
 We'll add the following settings to the yml file:
 ~~~
