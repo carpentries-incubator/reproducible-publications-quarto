@@ -1,8 +1,8 @@
 ---
 source: Rmd  
 title: "Advanced Code Chunk Options"  
-teaching: 00
-exercises: 00
+teaching: 10
+exercises: 10
 questions:
 #- "How to apply global options at the project-level?"
 - "How to globally load data and packages?"
