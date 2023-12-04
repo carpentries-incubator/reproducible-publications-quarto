@@ -1,20 +1,19 @@
 ---
 source: Rmd  
 title: "NEW EPISODE - 02-06 Rendering & Customizing Code Outputs"  
-teaching: 00
-exercises: 00
-start: true
+teaching: 10
+exercises: 10
 questions:
-- "How to render code in Quarto documents?"
-- "How to apply code chunk options at the document level to customize your code?"
-- "How to label and caption code chunks?"
-- "What is inline code and when to use it?"
+- "How do you render code in Quarto documents?"
+- "How do you apply code chunk options at the document level to customize your code?"
+- "How do you label and caption code chunks?"
+- "What is inline code and when should it be used?"
 objectives:
 - "Learn how to insert and render run-able chunks of code to integrate into your report."
 - "Apply labels and caption to code chunks."
 - "Learn the syntax and how to add in-line code."
 keypoints:
-- "Each time you render/knit the document, calculations, and plots will run and be displayed."
+- "Each time you render/knit the document, calculations and plots will run and be displayed."
 - "Options for code chunks can be set at the document level."
 ---
 
@@ -59,15 +58,15 @@ Ok, let's use some of the options above to improve the look of our Quarto docume
 - warning: false
 - results: false
 
-These options mean the source code will not be printed in the rendered HTML document, messages from the code will not be printed in the rendered HTML document, and warnings will not be printed in the HTML document (but will still output to the console). Plots, figures or whatever is printed by the code WILL show up in the final html document.  
+These options mean the source code will not be printed in the rendered HTML document, messages from the code will not be printed in the rendered HTML document, and warnings will not be printed in the HTML document (but will still output to the console). Plots, figures, or whatever is printed by the code WILL show up in the final html document.  
 
 Now, we are seeing what we would like: a figure without other output to show in our paper. 
  
 > ## CHALLENGE 1 - Rendering Codes (Optional)
-> How will some hypothetical code render given the following options? Try it out with the code we just added to visualize the styling change.
+> Given the following options, How will some hypothetical code render? Try it out with the code we just added to visualize the styling change.
 > `{r}
-> #| eval: TRUE
-> #| include: FALSE`
+#| eval: TRUE
+#| include: FALSE`
 > 
 >> ## SOLUTION
 >> The expressions in the code chunk will be evaluated, but the outputted figures/plots will not be included in the rendered document.   
