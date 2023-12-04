@@ -32,7 +32,7 @@ This lesson assumes you already have a basic understanding of R and RStudio but
 we will do a brief tour of the IDE, review R projects and the best practices for
 organizing your work, and how to install or check packages you need to follow along.
 
-Now, let's open RStudio. You may access it through the Jupyter Hub instance [https://carpentryworkshop.lsit.ucsb.edu](https://carpentryworkshop.lsit.ucsb.edu). After passing authentication, choose `RStudio`. If you want to follow along using your local RStudio, make sure you use IDE version RStudio v2022. 07.1 or later and that it is running [Quarto version 1.2 or above](https://quarto.org/docs/download/prerelease.html). If you need to check that, for RStudio, choose `Help` and `About RStudio`. For the Quarto version checking, type in `packageVersion("quarto")` on the console. 
+Now, let's open RStudio. You may access it through the Jupyter Hub instance [https://carpentryworkshop.lsit.ucsb.edu](https://carpentryworkshop.lsit.ucsb.edu). After passing authentication, choose `RStudio`. If you want to follow along using your local RStudio, make sure you use IDE version RStudio v2023.06 or later and that it is running [Quarto version 1.3 or above](https://quarto.org/docs/download/prerelease.html). If you need to check that, for RStudio, choose `Help` and `About RStudio`. For the Quarto version checking, type in `packageVersion("quarto")` on the console. 
   
 
 **Basic layout**
