@@ -1,7 +1,7 @@
 ---
 title: "Writing and Styling Qmd Documents"
 teaching: 10
-exercises: 0
+exercises: 10
 questions:
 - "What is the Visual Editor in RStudio?"
 - "Which features does the Visual Editor have?"
