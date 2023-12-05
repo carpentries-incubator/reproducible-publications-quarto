@@ -152,7 +152,9 @@ Sometimes, you just need to do a quick calculation to add to your narrative - su
 
 If that is the case, you can include `r code` directly in the text portion of your document by enclosing it between single backticks. Say you are discussing some of the summary statistics in your manuscript, Quarto makes this possible through HTML/LaTeX inline code, which allows you to calculate simple expressions integrated into your narrative. Inline code lets you insert \`r code`\ into your document to dynamically update portions of your text. In other words, if your data set changes, the code will automatically update the specified calculation. 
 
-This can be helpful when referring to specific variables in your data. For example, you should include numbers that are derived from the data as code, not as numbers. Thus, rather than writing “The CSV file contains choice consistency data for 10.000 simulated participants” **(Example 7)**, replace the static number with a bit of code that, when evaluated, gives you a dynamic number if anything changes on your dataset. Note that there is not an insert option to do this from the menu in the visual editor, so we need to insert inline code manually, for example:
+This can be helpful when referring to specific variables in your data. For example, you should include numbers that are derived from the data as code, not as numbers. 
+
+Thus, rather than writing “The CSV file contains choice consistency data for 10.000 simulated participants” **(Example 7)**, replace the static number with a bit of code that, when evaluated, gives you a dynamic number if anything changes on your dataset. Note that there is not an insert option to do this from the menu in the visual editor, so we need to insert inline code manually, for example:
 
 The CSV file contains choice consistency data for \`r nrow(bronars_simulation_data)`\ simulated participants.
 
