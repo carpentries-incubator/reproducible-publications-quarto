@@ -103,22 +103,6 @@ csl: apa.csl
 
 Save and render the document to see how citations and references have changed. This same process could be followed for any citation style required by the university, the journal, or the conference you are planning to submit your manuscript.  
 
-> ## Challenge 2 - Changing the Citation Style
->
-> How can you go back to using Chicago Style?
->
-> > ## Solution:
-> >
-> > You can either delete the csl information as it is set as the default, or call it in the YAML:
-> >
-> > ```
-> > csl: chicago.csl
-> > ```
-> > {: .output}
-> >
-> {: .solution}
-{: .challenge}
-
 ## Adding Items to the References without Citing them
 
 All cited items will be listed under the section References, which you created before while practicing headings and subheadings. Items will be placed automatically in alphabetical order for most citation styles. However, there might be cases which you will be referencing supporting literature that you have not necessarily cited in the document.  
@@ -135,7 +119,7 @@ To demonstrate that, let's include the bibtex `@key` for an item that was not ci
 
 Let’s try!
 
-> ## Challenge 3 (optional): Adding references you have not cited
+> ## Challenge 2 (optional): Adding references you have not cited
 >
 > We have used a few packages in our paper that we do not necessarily
 > cite in the text. However, adding them to the
@@ -205,7 +189,7 @@ If you wish to add a cross-reference to a figure that was generated via code blo
 `
 And then, enter the @fig-id where you want to note the cross-reference in your paper. 
 
-> ## Challenge 4: Adding cross-reference for code block figures
+> ## Challenge 3: Adding cross-reference for code block figures
 > Your turn! Include a cross-reference to Figure 3. 
 >
 > > ## Solution:
