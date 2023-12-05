@@ -45,7 +45,7 @@ For example:
 - Set expiration to 90 days. Note that GitHub will send you an email when it’s time to renew your token that is about to expire. It is easier to not let the token expire, otherwise you will have to regenerate a new one and do all the setup again.
 
 
-![PAT options on GitHub](../../fig/10-github-new-PAT-options.png)
+![PAT options on GitHub](../../fig/10-github-new-PAT-options.png){: .image-with-shadow}
 
 
 You can leave all the other options as selected. Click on the green Generate token button at the bottom of the page.
@@ -83,7 +83,7 @@ Note that if you use several computers/servers, you will have to do those steps 
 
 You can get your repository's address from GitHub by navigating to your repository on GitHub.com and clicking the green "Code" button.  
 
-![Copy Repo URL from GitHub](../../fig/10-github-clone.png)
+![Copy Repo URL from GitHub](../../fig/10-github-clone.png){: .image-with-shadow}
 
 With that address, you can complete setting the origin URL in the next step. 
 
@@ -103,7 +103,7 @@ Be sure **your** GitHub username is part of the URL.
 
 After you've updated the Origin URL from the command line, go back to R Studio --> Tools --> Project Options --> Git/SVN to verify you have the "Origin" field filled in.  It should look like this.
 
-![RSTudio Project Options Git/SVN](../../fig/10-rstudio-project-options-git-with-https-origin.png) 
+![RSTudio Project Options Git/SVN](../../fig/10-rstudio-project-options-git-with-https-origin.png){: .image-with-shadow} 
 
 
 ## Push your local changes up to your repository GitHub.
