@@ -43,7 +43,9 @@ df <- read_csv("../data/processed/preprocessed-GARP-TSST-data.csv")
 >
 > > ## Solution:
 > > 
-> > We would get an error because we haven't loaded tidyverse yet!
+> > We would get an error because we haven't loaded tidyverse which is required to read the CSV yet!
+>>
+> > ![Error due to wrong order](../../fig/08-error-ordermatters.png)
 > > 
 > {: .solution}
 {: .challenge}
