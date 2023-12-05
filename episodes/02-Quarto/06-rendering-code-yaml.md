@@ -64,12 +64,11 @@ Now, we are seeing what we would like: a figure without other output to show in 
  
 > ## CHALLENGE 1 - Rendering Codes (Optional)
 > Given the following options, How will some hypothetical code render? Try it out with the code we just added to visualize the styling change.
+>```{r}
 > ~~~
-```{r}
 #| eval: TRUE
 #| include: FALSE
 > ~~~
-> 
 >> ## SOLUTION
 >> The expressions in the code chunk will be evaluated, but the outputted figures/plots will not be included in the rendered document.   
 >> When might you want to use this?   
@@ -115,7 +114,7 @@ The caption information also resides at the top of a code chunk using the `#|` s
 > Let's add the following caption: "Mean heart rate of stress and control groups at baseline and during intervention." and ensure only the figure and the caption will be displayed in the html document. 
 >> ## SOLUTION
 >> So, you should end up with the following in your code chunk:
->> ~~~
+> ~~~
 ```{r}
 #| label: fig-heartrate
 #| echo: false
@@ -123,7 +122,7 @@ The caption information also resides at the top of a code chunk using the `#|` s
 #| warning: false
 #| results: false 
 #| fig.cap: "Mean heart rate of stress and control groups at baseline and during intervention."
->> ~~~
+> ~~~
 >> {: .language-r}
 >> Set the option `fig.cap` to equal the text in double-quotes.
 > {: .solution}
@@ -148,11 +147,11 @@ Let's render one more time to see if our figure outputs how we'd like and has a 
 
 ## Adding In-line Code
 
-We have already learned how to create, run and customize code chunks, but what if you only need to make a quick calculation, and adding a code chunk seems a little overkill?
+We have already learned how to create, run, and customize code chunks, but what if you only need to make a quick calculation, and adding a code chunk seems a little overkill?
 
 Sometimes, you just need to do a quick calculation to add to your narrative - such as a count of total observations in your data or the mean of one of your variables. In those cases, it may not be worth setting up a code chunk to calculate those values, so Quarto also provides the ability to use inline code.
 
-If that is the case, you can include `r code` directly in the text portion of your document by enclosing it between single backticks. Say you are discussing some of the summary statistics in your manuscript, Quarto makes this possible through HTML/LaTeX inline code, which allows you to calculate simple expressions integrated into your narrative. Inline code enables you to insert \`r code`\ into your document to update portions of your text dynamically. In other words, if your data set changes, the code will automatically update the specified calculation. 
+If that is the case, you can include `r code` directly in the text portion of your document by enclosing it between single backticks. Say you are discussing some of the summary statistics in your manuscript, Quarto makes this possible through HTML/LaTeX inline code, which allows you to calculate simple expressions integrated into your narrative. Inline code lets you insert \`r code`\ into your document to dynamically update portions of your text. In other words, if your data set changes, the code will automatically update the specified calculation. 
 
 This can be helpful when referring to specific variables in your data. For example, you should include numbers that are derived from the data as code, not as numbers. Thus, rather than writing “The CSV file contains choice consistency data for 10.000 simulated participants” **(Example 7)**, replace the static number with a bit of code that, when evaluated, gives you a dynamic number if anything changes on your dataset. Note that there is not an insert option to do this from the menu in the visual editor, so we need to insert inline code manually, for example:
 
