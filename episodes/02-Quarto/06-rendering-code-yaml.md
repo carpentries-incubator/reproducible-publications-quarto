@@ -64,10 +64,10 @@ Now, we are seeing what we would like: a figure without other output to show in 
  
 > ## CHALLENGE 1 - Rendering Codes (Optional)
 > Given the following options, How will some hypothetical code render? Try it out with the code we just added to visualize the styling change.
->```{r}
 > ~~~
-#| eval: TRUE
-#| include: FALSE
+> ```{r}
+> #| eval: TRUE
+> #| include: FALSE
 > ~~~
 >> ## SOLUTION
 >> The expressions in the code chunk will be evaluated, but the outputted figures/plots will not be included in the rendered document.   
