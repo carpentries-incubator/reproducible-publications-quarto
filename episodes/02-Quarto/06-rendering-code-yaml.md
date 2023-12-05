@@ -154,7 +154,7 @@ If that is the case, you can include `r code` directly in the text portion of yo
 
 This can be helpful when referring to specific variables in your data. For example, you should include numbers that are derived from the data as code, not as numbers. 
 
-Thus, rather than writing “The CSV file contains choice consistency data for 10.000 simulated participants” **(Example 7)**, replace the static number with a bit of code that, when evaluated, gives you a dynamic number if anything changes on your dataset. Note that there is not an insert option to do this from the menu in the visual editor, so we need to insert inline code manually, for example:
+Thus, rather than writing “The CSV file contains choice consistency data for 10.000 simulated participants” **(Example 7A)**, replace the static number with a bit of code that, when evaluated, gives you a dynamic number if anything changes on your dataset. Note that there is not an insert option to do this from the menu in the visual editor, so we need to insert inline code manually, for example:
 
 The CSV file contains choice consistency data for \`r nrow(bronars_simulation_data)`\ simulated participants.
 
@@ -171,10 +171,7 @@ bronars_simulation_data <- read_csv("../data/raw/bronars_simulation_data.csv")
 {: .checklist}
 
 > ## CHALLENGE 3 - Adding inline code
-> Suppose we would like to add some information to the sentence we have just adjusted in our manuscript. We would like to include the average for the variable *violation_count* present in the same dataset. Which inline code would we have to add to the following sentence?
-> 
-> The CSV file contains choice consistency data for `r nrow(bronars_simulation_data.csv)` simulated participants that have been used to determine the power of our food-choice task design to detect choice consistency violations, which averaged ` `enter inline code here` `. 
-> What inline code would you enter? What number would replace the inline code?
+> Suppose we want to add another inline code to the same paragraph. Look for **(Example 7B)**  to represent the average value for *violation_count* present in the same dataset. Which inline code would we have to add to the following sentence?
 > 
 > Tip: we will need to use a `dataset$variable` syntax!
 > 
