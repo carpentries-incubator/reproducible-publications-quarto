@@ -45,7 +45,7 @@ For example:
 - Set expiration to 90 days. Note that GitHub will send you an email when it’s time to renew your token that is about to expire. It is easier to not let the token expire, otherwise you will have to regenerate a new one and do all the setup again.
 
 
-![PAT options on GitHub](../../fig/10-GitHub-new-PAT-options.png)
+![PAT options on GitHub](../../fig/10-github-new-PAT-options.png)
 
 
 You can leave all the other options as selected. Click on the green Generate token button at the bottom of the page.
@@ -83,7 +83,7 @@ Note that if you use several computers/servers, you will have to do those steps 
 
 You can get your repository's address from GitHub by navigating to your repository on GitHub.com and clicking the green "Code" button.  
 
-![Copy Repo URL from GitHub](../../fig/10-GitHub-clone.png)
+![Copy Repo URL from GitHub](../../fig/10-github-clone.png)
 
 With that address, you can complete setting the origin URL in the next step. 
 
