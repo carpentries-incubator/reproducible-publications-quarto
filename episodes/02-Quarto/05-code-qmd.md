@@ -196,12 +196,12 @@ df <- read_csv("data/processed/preprocessed-GARP-TSST-data.csv")
 
 Run the code again to make sure it works properly. 
 
-Did it work? Look under the code chunk. You should see a plot preview beneath the code chunk if all goes well. 
+Did it work? Look under the code chunk. If all goes well, you should see a plot preview beneath the code chunk. 
 
 ![Code Chunk Plot Preview](../../fig/07-plot-preview.png){: .image-with-shadow}
 
 
-### Set Working Directory in Quarto Documents
+### Set Working Directory in Quarto Documents (Demo Only)
 
 Okay, remember how we changed the file path in the code chunk we copied into our document to correct the relative path for reading the data? This happened because, in Quarto documents, the working directory is wherever the qmd document is located, but our code is located in a different folder. This means they have different relative paths to locate and read the data we want to work with. We can simplify things by designating the working directory for our document relative to the root project directory instead. This lets all files work relative to the project root instead of each other, standardizing the relative paths. Note that this is mainly important for code chunks - text portions of Quarto documents are not affected. This will clarify some of our confusion with relative paths across our R project. 
 
@@ -211,7 +211,6 @@ So, one should learn how to accomplish that by changing the working directory at
 We'll add the following settings to the yml file:
 ~~~
 ...
-project: 
   execute-dir: project
 ...
 ~~~
