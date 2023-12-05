@@ -37,7 +37,7 @@ df <- read_csv("../data/processed/preprocessed-GARP-TSST-data.csv")
 ```
 {: .language-r}
 
-> ## Tip: Order matters!
+> ## Order matters!
 >
 > What would happen if we loaded the data before we loaded the libraries?
 >
