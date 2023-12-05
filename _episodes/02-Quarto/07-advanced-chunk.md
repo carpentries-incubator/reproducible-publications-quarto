@@ -4,18 +4,18 @@ title: "Advanced Code Chunk Options"
 teaching: 10
 exercises: 10
 questions:
-#- "How to apply global options at the project-level?"
-- "How to globally load data and packages?"
-- "How to run code from an external script in a code chunk?"
+#- "How to apply global options at the project level?"
+- "How do you globally load data and packages?"
+- "How do you run code from an external script in a code chunk?"
 - "How do I run external scripts in a Quarto document?"
 objectives:
-- "Learn how to source external scripts to run within an qmd document to modularize your code."
-#- "Learn about using global options for project level settings."
+- "Learn how to source external scripts to run within a qmd document to modularize your code."
+#- "Learn about using global options for project-level settings."
 - "Learn how to load libraries and data for use throughout the whole `.qmd` document."
 keypoints:
 - "Learn how to externally source code `source()`"
 - "Learn how to modularize your code to make it more reproducible"
-- "Use a chunk at the beginning of your document to load libraries and data to make your document more efficiently."
+- "Use a chunk at the beginning of your document to load libraries and data to make your document more efficient."
 ---
 
 
@@ -37,17 +37,17 @@ df <- read_csv("../data/processed/preprocessed-GARP-TSST-data.csv")
 ```
 {: .language-r}
 
-> ## Challenge 2: Order matters (optional)
+> ## Tip: Order matters!
 >
 > What would happen if we loaded the data before we loaded the libraries?
-> Try it out!
 >
 > > ## Solution:
 > > 
 > > We would get an error because we haven't loaded tidyverse yet!
-> > ![load data error](../../fig/08-error-load-data.png)
+> > 
 > {: .solution}
 {: .challenge}
+
 
 At this point, we could go back through our R scripts and comment out (or delete) the beginning sections where we load the data and libraries (you will see this is already done in most of the scripts in the code folder). You can imagine that the more code chunks you have, the more time taking this step would save. Bonus: This also works to load the data before it is called in the inline code!
 
@@ -123,7 +123,7 @@ Success! You'll notice that the global code chunk options were also applied to t
 >
 {: .callout}
 
-> ## Challenge 3: Your turn! Create Figure 4 with the external code
+> ## Challenge 1: Your turn! Create Figure 4 with the external code
 > 
 > First, find `Example 9` in the qmd document for Fig 4 (ctrl-f "Example 9"). We need to add the code for the hormone analysis.
 >
