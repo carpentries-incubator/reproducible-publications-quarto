@@ -113,7 +113,7 @@ The caption information also resides at the top of a code chunk using the `#|` s
 > ## CHALLENGE 2: Adding a caption and cleaning up unwanted content for Figure 3
 > Let's add the following caption: "Mean heart rate of stress and control groups at baseline and during intervention." and ensure only the figure and the caption will be displayed in the html document. 
 >> ## SOLUTION
->> So, you should end up with the following in your code chunk:
+So, you should end up with the following in your code chunk:
 > ~~~
 ```{r}
 #| label: fig-heartrate
