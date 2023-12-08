@@ -3,6 +3,7 @@ source: Rmd
 title: "Rendering & Customizing Code Outputs"  
 teaching: 20
 exercises: 10
+start: true
 questions:
 - "How do you render code in Quarto documents?"
 - "How do you apply code chunk options at the document level to customize your code?"
