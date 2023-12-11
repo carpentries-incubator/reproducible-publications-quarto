@@ -23,11 +23,11 @@ keypoints:
 
 ## Using RStudio projects and Version Control in RStudio
 
-Using version control is a powerful feature to make your research more reproducible and better organized. In order to use versioning while working in RStudio, the first step is to make sure your work is set up as an R Project because you may not use the versioning features in RStudio without one. There are three options for doing this, depending on your given scenario.
+Using version control is a powerful feature to make your research more reproducible and better organized. In order to use versioning while working in RStudio make sure your work is set up as an R Project.  RStudio's versioning features don't work unless your work is part of an R Project. There are three options for starting an R Project, depending on your given scenario.
 
 ## Three Methods of Setting up an RStudio Project with version control
 
-There are several options for working with RStudio projects and enabling version control. You can create a new one if you aren't already working on an R Project. There are three options here:
+There are several options for working with RStudio projects and enabling version control. You can create a new one if you aren't already working on an R Project. Here are three options:
 
 1. **New Directory** - start a brand new RStudio project (with the option of version control).
 2. **Existing Directory** - add existing work to a project in RStudio (with the option of setting up version control).
@@ -83,7 +83,7 @@ First, indicate which version control language you will be using (Subversion is 
 
 ![Git or Subversion](../../fig/05-new-project-git.PNG){: .image-with-shadow}
 
-When you choose this option, there will be a place to paste the GitHub (or another hosting platform) URL. The name of the repository will automatically populate. Just choose which directory on your computer you wish to save the project directory, and you are good to go!
+When you choose this option, there will be a place to paste a URL from GitHub (or another hosting platform). The name of the repository will automatically populate. Just choose which directory on your computer you wish to save the project to, and you are good to go!
 
 ![continue project from GitHub](../../fig/05-new-project-git-url.PNG){: .image-with-shadow}
 
@@ -113,11 +113,11 @@ Now, click on the green `Code` drop-down and then click on the copy icon next to
 
 ![copy GitHub repository url](../../fig/05-copy-repo.PNG){: .image-with-shadow}
 
-Now, let's return to RStudio:
+Now, let's return to RStudio and make our new project.
 
 Click `File > New Project > Version Control > Git`.
 
-So, back to the URL you copied from GitHub. Navigate again to `File > New Project > Version Control > Git`. Paste in your URL and click the "Create Project" button.
+Paste in your repository's Github URL and click the "Create Project" button.
 
 ![start my R project](../../fig/05-git-new-project-clone.png){: .image-with-shadow}
 
@@ -155,7 +155,7 @@ Woo hoo! We have the project we're working on for this workshop opened in RStudi
 ## Using Version Control in RStudio
 
 There are two places we can interact with Git in the RStudio interface.
-1. Menu bar ![Git menu bar](../../fig/05-git-top-menu.PNG){: .image-with-shadow} <br>
+1. Menu bar (Tools menu) ![Git menu bar](../../fig/05-git-top-menu.PNG){: .image-with-shadow} <br>
 2. Environment/History pane ![git environment panel](../../fig/05-git-environment-window.PNG){: .image-with-shadow}
 
 Ok, but what do all the options mean? We won't go through them all, but here are the basics to get started versioning your project.
@@ -171,7 +171,7 @@ But what do those words even mean?
 
 **Commit:** Take a "snapshot" of a selected version of your project. The snapshot will *only* include the files you "added", typically only files that you've edited since your last commit.
 
-You may have a few too many commits in a single work session.
+You may have just a few commits in a single work session or many commits.
 
 When you commit, you add a "commit message," a.k .a. a short line of text (recommended 50 characters or less) that describes the changes that were made to the file(s) you added. This helps keep your versions organized and makes it easier to remember what you did or restore your work to exactly the version needed if you make a mistake or want to implement a change.
 
