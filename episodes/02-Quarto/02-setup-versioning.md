@@ -192,11 +192,7 @@ Put a pin in pulling and pushing for now. For the time being, as we edit our pap
 
 ### Tips for working with Git
 
-- You should pull each time you start working on your project after a hiatus or before each edit if you know a team member is working at the same time.
 - Commit frequently; each commit should be a distinct set of edits that you can summarize in 50 characters or less. Don’t add a bunch of unrelated edits to the same commit; it makes it harder to look back through your “snapshots” and find the right one if you need to.
-- At the end of your work session (or more frequently if you are working at the same time as team members), “push” your commits to the remote repository - this is the only way your local changes get added to your team’s remote repository.
-
-This pull, add, commit, push routine will become second nature. Pulling at the beginning and pushing at the end of your work session becomes a sort of ritual that marks the beginning and end of your work session.
 
 ## Your first edit
 
