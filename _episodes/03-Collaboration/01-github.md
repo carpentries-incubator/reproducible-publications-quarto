@@ -17,7 +17,7 @@ keypoints:
 - Setting the Git repository _Origin_ in your R Studio project enables _pushing_ and _pulling_ from your local copy of the repository to the repository on GitHub.
 ---
 
-## Synchronizing Your Local changes Your Repository on Github
+## Synchronizing Your Local changes Your Repository on GitHub
 
 In Episode 3: [ Getting your project set up with Version Control in RStudio](../01-Project-Setup-Organization/03-setup-versioning), we learned about using version control as you write your publication.  In this part of the workshop, we will set up Rstudio to authenticate with GitHub, which is necessary to _push_ your changes to GitHub.
 
@@ -34,7 +34,7 @@ In your RStudio console enter following command:
 
 `usethis::create_github_token()`
 
-This will open your web browser and, after logging in if necessary, you'll be on Github settings page to create a PAT. Most of the options have already been set for us, we only need to update:
+This will open your web browser and, after logging in if necessary, you'll be on GitHub settings page to create a PAT. Most of the options have already been set for us, we only need to update:
 
 - the Note field by describing what is the token for. We recommend a combination describing the computer the PAT will be used on and what it is going to be used for. 
 
@@ -63,7 +63,7 @@ To check your work you can run the following command in your R console:
 
 if the output shows the line `Personal access token for 'https://github.com': '<discovered>'`
 
-then you know you've succeeded in connecting RStudio with Github.
+then you know you've succeeded in connecting RStudio with GitHub.
 
 Note that if you use several computers/servers, you will have to do those steps again on each machine.
 
