@@ -63,7 +63,7 @@ To check your work you can run the following command in your R console:
 
 if the output shows the line `Personal access token for 'https://github.com': '<discovered>'`
 
-then you know you've succeeded in connecting RStuido with Github.
+then you know you've succeeded in connecting RStudio with Github.
 
 Note that if you use several computers/servers, you will have to do those steps again on each machine.
 
