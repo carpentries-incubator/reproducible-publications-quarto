@@ -75,7 +75,7 @@ We're just going to test out the same figure again so we can verify this new met
 
 ~~~
 # run the code from 03_HR_analysis.R in the code directory
-source("code/03_HR_analysis.R", local = knitr::knit_global())
+source("code/03_HR_analysis.R")
 # display the plot created by code in 03_HR_analysis.R
 plot 
 ~~~
@@ -90,7 +90,7 @@ Add the following code where `Example 8` is located under "Preview of Research R
 
 ~~~
 # run the code from 03_HR_analysis.R in the code directory
-source("code/03_HR_analysis.R", local = knitr::knit_global())
+source("code/03_HR_analysis.R")
 # display the plot created by code in 03_HR_analysis.R
 plot 
 ~~~
@@ -135,7 +135,7 @@ Success! You'll notice that the global code chunk options were also applied to t
 > > ~~~
 > > {r fig4-hormones, fig.cap = "Fig 4: Cortisol and Amylase levels in stress and control groups" }
 > > # run the code from 02_hormone_analysis.R in the code directory
-> > source("code/02_hormone_analysis.R", local = knitr::knit_global())
+> > source("code/02_hormone_analysis.R")
 > > # Display the plot created by code in 02_hormone_analysis.R
 > > plot 
 > > ~~~
