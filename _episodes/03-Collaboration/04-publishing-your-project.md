@@ -34,26 +34,21 @@ Once you have completed your Quarto manuscript following all the best practices 
 Notice the circular blue "Publish" button in the upper right corner of your _Render_ output.  Click this to publish to Rpubs.  This is where you'll need a Rpubs account, as mentioned in [setup](/setup.html)
 for this workshop.  
 
-Click the blue publish button
+Click the blue publish button:
 
 ![Publish button in RStudio](../../fig/11-publish-button-scrnshot-2.png)
-
-If you click on the carrot, you might get the warning below: 
-
-`** Installing R Package Dependencies for Publishing: 'packrat', 'rsconnect', 'markdown'
-[1/3] Installing packrat...`
 
 Wait for the installation to be completed. If a little menu pops up, select "Publish Document..." and you'll be presented with the following panels:
 
 ![Publish to RPubs or RStudio Connect](../../fig/11-r-studio-knit-publish-to-scrnshot.png)
 
-(The other option in the dialog box, RStudio Connect, is a standalone publishing platform for teams to share content.  It requires purchase to host and use.)
+(The other option in the dialog box, RStudio Connect, is a standalone publishing platform for teams to share content.  It requires a purchase to host and use.)
 
 ![Confirm Publish to RPubs](../../fig/11-r-studio-knit-publish-confirm-scrnshot.png)
 
-The first time you publish, RStudio will likely ask if you want to install some needed packages; say yes.  RStudio will then open up a web browser to allow you sign in to rpubs.com.
+The first time you publish, RStudio will likely ask if you want to install some needed packages; say yes.  RStudio will then open up a web browser to allow you to sign in to rpubs.com.
 
-At the end of the publish process, your paper will be live on the internet
+At the end of the publishing process, your paper will be live on the internet
 with a URL similar to: `https://rpubs.com/yourname/678624`
 
 RStudio also saves an HTML version of your *knit* document to your local file system.  Look for it in the same directory as the Quarto file in your R-Studio project directory.  This html document is self-contained and highly portable.  Images are encoded directly into the HTML so you can easily move it to any web hosting you have available.
