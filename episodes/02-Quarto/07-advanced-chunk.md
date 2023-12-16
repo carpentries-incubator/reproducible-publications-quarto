@@ -133,7 +133,9 @@ Success! You'll notice that the global code chunk options were also applied to t
 >
 > > ## Solution:
 > > ~~~
-> > {r fig4-hormones, fig.cap = "Fig 4: Cortisol and Amylase levels in stress and control groups" }
+> > {r}
+> > #|fig-hormones
+> > #|fig.cap = "Fig 4: Cortisol and Amylase levels in stress and control groups"
 > > # run the code from 02_hormone_analysis.R in the code directory
 > > source("code/02_hormone_analysis.R")
 > > # Display the plot created by code in 02_hormone_analysis.R
