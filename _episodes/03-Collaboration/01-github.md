@@ -121,6 +121,16 @@ Let's try it and see if it works.
 > 
 {: .challenge}
 
+### Tips for working with Git
+
+Tips for working with Git
+
+You should _pull_ each time you start working on your project after a hiatus or before each edit if you know a team member is working at the same time.
+
+At the end of your work session (or more frequently if you are working at the same time as team members), “_push_” your commits to the remote repository - this way your local changes get added to your team’s remote repository.
+
+This _pull_, _add_, _commit_, _push_ routine will become second nature. When you sit down to work do a _pull_ and when you're about to get up _push_ to establish a ritual that marks the beginning and end of your work session.
+
 With the ability to synchronize your changes between GitHub and your local repo, the next step is to explore options for publishing your research paper.
 
 
