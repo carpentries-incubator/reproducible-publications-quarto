@@ -4,13 +4,13 @@ title: "Advanced Code Chunk Options"
 teaching: 10
 exercises: 10
 questions:
-#- "How to apply global options at the project level?"
+- "How do you apply global options at the project level?"
 - "How do you globally load data and packages?"
 - "How do you run code from an external script in a code chunk?"
 - "How do I run external scripts in a Quarto document?"
 objectives:
 - "Learn how to source external scripts to run within a qmd document to modularize your code."
-#- "Learn about using global options for project-level settings."
+- "Learn about using global options for project-level settings."
 - "Learn how to load libraries and data for use throughout the whole `.qmd` document."
 keypoints:
 - "Learn how to externally source code `source()`"
