@@ -21,7 +21,7 @@ keypoints:
 
 ### Best Practices for Loading Data and Packages 
 
-We can improve organization and rendering speed in our documents by learning how to load data and packages. So far, we've loaded the library `tidyverse` and the data frame `df` we need in the first code chunk. Now, if we want to add another figure (say the hormone analysis code '02_hormone_analysis.r`), which uses the same data as our first figure - we would be loading tidyverse and the data for a second time. This is unnecessary because once libraries and data are loaded in a Quarto document, they are available for use in the rest of the code in the following document.
+We can improve organization and rendering speed in our documents by learning how to load data and packages. So far, we've loaded the library `tidyverse` and the data frame `df` we need in the first code chunk. Now, if we want to add another figure (say the hormone analysis code '02_hormone_analysis.R`), which uses the same data as our first code generated figure - we would be loading tidyverse and the data for a second time. This is unnecessary because once libraries and data are loaded in a Quarto document, they are available for use in the rest of the code in the following document.
 
 The best practice is to load libraries and data once at the beginning of our document, making it available for all other figures or calculations throughout the document -  allowing us to avoid repetition in our code and saving us rendering time. This also makes it easier for us to keep track of all the libraries and data we need to use in any given document for ourselves and collaborators. If anything needs to be tweaked, we don't need to search through every code chunk in our qmd document to make a change - it's listed right at the top. 
 
@@ -127,15 +127,15 @@ Success! You'll notice that the global code chunk options were also applied to t
 
 > ## Challenge 1: Your turn! Create Figure 4 with the external code
 > 
-> First, find `Example 9` in the qmd document for Fig 4 (ctrl-f "Example 9"). We need to add the code for the hormone analysis.
+> First, find `Example 9` in the qmd document for Fig 3 (ctrl-f "Example 9"). We need to add the code for the hormone analysis.
 >
-> Make sure to give the code chunk a name: `fig4-hormones` and a caption: `"Fig 4: Cortisol and Amylase levels in stress and control groups"`
+> Make sure to give the code chunk a name: `fig-hormones` and a caption: `"Fig 3: Cortisol and Amylase levels in stress and control groups"`
 >
 > > ## Solution:
 > > ~~~
 > > {r}
 > > #|fig-hormones
-> > #|fig.cap = "Fig 4: Cortisol and Amylase levels in stress and control groups"
+> > #|fig.cap = "Fig 3: Cortisol and Amylase levels in stress and control groups"
 > > # run the code from 02_hormone_analysis.R in the code directory
 > > source("code/02_hormone_analysis.R")
 > > # Display the plot created by code in 02_hormone_analysis.R
