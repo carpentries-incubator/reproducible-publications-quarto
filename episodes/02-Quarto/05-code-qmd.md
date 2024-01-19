@@ -79,7 +79,7 @@ Unless indicated otherwise, we will continue working in **visual mode**.
 
 ## Adding our Code Example to a Code Chunk
 
-Now, let's add our first code by copying and pasting the code found below into our empty code chunk (also found in the `code` folder as `03_HR_analysis.R`. 
+Now, let's add our first code by copying and pasting the code found below into our empty code chunk (also found in the `code` folder as `HR_analysis.R`. 
 
 ~~~  
 library(tidyverse)

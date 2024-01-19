@@ -21,7 +21,7 @@ keypoints:
 
 ### Best Practices for Loading Data and Packages 
 
-We can improve organization and rendering speed in our documents by learning how to load data and packages. So far, we've loaded the library `tidyverse` and the data frame `df` we need in the first code chunk. Now, if we want to add another figure (say the hormone analysis code '02_hormone_analysis.R`), which uses the same data as our first code generated figure - we would be loading tidyverse and the data for a second time. This is unnecessary because once libraries and data are loaded in a Quarto document, they are available for use in the rest of the code in the following document.
+We can improve organization and rendering speed in our documents by learning how to load data and packages. So far, we've loaded the library `tidyverse` and the data frame `df` we need in the first code chunk. Now, if we want to add another figure (say the hormone analysis code 'hormone_analysis.R`), which uses the same data as our first code generated figure - we would be loading tidyverse and the data for a second time. This is unnecessary because once libraries and data are loaded in a Quarto document, they are available for use in the rest of the code in the following document.
 
 The best practice is to load libraries and data once at the beginning of our document, making it available for all other figures or calculations throughout the document -  allowing us to avoid repetition in our code and saving us rendering time. This also makes it easier for us to keep track of all the libraries and data we need to use in any given document for ourselves and collaborators. If anything needs to be tweaked, we don't need to search through every code chunk in our qmd document to make a change - it's listed right at the top. 
 
@@ -74,9 +74,9 @@ Again, let's test this out in our generic Quarto document. After our first figur
 We're just going to test out the same figure again so we can verify this new method works. So, in the heart rate analysis code chunk, delete the existing code and add the following instead:
 
 ~~~
-# run the code from 03_HR_analysis.R in the code directory
-source("code/03_HR_analysis.R")
-# display the plot created by code in 03_HR_analysis.R
+# run the code from HR_analysis.R in the code directory
+source("code/HR_analysis.R")
+# display the plot created by code in HR_analysis.R
 plot 
 ~~~
 {: .language-r}
@@ -89,9 +89,9 @@ First, find `Example 8` in the Quarto document for Fig 3 (ctrl-f "Example 8").
 Add the following code where `Example 8` is located under "Preview of Research Results".
 
 ~~~
-# run the code from 03_HR_analysis.R in the code directory
-source("code/03_HR_analysis.R")
-# display the plot created by code in 03_HR_analysis.R
+# run the code from HR_analysis.R in the code directory
+source("code/HR_analysis.R")
+# display the plot created by code in HR_analysis.R
 plot 
 ~~~
 {: .language-r}
@@ -136,9 +136,9 @@ Success! You'll notice that the global code chunk options were also applied to t
 > > {r}
 > > #|fig-hormones
 > > #|fig.cap = "Fig 3: Cortisol and Amylase levels in stress and control groups"
-> > # run the code from 02_hormone_analysis.R in the code directory
-> > source("code/02_hormone_analysis.R")
-> > # Display the plot created by code in 02_hormone_analysis.R
+> > # run the code from hormone_analysis.R in the code directory
+> > source("code/hormone_analysis.R")
+> > # Display the plot created by code in hormone_analysis.R
 > > plot 
 > > ~~~
 > > {: .language-r}
