@@ -71,22 +71,12 @@ Again, let's test this out in our generic Quarto document. After our first figur
 
 ![basic code chunk](../../fig/08-blank-code-chunk.png)
 
-We're just going to test out the same figure again so we can verify this new method works. So, in the heart rate analysis code chunk, delete the existing code and add the following instead:
-
-~~~
-# run the code from HR_analysis.R in the code directory
-source("code/HR_analysis.R")
-# display the plot created by code in HR_analysis.R
-plot 
-~~~
-{: .language-r}
+We're just going to test out the same figure again so we can verify this new method works.
 
 
 ### Add the code to our Quarto document
 
-First, find `Example 8` in the Quarto document for Fig 3 (ctrl-f "Example 8"). 
-
-Add the following code where `Example 8` is located under "Preview of Research Results".
+In the heart rate analysis code chunk, delete the existing code. Find `Example 8` in the Quarto document for Fig 3 (ctrl-f "Example 8") and add the following instead:
 
 ~~~
 # run the code from HR_analysis.R in the code directory
