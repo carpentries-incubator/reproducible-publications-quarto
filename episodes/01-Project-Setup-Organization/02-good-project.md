@@ -135,7 +135,7 @@ For the project we’re working on today, we used the following setup for folder
 > > - **LICENSE.md:** instructions on reusing the project or any components. 
 > > - **README.md:** a detailed project description with all collaborators listed.
 > > - **Reproducible-Publications-with-RStudio-Example.Rproj:** the R project file that lives in the root directory and is used by R-Studio to keep track of the project.
->> - **_quarto.yml:** the quarto project configuration file that allows users to specify various settings and options for their Quarto projects.
+>> - **_quarto.yml:** the quarto project configuration file that allows users to specify various settings and options for their Quarto projects. We will learn more about it when we cover more advanced topics.
 > >
 > {: .solution}
 {: .challenge}
