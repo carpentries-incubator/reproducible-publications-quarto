@@ -144,6 +144,40 @@ Let's render one more time to see if our figure outputs how we'd like and has a 
 > Let's try that again 
 {: .checklist}
 
+### Best Practices for Loading Data and Packages 
+
+We can improve organization and rendering speed in our documents by learning how to load data and packages. So far, we've loaded the library `tidyverse` and the data frame `df` we need in the first code chunk. Now, if we want to add another figure (say the hormone analysis code 'hormone_analysis.R`), which uses the same data as our first code generated figure - we would be loading tidyverse and the data for a second time. This is unnecessary because once libraries and data are loaded in a Quarto document, they are available for use in the rest of the code in the following document.
+
+The best practice is to load libraries and data once at the beginning of our document, making it available for all other figures or calculations throughout the document -  allowing us to avoid repetition in our code and saving us rendering time. This also makes it easier for us to keep track of all the libraries and data we need to use in any given document for ourselves and collaborators. If anything needs to be tweaked, we don't need to search through every code chunk in our qmd document to make a change - it's listed right at the top. 
+
+
+```
+# load libraries
+library(tidyverse)
+library(BayesFactor)
+library(patchwork)
+
+# load data
+df <- read_csv("../data/processed/preprocessed-GARP-TSST-data.csv")
+```
+{: .language-r}
+
+> ## Order matters!
+>
+> What would happen if we loaded the data before we loaded the libraries?
+>
+> > ## Solution:
+> > 
+> > We would get an error because we haven't loaded tidyverse which is required to read the CSV yet!
+>>
+> > ![Error due to wrong order](../../fig/08-error-ordermatters.png)
+> > 
+> {: .solution}
+{: .challenge}
+
+
+At this point, we could go back through our R scripts and comment out (or delete) the beginning sections where we load the data and libraries (you will see this is already done in most of the scripts in the code folder). You can imagine that the more code chunks you have, the more time taking this step would save. Bonus: This also works to load the data before it is called in the inline code as we will see below. 
+
 
 ## Adding In-line Code
 
