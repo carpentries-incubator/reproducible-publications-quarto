@@ -98,7 +98,7 @@ We’ll see in a bit where this code chunk label comes in handy. But, for now, l
 When naming your code chunks that will produce figures or tables, use `fig-` and `tbl-`. We will learn how these will allow for cross-references.
 
 > ## Tip: Don't use spaces, periods, or underscores in code chunk labels
-> Avoid spaces, periods `(.)`, and underscores `(_)` in chunk labels and paths. If you need separators, you are recommended to use hyphens `(-)` instead. For example, setup-options is a good label, whereas setup.options and chunk 1 are bad; fig.path = 'figures/mcmc-' is a good path for figure output, and fig.path = 'markov chain/monte carlo' is bad. See more at: [https://yihui.org/knitr/options/](https://yihui.org/knitr/options/)
+> Avoid spaces, periods `(.)`, and underscores `(_)` in chunk labels and paths. If you need separators, you are recommended to use hyphens `(-)` instead. For example, setup-options is a good label, whereas setup.options and chunk 1 are bad; fig-path = 'figures/mcmc-' is a good path for figure output, and fig-path = 'markov chain/monte carlo' is bad. See more at: [https://yihui.org/knitr/options/](https://yihui.org/knitr/options/)
 {: .callout}
 
 ### Caption Your Code Chunk Output
@@ -107,7 +107,7 @@ The options we just looked at focus on code evaluation and text output. However,
 
 The caption information also resides at the top of a code chunk using the `#|` syntax as such:
 
-`#| fig.cap: "Figure Caption Here"`
+`#| fig-cap: "Figure Caption Here"`
 
 **Don't forget to put the caption within quotes `""`.**
 
@@ -122,19 +122,19 @@ The caption information also resides at the top of a code chunk using the `#|` s
 >> #| message: false
 >> #| warning: false
 >> #| results: false 
->> #| fig.cap: "Mean heart rate of stress and control groups at baseline and during intervention."
+>> #| fig-cap: "Mean heart rate of stress and control groups at baseline and during intervention."
 >> ~~~
->> Set the option `fig.cap` to equal the text in double-quotes.
+>> Set the option `fig-cap` to equal the text in double quotes.
 > {: .solution}
 {: .challenge}
 
 ## More plot/figure options
-> Other options that change how a plot or figure appears often use the syntax `fig.xxx` similar to `fig.cap` Some other useful plot/figure code options include (From [Yihui Xie's page](https://yihui.org/knitr/options/#plots) ):
-> - `fig.width`, `fig.height`: (both are 7; numeric) Width and height of the plot (in inches), to be used in the graphics device.
-> - `out.width`, `out.height`: (NULL; character) Width and height of the plot in the output document, which can be different with its physical fig.width and fig.height, i.e., plots can be scaled in the output document. 
-> - `fig.align`: ('default'; character) Alignment of figures in the output document. Possible values are default, left, right, and center. The default is not to make any alignment adjustments.
-> - `fig.link`: (NULL; character) A link to be added onto the figure.
-> - `fig.alt`: (NULL; character) The alternative text to be used in the alt attribute of the <img> tags of figures in HTML output. By default, the chunk option fig.cap will be used as the alternative text if provided.
+> Other options that change how a plot or figure appears often use the syntax `fig-xxx` similar to `fig-cap` Some other useful plot/figure code options include (From [Yihui Xie's page](https://yihui.org/knitr/options/#plots) ):
+> - `fig-width`, `fig-height`: (both are 7; numeric) Width and height of the plot (in inches), to be used in the graphics device.
+> - `out-width`, `out-height`: (NULL; character) Width and height of the plot in the output document, which can be different with its physical fig-width and fig-height, i.e., plots can be scaled in the output document. 
+> - `fig-align`: ('default'; character) Alignment of figures in the output document. Possible values are default, left, right, and center. The default is not to make any alignment adjustments.
+> - `fig-link`: (NULL; character) A link to be added to the figure.
+> - `fig-alt`: (NULL; character) The alternative text to be used in the alt attribute of the <img> tags of figures in HTML output. By default, the chunk option fig-cap will be used as the alternative text if provided.
 {: .callout}
 
 
