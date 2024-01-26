@@ -1,0 +1,106 @@
+---
+source: Rmd  
+title: "Advanced Code Chunk Options"  
+teaching: 10
+exercises: 10
+questions:
+- "How do you apply global options at the project level?"
+- "How do you globally load data and packages?"
+- "How do you run code from an external script in a code chunk?"
+- "How do I run external scripts in a Quarto document?"
+objectives:
+- "Learn how to source external scripts to run within a qmd document to modularize your code."
+- "Learn about using global options for project-level settings."
+- "Learn how to load libraries and data for use throughout the whole `.qmd` document."
+keypoints:
+- "Learn how to externally source code `source()`"
+- "Learn how to modularize your code to make it more reproducible"
+- "Use a chunk at the beginning of your document to load libraries and data to make your document more efficient."
+---
+
+
+## Run Code from an External Script in a Code Chunk
+
+Let's learn another technique for adding code-generated plots and figures to our document. This time around, let's see how to run code in a code chunk from an external R script instead of somewhat awkwardly copying and pasting the code from an R script to a code chunk in our `.qmd`.
+
+There are at least a few benefits to running code in this modular fashion instead of copy/pasting:
+1. Automatic updates: if the code gets updated in the R script, it will automatically be updated in the Quarto document as well. We won't need to copy/paste code updates, which would make it easy to end up with discrepancies between our `.r` scripts and our `.qmd` paper.
+
+2. Readability: calling code externally only takes several lines of code - versus copy/pasting 50+ lines of code from our scripts.
+
+3. Less fussing with relative paths* - we had to change the code slightly in the first example to update the file path to the data set, which introduces variations and inconsistencies. With this method, we won't have to modify the source code. 
+
+*unfortunately, you will never be free of relative paths, but you can make it a bit easier on yourself.
+
+Again, let's test this out in our generic Quarto document. After our first figure, add a new code chunk:
+
+![basic code chunk](../../fig/08-blank-code-chunk.png)
+
+We're just going to test out the same figure again so we can verify this new method works.
+
+
+### Add the code to our Quarto document
+
+In the heart rate analysis code chunk, delete the existing code. Find `Example 8` in the Quarto document for Fig 3 (ctrl-f "Example 8") and add the following instead:
+
+~~~
+# run the code from HR_analysis.R in the code directory
+source("code/HR_analysis.R")
+# display the plot created by code in HR_analysis.R
+plot 
+~~~
+{: .language-r}
+
+It should look like this:
+
+![03-HR-analysis.R externally sourced in Qmd Document](../../fig/08-HR-external-code.png)
+
+**Attention:** DON'T forget to add a chunk name and caption for Figure 3 (we can use the same name and caption as before). Remember, we don't need to add options since we defined them globally.
+
+> ## Time to Run!
+> Let's see if our code worked when generated from an external script 
+{: .checklist}
+
+> ## Time to Render!
+> If the code ran without error, let's render the whole document again and take a look.
+{: .checklist}
+
+Our plot should look exactly the same as the first copy-pasted one. 
+
+Success! You'll notice that the global code chunk options were also applied to this code chunk.*. 
+
+* Note: As of November 2023, Quarto has not implemented global options for `results`. This will need to be added to each code chunk if needed until further notice.
+
+> ## Tip: Many ways to run external code
+> There are at least 3-4 methods one can use to run external code; the best choice may depend on the context or your personal preference. There's no method that's a clear winner because there's an awkward quirk or another to each of them, but better than copy/pasting code from elsewhere in your project (in our humble opinion):
+>
+> 1. source()   -- [see more at bookdown.org](https://bookdown.org/yihui/rmarkdown-cookbook/source-script.html)
+> 2. sys.source()   -- [see more at bookdown.org](https://bookdown.org/yihui/rmarkdown-cookbook/source-script.html)
+> 3. knitr::read_chunk()  -- [see more at stackoverflow](https://stackoverflow.com/a/52398016)
+>
+{: .callout}
+
+> ## Challenge 1: Your turn! Create Figure 4 with the external code
+> 
+> First, find `Example 9` in the qmd document for Fig 3 (ctrl-f "Example 9"). We need to add the code for the hormone analysis.
+>
+> Make sure to give the code chunk a name: `fig-hormones` and a caption: `"Fig 3: Cortisol and Amylase levels in stress and control groups"`
+>
+> > ## Solution:
+> > ~~~
+> > {r}
+> > #|fig-hormones
+> > #|fig.cap = "Fig 3: Cortisol and Amylase levels in stress and control groups"
+> > # run the code from hormone_analysis.R in the code directory
+> > source("code/hormone_analysis.R")
+> > # Display the plot created by code in hormone_analysis.R
+> > plot 
+> > ~~~
+> > {: .language-r}
+> {: .solution}
+{: .challenge}
+
+
+> ## Tip: YAML code chunk options
+> We can also tweak some code chunk settings at the project level in the `_quarto.yml` file which changes how code chunks are displayed for the entire project. We're not going to get into this in the workshop, but many of the same options you set in your global code chunk settings are also configurable in the `_quarto.yml` YAML. 
+{: .callout}
