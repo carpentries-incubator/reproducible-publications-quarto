@@ -31,13 +31,11 @@ RStudio projects make it straightforward to divide your work into multiple conte
 
 ![new r project options](../../fig/05-new-project.PNG){: .image-with-shadow}
 
-<be>
-
 When initiating a new project with a new directory, you are presented with a variety of project options, including a generic “New Project” (aka R Project) and  a "Quarto project", as seen in the image below. Regardless of your choice at this step, you can create new Quarto documents within R projects, Quarto projects, or even outside projects at any time. You may also convert an R project to a Quarto project and back at any point as well.
 
 However, there's no need to worry too much about this now because we will be working on an existing project using version control. So let's focus on the basics first, and we'll explore more advanced features of Quarto projects in a later episode.
 
-![quarto projects](../../fig/04-quartoprojects.PNG){: .image-with-shadow}
+![quarto projects](../../fig/04-quartoprojects.png){: .image-with-shadow}
 
 
 ## Using RStudio projects and Version Control in RStudio
