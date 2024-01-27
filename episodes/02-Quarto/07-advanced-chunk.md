@@ -17,7 +17,43 @@ keypoints:
 - "Learn how to modularize your code to make it more reproducible"
 - "Use a chunk at the beginning of your document to load libraries and data to make your document more efficient."
 ---
+## Quarto Projects
 
+You may remember (or not, that's ok!) that when we saw how to create a new Project back in episode 4 we were presented with this long list of project options: 
+
+![Project Options](../../fig/07-project-options.png){: .image-with-shadow}
+
+
+We told you not to worry too much as most of these options are just variations of a regular old R Project (including a Quarto Project!) Regardless of your choice at this step, you can create new Quarto documents within R projects, Quarto projects, or even outside projects at any time. You may also convert an R project to a Quarto project and back at any point as well. 
+
+You may, therefore, be a bit confused about the distinction between a Quarto Project and a regular R Project. To put it simply, a Quarto project is an R Project which contains a “_quarto.yml” file. This file dictates shared YAML configuration across documents in a Quarto project. This ensures that any document rendered within the project directory automatically inherits the metadata defined at the project level allowing capabilities such as defining a style for the whole project or redirecting outputs to a specified sub-directory. The Quarto Website, Blog and Book are simply Quarto Projects with a pre-defined “_quarto.yml” file  defining some basic style settings characteristic of those mediums (and even then a Quarto Blog could be easily converted to a Quarto Website for example). 
+
+> ## Check it out yourself
+> Open up a project with one of the Quarto Project options (Blog, Book, Website) and another project with the other option. Compare the .yml files and guess at what the settings might dictate for the Quarto documents in the project.
+{: .challenge}
+
+##
+FIXME Add an example of how to use "_quarto.yml" to change style options in our paper.
+
+## Set Working Directory in Quarto Documents 
+
+Okay, remember how we changed the file path in the code chunk we copied into our document to correct the relative path for reading the data? This happened because, in Quarto documents, the working directory is wherever the qmd document is located, but our code is located in a different folder. This means they have different relative paths to locate and read the data we want to work with. We can simplify things by designating the working directory for our document relative to the root project directory instead. This lets all files work relative to the project root instead of each other, standardizing the relative paths. Note that this is mainly important for code chunks - text portions of Quarto documents are not affected. This will clarify some of our confusion with relative paths across our R project. 
+
+
+So, one should learn how to accomplish that by changing the working directory at the project level YAML settings. So we'll navigate to our _quarto.yml document in our root project directory and open it. 
+
+We'll add the following settings to the yml file:
+~~~
+...
+  execute-dir: project
+...
+~~~
+
+So the yml file should now look something like this:
+
+![Quarto yml project setting](../../fig/08-quarto.yml-project.png)
+
+Yay! Congratulations on mastering a smoother approach to handling path problems when working with Quarto documents!
 
 ## Run Code from an External Script in a Code Chunk
 
@@ -41,7 +77,7 @@ We're just going to test out the same figure again so we can verify this new met
 
 ### Add the code to our Quarto document
 
-In the heart rate analysis code chunk, delete the existing code. Find `Example 8` in the Quarto document for Fig 3 (ctrl-f "Example 8") and add the following instead:
+In the heart rate analysis code chunk, let's delete the existing code that we copy-pasted. 
 
 ~~~
 # run the code from HR_analysis.R in the code directory
@@ -80,7 +116,7 @@ Success! You'll notice that the global code chunk options were also applied to t
 >
 {: .callout}
 
-> ## Challenge 1: Your turn! Create Figure 4 with the external code
+> ## Challenge 1: Your turn! Create Figure 3 with the external code
 > 
 > First, find `Example 9` in the qmd document for Fig 3 (ctrl-f "Example 9"). We need to add the code for the hormone analysis.
 >
@@ -101,6 +137,4 @@ Success! You'll notice that the global code chunk options were also applied to t
 {: .challenge}
 
 
-> ## Tip: YAML code chunk options
-> We can also tweak some code chunk settings at the project level in the `_quarto.yml` file which changes how code chunks are displayed for the entire project. We're not going to get into this in the workshop, but many of the same options you set in your global code chunk settings are also configurable in the `_quarto.yml` YAML. 
-{: .callout}
+

@@ -200,23 +200,6 @@ Did it work? Look under the code chunk. If all goes well, you should see a plot 
 
 ![Code Chunk Plot Preview](../../fig/07-plot-preview.png){: .image-with-shadow}
 
-
-### Set Working Directory in Quarto Documents (Demo Only)
-
-Okay, remember how we changed the file path in the code chunk we copied into our document to correct the relative path for reading the data? This happened because, in Quarto documents, the working directory is wherever the qmd document is located, but our code is located in a different folder. This means they have different relative paths to locate and read the data we want to work with. We can simplify things by designating the working directory for our document relative to the root project directory instead. This lets all files work relative to the project root instead of each other, standardizing the relative paths. Note that this is mainly important for code chunks - text portions of Quarto documents are not affected. This will clarify some of our confusion with relative paths across our R project. 
-
-
-So, one should learn how to accomplish that by changing the working directory at the project level YAML settings. So we'll navigate to our _quarto.yml document in our root project directory and open it. 
-
-We'll add the following settings to the yml file:
-~~~
-...
-  execute-dir: project
-...
-~~~
-
-So the yml file should now look something like this:
-
-![Quarto yml project setting](../../fig/08-quarto.yml-project.png)
-
-Yay! Congratulations on mastering a smoother approach to handling path problems when working with Quarto documents!
+> ## Stay Tuned - Better Method for Relative Path Issues
+> In a few episodes - "Advanced Code Chunk Options" we'll introduce a technique that will eliminate this issue we encountered with relative paths. Then we'll build on that further by learning a better way to run code from R scripts in code chunks! You may be tempted to sneak a peek - but don't worry we'll get there soon!
+{: .callout}
