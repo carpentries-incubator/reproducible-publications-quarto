@@ -21,13 +21,9 @@ keypoints:
 - For this workshop, each learner will work with their own _fork_ of the "[R-Repro-pub](https://github.com/UCSBCarpentry/R-repro-pub)" repository.
 ---
 
-## Using RStudio projects and Version Control in RStudio
+## Working with projects in RStudio
 
-Using version control is a powerful feature to make your research more reproducible and better organized. In order to use versioning while working in RStudio make sure your work is set up as an R Project.  RStudio's versioning features don't work unless your work is part of an R Project. There are three options for starting an R Project, depending on your given scenario.
-
-## Three Methods of Setting up an RStudio Project with version control
-
-There are several options for working with RStudio projects and enabling version control. You can create a new one if you aren't already working on an R Project. Here are three options:
+RStudio projects make it straightforward to divide your work into multiple contexts, each with its own working directory, workspace, history, and source documents. There are several options for working with RStudio projects and enabling version control:
 
 1. **New Directory** - start a brand new RStudio project (with the option of version control).
 2. **Existing Directory** - add existing work to a project in RStudio (with the option of setting up version control).
@@ -35,10 +31,20 @@ There are several options for working with RStudio projects and enabling version
 
 ![new r project options](../../fig/05-new-project.PNG){: .image-with-shadow}
 
-<br>
+<be>
+
+When initiating a new project with a new directory, you are presented with a variety of project options, including a generic “New Project” (aka R Project) and  a "Quarto project", as seen in the image below. Regardless of your choice at this step, you can create new Quarto documents within R projects, Quarto projects, or even outside projects at any time. You may also convert an R project to a Quarto project and back at any point as well.
+
+However, there's no need to worry too much about this now because we will be working on an existing project using version control. So let's focus on the basics first, and we'll explore more advanced features of Quarto projects in a later episode.
+
+![quarto projects](../../fig/04-quartoprojects.PNG){: .image-with-shadow}
+
+
+## Using RStudio projects and Version Control in RStudio
+
+Using version control is a powerful feature to make your research more reproducible and better organized. In order to use versioning while working in RStudio make sure your work is set up as an R Project.  RStudio's versioning features don't work unless your work is part of an R Project. There are three options for starting an R Project, depending on your given scenario.
 
 _Of course if an existing RStudio project is already under version control, then opening the project will be the only thing you need to do!_
-
 
 Let's see how this setup would work.
 
