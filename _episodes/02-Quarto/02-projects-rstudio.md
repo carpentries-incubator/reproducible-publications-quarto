@@ -1,6 +1,6 @@
 ---
 source: Rmd  
-title: "Getting Your project set up with Version Control in RStudio"  
+title: "Working with projects in RStudio"  
 teaching: 20
 exercises: 10
 questions:
