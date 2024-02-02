@@ -1,15 +1,21 @@
-# Introduction to Reproducible Publications with RStudio (Quarto)
+# Introduction to Reproducible Publications with Quarto
 
-This version is still in progress. We are updating the Rmarkdown content with Quarto.
+This workshop explores the powerful combination of Quarto and RStudio to author scientific publications. Our aim is to enhance researchers' adoption of open and reproducible practices while improving their project and data management skills.
+
+This workshop is structured into three modules. The modular format encourages instructors to view the workshop as a comprehensive but flexible curriculum, allowing them to focus on specific areas of interest. Recognizing variations in proficiency levels and familiarity with RStudio among learners, we have designed this workshop to be flexible, allowing for the abbreviation or skipping of episodes to cater to specific needs:
+
+- Module 1 - Reproducibility and Project Organization: This module consists of two episodes introducing learners to reproducible research and project management fundamentals. It lays the groundwork for a robust and transparent workflow, ensuring that all participants, whether beginners or those seeking a refresher, are on the same page before delving into the specifics of Quarto and RStudio Posit.
+- Module 2 - Quarto and RStudio: This module focuses on Quarto and its features for creating dynamic and reproducible documents. We guide learners through the ins and outs of Quarto, helping them harness its full potential to create visually appealing, easily reproducible, and shareable documents.
+- Module 3 - Collaboration: This module shifts the focus to collaboration and publishing. It explores effective collaboration with others, using version control within RStudio, pushing local changes to a remote repository, managing dependencies for R/Quarto projects, and sharing reproducible research with a wider audience.
+
+This lesson has a supplementary repository with the [project example](https://github.com/UCSBCarpentry/Quarto-Project-Example)) **"FIXME: UPDATE WITH NEW LINK IN THE INCUBATOR AFTER PR IS ACCEPTED"** used for challenges and exercises.
 
 [![Create a Slack Account with us](https://img.shields.io/badge/Create_Slack_Account-The_Carpentries-071159.svg)](https://swc-slack-invite.herokuapp.com/)
 
 ## Contributing
 
-We welcome all contributions to improve the lesson! Maintainers will do their best to help you if you have any
+We welcome all contributions to improve the lesson!  Your expertise and perspective are crucial to elevating the quality and effectiveness of the workshop content. Whether sharing domain-specific knowledge, addressing existing issues, suggesting improvements, or teaching the workshop materials, we invite you to contribute. Please refer to the issues page for topics seeking contributions, and feel free to flag any bugs, add questions, or recommend opportunities for improvement on the issues page. Maintainers will do their best to help you if you have any
 questions, concerns, or experience any difficulties along the way.
-
-This lesson has a supplementary repository with the [project example](https://github.com/carpentries-incubator/Reproducible-Publications-with-RStudio-Example) used for challenges and exercises.
 
 We'd like to ask you to familiarize yourself with our [Contribution Guide](CONTRIBUTING.md) and have a look at
 the [more detailed guidelines][lesson-example] on proper formatting, ways to render the lesson locally, and even
