@@ -57,15 +57,9 @@ Put a pin in pulling and pushing for now. For the time being, as we edit our pap
 
 - Commit frequently; each commit should be a distinct set of edits that you can summarize in 50 characters or less. Don’t add a bunch of unrelated edits to the same commit; it makes it harder to look back through your “snapshots” and find the right one if you need to.
 
-## Your first edit **[FIXME NEEDS ATTENTION!]**
+## Committing your edits
 
-Now, let's open up the report in this already-drafted repository. You will find it in the `report` directory with the filename: `DataPaper-ReproducibilityWorkshop.qmd`.  Open it up, and we will make an edit to the YAML front matter of this draft report so we can practice using version control.
-
-In the title add "(Carpentry Workshop Version)" and make sure to save it.
-
-![git panel add](../../fig/05-editing.png){: .image-with-shadow}
-
-Now, in the Environment panel, toggle to the Git tab. You'll see the file that was edited with a checkmark next to it. Click the check mark to "add". Note that if you edited more than one file, you could choose any or all of the documents to "add".
+Now, that we have performed a few edits to the qmd paper example, in the Environment panel, toggle to the Git tab. You'll see the file that was edited with a checkmark next to it. Click the check mark to "add". Note that if you edited more than one file, you could choose any or all of the documents to "add".
 
 ![git panel add](../../fig/05-first-edit.PNG){: .image-with-shadow}
 
@@ -73,13 +67,18 @@ Have you noticed the blue 'M' icon in the Git Tab before you added your commit m
 
 ![git panel icons](../../fig/05-git-icons.png)
 
-Now, click commit. A dialogue box will pop up. You'll need to add a commit message to proceed. Add something about editing the title. The difference between your files will show in the bottom panel.
+Now, click commit. A dialogue box will pop up. You'll need to add a commit message to proceed. Add something about "editing the paper during the workshop". The difference between your files will show in the bottom panel.
 
 ![commit in RStudio](../../fig/05-rstudio-commit.png){: .image-with-shadow}
 
 Hit commit, and a dialogue box will show a completed commit. Warning: **DO NOT PUSH** anything yet!
 
-Congrats! You made your first commit!
+Congrats! You made your first commit! 
+
+> ##Note: Commit frequency
+> 
+> Typically, we would not wait that long to commit changes and we would prefer to break them down and have more specific messages to track changes more effectively. But we had to keep it simple for this workshop. 
+{: .callout}
 
 > ## Discussion: (optional) Utilizing .gitignore files
 > a `.gitignore` file is used to signal to Git NOT to track versions of specific files. One instance where this is used in a data analysis project is with data files that are too large to be uploaded to GitHub.
