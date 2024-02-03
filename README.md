@@ -10,7 +10,7 @@ This workshop is structured into three modules. The modular format encourages in
 
 This lesson has a supplementary repository with the [project example](https://github.com/carpentries-incubator/Quarto-Project-Example) used for challenges and exercises.
 
-For an earlier version of this workshop using RMarkdown, please check for the v1.0-RMarkdown release.
+For an earlier version of this workshop using RMarkdown, please check for the [v1.0-RMarkdown release](https://github.com/carpentries-incubator/Reproducible-Publications-with-Quarto/releases/tag/v1.0-rmarkdown).
 
 
 [![Create a Slack Account with us](https://img.shields.io/badge/Create_Slack_Account-The_Carpentries-071159.svg)](https://swc-slack-invite.herokuapp.com/)
