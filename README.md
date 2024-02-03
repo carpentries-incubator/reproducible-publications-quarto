@@ -8,7 +8,10 @@ This workshop is structured into three modules. The modular format encourages in
 - Module 2 - Quarto and RStudio: This module focuses on Quarto and its features for creating dynamic and reproducible documents. We guide learners through the ins and outs of Quarto, helping them harness its full potential to create visually appealing, easily reproducible, and shareable documents.
 - Module 3 - Collaboration: This module shifts the focus to collaboration and publishing. It explores effective collaboration with others, using version control within RStudio, pushing local changes to a remote repository, managing dependencies for R/Quarto projects, and sharing reproducible research with a wider audience.
 
-This lesson has a supplementary repository with the [project example](https://github.com/UCSBCarpentry/Quarto-Project-Example)) **"FIXME: UPDATE WITH NEW LINK IN THE INCUBATOR AFTER PR IS ACCEPTED"** used for challenges and exercises.
+This lesson has a supplementary repository with the [project example](https://github.com/carpentries-incubator/Quarto-Project-Example) used for challenges and exercises.
+
+For an earlier version of this workshop using RMarkdown, please check for the v1.0-RMarkdown release.
+
 
 [![Create a Slack Account with us](https://img.shields.io/badge/Create_Slack_Account-The_Carpentries-071159.svg)](https://swc-slack-invite.herokuapp.com/)
 
@@ -25,7 +28,7 @@ Please see the current list of [issues](https://github.com/carpentries-incubator
 repository. For making your contribution, we use the GitHub flow, which is
 nicely explained in the chapter [Contributing to a Project](http://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project) in Pro Git
 by Scott Chacon.
-Look for the tag ![good_first_issue](https://img.shields.io/badge/-good%20first%20issue-gold.svg). This indicates that the maintainers will welcome a pull request fixing this issue.
+Look for the tag ![good_first_issue](https://img.shields.io/badge/-good%20first%20issue-gold.svg). This indicates that the maintainers will welcome a pull request to fix this issue.
 
 
 ## Maintainer(s)
