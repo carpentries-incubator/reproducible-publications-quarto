@@ -37,8 +37,9 @@ Current maintainers of this lesson are:
 
 * Renata Curty (rcurty)
 * Torin White (torwhite)
-* Julien Brun (brunj7)
 * Ian Lessing (ilessing)
+* Greg Janee (gjanee)
+* Julien Brun (brunj7)
 * kristi Liu (kristi-sara)
 
 ## Authors
