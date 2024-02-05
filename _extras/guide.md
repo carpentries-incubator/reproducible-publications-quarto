@@ -1,9 +1,7 @@
 ---
 title: "Instructor Notes"
 ---
-
-- **For UCSB Only** We will offer learners the option to use RStudio via Jupyter Hub - <https://carpentryworkshop.lsit.ucsb.edu>
--   The project example folder is a simplified version of the original project available at: <https://osf.io/6mvq7>. We kept only files that are used in the episodes to make it less confusing for learners to navigate multiple folders that won't be used in the lesson. You are welcome to use the more complete version if you would like to show some additional examples.
+-   The project example folder is a simplified version of the original project available at: <https://osf.io/6mvq7>. We kept only files that are used in the episodes to make it less confusing for learners to navigate multiple folders that won't be used in the lesson. You are welcome to use the more complete version if you would like to show some additional examples. We advise instructors to use the `main` branch. The `renv` branch has the same content as the main branch, with the addition of having renv enabled for better reproducibility.
 -   All Episodes, whenever possible, emphasize using RStudio GUI features over R commands (e.g., install packages using GUI dialog) in order to minimize cognitive overload. Less for learners to remember, and they can always see commands echoed in the console.
 -   The workshop was designed to include a basic tour of RStudio and its features before introducing Quarto, allowing it to accommodate different audience levels. Depending on the audience, this part may be skipped.
 -   Ep. "Scientific reproducibility: What is it for?": reiterate that having a Github account is required for this workshop. Any learners who have not yet signed up for a Github account should do so during the first break of the workshop.
@@ -13,5 +11,6 @@ title: "Instructor Notes"
 -   Ep. "Adding Code-Generated Plots and Figures", DO NOT skip Challenge 2 "CHALLENGE 2: Add a caption to Figure 3", Otherwise it will affect "Challenge 4: Adding cross-reference for code block figures" in Ep. "Bibliography, Citations & Cross-Referencing".
 -   Ep. "Bibliography, Citations & Cross-Referencing": Make sure to address that the YAML only contains `bibliography: references.bib` because the example paper contains citations. The visual model will automatically add this when the first citation is added. To connect a pre-existent reference.bib file and enter citations using keys, that needs to be manually added to the YAML. Remember that Zotero will only show for those with it installed on their computers. Also, some learners may experience issues with the DOI lookup feature. This seems to be a bug with the IDE, or some underlying unreliability of the services providing the DOIs. See open issue: <https://github.com/rstudio/rstudio/issues/9863>.
 -   Cheasheets to recommend: [DataCamp](https://images.datacamp.com/image/upload/v1676540721/Marketing/Blog/Quarto_Cheat_Sheet.pdf) and [Rstudio - Quarto](https://rstudio.github.io/cheatsheets/html/quarto.html).
+  
 
 {% include links.md %}
