@@ -10,7 +10,7 @@
 carpentry: "incubator"
 
 # Overall title for pages.
-title: "Introduction to Reproducible Publications with RStudio"
+title: "Introduction to Reproducible Publications with Quarto"
 
 # Life cycle stage of the lesson
 # See this page for more details: https://cdh.carpentries.org/the-lesson-life-cycle.html
