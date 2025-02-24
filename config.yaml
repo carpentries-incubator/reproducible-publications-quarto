@@ -20,7 +20,7 @@ carpentry: 'incubator'
 title: 'Introduction to Reproducible Publications with Quarto'
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
-created: 
+created: 2021-12-01 
 
 # Comma-separated list of keywords for the lesson
 keywords: 'software, data, lesson, The Carpentries'
@@ -98,5 +98,4 @@ profiles:
 
 carpentry_description: Lesson Description
 url: 'https://carpentries-incubator.github.io/reproducible-publications-quarto'
-analytics: carpentries
 lang: en
