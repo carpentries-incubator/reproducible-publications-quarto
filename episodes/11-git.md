@@ -22,8 +22,13 @@ exercises: 5
 
 There are two places we can interact with Git in the RStudio interface.
 
-1. Menu bar (Tools menu) ![](fig/05-git-top-menu.PNG){alt='Git menu bar' .image-with-shadow} <br>
-2. Environment/History pane ![](fig/05-git-environment-window.PNG){alt='git environment panel' .image-with-shadow}
+1. Menu bar (Tools menu) 
+
+![](fig/05-git-top-menu.PNG){alt='Git menu bar' .image-with-shadow} <br>
+
+2. Environment/History pane 
+
+![](fig/05-git-environment-window.PNG){alt='git environment panel' .image-with-shadow}
 
 Ok, but what do all the options mean? We won't go through them all, but here are the basics to get started versioning your project.
 
@@ -57,9 +62,14 @@ our workflow gets a bit more complex, we add a "pull" and "push" step at the beg
 
 Put a pin in pulling and pushing for now. For the time being, as we edit our paper, we will just stick to adding and committing. In the end, we'll see how to use push to GitHub, and you can experiment with pulling later on.
 
-### Tips for working with Git
+:::::::::::::::::::::::::::::::::::::::::  callout
 
-- Commit frequently; each commit should be a distinct set of edits that you can summarize in 50 characters or less. Don't add a bunch of unrelated edits to the same commit; it makes it harder to look back through your "snapshots" and find the right one if you need to.
+## Tips for working with Git
+
+Commit frequently; each commit should be a distinct set of edits that you can summarize in 50 characters or less. Don't add a bunch of unrelated edits to the same commit; it makes it harder to look back through your "snapshots" and find the right one if you need to.
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
 
 ## Committing your edits
 
