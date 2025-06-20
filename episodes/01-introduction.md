@@ -44,7 +44,7 @@ Reproducible studies allow other researchers to perform the same processes and a
 - The researchers can't find some of the data they used to generate the original results and can't figure out which parameters they used when running their analyses.
 - The manuscript is still languishing in the drawer…
 
-According to the [U.S. National Science Foundation (NSF)](https://www.nsf.gov/sbe/AC_Materials/SBE_Robust_and_Reliable_Research_Report.pdf) subcommittee on replicability in science (2015):
+According to the [U.S. National Science Foundation (NSF)](https://rcra.emory.edu/_includes/documents/sections/oric/8-social-behavioral-and-economic-sciences-perspectives-on-robust-and-reliable-science.pdf) subcommittee on replicability in science (2015):
 
 Science should routinely evaluate the reproducibility of findings that enjoy a prominent role in the published literature. To make reproduction possible, efficient, and informative, researchers should sufficiently document the details of the procedures used to collect data, convert observations into analyzable data, and perform data analysis.
 
@@ -93,7 +93,7 @@ Let's assume I have convinced you that reproducibility and transparency are in y
 
 From day one and throughout the whole research life cycle! Before starting the project, you might have to learn tools like R or Git. If you wait too long while doing the analysis, you might lose a lot of time trying to remember what you did two months ago. When you write the paper, you want up-to-date numbers, tables, and figures. When you co-author a paper, you want to make sure that the analyses presented in a paper with your name on it are sound. When you review a paper, you can't judge the results if you don't know how the authors got there.
 
-[Alexander (2022)](https://tellingstorieswithdata.com/) suggests three steps towards better reproducibility:
+[Alexander (2023)](https://rohanalexander.github.io/telling_stories-published) argues that reproducibility often starts out as a burden—something others require of you, and it can feel tedious or frustrating. But that perception usually changes the moment you return to a project after some time away. Then, it becomes clear that reproducibility isn’t just essential for advancing data science—it’s also a practical tool that makes your own work easier to understand and build upon later. To achieve reproducibility the author suggests a three-step approach:
 
 1) Ensure the entire workflow is documented. This may involve addressing questions such as:
 
@@ -162,7 +162,7 @@ Developers picked a name that had meaning in the history of publishing and lande
 
 ## Why Quarto and not R Markdown?
 
-As noted before, Quarto is the next generation of R Markdown, which was the subject of a previous workshop [see Reproducible Publications with RStudio](https://github.com/carpentries-incubator/Reproducible-Publications-with-RStudio) and the anatomy of `.rmd` and `.qmd` files are very similar. So why move to Quarto? While compatible with Python (and bash, Julia, C, SQL), R Markdown was designed primarily for R users. **Quarto does not require R.** Quarto runs computations into separate pluggable language "engine," which helps make this cross-language functionality easier to support and reduces infrastructure intensity with built-in applications. In addition, because Quarto is designed to be compatible with existing formats, you can render most existing `.Rmd` and Jupyter Notebooks with Quarto without modification. This low-pain process helps the transition to Quarto.
+As noted before, Quarto is the next generation of R Markdown and the anatomy of `.rmd` and `.qmd` files are very similar. So why move to Quarto? While compatible with Python (and bash, Julia, C, SQL), R Markdown was designed primarily for R users. **Quarto does not require R.** Quarto runs computations into separate pluggable language "engine," which helps make this cross-language functionality easier to support and reduces infrastructure intensity with built-in applications. In addition, because Quarto is designed to be compatible with existing formats, you can render most existing `.Rmd` and Jupyter Notebooks with Quarto without modification. This low-pain process helps the transition to Quarto.
 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
