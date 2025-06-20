@@ -99,7 +99,7 @@ For the purposes of this workshop, we've been using HTML as the output format, b
 
 ### If you are willing to publish your manuscript through a peer-reviewed journal
 
-- Most journals now request the underlying data, code, and documentation to be shared along with the manuscript, so in that case, you will have that handy. Whenever possible, give preference to *open-access* journals with data sharing recommendations to foster open science, transparency, and research reproducibility. The [TOP Factor](https://topfactor.org/journals) allows you to search by journal title and/or discipline and will rank journals' compliance with those principles.
+- Most journals now request the underlying data, code, and documentation to be shared along with the manuscript, so in that case, you will have that handy. Whenever possible, give preference to *open-access* journals with data sharing recommendations to foster open science, transparency, and research reproducibility.
 - If your chosen journal does not require nor recommend a particular process for making your project data available (some will dictate what, where and how project data should be uploaded), you may still consider depositing your project files in a reliable data repository and cross-reference paper and project data, ideally with a formal citation containing a [Persistent Identifier](https://perma.cc/KH7N-5Q97)(e.g., DOI, ARK, handle, Purl) to avoid link rot.
 - In terms of data repositories, there are many options available, and they can be disciplinary, institutional, or generalist (e.g., Zenodo, Figshare). For a comprehensive list of options available, please refer to the [Registry of Research Data Repositories](https://www.re3data.org).
 
