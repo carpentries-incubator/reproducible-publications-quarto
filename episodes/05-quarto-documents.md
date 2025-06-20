@@ -48,7 +48,7 @@ Quarto generates a .qmd file that weaves together content and executable code in
 
 Finally, three real-world examples that motivated the authors of this lesson to value and use Quarto:
 
-1. You can publish books! [Telling Stories with Data](https://tellingstorieswithdata.com/) is a great example developed in Quarto. Quarto books can be published to a wide variety of destinations, including GitHub Pages, Netlify, RStudio Connect, or any other static hosting service or intranet web server. [Learn more](https://quarto.org/docs/books/).
+1. You can publish books! [Telling Stories with Data](https://rohanalexander.github.io/telling_stories-published/) is a great example developed in Quarto. [Quarto books](https://quarto.org/docs/books/) can be published to a wide variety of destinations, including GitHub Pages, Netlify, RStudio Connect, or any other static hosting service or intranet web server.
 
 2. Imagine you want to create a short document that includes some math formulas. The LaTeX document preparation can be used for this, but it can be difficult and overkill for just a few formulas in otherwise plain text. As we will learn, through Pandoc, Quarto lets you use just the best part of LaTeX---math formatting---while letting you write your text in a user-friendly way. The editor will automatically recognize the syntax and treat the equation as math.
 
