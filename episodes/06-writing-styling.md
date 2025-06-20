@@ -28,6 +28,7 @@ As we mentioned earlier, the visual editor in RStudio makes formatting much more
 
 If you'd like to learn more about markdown basics and use the source mode to format you documents check [Quarto's markdown basics](https://quarto.org/docs/authoring/markdown-basics.html).
 
+
 ### Editor Toolbar
 
 The editor toolbar includes buttons for the most commonly used formatting commands:
@@ -64,7 +65,7 @@ At the very top of the document we have a recommended citation for the sample da
 
 ### *Adding Links*
 
-In the same citation we have just worked on, let's now add a link to it by selecting and copying the doi address (**Example 2**). Then, click on the link icon and paste the address in the URL field. Simple right? If you prefer, you can also the drop-down insert menu, or even use shortcuts. By hovering the mouse over the desired icon, you will see which keys you should use. For a complete list of editing shortcuts, [check this link](https://rstudio.github.io/visual-markdown-editing/shortcuts.html). Tip: if you didn't intend to use a shortcut and want to reverse its effect, just press the backspace key.
+In the same citation we have just worked on, let's now add a link to it by selecting and copying the doi address (**Example 2**). Then, click on the link icon and paste the address in the URL field. Simple right? If you prefer, you can also the drop-down insert menu, or even use shortcuts. By hovering the mouse over the desired icon, you will see which keys you should use, also found in this [markdown shortcuts list](https://rstudio.github.io/visual-markdown-editing/shortcuts.html). To revert a shortcut, use the backspace key.
 
 ### *Adding Headings*
 
