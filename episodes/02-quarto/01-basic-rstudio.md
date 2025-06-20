@@ -73,7 +73,7 @@ Click an empty box to load that package and click a checked box to detach that
 package.
 
 Packages can be installed and updated from the Package tab with the *Install* and
-*Update* buttons at the top of the tab. We have asked you to install a few packages prior to the workshop following the [setup instructions](https://github.com/UCSBCarpentry/Reproducible-Publications-with-RStudio/blob/main/setup.md) using the `install.packages()` command. Let's now make sure you have all of them good to go.
+*Update* buttons at the top of the tab. We have asked you to install a few packages prior to the workshop following the setup instructions using the `install.packages()` command. Let's now make sure you have all of them good to go.
 
 > ## CHALLENGE 1 - Checking for Installed Packages
 > Which command would you use to check for packages ready for use?
