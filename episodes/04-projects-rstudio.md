@@ -165,8 +165,6 @@ Windows users may find that the correct path is also pre-populated, or you may n
 
 Ok! Now we have that set up. By the way, this is a one-time set up. From now on, RStudio should know where to find git on your device. We should be able to open our project from GitHub in RStudio.
 
-
-
 :::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -272,8 +270,8 @@ Why and when would it not make sense to add data files to the `.gitignore` so th
 ## Challenge 1 (optional): Add the data files/directories to .gitignore
 
 Add the data (all of the raw data files) to the `.gitignore`.  
-Hint: there are two ways to do this.  
-Hint2: add a forward slash `/` after directories.
+Hint (1): there are two ways to do this.  
+Hint (2): add a forward slash `/` after directories.
 
 :::::::::::::::  solution
 
@@ -295,7 +293,7 @@ Hint2: add a forward slash `/` after directories.
 - R Studio has Git version control functionality built in.
 - *Forking* a GitHub repository makes a copy of the repository into your personal account on GitHub.
 - You can *clone* a git repository from Github to your local disk using RStudio.
-- For this workshop, each learner will work with their own *fork* of the "[R-Repro-pub](https://github.com/UCSBCarpentry/R-repro-pub)" repository.
+- For this workshop, each learner will work with their own *fork* (local copy) of the "[R-Repro-pub](https://github.com/UCSBCarpentry/R-repro-pub)" repository.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
