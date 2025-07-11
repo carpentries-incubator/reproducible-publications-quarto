@@ -25,7 +25,7 @@ exercises: 10
 
 ## Why Cite?
 
-Correctly citing and attributing publications is key to academic writing. Older versions of RStudio require [Pandoc's citation syntax](https://pandoc.org/MANUAL.html#citation-syntax) to render bibliographies correctly. We won't be covering this approach extensively in this workshop since the new visual editor has made this process much more simple. You can refer to our [previous workshop on R Markdown](https://ucsbcarpentry.github.io/R-markdown/06-citations-bib/index.html) pre-visual editor for more information.
+Correctly citing and attributing publications is key to academic writing. Older versions of RStudio require [Pandoc's citation syntax](https://pandoc.org/MANUAL.html#citation-syntax) to render bibliographies correctly. We won't be covering this approach extensively in this workshop since the new visual editor has made this process much simpler. You can refer to our [previous workshop on R Markdown](https://ucsbcarpentry.github.io/R-markdown/06-citations-bib/index.html) pre-visual editor for more information.
 
 The new visual editor has made citations and cross-referencing much easier, by offering different options for referencing various types of sources. Before getting into these different features, let's first learn how you can call the citation window dialog on Rstudio and how to navigate these different options.
 
@@ -45,7 +45,7 @@ Have you noticed that the YAML header contains "bibliography: references.bib". A
 
 A file with the BIB file extension is a BibTeX Bibliographical Database file. It's a specially formatted text file that lists references pertaining to a particular source of information. They're normally seen only with the .`bib` file extension but might instead use `.bibitex`. BibTeX files might hold references for things like research papers, articles, books, etc. The file often includes an author's name, year, title, page number, and other related content. Each item can be edited, in case there is any metadata incorrect or missing.
 
-Most citation and reference management tools such as Refworks, Endnote, Mendeley and Zotero, as well as some search engines (e.g., Google Scholar), most scientific databases, and our UCSB library catalog allow us to export citations aa [.bib or BibteX files](https://en.wikipedia.org/wiki/BibTeX). These files are used to describe and process lists of references, mostly in conjunction with LaTeX documents. Each .bib file has a citation key or ID preceded by an `@`, which uniquely identifies each item. Citation keys can be customized, as we will learn in a bit, but be advised that your manuscript will render citations correctly only if you have the cited item corresponding to its exact key.
+Most citation and reference management tools such as Refworks, Endnote, Mendeley and Zotero, as well as some search engines (e.g., Google Scholar), most scientific databases, and our UCSB library catalog allow us to export citations as [.bib or BibteX files](https://en.wikipedia.org/wiki/BibTeX). These files are used to describe and process lists of references, mostly in conjunction with LaTeX documents. Each .bib file has a citation key or ID preceded by an `@`, which uniquely identifies each item. Citation keys can be customized, as we will learn in a bit, but be advised that your manuscript will render citations correctly only if you have the cited item corresponding to its exact key.
 
 ## Inserting Citations
 
