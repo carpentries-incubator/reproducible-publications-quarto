@@ -162,7 +162,7 @@ Developers picked a name that had meaning in the history of publishing and lande
 
 ## Why Quarto and not R Markdown?
 
-As noted before, Quarto is the next generation of R Markdown and the anatomy of `.rmd` and `.qmd` files are very similar. So why move to Quarto? While compatible with Python (and bash, Julia, C, SQL), R Markdown was designed primarily for R users. **Quarto does not require R.** Quarto runs computations into separate pluggable language "engine," which helps make this cross-language functionality easier to support and reduces infrastructure intensity with built-in applications. In addition, because Quarto is designed to be compatible with existing formats, you can render most existing `.Rmd` and Jupyter Notebooks with Quarto without modification. This low-pain process helps the transition to Quarto.
+As noted before, Quarto is the next generation of R Markdown and the anatomy of `.rmd` and `.qmd` files are very similar. So why move to Quarto? While compatible with Python (and bash, Julia, C, SQL), R Markdown was designed primarily for R users. **Quarto does not require R.** supports multiple languages by delegating code execution to external engines, such as Jupyter for Python and Julia, or knitr for R. This design helps support cross-language workflows and reduces infrastructure dependencies. In addition, because Quarto is designed to be compatible with existing formats, you can render most existing `.Rmd` and Jupyter Notebooks in Quarto without modification. This helps ease the transition to Quarto.
 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
