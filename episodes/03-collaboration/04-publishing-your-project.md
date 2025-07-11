@@ -121,7 +121,7 @@ Quarto offers some journal formats and made them available within the quarto-jou
 
 This list is expected to grow rapidly with new contributions submitted to the [Quarto Journal Templates Repository](https://github.com/quarto-journals). You may also create your own templates following [these guidelines](https://quarto.org/docs/journals/templates.html).  
 
-Journal templates require features of Quarto version 1.2, so we must ensure we have the right version.  You can check your Quarto version in the Terminal with the command: `quarto --version`.  We should be good with that for this workshop, but if you are using a lab computer later on, you may need to update Quarto.  See: [pre-release versions of Quarto](https://quarto.org/docs/download/prerelease.html)
+Journal templates require features of Quarto version 1.2 or later, so we must ensure we have the right version.  You can check your Quarto version in the Terminal with the command: `quarto --version`.  We should be good with that for this workshop, but if you are using a lab computer later on, you may need to update Quarto.  See: [release versions of Quarto](https://quarto.org/docs/download/release.html)
 
 Quarto uses a template command that can be called in the terminal to create an article in any of these formats. Suppose you want to use the Elsevier template. In Rstudio, in the terminal (if not showing, select `Tools > Terminal > New`), type `quarto use template quarto-journals/elsevier`. Then, follow the steps below:
 
