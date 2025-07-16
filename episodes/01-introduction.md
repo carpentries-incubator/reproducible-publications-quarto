@@ -17,7 +17,7 @@ start: yes
 :::::::::::::::::::::::::::::::::::::::: questions
 
 - What is reproducible research?
-- How can RStudio help research to be more reproducible?
+- How can RStudio help research be more reproducible?
 - What are the benefits of using RStudio for writing academic essays and papers?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -44,7 +44,7 @@ Reproducible studies allow other researchers to perform the same processes and a
 - The researchers can't find some of the data they used to generate the original results and can't figure out which parameters they used when running their analyses.
 - The manuscript is still languishing in the drawer…
 
-According to the [U.S. National Science Foundation (NSF)](https://www.nsf.gov/sbe/AC_Materials/SBE_Robust_and_Reliable_Research_Report.pdf) subcommittee on replicability in science (2015):
+According to the [U.S. National Science Foundation (NSF)](https://rcra.emory.edu/_includes/documents/sections/oric/8-social-behavioral-and-economic-sciences-perspectives-on-robust-and-reliable-science.pdf) subcommittee on replicability in science (2015):
 
 Science should routinely evaluate the reproducibility of findings that enjoy a prominent role in the published literature. To make reproduction possible, efficient, and informative, researchers should sufficiently document the details of the procedures used to collect data, convert observations into analyzable data, and perform data analysis.
 
@@ -93,16 +93,16 @@ Let's assume I have convinced you that reproducibility and transparency are in y
 
 From day one and throughout the whole research life cycle! Before starting the project, you might have to learn tools like R or Git. If you wait too long while doing the analysis, you might lose a lot of time trying to remember what you did two months ago. When you write the paper, you want up-to-date numbers, tables, and figures. When you co-author a paper, you want to make sure that the analyses presented in a paper with your name on it are sound. When you review a paper, you can't judge the results if you don't know how the authors got there.
 
-[Alexander (2022)](https://tellingstorieswithdata.com/) suggests three steps towards better reproducibility:
+[Alexander (2023)](https://rohanalexander.github.io/telling_stories-published) argues that reproducibility often starts out as a burden—something others require of you, and it can feel tedious or frustrating. But that perception usually changes the moment you return to a project after some time away. Then, it becomes clear that reproducibility isn’t just essential for advancing data science—it’s also a practical tool that makes your own work easier to understand and build upon later. To achieve reproducibility, the author suggests a three-step approach:
 
 1) Ensure the entire workflow is documented. This may involve addressing questions such as:
 
 - How was the raw dataset obtained, and is access likely to be persistent and available to others?
-- What specific steps are being taken to transform the raw data in the data that were analyzed, and how can this be made available to others?
+- What specific steps are being taken to transform the raw data into the data that was analyzed, and how can this be made available to others?
 - What analysis has been done, which codes/scripts were used, and how can this be shared clearly?
 - How has the final paper or report been built, and to what extent can others follow that process themselves?
 
-2) Try to accomplish progressively the following requirements:
+2) Try to progressively accomplish the following requirements:
 
 - Can you run your entire workflow again?
 - Can another person run your entire workflow again?
@@ -139,7 +139,7 @@ RStudio has a handy "Environment" window, which shows all of the objects you hav
 
 ### Makes it easy to set your working directory and access files on your computer
 
-With RStudio, you can navigate to folders on your computer in the "Files" window, view any files you have in that folder, or go to your working directory. You can create projects that help you set your working directory and work with relative paths"to external" files (such as input data and figures) so it can also be used on other machines.
+With RStudio, you can navigate to folders on your computer in the "Files" window, view any files you have in that folder, or go to your working directory. You can create projects that help you set your working directory and work with relative paths to external files (such as input data and figures), so it can also be used on other machines.
 
 ### Integrates with collaboration and publishing tools
 
@@ -162,7 +162,7 @@ Developers picked a name that had meaning in the history of publishing and lande
 
 ## Why Quarto and not R Markdown?
 
-As noted before, Quarto is the next generation of R Markdown, which was the subject of a previous workshop [see Reproducible Publications with RStudio](https://github.com/carpentries-incubator/Reproducible-Publications-with-RStudio) and the anatomy of `.rmd` and `.qmd` files are very similar. So why move to Quarto? While compatible with Python (and bash, Julia, C, SQL), R Markdown was designed primarily for R users. **Quarto does not require R.** Quarto runs computations into separate pluggable language "engine," which helps make this cross-language functionality easier to support and reduces infrastructure intensity with built-in applications. In addition, because Quarto is designed to be compatible with existing formats, you can render most existing `.Rmd` and Jupyter Notebooks with Quarto without modification. This low-pain process helps the transition to Quarto.
+As noted before, Quarto is the next generation of R Markdown, and the anatomy of `.rmd` and `.qmd` files is very similar. So why move to Quarto? While compatible with Python (and bash, Julia, C, SQL), R Markdown was designed primarily for R users. **Quarto does not require R.** It supports multiple languages by delegating code execution to external engines, such as Jupyter for Python and Julia, or knitr for R. This design helps support cross-language workflows and reduces infrastructure dependencies. In addition, because Quarto is designed to be compatible with existing formats, you can render most existing `.Rmd` and Jupyter Notebooks in Quarto without modification. This helps ease the transition to Quarto.
 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -175,7 +175,7 @@ Nitsch, F. J., Sellitto, M., \& Kalenscher, T. (2021). Trier social stress test 
 
 We will also be using a simplified version of the project directory containing data files and scripts published by the authors on Open Science Framework: <https://doi.org/10.17605/OSF.IO/6MVQ7>.
 
-The adapted paper template and project directory are used exclusively for instruction purposes with permission from the authors.
+The adapted paper template and project directory are used exclusively for instructional purposes with permission from the authors.
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 

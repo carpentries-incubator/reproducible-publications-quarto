@@ -28,12 +28,11 @@ Once you have completed your Quarto manuscript following all the best practices 
 
 ### If you plan to share your insights with your community right away
 
-#### Publishing with Rpubs
+#### Publishing with RPubs
 
-- The easiest way would be to use [Rpubs](https://rpubs.com/), which is integrated with Rstudio. Rpubs is a bare-bones, free web hosting service.  It provides no other services--- no support for search, collaboration, persistent identifiers, or versioning.  But, it is the simplest and most direct way of getting your R Markdown (and now Quarto) document published on the web directly from RStudio.  For a more full-featured hosting service, consider GitHub and GitHub Pages, which will be described later.
+The easiest way would be to use [RPubs](https://rpubs.com/), which is integrated with Rstudio. RPubs is a bare-bones, free web hosting service. It provides no other services; meaning, no support for search, collaboration, persistent identifiers, or versioning. But, it is the simplest and most direct way of getting your R Markdown (and now Quarto) document published on the web directly from RStudio. For a more full-featured hosting service, consider GitHub and GitHub Pages, which will be described later.
 
-Notice the circular blue "Publish" button in the upper right corner of your *Render* output.  Click this to publish to Rpubs.  This is where you'll need a Rpubs account, as mentioned in [setup](../learners/setup.md)
-for this workshop.
+Notice the circular blue "Publish" button in the upper right corner of your *Render* output.  Click this to publish to RPubs. It is worthnoting, that this process requires a Rregistration  This is where you'll need a Rpubs account, as mentioned in [setup](../learners/setup.md) for this workshop.
 
 Click the blue publish button:
 
@@ -47,7 +46,7 @@ Wait for the installation to be completed. If a little menu pops up, select "Pub
 
 ![](fig/11-r-studio-knit-publish-confirm-scrnshot.png){alt='Confirm Publish to RPubs'}
 
-The first time you publish, RStudio will likely ask if you want to install some needed packages; say yes.  RStudio will then open up a web browser to allow you to sign in to rpubs.com.
+The first time you publish, RStudio will likely ask if you want to install some needed packages; say yes. RStudio will then open up a web browser to allow you to sign in to rpubs.com.
 
 At the end of the publishing process, your paper will be live on the internet
 with a URL similar to: `https://rpubs.com/yourname/678624`
@@ -100,9 +99,9 @@ For the purposes of this workshop, we've been using HTML as the output format, b
 
 ### If you are willing to publish your manuscript through a peer-reviewed journal
 
-- Most journals now request the underlying data, code, and documentation to be shared along with the manuscript, so in that case, you will have that handy. Whenever possible, give preference to *open-access* journals with data sharing recommendations to foster open science, transparency, and research reproducibility. The [TOP Factor](https://topfactor.org/journals) allows you to search by journal title and/or discipline and will rank journals' compliance with those principles.
-- If your chosen journal does not require nor recommend a particular process for making your project data available (some will dictate what, where and how project data should be uploaded), you may still consider depositing your project files in a reliable data repository and cross-reference paper and project data, ideally with a formal citation containing a [Persistent Identifier](https://www.library.ucsb.edu/sites/default/files/dls_n4_pids_navy.pdf)(e.g., DOI, ARK, handle, Purl) to avoid link rot.
-- In terms of data repositories, there are many options available, and they can be disciplinary, institutional, or generalist (e.g., Zenodo, Figshare). For a comprehensive list of options available, please refer to the [Registry of Research Data Repositories]([https://www.re3data.org).
+- Most journals now request the underlying data, code, and documentation to be shared along with the manuscript, so in that case, you will have that handy. Whenever possible, give preference to *open-access* journals with data sharing recommendations to foster open science, transparency, and research reproducibility.
+- If your chosen journal does not require nor recommend a particular process for making your project data available (some will dictate what, where and how project data should be uploaded), you may still consider depositing your project files in a reliable data repository and cross-reference paper and project data, ideally with a formal citation containing a [Persistent Identifier](https://perma.cc/KH7N-5Q97)(e.g., DOI, ARK, handle, Purl) to avoid link rot.
+- In terms of data repositories, there are many options available, and they can be disciplinary, institutional, or generalist (e.g., Zenodo, Figshare). For a comprehensive list of options available, please refer to the [Registry of Research Data Repositories](https://www.re3data.org).
 
 ## Creating Pre-formatted Papers (Optional)
 
@@ -120,7 +119,7 @@ Quarto offers some journal formats and made them available within the quarto-jou
 
 This list is expected to grow rapidly with new contributions submitted to the [Quarto Journal Templates Repository](https://github.com/quarto-journals). You may also create your own templates following [these guidelines](https://quarto.org/docs/journals/templates.html).
 
-Journal templates require features of Quarto version 1.2, so we must ensure we have the right version.  You can check your Quarto version in the Terminal with the command: `quarto --version`.  We should be good with that for this workshop, but if you are using a lab computer later on, you may need to update Quarto.  See: [pre-release versions of Quarto](https://quarto.org/docs/download/prerelease.html)
+Journal templates require features of Quarto version 1.2, so we must ensure we have the right version.  You can check your Quarto version in the Terminal with the command: `quarto --version`.  We should be good with that for this workshop, but if you are using a lab computer later on, you may need to update Quarto.  See: [release versions of Quarto](https://quarto.org/docs/download/release.html)
 
 Quarto uses a template command that can be called in the terminal to create an article in any of these formats. Suppose you want to use the Elsevier template. In Rstudio, in the terminal (if not showing, select `Tools > Terminal > New`), type `quarto use template quarto-journals/elsevier`. Then, follow the steps below:
 

@@ -35,7 +35,7 @@ This lesson assumes you already have a basic understanding of R and RStudio but
 we will do a brief tour of the IDE, review R projects, and the best practices for
 organizing your work, and how to install or check packages you need to follow along.
 
-Now, let's open RStudio. You may access it through the Jupyter Hub instance <https://carpentryworkshop.lsit.ucsb.edu>. After passing authentication, choose `RStudio`. If you want to follow along using your local RStudio, make sure you use IDE version RStudio v2023.06 or later and that it is running [Quarto version 1.4 or above](https://quarto.org/docs/download/prerelease.html). If you need to check that, for RStudio, choose `Help` and `About RStudio`. For the Quarto version checking, type in `packageVersion("quarto")` on the console. 
+Now, let's open RStudio. After passing authentication, choose `RStudio`. If you want to follow along using your local RStudio, make sure you use IDE version RStudio v2023.06 or later and that it is running [Quarto version 1.4 or above](https://quarto.org/docs/download/release.html). If you need to check that, for RStudio, choose `Help` and `About RStudio`. For the Quarto version checking, type in `packageVersion("quarto")` on the console.
 
 **Basic layout**
 
@@ -74,7 +74,7 @@ Click an empty box to load that package and click a checked box to detach that
 package.
 
 Packages can be installed and updated from the Package tab with the *Install* and
-*Update* buttons at the top of the tab. We have asked you to install a few packages prior to the workshop following the [setup instructions](https://github.com/UCSBCarpentry/Reproducible-Publications-with-RStudio/blob/main/setup.md) using the `install.packages()` command. Let's now make sure you have all of them good to go.
+*Update* buttons at the top of the tab. We have asked you to install a few packages prior to the workshop following the setup instructions using the `install.packages()` command. Let's now make sure you have all of them good to go.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 

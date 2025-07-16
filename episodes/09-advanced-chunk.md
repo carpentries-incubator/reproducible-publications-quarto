@@ -41,9 +41,6 @@ Open up a project with one of the Quarto Project options (Blog, Book, Website) a
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## 
-
-FIXME Add an example of how to use "\_quarto.yml" to change style options in our paper.
 
 ## Set Working Directory in Quarto Documents
 
@@ -122,15 +119,14 @@ If the code ran without error, let's render the whole document again and take a 
 
 Our plot should look exactly the same as the first copy-pasted one.
 
-Success! You'll notice that the global code chunk options were also applied to this code chunk.\*.
+Success! You'll notice that the global code chunk options were also applied to this code chunk.
 
-- Note: As of November 2023, Quarto has not implemented global options for `results`. This will need to be added to each code chunk if needed until further notice.
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
 ## Tip: Many ways to run external code
 
-There are at least 3-4 methods one can use to run external code; the best choice may depend on the context or your personal preference. There's no method that's a clear winner because there's an awkward quirk or another to each of them, but better than copy/pasting code from elsewhere in your project (in our humble opinion):
+There are other methods one can use to run external code. The best choice may depend on the context or your personal preference:
 
 1. source()   -- [see more at bookdown.org](https://bookdown.org/yihui/rmarkdown-cookbook/source-script.html)
 2. sys.source()   -- [see more at bookdown.org](https://bookdown.org/yihui/rmarkdown-cookbook/source-script.html)

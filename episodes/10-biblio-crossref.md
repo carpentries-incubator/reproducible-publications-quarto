@@ -25,7 +25,7 @@ exercises: 10
 
 ## Why Cite?
 
-Correctly citing and attributing publications is key to academic writing. Older versions of RStudio require [Pandoc's](https://pandoc.org/MANUAL.html#citation-syntax) citation syntax to render bibliographies correctly. We won't be covering this approach extensively in this workshop since the new visual editor has made this process much more simple. You can refer to our [previous workshop on R Markdown](https://ucsbcarpentry.github.io/R-markdown/06-citations-bib/index.html) pre-visual editor for more information.
+Correctly citing and attributing publications is key to academic writing. Older versions of RStudio require [Pandoc's citation syntax](https://pandoc.org/MANUAL.html#citation-syntax) to render bibliographies correctly. We won't be covering this approach extensively in this workshop since the new visual editor has made this process much simpler. You can refer to our [previous workshop on R Markdown](https://ucsbcarpentry.github.io/R-markdown/06-citations-bib/index.html) pre-visual editor for more information.
 
 The new visual editor has made citations and cross-referencing much easier, by offering different options for referencing various types of sources. Before getting into these different features, let's first learn how you can call the citation window dialog on Rstudio and how to navigate these different options.
 
@@ -45,7 +45,7 @@ Have you noticed that the YAML header contains "bibliography: references.bib". A
 
 A file with the BIB file extension is a BibTeX Bibliographical Database file. It's a specially formatted text file that lists references pertaining to a particular source of information. They're normally seen only with the .`bib` file extension but might instead use `.bibitex`. BibTeX files might hold references for things like research papers, articles, books, etc. The file often includes an author's name, year, title, page number, and other related content. Each item can be edited, in case there is any metadata incorrect or missing.
 
-Most citation and reference management tools such as Refworks, Endnote, Mendeley and Zotero, as well as some search engines (e.g., Google Scholar), most scientific databases, and our UCSB library catalog allow us to export citations as .bib [BibteX](https://en.wikipedia.org/wiki/BibTeX) files. These files are used to describe and process lists of references, mostly in conjunction with LaTeX documents. Each .bib file has a citation key or ID preceded by an `@`, which uniquely identifies each item. Citation keys can be customized, as we will learn in a bit, but be advised that your manuscript will render citations correctly only if you have the cited item corresponding to its exact key.
+Most citation and reference management tools such as Refworks, Endnote, Mendeley and Zotero, as well as some search engines (e.g., Google Scholar), most scientific databases, and our UCSB library catalog allow us to export citations as [.bib or BibteX files](https://en.wikipedia.org/wiki/BibTeX). These files are used to describe and process lists of references, mostly in conjunction with LaTeX documents. Each .bib file has a citation key or ID preceded by an `@`, which uniquely identifies each item. Citation keys can be customized, as we will learn in a bit, but be advised that your manuscript will render citations correctly only if you have the cited item corresponding to its exact key.
 
 ## Inserting Citations
 
@@ -55,11 +55,11 @@ Let's assume you want to include a citation in the first line of the Value of th
 
 ![](fig/09-salviary-cortisol.png){alt='Salviary Cortisol'}
 
-The DOI lookup uses the [persistent identifier](https://www.library.ucsb.edu/sites/default/files/dls_n4_pids_navy.pdf), which connects to the DOI resolver service and retrieves the .bibtex file with resource metadata<sup>1</sup>. You should insert the whole DOI address, including the resolver service, the prefix, and the suffix which is specific to the resource as illustrated below:
+The DOI lookup uses the [persistent identifier](https://perma.cc/KH7N-5Q97), which connects to the DOI resolver service and retrieves the .bibtex file with resource metadata<sup>1</sup>. You should insert the whole DOI address, including the resolver service, the prefix, and the suffix which is specific to the resource as illustrated below:
 
 ![](fig/09-doi-lookup.png){alt='DOI Lookup'}
 
-Rstudio will search the [DOI](https://support.datacite.org/docs/doi-basics) API and list the only matching result, and you can insert it. After confirming this is the citation you would like to include, you can modify the key if you would like to simplify it and also choose if you would like to insert it as an in-text citation, meaning you would like to have the last name of the author(s) followed by a page number enclosed in parentheses. i.e., Kirschbaum and Hellhammer (2007), but in this case, we will uncheck that option since we won't include authors as part of the narrative. Instead, we would like to insert a parenthetical citation, where authors and year will be displayed inside the parentheses such as (Kirschbaum and Hellhammer 2007). You may insert more than one citation by selecting multiple items.
+Rstudio will search the [DOI API](https://support.datacite.org/docs/doi-basics) and list the only matching result, and you can insert it. After confirming this is the citation you would like to include, you can modify the key if you would like to simplify it and also choose if you would like to insert it as an in-text citation, meaning you would like to have the last name of the author(s) followed by a page number enclosed in parentheses. i.e., Kirschbaum and Hellhammer (2007), but in this case, we will uncheck that option since we won't include authors as part of the narrative. Instead, we would like to insert a parenthetical citation, where authors and year will be displayed inside the parentheses such as (Kirschbaum and Hellhammer 2007). You may insert more than one citation by selecting multiple items.
 
 This item will be automatically listed in your references.bib file and will help you manage your citations more efficiently. Pretty cool, huh? If you want to cite this same item again, you can type `@` and the first letters of the item name, which will be auto-completed by Rstudio. You will have to type the key between brackets for parenthetical citations, and for in-text narrative citations, you only need to type in the key.
 Note that when you hover over the citation, you will preview the full reference for the cited item that will be listed at the bottom of the manuscript. This feature helps you to identify if you have to edit anything in the .bib file your citation is calling. Also, note that all citations will be included at the end of your document under a reference list.
@@ -194,7 +194,7 @@ Ok, but how can you call that in another part of the paper? You may enter the ke
 
 If you do not start your label with `fig-`, Quarto will interpret it as a citation and won't render correctly. Click `Render` and see how it displays.
 
-You may follow a similar approach to add cross-references for sections `(#sec-)/(@sec-)`, equations  `(#eq-)/(@eq-)`, and tables `(#tbl-)/(@tbl-)`. For more information on how to cross-reference different types of objects, visit [Quarto - Cross References](https://quarto.org/docs/authoring/cross-references.html).
+You may follow a similar approach to add cross-references for sections `(#sec-)/(@sec-)`, equations  `(#eq-)/(@eq-)`, tables `(#tbl-)/(@tbl-)` and other objects (see: [Quarto's Cross  References guide](https://quarto.org/docs/authoring/cross-references.html)).
 
 If you wish to add a cross-reference to a figure that was generated via code block, you have to provide a label (id) and a caption at the beginning of the figure code block.
 

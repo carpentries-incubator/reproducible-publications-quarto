@@ -48,7 +48,7 @@ Quarto generates a .qmd file that weaves together content and executable code in
 
 Finally, three real-world examples that motivated the authors of this lesson to value and use Quarto:
 
-1. You can publish books! [Telling Stories with Data](https://tellingstorieswithdata.com/) is a great example developed in Quarto. Quarto books can be published to a wide variety of destinations, including GitHub Pages, Netlify, RStudio Connect, or any other static hosting service or intranet web server. [Learn more](https://quarto.org/docs/books/).
+1. You can [publish books](https://quarto.org/docs/books/) using GitHub Pages, Netlify, RStudio Connect, or any other static hosting service or intranet web server.
 
 2. Imagine you want to create a short document that includes some math formulas. The LaTeX document preparation can be used for this, but it can be difficult and overkill for just a few formulas in otherwise plain text. As we will learn, through Pandoc, Quarto lets you use just the best part of LaTeX---math formatting---while letting you write your text in a user-friendly way. The editor will automatically recognize the syntax and treat the equation as math.
 
@@ -84,7 +84,7 @@ Quarto default YAML header includes the following metadata surrounded by three d
 
 ![](fig/03-qmd-template-yaml.png){alt='yaml highlighted in document'}
 
-The format is selected in the wizard for starting a new document. You are able to pick from pdf, html, and word document. Basically, this allows you to export your qmd file as a file type of your choice. There are [other options for output format](https://bookdown.org/yihui/rmarkdown/output-formats.html), and even more can be added by installing certain packages, but these are the three default options.  
+You can select the output format using the wizard when creating a new document. This allows you to render the .qmd file in your preferred format. By default, options include PDF, HTML, and Word, but a wide range of [additional output formats options](https://quarto.org/docs/output-formats/all-formats.html) is also available and can be configured based on your project needs.
 <br>
 
 We'll see other formatting options for YAML later on, including adding bibliography information, customizing our output, and changing the default settings for executing your code. Below is an example of how our YAML file will look at the end of this workshop.
@@ -145,9 +145,9 @@ Let's take a look at the Quarto document template we have just created to see ho
 
 When writing code in Rstudio, there are different workflows you can use, including writing code directly in the console, using a separate R script, or writing your code in a .qmd file. The best approach depends on your specific needs and preferences:
 
-- *Writing code directly in the console* is useful when you want to execute code immediately to see the effect of a statement making a quick change or calculation. However, keeping track of your written code can be challenging, especially if it takes multiple lines. Additionally, if you need to run the same code multiple times, you'll have to rewrite it each time, which can be inconvenient if you plan to reuse it.
-- *Using a separate R script* is a more organized way to write and save code, and you can easily reuse it later or share it with others. You can easily edit and rerun the script if you need to modify the code. However, running code in a script requires more steps than running code in the console, and it can be more challenging to modify code interactively.
-- *Using a .qmd file* combines the advantages of both the console and R script. A .qmd file allows you to write. R code and text in the same document make organizing and documenting your work easier. Additionally, you can run the code directly in the paper, which makes it easier to modify and rerun code interactively.
+- *Writing code directly in the console* is useful when you want to execute code immediately to see the effect of a statement making a quick change or calculation. However, keeping track of your written code can be challenging, especially if it takes multiple lines. Additionally, if you need to run the same code multiple times, you'll have to rewrite it each time, which can be inconvenient if you plan to reuse it.
+- *Using a separate R script* is a more organized way to write and save code, and you can easily reuse it later or share it with others. You can easily edit and rerun the script if you need to modify the code. However, running code in a script requires more steps than running code in the console, and it can be more challenging to modify code interactively.
+- *Using a .qmd file* combines the advantages of both the console and R script. A .qmd file allows you to write. R code and text in the same document make organizing and documenting your work easier. Additionally, you can run the code directly in the paper, which makes it easier to modify and rerun code interactively.
 
 We will use the third approach for most of this workshop since we focus on creating a reproducible paper.
 

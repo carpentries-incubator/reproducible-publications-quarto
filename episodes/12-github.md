@@ -22,7 +22,7 @@ exercises: 15
 
 ## Synchronizing Your Local changes Your Repository on GitHub
 
-In Episode 3: [ Getting your project set up with Version Control in RStudio](01-Project-Setup-Organization/03-setup-versioning), we learned about using version control as you write your publication.  In this part of the workshop, we will set up Rstudio to authenticate with GitHub, which is necessary to *push* your changes to GitHub.
+Earlier, we looked at integrating version control into your RStudio workflow to help streamline your work and keep track of changes. In this part of the workshop, we will set up Rstudio to authenticate with GitHub, which is necessary to *push* your local changes to the remote repository on GitHub.
 
 Terminology:  Git *Push* and *Pull*
 

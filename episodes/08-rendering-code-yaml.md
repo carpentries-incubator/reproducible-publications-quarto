@@ -183,7 +183,7 @@ Other options that change how a plot or figure appears often use the syntax `fig
 - `out-width`, `out-height`: (NULL; character) Width and height of the plot in the output document, which can be different with its physical fig-width and fig-height, i.e., plots can be scaled in the output document.
 - `fig-align`: ('default'; character) Alignment of figures in the output document. Possible values are default, left, right, and center. The default is not to make any alignment adjustments.
 - `fig-link`: (NULL; character) A link to be added to the figure.
-- `fig-alt`: (NULL; character) The alternative text to be used in the alt attribute of the <img> tags of figures in HTML output. By default, the chunk option fig-cap will be used as the alternative text if provided.
+- `fig-alt`: (NULL; character) The alternative text to be used in the alt attribute of the image tags of figures in HTML output. By default, the chunk option fig-cap will be used as the alternative text if provided.
   
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
