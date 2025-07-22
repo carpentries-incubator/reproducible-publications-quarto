@@ -1,0 +1,101 @@
+#------------------------------------------------------------
+# Values for this lesson.
+#------------------------------------------------------------
+
+# Which carpentry is this (swc, dc, lc, or cp)?
+# swc: Software Carpentry
+# dc: Data Carpentry
+# lc: Library Carpentry
+# cp: Carpentries (to use for instructor training for instance)
+# incubator: The Carpentries Incubator
+# Note that you can also use a custom carpentry type. For more info,
+# see the documentation: https://carpentries.github.io/sandpaper-docs/editing.html
+carpentry: 'incubator'
+
+# Custom carpentry description
+# This will be used as the alt text for the logo
+# carpentry_description: "Custom Carpentry"
+
+# Overall title for pages.
+title: 'Introduction to Reproducible Publications with Quarto'
+
+# Date the lesson was created (YYYY-MM-DD, this is empty by default)
+created: 2021-12-01 
+
+# Comma-separated list of keywords for the lesson
+keywords: 'software, data, lesson, The Carpentries'
+
+# Life cycle stage of the lesson
+# possible values: pre-alpha, alpha, beta, stable
+life_cycle: 'alpha'
+
+# License of the lesson materials (recommended CC-BY 4.0)
+license: 'CC-BY 4.0'
+
+# Link to the source repository for this lesson
+source: 'https://github.com/carpentries-incubator/reproducible-publications-quarto'
+
+# Default branch of your lesson
+branch: 'main'
+
+# Who to contact if there are any issues
+contact: 'team@carpentries.org'
+
+# Navigation ------------------------------------------------
+#
+# Use the following menu items to specify the order of
+# individual pages in each dropdown section. Leave blank to
+# include all pages in the folder.
+#
+# Example -------------
+#
+# episodes:
+# - introduction.md
+# - first-steps.md
+#
+# learners:
+# - setup.md
+#
+# instructors:
+# - instructor-notes.md
+#
+# profiles:
+# - one-learner.md
+# - another-learner.md
+
+# Order of episodes in your lesson
+episodes: 
+- 01-introduction.md
+- 02-reproducibility.md
+- 03-basic-rstudio.md
+- 04-projects-rstudio.md
+- 05-quarto-documents.md
+- 06-writing-styling.md
+- 07-code-qmd.md
+- 08-rendering-code-yaml.md
+- 09-advanced-chunk.md
+- 10-biblio-crossref.md
+- 11-git.md
+- 12-github.md
+- 13-managing-dependencies.md
+- 14-publishing-your-project.md
+- 15-renv.md
+
+# Information for Learners
+learners: 
+
+# Information for Instructors
+instructors: 
+
+# Learner Profiles
+profiles: 
+
+# Customisation ---------------------------------------------
+#
+# This space below is where custom yaml items (e.g. pinning
+# sandpaper and varnish versions) should live
+
+
+carpentry_description: Lesson Description
+url: 'https://carpentries-incubator.github.io/reproducible-publications-quarto'
+lang: en
