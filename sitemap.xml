@@ -55,7 +55,13 @@
     <loc>https://carpentries-incubator.github.io/reproducible-publications-quarto/LICENSE.html</loc>
   </url>
   <url>
+    <loc>https://carpentries-incubator.github.io/reproducible-publications-quarto/aio.html</loc>
+  </url>
+  <url>
     <loc>https://carpentries-incubator.github.io/reproducible-publications-quarto/discuss.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries-incubator.github.io/reproducible-publications-quarto/images.html</loc>
   </url>
   <url>
     <loc>https://carpentries-incubator.github.io/reproducible-publications-quarto/index.html</loc>
@@ -115,16 +121,34 @@
     <loc>https://carpentries-incubator.github.io/reproducible-publications-quarto/instructor/LICENSE.html</loc>
   </url>
   <url>
+    <loc>https://carpentries-incubator.github.io/reproducible-publications-quarto/instructor/aio.html</loc>
+  </url>
+  <url>
     <loc>https://carpentries-incubator.github.io/reproducible-publications-quarto/instructor/discuss.html</loc>
   </url>
   <url>
+    <loc>https://carpentries-incubator.github.io/reproducible-publications-quarto/instructor/images.html</loc>
+  </url>
+  <url>
     <loc>https://carpentries-incubator.github.io/reproducible-publications-quarto/instructor/index.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries-incubator.github.io/reproducible-publications-quarto/instructor/instructor-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries-incubator.github.io/reproducible-publications-quarto/instructor/key-points.html</loc>
   </url>
   <url>
     <loc>https://carpentries-incubator.github.io/reproducible-publications-quarto/instructor/profiles.html</loc>
   </url>
   <url>
     <loc>https://carpentries-incubator.github.io/reproducible-publications-quarto/instructor/reference.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries-incubator.github.io/reproducible-publications-quarto/instructor-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries-incubator.github.io/reproducible-publications-quarto/key-points.html</loc>
   </url>
   <url>
     <loc>https://carpentries-incubator.github.io/reproducible-publications-quarto/profiles.html</loc>
