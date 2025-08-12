@@ -465,6 +465,7 @@ whole Quarto document.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="check-square"></i>
 </div>
+<span class="callout-header">Checklist</span>
 <div id="time-to-render" class="callout-inner">
 <h3 class="callout-title">Time to Render!</h3>
 <div class="callout-content">
@@ -522,6 +523,7 @@ to show in our paper.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Challenge</span>
 <div id="challenge-1---rendering-codes-optional" class="callout-inner">
 <h3 class="callout-title">CHALLENGE 1 - Rendering Codes (Optional)</h3>
 <div class="callout-content">
@@ -541,7 +543,7 @@ change.</p>
   SOLUTION
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>The expressions in the code chunk will be evaluated, but the
 outputted figures/plots will not be included in the rendered
@@ -558,6 +560,7 @@ your paper narrative.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
+<span class="callout-header">Callout</span>
 <div id="tip" class="callout-inner">
 <h3 class="callout-title">Tip:</h3>
 <div class="callout-content">
@@ -591,8 +594,10 @@ allow for cross-references.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
+<span class="callout-header">Callout</span>
 <div id="tip-dont-use-spaces-periods-or-underscores-in-code-chunk-labels" class="callout-inner">
-<h3 class="callout-title">Tip: Don’t use spaces, periods, or underscores in code chunk labels</h3>
+<h3 class="callout-title">Tip: Don’t use spaces, periods, or underscores
+in code chunk labels</h3>
 <div class="callout-content">
 <p>Avoid spaces, periods <code>(.)</code>, and underscores
 <code>(_)</code> in chunk labels and paths. If you need separators, you
@@ -622,8 +627,10 @@ the <code>#|</code> syntax as such:</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Challenge</span>
 <div id="challenge-2-adding-a-caption-and-cleaning-up-unwanted-content-for-figure-2" class="callout-inner">
-<h3 class="callout-title">CHALLENGE 2: Adding a caption and cleaning up unwanted content for Figure 2</h3>
+<h3 class="callout-title">CHALLENGE 2: Adding a caption and cleaning up
+unwanted content for Figure 2</h3>
 <div class="callout-content">
 <p>Let’s add the following caption: “Mean heart rate of stress and
 control groups at baseline and during intervention.” and ensure only the
@@ -638,7 +645,7 @@ figure and the caption will be displayed in the html document.</p>
   SOLUTION
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>So, you should end up with the following in your code chunk:</p>
 <pre><code>```{r}
@@ -660,8 +667,8 @@ quotes.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
+<span class="callout-header">Callout</span>
 <div class="callout-inner">
-<h3 class="callout-title">Callout</h3>
 <div class="callout-content">
 <p>Other options that change how a plot or figure appears often use the
 syntax <code>fig-xxx</code> similar to <code>fig-cap</code> Some other
@@ -697,6 +704,7 @@ and has a caption.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="check-square"></i>
 </div>
+<span class="callout-header">Checklist</span>
 <div id="time-to-render-1" class="callout-inner">
 <h3 class="callout-title">Time to Render!</h3>
 <div class="callout-content">
@@ -739,6 +747,7 @@ document to make a change - it’s listed right at the top.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Challenge</span>
 <div id="order-matters" class="callout-inner">
 <h3 class="callout-title">Order matters!</h3>
 <div class="callout-content">
@@ -754,7 +763,7 @@ libraries?</p>
   Solution:
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p>We would get an error because we haven’t loaded tidyverse which is
 required to read the CSV yet!</p>
@@ -812,6 +821,7 @@ the beginning of the document where we loaded our other data:</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="check-square"></i>
 </div>
+<span class="callout-header">Checklist</span>
 <div id="time-to-render-2" class="callout-inner">
 <h3 class="callout-title">Time to Render!</h3>
 <div class="callout-content">
@@ -824,6 +834,7 @@ rows.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Challenge</span>
 <div id="challenge-3---adding-inline-code" class="callout-inner">
 <h3 class="callout-title">CHALLENGE 3 - Adding inline code</h3>
 <div class="callout-content">
@@ -842,7 +853,7 @@ code would we have to add to the following sentence?</p>
   Solution:
   </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <p>`r mean(bronars_simulation_data$violation_count)`<br>
 5.3924</p>
@@ -854,6 +865,7 @@ code would we have to add to the following sentence?</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
+<span class="callout-header">Callout</span>
 <div id="important-note" class="callout-inner">
 <h3 class="callout-title">Important Note:</h3>
 <div class="callout-content">
@@ -866,6 +878,7 @@ your working directory is set appropriately.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
+<span class="callout-header">Callout</span>
 <div id="more-on-inline-codes" class="callout-inner">
 <h3 class="callout-title">More on inline codes:</h3>
 <div class="callout-content">
@@ -878,8 +891,8 @@ code. Inline expressions do not take knitr options.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
+<span class="callout-header">Key Points</span>
 <div class="callout-inner">
-<h3 class="callout-title">Key Points</h3>
 <div class="callout-content">
 <ul><li>Each time you render/knit the document, calculations and plots will
 run and be displayed.</li>
@@ -923,7 +936,7 @@ run and be displayed.</li>
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
 
         <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> by <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.16.12" class="external-link">sandpaper (0.16.12)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.9" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/carpentries/varnish/tree/1.0.6" class="external-link">varnish (1.0.6)</a></p>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.17.1" class="external-link">sandpaper (0.17.1)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.9" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/carpentries/varnish/tree/1.0.7" class="external-link">varnish (1.0.7)</a></p>
 			</div>
 		</footer></div> <!-- / div.container -->
 	<div id="to-top">
@@ -946,7 +959,7 @@ run and be displayed.</li>
   "identifier": "https://carpentries-incubator.github.io/reproducible-publications-quarto/instructor/08-rendering-code-yaml.html",
   "dateCreated": "2021-12-01",
   "dateModified": "2025-07-22",
-  "datePublished": "2025-08-05"
+  "datePublished": "2025-08-12"
 }
 
   </script><script>
