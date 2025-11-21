@@ -9,7 +9,6 @@ exercises: 10
 
 - Learn how to source external scripts to run within a qmd document to modularize your code.
 - Learn about using global options for project-level settings.
-- Learn how to load libraries and data for use throughout the whole `.qmd` document.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
