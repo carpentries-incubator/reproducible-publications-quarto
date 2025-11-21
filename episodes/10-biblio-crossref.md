@@ -8,9 +8,8 @@ exercises: 10
 ::::::::::::::::::::::::::::::::::::::: objectives
 
 - Inserting citations and listing bibliography in a Quarto Document file.
-- Changing citation styles.
-- Customizing how citations and bibliography are displayed.
-- Add cross-referencing directing your readers through your document.
+- Customizing citation styles and the display of references and bibliographies.
+- Add cross-referencing, directing your readers through your document.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
