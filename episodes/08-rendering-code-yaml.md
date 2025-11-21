@@ -11,6 +11,7 @@ start: yes
 - Learn how to insert and render run-able chunks of code to integrate into your report.
 - Apply labels and caption to code chunks.
 - Learn the syntax and how to add in-line code.
+- Learn how to load libraries and data for use throughout the whole `.qmd` document.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -177,10 +178,10 @@ Set the option `fig-cap` to equal the text in double quotes.
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
-Other options that change how a plot or figure appears often use the syntax `fig-xxx` similar to `fig-cap` Some other useful plot/figure code options include (From [Yihui Xie's page](https://yihui.org/knitr/options/#plots) ):
+Other options that change how a plot or figure appears often use the syntax `fig-xxx`, similar to `fig-cap.` Some other useful plot/figure code options include (From [Yihui Xie's page](https://yihui.org/knitr/options/#plots) ):
 
 - `fig-width`, `fig-height`: (both are 7; numeric) Width and height of the plot (in inches), to be used in the graphics device.
-- `out-width`, `out-height`: (NULL; character) Width and height of the plot in the output document, which can be different with its physical fig-width and fig-height, i.e., plots can be scaled in the output document.
+- `out-width`, `out-height`: (NULL; character) Width and height of the plot in the output document, which can be different from its physical fig-width and fig-height, i.e., plots can be scaled in the output document.
 - `fig-align`: ('default'; character) Alignment of figures in the output document. Possible values are default, left, right, and center. The default is not to make any alignment adjustments.
 - `fig-link`: (NULL; character) A link to be added to the figure.
 - `fig-alt`: (NULL; character) The alternative text to be used in the alt attribute of the image tags of figures in HTML output. By default, the chunk option fig-cap will be used as the alternative text if provided.
@@ -194,16 +195,16 @@ Let's render one more time to see if our figure outputs how we'd like and has a 
 
 ## Time to Render!
 
-Let's try that again
+Let's try that again.
 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ### Best Practices for Loading Data and Packages
 
-We can improve organization and rendering speed in our documents by learning how to load data and packages. So far, we've loaded the library `tidyverse` and the data frame `df` we need in the first code chunk. Now, if we want to add another figure (say the hormone analysis code 'hormone\_analysis.R\`), which uses the same data as our first code generated figure - we would be loading tidyverse and the data for a second time. This is unnecessary because once libraries and data are loaded in a Quarto document, they are available for use in the rest of the code in the following document.
+We can improve organization and rendering speed in our documents by learning how to load data and packages. So far, we've loaded the library `tidyverse` and the data frame `df` we need in the first code chunk. Now, if we want to add another figure (say, the hormone analysis code 'hormone\_analysis.R\`), which uses the same data as our first code-generated figure, we would be loading the tidyverse and the data a second time. This is unnecessary because once libraries and data are loaded in a Quarto document, they are available for use in the rest of the code in the following document.
 
-The best practice is to load libraries and data once at the beginning of our document, making it available for all other figures or calculations throughout the document -  allowing us to avoid repetition in our code and saving us rendering time. This also makes it easier for us to keep track of all the libraries and data we need to use in any given document for ourselves and collaborators. If anything needs to be tweaked, we don't need to search through every code chunk in our qmd document to make a change - it's listed right at the top.
+The best practice is to load libraries and data once at the beginning of our document, making it available for all other figures or calculations throughout the document,  allowing us to avoid repetition in our code and saving us rendering time. This also makes it easier for us to keep track of all the libraries and data we need to use in any given document for ourselves and collaborators. If anything needs to be tweaked, we don't need to search through every code chunk in our qmd document to make a change - it's listed right at the top.
 
 ```r
 # load libraries
@@ -241,15 +242,15 @@ We have already learned how to create, run, and customize code chunks, but what 
 
 Sometimes, you just need to do a quick calculation to add to your narrative - such as a count of total observations in your data or the mean of one of your variables. In those cases, it may not be worth setting up a code chunk to calculate those values, so Quarto also provides the ability to use inline code.
 
-If that is the case, you can include `r code` directly in the text portion of your document by enclosing it between single backticks. Say you are discussing some of the summary statistics in your manuscript, Quarto makes this possible through HTML/LaTeX inline code, which allows you to calculate simple expressions integrated into your narrative. Inline code lets you insert \`r code\`\\ into your document to dynamically update portions of your text. In other words, if your data set changes, the code will automatically update the specified calculation.
+If that is the case, you can include `r code` directly in the text portion of your document by enclosing it between single backticks. Say you are discussing some of the summary statistics in your manuscript, Quarto makes this possible through HTML/LaTeX inline code, which allows you to calculate simple expressions integrated into your narrative. Inline code lets you insert \`r code\`\\ into your document to update portions of your text dynamically. In other words, if your data set changes, the code will automatically update the specified calculation.
 
 This can be helpful when referring to specific variables in your data. For example, you should include numbers that are derived from the data as code, not as numbers.
 
-Thus, rather than writing "The CSV file contains choice consistency data for 10.000 simulated participants" **(Example 7A)**, replace the static number with a bit of code that, when evaluated, gives you a dynamic number if anything changes on your dataset. Note that there is not an insert option to do this from the menu in the visual editor, so we need to insert inline code manually, for example:
+Thus, rather than writing "The CSV file contains choice consistency data for 10.000 simulated participants" **(Example 7A)**, replace the static number with a bit of code that, when evaluated, gives you a dynamic number if anything changes in your dataset. Note that there is no insert option to do this from the menu in the visual editor, so we need to insert inline code manually, for example:
 
 The CSV file contains choice consistency data for \`r nrow(bronars\_simulation\_data)\`\\ simulated participants.
 
-When you render, you might get an error. Any idea why? That is because we need to make sure to import the dataset we are referring to before the inline code can work. Let's add the following to our chunk at the beginning of the document where we loaded our other data:
+When you render, you might get an error. Any idea why? That is because we need to import the dataset we are referring to before the inline code can run. Let's add the following to our chunk at the beginning of the document where we loaded our other data:
 
 ```r
 bronars_simulation_data <- read_csv("../data/raw/bronars_simulation_data.csv")
@@ -297,7 +298,7 @@ Make sure the file you are calling is in the right subdirectory and your working
 
 ## More on inline codes:
 
-Quarto will always display the results of the inline code but not the code. Inline expressions do not take knitr options.
+Quarto will always display the results of the inline code, but not the code. Inline expressions do not take knitr options.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
