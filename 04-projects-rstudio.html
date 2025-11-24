@@ -410,7 +410,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Working with projects in RStudio</h1>
-        <p>Last updated on 2025-07-22 |
+        <p>Last updated on 2025-11-24 |
 
         <a href="https://github.com/carpentries-incubator/reproducible-publications-quarto/edit/main/episodes/04-projects-rstudio.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -440,7 +440,7 @@ Git?</li>
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
-<ul><li>Copy an existing project on Github to make contributions</li>
+<ul><li>Copy an existing project on GitHub to make contributions</li>
 <li>Open a project with Git versioning in RStudio</li>
 <li>Learn the basics of Git - pull, add, commit, push</li>
 <li>Make our first edits in a version-controlled project</li>
@@ -470,21 +470,21 @@ with a variety of project options, including a generic “New Project”
 Regardless of your choice at this step, you can create new Quarto
 documents within R projects, Quarto projects, or even outside projects
 at any time. You may also convert an R project to a Quarto project and
-back at any point as well.</p>
-<p>However, there’s no need to worry too much about this now because we
-will be working on an existing project using version control. So let’s
-focus on the basics first, and we’ll explore more advanced features of
-Quarto projects in a later episode.</p>
+back at any time.</p>
+<p>However, you don’t need to worry about this too much now, since we’ll
+be working on an existing project using version control. So let’s focus
+on the basics first, and we’ll explore more advanced features of Quarto
+projects in a later episode.</p>
 <figure><img src="fig/04-quartoprojects.png" class="image-with-shadow figure mx-auto d-block" alt="quarto projects"></figure></section><section><h2 class="section-heading" id="using-rstudio-projects-and-version-control-in-rstudio">Using RStudio projects and Version Control in RStudio<a class="anchor" aria-label="anchor" href="#using-rstudio-projects-and-version-control-in-rstudio"></a></h2>
 <hr class="half-width"><p>Using version control is a powerful feature to make your research
 more reproducible and better organized. In order to use versioning while
-working in RStudio make sure your work is set up as an R Project.
+working in RStudio, make sure your work is set up as an R Project.
 RStudio’s versioning features don’t work unless your work is part of an
 R Project. There are three options for starting an R Project, depending
 on your given scenario.</p>
-<p><em>Of course if an existing RStudio project is already under version
-control, then opening the project will be the only thing you need to
-do!</em></p>
+<p><em>Of course, if an existing RStudio project is already under
+version control, then opening the project will be the only thing you
+need to do!</em></p>
 <p>Let’s see how this setup would work.</p>
 <hr><div class="section level3">
 <h3 id="starting-a-r-project-with-version-control">Starting a R Project with Version Control<a class="anchor" aria-label="anchor" href="#starting-a-r-project-with-version-control"></a></h3>
@@ -499,8 +499,8 @@ do!</em></p>
 git repository</em>” box as highlighted in this screenshot: <img src="fig/05-brand-new-project.PNG" class="image-with-shadow figure" alt="new project w/ version control"></p>
 <p>*Note when you choose directory name, it will create a new directory
 in the directory you specified along with an .Rproj file of the same
-name. Avoid spaces here. underscores “_”, dashes “-” or camel case
-“NewProject” is the recommended way to name this directory/file.</p>
+name. Avoid spaces here. Underscores “_”, dashes “-” or camel case
+“NewProject” are recommended to name this directory/file.</p>
 <p>*Optionally, check the box in the bottom left corner, “Open in new
 session,” if you want it to appear in a new RStudio window.</p>
 <hr></div>
@@ -510,10 +510,10 @@ session,” if you want it to appear in a new RStudio window.</p>
 <div class="section level4">
 <h4 id="method-2">Method #2<a class="anchor" aria-label="anchor" href="#method-2"></a></h4>
 <figure><img src="fig/05-existing-directory.png" class="image-with-shadow figure mx-auto d-block" alt="existing project"></figure><p>We won’t take the time to cover this here, but if you’ve already
-started a Quarto project WITHOUT version control, you have the option to
-add version control retrospectively. You can also add existing R files
-to a project and set up version control if you’ve done neither. To see a
-tutorial of this process, please see <a href="https://swcarpentry.github.io/git-novice/14-supplemental-rstudio.html" class="external-link">episode
+started a Quarto project WITHOUT version control, you can add it
+retrospectively. You can also add existing R files to a project and set
+up version control if you’ve done neither. To see a tutorial of this
+process, please see <a href="https://swcarpentry.github.io/git-novice/14-supplemental-rstudio.html" class="external-link">episode
 14 “Using Git from RStudio” in Version Control with Git</a>.</p>
 <p>This is by far the most labor-intensive way to do it, so remember to
 add version control at the beginning of any new project.</p>
@@ -529,10 +529,10 @@ workshop.</p>
 <p>First, indicate which version control language you will be using
 (Subversion is another version control system, though less popular than
 Git)</p>
-<figure><img src="fig/05-new-project-git.PNG" class="image-with-shadow figure mx-auto d-block" alt="Git or Subversion"></figure><p>When you choose this option, there will be a place to paste a URL
-from GitHub (or another hosting platform). The name of the repository
-will automatically populate. Just choose which directory on your
-computer you wish to save the project to, and you are good to go!</p>
+<figure><img src="fig/05-new-project-git.PNG" class="image-with-shadow figure mx-auto d-block" alt="Git or Subversion"></figure><p>When you choose this option, there will be a field to paste a GitHub
+URL (or another hosting platform). The repository name will
+automatically populate. Choose the directory on your computer where you
+want to save the project, and you are good to go!</p>
 <figure><img src="fig/05-new-project-git-url.PNG" class="image-with-shadow figure mx-auto d-block" alt="continue project from GitHub"></figure><div id="prereq1" class="callout prereq">
 <div class="callout-square">
 <i class="callout-icon" data-feather="check"></i>
@@ -553,13 +553,13 @@ your GitHub account or create one if you have not already.</p>
 </div>
 </div>
 </div>
-<figure><img src="fig/05-github.PNG" class="image-with-shadow figure mx-auto d-block" alt="GitHub"></figure><p>The two main sections are files and directories and the README, which
-should contain a narrative description of the project.</p>
+<figure><img src="fig/05-github.PNG" class="image-with-shadow figure mx-auto d-block" alt="GitHub"></figure><p>The two main sections are files and directories, and the README,
+which should contain a narrative description of the project.</p>
 <p>We are each going to make a copy of this repository to use for this
 workshop. To do so, we will do what’s called “forking” on GitHub. A Fork
 is a copy of a repository that you get to experiment with without
 disrupting the original project.</p>
-<p>On Github, in the upper right-hand corner of the repository, click on
+<p>On GitHub, in the upper right-hand corner of the repository, click on
 the button that says “Fork” - see highlighted example below:</p>
 <figure><img src="fig/05-fork.PNG" class="image-with-shadow figure mx-auto d-block" alt="fork on GitHub"></figure><p>If you are a member of any organizations on GitHub, you will be asked
 whether you want to fork to your account or to an organization. Choose
@@ -571,19 +571,19 @@ the copy icon next to the repository URL:</p>
 <figure><img src="fig/05-copy-repo.PNG" class="image-with-shadow figure mx-auto d-block" alt="copy GitHub repository url"></figure><p>Now, let’s return to RStudio and make our new project.</p>
 <p>Click
 <code>File &gt; New Project &gt; Version Control &gt; Git</code>.</p>
-<p>Paste in your repository’s Github URL and click the “Create Project”
+<p>Paste in your repository’s GitHub URL and click the “Create Project”
 button.</p>
-<figure><img src="fig/05-git-new-project-clone.png" class="image-with-shadow figure mx-auto d-block" alt="start my R project"></figure><p>Now, you have cloned a copy of your git repo from Github to your
+<figure><img src="fig/05-git-new-project-clone.png" class="image-with-shadow figure mx-auto d-block" alt="start my R project"></figure><p>Now, you have cloned a copy of your git repo from GitHub to your
 working environment.</p>
 <p>If you’re working in the JupyterHub environment or have not yet used
 Git on your machine, you will need to configure your Git identity with
-your name and email before you’ll be able to commit the changes you make
-during this workshop. Substitute your name and email address in the
+your name and email before you can commit the changes you make during
+this workshop. You can just replace your name and email address in the
 commands below and paste them into the Terminal panel of RStudio.</p>
 <pre><code>git config --global user.email "you@example.com"
 git config --global user.name "Your Name"</code></pre>
-<p>Woo hoo! We have the project we’re working on for this workshop
-opened in RStudio and set to use version control!</p>
+<p>Woo hoo! We have the project we’re working on for this workshop open
+in RStudio and set to use version control!</p>
 <div id="git-not-detected-on-the-system-path" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -602,7 +602,7 @@ getting a notification that Git isn’t set up to work with RStudio.</p>
   Solution:
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <figure><img src="fig/05-git-not-detected.png" class="image-with-shadow figure mx-auto d-block" alt="Git not detected on system path"></figure><p>To set it up, we need to go to Tools &gt; Global Options <img src="fig/05-setup-git-rstudio.PNG" class="image-with-shadow figure" alt="Global Options Git/SVN setup"></p>
 <p>First, make sure “Enable version control interface for RStudio
@@ -614,9 +614,9 @@ change it to:
 <p>Windows users may find that the correct path is also pre-populated,
 or you may need to manually add it by clicking “browse”. Your path will
 be something like <code>C:/Program Files/Git/bin/git.exe</code>. If not,
-search for where Git for Windows was installed, go into the bin folder,
+search for where Git for Windows was installed, then open the bin folder
 and select the <code>git.exe</code> file.</p>
-<p>Ok! Now we have that set up. By the way, this is a one-time set up.
+<p>Ok! Now we have that set up. By the way, this is a one-time setup.
 From now on, RStudio should know where to find git on your device. We
 should be able to open our project from GitHub in RStudio.</p>
 </div>
@@ -728,7 +728,7 @@ research project?</p>
   Solution:
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Why and when would it be a good idea to add data files to the
 <code>.gitignore</code>?</p>
@@ -774,7 +774,7 @@ Hint (2): add a forward slash <code>/</code> after directories.</p>
   Solution:
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <ol style="list-style-type: decimal"><li>Open the .gitignore file by double-clicking on it in the file view
 pane; on a new line add <code>data/</code>. Save the file, and don’t
@@ -798,7 +798,7 @@ and click save. Don’t forget to commit the <code>.gitignore</code> file.
 <li>
 <em>Forking</em> a GitHub repository makes a copy of the repository
 into your personal account on GitHub.</li>
-<li>You can <em>clone</em> a git repository from Github to your local
+<li>You can <em>clone</em> a git repository from GitHub to your local
 disk using RStudio.</li>
 <li>For this workshop, each learner will work with their own
 <em>fork</em> (local copy) of the “<a href="https://github.com/UCSBCarpentry/R-repro-pub" class="external-link">R-Repro-pub</a>”
@@ -864,8 +864,8 @@ repository.</li>
   "url": "https://carpentries-incubator.github.io/reproducible-publications-quarto/04-projects-rstudio.html",
   "identifier": "https://carpentries-incubator.github.io/reproducible-publications-quarto/04-projects-rstudio.html",
   "dateCreated": "2021-12-01",
-  "dateModified": "2025-07-22",
-  "datePublished": "2025-11-21"
+  "dateModified": "2025-11-24",
+  "datePublished": "2025-11-24"
 }
 
   </script><script>
