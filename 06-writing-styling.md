@@ -9,7 +9,6 @@ exercises: 10
 - Learn how to enable the visual editor.
 - Get familiar with its basic functionalities.
 - Apply formatting and styling using the visual editor.
-- Learn how to add inline code to your qdm document.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
