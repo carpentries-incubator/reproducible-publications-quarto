@@ -11,7 +11,6 @@ exercises: 5
 - Learn about the structure of a quarto document.
 - Learn how a quarto document works.
 - Learn how to render a .qmd file into an output format.
-- Learn how to start a Quarto document in RStudio.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
