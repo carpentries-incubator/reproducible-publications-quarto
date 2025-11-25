@@ -67,21 +67,14 @@ scripts. Let's discuss three of those common stress points:
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Discussion
+## Let's discuss!
 
 To what extent do these stress points affect your research projects? Are there additional issues that you've encountered that slow down or derail your work due to issues with project management?
 
-
-::::::::::::::::::::::::::::::::::::::::::::::::::
-
-:::::::::::::::::::::::::::::::::::::::  challenge
-
-## Discussion: Antidotes
-
 What are some practices you implement to keep your project materials organized?
 
-
 ::::::::::::::::::::::::::::::::::::::::::::::::::
+
 
 ### Antidotes
 
@@ -126,11 +119,11 @@ For the project we're working on today, we used the following setup for folders 
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Challenge 1: Take a few minutes to look through the workshop project files
+## Take a few minutes to look through the workshop project files
 
 Please take some time to look through the project files. Either the screenshot above or you may browse the files on GitHub at \<<https://github.com/UCSBCarpentry/Quarto-Project-Example>\>. What do each of the directories (folders) contain? What is their purpose?
 
-See the solution drop-down for an explanation of each directory's contents.
+Please take a look at the solution drop-down for an explanation of each directory's contents.
 
 :::::::::::::::  solution
 
@@ -188,7 +181,7 @@ Adapted from <https://datacarpentry.org/rr-organization1/01-file-naming/index.ht
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Challenge 2: File name syntax
+## File name syntax
 
 Given the filename `CC-101_1_data.csv` and `2022-01-01_data_analyses.R`, why does it make sense to use both `-` and `_` as delimiters/separators?
 
@@ -231,7 +224,7 @@ In the complete path example, you can see that the code is not going to be porta
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Challenge 3: Relative Paths
+## Relative Paths
 
 What would be the relative path needed to refer to the file `bronars_simulation_data.csv` (located in the raw directory) from `R-repro-pub.Rproj` (root directory)? And what about the inverse relative path?
 
@@ -254,7 +247,7 @@ What would be the relative path needed to refer to the file `bronars_simulation_
  
 We’ve just discussed how using relative paths is a better coding practice, as it helps ensure our code works consistently across different systems. However, relative paths can still be quite confusing to deal with, especially when you have many sub-directories in your project. One way to make things a bit easier on ourselves is to ensure the part that's *relative* to what we're referencing stays the same.
 
-This is where using the `RStudio Project` can help. When you create a Project in RStudio, in the background, RStudio will automatically create a "root" folder and set it as your working directory in R. Since in R relative paths are relative to your working directory, this will ease referring to external input or output files (data, images, plots, ...) consistently across your project by always having your relative paths relative to the top level folder and help to encapsulate your work within this folder. So with an Rproject setup, the relative path in the previous example will now be:
+This is where using the `RStudio Project` can help. When you create a Project in RStudio, in the background, RStudio will automatically create a "root" folder and set it as your working directory in R. Since in R relative paths are relative to your working directory, this will ease referring to external input or output files (data, images, plots, ...) consistently across your project by always having your relative paths relative to the top level folder and help to encapsulate your work within this folder. So with an R project setup, the relative path in the previous example will now be:
 
 ```
 df <- read.csv("data/foodchoice_budgetlines.csv")
@@ -264,7 +257,7 @@ In the end, this means you can move this folder around on your machine or to ano
 
 #### **Treat data as read-only**
 
-This is the most important goal of setting up a project. Data collection is typically time-consuming and/or expensive. Working with them interactively (e.g., in Excel or R) and allowing them to be modified means you are never sure where the data came from or how they have been modified since collection. Therefore, treating your data as "read-only" is a good idea. However, in many cases, your data will be "dirty": it will need significant preprocessing to get into a format R (or any other programming language) will find helpful. Storing these cleaning scripts in a separate folder (e.g., code) and creating a second data folder to hold the "cleaned" datasets can help prevent confusion between the two sets. You should have separate folders for each: raw data, code, and output data/analyses. You wouldn't mix your clean laundry with your dirty laundry, right?
+This is the most important goal of setting up a project. Data collection is typically time-consuming and/or expensive. Working with them interactively (e.g., in Excel or R) and allowing them to be modified means you are never sure where the data came from or how they have been modified since collection. Therefore, treating your data as "read-only" is a good idea. However, in many cases, your data will be "dirty": it will need significant preprocessing to get into a format that R (or any other programming language) will find helpful. Storing these cleaning scripts in a separate folder (e.g., code) and creating a second data folder to hold the "cleaned" datasets can help prevent confusion between the two sets. You should have separate folders for each: raw data, code, and output data/analyses. You wouldn't mix your clean laundry with your dirty laundry, right?
 
 #### **Treat generated output as disposable**
 
@@ -323,7 +316,7 @@ Perhaps confusing, but we have an additional "type" of project in the RStudio ec
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Challenge 4: R Project in "root" folder
+## R Project in "root" folder
 
 `.Rproj` files must be at the top level of the root directory of your project folder/directory. What is the root directory again? Tip: Look back at the relative paths intro.  
 
