@@ -7,7 +7,7 @@ exercises: 5
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Understand key functions in Rstudio.
+- Understand key functions in RStudio.
 - Learn about the structure of a Quarto file.
 - Understand the workflow of a Quarto file.
 
@@ -16,7 +16,7 @@ exercises: 5
 :::::::::::::::::::::::::::::::::::::::: questions
 
 - How do you find your way around RStudio?
-- How do you start a Quarto document in Rstudio?
+- How do you start a Quarto document in RStudio?
 - How is a Quarto document configured, and how do I work with it?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -27,13 +27,13 @@ Throughout this lesson, we're going to teach you some of the fundamentals of
 using Quarto as part of your RStudio workflow.
 
 We'll be using RStudio: a free, open-source R Integrated Development Environment
-(IDE). It provides a built-in editor, works on all platforms
+(IDE). It provides a built-in editor and works on all platforms
 (including on servers), and provides many advantages, such as integration with
 version control and project management.
 
-This lesson assumes you already have a basic understanding of R and RStudio but
-we will do a brief tour of the IDE, review R projects, and the best practices for
-organizing your work, and how to install or check packages you need to follow along.
+This lesson assumes you already have a basic understanding of R and RStudio, but
+we will do a brief tour of the IDE, review R projects, and discuss the best practices for
+organizing your work, and how to install or check packages, you need to follow along.
 
 Now, let's open RStudio. After passing authentication, choose `RStudio`. If you want to follow along using your local RStudio, make sure you use IDE version RStudio v2023.06 or later and that it is running [Quarto version 1.4 or above](https://quarto.org/docs/download/release.html). If you need to check that, for RStudio, choose `Help` and `About RStudio`. For the Quarto version checking, type in `packageVersion("quarto")` on the console.
 
@@ -57,7 +57,7 @@ open in the top left.
 Packages are the fundamental units of reproducible R code. They include reusable R functions, the documentation that describes how to use them, and sample data. They are collections of R functions, data, and compiled code in a well-defined format. The directory where packages are stored is called the library.
 It is possible to add functions to R by writing a package or by obtaining a
 package written by someone else. As of this writing, there are over 10,000
-Packages are available on CRAN (the comprehensive R archive network). R and RStudio
+Packages are available on CRAN (the Comprehensive R Archive Network). R and RStudio
 have functionality for managing packages:
 
 - You can *install packages* by typing `install.packages("packagename")`, where `packagename` is the package name, in quotes.
@@ -70,7 +70,7 @@ Packages can also be viewed, loaded, and detached in the Packages tab of the
 lower right panel in RStudio. Clicking on this tab will display all of the installed
 packages with a checkbox next to them. If the box next to a package name is
 checked, the package is loaded; if it is empty, the package is not loaded.
-Click an empty box to load that package and click a checked box to detach that
+Click an empty box to load that package, and click a checked box to detach that
 package.
 
 Packages can be installed and updated from the Package tab with the *Install* and
@@ -78,7 +78,7 @@ Packages can be installed and updated from the Package tab with the *Install* an
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## CHALLENGE 1 - Checking for Installed Packages
+## Checking for Installed Packages
 
 Which command would you use to check for packages ready for use?
 
@@ -115,7 +115,7 @@ You may name your Quarto document "My-first-qmd".
 New Quarto files will have a generic template unless you click the
 "Create Empty Document" in the bottom left-hand corner of the dialog box.
 
-We will keep all pre-selected options: HTML as the output, knitr engine and the visual editor. The output might be changed at any time, and we can easily switch between the visual and the source editor. Knitr will be the engine used to execute the R codes and render the document in Rstudio.
+We will keep all pre-selected options: HTML as the output format, the knitr engine, and the visual editor. The output might be changed at any time, and we can easily switch between the visual and the source editor. Knitr will be the engine for executing the R code and rendering the document in RStudio.
 
 If you see this default text, you're good to go:
 
@@ -123,19 +123,19 @@ If you see this default text, you're good to go:
 
 ### Visual Editor vs. Source Editor
 
-Remember that in the settings, we chose to use the visual editor? RStudio released a new major update to their IDE in January 2020, which includes a new "visual editor" to supplement their original editor (which we will call the source editor) for authoring with markdown syntax. The visual editor follows the WYSIWYG "what you see is what you get" approach similar to Word or Google Docs that lets you choose styling options from the menu (before you had to have either the markdown code memorized or look it up for each of your styling choices). Another major benefit is that the new editor renders the styling in real-time so you can preview your paper before rendering it to your output format.
+Remember that in the settings, we chose to use the visual editor? RStudio released a new major update to their IDE in January 2020, which includes a new "visual editor" to supplement their original editor (which we will call the source editor) for authoring with markdown syntax. The visual editor follows the WYSIWYG "what you see is what you get" approach, similar to Word or Google Docs, that lets you choose styling options from the menu (before you had to have either the markdown code memorized or look it up for each of your styling choices). Another significant benefit is that the new editor renders the styling in real-time, so you can preview your paper before rendering it to your output format.
 
 #### Source Editor
 
-If you toggle the source button, you will display your quarto document in the "source editor" mode. Notice the symbols scattered throughout the text (#, \*, \<>). Those are examples of markdown syntax, an easy and quick, human-readable markup language for document styling.
+If you toggle the source button, your Quarto document will be displayed in "source editor" mode. Notice the symbols scattered throughout the text (#, \*, \<>). Those are examples of Markdown syntax, an easy, quick, human-readable markup language for document styling.
 
 ![](fig/02-qmd-source.PNG){alt='Add image source editor'}
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## CHALLENGE 2 - Formatting with Symbols (optional)
+## Formatting with Symbols (optional)
 
-Certain symbols are used to denote formatting that should happen to the text (after rendering it). Before that, these symbols will show up seemingly "randomly" throughout the text and don't contribute to the narrative in a logical way. In the template qmd document, there are three types of such symbols (`##, **, <>`). Each symbol represents different formatting (think of the text formatting buttons you use in Word). Can you deduce how these symbols format the surrounding text from the surrounding text?
+Certain symbols are used to denote formatting that should happen to the text (after rendering it). Before that, these symbols will show up seemingly "randomly" throughout the text and don't logically contribute to the narrative. In the template QMD document, there are three types of such symbols (`##, **, <>`). Each symbol represents a different formatting (think of the text formatting buttons you use in Word). Can you deduce how these symbols format the surrounding text from the surrounding text?
 
 :::::::::::::::  solution
 
@@ -161,7 +161,7 @@ familiar with markdown syntax as it
 increases your ability to format and style your paper without relying on the
 visual editor options.
 
-Note that both the visual and the source editors offer the option to display an outline of your document ![](https://user-images.githubusercontent.com/63265343/192625580-ad6bddc1-98b7-437e-8aaf-2190651d456b.png){alt='image'} which make it easier to navigate long documents.
+Note that both the visual and the source editors offer the option to display an outline of your document ![](https://user-images.githubusercontent.com/63265343/192625580-ad6bddc1-98b7-437e-8aaf-2190651d456b.png){alt='image'} which makes it easier to navigate long documents.
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
