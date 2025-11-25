@@ -8,8 +8,8 @@ start: yes
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Learn how to insert and render run-able chunks of code to integrate into your report.
-- Apply labels and caption to code chunks.
+- Learn how to insert and render runnable chunks of code to integrate into your report.
+- Apply labels and captions to code chunks.
 - Learn the syntax and how to add in-line code.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -19,19 +19,19 @@ start: yes
 - How do you render code in Quarto documents?
 - How do you apply code chunk options at the document level to customize your code?
 - How do you label and caption code chunks?
-- What is inline code and when should it be used?
+- What is inline code, and when should it be used?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Rendering Code in Quarto Documents
 
-In the previous episode, we just saw how to run our code in our code chunks to test that it works and to see a preview of the code output that will render in our HTML document, but to *actually* render the final, we need to use the Render button as with. Using the `Render` button with code chunks is a two-step process - first, the code is run (all code chunks will run automatically). Second, (if there are no code errors) the document of choice will render for our whole Quarto document.
+In the previous episode, we saw how to run our code in code chunks to test that it works and to preview the code output that will render in our HTML document, but to *actually* render the final version, we need to use the Render button. Using the `Render` button with code chunks is a two-step process - first, the code is run (all code chunks will run automatically). Second, (if there are no code errors), the document of choice will render for our whole Quarto document.
 
 :::::::::::::::::::::::::::::::::::::::  checklist
 
 ## Time to Render!
 
-Now, let's Render the Quarto file and see how our code output looks on the final HTML page.
+Now, let's render the Quarto file and see how our code output looks on the final HTML page.
 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -40,11 +40,11 @@ Wait... what's all that output in our document? We don't want that in our paper!
 
 ![](fig/07-HR-output-no-options.PNG){alt='Heart rate code no options for code chunk' .image-with-shadow}
 
-This happens because the output from the running code (messages, results, warnings, etc.) gets added to the Quarto document instead of being printed to the console. Let's see about adjusting the output to make it look better with code chunk rendering options.
+This happens because the output from the running code (messages, results, warnings, etc.) gets added to the Quarto document instead of being printed to the console. Let's see about adjusting the output to look better using code chunk rendering options.
 
 ## Code Chunk Options
 
-There are over 50 different code chunk options!!! Obviously, we will not go over all of them, but they fall into several larger categories, including code evaluation, text output, code style, cache options, plot output, and animation. We'll discuss a few options for code evaluation, text output, and plot output.
+There are over 50 different code chunk options!!! Obviously, we will not go over all of them, but they fall into several broader categories: code evaluation, text output, code style, cache options, plot output, and animation. We'll discuss a few options for code evaluation, text output, and plot output.
 
 Code chunk options in Quarto are added within code chunks and always have the following format:
 
@@ -54,7 +54,7 @@ Code chunk options in Quarto are added within code chunks and always have the fo
 
 **include** = (logical) whether to include the chunk output in the output document (defaults to TRUE).  
 **eval** = (logical or numeric) TRUE/FALSE to evaluate (or not) or a numeric value like c(1,3) (only evaluate expressions 1 and 3).  
-**echo** =  (logical or numeric - following the same rules as above) whether to display source code or not.  
+**echo** =  (logical or numeric - following the same rules as above), whether to display source code or not.  
 **results** = (logical or character) text output of the code can be hidden (hide or FALSE) or delineated in a certain way (default 'markup').  
 **warning** = (logical) whether to display the warnings in the output (default TRUE). FALSE will output warnings to the console only.  
 **message** = (logical) whether or not to display messages that appear when running the code (default TRUE).
@@ -76,7 +76,7 @@ Now, we are seeing what we would like: a figure without other output to show in 
 
 ## CHALLENGE 1 - Rendering Codes (Optional)
 
-Given the following options, How will some hypothetical code render? Try it out with the code we just added to visualize the styling change.
+Given the following options, how will some hypothetical code render? Try it out with the code we just added to visualize the styling change.
 
 ````
 ```{r}
@@ -88,9 +88,9 @@ Given the following options, How will some hypothetical code render? Try it out 
 
 ## SOLUTION
 
-The expressions in the code chunk will be evaluated, but the outputted figures/plots will not be included in the rendered document.  
+The expressions in the code chunk will be evaluated, but the output figures/plots will not be included in the rendered document.  
 When might you want to use this?  
-If you need to calculate some value or do something on your dataset for a further calculation or plot, the output is not important to include in your paper narrative.
+If you need to calculate some value or do something on your dataset for a further calculation or plot, the output is not essential to include in your paper narrative.
 
 
 
@@ -118,7 +118,7 @@ Some things to keep in mind
 - The chunk label syntax is always `#| label: chunk-label` with `chunk-label` replaced with your own text
 - The chunk label has to be unique (i.e., you can't use the same name for multiple chunks)
 
-We'll see in a bit where this code chunk label comes in handy. But, for now, let's go back and give our first code chunk a name:
+We'll see where this code chunk label comes in handy. But, for now, let's go back and give our first code chunk a name:
 
 `#| label: fig-heartrate`
 
@@ -177,7 +177,7 @@ Set the option `fig-cap` to equal the text in double quotes.
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
-Other options that change how a plot or figure appears often use the syntax `fig-xxx` similar to `fig-cap` Some other useful plot/figure code options include (From [Yihui Xie's page](https://yihui.org/knitr/options/#plots) ):
+Other options that change how a plot or figure appears often use the syntax `fig-xxx`, similar to `fig-cap`. Some other useful plot/figure code options include (From [Yihui Xie's page](https://yihui.org/knitr/options/#plots) ):
 
 - `fig-width`, `fig-height`: (both are 7; numeric) Width and height of the plot (in inches), to be used in the graphics device.
 - `out-width`, `out-height`: (NULL; character) Width and height of the plot in the output document, which can be different with its physical fig-width and fig-height, i.e., plots can be scaled in the output document.
@@ -233,23 +233,23 @@ We would get an error because we haven't loaded tidyverse which is required to r
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-At this point, we could go back through our R scripts and comment out (or delete) the beginning sections where we load the data and libraries (you will see this is already done in most of the scripts in the code folder). You can imagine that the more code chunks you have, the more time taking this step would save. Bonus: This also works to load the data before it is called in the inline code as we will see below.
+At this point, we could go back through our R scripts and comment out (or delete) the sections at the beginning that load the data and libraries (you will see this is already done in most of the scripts in the code folder). You can imagine that the more code chunks you have, the more time this step would save. Bonus: This also works to load the data before it is called in the inline code, as we will see below.
 
 ## Adding In-line Code
 
 We have already learned how to create, run, and customize code chunks, but what if you only need to make a quick calculation, and adding a code chunk seems a little overkill?
 
-Sometimes, you just need to do a quick calculation to add to your narrative - such as a count of total observations in your data or the mean of one of your variables. In those cases, it may not be worth setting up a code chunk to calculate those values, so Quarto also provides the ability to use inline code.
+Sometimes, you need to do a quick calculation to add to your narrative - such as a count of total observations in your data or the mean of one of your variables. In those cases, it may not be worth setting up a code chunk to calculate those values, so Quarto also provides the ability to use inline code.
 
-If that is the case, you can include `r code` directly in the text portion of your document by enclosing it between single backticks. Say you are discussing some of the summary statistics in your manuscript, Quarto makes this possible through HTML/LaTeX inline code, which allows you to calculate simple expressions integrated into your narrative. Inline code lets you insert \`r code\`\\ into your document to dynamically update portions of your text. In other words, if your data set changes, the code will automatically update the specified calculation.
+If that is the case, you can include `r code` directly in the text portion of your document by enclosing it between single backticks. Say you are discussing some of the summary statistics in your manuscript. Quarto makes this possible through HTML/LaTeX inline code, which lets you calculate simple expressions directly in your narrative. Inline code lets you insert \`r code\`\\ into your document to update portions of your text dynamically. In other words, if your data set changes, the code will automatically update the specified calculation.
 
-This can be helpful when referring to specific variables in your data. For example, you should include numbers that are derived from the data as code, not as numbers.
+This can be helpful when referring to specific variables in your data. For example, you should include data-derived numbers as code, not as numbers.
 
-Thus, rather than writing "The CSV file contains choice consistency data for 10.000 simulated participants" **(Example 7A)**, replace the static number with a bit of code that, when evaluated, gives you a dynamic number if anything changes on your dataset. Note that there is not an insert option to do this from the menu in the visual editor, so we need to insert inline code manually, for example:
+Thus, rather than writing "The CSV file contains choice consistency data for 10.000 simulated participants" **(Example 7A)**, replace the static number with a bit of code that, when evaluated, gives you a dynamic number if anything changes in your dataset. Note that there is no insert option to do this from the menu in the visual editor, so we need to insert inline code manually, for example:
 
 The CSV file contains choice consistency data for \`r nrow(bronars\_simulation\_data)\`\\ simulated participants.
 
-When you render, you might get an error. Any idea why? That is because we need to make sure to import the dataset we are referring to before the inline code can work. Let's add the following to our chunk at the beginning of the document where we loaded our other data:
+When you render, you might get an error. Do you have any idea why? That is because we need to import the dataset we are referring to before the inline code can run. Let's add the following to our chunk at the beginning of the document where we loaded our other data:
 
 ```r
 bronars_simulation_data <- read_csv("../data/raw/bronars_simulation_data.csv")
@@ -289,7 +289,7 @@ Tip: we will need to use a `dataset$variable` syntax!
 
 ## Important Note:
 
-Make sure the file you are calling is in the right subdirectory and your working directory is set appropriately.
+Make sure the file you are calling is in the correct subdirectory, and your working directory is set appropriately.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -297,7 +297,7 @@ Make sure the file you are calling is in the right subdirectory and your working
 
 ## More on inline codes:
 
-Quarto will always display the results of the inline code but not the code. Inline expressions do not take knitr options.
+Quarto will always display the results of the inline code, but not the code. Inline expressions do not take knitr options.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
