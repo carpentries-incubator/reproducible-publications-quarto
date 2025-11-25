@@ -408,7 +408,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Navigating RStudio and Quarto Documents</h1>
-        <p>Last updated on 2025-07-22 |
+        <p>Last updated on 2025-11-25 |
 
         <a href="https://github.com/carpentries-incubator/reproducible-publications-quarto/edit/main/episodes/03-basic-rstudio.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -430,7 +430,7 @@
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul><li>How do you find your way around RStudio?</li>
-<li>How do you start a Quarto document in Rstudio?</li>
+<li>How do you start a Quarto document in RStudio?</li>
 <li>How is a Quarto document configured, and how do I work with it?</li>
 </ul></div>
 </div>
@@ -439,7 +439,7 @@
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
-<ul><li>Understand key functions in Rstudio.</li>
+<ul><li>Understand key functions in RStudio.</li>
 <li>Learn about the structure of a Quarto file.</li>
 <li>Understand the workflow of a Quarto file.</li>
 </ul></div>
@@ -451,13 +451,13 @@
 <hr class="half-width"><p>Throughout this lesson, we’re going to teach you some of the
 fundamentals of using Quarto as part of your RStudio workflow.</p>
 <p>We’ll be using RStudio: a free, open-source R Integrated Development
-Environment (IDE). It provides a built-in editor, works on all platforms
-(including on servers), and provides many advantages, such as
+Environment (IDE). It provides a built-in editor and works on all
+platforms (including on servers), and provides many advantages, such as
 integration with version control and project management.</p>
 <p>This lesson assumes you already have a basic understanding of R and
-RStudio but we will do a brief tour of the IDE, review R projects, and
-the best practices for organizing your work, and how to install or check
-packages you need to follow along.</p>
+RStudio, but we will do a brief tour of the IDE, review R projects, and
+discuss the best practices for organizing your work, and how to install
+or check packages, you need to follow along.</p>
 <p>Now, let’s open RStudio. After passing authentication, choose
 <code>RStudio</code>. If you want to follow along using your local
 RStudio, make sure you use IDE version RStudio v2023.06 or later and
@@ -482,7 +482,7 @@ and compiled code in a well-defined format. The directory where packages
 are stored is called the library. It is possible to add functions to R
 by writing a package or by obtaining a package written by someone else.
 As of this writing, there are over 10,000 Packages are available on CRAN
-(the comprehensive R archive network). R and RStudio have functionality
+(the Comprehensive R Archive Network). R and RStudio have functionality
 for managing packages:</p>
 <ul><li>You can <em>install packages</em> by typing
 <code>install.packages("packagename")</code>, where
@@ -504,20 +504,19 @@ of the lower right panel in RStudio. Clicking on this tab will display
 all of the installed packages with a checkbox next to them. If the box
 next to a package name is checked, the package is loaded; if it is
 empty, the package is not loaded. Click an empty box to load that
-package and click a checked box to detach that package.</p>
+package, and click a checked box to detach that package.</p>
 <p>Packages can be installed and updated from the Package tab with the
 <em>Install</em> and <em>Update</em> buttons at the top of the tab. We
 have asked you to install a few packages prior to the workshop following
 the setup instructions using the <code>install.packages()</code>
 command. Let’s now make sure you have all of them good to go.</p>
-<div id="challenge-1---checking-for-installed-packages" class="callout challenge">
+<div id="checking-for-installed-packages" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
-<div id="challenge-1---checking-for-installed-packages" class="callout-inner">
-<h3 class="callout-title">CHALLENGE 1 - Checking for Installed
-Packages</h3>
+<div id="checking-for-installed-packages" class="callout-inner">
+<h3 class="callout-title">Checking for Installed Packages</h3>
 <div class="callout-content">
 <p>Which command would you use to check for packages ready for use?</p>
 </div>
@@ -561,11 +560,11 @@ workshop?</h3>
 <p>New Quarto files will have a generic template unless you click the
 “Create Empty Document” in the bottom left-hand corner of the dialog
 box.</p>
-<p>We will keep all pre-selected options: HTML as the output, knitr
-engine and the visual editor. The output might be changed at any time,
-and we can easily switch between the visual and the source editor. Knitr
-will be the engine used to execute the R codes and render the document
-in Rstudio.</p>
+<p>We will keep all pre-selected options: HTML as the output format, the
+knitr engine, and the visual editor. The output might be changed at any
+time, and we can easily switch between the visual and the source editor.
+Knitr will be the engine for executing the R code and rendering the
+document in RStudio.</p>
 <p>If you see this default text, you’re good to go:</p>
 <figure><img src="../fig/02-qmd-new-template.PNG" alt=".qmd new file generic template" class="figure mx-auto d-block"></figure><div class="section level3">
 <h3 id="visual-editor-vs--source-editor">Visual Editor vs. Source Editor<a class="anchor" aria-label="anchor" href="#visual-editor-vs--source-editor"></a></h3>
@@ -574,36 +573,35 @@ RStudio released a new major update to their IDE in January 2020, which
 includes a new “visual editor” to supplement their original editor
 (which we will call the source editor) for authoring with markdown
 syntax. The visual editor follows the WYSIWYG “what you see is what you
-get” approach similar to Word or Google Docs that lets you choose
+get” approach, similar to Word or Google Docs, that lets you choose
 styling options from the menu (before you had to have either the
 markdown code memorized or look it up for each of your styling choices).
-Another major benefit is that the new editor renders the styling in
-real-time so you can preview your paper before rendering it to your
+Another significant benefit is that the new editor renders the styling
+in real-time, so you can preview your paper before rendering it to your
 output format.</p>
 <div class="section level4">
 <h4 id="source-editor">Source Editor<a class="anchor" aria-label="anchor" href="#source-editor"></a></h4>
-<p>If you toggle the source button, you will display your quarto
-document in the “source editor” mode. Notice the symbols scattered
-throughout the text (#, *, &lt;&gt;). Those are examples of markdown
-syntax, an easy and quick, human-readable markup language for document
+<p>If you toggle the source button, your Quarto document will be
+displayed in “source editor” mode. Notice the symbols scattered
+throughout the text (#, *, &lt;&gt;). Those are examples of Markdown
+syntax, an easy, quick, human-readable markup language for document
 styling.</p>
-<figure><img src="../fig/02-qmd-source.PNG" alt="Add image source editor" class="figure mx-auto d-block"></figure><div id="challenge-2---formatting-with-symbols-optional" class="callout challenge">
+<figure><img src="../fig/02-qmd-source.PNG" alt="Add image source editor" class="figure mx-auto d-block"></figure><div id="formatting-with-symbols-optional" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
-<div id="challenge-2---formatting-with-symbols-optional" class="callout-inner">
-<h3 class="callout-title">CHALLENGE 2 - Formatting with Symbols
-(optional)</h3>
+<div id="formatting-with-symbols-optional" class="callout-inner">
+<h3 class="callout-title">Formatting with Symbols (optional)</h3>
 <div class="callout-content">
 <p>Certain symbols are used to denote formatting that should happen to
 the text (after rendering it). Before that, these symbols will show up
-seemingly “randomly” throughout the text and don’t contribute to the
-narrative in a logical way. In the template qmd document, there are
-three types of such symbols (<code>##, **, &lt;&gt;</code>). Each symbol
-represents different formatting (think of the text formatting buttons
-you use in Word). Can you deduce how these symbols format the
-surrounding text from the surrounding text?</p>
+seemingly “randomly” throughout the text and don’t logically contribute
+to the narrative. In the template QMD document, there are three types of
+such symbols (<code>##, **, &lt;&gt;</code>). Each symbol represents a
+different formatting (think of the text formatting buttons you use in
+Word). Can you deduce how these symbols format the surrounding text from
+the surrounding text?</p>
 </div>
 </div>
 </div>
@@ -641,7 +639,7 @@ you to become familiar with markdown syntax as it increases your ability
 to format and style your paper without relying on the visual editor
 options.</p>
 <p>Note that both the visual and the source editors offer the option to
-display an outline of your document <img src="https://user-images.githubusercontent.com/63265343/192625580-ad6bddc1-98b7-437e-8aaf-2190651d456b.png" alt="image" class="figure"> which make it easier to navigate long documents.</p>
+display an outline of your document <img src="https://user-images.githubusercontent.com/63265343/192625580-ad6bddc1-98b7-437e-8aaf-2190651d456b.png" alt="image" class="figure"> which makes it easier to navigate long documents.</p>
 <div id="tip-resources-to-learn-more-about-quarto" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -729,7 +727,7 @@ and then on to editing and styling!</p>
   "url": "https://carpentries-incubator.github.io/reproducible-publications-quarto/instructor/03-basic-rstudio.html",
   "identifier": "https://carpentries-incubator.github.io/reproducible-publications-quarto/instructor/03-basic-rstudio.html",
   "dateCreated": "2021-12-01",
-  "dateModified": "2025-07-22",
+  "dateModified": "2025-11-25",
   "datePublished": "2025-11-25"
 }
 
