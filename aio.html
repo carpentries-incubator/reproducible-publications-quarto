@@ -1619,7 +1619,7 @@ command. Let’s now make sure you have all of them good to go.</p>
   SOLUTION
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>To see what packages are installed, use the
 <code>installed.packages()</code> command. This will return a matrix
@@ -1706,7 +1706,7 @@ the surrounding text?</p>
   SOLUTION
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p><code>##</code> is a heading, <code>**</code> is to bold enclosed
 text, and <code>&lt;&gt;</code> is for hyperlinks. Don’t worry about
@@ -1873,11 +1873,10 @@ session,” if you want it to appear in a new RStudio window.</p>
 <div class="section level4">
 <h4 id="method-2">Method #2<a class="anchor" aria-label="anchor" href="#method-2"></a>
 </h4>
-<figure><img src="fig/05-existing-directory.png" class="image-with-shadow figure mx-auto d-block" alt="existing project"></figure><p>We won’t take the time to cover this here, but if you’ve already
-started a Quarto project WITHOUT version control, you can add it
-retrospectively. You can also add existing R files to a project and set
-up version control if you’ve done neither. To see a tutorial of this
-process, please see <a href="https://swcarpentry.github.io/git-novice/14-supplemental-rstudio.html" class="external-link">episode
+<figure><img src="fig/05-existing-directory.png" class="image-with-shadow figure mx-auto d-block" alt="existing project"></figure><p>We won’t cover this here, but if you’ve already started a Quarto
+project WITHOUT version control, you can add it retrospectively. You can
+also add existing R files to a project and set up version control if
+you’ve done neither. To see a tutorial of this process, please see <a href="https://swcarpentry.github.io/git-novice/14-supplemental-rstudio.html" class="external-link">episode
 14 “Using Git from RStudio” in Version Control with Git</a>.</p>
 <p>This is by far the most labor-intensive way to do it, so remember to
 add version control at the beginning of any new project.</p>
@@ -1922,9 +1921,10 @@ your GitHub account or create one if you have not already.</p>
 </div>
 </div>
 </div>
-<figure><img src="fig/05-github.PNG" class="image-with-shadow figure mx-auto d-block" alt="GitHub"></figure><p>The two main sections are files and directories, and the README,
-which should contain a narrative description of the project.</p>
-<p>We are each going to make a copy of this repository to use for this
+<p>The two main sections of the repository are files and directories,
+along with the README, which should contain a narrative description of
+the project.</p>
+<figure><img src="fig/05-github.PNG" class="image-with-shadow figure mx-auto d-block" alt="GitHub"></figure><p>We are each going to make a copy of this repository to use for this
 workshop. To do so, we will do what’s called “forking” on GitHub. A Fork
 is a copy of a repository that you get to experiment with without
 disrupting the original project.</p>
@@ -1995,187 +1995,9 @@ should be able to open our project from GitHub in RStudio.</p>
 </div>
 </div>
 </div>
-</div>
-</div>
-</section><section><h2 class="section-heading" id="using-version-control-in-rstudio">Using Version Control in RStudio<a class="anchor" aria-label="anchor" href="#using-version-control-in-rstudio"></a>
-</h2>
-<hr class="half-width">
-<p>There are two places we can interact with Git in the RStudio
-interface.</p>
-<ol style="list-style-type: decimal">
-<li>Menu bar (Tools menu) <img src="fig/05-git-top-menu.PNG" class="image-with-shadow figure" alt="Git menu bar"><br>
-</li>
-<li>Environment/History pane <img src="fig/05-git-environment-window.PNG" class="image-with-shadow figure" alt="git environment panel">
-</li>
-</ol>
-<p>Ok, but what do all the options mean? We won’t go through them all,
-but here are the basics to get started versioning your project.</p>
-<div class="section level3">
-<h3 id="git-workflow">Git Workflow<a class="anchor" aria-label="anchor" href="#git-workflow"></a>
-</h3>
-<p>The most simple workflow for version control (working on your
-computer only) is referred to as “add” and “commit”:</p>
-<p>But what do those words even mean?</p>
-<p><strong>Add:</strong> Choose a file or files to take a “snapshot” of.
-What files do you want to add to your next version?</p>
-<p><strong>Commit:</strong> Take a “snapshot” of a selected version of
-your project. The snapshot will <em>only</em> include the files you
-“added”, typically only files that you’ve edited since your last
-commit.</p>
-<p>You may have just a few commits in a single work session or many
-commits.</p>
-<p>When you commit, you add a “commit message,” a.k .a. a short line of
-text (recommended 50 characters or less) that describes the changes that
-were made to the file(s) you added. This helps keep your versions
-organized and makes it easier to remember what you did or restore your
-work to exactly the version needed if you make a mistake or want to
-implement a change.</p>
-<figure><img src="fig/05-git-add-commit.svg" alt="git add commit workflow" class="figure mx-auto d-block"></figure><div class="section level4">
-<h4 id="git-workflow-with-github">Git Workflow with GitHub<a class="anchor" aria-label="anchor" href="#git-workflow-with-github"></a>
-</h4>
-<p>If we are saving our work to a version control hosting cloud platform
-such as GitHub, our workflow gets a bit more complex, we add a “pull”
-and “push” step at the beginning and end of a work session.</p>
-<p><code>Pull &gt; add &gt; commit &gt; push</code></p>
-<p><strong>Pull:</strong> <em>download</em> the most recent version of
-the repository <em>from</em> GitHub <em>to</em> your local computer.</p>
-<p><strong>Push:</strong> <em>upload</em> the most recent version of the
-repository <em>to</em> GitHub <em>from</em> your local computer.</p>
-<p>Put a pin in pulling and pushing for now. For the time being, as we
-edit our paper, we will just stick to adding and committing. In the end,
-we’ll see how to use push to GitHub, and you can experiment with pulling
-later on.</p>
-</div>
-</div>
-<div class="section level3">
-<h3 id="tips-for-working-with-git">Tips for working with Git<a class="anchor" aria-label="anchor" href="#tips-for-working-with-git"></a>
-</h3>
-<ul>
-<li>Commit frequently; each commit should be a distinct set of edits
-that you can summarize in 50 characters or less. Don’t add a bunch of
-unrelated edits to the same commit; it makes it harder to look back
-through your “snapshots” and find the right one if you need to.</li>
-</ul>
-</div>
-</section><section><h2 class="section-heading" id="your-first-edit">Your first edit<a class="anchor" aria-label="anchor" href="#your-first-edit"></a>
-</h2>
-<hr class="half-width">
-<p>Now, let’s open up the report in this already-drafted repository. You
-will find it in the <code>report</code> directory with the filename:
-<code>DataPaper-ReproducibilityWorkshop.qmd</code>. Open it up, and we
-will make an edit to the YAML front matter of this draft report so we
-can practice using version control.</p>
-<p>In the title add “(Carpentry Workshop Version)” and make sure to save
-it.</p>
-<figure><img src="fig/05-editing.png" class="image-with-shadow figure mx-auto d-block" alt="git panel add"></figure><p>Now, in the Environment panel, toggle to the Git tab. You’ll see the
-file that was edited with a checkmark next to it. Click the check mark
-to “add”. Note that if you edited more than one file, you could choose
-any or all of the documents to “add”.</p>
-<figure><img src="fig/05-first-edit.PNG" class="image-with-shadow figure mx-auto d-block" alt="git panel add"></figure><p>Have you noticed the blue ‘M’ icon in the Git Tab before you added
-your commit message and staged your edits? Do you know what it means?
-That ‘M’ indicates tracked files that have been modified. However, there
-are other flags depending on your interactions with project files—such
-as deletions, renames, or additions. Additionally, files might be
-ignored and not tracked at all, as illustrated below.</p>
-<figure><img src="fig/05-git-icons.png" alt="git panel icons" class="figure mx-auto d-block"></figure><p>Now, click commit. A dialogue box will pop up. You’ll need to add a
-commit message to proceed. Add something about editing the title. The
-difference between your files will show in the bottom panel.</p>
-<figure><img src="fig/05-rstudio-commit.png" class="image-with-shadow figure mx-auto d-block" alt="commit in RStudio"></figure><p>Hit commit, and a dialogue box will show a completed commit. Warning:
-<strong>DO NOT PUSH</strong> anything yet!</p>
-<p>Congrats! You made your first commit!</p>
-<div id="utilizing-.gitignore-files-optional" class="callout challenge">
-<div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
-</div>
-<span class="callout-header">Challenge</span>
-<div id="utilizing-.gitignore-files-optional" class="callout-inner">
-<h3 class="callout-title">Utilizing .gitignore files (Optional)</h3>
-<div class="callout-content">
-<p>a <code>.gitignore</code> file is used to signal to Git NOT to track
-versions of specific files. One instance where this is used in a data
-analysis project is with data files that are too large to be uploaded to
-GitHub.</p>
-<p>Now, there are some caveats to this, so in what situations would it
-make sense to add data to the .gitignore, and in what situations would
-it not? What else could you imagine you wouldn’t want to track in your
-research project?</p>
-</div>
-</div>
-</div>
-<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
-  <h4 class="accordion-header" id="headingSolution2">
-  Solution:
-  </h4>
-</button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
-<div class="accordion-body">
-<p>Why and when would it be a good idea to add data files to the
-<code>.gitignore</code>?</p>
-<ul>
-<li>With raw data files - since they will not be modified (remember: raw
-data = read-only).</li>
-<li>With sensitive data - This should absolutely not be pushed to
-GitHub</li>
-</ul>
-<p>Why and when would it not make sense to add data files to the
-<code>.gitignore</code> so they will be available in the Git
-repository?</p>
-<ul>
-<li>pre-processed data files - these are the data files that are edited
-- processed from the raw data</li>
-<li>small data files - may not make much of a difference whether they
-are tracked or not</li>
-<li>the first time you add data files - You can’t push data files to
-GitHub unless they are tracked. So, if you want your data on GitHub but
-don’t want to track it, you must make sure you push once and then add
-the file to the .gitignore file.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div id="challenge-1-optional-add-the-data-filesdirectories-to-.gitignore" class="callout challenge">
-<div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
-</div>
-<span class="callout-header">Challenge</span>
-<div id="challenge-1-optional-add-the-data-filesdirectories-to-.gitignore" class="callout-inner">
-<h3 class="callout-title">Challenge 1 (optional): Add the data
-files/directories to .gitignore</h3>
-<div class="callout-content">
-<p>Add the data (all of the raw data files) to the
-<code>.gitignore</code>.<br>
-Hint (1): there are two ways to do this.<br>
-Hint (2): add a forward slash <code>/</code> after directories.</p>
-</div>
-</div>
-</div>
-<div id="accordionSolution3" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
-  <h4 class="accordion-header" id="headingSolution3">
-  Solution:
-  </h4>
-</button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
-<div class="accordion-body">
-<ol style="list-style-type: decimal">
-<li>Open the .gitignore file by double-clicking on it in the file view
-pane; on a new line add <code>data/</code>. Save the file, and don’t
-forget to commit it. <img src="fig/05-gitignore-file.PNG" class="image-with-shadow figure" alt=".gitignore file">
-</li>
-<li>Click on the settings gear in the Git tab of the environment pane.
-Click on <code>gitignore</code>. On a new line, add <code>data</code>
-and click save. Don’t forget to commit the <code>.gitignore</code> file.
-<img src="fig/05-gitignore-git-pane.PNG" class="image-with-shadow figure" alt=".gitignore in git pane">
-</li>
-</ol>
-</div>
-</div>
-</div>
-</div>
+<p>We’ll continue building on these concepts, with later episodes diving
+deeper into version control workflows and more advanced GitHub
+features.</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -2194,6 +2016,8 @@ disk using RStudio.</li>
 <em>fork</em> (local copy) of the “<a href="https://github.com/UCSBCarpentry/R-repro-pub" class="external-link">R-Repro-pub</a>”
 repository.</li>
 </ul>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -4607,7 +4431,7 @@ research project?</p>
   Solution:
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Why and when would it be a good idea to add data files to the
 <code>.gitignore</code>?</p>
@@ -4657,7 +4481,7 @@ Hint2: add a forward slash <code>/</code> after directories.</p>
   Solution:
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>Open the .gitignore file by double-clicking on it in the file view
