@@ -1032,7 +1032,7 @@ each directory’s contents.</p>
   Solution:
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ul>
 <li>
@@ -1185,7 +1185,7 @@ both <code>-</code> and <code>_</code> as delimiters/separators?</p>
   Solution:
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>In <code>CC-101_1_data.csv</code>, the <code>-</code> is used as part
 of the keyword shared between several files. the <code>_</code>
@@ -1252,7 +1252,7 @@ inverse relative path?</p>
   Solution:
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p><code>R-repro-pub.Rproj</code> to
 <code>bronars_simulation_data.csv</code>
@@ -2382,7 +2382,7 @@ What options would you have?</p>
   Solution:
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>You may change the output format in the YAML to <code>docx</code>.
 Just so you know, to preview Word documents, you need to have MS Word,
@@ -3233,7 +3233,7 @@ change.</p>
   SOLUTION
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>The expressions in the code chunk will be evaluated, but the output
 figures/plots will not be included in the rendered document.<br>
@@ -3338,7 +3338,7 @@ figure and the caption will be displayed in the HTML document.</p>
   SOLUTION
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>So, you should end up with the following in your code chunk:</p>
 <pre><code>```{r}
@@ -3461,7 +3461,7 @@ libraries?</p>
   Solution:
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p>We would get an error because we haven’t loaded the tidyverse, which
 is required to read the CSV!</p>
@@ -3554,7 +3554,7 @@ code would we have to add to the following sentence?</p>
   Solution:
   </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <p>`r mean(bronars_simulation_data$violation_count)`<br>
 5.3924</p>
@@ -3870,7 +3870,7 @@ data to make your document more efficient.</li>
 </div>
 </section></section><section id="aio-10-biblio-crossref"><p>Content from <a href="10-biblio-crossref.html">Bibliography, Citations &amp; Cross-Referencing</a></p>
 <hr>
-<p>Last updated on 2025-11-24 |
+<p>Last updated on 2025-11-25 |
 
         <a href="https://github.com/carpentries-incubator/reproducible-publications-quarto/edit/main/episodes/10-biblio-crossref.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 35 minutes</p>
@@ -3885,7 +3885,7 @@ data to make your document more efficient.</li>
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>How can you insert citations to your manuscripts using RStudio’s
+<li>How can you insert citations into your manuscripts using RStudio’s
 visual editor?</li>
 <li>How can you change citation styles?</li>
 <li>What are the options to display cited and uncited bibliography?</li>
@@ -3921,11 +3921,11 @@ approach extensively in this workshop since the new visual editor has
 made this process much simpler. You can refer to our <a href="https://ucsbcarpentry.github.io/R-markdown/06-citations-bib/index.html" class="external-link">previous
 workshop on R Markdown</a> pre-visual editor for more information.</p>
 <p>The new visual editor has made citations and cross-referencing much
-easier, by offering different options for referencing various types of
+easier by offering different options for referencing various types of
 sources. Before getting into these different features, let’s first learn
-how you can call the citation window dialog on Rstudio and how to
-navigate these different options.</p>
-</section><section><h2 class="section-heading" id="calling-citation-options-on-rstudio">Calling Citation Options on Rstudio<a class="anchor" aria-label="anchor" href="#calling-citation-options-on-rstudio"></a>
+how you can call the citation window dialog in RStudio and how to
+navigate these various options.</p>
+</section><section><h2 class="section-heading" id="calling-citation-options-on-rstudio">Calling Citation Options on RStudio<a class="anchor" aria-label="anchor" href="#calling-citation-options-on-rstudio"></a>
 </h2>
 <hr class="half-width">
 <p>After placing your cursor where you want to insert the citation, you
@@ -3941,13 +3941,13 @@ reference manager installed on your computer, or even use the lookup
 feature to search for publications by DOI (Digital Object Identifier),
 Crossref, DataCite, or PubMed ID as we will explore a bit more
 shortly.</p>
-</section><section><h2 class="section-heading" id="understanding-how-rstudio-stores-and-organizes-citations">Understanding How Rstudio Stores and Organizes Citations<a class="anchor" aria-label="anchor" href="#understanding-how-rstudio-stores-and-organizes-citations"></a>
+</section><section><h2 class="section-heading" id="understanding-how-rstudio-stores-and-organizes-citations">Understanding How RStudio Stores and Organizes Citations<a class="anchor" aria-label="anchor" href="#understanding-how-rstudio-stores-and-organizes-citations"></a>
 </h2>
 <hr class="half-width">
 <p>Have you noticed that the YAML header contains “bibliography:
-references.bib”. Any idea why? Well, that’s because on our paper
-template, we have some existing citations and a
-<code>references.bib</code> file in our project folder. Rstudio
+references.bib”. Do you have any idea why? Well, that’s because on our
+paper template, we have some existing citations and a
+<code>references.bib</code> file in our project folder. RStudio
 automatically adds that to the YAML once you cite the first item in your
 manuscript. But let’s first open the references.bib file (located in
 report&gt;source on your project folder) and understand how citations
@@ -3959,72 +3959,71 @@ normally seen only with the .<code>bib</code> file extension but might
 instead use <code>.bibitex</code>. BibTeX files might hold references
 for things like research papers, articles, books, etc. The file often
 includes an author’s name, year, title, page number, and other related
-content. Each item can be edited, in case there is any metadata
+content. Each item can be edited, in case there is any metadata that is
 incorrect or missing.</p>
-<p>Most citation and reference management tools such as Refworks,
-Endnote, Mendeley and Zotero, as well as some search engines (e.g.,
-Google Scholar), most scientific databases, and our UCSB library catalog
-allow us to export citations as <a href="https://en.wikipedia.org/wiki/BibTeX" class="external-link">.bib or BibteX files</a>.
-These files are used to describe and process lists of references, mostly
-in conjunction with LaTeX documents. Each .bib file has a citation key
-or ID preceded by an <code>@</code>, which uniquely identifies each
-item. Citation keys can be customized, as we will learn in a bit, but be
-advised that your manuscript will render citations correctly only if you
-have the cited item corresponding to its exact key.</p>
+<p>Most citation and reference management tools, such as RefWorks,
+EndNote, Mendeley, and Zotero, as well as some search engines (e.g.,
+Google Scholar), most scientific databases, and our UCSB library
+catalog, allow us to export citations as <a href="https://en.wikipedia.org/wiki/BibTeX" class="external-link">.bib or BibTeX files</a>.
+These files are used to describe and process reference lists, mostly in
+conjunction with LaTeX documents. Each .bib file contains a citation key
+or ID, preceded by an <code>@</code>, that uniquely identifies each
+item. Citation keys can be customized, as we will learn in a bit, but
+please keep in mind that your manuscript will render citations correctly
+only if you have the cited item corresponding to its exact key.</p>
 </section><section><h2 class="section-heading" id="inserting-citations">Inserting Citations<a class="anchor" aria-label="anchor" href="#inserting-citations"></a>
 </h2>
 <hr class="half-width">
-<p>Note that we have different blocks in this file, starting with a
-<code>@</code> and ending with a curly bracket <code>{</code>, each one
-representing a unique citable source. We will now be adding a new item
-using the DOI lookup function so that you can see how the magic
-works!</p>
+<p>Note that this file contains multiple blocks, starting with a
+<code>@</code> and ending with a curly bracket <code>{</code>, each
+representing a unique citable source. We will now add a new item using
+the DOI lookup function so you can see how the magic works!</p>
 <p>Let’s assume you want to include a citation in the first line of the
-Value of the Data section because you would like to provide some
-reference to how the salivary cortisol technique has been used in
-research. So let’s click where we want to insert the citation, call the
-citation function, and look for the following DOI: <a href="https://doi.org/10.1016/B978-012373947-6.00334-2" class="external-link uri">https://doi.org/10.1016/B978-012373947-6.00334-2</a></p>
+Value of the Data section because you would like to talk about how the
+salivary cortisol technique has been used in research. So let’s click
+where we want to insert the citation, call the citation function, and
+look for the following DOI: <a href="https://doi.org/10.1016/B978-012373947-6.00334-2" class="external-link uri">https://doi.org/10.1016/B978-012373947-6.00334-2</a></p>
 <figure><img src="../fig/09-salviary-cortisol.png" alt="Salviary Cortisol" class="figure mx-auto d-block"></figure><p>The DOI lookup uses the <a href="https://perma.cc/KH7N-5Q97" class="external-link">persistent identifier</a>, which
 connects to the DOI resolver service and retrieves the .bibtex file with
 resource metadata<sup>1</sup>. You should insert the whole DOI address,
-including the resolver service, the prefix, and the suffix which is
-specific to the resource as illustrated below:</p>
-<figure><img src="../fig/09-doi-lookup.png" alt="DOI Lookup" class="figure mx-auto d-block"></figure><p>Rstudio will search the <a href="https://support.datacite.org/docs/doi-basics" class="external-link">DOI API</a> and list
+including the resolver service, the prefix, and the suffix, which is
+specific to the resourc,e as illustrated below:</p>
+<figure><img src="../fig/09-doi-lookup.png" alt="DOI Lookup" class="figure mx-auto d-block"></figure><p>RStudio will search the <a href="https://support.datacite.org/docs/doi-basics" class="external-link">DOI API</a> and list
 the only matching result, and you can insert it. After confirming this
 is the citation you would like to include, you can modify the key if you
 would like to simplify it and also choose if you would like to insert it
 as an in-text citation, meaning you would like to have the last name of
 the author(s) followed by a page number enclosed in parentheses. i.e.,
 Kirschbaum and Hellhammer (2007), but in this case, we will uncheck that
-option since we won’t include authors as part of the narrative. Instead,
-we would like to insert a parenthetical citation, where authors and year
-will be displayed inside the parentheses such as (Kirschbaum and
+option since we won’t include authors in the narrative. Instead, we
+would like to insert a parenthetical citation, where authors and year
+will be displayed inside the parentheses, such as (Kirschbaum and
 Hellhammer 2007). You may insert more than one citation by selecting
 multiple items.</p>
 <p>This item will be automatically listed in your references.bib file
 and will help you manage your citations more efficiently. Pretty cool,
 huh? If you want to cite this same item again, you can type
 <code>@</code> and the first letters of the item name, which will be
-auto-completed by Rstudio. You will have to type the key between
+auto-completed by RStudio. You will have to type the key between
 brackets for parenthetical citations, and for in-text narrative
 citations, you only need to type in the key. Note that when you hover
 over the citation, you will preview the full reference for the cited
 item that will be listed at the bottom of the manuscript. This feature
-helps you to identify if you have to edit anything in the .bib file your
-citation is calling. Also, note that all citations will be included at
-the end of your document under a reference list.</p>
-<div id="challenge-1---insert-a-citation-using-the-doi-lookup-function" class="callout challenge">
+helps you to identify if you have to edit anything in the .bib file that
+your citation is calling. Also, all citations will appear at the end of
+your document in a reference list.</p>
+<div id="insert-a-citation-using-the-doi-lookup-function" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
-<div id="challenge-1---insert-a-citation-using-the-doi-lookup-function" class="callout-inner">
-<h3 class="callout-title">Challenge 1 - Insert a Citation Using the DOI
-Lookup Function</h3>
+<div id="insert-a-citation-using-the-doi-lookup-function" class="callout-inner">
+<h3 class="callout-title">Insert a Citation Using the DOI Lookup
+Function</h3>
 <div class="callout-content">
 <p>Following the same process described, insert a parenthetical citation
-to the publication “Welcome to the tidyverse” (<a href="https://doi.org/10.21105/joss.01686" class="external-link uri">https://doi.org/10.21105/joss.01686</a>) where there is a
-mention to this package in the data paper. Look for:
+to the publication “Welcome to the tidyverse” (<a href="https://doi.org/10.21105/joss.01686" class="external-link uri">https://doi.org/10.21105/joss.01686</a>) where this package
+is mentioned in the data paper. Look for:
 <code>add citation here</code></p>
 </div>
 </div>
@@ -4034,13 +4033,13 @@ mention to this package in the data paper. Look for:
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="output" tabindex="0"><code>[@wickham2019]
-render the document and voiala!
+render the document and voila!
 (Wickham et al., 2019)</code></pre>
 </div>
 </div>
@@ -4051,49 +4050,48 @@ render the document and voiala!
 process very similar to the DOI process; however, to search on their
 APIs, you must input information accordingly. For Crossref, you may use
 keywords and author information to identify an item (e.g., Cortisol
-Stress Oken) and Rstudio will connect to <a href="https://search.crossref.org/" class="external-link">Crossref search</a> and provide
-related results, often not as specific as the DOI search, for cases you
-know exactly what you are looking for. DataCite allows searches by
-persistent identifiers or keywords, while PubMed searches exclusively in
-biomedical literature indexed in the database. If you have the PMID
-(PubMed reference number), which is uniquely assigned by the NIH
-National Library of Medicine to papers indexed in PubMed, similarly to
-the DOI search, it will save you time.</p>
+Stress Oken), and RStudio will connect to <a href="https://search.crossref.org/" class="external-link">Crossref search</a> and provide
+related results, often not as specific as the DOI search, for cases
+where you know exactly what you are looking for. DataCite allows
+searches by persistent identifiers or keywords, while PubMed searches
+exclusively in biomedical literature indexed in the database. If you
+have the PMID (PubMed reference number), which the NIH National Library
+of Medicine uniquely assigns to papers indexed in PubMed, it will save
+you time.</p>
 </section><section><h2 class="section-heading" id="editing-metadata-citation-key">Editing Metadata &amp; Citation Key<a class="anchor" aria-label="anchor" href="#editing-metadata-citation-key"></a>
 </h2>
 <hr class="half-width">
 <p>Not all citations are in perfect shape when we import them. You may
 have to adjust them (e.g., include missing metadata and move content to
-another metadata field). If needed, we can do so by modifying the .bib
-file. As briefly mentioned, you can also edit citation keys. By default,
-most citation keys will have the first author’s last name or the first
-word of the title (if no authors), followed by the year of publication.
-You may consider editing the citation key in case you want to simplify
-the entry and speed up the autocomplete option. If you choose to do so,
-you can simply click on the key in the .bib file and edit it. Please be
-advised to use this option with caution and to update citations to match
-the .bib file.</p>
+another metadata field). If you need it, we can do so by modifying the
+.bib file. As we talked about, you can also edit citation keys. By
+default, most citation keys will have the first author’s last name or
+the first word of the title (if no authors), followed by the year of
+publication. Consider editing the citation key to simplify the entry and
+speed up autocomplete. If you choose to do so, you can click on the key
+in the .bib file and edit it. Please be advised to use this option with
+caution and to update citations to match the .bib file.</p>
 </section><section><h2 class="section-heading" id="changing-citation-styles">Changing Citation Styles<a class="anchor" aria-label="anchor" href="#changing-citation-styles"></a>
 </h2>
 <hr class="half-width">
 <p>You might have noticed that all citations are inserted in a specific
 style. Can you guess which one? If you answered Chicago, that is
-correct! By default, Rstudio uses a Chicago author-date format for
+correct! By default, RStudio uses a Chicago author-date format for
 citations and references. To use another style, you will need to specify
 a CSL (Citation Style Language) file in the CSL metadata field in the
 YAML.</p>
-<p>But how can you identify which CSL you should use? You can find
-required formats on the <a href="https://www.zotero.org/styles" class="external-link">Zotero
-Style Repository</a>, making searching for and downloading your desired
-style easy.</p>
-<p>Download the format you wish to use and call it out in the YAML. We
-have pre-saved the APA CSL file in the project folder for you. But if
-you would like to follow the process or try another style, go to the
-Zotero Style repo and select <a href="https://www.zotero.org/styles/apa" class="external-link">American Psychological
+<p>But how can you identify which CSL you should use? You can find the
+required formats in the <a href="https://www.zotero.org/styles" class="external-link">Zotero
+Style Repository</a>, making it easy to search for and download your
+desired style.</p>
+<p>You can download the format you’d like to use and call it out in the
+YAML. We have pre-saved the APA CSL file in the project folder for you.
+But if you would like to follow the process or try another style, go to
+the Zotero Style repo and select <a href="https://www.zotero.org/styles/apa" class="external-link">American Psychological
 Association 7th edition</a> or any other style of your choice. It will
 automatically download the file (e.g., <code>apa.csl</code>). Make sure
 to save it to your project directory in the report/source folder. In the
-YAML we have to call the exact name of the file preceded by “csl:”</p>
+YAML, we have to call the exact name of the file preceded by “csl:”.</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -4109,8 +4107,9 @@ planning to submit your manuscript.</p>
 <p>All cited items will be listed under the section References, which
 you created before while practicing headings and subheadings. Items will
 be placed automatically in alphabetical order for most citation styles.
-However, there might be cases which you will be referencing supporting
-literature that you have not necessarily cited in the document.</p>
+However, there might be cases in which you will be referencing
+supporting literature that you have not necessarily cited in the
+document.</p>
 <p>By default, the bibliography will only display items that are
 directly referenced in the document. If you want to include items in the
 bibliography without actually citing them in the body text, you can
@@ -4127,26 +4126,26 @@ an item that was not cited in the YAML. Note that this will force all
 items added in the YAML with this command to be listed in the
 bibliography.</p>
 <p>Let’s try!</p>
-<div id="challenge-2-optional-adding-references-you-have-not-cited" class="callout challenge">
+<div id="adding-references-you-have-not-cited-optional" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
-<div id="challenge-2-optional-adding-references-you-have-not-cited" class="callout-inner">
-<h3 class="callout-title">Challenge 2 (optional): Adding references you
-have not cited</h3>
+<div id="adding-references-you-have-not-cited-optional" class="callout-inner">
+<h3 class="callout-title">Adding references you have not cited
+(optional)</h3>
 <div class="callout-content">
 <p>We have used a few packages in our paper that we do not necessarily
 cite in the text. However, adding them to the reference list is a good
 practice. This practice is recommended for giving proper credit to
-package developers and also to inform your readers about the exact
+package developers and also to let your readers know about the exact
 version you have used to produce your paper.</p>
-<p>Ideally, we would follow this process for all packages we have
-installed and used to produce the paper. But for the sake of time, let’s
-do that process for the package <strong><em>BayesFactor</em></strong>.
-Since we have the option to call R packages right from the insert
-citation, look for the package and think how we can include it to the
-reference list even without citing it on our paper.</p>
+<p>Ideally, we follow this process for all packages we have installed
+and used to produce the paper. But for the sake of time, let’s do that
+process for the package <strong><em>BayesFactor</em></strong>. Since we
+have the option to call R packages right from the insert citation, look
+for the package and think about how we can include it in the reference
+list even without citing it in our paper.</p>
 </div>
 </div>
 </div>
@@ -4155,7 +4154,7 @@ reference list even without citing it on our paper.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>You should call the @ it in the YAML, with the <code>nocite</code>
 function:</p>
@@ -4177,8 +4176,8 @@ function:</p>
 <div id="important-info" class="callout-inner">
 <h3 class="callout-title">Important Info:</h3>
 <div class="callout-content">
-<p>Does the indentation matter? Yes, you have to indent at least one
-space, and the citation key should turn green to work.<br>
+<p>Does the indentation matter? Yes, you have to indent by at least one
+space, and the citation key should turn green for it to work.<br>
 In case you are including a citation to <code>nocite</code> that you
 have not cited in the document, you have to make sure first that the bib
 file is in your Bibliography folder.</p>
@@ -4194,9 +4193,9 @@ file is in your Bibliography folder.</p>
 <h3 class="callout-title">Tip:</h3>
 <div class="callout-content">
 <p>Depending on the bibliography style, BibTeX converts all characters
-in the title to lowercase, except for the first character. If you want
-to override this, wrap the character(s) you wish to show in upper case,
-in curly braces.</p>
+in the title to lowercase, except the first. If you want to override
+this, wrap the character(s) you wish to show in upper case in curly
+braces.</p>
 <pre><code><span><span class="va">title</span> <span class="op">=</span> <span class="st">"Pascal, {C}, {Java}: were they all conceived in {ETH}?"</span> </span></code></pre>
 </div>
 </div>
@@ -4211,12 +4210,12 @@ theorems, proofs, and more.</p>
 <p>Essentially, every cross-referenceable entity requires a caption
 (description), the object info, and a label (unique identifier. Let’s
 say we want to cross-reference Figure 1 in the paper. To do so, we will
-need to first create an ID for it. If we are in the visual mode, we can
+first need to create an ID for it. If we are in the visual mode, we can
 double-click the image, click the “Attributes” tab, and enter #fig1 as
 the ID.</p>
 <p><img src="../fig/09-inserting-crossref.png" alt="Inserting cross-referencing" class="figure"><br></p>
 <p>Alternatively, in the source mode, we can enter that same ID in front
-of the figure name, by typing in {#fig-fig1}</p>
+of the figure name by typing in {#fig-fig1}</p>
 <p><code>![Experimental timeline and measurements.](fig/Fig1.jpg){#fig-fig1}</code></p>
 <p>Ok, but how can you call that in another part of the paper? You may
 enter the key below using the unique identifier, but instead of the hash
@@ -4227,24 +4226,24 @@ interpret it as a citation and won’t render correctly. Click
 <code>Render</code> and see how it displays.</p>
 <p>You may follow a similar approach to add cross-references for
 sections <code>(#sec-)/(@sec-)</code>, equations
-<code>(#eq-)/(@eq-)</code>, tables <code>(#tbl-)/(@tbl-)</code> and
+<code>(#eq-)/(@eq-)</code>, tables <code>(#tbl-)/(@tbl-)</code>, and
 other objects (see: <a href="https://quarto.org/docs/authoring/cross-references.html" class="external-link">Quarto’s
 Cross References guide</a>).</p>
 <p>If you wish to add a cross-reference to a figure that was generated
-via code block, you have to provide a label (id) and a caption at the
+via a code block, you have to provide a label (id) and a caption at the
 beginning of the figure code block.</p>
 <pre><code><span><span class="co">#| label: fig-id</span></span>
 <span><span class="co">#| fig-cap: "figure caption here" </span></span></code></pre>
 <p>And then, enter the <span class="citation">@fig-id</span> where you
 want to note the cross-reference in your paper.</p>
-<div id="challenge-3-adding-cross-reference-for-code-block-figures" class="callout challenge">
+<div id="adding-cross-reference-for-code-block-figures" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
-<div id="challenge-3-adding-cross-reference-for-code-block-figures" class="callout-inner">
-<h3 class="callout-title">Challenge 3: Adding cross-reference for code
-block figures</h3>
+<div id="adding-cross-reference-for-code-block-figures" class="callout-inner">
+<h3 class="callout-title">Adding cross-reference for code block
+figures</h3>
 <div class="callout-content">
 <p>Your turn! Include a cross-reference to Figure 3.</p>
 </div>
@@ -4255,11 +4254,11 @@ block figures</h3>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Solution: </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p>Make sure you have added a label (id). If you missed that step, now
-it is the time to add <code>#| label: fig-heartrate</code> Call the
-figure using the assigned id <code>@fig-heartrate</code></p>
+is the time to add <code>#| label: fig-heartrate</code> Call the figure
+using the assigned id <code>@fig-heartrate</code></p>
 </div>
 </div>
 </div>
@@ -4272,9 +4271,9 @@ figure using the assigned id <code>@fig-heartrate</code></p>
 <div class="callout-inner">
 <div class="callout-content">
 <ul>
-<li>Rstudio supports different lookup strategies to make the citation
+<li>RStudio supports different lookup strategies to make the citation
 process easier.</li>
-<li>Rstudio supports different citation styles.</li>
+<li>RStudio supports different citation styles.</li>
 <li>The YAML can be adjusted to display uncited items in the reference
 list.</li>
 <li>Use bookdown to cross-reference content.</li>
