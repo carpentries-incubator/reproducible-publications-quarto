@@ -22,7 +22,7 @@ exercises: 15
 
 ## Synchronizing Your Local Changes with Your Repository on GitHub
 
-Earlier, we looked at integrating version control into your RStudio workflow to help streamline your work and keep track of changes. In this part of the workshop, we will set up Rstudio to authenticate with GitHub, which is necessary to *push* your local changes to the remote repository on GitHub.
+Earlier, we looked at integrating version control into your RStudio workflow to help streamline your work and keep track of changes. In this part of the workshop, we will set up RStudio to authenticate with GitHub, which is necessary to *push* your local changes to the remote repository on GitHub.
 
 Terminology:  Git *Push* and *Pull*
 
@@ -35,7 +35,7 @@ GitHub requires a more secure method of authentication than a simple Username an
 
 ## A Quick Note on GitHub Authentication Methods
 
-In this lesson, we stick with Personal Access Tokens (PATs), but GitHub offers other ways to authenticate, such as SSH keys, which can particularly useful for different Git forges (GitLab, Bitbucket, etc.). If you’re curious about other authentication options or how things differ across platforms, GitHub has a helpful overview here:
+In this lesson, we stick with Personal Access Tokens (PATs), but GitHub offers other authentication methods, such as SSH keys, which can be particularly useful with different Git forges (GitLab, Bitbucket, etc.). If you’re curious about other authentication options or how things differ across platforms, GitHub has a helpful overview here:
 [https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github).
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -48,7 +48,7 @@ In your RStudio console, enter the following command:
 
 This will open your web browser and, after logging in if necessary, you'll be on the GitHub settings page to create a PAT. Most of the options have already been set for us; we only need to update:
 
-- the Note field by describing what the token is for. We recommend a combination that describes the computer the PAT will be used on and what it will be used for.
+- the Note field by describing what the token is for. We recommend a combination that describes the computer the PAT will be used on and the purpose for which it will be used.
 
 For example:
 
@@ -60,7 +60,7 @@ For example:
 
 Feel free to leave all the other options as selected. Click on the green Generate token button at the bottom of the page.
 
-- On the next screen, GitHub shows you the new token.  **Be sure to copy it** as you only get one chance to see the token text. This is the only time you will be able to see it, so do not close this page before you are done with the setup! Copy your PAT to your clipboard. Return to RStudio and run the following command in the R console:
+- On the next screen, GitHub shows you the new token.  ** Please be sure to copy it** as you only get one chance to see the token text. This is the only time you will be able to see it, so do not close this page before you are done with the setup! Copy your PAT to your clipboard. Return to RStudio and run the following command in the R console:
 
 `gitcreds::gitcreds_set()`
 
