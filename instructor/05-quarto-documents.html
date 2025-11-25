@@ -263,7 +263,7 @@
 <div class="accordion accordion-flush" id="accordionFlush7">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading7">
-        <a href="06-writing-styling.html">6. Writing and Styling Qmd Documents</a>
+        <a href="06-writing-styling.html">6. Writing and Styling QMD Documents</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -408,7 +408,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Introduction to Working with Quarto documents</h1>
-        <p>Last updated on 2025-11-24 |
+        <p>Last updated on 2025-11-25 |
 
         <a href="https://github.com/carpentries-incubator/reproducible-publications-quarto/edit/main/episodes/05-quarto-documents.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -455,11 +455,11 @@ format?</li>
 produce the analysis and compute results. While writing scientific
 reports, one may choose RStudio IDE to marry all these pieces together
 and take advantage of the various tools it integrates with. Having a
-publication while minimizing reproducibility friction can be
-accomplished with Quarto. <a href="https://quarto.org/" class="external-link">Quarto</a> is a
-multi-language, next-generation version of R Markdown from Posit. It
-includes new features and capabilities while being able to render most
-existing Rmd files without any modification. With Quarto, you can:</p>
+publication while minimizing reproducibility friction is possible with
+Quarto. <a href="https://quarto.org/" class="external-link">Quarto</a> is a multi-language,
+next-generation version of R Markdown from Posit. It includes new
+features and capabilities while rendering most existing Rmd files
+without modification. With Quarto, you can:</p>
 <ul><li>Create dynamic content with Rstudio/R, Python, Julia, and
 Observable.</li>
 <li>Author documents as plain text markdown or Jupyter notebooks.</li>
@@ -468,9 +468,9 @@ blogs, and books in HTML, PDF, MS Word, ePub, and more.</li>
 <li>Author with scientific markdown, including equations, citations,
 crossrefs, figure panels, callouts, advanced layout, and more.</li>
 </ul><p>Quarto generates a .qmd file that weaves together content and
-executable code into an elegantly formatted output, which can be
-published in various formats. It is a convenient tool for reproducible
-and dynamic reports which will help you:</p>
+executable code into elegantly formatted output that can be published in
+various formats. It is a convenient tool for reproducible and dynamic
+reports, which will help you:</p>
 <ol style="list-style-type: decimal"><li>Keep an eye on the text (the paper) AND the source code. These
 computational steps are essential to ensure computational
 reproducibility.</li>
@@ -484,10 +484,10 @@ languages).</li>
 as the paper under review.</li>
 <li>Get figures automatically updated if you change the underlying
 parameters in the code. The error-prone task of exporting figures and
-uploading the right figure version to another platform is thus not
-needed anymore.</li>
-<li>Since it uses a text-based format, you can also use versioning
-control with Git.</li>
+uploading the correct version to another platform is thus no longer
+needed.</li>
+<li>Since it uses a text-based format, you can also use version control
+with Git.</li>
 <li>If you do not make any changes to the document after creating the
 output document, you can be sure that the paper is executable, at least
 at the time of submission.</li>
@@ -512,12 +512,12 @@ syntax and treat the equation as math.</p></li>
 <li><p>In a past version of this workshop, we struggled with a
 scientific paper published in a reputable journal. In trying to recreate
 the original authors’ plots, we found it difficult and time-consuming to
-figure out exactly how the authors created their plots. Out of the many
-columns in their data, many have similar-sounding names. Which did they
-use? How did they handle missing data? Exactly what operations did they
-perform to compute aggregate values? How much easier it would have been
-if they had published the code they used along with their paper. RStudio
-and Quarto allow you to do this.</p></li>
+determine exactly how they created them. Out of the many columns in
+their data, many have similar-sounding names. Which did they use? How
+did they handle missing data? Exactly what operations did they perform
+to compute aggregate values? How much easier it would have been if they
+had published the code they used along with their paper. RStudio and
+Quarto allow you to do this.</p></li>
 </ol></section><section><h2 class="section-heading" id="anatomy-of-a-quarto-document">Anatomy of a Quarto Document<a class="anchor" aria-label="anchor" href="#anatomy-of-a-quarto-document"></a></h2>
 <hr class="half-width"><p>The key to our reproducible workflow is using Quarto files in RStudio
 rather than basic scripts to dynamically render both code and paper
@@ -557,10 +557,10 @@ format. By default, options include PDF, HTML, and Word, but a wide
 range of <a href="https://quarto.org/docs/output-formats/all-formats.html" class="external-link">additional
 output formats options</a> is also available and can be configured based
 on your project needs. <br></p>
-<p>We’ll see other formatting options for YAML later on, including
-adding bibliography information, customizing our output, and changing
-the default settings for executing your code. Below is an example of how
-our YAML file will look at the end of this workshop.</p>
+<p>We’ll see other YAML formatting options later, including adding
+bibliography information, customizing our output, and changing the
+default settings for running your code. Below is an example of how our
+YAML file will look at the end of this workshop.</p>
 <pre><code>---
 title: "Data Article: Trier social stress test and food-choice: Behavioral, self-report &amp; hormonal data (Carpentry Workshop Version)"
 author: "Felix Jan Nitsch; Manuela Sellitto; Tobias Kalenscher"
@@ -575,17 +575,17 @@ execute:
 </div>
 <div class="section level3">
 <h3 id="formatted-text">2. Formatted text:<a class="anchor" aria-label="anchor" href="#formatted-text"></a></h3>
-<p>This one is simple, it’s literally just text narrative formatted by
+<p>This one is simple; it’s literally just a text narrative formatted by
 using markdown (more on markdown syntax later). Markdown-formatted text
 is one of the benefits added above and beyond the capabilities of a
-regular r script. Any text section will have the default white
-background in the qmd document. As you might know, in a regular R file,
-# starts a comment. In Quarto, plain text is just plain narrative text
-that appears in the document. In R scripts, plain text wants to be code.
-In Quarto, you will need to enclose your code in special characters. Any
-symbols you do see that aren’t regular grammar components are for
-formatting, such as <code>##</code>, <code>** **</code>, and
-<code>&lt; &gt;</code>.</p>
+regular R script. Any text section in the QMD document will have a
+default white background. As you might know, in a regular R file, #
+starts a comment. In Quarto, plain text is just plain narrative text
+that appears in the document. In R scripts, plain text is treated as
+code. In Quarto, you will need to enclose your code in special
+characters. Any symbols you do see that aren’t regular grammar
+components are for formatting, such as <code>##</code>,
+<code>** **</code>, and <code>&lt; &gt;</code>.</p>
 <div id="tip-bonus-you-can-use-a-variety-of-languages-to-format-text-and-images-in-quarto" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -605,14 +605,14 @@ to format text and images in Quarto:</h3>
 </div>
 <div class="section level3">
 <h3 id="code-blocks">3. Code Blocks:<a class="anchor" aria-label="anchor" href="#code-blocks"></a></h3>
-<p>Code blocks appear highlighted in gray throughout the qmd document.
+<p>Code blocks appear highlighted in gray throughout the QMD document.
 They are surrounded by three tick marks on either side (```) <strong>in
 source mode</strong> with the starting three tick marks followed by
 curly brackets <code>{}</code>with some other code inside. The tick
 marks indicate the start of a code section, and the bits found between
 the curly brackets <code>{}</code>indicate how R should read and display
 the code (more on this in the Knitr syntax episodes). These are the
-sections where you add R code, such as summary statistics, analysis,
+sections where you add R code, including summary statistics, analyses,
 tables, and plots. If you’ve already written an R script, you can copy
 and paste your code between the few lines of required formatting to
 embed &amp; run whichever piece you want at that particular spot in the
@@ -646,15 +646,15 @@ created to see how formatted text and code are represented.</p>
 <h3 class="callout-title">A note about coding approaches in
 RStudio:</h3>
 <div class="callout-content">
-<p>When writing code in Rstudio, there are different workflows you can
+<p>When writing code in RStudio, there are different workflows you can
 use, including writing code directly in the console, using a separate R
 script, or writing your code in a .qmd file. The best approach depends
 on your specific needs and preferences:</p>
 <ul><li>
-<em>Writing code directly in the console</em> is useful when you
-want to execute code immediately to see the effect of a statement making
-a quick change or calculation. However, keeping track of your written
-code can be challenging, especially if it takes multiple lines.
+<em>Writing code directly in the console</em> works fine when you
+want to execute code immediately to see the effect of a statement, make
+a quick change, or perform a calculation. However, keeping track of your
+written code can be challenging, especially if it takes multiple lines.
 Additionally, if you need to run the same code multiple times, you’ll
 have to rewrite it each time, which can be inconvenient if you plan to
 reuse it.</li>
@@ -669,8 +669,8 @@ code interactively.</li>
 <em>Using a .qmd file</em> combines the advantages of both the
 console and R script. A .qmd file allows you to write. R code and text
 in the same document make organizing and documenting your work easier.
-Additionally, you can run the code directly in the paper, which makes it
-easier to modify and rerun code interactively.</li>
+Additionally, you can run the code directly in the paper, making it
+easier to modify and rerun it interactively.</li>
 </ul><p>We will use the third approach for most of this workshop since we
 focus on creating a reproducible paper.</p>
 </div>
@@ -680,25 +680,26 @@ focus on creating a reproducible paper.</p>
 <div class="section level3">
 <h3 id="rendering-your-qmd-document">4. Rendering your Qmd document:<a class="anchor" aria-label="anchor" href="#rendering-your-qmd-document"></a></h3>
 <p>Simply put, rendering is the process of converting a document into a
-file format or a medium that is paginated or has the concept of pages.
-Clicking the render button will compile the code, check for errors, and
-output the type of file indicated in your yaml header. You may select
-the option “Render on Save” to see a preview of your document every time
-you save edits. Attention: your qmd document may not run and render as
-your indicated output if there are any errors in the document, so it
-also functions somewhat as a code checker. <br></p>
+file format or a medium that supports pagination or page-based
+navigation. Clicking the render button will compile the code, check for
+errors, and output the type of file indicated in your YAML header. You
+may select the option “Render on Save” to see a preview of your document
+every time you save edits.</p>
+<p>Attention: your QMD document may not run or render as your indicated
+output if there are any errors in the document, so it also serves as a
+code checker. <br></p>
 <div class="section level4">
 <h4 id="try-it-yourself">Try it yourself!<a class="anchor" aria-label="anchor" href="#try-it-yourself"></a></h4>
-<p>We’re going to pause here and see what the Quarto document does when
-it’s rendered. We’ll just use the generic template, but when we’re
-working on our own project, rendering periodically while we’re editing
-allows us to catch any mistakes early. We’ll continue rendering our qmd
-throughout the lesson to see what happens when we add our markdown and
-knitr syntax and to make sure we aren’t making any errors.</p>
+<p>We’re going to pause here and see what the Quarto document looks like
+when rendered. We’ll use the generic template, but when we’re working on
+our own project, rendering periodically while we’re editing allows us to
+catch any mistakes early. We’ll continue rendering our QMD throughout
+the lesson to see what happens when we add our markdown and knitr syntax
+and to make sure we aren’t making any errors.</p>
 <p>This is a little preview of what’s to come in the later episodes:
 Click the “render” button.</p>
-<p>Before you can render your document, you’ll need to give it a file
-name and choose what folder you want to save it to. Choose
+<p>Before you can render your document, you’ll need to give it a
+filename and choose the folder where you want to save it. Choose
 <code>my_first_qmd.qmd</code> as your file name and save it to an easily
 accessible directory in your file system.</p>
 <p>Your document should render like this: <br></p>
@@ -712,19 +713,18 @@ accessible directory in your file system.</p>
 <h3 class="callout-title">Warning: Enable Pop-ups!</h3>
 <div class="callout-content">
 <p>If using the Jupyter Hub RStudio setup, you may not see your preview
-until you enable pop-ups since the web browser of your choice may block
-pop-ups by default.</p>
+until you enable pop-ups, since your chosen web browser may block them
+by default.</p>
 </div>
 </div>
 </div>
-<div id="challenge-1---rendering-the-document-in-another-format" class="callout challenge">
+<div id="rendering-the-document-in-another-format" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
-<div id="challenge-1---rendering-the-document-in-another-format" class="callout-inner">
-<h3 class="callout-title">CHALLENGE 1 - Rendering the document in
-another format</h3>
+<div id="rendering-the-document-in-another-format" class="callout-inner">
+<h3 class="callout-title">Rendering the document in another format</h3>
 <div class="callout-content">
 <p>Suppose you want this .qmd document to render as a Word document.
 What options would you have?</p>
@@ -741,10 +741,10 @@ What options would you have?</p>
 <div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>You may change the output format in the YAML to <code>docx</code>.
-Note that to preview Word documents, you need to have MS Word, Libre or
-Open Office installed on your machine. Alternatively, you may enter the
-following command in the terminal: `quarto render my_first_qmd.qmd –to
-docx</p>
+Just so you know, to preview Word documents, you need to have MS Word,
+Libre or Open Office installed on your machine. Alternatively, you may
+enter the following command in the terminal: `quarto render
+my_first_qmd.qmd –to docx</p>
 </div>
 </div>
 </div>
@@ -757,10 +757,9 @@ docx</p>
 <div id="note-about-pdfs" class="callout-inner">
 <h3 class="callout-title">Note about PDFs</h3>
 <div class="callout-content">
-<p>In order to create PDFs you will need to install a recent
-distribution of LaTeX. We recommend the use of TinyTeX, which you can
-install with the following command:
-<code>quarto install tool tinytex</code>.</p>
+<p>To create PDFs, you will need to install a recent LaTeX distribution.
+We recommend using TinyTeX, which you can install with the following
+command: <code>quarto install tool tinytex</code>.</p>
 </div>
 </div>
 </div>
@@ -772,8 +771,8 @@ install with the following command:
 <div class="callout-inner">
 <div class="callout-content">
 <ul><li>Quarto lets you create reproducible documents.</li>
-<li>An qmd file is comprised of a YAML header, formatted text in qmd,
-and code blocks.</li>
+<li>A QMD file is comprised of a YAML header, formatted text in QMD, and
+code blocks.</li>
 <li>The render function converts the file into the chosen output
 format.</li>
 </ul></div>
@@ -839,7 +838,7 @@ format.</li>
   "url": "https://carpentries-incubator.github.io/reproducible-publications-quarto/instructor/05-quarto-documents.html",
   "identifier": "https://carpentries-incubator.github.io/reproducible-publications-quarto/instructor/05-quarto-documents.html",
   "dateCreated": "2021-12-01",
-  "dateModified": "2025-11-24",
+  "dateModified": "2025-11-25",
   "datePublished": "2025-11-25"
 }
 
