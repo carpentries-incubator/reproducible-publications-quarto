@@ -1977,7 +1977,7 @@ getting a notification that Git isn’t set up to work with RStudio.</p>
   Solution:
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <figure><img src="../fig/05-git-not-detected.png" class="image-with-shadow figure mx-auto d-block" alt="Git not detected on system path"></figure><p>To set it up, we need to go to Tools &gt; Global Options <img src="../fig/05-setup-git-rstudio.PNG" class="image-with-shadow figure" alt="Global Options Git/SVN setup"></p>
 <p>First, make sure “Enable version control interface for RStudio
@@ -2382,7 +2382,7 @@ What options would you have?</p>
   Solution:
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>You may change the output format in the YAML to <code>docx</code>.
 Just so you know, to preview Word documents, you need to have MS Word,
@@ -3605,7 +3605,7 @@ run and be displayed.</li>
 </div>
 </section></section><section id="aio-09-advanced-chunk"><p>Content from <a href="09-advanced-chunk.html">Advanced Code Chunk Options</a></p>
 <hr>
-<p>Last updated on 2025-11-21 |
+<p>Last updated on 2025-11-25 |
 
         <a href="https://github.com/carpentries-incubator/reproducible-publications-quarto/edit/main/episodes/09-advanced-chunk.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 20 minutes</p>
@@ -3633,8 +3633,8 @@ run and be displayed.</li>
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>Learn how to source external scripts to run within a qmd document to
-modularize your code.</li>
+<li>Learn how to source external scripts to run within a Quarto document
+to modularize your code.</li>
 <li>Learn about using global options for project-level settings.</li>
 </ul>
 </div>
@@ -3648,19 +3648,19 @@ modularize your code.</li>
 <p>You may remember (or not, that’s ok!) that when we saw how to create
 a new Project back in episode 4 we were presented with this long list of
 project options:</p>
-<figure><img src="../fig/07-project-options.png" class="image-with-shadow figure mx-auto d-block" alt="Project Options"></figure><p>We told you not to worry too much as most of these options are just
-variations of a regular old R Project (including a Quarto Project!)
-Regardless of your choice at this step, you can create new Quarto
-documents within R projects, Quarto projects, or even outside projects
-at any time. You may also convert an R project to a Quarto project and
-back at any point as well.</p>
-<p>You may, therefore, be a bit confused about the distinction between a
-Quarto Project and a regular R Project. To put it simply, a Quarto
-project is an R Project which contains a “_quarto.yml” file. This file
-dictates shared YAML configuration across documents in a Quarto project.
-This ensures that any document rendered within the project directory
-automatically inherits the metadata defined at the project level
-allowing capabilities such as defining a style for the whole project or
+<figure><img src="../fig/07-project-options.png" class="image-with-shadow figure mx-auto d-block" alt="Project Options"></figure><p>We told you not to worry too much, since most of these options are
+just variations on a regular old R Project (including a Quarto
+Project!). Regardless of your choice at this step, you can create new
+Quarto documents within R projects, Quarto projects, or even outside
+projects at any time. You may also convert an R project to a Quarto
+project and back at any time.</p>
+<p>You may be confused about the distinction between a Quarto Project
+and a regular R Project. To put it simply, a Quarto project is an R
+Project which contains a “_quarto.yml” file. This file dictates shared
+YAML configuration across documents in a Quarto project. This ensures
+that any document rendered within the project directory automatically
+inherits the metadata defined at the project level, allowing
+capabilities such as defining a style for the whole project or
 redirecting outputs to a specified sub-directory. The Quarto Website,
 Blog and Book are simply Quarto Projects with a pre-defined
 “_quarto.yml” file defining some basic style settings characteristic of
@@ -3686,20 +3686,20 @@ documents in the project.</p>
 <hr class="half-width">
 <p>Okay, remember how we changed the file path in the code chunk we
 copied into our document to correct the relative path for reading the
-data? This happened because, in Quarto documents, the working directory
-is wherever the qmd document is located, but our code is located in a
-different folder. This means they have different relative paths to
-locate and read the data we want to work with. We can simplify things by
-designating the working directory for our document relative to the root
-project directory instead. This lets all files work relative to the
-project root instead of each other, standardizing the relative paths.
-Note that this is mainly important for code chunks - text portions of
-Quarto documents are not affected. This will clarify some of our
-confusion with relative paths across our R project.</p>
+data? This happened because in Quarto documents, the working directory
+is set to the location of the qmd document, but our code is in a
+different folder. This means they have different relative paths to the
+data we want to work with. We can simplify things by designating the
+working directory for our document relative to the root project
+directory instead. This lets all files work relative to the project root
+rather than each other, standardizing relative paths. Note that this is
+mainly important for code chunks - text portions of Quarto documents are
+not affected. This will clarify some of our confusion with relative
+paths across our R project.</p>
 <p>So, one should learn how to accomplish that by changing the working
-directory at the project level YAML settings. So we’ll navigate to our
+directory in the project-level YAML settings. So we’ll navigate to our
 _quarto.yml document in our root project directory and open it.</p>
-<p>We’ll add the following settings to the yml file:</p>
+<p>We’ll add the following settings to the YAML file:</p>
 <pre><code><span><span class="va">...</span></span>
 <span>  <span class="va">execute</span><span class="op">-</span><span class="va">dir</span><span class="op">:</span> <span class="va">project</span></span>
 <span><span class="va">...</span></span></code></pre>
@@ -3723,7 +3723,7 @@ need to copy/paste code updates, which would make it easy to end up with
 discrepancies between our <code>.r</code> scripts and our
 <code>.qmd</code> paper.</p></li>
 <li><p>Readability: calling code externally only takes several lines of
-code - versus copy/pasting 50+ lines of code from our scripts.</p></li>
+code, versus copy/pasting 50+ lines of code from our scripts.</p></li>
 <li><p>Less fussing with relative paths* - we had to change the code
 slightly in the first example to update the file path to the data set,
 which introduces variations and inconsistencies. With this method, we
@@ -3733,13 +3733,13 @@ won’t have to modify the source code.</p></li>
 make it a bit easier on yourself.</p>
 <p>Again, let’s test this out in our generic Quarto document. After our
 first figure, add a new code chunk:</p>
-<figure><img src="../fig/08-blank-code-chunk.png" alt="basic code chunk" class="figure mx-auto d-block"></figure><p>We’re just going to test out the same figure again so we can verify
-this new method works.</p>
+<figure><img src="../fig/08-blank-code-chunk.png" alt="basic code chunk" class="figure mx-auto d-block"></figure><p>We’re just going to test the exact figure again to verify that this
+new method works.</p>
 <div class="section level3">
 <h3 id="add-the-code-to-our-quarto-document">Add the code to our Quarto document<a class="anchor" aria-label="anchor" href="#add-the-code-to-our-quarto-document"></a>
 </h3>
-<p>In the heart rate analysis code chunk, let’s delete the existing code
-that we copy-pasted.</p>
+<p>In the heart rate analysis code chunk, delete the code we copied and
+pasted.</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -3763,7 +3763,7 @@ globally.</p>
 <h3 class="callout-title">Time to Run!</h3>
 <div class="callout-content">
 <p>Let’s see if our code worked when generated from an external
-script</p>
+script.</p>
 </div>
 </div>
 </div>
@@ -3780,8 +3780,8 @@ and take a look.</p>
 </div>
 </div>
 </div>
-<p>Our plot should look exactly the same as the first copy-pasted
-one.</p>
+<p>Our plot should look the same as the first one we copied and
+pasted.</p>
 <p>Success! You’ll notice that the global code chunk options were also
 applied to this code chunk.</p>
 <div id="tip-many-ways-to-run-external-code" class="callout">
@@ -3808,14 +3808,14 @@ stackoverflow</a>
 </div>
 </div>
 </div>
-<div id="challenge-1-your-turn-create-figure-3-with-the-external-code" class="callout challenge">
+<div id="your-turn-create-figure-3-with-the-external-code" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
-<div id="challenge-1-your-turn-create-figure-3-with-the-external-code" class="callout-inner">
-<h3 class="callout-title">Challenge 1: Your turn! Create Figure 3 with
-the external code</h3>
+<div id="your-turn-create-figure-3-with-the-external-code" class="callout-inner">
+<h3 class="callout-title">Your turn! Create Figure 3 with the external
+code</h3>
 <div class="callout-content">
 <p>First, find <code>Example 9</code> in the qmd document for Fig 3
 (ctrl-f “Example 9”). We need to add the code for the hormone
@@ -3833,7 +3833,7 @@ and a caption:
   Solution:
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -3844,7 +3844,7 @@ and a caption:
 <span><span class="co">#|fig.cap = "Fig 3: Cortisol and Amylase levels in stress and control groups"</span></span>
 <span><span class="co"># run the code from hormone_analysis.R in the code directory</span></span>
 <span><span class="kw">source</span><span class="op">(</span><span class="st">"code/hormone_analysis.R"</span><span class="op">)</span></span>
-<span><span class="co"># Display the plot created by code in hormone_analysis.R</span></span>
+<span><span class="co"># Display the plot created by the code in hormone_analysis.R</span></span>
 <span><span class="va">plot</span> </span></code></pre>
 </div>
 </div>
@@ -3859,8 +3859,7 @@ and a caption:
 <div class="callout-inner">
 <div class="callout-content">
 <ul>
-<li>Learn how to externally source code <code>source()</code>
-</li>
+<li>Learn how to externally source code <code>source()</code>.</li>
 <li>Learn how to modularize your code to make it more reproducible</li>
 <li>Use a chunk at the beginning of your document to load libraries and
 data to make your document more efficient.</li>
