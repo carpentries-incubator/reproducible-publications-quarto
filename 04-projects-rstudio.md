@@ -9,16 +9,13 @@ exercises: 10
 
 - Copy an existing project on GitHub to make contributions
 - Open a project with Git versioning in RStudio
-- Learn the basics of Git - pull, add, commit, push
-- Make our first edits in a version-controlled project
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
 - How do I start or continue a project with Git versioning?
-- What are the features in the RStudio Interface for working with Git?
-- What are the basics of the Git versioning workflow?
+- How does RStudio support version control?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -102,7 +99,7 @@ When you choose this option, there will be a field to paste a GitHub URL (or ano
 
 We have a repository already prepared for this workshop at <https://github.com/UCSBCarpentry/Quarto-Project-Example>.
 We are going to use the third option to download this repository from GitHub and work with it hands-on. You will need this repo in your working environment if you would like to follow along through this workshop.
-Let's take a second to acquaint ourselves with GitHub. [At this link](https://github.com/signup), you may sign into your GitHub account or create one if you have not already.
+Let's take a moment to get acquainted with GitHub. [At this link](https://github.com/signup), you may sign into your GitHub account or create one if you have not already.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -238,7 +235,7 @@ Congrats! You made your first commit!
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Discussion: (optional) Utilizing .gitignore files
+## Utilizing .gitignore files (Optional)
 
 a `.gitignore` file is used to signal to Git NOT to track versions of specific files. One instance where this is used in a data analysis project is with data files that are too large to be uploaded to GitHub.
 
