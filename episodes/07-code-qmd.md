@@ -16,7 +16,7 @@ exercises: 15
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
-- What is Knitr and how it works?
+- What is Knitr and how does it work?
 - What are code chunks, and how are they structured?
 - How do you add and run code chunks?
 - How can I avoid issues with relative paths?
@@ -25,7 +25,7 @@ exercises: 15
 
 ## Introduction to Code in Quarto \& Knitr Engine
 
-We've learned about the text-formatting options for Quarto in RStudio. Now, let's dive into the code portion of Quarto documents. As we've seen so far, Quarto flips the "code first" default of R scripts, prioritizing code over text. Instead of using comments to add text, Quarto Documents uses a "text-first" default and requires the use of special syntax to add code. In Quarto documents, the syntax to signal the switch to code is called "code chunks" in RStudio (referred to as "code cells" in other environments). Code chunks are interpreted by Knitr. But first, what is Knitr?
+We've learned about the text-formatting options for Quarto in RStudio. Now, let's dive into the code portion of Quarto documents. As we've seen so far, Quarto flips the "code first" default of R scripts, prioritizing code over text. Instead of using comments to add text, Quarto Documents uses a "text-first" default and requires special syntax to add code. In Quarto documents, the syntax to signal the switch to code is called "code chunks" in RStudio (referred to as "code cells" in other environments). Code chunks are interpreted by Knitr. But first, what is Knitr?
 
 ## What is Knitr?
 
@@ -40,7 +40,7 @@ There are two ways to add code to Quarto documents:
 1. Code Chunks
 2. Inline Code (as we will see in the next episode)
 
-First, we're going to talk about code chunks for including substantial portions of code into our narrative, such as generating figures and plots. A plethora of options become available to us when using code chunks, so this tends to be the more complex part of Quarto documents.
+First, we're going to talk about code chunks for including substantial portions of code into our narrative, such as generating figures and plots. A plethora of options are available to us when using code chunks, so this tends to be the more complex part of Quarto documents.
 
 ## Using Code Chunks
 
@@ -48,7 +48,7 @@ Code chunks (also called "code blocks" or "code cells") are the preferred option
 
 ### Creating a Code Chunk
 
-Okay, let's get to some code! Some plots have already been included in our paper but as static images. Now, we will add some additional plots generated straight from R code - which are also more reproducible and easier to update than static images. Using code to generate images directly assures us that if there are any changes to the data or code the plots will update automatically. We also don't have to generate the new plots, save them as images, and then add them back into our paper. Not only is this a time-saver, but it also helps prevent versioning errors!
+Okay, let's get to some code! Some plots have already been included in our paper, but as static images. Now, we will add some additional plots generated straight from R code - which are also more reproducible and easier to update than static images. Using code to generate images directly assures us that if there are any changes to the data or code the plots will update automatically. We also don't have to generate the new plots, save them as images, and then add them back into our paper. Not only is this a time-saver, but it also helps prevent versioning errors!
 
 Navigate to the end of the paper where it says **"Example 8"**. This is where we will add our first code chunk.
 
@@ -76,7 +76,7 @@ The most basic (empty) code chunk looks like this:
 
 ![](fig/08-blank-code-chunk.png){alt='blank qmd code chunk' .image-with-shadow}
 
-Can you tell the subtle differences between the visual and source modes in RStudio? That's right - the backticks \`\`\`. As seen in this image, the only **required** syntax for a code chunk are the backticks preceding and ending (seen only in source mode) and the specified language (in our case, 'r') placed between the curly brackets.
+Can you tell the subtle differences between the visual and source modes in RStudio? That's right - the backticks \`\`\`. As seen in this image, the only **required** syntax for a code chunk is the use of backticks preceding and ending (seen only in source mode) and the specified language (in our case, 'r') placed between the curly brackets.
 
 Unless indicated otherwise, we will continue working in **visual mode**.
 
@@ -84,14 +84,14 @@ Unless indicated otherwise, we will continue working in **visual mode**.
 
 ## Fun fact: Other Programming Languages
 
-Although we will (mostly) be using R in this workshop, it's possible to use other programming or markup languages. For example, we have seen that we can use LaTeX code for equations. You can also use Python and a handful of other languages, so if R is not your preferred programming but you like working in the RStudio environment, don't despair! Other options include SQL, Julia, bash, c, etc. It should be noted, however, that some languages (like Python) will require installing and loading additional packages.
+Although we will (mostly) be using R in this workshop, it's possible to use other programming or markup languages. For example, we have seen that we can use LaTeX code for equations. You can also use Python and a handful of other languages, so if R is not your preferred programming, but you like working in the RStudio environment, don't despair! Other options include SQL, Julia, bash, C, etc. It should be noted, however, that some languages (like Python) will require installing and loading additional packages.
 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Adding our Code Example to a Code Chunk
 
-Now, let's add our first code by copying and pasting the code found below into our empty code chunk (also found in the `code` folder as `HR_analysis.R`.
+Now, let's add our first code by copying and pasting the code below into our empty code chunk (also found in the `code` folder as `HR_analysis.R`.
 
 ```r
 library(tidyverse)
@@ -191,7 +191,7 @@ If we go to the bottom of the code chunk or check the console, we'll see more de
 
 ![](fig/07-path-error-details.png){alt='path error details' .image-with-shadow}
 
-This is a path error. But why are we seeing this error? Unfortunately, a slight discrepancy exists between the behavior of regular R scripts run in R projects and Quarto projects. R scripts will always use the project's root folder as the working directory, while Quarto documents use the folder where the qmd file is located as the working directory. If you were learning on your own, you may have been majorly confused by this minute difference. No worries, we'll see how to change the default working directory globally in the next episode.
+This is a path error. But why are we seeing this error? Unfortunately, a slight discrepancy exists between the behavior of regular R scripts run in R projects and Quarto projects. R scripts always use the project's root folder as the working directory, while Quarto documents use the folder where the qmd file is located as the working directory. If you were learning on your own, you may have been majorly confused by this minute difference. No worries, we'll see how to change the default working directory globally in the next episode.
 
 ### Dealing with Relative Path Errors
 
