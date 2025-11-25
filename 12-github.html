@@ -315,11 +315,11 @@
 
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
-        <ul><li><a href="#synchronizing-your-local-changes-your-repository-on-github">Synchronizing Your Local changes Your Repository on GitHub</a></li>
+        <ul><li><a href="#synchronizing-your-local-changes-with-your-repository-on-github">Synchronizing Your Local Changes with Your Repository on GitHub</a></li>
 <li><a href="#getting-your-repositorys-url-from-github">Getting your Repository’s URL from GitHub</a></li>
 <li><a href="#checking-and-setting-the-origin-for-the-local-copy-of-your-repository.">Checking and Setting the “Origin” for the local copy of your
 repository.</a></li>
-<li><a href="#push-your-local-changes-up-to-your-repository-github.">Push your local changes up to your repository GitHub.</a></li>
+<li><a href="#push-your-local-changes-up-to-your-github-repository.">Push your local changes up to your GitHub repository.</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -411,7 +411,7 @@ repository.</a></li>
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Collaborating via GitHub</h1>
-        <p>Last updated on 2025-07-22 |
+        <p>Last updated on 2025-11-25 |
 
         <a href="https://github.com/carpentries-incubator/reproducible-publications-quarto/edit/main/episodes/12-github.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -448,7 +448,7 @@ repository.</a></li>
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="synchronizing-your-local-changes-your-repository-on-github">Synchronizing Your Local changes Your Repository on GitHub<a class="anchor" aria-label="anchor" href="#synchronizing-your-local-changes-your-repository-on-github"></a></h2>
+<section><h2 class="section-heading" id="synchronizing-your-local-changes-with-your-repository-on-github">Synchronizing Your Local Changes with Your Repository on GitHub<a class="anchor" aria-label="anchor" href="#synchronizing-your-local-changes-with-your-repository-on-github"></a></h2>
 <hr class="half-width"><p>Earlier, we looked at integrating version control into your RStudio
 workflow to help streamline your work and keep track of changes. In this
 part of the workshop, we will set up Rstudio to authenticate with
@@ -458,32 +458,48 @@ remote repository on GitHub.</p>
 <p>Definition: The process of synchronizing your local git repository
 with your git repository on GitHub (or other Git server).</p>
 <p>GitHub requires a more secure method of authentication than a simple
-Username and Password. For this workshop, we’ll be using a Personal
-Access Token (PAT) method which you will setup for your account on
-GitHub. We will configure RStudio to use your PAT to authenticate with
-GitHub so you can download and upload your RStudio code edits to
-GitHub.</p>
+Username and Password. For this workshop, we’ll use a Personal Access
+Token (PAT), which you will set up for your GitHub account. We will
+configure RStudio to use your PAT to authenticate with GitHub so you can
+download and upload your RStudio code edits to GitHub.</p>
+<div id="a-quick-note-on-github-authentication-methods" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="a-quick-note-on-github-authentication-methods" class="callout-inner">
+<h3 class="callout-title">A Quick Note on GitHub Authentication
+Methods</h3>
+<div class="callout-content">
+<p>In this lesson, we stick with Personal Access Tokens (PATs), but
+GitHub offers other ways to authenticate, such as SSH keys, which can
+particularly useful for different Git forges (GitLab, Bitbucket, etc.).
+If you’re curious about other authentication options or how things
+differ across platforms, GitHub has a helpful overview here: <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github" class="external-link">https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github</a>.</p>
+</div>
+</div>
+</div>
 <div class="section level3">
 <h3 id="setting-up-your-github-personal-access-token-pat">Setting up your GitHub Personal Access Token (PAT)<a class="anchor" aria-label="anchor" href="#setting-up-your-github-personal-access-token-pat"></a></h3>
-<p>In your RStudio console enter following command:</p>
+<p>In your RStudio console, enter the following command:</p>
 <p><code>usethis::create_github_token()</code></p>
 <p>This will open your web browser and, after logging in if necessary,
-you’ll be on GitHub settings page to create a PAT. Most of the options
-have already been set for us, we only need to update:</p>
-<ul><li>the Note field by describing what is the token for. We recommend a
-combination describing the computer the PAT will be used on and what it
-is going to be used for.</li>
+you’ll be on the GitHub settings page to create a PAT. Most of the
+options have already been set for us; we only need to update:</p>
+<ul><li>the Note field by describing what the token is for. We recommend a
+combination that describes the computer the PAT will be used on and what
+it will be used for.</li>
 </ul><p>For example:</p>
 <blockquote>
-<p>RStudio on MacBookAir for Reproducibility Workshop</p>
+<p>RStudio on MacBook Air for Reproducibility Workshop</p>
 </blockquote>
-<ul><li>Set expiration to 90 days. Note that GitHub will send you an email
-when it’s time to renew your token that is about to expire. It is easier
-to not let the token expire, otherwise you will have to regenerate a new
-one and do all the setup again.</li>
-</ul><figure><img src="fig/10-github-new-PAT-options.png" class="image-with-shadow figure mx-auto d-block" alt="PAT options on GitHub"></figure><p>You can leave all the other options as selected. Click on the green
-Generate token button at the bottom of the page.</p>
-<ul><li>On the next screen GitHub shows you the new token. <strong>Be sure
+<ul><li>Set expiration to 90 days. So that you know, GitHub will send you an
+email when it’s time to renew your token that is about to expire. It is
+easier not to let the token expire; otherwise, you will have to
+regenerate a new one and set it up again.</li>
+</ul><figure><img src="fig/10-github-new-PAT-options.png" class="image-with-shadow figure mx-auto d-block" alt="PAT options on GitHub"></figure><p>Feel free to leave all the other options as selected. Click on the
+green Generate token button at the bottom of the page.</p>
+<ul><li>On the next screen, GitHub shows you the new token. <strong>Be sure
 to copy it</strong> as you only get one chance to see the token text.
 This is the only time you will be able to see it, so do not close this
 page before you are done with the setup! Copy your PAT to your
@@ -491,26 +507,25 @@ clipboard. Return to RStudio and run the following command in the R
 console:</li>
 </ul><p><code>gitcreds::gitcreds_set()</code></p>
 <p>This will prompt you to paste the PAT you just copied from GitHub.
-Paste your PAT and hit Enter. You you should see a few lines letting you
-know that the token has been setup.</p>
-<p>To check your work you can run the following command in your R
+Paste your PAT and hit Enter. You should see a few lines indicating that
+the token has been set up.</p>
+<p>To check your work, you can run the following command in your R
 console:</p>
 <p><code>usethis::git_sitrep()</code></p>
-<p>if the output shows the line
-<code>Personal access token for 'https://github.com': '&lt;discovered&gt;'</code></p>
-<p>then you know you’ve succeeded in connecting RStudio with GitHub.</p>
-<p>Note that if you use several computers/servers, you will have to do
-those steps again on each machine.</p>
-<div id="note" class="callout">
+<p>If the output shows the line
+<code>Personal access token for 'https://github.com': '&lt;discovered&gt;'</code>
+then you know you’ve succeeded in connecting RStudio with GitHub.</p>
+<p>Note that if you use multiple computers/servers, you will have to
+repeat those steps on each machine.</p>
+<div id="callout2" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <span class="callout-header">Callout</span>
-<div id="note" class="callout-inner">
-<h3 class="callout-title">Note:</h3>
+<div class="callout-inner">
 <div class="callout-content">
-<p>If you cloned the repository already the next 2 steps are not
-necessary, as the “origin” is set as part of the cloning process.</p>
+<p>If you have already cloned the repository, the next two steps are not
+necessary, as the “origin” is set during cloning.</p>
 </div>
 </div>
 </div>
@@ -518,27 +533,27 @@ necessary, as the “origin” is set as part of the cloning process.</p>
 </section><section><h2 class="section-heading" id="getting-your-repositorys-url-from-github">Getting your Repository’s URL from GitHub<a class="anchor" aria-label="anchor" href="#getting-your-repositorys-url-from-github"></a></h2>
 <hr class="half-width"><p>You can get your repository’s address from GitHub by navigating to
 your repository on GitHub.com and clicking the green “Code” button.</p>
-<figure><img src="fig/10-github-clone.png" class="image-with-shadow figure mx-auto d-block" alt="Copy Repo URL from GitHub"></figure><p>With that address, you can complete setting the origin URL in the
-next step.</p>
+<figure><img src="fig/10-github-clone.png" class="image-with-shadow figure mx-auto d-block" alt="Copy Repo URL from GitHub"></figure><p>With that address, you can go ahead and complete the origin URL
+setting in the next step.</p>
 </section><section><h2 class="section-heading" id="checking-and-setting-the-origin-for-the-local-copy-of-your-repository-">Checking and Setting the “Origin” for the local copy of your
 repository.<a class="anchor" aria-label="anchor" href="#checking-and-setting-the-origin-for-the-local-copy-of-your-repository-"></a></h2>
 <hr class="half-width"><p>If you forked and cloned the demonstration publication for this
-workshop, as covered in an earlier episode, then your copy of the
-repository should already have the “origin” set. Once the “origin” is
-set properly, you should be able to push and pull your changes to and
-from GitHub. When you clone a repository from GitHub, your local copy of
-the repository should have GitHub set as the “origin”.</p>
-<p>You can check this in Rstudio –&gt; Tools –&gt; Project Options –&gt;
+workshop, as covered in an earlier episode, your repository should
+already have the “origin” set. Once the “origin” is appropriately set,
+you should be able to push and pull your changes to and from GitHub.
+When you clone a repository from GitHub, your local copy should have
+GitHub set as the “origin”.</p>
+<p>You can check this in RStudio –&gt; Tools –&gt; Project Options –&gt;
 Git/SVN</p>
 <p>If the “Origin” field is blank, then you’ll need to add it from the
 terminal with a couple of terminal commands like this:</p>
 <pre><code>git remote add origin &lt;paste your repository address here&gt;
 git fetch --set-upstream origin main</code></pre>
-<p>Be sure <strong>your</strong> GitHub username is part of the URL.</p>
+<p>Ensure <strong>your</strong> GitHub username is part of the URL.</p>
 <p>After you’ve updated the Origin URL from the command line, go back to
 R Studio –&gt; Tools –&gt; Project Options –&gt; Git/SVN to verify you
 have the “Origin” field filled in. It should look like this.</p>
-<figure><img src="fig/10-rstudio-project-options-git-with-https-origin.png" class="image-with-shadow figure mx-auto d-block" alt="RSTudio Project Options Git/SVN"></figure></section><section><h2 class="section-heading" id="push-your-local-changes-up-to-your-repository-github-">Push your local changes up to your repository GitHub.<a class="anchor" aria-label="anchor" href="#push-your-local-changes-up-to-your-repository-github-"></a></h2>
+<figure><img src="fig/10-rstudio-project-options-git-with-https-origin.png" class="image-with-shadow figure mx-auto d-block" alt="RSTudio Project Options Git/SVN"></figure></section><section><h2 class="section-heading" id="push-your-local-changes-up-to-your-github-repository-">Push your local changes up to your GitHub repository.<a class="anchor" aria-label="anchor" href="#push-your-local-changes-up-to-your-github-repository-"></a></h2>
 <hr class="half-width"><p>With authentication set up and your local copy of your repository
 pointing to GitHub as the “Origin” you should be able to make changes
 locally and <em>push</em> them up to GitHub.</p>
@@ -574,9 +589,10 @@ working at the same time as team members), “<em>push</em>” your commits
 to the remote repository - this way your local changes get added to your
 team’s remote repository.</p>
 <p>This <em>pull</em>, <em>add</em>, <em>commit</em>, <em>push</em>
-routine will become second nature. When you sit down to work do a
-<em>pull</em> and when you’re about to get up <em>push</em> to establish
-a ritual that marks the beginning and end of your work session.</p>
+routine will become second nature. When you sit down to work, do a
+<em>pull</em> and when you’re about to get up, <em>push</em> to
+establish a ritual that marks the beginning and end of your work
+session.</p>
 <p>With the ability to synchronize your changes between GitHub and your
 local repo, the next step is to explore options for publishing your
 research paper.</p>
@@ -587,8 +603,9 @@ research paper.</p>
 <span class="callout-header">Key Points</span>
 <div class="callout-inner">
 <div class="callout-content">
-<ul><li>Setting up R Studio to authenticate with GitHub using a Personal
-Authentication Token (PAT).</li>
+<ul><li>You may set up RStudio to authenticate with GitHub using a Personal
+Authentication Token (PAT) or consider other methods such as SSH
+keys.</li>
 <li>Setting the Git repository <em>Origin</em> in your R Studio project
 enables <em>pushing</em> and <em>pulling</em> from your local copy of
 the repository to the repository on GitHub.</li>
@@ -654,7 +671,7 @@ the repository to the repository on GitHub.</li>
   "url": "https://carpentries-incubator.github.io/reproducible-publications-quarto/12-github.html",
   "identifier": "https://carpentries-incubator.github.io/reproducible-publications-quarto/12-github.html",
   "dateCreated": "2021-12-01",
-  "dateModified": "2025-07-22",
+  "dateModified": "2025-11-25",
   "datePublished": "2025-11-25"
 }
 
