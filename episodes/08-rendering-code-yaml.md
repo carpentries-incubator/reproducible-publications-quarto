@@ -11,6 +11,7 @@ start: yes
 - Learn how to insert and render runnable chunks of code to integrate into your report.
 - Apply labels and captions to code chunks.
 - Learn the syntax and how to add in-line code.
+- Learn how to load libraries and data for use throughout the whole `.qmd` document.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -74,7 +75,7 @@ Now, we are seeing what we would like: a figure without other output to show in 
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## CHALLENGE 1 - Rendering Codes (Optional)
+## Rendering Code (Optional)
 
 Given the following options, how will some hypothetical code render? Try it out with the code we just added to visualize the styling change.
 
@@ -109,7 +110,7 @@ Find a complete list of code chunk options on Knitr developer Yihui Xie's [onlin
 
 ### Label Your Code Chunk
 
-Before we get to fixing how our code output looks, let's pause a second and give our code chunk a label. While not required for running your code, it is good practice to give a name to each code chunk because a label is a unique identifier that allows for more advanced options (such as cross-referencing) to work with your qmd files later on:
+Before we fix how our code output looks, let's pause a second and give our code chunk a label. While not required for running your code, it is good practice to give a name to each code chunk because a label is a unique identifier that allows for more advanced options (such as cross-referencing) to work with your QMD files later on:
 
 ![](fig/07-code-label.png){alt='code chunk label'}
 
@@ -135,7 +136,7 @@ Avoid spaces, periods `(.)`, and underscores `(_)` in chunk labels and paths. If
 
 ### Caption Your Code Chunk Output
 
-The options we just looked at focus on code evaluation and text output. However, we have another set of options that deal with how plot or figure outputs look at act. Many of the options start with `fig`. The one we will use today allows us to add a caption to our figure. Again, this is an optional feature, but if you need (or want) to add captions to your publication, it is straightforward to do in code chunks.
+The options we just looked at focus on code evaluation and text output. However, we have another set of options that deal with how plot or figure outputs look at the act. Many of the options start with `fig`. The one we will use today allows us to add a caption to our figure. Again, this is an optional feature, but if you need (or want) to add captions to your publication, it is straightforward to do so in code chunks.
 
 The caption information also resides at the top of a code chunk using the `#|` syntax as such:
 
@@ -145,9 +146,9 @@ The caption information also resides at the top of a code chunk using the `#|` s
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## CHALLENGE 2: Adding a caption and cleaning up unwanted content for Figure 2
+## Adding a caption and cleaning up unwanted content for Figure 2
 
-Let's add the following caption: "Mean heart rate of stress and control groups at baseline and during intervention." and ensure only the figure and the caption will be displayed in the html document.
+Let's add the following caption: "Mean heart rate of stress and control groups at baseline and during intervention." and ensure only the figure and the caption will be displayed in the HTML document.
 
 :::::::::::::::  solution
 
@@ -180,7 +181,7 @@ Set the option `fig-cap` to equal the text in double quotes.
 Other options that change how a plot or figure appears often use the syntax `fig-xxx`, similar to `fig-cap`. Some other useful plot/figure code options include (From [Yihui Xie's page](https://yihui.org/knitr/options/#plots) ):
 
 - `fig-width`, `fig-height`: (both are 7; numeric) Width and height of the plot (in inches), to be used in the graphics device.
-- `out-width`, `out-height`: (NULL; character) Width and height of the plot in the output document, which can be different with its physical fig-width and fig-height, i.e., plots can be scaled in the output document.
+- `out-width`, `out-height`: (NULL; character) Width and height of the plot in the output document, which can be different from its physical fig-width and fig-height, i.e., plots can be scaled in the output document.
 - `fig-align`: ('default'; character) Alignment of figures in the output document. Possible values are default, left, right, and center. The default is not to make any alignment adjustments.
 - `fig-link`: (NULL; character) A link to be added to the figure.
 - `fig-alt`: (NULL; character) The alternative text to be used in the alt attribute of the image tags of figures in HTML output. By default, the chunk option fig-cap will be used as the alternative text if provided.
@@ -194,16 +195,16 @@ Let's render one more time to see if our figure outputs how we'd like and has a 
 
 ## Time to Render!
 
-Let's try that again
+Let's try that again.
 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ### Best Practices for Loading Data and Packages
 
-We can improve organization and rendering speed in our documents by learning how to load data and packages. So far, we've loaded the library `tidyverse` and the data frame `df` we need in the first code chunk. Now, if we want to add another figure (say the hormone analysis code 'hormone\_analysis.R\`), which uses the same data as our first code generated figure - we would be loading tidyverse and the data for a second time. This is unnecessary because once libraries and data are loaded in a Quarto document, they are available for use in the rest of the code in the following document.
+We can improve organization and rendering speed in our documents by learning how to load data and packages. So far, we've loaded the library `tidyverse` and the data frame `df` we need in the first code chunk. Now, if we want to add another figure (say, the hormone analysis code 'hormone\_analysis.R\`), which uses the same data as our first code-generated figure, we would be loading the tidyverse and the data a second time. This is unnecessary because once libraries and data are loaded in a Quarto document, they are available for use in the rest of the code in the following document.
 
-The best practice is to load libraries and data once at the beginning of our document, making it available for all other figures or calculations throughout the document -  allowing us to avoid repetition in our code and saving us rendering time. This also makes it easier for us to keep track of all the libraries and data we need to use in any given document for ourselves and collaborators. If anything needs to be tweaked, we don't need to search through every code chunk in our qmd document to make a change - it's listed right at the top.
+The best practice is to load libraries and data once at the beginning of our document, making them available to all other figures and calculations throughout the document, avoiding code repetition and saving rendering time. This also makes it easier for us to keep track of all the libraries and data we need to use in any given document for ourselves and collaborators. If anything needs to be tweaked, we don't need to search through every code chunk in our QMD document to make a change - it's listed right at the top.
 
 ```r
 # load libraries
@@ -225,7 +226,7 @@ What would happen if we loaded the data before we loaded the libraries?
 
 ## Solution:
 
-We would get an error because we haven't loaded tidyverse which is required to read the CSV yet!
+We would get an error because we haven't loaded the tidyverse, which is required to read the CSV!
 
 ![](fig/08-error-ordermatters.png){alt='Error due to wrong order'}
 
@@ -266,7 +267,7 @@ If you update your dataset, this value will match the number of rows.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## CHALLENGE 3 - Adding inline code
+## Adding inline code
 
 Suppose we want to add another inline code to the same paragraph. Look for **(Example 7B)**  to represent the average value for *violation\_count* present in the same dataset. Which inline code would we have to add to the following sentence?
 
