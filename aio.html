@@ -478,7 +478,7 @@
         
 <section id="aio-01-introduction"><p>Content from <a href="01-introduction.html">Scientific reproducibility: What is it for?</a></p>
 <hr>
-<p>Last updated on 2025-07-22 |
+<p>Last updated on 2025-11-25 |
 
         <a href="https://github.com/carpentries-incubator/reproducible-publications-quarto/edit/main/episodes/01-introduction.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -635,8 +635,8 @@ transparency are in your best interest. Then what is the best time to
 worry about it?</p>
 <p>From day one and throughout the whole research life cycle! Before
 starting the project, you might have to learn tools like R or Git. If
-you wait too long while doing the analysis, you might lose a lot of time
-trying to remember what you did two months ago. When you write the
+you wait too long while analyzing, you might end up spending a lot of
+time trying to remember what you did two months ago. When you write the
 paper, you want up-to-date numbers, tables, and figures. When you
 co-author a paper, you want to make sure that the analyses presented in
 a paper with your name on it are sound. When you review a paper, you
@@ -645,7 +645,7 @@ can’t judge the results if you don’t know how the authors got there.</p>
 (2023)</a> argues that reproducibility often starts out as a
 burden—something others require of you, and it can feel tedious or
 frustrating. But that perception usually changes the moment you return
-to a project after some time away. Then, it becomes clear that
+to a project after a period of time away. Then, it becomes clear that
 reproducibility isn’t just essential for advancing data science—it’s
 also a practical tool that makes your own work easier to understand and
 build upon later. To achieve reproducibility, the author suggests a
@@ -666,7 +666,7 @@ can this be shared clearly?</li>
 others follow that process themselves?</li>
 </ul>
 <ol start="2" style="list-style-type: decimal">
-<li>Try to progressively accomplish the following requirements:</li>
+<li>Try to accomplish the following requirements progressively:</li>
 </ol>
 <ul>
 <li>Can you run your entire workflow again?</li>
@@ -690,11 +690,11 @@ to its reproducibility.</p>
 </h2>
 <hr class="half-width">
 <p>RStudio is an integrated development environment (IDE) for R and
-other programming languages, such as Python, that provide many tools to
-support code development. It includes a console syntax highlighting
-editor that supports direct code execution and tools for plotting,
-history, debugging, collaboration, and workspace management. Writing
-scripts to conduct your analysis is a powerful way to weave
+other programming languages, such as Python, that provides many tools to
+support code development. It includes a console syntax-highlighting
+editor that supports direct code execution, as well as tools for
+plotting, history, debugging, collaboration, and workspace management.
+Writing scripts to conduct your analysis is a powerful way to weave
 reproducibility principles throughout the entire research lifecycle,
 from data gathering to the statistical analysis, presentation, and
 publication of results.</p>
@@ -702,9 +702,9 @@ publication of results.</p>
 <h3 id="it-is-free-and-open-source">It is free and open-source<a class="anchor" aria-label="anchor" href="#it-is-free-and-open-source"></a>
 </h3>
 <p>Reproducibility becomes more complex and opaque when results rely on
-proprietary software. Unless the research code is open-source,
-reproducing results on different software/hardware configurations is
-impossible. Rstudio is dedicated to sustainable investment in free and
+proprietary software. Unless the research code is open source,
+reproducing results across different software/hardware configurations is
+impossible. RStudio is dedicated to sustainable investment in free and
 open-source software for data science.</p>
 </div>
 <div class="section level3">
@@ -712,17 +712,17 @@ open-source software for data science.</p>
 </h3>
 <p>When you create a new script, the windows/panes within your RStudio
 session adjust automatically so you can see both your script and the
-results in your console when you run your syntax. It also allows calling
-up potential syntax options while writing using the tab key.</p>
+results in your console when you run your syntax. It also allows you to
+call up potential syntax options while writing using the tab key.</p>
 </div>
 <div class="section level3">
 <h3 id="makes-it-convenient-to-view-and-interact-with-the-objects-stored-in-your-environment">Makes it convenient to view and interact with the objects stored in
 your environment<a class="anchor" aria-label="anchor" href="#makes-it-convenient-to-view-and-interact-with-the-objects-stored-in-your-environment"></a>
 </h3>
-<p>RStudio has a handy “Environment” window, which shows all of the
-objects you have stored, including data, scalars, vectors, matrices,
-model outputs, etc., along with a summary of the information stored in
-those objects.</p>
+<p>RStudio has a handy “Environment” window that shows all the objects
+you have stored, including data, scalars, vectors, matrices, model
+outputs, etc., along with summaries of the information in those
+objects.</p>
 </div>
 <div class="section level3">
 <h3 id="makes-it-easy-to-set-your-working-directory-and-access-files-on-your-computer">Makes it easy to set your working directory and access files on your
@@ -744,24 +744,24 @@ repository on GitHub (remote) you can bring its content to your local
 machine, update it, and share changes in a streamlined way. In git
 jargon, it enables you to <code>push</code> and <code>pull</code>
 commits to GitHub, allowing seamless collaboration and effective version
-control. RStudio also provides tools to render documents (html, pdf,
-etc.) directly from Rmarkdown and Quarto notebooks and instantly
+control. RStudio also provides tools to render documents (HTML, PDF,
+etc.) directly from R Markdown and Quarto notebooks and instantly
 connects with <a href="https://rpubs.com/" class="external-link">Rpubs</a> and <a href="https://quartopub.com/" class="external-link">Quarto Pub</a> for easy R project web
 publishing. It is beyond the scope of this workshop, but Quarto also
-allows you create slides, websites, books and much more. Visit the <a href="https://quarto.org/docs/gallery" class="external-link">Quarto Gallery</a> to feel
+lets you create slides, websites, books, and more. Visit the <a href="https://quarto.org/docs/gallery" class="external-link">Quarto Gallery</a> to feel
 inspired with some examples.</p>
 </div>
 </section><section><h2 class="section-heading" id="quarto-advantages-for-your-reproducibility">Quarto advantages for your reproducibility<a class="anchor" aria-label="anchor" href="#quarto-advantages-for-your-reproducibility"></a>
 </h2>
 <hr class="half-width">
-<p>We will talk more about what Quarto is in the next episode. Still, in
-a nutshell, quarto documents enable you to blend your analysis and the
-story associated with it by mixing text (using the markdown syntax) and
+<p>We will talk more about what Quarto is in the next episode. In a
+nutshell, quarto documents enable you to blend your analysis and the
+story associated with it by combining text (using Markdown syntax) and
 executable code. You can render those documents in various formats
 (HTML, Docx, etc.), binding documentation, code, and outputs such as
-figures. It is an excellent vector for reproducibility as it makes it
-easy to update your results according to new information. For example,
-if you find new data, you can re-render the Quarto with the latest data,
+figures. It is an excellent vector for reproducibility, as it makes it
+easy to update your results based on new information. For example, if
+you find new data, you can re-render the Quarto with the latest data,
 and the plots and other computed outputs will update accordingly.</p>
 <div id="why-is-it-called-quarto" class="callout">
 <div class="callout-square">
@@ -771,14 +771,13 @@ and the plots and other computed outputs will update accordingly.</p>
 <div id="why-is-it-called-quarto" class="callout-inner">
 <h3 class="callout-title">Why is it called Quarto?</h3>
 <div class="callout-content">
-
-</div>
-</div>
-</div>
 <p>Developers picked a name that had meaning in the history of
 publishing and landed on Quarto, the format of a book or pamphlet
 produced from full sheets printed with eight pages of text, four to a
 side, then folded twice to make four leaves.</p>
+</div>
+</div>
+</div>
 <div id="why-quarto-and-not-r-markdown" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -812,8 +811,8 @@ data paper:</p>
 <p>Nitsch, F. J., Sellitto, M., &amp; Kalenscher, T. (2021). Trier
 social stress test and food-choice: Behavioral, self-report &amp;
 hormonal data. <em>Data in brief</em>, 37, 107245. <a href="https://doi.org/10.1016/j.dib.2021.107245" class="external-link uri">https://doi.org/10.1016/j.dib.2021.107245</a>.</p>
-<p>We will also be using a simplified version of the project directory
-containing data files and scripts published by the authors on Open
+<p>We will also use a simplified version of the project directory
+containing data files and scripts, published by the authors on the Open
 Science Framework: <a href="https://doi.org/10.17605/OSF.IO/6MVQ7" class="external-link uri">https://doi.org/10.17605/OSF.IO/6MVQ7</a>.</p>
 <p>The adapted paper template and project directory are used exclusively
 for instructional purposes with permission from the authors.</p>
@@ -934,28 +933,17 @@ never write them down in the first place)</li>
 </ul>
 </li>
 </ul>
-<div id="discussion" class="callout discussion">
+<div id="lets-discuss" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
 <span class="callout-header">Discussion</span>
-<div id="discussion" class="callout-inner">
-<h3 class="callout-title">Discussion</h3>
+<div id="lets-discuss" class="callout-inner">
+<h3 class="callout-title">Let’s discuss!</h3>
 <div class="callout-content">
 <p>To what extent do these stress points affect your research projects?
 Are there additional issues that you’ve encountered that slow down or
 derail your work due to issues with project management?</p>
-</div>
-</div>
-</div>
-<div id="discussion-antidotes" class="callout discussion">
-<div class="callout-square">
-<i class="callout-icon" data-feather="message-circle"></i>
-</div>
-<span class="callout-header">Discussion</span>
-<div id="discussion-antidotes" class="callout-inner">
-<h3 class="callout-title">Discussion: Antidotes</h3>
-<div class="callout-content">
 <p>What are some practices you implement to keep your project materials
 organized?</p>
 </div>
@@ -1015,21 +1003,21 @@ files!</li>
 </ol>
 <p>For the project we’re working on today, we used the following setup
 for folders and files:</p>
-<figure><img src="fig/04-directory-tree.png" alt="directory tree" class="figure mx-auto d-block"></figure><div id="challenge-1-take-a-few-minutes-to-look-through-the-workshop-project-files" class="callout challenge">
+<figure><img src="fig/04-directory-tree.png" alt="directory tree" class="figure mx-auto d-block"></figure><div id="take-a-few-minutes-to-look-through-the-workshop-project-files" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
-<div id="challenge-1-take-a-few-minutes-to-look-through-the-workshop-project-files" class="callout-inner">
-<h3 class="callout-title">Challenge 1: Take a few minutes to look
-through the workshop project files</h3>
+<div id="take-a-few-minutes-to-look-through-the-workshop-project-files" class="callout-inner">
+<h3 class="callout-title">Take a few minutes to look through the
+workshop project files</h3>
 <div class="callout-content">
 <p>Please take some time to look through the project files. Either the
 screenshot above or you may browse the files on GitHub at &lt;<a href="https://github.com/UCSBCarpentry/Quarto-Project-Example" class="external-link uri">https://github.com/UCSBCarpentry/Quarto-Project-Example</a>&gt;.
 What do each of the directories (folders) contain? What is their
 purpose?</p>
-<p>See the solution drop-down for an explanation of each directory’s
-contents.</p>
+<p>Please take a look at the solution drop-down for an explanation of
+each directory’s contents.</p>
 </div>
 </div>
 </div>
@@ -1040,7 +1028,7 @@ contents.</p>
   Solution:
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ul>
 <li>
@@ -1172,13 +1160,13 @@ keyword/number combo.
 <p>Adapted from <a href="https://datacarpentry.org/rr-organization1/01-file-naming/index.html" class="external-link uri">https://datacarpentry.org/rr-organization1/01-file-naming/index.html</a>.
 For more tips on file naming, check: <a href="https://perma.cc/9YGZ-D3J5" class="external-link">The Dos and Don’ts of File
 Naming</a>.</p>
-<div id="challenge-2-file-name-syntax" class="callout challenge">
+<div id="file-name-syntax" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
-<div id="challenge-2-file-name-syntax" class="callout-inner">
-<h3 class="callout-title">Challenge 2: File name syntax</h3>
+<div id="file-name-syntax" class="callout-inner">
+<h3 class="callout-title">File name syntax</h3>
 <div class="callout-content">
 <p>Given the filename <code>CC-101_1_data.csv</code> and
 <code>2022-01-01_data_analyses.R</code>, why does it make sense to use
@@ -1193,7 +1181,7 @@ both <code>-</code> and <code>_</code> as delimiters/separators?</p>
   Solution:
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>In <code>CC-101_1_data.csv</code>, the <code>-</code> is used as part
 of the keyword shared between several files. the <code>_</code>
@@ -1238,13 +1226,13 @@ relative path to read your data would be:</p>
 <p>In the complete path example, you can see that the code is not going
 to be portable. If someone other than Wilma Flintstone wanted to run the
 R script, they would have to alter the path to match their system.</p>
-<div id="challenge-3-relative-paths" class="callout challenge">
+<div id="relative-paths" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
-<div id="challenge-3-relative-paths" class="callout-inner">
-<h3 class="callout-title">Challenge 3: Relative Paths</h3>
+<div id="relative-paths" class="callout-inner">
+<h3 class="callout-title">Relative Paths</h3>
 <div class="callout-content">
 <p>What would be the relative path needed to refer to the file
 <code>bronars_simulation_data.csv</code> (located in the raw directory)
@@ -1260,7 +1248,7 @@ inverse relative path?</p>
   Solution:
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p><code>R-repro-pub.Rproj</code> to
 <code>bronars_simulation_data.csv</code>
@@ -1290,8 +1278,8 @@ directory in R. Since in R relative paths are relative to your working
 directory, this will ease referring to external input or output files
 (data, images, plots, …) consistently across your project by always
 having your relative paths relative to the top level folder and help to
-encapsulate your work within this folder. So with an Rproject setup, the
-relative path in the previous example will now be:</p>
+encapsulate your work within this folder. So with an R project setup,
+the relative path in the previous example will now be:</p>
 <pre><code><span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu">read.csv</span><span class="op">(</span><span class="st">"data/foodchoice_budgetlines.csv"</span><span class="op">)</span></span></code></pre>
 <p>In the end, this means you can move this folder around on your
 machine or to another machine, and all paths will remain valid.</p>
@@ -1307,13 +1295,13 @@ them interactively (e.g., in Excel or R) and allowing them to be
 modified means you are never sure where the data came from or how they
 have been modified since collection. Therefore, treating your data as
 “read-only” is a good idea. However, in many cases, your data will be
-“dirty”: it will need significant preprocessing to get into a format R
-(or any other programming language) will find helpful. Storing these
-cleaning scripts in a separate folder (e.g., code) and creating a second
-data folder to hold the “cleaned” datasets can help prevent confusion
-between the two sets. You should have separate folders for each: raw
-data, code, and output data/analyses. You wouldn’t mix your clean
-laundry with your dirty laundry, right?</p>
+“dirty”: it will need significant preprocessing to get into a format
+that R (or any other programming language) will find helpful. Storing
+these cleaning scripts in a separate folder (e.g., code) and creating a
+second data folder to hold the “cleaned” datasets can help prevent
+confusion between the two sets. You should have separate folders for
+each: raw data, code, and output data/analyses. You wouldn’t mix your
+clean laundry with your dirty laundry, right?</p>
 </div>
 <div class="section level4">
 <h4 id="treat-generated-output-as-disposable">
@@ -1469,13 +1457,13 @@ project. And no worries, you can always add a <code>_quarto.yml</code>
 file if you have just an RStudio Project, which can retroactively turn
 your project into a Quarto project. We will see how to create a Quarto
 project further in this workshop.</p>
-<div id="challenge-4-r-project-in-root-folder" class="callout discussion">
+<div id="r-project-in-root-folder" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
 <span class="callout-header">Discussion</span>
-<div id="challenge-4-r-project-in-root-folder" class="callout-inner">
-<h3 class="callout-title">Challenge 4: R Project in “root” folder</h3>
+<div id="r-project-in-root-folder" class="callout-inner">
+<h3 class="callout-title">R Project in “root” folder</h3>
 <div class="callout-content">
 <p><code>.Rproj</code> files must be at the top level of the root
 directory of your project folder/directory. What is the root directory
@@ -1987,7 +1975,7 @@ getting a notification that Git isn’t set up to work with RStudio.</p>
   Solution:
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <figure><img src="fig/05-git-not-detected.png" class="image-with-shadow figure mx-auto d-block" alt="Git not detected on system path"></figure><p>To set it up, we need to go to Tools &gt; Global Options <img src="fig/05-setup-git-rstudio.PNG" class="image-with-shadow figure" alt="Global Options Git/SVN setup"></p>
 <p>First, make sure “Enable version control interface for RStudio
@@ -2126,7 +2114,7 @@ research project?</p>
   Solution:
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Why and when would it be a good idea to add data files to the
 <code>.gitignore</code>?</p>
@@ -2176,7 +2164,7 @@ Hint (2): add a forward slash <code>/</code> after directories.</p>
   Solution:
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>Open the .gitignore file by double-clicking on it in the file view
@@ -2568,7 +2556,7 @@ What options would you have?</p>
   Solution:
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>You may change the output format in the YAML to <code>docx</code>.
 Note that to preview Word documents, you need to have MS Word, Libre or
@@ -3412,7 +3400,7 @@ change.</p>
   SOLUTION
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>The expressions in the code chunk will be evaluated, but the output
 figures/plots will not be included in the rendered document.<br>
@@ -3517,7 +3505,7 @@ figure and the caption will be displayed in the html document.</p>
   SOLUTION
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>So, you should end up with the following in your code chunk:</p>
 <pre><code>```{r}
@@ -3640,7 +3628,7 @@ libraries?</p>
   Solution:
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p>We would get an error because we haven’t loaded tidyverse which is
 required to read the CSV yet!</p>
@@ -3733,7 +3721,7 @@ code would we have to add to the following sentence?</p>
   Solution:
   </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <p>`r mean(bronars_simulation_data$violation_count)`<br>
 5.3924</p>
@@ -4212,7 +4200,7 @@ mention to this package in the data paper. Look for:
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -4333,7 +4321,7 @@ reference list even without citing it on our paper.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>You should call the @ it in the YAML, with the <code>nocite</code>
 function:</p>
@@ -4433,7 +4421,7 @@ block figures</h3>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Solution: </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>Make sure you have added a label (id). If you missed that step, now
 it is the time to add <code>#| label: fig-heartrate</code> Call the
@@ -4624,7 +4612,7 @@ research project?</p>
   Solution:
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Why and when would it be a good idea to add data files to the
 <code>.gitignore</code>?</p>
@@ -4674,7 +4662,7 @@ Hint2: add a forward slash <code>/</code> after directories.</p>
   Solution:
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>Open the .gitignore file by double-clicking on it in the file view

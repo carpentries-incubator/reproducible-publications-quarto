@@ -412,7 +412,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Scientific reproducibility: What is it for?</h1>
-        <p>Last updated on 2025-07-22 |
+        <p>Last updated on 2025-11-25 |
 
         <a href="https://github.com/carpentries-incubator/reproducible-publications-quarto/edit/main/episodes/01-introduction.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -557,8 +557,8 @@ transparency are in your best interest. Then what is the best time to
 worry about it?</p>
 <p>From day one and throughout the whole research life cycle! Before
 starting the project, you might have to learn tools like R or Git. If
-you wait too long while doing the analysis, you might lose a lot of time
-trying to remember what you did two months ago. When you write the
+you wait too long while analyzing, you might end up spending a lot of
+time trying to remember what you did two months ago. When you write the
 paper, you want up-to-date numbers, tables, and figures. When you
 co-author a paper, you want to make sure that the analyses presented in
 a paper with your name on it are sound. When you review a paper, you
@@ -567,7 +567,7 @@ can’t judge the results if you don’t know how the authors got there.</p>
 (2023)</a> argues that reproducibility often starts out as a
 burden—something others require of you, and it can feel tedious or
 frustrating. But that perception usually changes the moment you return
-to a project after some time away. Then, it becomes clear that
+to a project after a period of time away. Then, it becomes clear that
 reproducibility isn’t just essential for advancing data science—it’s
 also a practical tool that makes your own work easier to understand and
 build upon later. To achieve reproducibility, the author suggests a
@@ -583,7 +583,7 @@ others?</li>
 can this be shared clearly?</li>
 <li>How has the final paper or report been built, and to what extent can
 others follow that process themselves?</li>
-</ul><ol start="2" style="list-style-type: decimal"><li>Try to progressively accomplish the following requirements:</li>
+</ul><ol start="2" style="list-style-type: decimal"><li>Try to accomplish the following requirements progressively:</li>
 </ol><ul><li>Can you run your entire workflow again?</li>
 <li>Can another person run your entire workflow again?</li>
 <li>Can “future-you” run your entire workflow again?</li>
@@ -599,36 +599,36 @@ to its reproducibility.</p>
 </div>
 </section><section><h2 class="section-heading" id="advantages-of-using-rstudio-for-your-project">Advantages of using RStudio for your project<a class="anchor" aria-label="anchor" href="#advantages-of-using-rstudio-for-your-project"></a></h2>
 <hr class="half-width"><p>RStudio is an integrated development environment (IDE) for R and
-other programming languages, such as Python, that provide many tools to
-support code development. It includes a console syntax highlighting
-editor that supports direct code execution and tools for plotting,
-history, debugging, collaboration, and workspace management. Writing
-scripts to conduct your analysis is a powerful way to weave
+other programming languages, such as Python, that provides many tools to
+support code development. It includes a console syntax-highlighting
+editor that supports direct code execution, as well as tools for
+plotting, history, debugging, collaboration, and workspace management.
+Writing scripts to conduct your analysis is a powerful way to weave
 reproducibility principles throughout the entire research lifecycle,
 from data gathering to the statistical analysis, presentation, and
 publication of results.</p>
 <div class="section level3">
 <h3 id="it-is-free-and-open-source">It is free and open-source<a class="anchor" aria-label="anchor" href="#it-is-free-and-open-source"></a></h3>
 <p>Reproducibility becomes more complex and opaque when results rely on
-proprietary software. Unless the research code is open-source,
-reproducing results on different software/hardware configurations is
-impossible. Rstudio is dedicated to sustainable investment in free and
+proprietary software. Unless the research code is open source,
+reproducing results across different software/hardware configurations is
+impossible. RStudio is dedicated to sustainable investment in free and
 open-source software for data science.</p>
 </div>
 <div class="section level3">
 <h3 id="it-is-designed-to-make-it-easy-to-write-and-reuse-code">It is designed to make it easy to write and reuse code<a class="anchor" aria-label="anchor" href="#it-is-designed-to-make-it-easy-to-write-and-reuse-code"></a></h3>
 <p>When you create a new script, the windows/panes within your RStudio
 session adjust automatically so you can see both your script and the
-results in your console when you run your syntax. It also allows calling
-up potential syntax options while writing using the tab key.</p>
+results in your console when you run your syntax. It also allows you to
+call up potential syntax options while writing using the tab key.</p>
 </div>
 <div class="section level3">
 <h3 id="makes-it-convenient-to-view-and-interact-with-the-objects-stored-in-your-environment">Makes it convenient to view and interact with the objects stored in
 your environment<a class="anchor" aria-label="anchor" href="#makes-it-convenient-to-view-and-interact-with-the-objects-stored-in-your-environment"></a></h3>
-<p>RStudio has a handy “Environment” window, which shows all of the
-objects you have stored, including data, scalars, vectors, matrices,
-model outputs, etc., along with a summary of the information stored in
-those objects.</p>
+<p>RStudio has a handy “Environment” window that shows all the objects
+you have stored, including data, scalars, vectors, matrices, model
+outputs, etc., along with summaries of the information in those
+objects.</p>
 </div>
 <div class="section level3">
 <h3 id="makes-it-easy-to-set-your-working-directory-and-access-files-on-your-computer">Makes it easy to set your working directory and access files on your
@@ -648,22 +648,22 @@ repository on GitHub (remote) you can bring its content to your local
 machine, update it, and share changes in a streamlined way. In git
 jargon, it enables you to <code>push</code> and <code>pull</code>
 commits to GitHub, allowing seamless collaboration and effective version
-control. RStudio also provides tools to render documents (html, pdf,
-etc.) directly from Rmarkdown and Quarto notebooks and instantly
+control. RStudio also provides tools to render documents (HTML, PDF,
+etc.) directly from R Markdown and Quarto notebooks and instantly
 connects with <a href="https://rpubs.com/" class="external-link">Rpubs</a> and <a href="https://quartopub.com/" class="external-link">Quarto Pub</a> for easy R project web
 publishing. It is beyond the scope of this workshop, but Quarto also
-allows you create slides, websites, books and much more. Visit the <a href="https://quarto.org/docs/gallery" class="external-link">Quarto Gallery</a> to feel
+lets you create slides, websites, books, and more. Visit the <a href="https://quarto.org/docs/gallery" class="external-link">Quarto Gallery</a> to feel
 inspired with some examples.</p>
 </div>
 </section><section><h2 class="section-heading" id="quarto-advantages-for-your-reproducibility">Quarto advantages for your reproducibility<a class="anchor" aria-label="anchor" href="#quarto-advantages-for-your-reproducibility"></a></h2>
-<hr class="half-width"><p>We will talk more about what Quarto is in the next episode. Still, in
-a nutshell, quarto documents enable you to blend your analysis and the
-story associated with it by mixing text (using the markdown syntax) and
+<hr class="half-width"><p>We will talk more about what Quarto is in the next episode. In a
+nutshell, quarto documents enable you to blend your analysis and the
+story associated with it by combining text (using Markdown syntax) and
 executable code. You can render those documents in various formats
 (HTML, Docx, etc.), binding documentation, code, and outputs such as
-figures. It is an excellent vector for reproducibility as it makes it
-easy to update your results according to new information. For example,
-if you find new data, you can re-render the Quarto with the latest data,
+figures. It is an excellent vector for reproducibility, as it makes it
+easy to update your results based on new information. For example, if
+you find new data, you can re-render the Quarto with the latest data,
 and the plots and other computed outputs will update accordingly.</p>
 <div id="why-is-it-called-quarto" class="callout">
 <div class="callout-square">
@@ -673,14 +673,13 @@ and the plots and other computed outputs will update accordingly.</p>
 <div id="why-is-it-called-quarto" class="callout-inner">
 <h3 class="callout-title">Why is it called Quarto?</h3>
 <div class="callout-content">
-
-</div>
-</div>
-</div>
 <p>Developers picked a name that had meaning in the history of
 publishing and landed on Quarto, the format of a book or pamphlet
 produced from full sheets printed with eight pages of text, four to a
 side, then folded twice to make four leaves.</p>
+</div>
+</div>
+</div>
 <div id="why-quarto-and-not-r-markdown" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -712,8 +711,8 @@ data paper:</p>
 <p>Nitsch, F. J., Sellitto, M., &amp; Kalenscher, T. (2021). Trier
 social stress test and food-choice: Behavioral, self-report &amp;
 hormonal data. <em>Data in brief</em>, 37, 107245. <a href="https://doi.org/10.1016/j.dib.2021.107245" class="external-link uri">https://doi.org/10.1016/j.dib.2021.107245</a>.</p>
-<p>We will also be using a simplified version of the project directory
-containing data files and scripts published by the authors on Open
+<p>We will also use a simplified version of the project directory
+containing data files and scripts, published by the authors on the Open
 Science Framework: <a href="https://doi.org/10.17605/OSF.IO/6MVQ7" class="external-link uri">https://doi.org/10.17605/OSF.IO/6MVQ7</a>.</p>
 <p>The adapted paper template and project directory are used exclusively
 for instructional purposes with permission from the authors.</p>
@@ -788,7 +787,7 @@ produce reproducible research.</li>
   "url": "https://carpentries-incubator.github.io/reproducible-publications-quarto/instructor/01-introduction.html",
   "identifier": "https://carpentries-incubator.github.io/reproducible-publications-quarto/instructor/01-introduction.html",
   "dateCreated": "2021-12-01",
-  "dateModified": "2025-07-22",
+  "dateModified": "2025-11-25",
   "datePublished": "2025-11-25"
 }
 
