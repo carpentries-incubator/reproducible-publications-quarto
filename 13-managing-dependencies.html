@@ -411,7 +411,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Managing Dependencies in R/RStudio</h1>
-        <p>Last updated on 2025-07-22 |
+        <p>Last updated on 2025-11-25 |
 
         <a href="https://github.com/carpentries-incubator/reproducible-publications-quarto/edit/main/episodes/13-managing-dependencies.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -445,7 +445,7 @@ reproducible in the future?</li>
 environment used in your project.</li>
 <li>Recognize the importance of managing dependencies for RStudio
 projects.</li>
-<li>Understand how to setup Groundhog to support R code
+<li>Understand how to set up Groundhog to support R code
 reproducibility.</li>
 </ul></div>
 </div>
@@ -457,14 +457,14 @@ reproducibility.</li>
 your research reproducible if we don’t know what language the code is
 written in or if functions change or are deprecated in newer versions,
 breaking your code.</p>
-<p>Therefore, you should ask yourself: * What are the versions of the
-packages used for my project? * Will my project be usable on other
-systems or in the future? * How do you deal with projects requiring
-different versions of a package?</p>
+<p>So, I would like to ask you: * What are the versions of the packages
+used for my project? * Will my project be usable on other systems or in
+the future? * How do you deal with projects requiring different versions
+of a package?</p>
 <p>Reproducibility is a spectrum that encompasses several actions. A
 first step to help prevent this problem is to carefully document the
-hardware and versions of software used in your analyses so that others
-can recreate that computing environment if needed.</p>
+hardware and software versions used in your analyses so that others can
+recreate that computing environment if needed.</p>
 <p>In R, you can accomplish that by running the
 <code>sessionInfo()</code> function. <a href="https://cran.r-project.org/web/packages/details/vignettes/sessioninfo.html" class="external-link">see
 CRAN Docs</a> This will create a snapshot of your computational
@@ -509,40 +509,41 @@ render things correctly.</p>
 packages you’re using: “package X” and “package Y.”</p>
 <p><code>"package X" version 1.0.0 depends on "package Z" version 2.0.0. "package Y" version 1.5.0 depends on "package Z" version 1.0.0.</code></p>
 <p>You start your project by installing the latest versions of both
-packages. At this point, everything works fine, and you can proceed with
-your analysis using both packages. However, a few months later, you must
-reproduce your analysis and reinstall the packages. Unknown to you,
-“package Z” has been updated since your last installation, and the new
-version is incompatible with the older version that “package Y” depends
-on. When you try to run your analysis, you encounter errors or
+packages. At this point, everything works fine, and you can go ahead
+with your analysis using both packages. However, a few months later, you
+will need to reproduce your analysis and reinstall the packages. Unknown
+to you, “package Z” has been updated since your last installation, and
+the new version is incompatible with the older version on which “package
+Y” depends. When you try to run your analysis, you encounter errors or
 unexpected behavior because “package Y” is no longer compatible with the
-updated version of “package Z.” This mismatch in dependencies can result
-in reproducibility issues, making it challenging to replicate your
+updated version of “package Z.” This mismatch in dependencies can lead
+to reproducibility issues, making it challenging to replicate your
 previous results.</p>
 <p>You may think I can still look at the <code>sessionInfo()</code> .txt
 file and install older packages to make things work again, right? Well,
 that will require some extra work and affect your other projects that
-may rely the same packages with different versions. In this case, we
-need to take an additional action avoid this problem.</p>
+may rely on the same packages with different versions. In this case, we
+need to take an additional action to avoid this problem.</p>
 </section><section><h2 class="section-heading" id="enhancing-reproducibility-with-groundhog">Enhancing Reproducibility with Groundhog<a class="anchor" aria-label="anchor" href="#enhancing-reproducibility-with-groundhog"></a></h2>
 <hr class="half-width"><p>R/RStudio offers a vast ecosystem of packages and libraries that
 cater to a wide range of data manipulation, visualization, and analysis
-needs. However, harnessing the full potential of R often involves
-juggling a multitude of dependencies, which can lead to complex
-versioning issues, compatibility challenges, and time-consuming
+needs. However, harnessing the full potential of R often requires
+juggling multiple dependencies, which can lead to complex versioning
+issues, compatibility challenges, and time-consuming
 troubleshooting.</p>
 <p>This is where Groundhog comes to the rescue! Groundhog (<a href="https://groundhogr.com" class="external-link uri">https://groundhogr.com</a>)
 was designed to streamline and simplify R dependency management. With
-Groundhog, R users can effortlessly tackle the intricacies of package
-installations, version control, and environment isolation, making it the
-go-to solution for researchers seeking to optimize their R workflow.</p>
+Groundhog, R users can effortlessly handle the intricacies of package
+installation, version control, and environment isolation, making it the
+go-to solution for researchers seeking to optimize their R
+workflows.</p>
 </section><section><h2 class="section-heading" id="advantages">Advantages<a class="anchor" aria-label="anchor" href="#advantages"></a></h2>
-<hr class="half-width"><ul><li><p>You may use it for individual .R scripts and do not have to work
+<hr class="half-width"><ul><li><p>You may use it for individual R scripts and do not have to work
 within a project structure.</p></li>
 <li><p>Users don’t need to know about the “groundhog” package or how it
 works behind the scenes to use the code. Running the script will
-automatically handle the installation and loading of required packages
-or display an error if this process fails.</p></li>
+automatically handle installing and loading the required packages, or
+display an error if the process fails.</p></li>
 <li><p>It gives real-time feedback when each package is loaded,
 verifying whether versions match or not.</p></li>
 </ul></section><section><h2 class="section-heading" id="how-does-it-work">How does it work?<a class="anchor" aria-label="anchor" href="#how-does-it-work"></a></h2>
@@ -556,10 +557,10 @@ replaces, existing versions of that package.</p>
 for your coding, having as a starting point the first day of the month.
 In that case, you load all the essential packages tailored to that
 chosen date before creating your code:</p>
-<p><code>{r} # Imagine we're in 2023-12-01 library(groundhog) pkgs &lt;- c(pkg1, pkg2, pkg3, pkg4) groundhog.library(pkgs, '2023-12-01')</code></p>
-<p>The advantage of this approach? When you run or make any edits to
+<p><code>{r} # Imagine we're on 2023-12-01 library(groundhog) pkgs &lt;- c(pkg1, pkg2, pkg3, pkg4) groundhog.library(pkgs, '2023-12-01')</code></p>
+<p>What is the advantage of this approach? When you run or make edits to
 your script in the future, you can stick with your original date choice
-or update that by changing that date accordingly.</p>
+or update it accordingly.</p>
 <p>And if you’re going all out with multiple
 <code>groundhog.library()</code> calls, you can set the date as a
 variable, making your script even more dynamic.</p>
@@ -567,27 +568,24 @@ variable, making your script even more dynamic.</p>
 </div>
 <div class="section level3">
 <h3 id="using-groundhog-in-existing-scripts">Using GroundHog in Existing Scripts<a class="anchor" aria-label="anchor" href="#using-groundhog-in-existing-scripts"></a></h3>
-<p>Assume you developed a script months ago before you knew Groundhog
+<p>Assume you developed a script months ago, before you knew Groundhog
 even existed. The good news is that you can still apply it
 retroactively. To do so, you will need to set a
 <code>groundhog day</code> and adjust the library loading to
 <code>groundhog.library</code>. The key question is: what date should
-you choose? We advise you to try the date the script was created or last
-saved as a proxy. If the documentation includes that information, go for
-it and test if things will render correctly. If not, try a month before
-or later, and it should work. See why documenting your work matters? We
-want to avoid guessing games.</p>
-<p>After applying Groundhog, let’s see what our code in our .qmd file
-would look like.</p>
-<p>[add image - before and after]</p>
+you choose? We would suggest that you try the date the script was
+created or last saved as a proxy. If the documentation includes that
+information, go for it and test if things will render correctly. If not,
+try a month before or later, and it should work. See why documenting
+your work matters? We want to avoid guessing games.</p>
 </div>
 <div class="section level3">
 <h3 id="other-packages-that-support-code-reproducibility-in-r">Other Packages that Support Code Reproducibility in R<a class="anchor" aria-label="anchor" href="#other-packages-that-support-code-reproducibility-in-r"></a></h3>
-<p>Groundhog is only one solution to help you circumvent the dependency
+<p>Groundhog is the only solution to help you circumvent the dependency
 hell in R. While it is simple to implement and relatively effective, it
 may not be the best option depending on your project goals. It is beyond
 the scope of this workshop to explore other packages available for
-dependency management in R, but if this is a topic you would like to
+dependency management in R. Still, if this is a topic you would like to
 explore further, below, we list packages you may consider exploring:</p>
 <table class="table"><caption>Other Options to Manage Dependencies in R.</caption>
 <colgroup><col width="5%"><col width="95%"></colgroup><thead><tr class="header"><th>Package</th>
@@ -597,7 +595,7 @@ explore further, below, we list packages you may consider exploring:</p>
 RStudio and helps you create reproducible environments for your
 <strong><em>R</em></strong> projects. Use <strong><em>renv</em></strong>
 to make your <strong><em>R</em></strong> projects more isolated,
-portable and reproducible.</td>
+portable, and reproducible.</td>
 </tr><tr class="even"><td><a href="https://cran.r-project.org/web/packages/rang" class="external-link">RANG</a></td>
 <td>The <strong><em>rang</em></strong> package is geared towards
 reconstructing historical R computational environments which have not
@@ -691,7 +689,7 @@ dependencies.</li>
   "url": "https://carpentries-incubator.github.io/reproducible-publications-quarto/13-managing-dependencies.html",
   "identifier": "https://carpentries-incubator.github.io/reproducible-publications-quarto/13-managing-dependencies.html",
   "dateCreated": "2021-12-01",
-  "dateModified": "2025-07-22",
+  "dateModified": "2025-11-25",
   "datePublished": "2025-11-25"
 }
 
