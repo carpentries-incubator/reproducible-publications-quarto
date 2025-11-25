@@ -1032,7 +1032,7 @@ each directory’s contents.</p>
   Solution:
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ul>
 <li>
@@ -1185,7 +1185,7 @@ both <code>-</code> and <code>_</code> as delimiters/separators?</p>
   Solution:
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>In <code>CC-101_1_data.csv</code>, the <code>-</code> is used as part
 of the keyword shared between several files. the <code>_</code>
@@ -1252,7 +1252,7 @@ inverse relative path?</p>
   Solution:
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p><code>R-repro-pub.Rproj</code> to
 <code>bronars_simulation_data.csv</code>
@@ -1624,7 +1624,7 @@ command. Let’s now make sure you have all of them good to go.</p>
   SOLUTION
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>To see what packages are installed, use the
 <code>installed.packages()</code> command. This will return a matrix
@@ -1711,7 +1711,7 @@ the surrounding text?</p>
   SOLUTION
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p><code>##</code> is a heading, <code>**</code> is to bold enclosed
 text, and <code>&lt;&gt;</code> is for hyperlinks. Don’t worry about
@@ -1773,7 +1773,7 @@ and then on to editing and styling!</p>
 </div>
 </section></section><section id="aio-04-projects-rstudio"><p>Content from <a href="04-projects-rstudio.html">Working with projects in RStudio</a></p>
 <hr>
-<p>Last updated on 2025-11-24 |
+<p>Last updated on 2025-11-25 |
 
         <a href="https://github.com/carpentries-incubator/reproducible-publications-quarto/edit/main/episodes/04-projects-rstudio.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 30 minutes</p>
@@ -1789,9 +1789,7 @@ and then on to editing and styling!</p>
 <h3 class="card-title">Questions</h3>
 <ul>
 <li>How do I start or continue a project with Git versioning?</li>
-<li>What are the features in the RStudio Interface for working with
-Git?</li>
-<li>What are the basics of the Git versioning workflow?</li>
+<li>How does RStudio support version control?</li>
 </ul>
 </div>
 </div>
@@ -1803,8 +1801,6 @@ Git?</li>
 <ul>
 <li>Copy an existing project on GitHub to make contributions</li>
 <li>Open a project with Git versioning in RStudio</li>
-<li>Learn the basics of Git - pull, add, commit, push</li>
-<li>Make our first edits in a version-controlled project</li>
 </ul>
 </div>
 </div>
@@ -1927,7 +1923,7 @@ want to save the project, and you are good to go!</p>
 We are going to use the third option to download this repository from
 GitHub and work with it hands-on. You will need this repo in your
 working environment if you would like to follow along through this
-workshop. Let’s take a second to acquaint ourselves with GitHub. <a href="https://github.com/signup" class="external-link">At this link</a>, you may sign into
+workshop. Let’s take a moment to get acquainted with GitHub. <a href="https://github.com/signup" class="external-link">At this link</a>, you may sign into
 your GitHub account or create one if you have not already.</p>
 </div>
 </div>
@@ -1981,7 +1977,7 @@ getting a notification that Git isn’t set up to work with RStudio.</p>
   Solution:
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <figure><img src="../fig/05-git-not-detected.png" class="image-with-shadow figure mx-auto d-block" alt="Git not detected on system path"></figure><p>To set it up, we need to go to Tools &gt; Global Options <img src="../fig/05-setup-git-rstudio.PNG" class="image-with-shadow figure" alt="Global Options Git/SVN setup"></p>
 <p>First, make sure “Enable version control interface for RStudio
@@ -2093,14 +2089,13 @@ difference between your files will show in the bottom panel.</p>
 <figure><img src="../fig/05-rstudio-commit.png" class="image-with-shadow figure mx-auto d-block" alt="commit in RStudio"></figure><p>Hit commit, and a dialogue box will show a completed commit. Warning:
 <strong>DO NOT PUSH</strong> anything yet!</p>
 <p>Congrats! You made your first commit!</p>
-<div id="discussion-optional-utilizing-.gitignore-files" class="callout challenge">
+<div id="utilizing-.gitignore-files-optional" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
-<div id="discussion-optional-utilizing-.gitignore-files" class="callout-inner">
-<h3 class="callout-title">Discussion: (optional) Utilizing .gitignore
-files</h3>
+<div id="utilizing-.gitignore-files-optional" class="callout-inner">
+<h3 class="callout-title">Utilizing .gitignore files (Optional)</h3>
 <div class="callout-content">
 <p>a <code>.gitignore</code> file is used to signal to Git NOT to track
 versions of specific files. One instance where this is used in a data
@@ -2120,7 +2115,7 @@ research project?</p>
   Solution:
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>Why and when would it be a good idea to add data files to the
 <code>.gitignore</code>?</p>
@@ -2170,7 +2165,7 @@ Hint (2): add a forward slash <code>/</code> after directories.</p>
   Solution:
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>Open the .gitignore file by double-clicking on it in the file view
@@ -2563,7 +2558,7 @@ What options would you have?</p>
   Solution:
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>You may change the output format in the YAML to <code>docx</code>.
 Note that to preview Word documents, you need to have MS Word, Libre or
@@ -3410,7 +3405,7 @@ change.</p>
   SOLUTION
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>The expressions in the code chunk will be evaluated, but the output
 figures/plots will not be included in the rendered document.<br>
@@ -3515,7 +3510,7 @@ figure and the caption will be displayed in the html document.</p>
   SOLUTION
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>So, you should end up with the following in your code chunk:</p>
 <pre><code>```{r}
@@ -3638,7 +3633,7 @@ libraries?</p>
   Solution:
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>We would get an error because we haven’t loaded tidyverse which is
 required to read the CSV yet!</p>
@@ -3731,7 +3726,7 @@ code would we have to add to the following sentence?</p>
   Solution:
   </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <p>`r mean(bronars_simulation_data$violation_count)`<br>
 5.3924</p>
@@ -4010,7 +4005,7 @@ and a caption:
   Solution:
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
