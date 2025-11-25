@@ -91,9 +91,9 @@ If contributing to science and other researchers seems not to be compelling enou
 
 Let's assume I have convinced you that reproducibility and transparency are in your best interest. Then what is the best time to worry about it?
 
-From day one and throughout the whole research life cycle! Before starting the project, you might have to learn tools like R or Git. If you wait too long while doing the analysis, you might lose a lot of time trying to remember what you did two months ago. When you write the paper, you want up-to-date numbers, tables, and figures. When you co-author a paper, you want to make sure that the analyses presented in a paper with your name on it are sound. When you review a paper, you can't judge the results if you don't know how the authors got there.
+From day one and throughout the whole research life cycle! Before starting the project, you might have to learn tools like R or Git. If you wait too long while analyzing, you might end up spending a lot of time trying to remember what you did two months ago. When you write the paper, you want up-to-date numbers, tables, and figures. When you co-author a paper, you want to make sure that the analyses presented in a paper with your name on it are sound. When you review a paper, you can't judge the results if you don't know how the authors got there.
 
-[Alexander (2023)](https://rohanalexander.github.io/telling_stories-published) argues that reproducibility often starts out as a burden—something others require of you, and it can feel tedious or frustrating. But that perception usually changes the moment you return to a project after some time away. Then, it becomes clear that reproducibility isn’t just essential for advancing data science—it’s also a practical tool that makes your own work easier to understand and build upon later. To achieve reproducibility, the author suggests a three-step approach:
+[Alexander (2023)](https://rohanalexander.github.io/telling_stories-published) argues that reproducibility often starts out as a burden—something others require of you, and it can feel tedious or frustrating. But that perception usually changes the moment you return to a project after a period of time away. Then, it becomes clear that reproducibility isn’t just essential for advancing data science—it’s also a practical tool that makes your own work easier to understand and build upon later. To achieve reproducibility, the author suggests a three-step approach:
 
 1) Ensure the entire workflow is documented. This may involve addressing questions such as:
 
@@ -102,7 +102,7 @@ From day one and throughout the whole research life cycle! Before starting the p
 - What analysis has been done, which codes/scripts were used, and how can this be shared clearly?
 - How has the final paper or report been built, and to what extent can others follow that process themselves?
 
-2) Try to progressively accomplish the following requirements:
+2) Try to accomplish the following requirements progressively:
 
 - Can you run your entire workflow again?
 - Can another person run your entire workflow again?
@@ -123,19 +123,19 @@ A published article is like the top of a pyramid, meaning that a reproducible pa
 
 ## Advantages of using RStudio for your project
 
-RStudio is an integrated development environment (IDE) for R and other programming languages, such as Python, that provide many tools to support code development. It includes a console syntax highlighting editor that supports direct code execution and tools for plotting, history, debugging, collaboration, and workspace management. Writing scripts to conduct your analysis is a powerful way to weave reproducibility principles throughout the entire research lifecycle, from data gathering to the statistical analysis, presentation, and publication of results.
+RStudio is an integrated development environment (IDE) for R and other programming languages, such as Python, that provides many tools to support code development. It includes a console syntax-highlighting editor that supports direct code execution, as well as tools for plotting, history, debugging, collaboration, and workspace management. Writing scripts to conduct your analysis is a powerful way to weave reproducibility principles throughout the entire research lifecycle, from data gathering to the statistical analysis, presentation, and publication of results.
 
 ### It is free and open-source
 
-Reproducibility becomes more complex and opaque when results rely on proprietary software. Unless the research code is open-source, reproducing results on different software/hardware configurations is impossible. Rstudio is dedicated to sustainable investment in free and open-source software for data science.
+Reproducibility becomes more complex and opaque when results rely on proprietary software. Unless the research code is open source, reproducing results across different software/hardware configurations is impossible. RStudio is dedicated to sustainable investment in free and open-source software for data science.
 
 ### It is designed to make it easy to write and reuse code
 
-When you create a new script, the windows/panes within your RStudio session adjust automatically so you can see both your script and the results in your console when you run your syntax. It also allows calling up potential syntax options while writing using the tab key.
+When you create a new script, the windows/panes within your RStudio session adjust automatically so you can see both your script and the results in your console when you run your syntax. It also allows you to call up potential syntax options while writing using the tab key.
 
 ### Makes it convenient to view and interact with the objects stored in your environment
 
-RStudio has a handy "Environment" window, which shows all of the objects you have stored, including data, scalars, vectors, matrices, model outputs, etc., along with a summary of the information stored in those objects.
+RStudio has a handy "Environment" window that shows all the objects you have stored, including data, scalars, vectors, matrices, model outputs, etc., along with summaries of the information in those objects.
 
 ### Makes it easy to set your working directory and access files on your computer
 
@@ -143,19 +143,19 @@ With RStudio, you can navigate to folders on your computer in the "Files" window
 
 ### Integrates with collaboration and publishing tools
 
-Another great advantage of using RStudio for your R project is that the platform integrates with the version control system [git](https://git-scm.com/) and code repository service [GitHub](https://github.com)" Once you connect RStudio with a repository on GitHub (remote) you can bring its content to your local machine, update it, and share changes in a streamlined way. In git jargon, it enables you to `push` and `pull` commits to GitHub, allowing seamless collaboration and effective version control. RStudio also provides tools to render documents (html, pdf, etc.) directly from Rmarkdown and Quarto notebooks and instantly connects with [Rpubs](https://rpubs.com/) and [Quarto Pub](https://quartopub.com/) for easy R project web publishing. It is beyond the scope of this workshop, but Quarto also allows you create slides, websites, books and much more. Visit the [Quarto Gallery](https://quarto.org/docs/gallery) to feel inspired with some examples.
+Another great advantage of using RStudio for your R project is that the platform integrates with the version control system [git](https://git-scm.com/) and code repository service [GitHub](https://github.com)" Once you connect RStudio with a repository on GitHub (remote) you can bring its content to your local machine, update it, and share changes in a streamlined way. In git jargon, it enables you to `push` and `pull` commits to GitHub, allowing seamless collaboration and effective version control. RStudio also provides tools to render documents (HTML, PDF, etc.) directly from R Markdown and Quarto notebooks and instantly connects with [Rpubs](https://rpubs.com/) and [Quarto Pub](https://quartopub.com/) for easy R project web publishing. It is beyond the scope of this workshop, but Quarto also lets you create slides, websites, books, and more. Visit the [Quarto Gallery](https://quarto.org/docs/gallery) to feel inspired with some examples.
 
 ## Quarto advantages for your reproducibility
 
-We will talk more about what Quarto is in the next episode. Still, in a nutshell, quarto documents enable you to blend your analysis and the story  associated with it by mixing text (using the markdown syntax) and executable code. You can render those documents in various formats (HTML, Docx, etc.), binding documentation, code, and outputs such as figures. It is an excellent vector for reproducibility as it makes it easy to update your results according to new information. For example, if you find new data, you can re-render the Quarto with the latest data, and the plots and other computed outputs will update accordingly.
+We will talk more about what Quarto is in the next episode. In a nutshell, quarto documents enable you to blend your analysis and the story associated with it by combining text (using Markdown syntax) and executable code. You can render those documents in various formats (HTML, Docx, etc.), binding documentation, code, and outputs such as figures. It is an excellent vector for reproducibility, as it makes it easy to update your results based on new information. For example, if you find new data, you can re-render the Quarto with the latest data, and the plots and other computed outputs will update accordingly.
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
 ## Why is it called Quarto?
 
-::::::::::::::::::::::::::::::::::::::::::::::::::
-
 Developers picked a name that had meaning in the history of publishing and landed on Quarto, the format of a book or pamphlet produced from full sheets printed with eight pages of text, four to a side, then folded twice to make four leaves.
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
 
 
 :::::::::::::::::::::::::::::::::::::::::  callout
@@ -163,7 +163,6 @@ Developers picked a name that had meaning in the history of publishing and lande
 ## Why Quarto and not R Markdown?
 
 As noted before, Quarto is the next generation of R Markdown, and the anatomy of `.rmd` and `.qmd` files is very similar. So why move to Quarto? While compatible with Python (and bash, Julia, C, SQL), R Markdown was designed primarily for R users. **Quarto does not require R.** It supports multiple languages by delegating code execution to external engines, such as Jupyter for Python and Julia, or knitr for R. This design helps support cross-language workflows and reduces infrastructure dependencies. In addition, because Quarto is designed to be compatible with existing formats, you can render most existing `.Rmd` and Jupyter Notebooks in Quarto without modification. This helps ease the transition to Quarto.
-
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -173,7 +172,7 @@ Our goal is that by the end of this workshop, you can create a reproducible repo
 
 Nitsch, F. J., Sellitto, M., \& Kalenscher, T. (2021). Trier social stress test and food-choice: Behavioral, self-report \& hormonal data. *Data in brief*, 37, 107245. <https://doi.org/10.1016/j.dib.2021.107245>.
 
-We will also be using a simplified version of the project directory containing data files and scripts published by the authors on Open Science Framework: <https://doi.org/10.17605/OSF.IO/6MVQ7>.
+We will also use a simplified version of the project directory containing data files and scripts, published by the authors on the Open Science Framework: <https://doi.org/10.17605/OSF.IO/6MVQ7>.
 
 The adapted paper template and project directory are used exclusively for instructional purposes with permission from the authors.
 
