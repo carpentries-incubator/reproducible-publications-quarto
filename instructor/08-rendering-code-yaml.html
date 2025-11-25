@@ -410,7 +410,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Rendering &amp; Customizing Code Outputs</h1>
-        <p>Last updated on 2025-07-22 |
+        <p>Last updated on 2025-11-25 |
 
         <a href="https://github.com/carpentries-incubator/reproducible-publications-quarto/edit/main/episodes/08-rendering-code-yaml.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -435,7 +435,7 @@
 <li>How do you apply code chunk options at the document level to
 customize your code?</li>
 <li>How do you label and caption code chunks?</li>
-<li>What is inline code and when should it be used?</li>
+<li>What is inline code, and when should it be used?</li>
 </ul></div>
 </div>
 </div>
@@ -443,9 +443,9 @@ customize your code?</li>
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
-<ul><li>Learn how to insert and render run-able chunks of code to integrate
+<ul><li>Learn how to insert and render runnable chunks of code to integrate
 into your report.</li>
-<li>Apply labels and caption to code chunks.</li>
+<li>Apply labels and captions to code chunks.</li>
 <li>Learn the syntax and how to add in-line code.</li>
 </ul></div>
 </div>
@@ -453,14 +453,13 @@ into your report.</li>
 </div>
 </div>
 <section><h2 class="section-heading" id="rendering-code-in-quarto-documents">Rendering Code in Quarto Documents<a class="anchor" aria-label="anchor" href="#rendering-code-in-quarto-documents"></a></h2>
-<hr class="half-width"><p>In the previous episode, we just saw how to run our code in our code
-chunks to test that it works and to see a preview of the code output
-that will render in our HTML document, but to <em>actually</em> render
-the final, we need to use the Render button as with. Using the
-<code>Render</code> button with code chunks is a two-step process -
-first, the code is run (all code chunks will run automatically). Second,
-(if there are no code errors) the document of choice will render for our
-whole Quarto document.</p>
+<hr class="half-width"><p>In the previous episode, we saw how to run our code in code chunks to
+test that it works and to preview the code output that will render in
+our HTML document, but to <em>actually</em> render the final version, we
+need to use the Render button. Using the <code>Render</code> button with
+code chunks is a two-step process - first, the code is run (all code
+chunks will run automatically). Second, (if there are no code errors),
+the document of choice will render for our whole Quarto document.</p>
 <div id="time-to-render" class="callout checklist">
 <div class="callout-square">
 <i class="callout-icon" data-feather="check-square"></i>
@@ -469,7 +468,7 @@ whole Quarto document.</p>
 <div id="time-to-render" class="callout-inner">
 <h3 class="callout-title">Time to Render!</h3>
 <div class="callout-content">
-<p>Now, let’s Render the Quarto file and see how our code output looks
+<p>Now, let’s render the Quarto file and see how our code output looks
 on the final HTML page.</p>
 </div>
 </div>
@@ -479,13 +478,13 @@ our paper!</p>
 <figure><img src="../fig/07-HR-output-no-options.PNG" class="image-with-shadow figure mx-auto d-block" alt="Heart rate code no options for code chunk"></figure><p>This happens because the output from the running code (messages,
 results, warnings, etc.) gets added to the Quarto document instead of
 being printed to the console. Let’s see about adjusting the output to
-make it look better with code chunk rendering options.</p>
+look better using code chunk rendering options.</p>
 </section><section><h2 class="section-heading" id="code-chunk-options">Code Chunk Options<a class="anchor" aria-label="anchor" href="#code-chunk-options"></a></h2>
 <hr class="half-width"><p>There are over 50 different code chunk options!!! Obviously, we will
-not go over all of them, but they fall into several larger categories,
-including code evaluation, text output, code style, cache options, plot
-output, and animation. We’ll discuss a few options for code evaluation,
-text output, and plot output.</p>
+not go over all of them, but they fall into several broader categories:
+code evaluation, text output, code style, cache options, plot output,
+and animation. We’ll discuss a few options for code evaluation, text
+output, and plot output.</p>
 <p>Code chunk options in Quarto are added within code chunks and always
 have the following format:</p>
 <p><code>#| option: option-text</code></p>
@@ -495,7 +494,7 @@ have the following format:</p>
 output in the output document (defaults to TRUE).<br><strong>eval</strong> = (logical or numeric) TRUE/FALSE to evaluate (or
 not) or a numeric value like c(1,3) (only evaluate expressions 1 and
 3).<br><strong>echo</strong> = (logical or numeric - following the same rules
-as above) whether to display source code or not.<br><strong>results</strong> = (logical or character) text output of the
+as above), whether to display source code or not.<br><strong>results</strong> = (logical or character) text output of the
 code can be hidden (hide or FALSE) or delineated in a certain way
 (default ‘markup’).<br><strong>warning</strong> = (logical) whether to display the warnings in
 the output (default TRUE). FALSE will output warnings to the console
@@ -527,7 +526,7 @@ to show in our paper.</p>
 <div id="challenge-1---rendering-codes-optional" class="callout-inner">
 <h3 class="callout-title">CHALLENGE 1 - Rendering Codes (Optional)</h3>
 <div class="callout-content">
-<p>Given the following options, How will some hypothetical code render?
+<p>Given the following options, how will some hypothetical code render?
 Try it out with the code we just added to visualize the styling
 change.</p>
 <pre><code>```{r}
@@ -543,14 +542,13 @@ change.</p>
   SOLUTION
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
-<p>The expressions in the code chunk will be evaluated, but the
-outputted figures/plots will not be included in the rendered
-document.<br>
+<p>The expressions in the code chunk will be evaluated, but the output
+figures/plots will not be included in the rendered document.<br>
 When might you want to use this?<br>
 If you need to calculate some value or do something on your dataset for
-a further calculation or plot, the output is not important to include in
+a further calculation or plot, the output is not essential to include in
 your paper narrative.</p>
 </div>
 </div>
@@ -584,8 +582,8 @@ a label is a unique identifier that allows for more advanced options
 with <code>chunk-label</code> replaced with your own text</li>
 <li>The chunk label has to be unique (i.e., you can’t use the same name
 for multiple chunks)</li>
-</ul><p>We’ll see in a bit where this code chunk label comes in handy. But,
-for now, let’s go back and give our first code chunk a name:</p>
+</ul><p>We’ll see where this code chunk label comes in handy. But, for now,
+let’s go back and give our first code chunk a name:</p>
 <p><code>#| label: fig-heartrate</code></p>
 <p>When naming your code chunks that will produce figures or tables, use
 <code>fig-</code> and <code>tbl-</code>. We will learn how these will
@@ -645,7 +643,7 @@ figure and the caption will be displayed in the html document.</p>
   SOLUTION
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>So, you should end up with the following in your code chunk:</p>
 <pre><code>```{r}
@@ -671,7 +669,7 @@ quotes.</p>
 <div class="callout-inner">
 <div class="callout-content">
 <p>Other options that change how a plot or figure appears often use the
-syntax <code>fig-xxx</code> similar to <code>fig-cap</code> Some other
+syntax <code>fig-xxx</code>, similar to <code>fig-cap</code>. Some other
 useful plot/figure code options include (From <a href="https://yihui.org/knitr/options/#plots" class="external-link">Yihui Xie’s page</a>
 ):</p>
 <ul><li>
@@ -763,7 +761,7 @@ libraries?</p>
   Solution:
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p>We would get an error because we haven’t loaded tidyverse which is
 required to read the CSV yet!</p>
@@ -772,17 +770,17 @@ required to read the CSV yet!</p>
 </div>
 </div>
 <p>At this point, we could go back through our R scripts and comment out
-(or delete) the beginning sections where we load the data and libraries
-(you will see this is already done in most of the scripts in the code
-folder). You can imagine that the more code chunks you have, the more
-time taking this step would save. Bonus: This also works to load the
-data before it is called in the inline code as we will see below.</p>
+(or delete) the sections at the beginning that load the data and
+libraries (you will see this is already done in most of the scripts in
+the code folder). You can imagine that the more code chunks you have,
+the more time this step would save. Bonus: This also works to load the
+data before it is called in the inline code, as we will see below.</p>
 </div>
 </section><section><h2 class="section-heading" id="adding-in-line-code">Adding In-line Code<a class="anchor" aria-label="anchor" href="#adding-in-line-code"></a></h2>
 <hr class="half-width"><p>We have already learned how to create, run, and customize code
 chunks, but what if you only need to make a quick calculation, and
 adding a code chunk seems a little overkill?</p>
-<p>Sometimes, you just need to do a quick calculation to add to your
+<p>Sometimes, you need to do a quick calculation to add to your
 narrative - such as a count of total observations in your data or the
 mean of one of your variables. In those cases, it may not be worth
 setting up a code chunk to calculate those values, so Quarto also
@@ -790,27 +788,27 @@ provides the ability to use inline code.</p>
 <p>If that is the case, you can include <code>r code</code> directly in
 the text portion of your document by enclosing it between single
 backticks. Say you are discussing some of the summary statistics in your
-manuscript, Quarto makes this possible through HTML/LaTeX inline code,
-which allows you to calculate simple expressions integrated into your
-narrative. Inline code lets you insert `r code`\ into your document to
-dynamically update portions of your text. In other words, if your data
-set changes, the code will automatically update the specified
+manuscript. Quarto makes this possible through HTML/LaTeX inline code,
+which lets you calculate simple expressions directly in your narrative.
+Inline code lets you insert `r code`\ into your document to update
+portions of your text dynamically. In other words, if your data set
+changes, the code will automatically update the specified
 calculation.</p>
 <p>This can be helpful when referring to specific variables in your
-data. For example, you should include numbers that are derived from the
-data as code, not as numbers.</p>
+data. For example, you should include data-derived numbers as code, not
+as numbers.</p>
 <p>Thus, rather than writing “The CSV file contains choice consistency
 data for 10.000 simulated participants” <strong>(Example 7A)</strong>,
 replace the static number with a bit of code that, when evaluated, gives
-you a dynamic number if anything changes on your dataset. Note that
-there is not an insert option to do this from the menu in the visual
-editor, so we need to insert inline code manually, for example:</p>
+you a dynamic number if anything changes in your dataset. Note that
+there is no insert option to do this from the menu in the visual editor,
+so we need to insert inline code manually, for example:</p>
 <p>The CSV file contains choice consistency data for `r
 nrow(bronars_simulation_data)`\ simulated participants.</p>
-<p>When you render, you might get an error. Any idea why? That is
-because we need to make sure to import the dataset we are referring to
-before the inline code can work. Let’s add the following to our chunk at
-the beginning of the document where we loaded our other data:</p>
+<p>When you render, you might get an error. Do you have any idea why?
+That is because we need to import the dataset we are referring to before
+the inline code can run. Let’s add the following to our chunk at the
+beginning of the document where we loaded our other data:</p>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -853,7 +851,7 @@ code would we have to add to the following sentence?</p>
   Solution:
   </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <p>`r mean(bronars_simulation_data$violation_count)`<br>
 5.3924</p>
@@ -869,8 +867,8 @@ code would we have to add to the following sentence?</p>
 <div id="important-note" class="callout-inner">
 <h3 class="callout-title">Important Note:</h3>
 <div class="callout-content">
-<p>Make sure the file you are calling is in the right subdirectory and
-your working directory is set appropriately.</p>
+<p>Make sure the file you are calling is in the correct subdirectory,
+and your working directory is set appropriately.</p>
 </div>
 </div>
 </div>
@@ -882,8 +880,8 @@ your working directory is set appropriately.</p>
 <div id="more-on-inline-codes" class="callout-inner">
 <h3 class="callout-title">More on inline codes:</h3>
 <div class="callout-content">
-<p>Quarto will always display the results of the inline code but not the
-code. Inline expressions do not take knitr options.</p>
+<p>Quarto will always display the results of the inline code, but not
+the code. Inline expressions do not take knitr options.</p>
 </div>
 </div>
 </div>
@@ -958,8 +956,8 @@ run and be displayed.</li>
   "url": "https://carpentries-incubator.github.io/reproducible-publications-quarto/instructor/08-rendering-code-yaml.html",
   "identifier": "https://carpentries-incubator.github.io/reproducible-publications-quarto/instructor/08-rendering-code-yaml.html",
   "dateCreated": "2021-12-01",
-  "dateModified": "2025-07-22",
-  "datePublished": "2025-11-24"
+  "dateModified": "2025-11-25",
+  "datePublished": "2025-11-25"
 }
 
   </script><script>

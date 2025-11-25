@@ -412,7 +412,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Good Practices for Managing Projects in RStudio</h1>
-        <p>Last updated on 2025-07-22 |
+        <p>Last updated on 2025-11-25 |
 
         <a href="https://github.com/carpentries-incubator/reproducible-publications-quarto/edit/main/episodes/02-reproducibility.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -442,11 +442,12 @@
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
-<ul><li>Best practices for working on research projects involving data.</li>
-<li>The purpose of using RStudio Projects (<code>.Rproj</code>
-files).</li>
-<li>Using version control in RStudio.</li>
-<li>Starting or continuing an R project.</li>
+<ul><li>Become familiar with best practices for working on research projects
+involving data.</li>
+<li>Understand the purpose of using RStudio Projects
+(<code>.Rproj</code> files).</li>
+<li>Utilize version control in RStudio.</li>
+<li>Start and continue an R project.</li>
 </ul></div>
 </div>
 </div>
@@ -454,20 +455,20 @@ files).</li>
 </div>
 <section><h2 class="section-heading" id="managing-research-projects">Managing Research Projects<a class="anchor" aria-label="anchor" href="#managing-research-projects"></a></h2>
 <hr class="half-width"><p>The ability to integrate code and narratives is a major advantage of
-Quarto and the RStudio environment, especially considering the
+Quarto and the RStudio environment, especially considering that the
 scientific process is naturally incremental, and many projects start
 life as random notes, some code, then a manuscript, and eventually,
 everything ends up a bit mixed together. To complicate things further,
 we often work with other collaborators, lab members, graduate students,
 and faculty from the same or different institutions, which makes it that
 much more difficult to keep projects organized. When you throw data into
-the mix (sometimes huge amounts of it!), it’s integral to use best
+the mix (sometimes vast amounts of it!) it’s integral to use best
 practices to maintain the integrity of your analysis and to be able to
 publish high-quality and reproducible research. Quarto is a powerful
-tool that can’t be fully utilized unless your project documents, scripts
-and other files are well-organized. So, let’s take a look at RStudio’s
-features for managing projects and discuss some of the best practices
-when working with data and collaborators.</p>
+tool that can’t be fully utilized unless your project documents,
+scripts, and other files are well-organized. So, let’s take a look at
+RStudio’s features for managing projects and discuss some of the best
+practices when working with data and collaborators.</p>
 </section><section><h2 class="section-heading" id="research-project-stress-points">Research Project Stress Points<a class="anchor" aria-label="anchor" href="#research-project-stress-points"></a></h2>
 <hr class="half-width"><p>We often have organizational or logistical stress points in our
 research that may become breaking points, especially when it comes to
@@ -733,15 +734,15 @@ future uses of the information contained within the filename.</p>
 </div>
 <div class="section level4">
 <h4 id="use-relative-paths"><strong>Use relative paths</strong><a class="anchor" aria-label="anchor" href="#use-relative-paths"></a></h4>
-<p>This goes hand-in-hand with keeping your project within one “root”
-directory. If you use complete paths to, say, read your data to RStudio
-and then share your code with a collaborator, they won’t be able to run
-it because the complete path you used is unique to your system, and they
-will receive an error that the file is not found. That is why one should
-always use relative paths to link to other files in the project, i.e.,
-“Where is my data file in relation to the script I’m reading the data
-into?”. The practice of using relative paths is made easier by having a
-directory set up and keeping all project files within one root project
+<p>This goes hand in hand with keeping your project within a single
+“root” directory. If you use complete paths to, say, read your data to
+RStudio and then share your code with a collaborator, they won’t be able
+to run it because the complete path you used is unique to your system,
+and they will receive an error that the file is not found. That is why
+one should always use relative paths to link to other files in the
+project, i.e., “Where is my data file in relation to the script I’m
+reading the data into?” Using relative paths is easier when a directory
+is set up and all project files are kept within a single root project
 folder.</p>
 <p>Assuming your R script is in a <code>code</code> directory and your
 data file is in a <code>data</code> directory, then an example of a
@@ -765,8 +766,8 @@ R script, they would have to alter the path to match their system.</p>
 <div class="callout-content">
 <p>What would be the relative path needed to refer to the file
 <code>bronars_simulation_data.csv</code> (located in the raw directory)
-from <code>R-repro-pub.Rproj</code> (root directory). And what about the
-inversed relative path?</p>
+from <code>R-repro-pub.Rproj</code> (root directory)? And what about the
+inverse relative path?</p>
 </div>
 </div>
 </div>
@@ -784,47 +785,46 @@ inversed relative path?</p>
 “data/raw/bronars_simulation_data.csv”</p>
 <p><code>bronars_simulation_data.csv</code>to
 <code>R-repro-pub.Rproj</code> “../..” “..” directs back to the
-directory that contains the directory of the file of interest.</p>
+directory that contains the file of interest.</p>
 </div>
 </div>
 </div>
 </div>
 <div class="section level5">
 <h5 id="level-up-your-relative-paths"><strong>Level up your relative paths</strong><a class="anchor" aria-label="anchor" href="#level-up-your-relative-paths"></a></h5>
-<p>We’ve just discussed how using relative paths is a better practice in
-coding, as it helps ensure that our code works consistently across
+<p>We’ve just discussed how using relative paths is a better coding
+practice, as it helps ensure our code works consistently across
 different systems. However, relative paths can still be quite confusing
 to deal with, especially when you have many sub-directories in your
-project. One way to make things a bit easier on ourselves is to make
-sure the part that’s <em>relative</em> to what we’re referencing is
-always the same.</p>
+project. One way to make things a bit easier on ourselves is to ensure
+the part that’s <em>relative</em> to what we’re referencing stays the
+same.</p>
 <p>This is where using the <code>RStudio Project</code> can help. When
 you create a Project in RStudio, in the background, RStudio will
 automatically create a “root” folder and set it as your working
 directory in R. Since in R relative paths are relative to your working
 directory, this will ease referring to external input or output files
-(data, images, plots, …) in a consistent manner across your project by
-always having your relative paths relative to the top level folder and
-help to encapsulate your work within this folder. So with an Rproject
-setup, the relative path in the previous example will now be:</p>
+(data, images, plots, …) consistently across your project by always
+having your relative paths relative to the top level folder and help to
+encapsulate your work within this folder. So with an Rproject setup, the
+relative path in the previous example will now be:</p>
 <pre><code><span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu">read.csv</span><span class="op">(</span><span class="st">"data/foodchoice_budgetlines.csv"</span><span class="op">)</span></span></code></pre>
 <p>In the end, this means you can move this folder around on your
-machine or to another machine, and all the paths will still be
-valid.</p>
+machine or to another machine, and all paths will remain valid.</p>
 </div>
 </div>
 <div class="section level4">
 <h4 id="treat-data-as-read-only"><strong>Treat data as read-only</strong><a class="anchor" aria-label="anchor" href="#treat-data-as-read-only"></a></h4>
-<p>This is probably the most important goal of setting up a project.
-Data is typically time-consuming and/or expensive to collect. Working
-with them interactively (e.g., in Excel or R) and where they can be
-modified means you are never sure of where the data came from or how it
-has been modified since collection. Therefore, treating your data as
+<p>This is the most important goal of setting up a project. Data
+collection is typically time-consuming and/or expensive. Working with
+them interactively (e.g., in Excel or R) and allowing them to be
+modified means you are never sure where the data came from or how they
+have been modified since collection. Therefore, treating your data as
 “read-only” is a good idea. However, in many cases, your data will be
 “dirty”: it will need significant preprocessing to get into a format R
-(or any other programming language) will find useful. Storing these
+(or any other programming language) will find helpful. Storing these
 cleaning scripts in a separate folder (e.g., code) and creating a second
-data folder to hold the “cleaned” data sets can prevent confusion
+data folder to hold the “cleaned” datasets can help prevent confusion
 between the two sets. You should have separate folders for each: raw
 data, code, and output data/analyses. You wouldn’t mix your clean
 laundry with your dirty laundry, right?</p>
@@ -833,53 +833,53 @@ laundry with your dirty laundry, right?</p>
 <h4 id="treat-generated-output-as-disposable"><strong>Treat generated output as disposable</strong><a class="anchor" aria-label="anchor" href="#treat-generated-output-as-disposable"></a></h4>
 <p>Anything generated by your scripts should be treated as disposable:
 it should all be able to be regenerated from your scripts (and the raw
-data). There are lots of different ways to manage this output. Having an
-output folder with different sub-directories for each separate analysis
-makes it easier later. Since many analyses are exploratory and aren’t
-used in the final project, some of the analyses get shared between
-projects.</p>
+data). There are many ways to manage this output. Having an output
+folder with different sub-directories for each separate analysis makes
+it easier later. Since many analyses are exploratory and aren’t used in
+the final project, some are shared across projects.</p>
 </div>
 <div class="section level4">
 <h4 id="include-a-readme-file"><strong>Include a README file</strong><a class="anchor" aria-label="anchor" href="#include-a-readme-file"></a></h4>
 <p>For more information about the README file and a customizable
 template, check this <a href="https://perma.cc/A5PN-YF7Z" class="external-link">handout</a>.
-Make sure to include citation and license information both for your data
-<a href="https://creativecommons.org/share-your-work/cclicenses/" class="external-link">see
+Make sure to include citation and license information, both for your
+data <a href="https://creativecommons.org/share-your-work/cclicenses/" class="external-link">see
 creative commons license</a> and software (<a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository" class="external-link">see
 license types on Github</a>). This information will be critical for
 others to reuse and correctly attribute your work. You may also consider
 adding a separate citation and license file to your project folder.</p>
 <p>Again, there are no hard and fast rules here, but remember, keeping
-your raw data files separate is important to ensure they don’t get
+your raw data files separate is essential to ensure they don’t get
 overwritten after you use a script to clean your data. It’s also very
 helpful to keep the different files generated by your analysis organized
 in a folder.</p>
-<p>*what’s this <code>.Rproj</code> file? We’ll explain in a bit.</p>
+<p>*what’s this <code>.Rproj</code> file? We’ll be able to explain in a
+bit.</p>
 </div>
 </div>
 </section><section><h2 class="section-heading" id="storage-and-sharing">Storage and Sharing<a class="anchor" aria-label="anchor" href="#storage-and-sharing"></a></h2>
 <hr class="half-width"><div class="section level3">
 <h3 id="backup-your-work">Backup your work<a class="anchor" aria-label="anchor" href="#backup-your-work"></a></h3>
-<p>Having a solid backup plan in case of emergencies (say, your hard
-drive on your computer fails) is essential. The general guideline for
+<p>Having a solid backup plan in case of emergencies (e.g., your
+computer’s hard drive fails) is essential. The general guideline for
 backups is to adhere to the <a href="https://www.uschamber.com/co/run/technology/3-2-1-backup-rule" class="external-link">3-2-1
-principle</a>, which dictates that you should have 3 copies on 2
-different media, with 1 copy offsite. Your decision on backups will be
-based on your own personal tolerance, but we recommend, at minimum,
-avoiding only having a copy of your project on your personal, work
-computer, or lab computer at all costs.</p>
+principle</a>, which dictates that you should have three copies on two
+different media, with one copy offsite. Your decision on backups will be
+based on your own personal tolerance, but we recommend, at a minimum,
+avoiding having only a copy of your project on your personal or work
+computer, or on a lab computer, at all costs.</p>
 <p>At the very least, you should back up your project in cloud storage
 (either provided by your university or paid for yourself). Common cloud
 storage platforms include Google Drive, Box, OneDrive, Dropbox, etc.
-Backing up a project on a local device to cloud storage allows you to
-meet two of the 3-2-1 criteria (2 different media and 1 offsite). If
+Backing up a project to a local device and to cloud storage allows you
+to meet 2 of the 3-2-1 criteria (2 different media and 1 offsite). If
 you’re working with at least one collaborator, and they also keep an
 up-to-date copy of the project on their computer, you’re set!</p>
 </div>
 <div class="section level3">
 <h3 id="version-control-hosting-services">Version Control hosting services<a class="anchor" aria-label="anchor" href="#version-control-hosting-services"></a></h3>
-<p>If your research project involves code, the best way to make sure you
-have your work backed up AND keep track of your code is to use a version
+<p>If your research project involves code, the best way to ensure your
+work is backed up AND to keep track of your code is to use a version
 control hosting service such as GitHub. Note that out-of-the-box Git
 and, thus, GitHub are not optimized to handle large files, and
 therefore, we do not recommend using these tools to version data beyond
@@ -887,14 +887,14 @@ maybe small data sets in a text-based format such as CSV files.</p>
 <p>The main three version control hosting services are GitHub, GitLab,
 and BitBucket. To see a comparison of the available options, see this
 comparison on <a href="https://www.linkedin.com/pulse/demystifying-git-vs-github-atlassian-bitbucket-gitlab-pawan-verma?trk=read_related_article-card_title." class="external-link">LinkedIn</a></p>
-<p>We will proceed using GitHub because it is the most used version
+<p>We will go ahead using GitHub because it is the most used version
 control platform to date.</p>
 </div>
 </section><section><h2 class="section-heading" id="using-version-control">Using Version Control<a class="anchor" aria-label="anchor" href="#using-version-control"></a></h2>
 <hr class="half-width"><p>Okay, let’s talk about implementing version control in your project
 through RStudio! But first… let’s quickly clarify the difference between
-Git and GitHub. We already said that GitHub is the version control
-hosting platform. Git is the version control system and does not
+Git and GitHub. We already said that GitHub is a version control hosting
+platform. Git is the version control system and does not
 <strong>have</strong> to be used with GitHub. You can use Git and then
 host your code on Bitbucket, for example, or save it to your Google
 Drive. In fact, you can use Git on your local system only and never save
@@ -905,25 +905,25 @@ can be a bit confusing because they are so often used together, but the
 more you use them, the more it will make sense. Soon enough, you’ll be
 wondering how you even completed a code project without version
 control.</p>
-<p>There are actually many ways to use Git; you could use it on GitHub
-only (though that suffers from a lack of options and is a bit clunky),
+<p>There are actually many ways to use Git: you could use it only on
+GitHub (though that suffers from a lack of options and is a bit clunky),
 there is a Desktop interface, and many serious programmers use it on the
-command line. HOWEVER, RStudio has Git controls built in, so we’ll use
-it all in one place!</p>
+command line. However, RStudio has built-in Git controls, so we’ll use
+them all in one place!</p>
 </section><section><h2 class="section-heading" id="project-environments-in-r">Project Environments in R<a class="anchor" aria-label="anchor" href="#project-environments-in-r"></a></h2>
 <hr class="half-width"><p>Environments are a rather advanced topic in programming, but we will
-introduce some capabilities for projects in R that increase the
-reproducibility of your code. Essentially, a project environment allows
-us to save (or take a snapshot) of our R version and dependencies - aka
-what packages/package versions are required to run our code without
-error. This can be important when collaborating with others, and you may
-be unsure whether you are working with the same R and package versions.
-Another common issue is if you try to run very old code from a previous
-project - the older the code, the more likely errors will crop up, or
-the code will no longer run as it used to. To take advantage of project
-environments, we will use a package called <code>renv</code>, the
-successor of <code>packrat</code>, which used to be the de facto package
-in R for managing environments.</p>
+introduce capabilities in R that improve the reproducibility of your
+code. Essentially, a project environment allows us to save (or take a
+snapshot) of our R version and dependencies - aka what packages/package
+versions are required to run our code without error. This can be
+important when collaborating with others, and you may be unsure whether
+you are working with the same R and package versions. Another common
+issue is if you try to run very old code from a previous project - the
+older the code, the more likely errors will crop up, or the code will no
+longer run as it used to. To take advantage of project environments, we
+will use a package called <code>renv</code>, the successor of
+<code>packrat</code>, which used to be the de facto package in R for
+managing environments.</p>
 <p>However, as noted in this <a href="https://rstudio.github.io/renv/articles/renv.html" class="external-link">RStudio article
 on renv</a>, using <code>renv</code> does not automatically make your
 project reproducible, nor is it bullet-proof. Sometimes, other factors
@@ -932,9 +932,9 @@ come into play that may alter the results of your code despite using
 ‘containers’ such as Docker or Kubernetes to go one step further in
 assuring reproducibility. However, that is beyond the scope of this
 workshop.</p>
-<p>Later on this workshop we will cover dependencies and how one can
+<p>Later in this workshop, we will cover dependencies and how to
 implement project environments with <code>renv</code> to increase
-reproducibility with R projects.</p>
+reproducibility in R projects.</p>
 <p>Before we use Git and environments in the RStudio project, we must be
 working on an R Project, so let’s talk about how R Projects work in
 RStudio.</p>
@@ -957,17 +957,17 @@ additional benefit of being able to use Git within RStudio.</p>
 </div>
 <div class="section level4">
 <h4 id="quarto-projects">Quarto Projects<a class="anchor" aria-label="anchor" href="#quarto-projects"></a></h4>
-<p>Perhaps, confusing, but we have an additional “type” of project in
-the RStudio ecosystem called a Quarto project. Thankfully, we don’t
-necessarily have to pick between using RStudio and Quarto projects
-because a Quarto project is just an RStudio project - with some
-additional capabilities. That addition is enhanced project and style
-controls in the form of a YAML file called <code>_quarto.yml</code>. To
-keep things simple, if you are going to use Quarto documents, use Quarto
-Projects; if you aren’t, stick to an R project. And no worries, you can
-always add a <code>_quarto.yml</code> file if you have just an RStudio
-Project which can retroactively turn your project into a Quarto project.
-We will see how to create a Quarto project further in this workshop.</p>
+<p>Perhaps confusing, but we have an additional “type” of project in the
+RStudio ecosystem called a Quarto project. Thankfully, we don’t have to
+choose between RStudio and Quarto projects, because a Quarto project is
+just an RStudio project with additional capabilities. That addition
+includes enhanced project and style controls in a YAML file called
+<code>_quarto.yml</code>. To keep things simple, if you are going to use
+Quarto documents, use Quarto Projects; if you aren’t, stick to an R
+project. And no worries, you can always add a <code>_quarto.yml</code>
+file if you have just an RStudio Project, which can retroactively turn
+your project into a Quarto project. We will see how to create a Quarto
+project further in this workshop.</p>
 <div id="challenge-4-r-project-in-root-folder" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
@@ -990,8 +990,8 @@ again? Tip: Look back at the relative paths intro.</p>
 <div class="callout-inner">
 <div class="callout-content">
 <ul><li>Use best practices for file and folder organization. This includes
-using relative file paths as opposed to complete file paths.</li>
-<li>Make sure that all data are backed up on multiple devices and that
+using relative file paths rather than full file paths.</li>
+<li>Make sure that all data is backed up on multiple devices and that
 you treat raw data as read-only.</li>
 <li>We can use Git and GitHub to keep track of what we’ve done in the
 past and what we plan to do in the future.</li>
@@ -1060,8 +1060,8 @@ organized.</li>
   "url": "https://carpentries-incubator.github.io/reproducible-publications-quarto/02-reproducibility.html",
   "identifier": "https://carpentries-incubator.github.io/reproducible-publications-quarto/02-reproducibility.html",
   "dateCreated": "2021-12-01",
-  "dateModified": "2025-07-22",
-  "datePublished": "2025-11-24"
+  "dateModified": "2025-11-25",
+  "datePublished": "2025-11-25"
 }
 
   </script><script>

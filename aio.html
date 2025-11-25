@@ -834,7 +834,7 @@ produce reproducible research.</li>
 </div>
 </section></section><section id="aio-02-reproducibility"><p>Content from <a href="02-reproducibility.html">Good Practices for Managing Projects in RStudio</a></p>
 <hr>
-<p>Last updated on 2025-07-22 |
+<p>Last updated on 2025-11-25 |
 
         <a href="https://github.com/carpentries-incubator/reproducible-publications-quarto/edit/main/episodes/02-reproducibility.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -861,11 +861,12 @@ produce reproducible research.</li>
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>Best practices for working on research projects involving data.</li>
-<li>The purpose of using RStudio Projects (<code>.Rproj</code>
-files).</li>
-<li>Using version control in RStudio.</li>
-<li>Starting or continuing an R project.</li>
+<li>Become familiar with best practices for working on research projects
+involving data.</li>
+<li>Understand the purpose of using RStudio Projects
+(<code>.Rproj</code> files).</li>
+<li>Utilize version control in RStudio.</li>
+<li>Start and continue an R project.</li>
 </ul>
 </div>
 </div>
@@ -876,20 +877,20 @@ files).</li>
 </h2>
 <hr class="half-width">
 <p>The ability to integrate code and narratives is a major advantage of
-Quarto and the RStudio environment, especially considering the
+Quarto and the RStudio environment, especially considering that the
 scientific process is naturally incremental, and many projects start
 life as random notes, some code, then a manuscript, and eventually,
 everything ends up a bit mixed together. To complicate things further,
 we often work with other collaborators, lab members, graduate students,
 and faculty from the same or different institutions, which makes it that
 much more difficult to keep projects organized. When you throw data into
-the mix (sometimes huge amounts of it!), it’s integral to use best
+the mix (sometimes vast amounts of it!) it’s integral to use best
 practices to maintain the integrity of your analysis and to be able to
 publish high-quality and reproducible research. Quarto is a powerful
-tool that can’t be fully utilized unless your project documents, scripts
-and other files are well-organized. So, let’s take a look at RStudio’s
-features for managing projects and discuss some of the best practices
-when working with data and collaborators.</p>
+tool that can’t be fully utilized unless your project documents,
+scripts, and other files are well-organized. So, let’s take a look at
+RStudio’s features for managing projects and discuss some of the best
+practices when working with data and collaborators.</p>
 </section><section><h2 class="section-heading" id="research-project-stress-points">Research Project Stress Points<a class="anchor" aria-label="anchor" href="#research-project-stress-points"></a>
 </h2>
 <hr class="half-width">
@@ -1215,15 +1216,15 @@ future uses of the information contained within the filename.</p>
 <h4 id="use-relative-paths">
 <strong>Use relative paths</strong><a class="anchor" aria-label="anchor" href="#use-relative-paths"></a>
 </h4>
-<p>This goes hand-in-hand with keeping your project within one “root”
-directory. If you use complete paths to, say, read your data to RStudio
-and then share your code with a collaborator, they won’t be able to run
-it because the complete path you used is unique to your system, and they
-will receive an error that the file is not found. That is why one should
-always use relative paths to link to other files in the project, i.e.,
-“Where is my data file in relation to the script I’m reading the data
-into?”. The practice of using relative paths is made easier by having a
-directory set up and keeping all project files within one root project
+<p>This goes hand in hand with keeping your project within a single
+“root” directory. If you use complete paths to, say, read your data to
+RStudio and then share your code with a collaborator, they won’t be able
+to run it because the complete path you used is unique to your system,
+and they will receive an error that the file is not found. That is why
+one should always use relative paths to link to other files in the
+project, i.e., “Where is my data file in relation to the script I’m
+reading the data into?” Using relative paths is easier when a directory
+is set up and all project files are kept within a single root project
 folder.</p>
 <p>Assuming your R script is in a <code>code</code> directory and your
 data file is in a <code>data</code> directory, then an example of a
@@ -1247,8 +1248,8 @@ R script, they would have to alter the path to match their system.</p>
 <div class="callout-content">
 <p>What would be the relative path needed to refer to the file
 <code>bronars_simulation_data.csv</code> (located in the raw directory)
-from <code>R-repro-pub.Rproj</code> (root directory). And what about the
-inversed relative path?</p>
+from <code>R-repro-pub.Rproj</code> (root directory)? And what about the
+inverse relative path?</p>
 </div>
 </div>
 </div>
@@ -1266,7 +1267,7 @@ inversed relative path?</p>
 “data/raw/bronars_simulation_data.csv”</p>
 <p><code>bronars_simulation_data.csv</code>to
 <code>R-repro-pub.Rproj</code> “../..” “..” directs back to the
-directory that contains the directory of the file of interest.</p>
+directory that contains the file of interest.</p>
 </div>
 </div>
 </div>
@@ -1275,42 +1276,41 @@ directory that contains the directory of the file of interest.</p>
 <h5 id="level-up-your-relative-paths">
 <strong>Level up your relative paths</strong><a class="anchor" aria-label="anchor" href="#level-up-your-relative-paths"></a>
 </h5>
-<p>We’ve just discussed how using relative paths is a better practice in
-coding, as it helps ensure that our code works consistently across
+<p>We’ve just discussed how using relative paths is a better coding
+practice, as it helps ensure our code works consistently across
 different systems. However, relative paths can still be quite confusing
 to deal with, especially when you have many sub-directories in your
-project. One way to make things a bit easier on ourselves is to make
-sure the part that’s <em>relative</em> to what we’re referencing is
-always the same.</p>
+project. One way to make things a bit easier on ourselves is to ensure
+the part that’s <em>relative</em> to what we’re referencing stays the
+same.</p>
 <p>This is where using the <code>RStudio Project</code> can help. When
 you create a Project in RStudio, in the background, RStudio will
 automatically create a “root” folder and set it as your working
 directory in R. Since in R relative paths are relative to your working
 directory, this will ease referring to external input or output files
-(data, images, plots, …) in a consistent manner across your project by
-always having your relative paths relative to the top level folder and
-help to encapsulate your work within this folder. So with an Rproject
-setup, the relative path in the previous example will now be:</p>
+(data, images, plots, …) consistently across your project by always
+having your relative paths relative to the top level folder and help to
+encapsulate your work within this folder. So with an Rproject setup, the
+relative path in the previous example will now be:</p>
 <pre><code><span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu">read.csv</span><span class="op">(</span><span class="st">"data/foodchoice_budgetlines.csv"</span><span class="op">)</span></span></code></pre>
 <p>In the end, this means you can move this folder around on your
-machine or to another machine, and all the paths will still be
-valid.</p>
+machine or to another machine, and all paths will remain valid.</p>
 </div>
 </div>
 <div class="section level4">
 <h4 id="treat-data-as-read-only">
 <strong>Treat data as read-only</strong><a class="anchor" aria-label="anchor" href="#treat-data-as-read-only"></a>
 </h4>
-<p>This is probably the most important goal of setting up a project.
-Data is typically time-consuming and/or expensive to collect. Working
-with them interactively (e.g., in Excel or R) and where they can be
-modified means you are never sure of where the data came from or how it
-has been modified since collection. Therefore, treating your data as
+<p>This is the most important goal of setting up a project. Data
+collection is typically time-consuming and/or expensive. Working with
+them interactively (e.g., in Excel or R) and allowing them to be
+modified means you are never sure where the data came from or how they
+have been modified since collection. Therefore, treating your data as
 “read-only” is a good idea. However, in many cases, your data will be
 “dirty”: it will need significant preprocessing to get into a format R
-(or any other programming language) will find useful. Storing these
+(or any other programming language) will find helpful. Storing these
 cleaning scripts in a separate folder (e.g., code) and creating a second
-data folder to hold the “cleaned” data sets can prevent confusion
+data folder to hold the “cleaned” datasets can help prevent confusion
 between the two sets. You should have separate folders for each: raw
 data, code, and output data/analyses. You wouldn’t mix your clean
 laundry with your dirty laundry, right?</p>
@@ -1321,11 +1321,10 @@ laundry with your dirty laundry, right?</p>
 </h4>
 <p>Anything generated by your scripts should be treated as disposable:
 it should all be able to be regenerated from your scripts (and the raw
-data). There are lots of different ways to manage this output. Having an
-output folder with different sub-directories for each separate analysis
-makes it easier later. Since many analyses are exploratory and aren’t
-used in the final project, some of the analyses get shared between
-projects.</p>
+data). There are many ways to manage this output. Having an output
+folder with different sub-directories for each separate analysis makes
+it easier later. Since many analyses are exploratory and aren’t used in
+the final project, some are shared across projects.</p>
 </div>
 <div class="section level4">
 <h4 id="include-a-readme-file">
@@ -1333,18 +1332,19 @@ projects.</p>
 </h4>
 <p>For more information about the README file and a customizable
 template, check this <a href="https://perma.cc/A5PN-YF7Z" class="external-link">handout</a>.
-Make sure to include citation and license information both for your data
-<a href="https://creativecommons.org/share-your-work/cclicenses/" class="external-link">see
+Make sure to include citation and license information, both for your
+data <a href="https://creativecommons.org/share-your-work/cclicenses/" class="external-link">see
 creative commons license</a> and software (<a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository" class="external-link">see
 license types on Github</a>). This information will be critical for
 others to reuse and correctly attribute your work. You may also consider
 adding a separate citation and license file to your project folder.</p>
 <p>Again, there are no hard and fast rules here, but remember, keeping
-your raw data files separate is important to ensure they don’t get
+your raw data files separate is essential to ensure they don’t get
 overwritten after you use a script to clean your data. It’s also very
 helpful to keep the different files generated by your analysis organized
 in a folder.</p>
-<p>*what’s this <code>.Rproj</code> file? We’ll explain in a bit.</p>
+<p>*what’s this <code>.Rproj</code> file? We’ll be able to explain in a
+bit.</p>
 </div>
 </div>
 </section><section><h2 class="section-heading" id="storage-and-sharing">Storage and Sharing<a class="anchor" aria-label="anchor" href="#storage-and-sharing"></a>
@@ -1353,27 +1353,27 @@ in a folder.</p>
 <div class="section level3">
 <h3 id="backup-your-work">Backup your work<a class="anchor" aria-label="anchor" href="#backup-your-work"></a>
 </h3>
-<p>Having a solid backup plan in case of emergencies (say, your hard
-drive on your computer fails) is essential. The general guideline for
+<p>Having a solid backup plan in case of emergencies (e.g., your
+computer’s hard drive fails) is essential. The general guideline for
 backups is to adhere to the <a href="https://www.uschamber.com/co/run/technology/3-2-1-backup-rule" class="external-link">3-2-1
-principle</a>, which dictates that you should have 3 copies on 2
-different media, with 1 copy offsite. Your decision on backups will be
-based on your own personal tolerance, but we recommend, at minimum,
-avoiding only having a copy of your project on your personal, work
-computer, or lab computer at all costs.</p>
+principle</a>, which dictates that you should have three copies on two
+different media, with one copy offsite. Your decision on backups will be
+based on your own personal tolerance, but we recommend, at a minimum,
+avoiding having only a copy of your project on your personal or work
+computer, or on a lab computer, at all costs.</p>
 <p>At the very least, you should back up your project in cloud storage
 (either provided by your university or paid for yourself). Common cloud
 storage platforms include Google Drive, Box, OneDrive, Dropbox, etc.
-Backing up a project on a local device to cloud storage allows you to
-meet two of the 3-2-1 criteria (2 different media and 1 offsite). If
+Backing up a project to a local device and to cloud storage allows you
+to meet 2 of the 3-2-1 criteria (2 different media and 1 offsite). If
 you’re working with at least one collaborator, and they also keep an
 up-to-date copy of the project on their computer, you’re set!</p>
 </div>
 <div class="section level3">
 <h3 id="version-control-hosting-services">Version Control hosting services<a class="anchor" aria-label="anchor" href="#version-control-hosting-services"></a>
 </h3>
-<p>If your research project involves code, the best way to make sure you
-have your work backed up AND keep track of your code is to use a version
+<p>If your research project involves code, the best way to ensure your
+work is backed up AND to keep track of your code is to use a version
 control hosting service such as GitHub. Note that out-of-the-box Git
 and, thus, GitHub are not optimized to handle large files, and
 therefore, we do not recommend using these tools to version data beyond
@@ -1381,7 +1381,7 @@ maybe small data sets in a text-based format such as CSV files.</p>
 <p>The main three version control hosting services are GitHub, GitLab,
 and BitBucket. To see a comparison of the available options, see this
 comparison on <a href="https://www.linkedin.com/pulse/demystifying-git-vs-github-atlassian-bitbucket-gitlab-pawan-verma?trk=read_related_article-card_title." class="external-link">LinkedIn</a></p>
-<p>We will proceed using GitHub because it is the most used version
+<p>We will go ahead using GitHub because it is the most used version
 control platform to date.</p>
 </div>
 </section><section><h2 class="section-heading" id="using-version-control">Using Version Control<a class="anchor" aria-label="anchor" href="#using-version-control"></a>
@@ -1389,8 +1389,8 @@ control platform to date.</p>
 <hr class="half-width">
 <p>Okay, let’s talk about implementing version control in your project
 through RStudio! But first… let’s quickly clarify the difference between
-Git and GitHub. We already said that GitHub is the version control
-hosting platform. Git is the version control system and does not
+Git and GitHub. We already said that GitHub is a version control hosting
+platform. Git is the version control system and does not
 <strong>have</strong> to be used with GitHub. You can use Git and then
 host your code on Bitbucket, for example, or save it to your Google
 Drive. In fact, you can use Git on your local system only and never save
@@ -1401,27 +1401,27 @@ can be a bit confusing because they are so often used together, but the
 more you use them, the more it will make sense. Soon enough, you’ll be
 wondering how you even completed a code project without version
 control.</p>
-<p>There are actually many ways to use Git; you could use it on GitHub
-only (though that suffers from a lack of options and is a bit clunky),
+<p>There are actually many ways to use Git: you could use it only on
+GitHub (though that suffers from a lack of options and is a bit clunky),
 there is a Desktop interface, and many serious programmers use it on the
-command line. HOWEVER, RStudio has Git controls built in, so we’ll use
-it all in one place!</p>
+command line. However, RStudio has built-in Git controls, so we’ll use
+them all in one place!</p>
 </section><section><h2 class="section-heading" id="project-environments-in-r">Project Environments in R<a class="anchor" aria-label="anchor" href="#project-environments-in-r"></a>
 </h2>
 <hr class="half-width">
 <p>Environments are a rather advanced topic in programming, but we will
-introduce some capabilities for projects in R that increase the
-reproducibility of your code. Essentially, a project environment allows
-us to save (or take a snapshot) of our R version and dependencies - aka
-what packages/package versions are required to run our code without
-error. This can be important when collaborating with others, and you may
-be unsure whether you are working with the same R and package versions.
-Another common issue is if you try to run very old code from a previous
-project - the older the code, the more likely errors will crop up, or
-the code will no longer run as it used to. To take advantage of project
-environments, we will use a package called <code>renv</code>, the
-successor of <code>packrat</code>, which used to be the de facto package
-in R for managing environments.</p>
+introduce capabilities in R that improve the reproducibility of your
+code. Essentially, a project environment allows us to save (or take a
+snapshot) of our R version and dependencies - aka what packages/package
+versions are required to run our code without error. This can be
+important when collaborating with others, and you may be unsure whether
+you are working with the same R and package versions. Another common
+issue is if you try to run very old code from a previous project - the
+older the code, the more likely errors will crop up, or the code will no
+longer run as it used to. To take advantage of project environments, we
+will use a package called <code>renv</code>, the successor of
+<code>packrat</code>, which used to be the de facto package in R for
+managing environments.</p>
 <p>However, as noted in this <a href="https://rstudio.github.io/renv/articles/renv.html" class="external-link">RStudio article
 on renv</a>, using <code>renv</code> does not automatically make your
 project reproducible, nor is it bullet-proof. Sometimes, other factors
@@ -1430,9 +1430,9 @@ come into play that may alter the results of your code despite using
 ‘containers’ such as Docker or Kubernetes to go one step further in
 assuring reproducibility. However, that is beyond the scope of this
 workshop.</p>
-<p>Later on this workshop we will cover dependencies and how one can
+<p>Later in this workshop, we will cover dependencies and how to
 implement project environments with <code>renv</code> to increase
-reproducibility with R projects.</p>
+reproducibility in R projects.</p>
 <p>Before we use Git and environments in the RStudio project, we must be
 working on an R Project, so let’s talk about how R Projects work in
 RStudio.</p>
@@ -1458,17 +1458,17 @@ additional benefit of being able to use Git within RStudio.</p>
 <div class="section level4">
 <h4 id="quarto-projects">Quarto Projects<a class="anchor" aria-label="anchor" href="#quarto-projects"></a>
 </h4>
-<p>Perhaps, confusing, but we have an additional “type” of project in
-the RStudio ecosystem called a Quarto project. Thankfully, we don’t
-necessarily have to pick between using RStudio and Quarto projects
-because a Quarto project is just an RStudio project - with some
-additional capabilities. That addition is enhanced project and style
-controls in the form of a YAML file called <code>_quarto.yml</code>. To
-keep things simple, if you are going to use Quarto documents, use Quarto
-Projects; if you aren’t, stick to an R project. And no worries, you can
-always add a <code>_quarto.yml</code> file if you have just an RStudio
-Project which can retroactively turn your project into a Quarto project.
-We will see how to create a Quarto project further in this workshop.</p>
+<p>Perhaps confusing, but we have an additional “type” of project in the
+RStudio ecosystem called a Quarto project. Thankfully, we don’t have to
+choose between RStudio and Quarto projects, because a Quarto project is
+just an RStudio project with additional capabilities. That addition
+includes enhanced project and style controls in a YAML file called
+<code>_quarto.yml</code>. To keep things simple, if you are going to use
+Quarto documents, use Quarto Projects; if you aren’t, stick to an R
+project. And no worries, you can always add a <code>_quarto.yml</code>
+file if you have just an RStudio Project, which can retroactively turn
+your project into a Quarto project. We will see how to create a Quarto
+project further in this workshop.</p>
 <div id="challenge-4-r-project-in-root-folder" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
@@ -1492,8 +1492,8 @@ again? Tip: Look back at the relative paths intro.</p>
 <div class="callout-content">
 <ul>
 <li>Use best practices for file and folder organization. This includes
-using relative file paths as opposed to complete file paths.</li>
-<li>Make sure that all data are backed up on multiple devices and that
+using relative file paths rather than full file paths.</li>
+<li>Make sure that all data is backed up on multiple devices and that
 you treat raw data as read-only.</li>
 <li>We can use Git and GitHub to keep track of what we’ve done in the
 past and what we plan to do in the future.</li>
@@ -1632,7 +1632,7 @@ Packages</h3>
   SOLUTION
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>To see what packages are installed, use the
 <code>installed.packages()</code> command. This will return a matrix
@@ -1720,7 +1720,7 @@ surrounding text from the surrounding text?</p>
   SOLUTION
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p><code>##</code> is a heading, <code>**</code> is to bold enclosed
 text, and <code>&lt;&gt;</code> is for hyperlinks. Don’t worry about
@@ -1989,7 +1989,7 @@ getting a notification that Git isn’t set up to work with RStudio.</p>
   Solution:
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <figure><img src="fig/05-git-not-detected.png" class="image-with-shadow figure mx-auto d-block" alt="Git not detected on system path"></figure><p>To set it up, we need to go to Tools &gt; Global Options <img src="fig/05-setup-git-rstudio.PNG" class="image-with-shadow figure" alt="Global Options Git/SVN setup"></p>
 <p>First, make sure “Enable version control interface for RStudio
@@ -2128,7 +2128,7 @@ research project?</p>
   Solution:
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Why and when would it be a good idea to add data files to the
 <code>.gitignore</code>?</p>
@@ -2178,7 +2178,7 @@ Hint (2): add a forward slash <code>/</code> after directories.</p>
   Solution:
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>Open the .gitignore file by double-clicking on it in the file view
@@ -3278,7 +3278,7 @@ documents.</li>
 </div>
 </section></section><section id="aio-08-rendering-code-yaml"><p>Content from <a href="08-rendering-code-yaml.html">Rendering &amp; Customizing Code Outputs</a></p>
 <hr>
-<p>Last updated on 2025-07-22 |
+<p>Last updated on 2025-11-25 |
 
         <a href="https://github.com/carpentries-incubator/reproducible-publications-quarto/edit/main/episodes/08-rendering-code-yaml.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -3296,7 +3296,7 @@ documents.</li>
 <li>How do you apply code chunk options at the document level to
 customize your code?</li>
 <li>How do you label and caption code chunks?</li>
-<li>What is inline code and when should it be used?</li>
+<li>What is inline code, and when should it be used?</li>
 </ul>
 </div>
 </div>
@@ -3306,9 +3306,9 @@ customize your code?</li>
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>Learn how to insert and render run-able chunks of code to integrate
+<li>Learn how to insert and render runnable chunks of code to integrate
 into your report.</li>
-<li>Apply labels and caption to code chunks.</li>
+<li>Apply labels and captions to code chunks.</li>
 <li>Learn the syntax and how to add in-line code.</li>
 </ul>
 </div>
@@ -3319,14 +3319,13 @@ into your report.</li>
 <section><h2 class="section-heading" id="rendering-code-in-quarto-documents">Rendering Code in Quarto Documents<a class="anchor" aria-label="anchor" href="#rendering-code-in-quarto-documents"></a>
 </h2>
 <hr class="half-width">
-<p>In the previous episode, we just saw how to run our code in our code
-chunks to test that it works and to see a preview of the code output
-that will render in our HTML document, but to <em>actually</em> render
-the final, we need to use the Render button as with. Using the
-<code>Render</code> button with code chunks is a two-step process -
-first, the code is run (all code chunks will run automatically). Second,
-(if there are no code errors) the document of choice will render for our
-whole Quarto document.</p>
+<p>In the previous episode, we saw how to run our code in code chunks to
+test that it works and to preview the code output that will render in
+our HTML document, but to <em>actually</em> render the final version, we
+need to use the Render button. Using the <code>Render</code> button with
+code chunks is a two-step process - first, the code is run (all code
+chunks will run automatically). Second, (if there are no code errors),
+the document of choice will render for our whole Quarto document.</p>
 <div id="time-to-render" class="callout checklist">
 <div class="callout-square">
 <i class="callout-icon" data-feather="check-square"></i>
@@ -3335,7 +3334,7 @@ whole Quarto document.</p>
 <div id="time-to-render" class="callout-inner">
 <h3 class="callout-title">Time to Render!</h3>
 <div class="callout-content">
-<p>Now, let’s Render the Quarto file and see how our code output looks
+<p>Now, let’s render the Quarto file and see how our code output looks
 on the final HTML page.</p>
 </div>
 </div>
@@ -3345,15 +3344,15 @@ our paper!</p>
 <figure><img src="fig/07-HR-output-no-options.PNG" class="image-with-shadow figure mx-auto d-block" alt="Heart rate code no options for code chunk"></figure><p>This happens because the output from the running code (messages,
 results, warnings, etc.) gets added to the Quarto document instead of
 being printed to the console. Let’s see about adjusting the output to
-make it look better with code chunk rendering options.</p>
+look better using code chunk rendering options.</p>
 </section><section><h2 class="section-heading" id="code-chunk-options">Code Chunk Options<a class="anchor" aria-label="anchor" href="#code-chunk-options"></a>
 </h2>
 <hr class="half-width">
 <p>There are over 50 different code chunk options!!! Obviously, we will
-not go over all of them, but they fall into several larger categories,
-including code evaluation, text output, code style, cache options, plot
-output, and animation. We’ll discuss a few options for code evaluation,
-text output, and plot output.</p>
+not go over all of them, but they fall into several broader categories:
+code evaluation, text output, code style, cache options, plot output,
+and animation. We’ll discuss a few options for code evaluation, text
+output, and plot output.</p>
 <p>Code chunk options in Quarto are added within code chunks and always
 have the following format:</p>
 <p><code>#| option: option-text</code></p>
@@ -3364,7 +3363,7 @@ have the following format:</p>
 output in the output document (defaults to TRUE).<br><strong>eval</strong> = (logical or numeric) TRUE/FALSE to evaluate (or
 not) or a numeric value like c(1,3) (only evaluate expressions 1 and
 3).<br><strong>echo</strong> = (logical or numeric - following the same rules
-as above) whether to display source code or not.<br><strong>results</strong> = (logical or character) text output of the
+as above), whether to display source code or not.<br><strong>results</strong> = (logical or character) text output of the
 code can be hidden (hide or FALSE) or delineated in a certain way
 (default ‘markup’).<br><strong>warning</strong> = (logical) whether to display the warnings in
 the output (default TRUE). FALSE will output warnings to the console
@@ -3399,7 +3398,7 @@ to show in our paper.</p>
 <div id="challenge-1---rendering-codes-optional" class="callout-inner">
 <h3 class="callout-title">CHALLENGE 1 - Rendering Codes (Optional)</h3>
 <div class="callout-content">
-<p>Given the following options, How will some hypothetical code render?
+<p>Given the following options, how will some hypothetical code render?
 Try it out with the code we just added to visualize the styling
 change.</p>
 <pre><code>```{r}
@@ -3415,14 +3414,13 @@ change.</p>
   SOLUTION
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
-<p>The expressions in the code chunk will be evaluated, but the
-outputted figures/plots will not be included in the rendered
-document.<br>
+<p>The expressions in the code chunk will be evaluated, but the output
+figures/plots will not be included in the rendered document.<br>
 When might you want to use this?<br>
 If you need to calculate some value or do something on your dataset for
-a further calculation or plot, the output is not important to include in
+a further calculation or plot, the output is not essential to include in
 your paper narrative.</p>
 </div>
 </div>
@@ -3459,8 +3457,8 @@ with <code>chunk-label</code> replaced with your own text</li>
 <li>The chunk label has to be unique (i.e., you can’t use the same name
 for multiple chunks)</li>
 </ul>
-<p>We’ll see in a bit where this code chunk label comes in handy. But,
-for now, let’s go back and give our first code chunk a name:</p>
+<p>We’ll see where this code chunk label comes in handy. But, for now,
+let’s go back and give our first code chunk a name:</p>
 <p><code>#| label: fig-heartrate</code></p>
 <p>When naming your code chunks that will produce figures or tables, use
 <code>fig-</code> and <code>tbl-</code>. We will learn how these will
@@ -3521,7 +3519,7 @@ figure and the caption will be displayed in the html document.</p>
   SOLUTION
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>So, you should end up with the following in your code chunk:</p>
 <pre><code>```{r}
@@ -3549,7 +3547,7 @@ quotes.</p>
 <div class="callout-inner">
 <div class="callout-content">
 <p>Other options that change how a plot or figure appears often use the
-syntax <code>fig-xxx</code> similar to <code>fig-cap</code> Some other
+syntax <code>fig-xxx</code>, similar to <code>fig-cap</code>. Some other
 useful plot/figure code options include (From <a href="https://yihui.org/knitr/options/#plots" class="external-link">Yihui Xie’s page</a>
 ):</p>
 <ul>
@@ -3644,7 +3642,7 @@ libraries?</p>
   Solution:
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p>We would get an error because we haven’t loaded tidyverse which is
 required to read the CSV yet!</p>
@@ -3654,11 +3652,11 @@ required to read the CSV yet!</p>
 </div>
 </div>
 <p>At this point, we could go back through our R scripts and comment out
-(or delete) the beginning sections where we load the data and libraries
-(you will see this is already done in most of the scripts in the code
-folder). You can imagine that the more code chunks you have, the more
-time taking this step would save. Bonus: This also works to load the
-data before it is called in the inline code as we will see below.</p>
+(or delete) the sections at the beginning that load the data and
+libraries (you will see this is already done in most of the scripts in
+the code folder). You can imagine that the more code chunks you have,
+the more time this step would save. Bonus: This also works to load the
+data before it is called in the inline code, as we will see below.</p>
 </div>
 </section><section><h2 class="section-heading" id="adding-in-line-code">Adding In-line Code<a class="anchor" aria-label="anchor" href="#adding-in-line-code"></a>
 </h2>
@@ -3666,7 +3664,7 @@ data before it is called in the inline code as we will see below.</p>
 <p>We have already learned how to create, run, and customize code
 chunks, but what if you only need to make a quick calculation, and
 adding a code chunk seems a little overkill?</p>
-<p>Sometimes, you just need to do a quick calculation to add to your
+<p>Sometimes, you need to do a quick calculation to add to your
 narrative - such as a count of total observations in your data or the
 mean of one of your variables. In those cases, it may not be worth
 setting up a code chunk to calculate those values, so Quarto also
@@ -3674,27 +3672,27 @@ provides the ability to use inline code.</p>
 <p>If that is the case, you can include <code>r code</code> directly in
 the text portion of your document by enclosing it between single
 backticks. Say you are discussing some of the summary statistics in your
-manuscript, Quarto makes this possible through HTML/LaTeX inline code,
-which allows you to calculate simple expressions integrated into your
-narrative. Inline code lets you insert `r code`\ into your document to
-dynamically update portions of your text. In other words, if your data
-set changes, the code will automatically update the specified
+manuscript. Quarto makes this possible through HTML/LaTeX inline code,
+which lets you calculate simple expressions directly in your narrative.
+Inline code lets you insert `r code`\ into your document to update
+portions of your text dynamically. In other words, if your data set
+changes, the code will automatically update the specified
 calculation.</p>
 <p>This can be helpful when referring to specific variables in your
-data. For example, you should include numbers that are derived from the
-data as code, not as numbers.</p>
+data. For example, you should include data-derived numbers as code, not
+as numbers.</p>
 <p>Thus, rather than writing “The CSV file contains choice consistency
 data for 10.000 simulated participants” <strong>(Example 7A)</strong>,
 replace the static number with a bit of code that, when evaluated, gives
-you a dynamic number if anything changes on your dataset. Note that
-there is not an insert option to do this from the menu in the visual
-editor, so we need to insert inline code manually, for example:</p>
+you a dynamic number if anything changes in your dataset. Note that
+there is no insert option to do this from the menu in the visual editor,
+so we need to insert inline code manually, for example:</p>
 <p>The CSV file contains choice consistency data for `r
 nrow(bronars_simulation_data)`\ simulated participants.</p>
-<p>When you render, you might get an error. Any idea why? That is
-because we need to make sure to import the dataset we are referring to
-before the inline code can work. Let’s add the following to our chunk at
-the beginning of the document where we loaded our other data:</p>
+<p>When you render, you might get an error. Do you have any idea why?
+That is because we need to import the dataset we are referring to before
+the inline code can run. Let’s add the following to our chunk at the
+beginning of the document where we loaded our other data:</p>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -3737,7 +3735,7 @@ code would we have to add to the following sentence?</p>
   Solution:
   </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <p>`r mean(bronars_simulation_data$violation_count)`<br>
 5.3924</p>
@@ -3753,8 +3751,8 @@ code would we have to add to the following sentence?</p>
 <div id="important-note" class="callout-inner">
 <h3 class="callout-title">Important Note:</h3>
 <div class="callout-content">
-<p>Make sure the file you are calling is in the right subdirectory and
-your working directory is set appropriately.</p>
+<p>Make sure the file you are calling is in the correct subdirectory,
+and your working directory is set appropriately.</p>
 </div>
 </div>
 </div>
@@ -3766,8 +3764,8 @@ your working directory is set appropriately.</p>
 <div id="more-on-inline-codes" class="callout-inner">
 <h3 class="callout-title">More on inline codes:</h3>
 <div class="callout-content">
-<p>Quarto will always display the results of the inline code but not the
-code. Inline expressions do not take knitr options.</p>
+<p>Quarto will always display the results of the inline code, but not
+the code. Inline expressions do not take knitr options.</p>
 </div>
 </div>
 </div>
@@ -4216,7 +4214,7 @@ mention to this package in the data paper. Look for:
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -4337,7 +4335,7 @@ reference list even without citing it on our paper.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>You should call the @ it in the YAML, with the <code>nocite</code>
 function:</p>
@@ -4437,7 +4435,7 @@ block figures</h3>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Solution: </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>Make sure you have added a label (id). If you missed that step, now
 it is the time to add <code>#| label: fig-heartrate</code> Call the
@@ -5736,8 +5734,8 @@ users restore the original versions used for a particular project</li>
   "url": "https://carpentries-incubator.github.io/reproducible-publications-quarto/aio.html",
   "identifier": "https://carpentries-incubator.github.io/reproducible-publications-quarto/aio.html",
   "dateCreated": "2021-12-01",
-  "dateModified": "2025-11-24",
-  "datePublished": "2025-11-24"
+  "dateModified": "2025-11-25",
+  "datePublished": "2025-11-25"
 }
 
   </script><script>
