@@ -1619,7 +1619,7 @@ command. Let’s now make sure you have all of them good to go.</p>
   SOLUTION
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>To see what packages are installed, use the
 <code>installed.packages()</code> command. This will return a matrix
@@ -1706,7 +1706,7 @@ the surrounding text?</p>
   SOLUTION
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p><code>##</code> is a heading, <code>**</code> is to bold enclosed
 text, and <code>&lt;&gt;</code> is for hyperlinks. Don’t worry about
@@ -1971,7 +1971,7 @@ getting a notification that Git isn’t set up to work with RStudio.</p>
   Solution:
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <figure><img src="fig/05-git-not-detected.png" class="image-with-shadow figure mx-auto d-block" alt="Git not detected on system path"></figure><p>To set it up, we need to go to Tools &gt; Global Options <img src="fig/05-setup-git-rstudio.PNG" class="image-with-shadow figure" alt="Global Options Git/SVN setup"></p>
 <p>First, make sure “Enable version control interface for RStudio
@@ -3223,7 +3223,7 @@ change.</p>
   SOLUTION
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>The expressions in the code chunk will be evaluated, but the output
 figures/plots will not be included in the rendered document.<br>
@@ -3328,7 +3328,7 @@ figure and the caption will be displayed in the HTML document.</p>
   SOLUTION
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>So, you should end up with the following in your code chunk:</p>
 <pre><code>```{r}
@@ -3451,7 +3451,7 @@ libraries?</p>
   Solution:
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>We would get an error because we haven’t loaded the tidyverse, which
 is required to read the CSV!</p>
@@ -3544,7 +3544,7 @@ code would we have to add to the following sentence?</p>
   Solution:
   </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <p>`r mean(bronars_simulation_data$violation_count)`<br>
 5.3924</p>
@@ -3822,7 +3822,7 @@ and a caption:
   Solution:
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -4271,7 +4271,7 @@ list.</li>
 </div>
 </section></section><section id="aio-11-git"><p>Content from <a href="11-git.html">Using Git in RStudio</a></p>
 <hr>
-<p>Last updated on 2025-07-22 |
+<p>Last updated on 2025-11-25 |
 
         <a href="https://github.com/carpentries-incubator/reproducible-publications-quarto/edit/main/episodes/11-git.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -4297,7 +4297,7 @@ list.</li>
 <h3 class="card-title">Objectives</h3>
 <ul>
 <li>Understand how the git workflow works in RStudio.</li>
-<li>Learn how to track changes in your files in Rstudio.</li>
+<li>Learn how to track changes in your files in RStudio.</li>
 </ul>
 </div>
 </div>
@@ -4307,8 +4307,8 @@ list.</li>
 <section><h2 class="section-heading" id="using-version-control-in-rstudio">Using Version Control in RStudio<a class="anchor" aria-label="anchor" href="#using-version-control-in-rstudio"></a>
 </h2>
 <hr class="half-width">
-<p>There are two places we can interact with Git in the RStudio
-interface.</p>
+<p>There are two places in the RStudio interface where we can interact
+with Git.</p>
 <ol style="list-style-type: decimal">
 <li>Menu bar (Tools menu)</li>
 </ol>
@@ -4317,12 +4317,12 @@ interface.</p>
 <li>Environment/History pane</li>
 </ol>
 <figure><img src="fig/05-git-environment-window.PNG" class="image-with-shadow figure mx-auto d-block" alt="git environment panel"></figure><p>Ok, but what do all the options mean? We won’t go through them all,
-but here are the basics to get started versioning your project.</p>
+but here are the basics to get started with versioning your project.</p>
 <div class="section level3">
 <h3 id="git-workflow">Git Workflow<a class="anchor" aria-label="anchor" href="#git-workflow"></a>
 </h3>
-<p>The most simple workflow for version control (working on your
-computer only) is referred to as “add” and “commit”:</p>
+<p>The simplest workflow for version control (working on your computer
+only) is referred to as “add” and “commit”:</p>
 <p>But what do those words even mean?</p>
 <p><strong>Add:</strong> Choose a file or files to take a “snapshot” of.
 What files do you want to add to your next version?</p>
@@ -4350,7 +4350,7 @@ the repository <em>from</em> GitHub <em>to</em> your local computer.</p>
 <p><strong>Push:</strong> <em>upload</em> the most recent version of the
 repository <em>to</em> GitHub <em>from</em> your local computer.</p>
 <p>Put a pin in pulling and pushing for now. For the time being, as we
-edit our paper, we will just stick to adding and committing. In the end,
+edit our paper, we will stick to adding and committing. In the end,
 we’ll see how to use push to GitHub, and you can experiment with pulling
 later on.</p>
 <div id="tips-for-working-with-git" class="callout">
@@ -4362,7 +4362,7 @@ later on.</p>
 <h3 class="callout-title">Tips for working with Git</h3>
 <div class="callout-content">
 <p>Commit frequently; each commit should be a distinct set of edits that
-you can summarize in 50 characters or less. Don’t add a bunch of
+you can summarize in 50 characters or fewer. Don’t add a bunch of
 unrelated edits to the same commit; it makes it harder to look back
 through your “snapshots” and find the right one if you need to.</p>
 </div>
@@ -4373,23 +4373,23 @@ through your “snapshots” and find the right one if you need to.</p>
 </section><section><h2 class="section-heading" id="committing-your-edits">Committing your edits<a class="anchor" aria-label="anchor" href="#committing-your-edits"></a>
 </h2>
 <hr class="half-width">
-<p>Now, that we have performed a few edits to the qmd paper example, in
-the Environment panel, toggle to the Git tab. You’ll see the file that
-was edited with a checkmark next to it. Click the check mark to “add”.
-Note that if you edited more than one file, you could choose any or all
-of the documents to “add”.</p>
+<p>Now that we have performed a few edits to the QMD paper example, in
+the Environment panel, toggle to the Git tab. You’ll see the edited file
+with a checkmark next to it. Click the check mark to “add”. Note that if
+you edited more than one file, you could choose any or all of the
+documents to “add”.</p>
 <figure><img src="fig/05-first-edit.PNG" class="image-with-shadow figure mx-auto d-block" alt="git panel add"></figure><p>Have you noticed the blue ‘M’ icon in the Git Tab before you added
 your commit message and staged your edits? Do you know what it means?
-That ‘M’ indicates tracked files that have been modified. However, there
-are other flags depending on your interactions with project files—such
-as deletions, renames, or additions. Additionally, files might be
-ignored and not tracked at all, as illustrated below.</p>
+That ‘M’ indicates tracked files that have been modified. However, other
+flags are depending on your interactions with project files—such as
+deletions, renames, or additions. Additionally, files might be ignored
+and not tracked at all, as illustrated below.</p>
 <figure><img src="fig/05-git-icons.png" alt="git panel icons" class="figure mx-auto d-block"></figure><p>Now, click commit. A dialogue box will pop up. You’ll need to add a
 commit message to proceed. Add something about “editing the paper during
 the workshop”. The difference between your files will show in the bottom
 panel.</p>
-<figure><img src="fig/05-rstudio-commit.png" class="image-with-shadow figure mx-auto d-block" alt="commit in RStudio"></figure><p>Hit commit, and a dialogue box will show a completed commit. Warning:
-<strong>DO NOT PUSH</strong> anything yet!</p>
+<figure><img src="fig/05-rstudio-commit.png" class="image-with-shadow figure mx-auto d-block" alt="commit in RStudio"></figure><p>Hit commit, and a dialog box will appear showing a completed commit.
+Warning: <strong>DO NOT PUSH</strong> anything yet!</p>
 <p>Congrats! You made your first commit!</p>
 <div id="callout2" class="callout">
 <div class="callout-square">
@@ -4399,30 +4399,29 @@ panel.</p>
 <div class="callout-inner">
 <div class="callout-content">
 <p>##Note: Commit frequency</p>
-<p>Typically, we would not wait that long to commit changes and we would
-prefer to break them down and have more specific messages to track
+<p>Typically, we would not wait that long to commit changes, and we
+would prefer to break them down and have more specific messages to track
 changes more effectively. But we had to keep it simple for this
 workshop.</p>
 </div>
 </div>
 </div>
-<div id="discussion-optional-utilizing-.gitignore-files" class="callout challenge">
+<div id="discussion-utilizing-.gitignore-files" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
-<div id="discussion-optional-utilizing-.gitignore-files" class="callout-inner">
-<h3 class="callout-title">Discussion: (optional) Utilizing .gitignore
-files</h3>
+<div id="discussion-utilizing-.gitignore-files" class="callout-inner">
+<h3 class="callout-title">Discussion: Utilizing .gitignore files</h3>
 <div class="callout-content">
 <p>a <code>.gitignore</code> file is used to signal to Git NOT to track
 versions of specific files. One instance where this is used in a data
 analysis project is with data files that are too large to be uploaded to
 GitHub.</p>
-<p>Now, there are some caveats to this, so in what situations would it
-make sense to add data to the .gitignore, and in what situations would
-it not? What else could you imagine you wouldn’t want to track in your
-research project?</p>
+<p>Now, there are some caveats to this: in what situations would it make
+sense to add a file to .gitignore, and in which situations would it not?
+What else could you imagine you wouldn’t want to track in your research
+project?</p>
 </div>
 </div>
 </div>
@@ -4433,7 +4432,7 @@ research project?</p>
   Solution:
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Why and when would it be a good idea to add data files to the
 <code>.gitignore</code>?</p>
@@ -4443,36 +4442,35 @@ data = read-only).</li>
 <li>With sensitive data - This should absolutely not be pushed to
 GitHub</li>
 </ul>
-<p>Why and when would it not make sense to add data files to the
-<code>.gitignore</code> so they will be available in the Git
-repository?</p>
+<p>Why and when would it not make sense to add data files to
+<code>.gitignore</code> so they are available in the Git repository?</p>
 <ul>
 <li>pre-processed data files - these are the data files that are edited
-- processed from the raw data</li>
+and processed from the raw data</li>
 <li>small data files - may not make much of a difference whether they
 are tracked or not</li>
 <li>the first time you add data files - You can’t push data files to
 GitHub unless they are tracked. So, if you want your data on GitHub but
-don’t want to track it, you must make sure you push once and then add
-the file to the .gitignore file.</li>
+don’t want to track it, you must push once and then add the file to
+.gitignore.</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
-<div id="challenge-1-optional-add-the-data-filesdirectories-to-.gitignore" class="callout challenge">
+<div id="add-the-data-filesdirectories-to-.gitignore-optional" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
-<div id="challenge-1-optional-add-the-data-filesdirectories-to-.gitignore" class="callout-inner">
-<h3 class="callout-title">Challenge 1 (optional): Add the data
-files/directories to .gitignore</h3>
+<div id="add-the-data-filesdirectories-to-.gitignore-optional" class="callout-inner">
+<h3 class="callout-title">Add the data files/directories to .gitignore
+(Optional)</h3>
 <div class="callout-content">
 <p>Add the data (all of the raw data files) to the
 <code>.gitignore</code>.<br>
-Hint: there are two ways to do this.<br>
-Hint2: add a forward slash <code>/</code> after directories.</p>
+Hint 1: There are two ways to do this.<br>
+Hint 2: add a forward slash <code>/</code> after directories.</p>
 </div>
 </div>
 </div>
@@ -4483,11 +4481,11 @@ Hint2: add a forward slash <code>/</code> after directories.</p>
   Solution:
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>Open the .gitignore file by double-clicking on it in the file view
-pane; on a new line add <code>data/</code>. Save the file, and don’t
+pane; on a new line, add <code>data/</code>. Save the file, and don’t
 forget to commit it. <img src="fig/05-gitignore-file.PNG" class="image-with-shadow figure" alt=".gitignore file">
 </li>
 <li>Click on the settings gear in the Git tab of the environment pane.
