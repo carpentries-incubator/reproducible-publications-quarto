@@ -1028,7 +1028,7 @@ each directory’s contents.</p>
   Solution:
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ul>
 <li>
@@ -1181,7 +1181,7 @@ both <code>-</code> and <code>_</code> as delimiters/separators?</p>
   Solution:
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>In <code>CC-101_1_data.csv</code>, the <code>-</code> is used as part
 of the keyword shared between several files. the <code>_</code>
@@ -1248,7 +1248,7 @@ inverse relative path?</p>
   Solution:
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p><code>R-repro-pub.Rproj</code> to
 <code>bronars_simulation_data.csv</code>
@@ -1619,7 +1619,7 @@ command. Let’s now make sure you have all of them good to go.</p>
   SOLUTION
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>To see what packages are installed, use the
 <code>installed.packages()</code> command. This will return a matrix
@@ -1706,7 +1706,7 @@ the surrounding text?</p>
   SOLUTION
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p><code>##</code> is a heading, <code>**</code> is to bold enclosed
 text, and <code>&lt;&gt;</code> is for hyperlinks. Don’t worry about
@@ -1971,7 +1971,7 @@ getting a notification that Git isn’t set up to work with RStudio.</p>
   Solution:
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <figure><img src="fig/05-git-not-detected.png" class="image-with-shadow figure mx-auto d-block" alt="Git not detected on system path"></figure><p>To set it up, we need to go to Tools &gt; Global Options <img src="fig/05-setup-git-rstudio.PNG" class="image-with-shadow figure" alt="Global Options Git/SVN setup"></p>
 <p>First, make sure “Enable version control interface for RStudio
@@ -3822,7 +3822,7 @@ and a caption:
   Solution:
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -4556,7 +4556,7 @@ should ignore when tracking changes.</li>
 <hr class="half-width">
 <p>Earlier, we looked at integrating version control into your RStudio
 workflow to help streamline your work and keep track of changes. In this
-part of the workshop, we will set up Rstudio to authenticate with
+part of the workshop, we will set up RStudio to authenticate with
 GitHub, which is necessary to <em>push</em> your local changes to the
 remote repository on GitHub.</p>
 <p>Terminology: Git <em>Push</em> and <em>Pull</em></p>
@@ -4577,10 +4577,10 @@ download and upload your RStudio code edits to GitHub.</p>
 Methods</h3>
 <div class="callout-content">
 <p>In this lesson, we stick with Personal Access Tokens (PATs), but
-GitHub offers other ways to authenticate, such as SSH keys, which can
-particularly useful for different Git forges (GitLab, Bitbucket, etc.).
-If you’re curious about other authentication options or how things
-differ across platforms, GitHub has a helpful overview here: <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github" class="external-link">https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github</a>.</p>
+GitHub offers other authentication methods, such as SSH keys, which can
+be particularly useful with different Git forges (GitLab, Bitbucket,
+etc.). If you’re curious about other authentication options or how
+things differ across platforms, GitHub has a helpful overview here: <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github" class="external-link">https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github</a>.</p>
 </div>
 </div>
 </div>
@@ -4594,8 +4594,8 @@ you’ll be on the GitHub settings page to create a PAT. Most of the
 options have already been set for us; we only need to update:</p>
 <ul>
 <li>the Note field by describing what the token is for. We recommend a
-combination that describes the computer the PAT will be used on and what
-it will be used for.</li>
+combination that describes the computer the PAT will be used on and the
+purpose for which it will be used.</li>
 </ul>
 <p>For example:</p>
 <blockquote>
@@ -4610,12 +4610,11 @@ regenerate a new one and set it up again.</li>
 <figure><img src="fig/10-github-new-PAT-options.png" class="image-with-shadow figure mx-auto d-block" alt="PAT options on GitHub"></figure><p>Feel free to leave all the other options as selected. Click on the
 green Generate token button at the bottom of the page.</p>
 <ul>
-<li>On the next screen, GitHub shows you the new token. <strong>Be sure
-to copy it</strong> as you only get one chance to see the token text.
-This is the only time you will be able to see it, so do not close this
-page before you are done with the setup! Copy your PAT to your
-clipboard. Return to RStudio and run the following command in the R
-console:</li>
+<li>On the next screen, GitHub shows you the new token. ** Please be
+sure to copy it** as you only get one chance to see the token text. This
+is the only time you will be able to see it, so do not close this page
+before you are done with the setup! Copy your PAT to your clipboard.
+Return to RStudio and run the following command in the R console:</li>
 </ul>
 <p><code>gitcreds::gitcreds_set()</code></p>
 <p>This will prompt you to paste the PAT you just copied from GitHub.
