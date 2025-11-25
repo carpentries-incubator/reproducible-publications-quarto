@@ -445,6 +445,8 @@ customize your code?</li>
 into your report.</li>
 <li>Apply labels and captions to code chunks.</li>
 <li>Learn the syntax and how to add in-line code.</li>
+<li>Learn how to load libraries and data for use throughout the whole
+<code>.qmd</code> document.</li>
 </ul></div>
 </div>
 </div>
@@ -516,13 +518,13 @@ whatever is printed by the code WILL show up in the final html
 document.</p>
 <p>Now, we are seeing what we would like: a figure without other output
 to show in our paper.</p>
-<div id="challenge-1---rendering-codes-optional" class="callout challenge">
+<div id="rendering-code-optional" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
-<div id="challenge-1---rendering-codes-optional" class="callout-inner">
-<h3 class="callout-title">CHALLENGE 1 - Rendering Codes (Optional)</h3>
+<div id="rendering-code-optional" class="callout-inner">
+<h3 class="callout-title">Rendering Code (Optional)</h3>
 <div class="callout-content">
 <p>Given the following options, how will some hypothetical code render?
 Try it out with the code we just added to visualize the styling
@@ -570,11 +572,11 @@ knitr</a>.</p>
 </div>
 <div class="section level3">
 <h3 id="label-your-code-chunk">Label Your Code Chunk<a class="anchor" aria-label="anchor" href="#label-your-code-chunk"></a></h3>
-<p>Before we get to fixing how our code output looks, let’s pause a
-second and give our code chunk a label. While not required for running
-your code, it is good practice to give a name to each code chunk because
-a label is a unique identifier that allows for more advanced options
-(such as cross-referencing) to work with your qmd files later on:</p>
+<p>Before we fix how our code output looks, let’s pause a second and
+give our code chunk a label. While not required for running your code,
+it is good practice to give a name to each code chunk because a label is
+a unique identifier that allows for more advanced options (such as
+cross-referencing) to work with your QMD files later on:</p>
 <figure><img src="fig/07-code-label.png" alt="code chunk label" class="figure mx-auto d-block"></figure><p>Some things to keep in mind</p>
 <ul><li>The chunk label syntax is always <code>#| label: chunk-label</code>
 with <code>chunk-label</code> replaced with your own text</li>
@@ -609,28 +611,28 @@ fig-path = ‘markov chain/monte carlo’ is bad. See more at: <a href="https://
 <h3 id="caption-your-code-chunk-output">Caption Your Code Chunk Output<a class="anchor" aria-label="anchor" href="#caption-your-code-chunk-output"></a></h3>
 <p>The options we just looked at focus on code evaluation and text
 output. However, we have another set of options that deal with how plot
-or figure outputs look at act. Many of the options start with
+or figure outputs look at the act. Many of the options start with
 <code>fig</code>. The one we will use today allows us to add a caption
 to our figure. Again, this is an optional feature, but if you need (or
 want) to add captions to your publication, it is straightforward to do
-in code chunks.</p>
+so in code chunks.</p>
 <p>The caption information also resides at the top of a code chunk using
 the <code>#|</code> syntax as such:</p>
 <p><code>#| fig-cap: "Figure Caption Here"</code></p>
 <p><strong>Don’t forget to put the caption within quotes
 <code>""</code>.</strong></p>
-<div id="challenge-2-adding-a-caption-and-cleaning-up-unwanted-content-for-figure-2" class="callout challenge">
+<div id="adding-a-caption-and-cleaning-up-unwanted-content-for-figure-2" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
-<div id="challenge-2-adding-a-caption-and-cleaning-up-unwanted-content-for-figure-2" class="callout-inner">
-<h3 class="callout-title">CHALLENGE 2: Adding a caption and cleaning up
-unwanted content for Figure 2</h3>
+<div id="adding-a-caption-and-cleaning-up-unwanted-content-for-figure-2" class="callout-inner">
+<h3 class="callout-title">Adding a caption and cleaning up unwanted
+content for Figure 2</h3>
 <div class="callout-content">
 <p>Let’s add the following caption: “Mean heart rate of stress and
 control groups at baseline and during intervention.” and ensure only the
-figure and the caption will be displayed in the html document.</p>
+figure and the caption will be displayed in the HTML document.</p>
 </div>
 </div>
 </div>
@@ -677,7 +679,7 @@ graphics device.</li>
 <li>
 <code>out-width</code>, <code>out-height</code>: (NULL; character)
 Width and height of the plot in the output document, which can be
-different with its physical fig-width and fig-height, i.e., plots can be
+different from its physical fig-width and fig-height, i.e., plots can be
 scaled in the output document.</li>
 <li>
 <code>fig-align</code>: (‘default’; character) Alignment of figures
@@ -704,7 +706,7 @@ and has a caption.</p>
 <div id="time-to-render-1" class="callout-inner">
 <h3 class="callout-title">Time to Render!</h3>
 <div class="callout-content">
-<p>Let’s try that again</p>
+<p>Let’s try that again.</p>
 </div>
 </div>
 </div>
@@ -713,20 +715,20 @@ and has a caption.</p>
 <p>We can improve organization and rendering speed in our documents by
 learning how to load data and packages. So far, we’ve loaded the library
 <code>tidyverse</code> and the data frame <code>df</code> we need in the
-first code chunk. Now, if we want to add another figure (say the hormone
-analysis code ’hormone_analysis.R`), which uses the same data as our
-first code generated figure - we would be loading tidyverse and the data
-for a second time. This is unnecessary because once libraries and data
-are loaded in a Quarto document, they are available for use in the rest
-of the code in the following document.</p>
+first code chunk. Now, if we want to add another figure (say, the
+hormone analysis code ’hormone_analysis.R`), which uses the same data as
+our first code-generated figure, we would be loading the tidyverse and
+the data a second time. This is unnecessary because once libraries and
+data are loaded in a Quarto document, they are available for use in the
+rest of the code in the following document.</p>
 <p>The best practice is to load libraries and data once at the beginning
-of our document, making it available for all other figures or
-calculations throughout the document - allowing us to avoid repetition
-in our code and saving us rendering time. This also makes it easier for
-us to keep track of all the libraries and data we need to use in any
-given document for ourselves and collaborators. If anything needs to be
-tweaked, we don’t need to search through every code chunk in our qmd
-document to make a change - it’s listed right at the top.</p>
+of our document, making them available to all other figures and
+calculations throughout the document, avoiding code repetition and
+saving rendering time. This also makes it easier for us to keep track of
+all the libraries and data we need to use in any given document for
+ourselves and collaborators. If anything needs to be tweaked, we don’t
+need to search through every code chunk in our QMD document to make a
+change - it’s listed right at the top.</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -761,8 +763,8 @@ libraries?</p>
 </button>
 <div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
-<p>We would get an error because we haven’t loaded tidyverse which is
-required to read the CSV yet!</p>
+<p>We would get an error because we haven’t loaded the tidyverse, which
+is required to read the CSV!</p>
 <figure><img src="fig/08-error-ordermatters.png" alt="Error due to wrong order" class="figure mx-auto d-block"></figure></div>
 </div>
 </div>
@@ -826,13 +828,13 @@ rows.</p>
 </div>
 </div>
 </div>
-<div id="challenge-3---adding-inline-code" class="callout challenge">
+<div id="adding-inline-code" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
-<div id="challenge-3---adding-inline-code" class="callout-inner">
-<h3 class="callout-title">CHALLENGE 3 - Adding inline code</h3>
+<div id="adding-inline-code" class="callout-inner">
+<h3 class="callout-title">Adding inline code</h3>
 <div class="callout-content">
 <p>Suppose we want to add another inline code to the same paragraph.
 Look for <strong>(Example 7B)</strong> to represent the average value

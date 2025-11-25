@@ -412,7 +412,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Adding Code to Quarto Documents</h1>
-        <p>Last updated on 2025-07-22 |
+        <p>Last updated on 2025-11-25 |
 
         <a href="https://github.com/carpentries-incubator/reproducible-publications-quarto/edit/main/episodes/07-code-qmd.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -433,7 +433,7 @@
 <div class="card-body">
 <div class="inner">
 <h3 class="card-title">Questions</h3>
-<ul><li>What is Knitr and how it works?</li>
+<ul><li>What is Knitr and how does it work?</li>
 <li>What are code chunks, and how are they structured?</li>
 <li>How do you add and run code chunks?</li>
 <li>How can I avoid issues with relative paths?</li>
@@ -459,11 +459,11 @@ report.</li>
 RStudio. Now, let’s dive into the code portion of Quarto documents. As
 we’ve seen so far, Quarto flips the “code first” default of R scripts,
 prioritizing code over text. Instead of using comments to add text,
-Quarto Documents uses a “text-first” default and requires the use of
-special syntax to add code. In Quarto documents, the syntax to signal
-the switch to code is called “code chunks” in RStudio (referred to as
-“code cells” in other environments). Code chunks are interpreted by
-Knitr. But first, what is Knitr?</p>
+Quarto Documents uses a “text-first” default and requires special syntax
+to add code. In Quarto documents, the syntax to signal the switch to
+code is called “code chunks” in RStudio (referred to as “code cells” in
+other environments). Code chunks are interpreted by Knitr. But first,
+what is Knitr?</p>
 </section><section><h2 class="section-heading" id="what-is-knitr">What is Knitr?<a class="anchor" aria-label="anchor" href="#what-is-knitr"></a></h2>
 <hr class="half-width"><p>Knitr is the engine in RStudio, which creates the “dynamic” part of
 Quarto reports. More specifically, it’s a package that allows the
@@ -481,8 +481,8 @@ document type indicated in your configuration file).</p>
 <li>Inline Code (as we will see in the next episode)</li>
 </ol><p>First, we’re going to talk about code chunks for including
 substantial portions of code into our narrative, such as generating
-figures and plots. A plethora of options become available to us when
-using code chunks, so this tends to be the more complex part of Quarto
+figures and plots. A plethora of options are available to us when using
+code chunks, so this tends to be the more complex part of Quarto
 documents.</p>
 </section><section><h2 class="section-heading" id="using-code-chunks">Using Code Chunks<a class="anchor" aria-label="anchor" href="#using-code-chunks"></a></h2>
 <hr class="half-width"><p>Code chunks (also called “code blocks” or “code cells”) are the
@@ -494,7 +494,7 @@ final output. We’ll learn more about that as we walk through the
 <div class="section level3">
 <h3 id="creating-a-code-chunk">Creating a Code Chunk<a class="anchor" aria-label="anchor" href="#creating-a-code-chunk"></a></h3>
 <p>Okay, let’s get to some code! Some plots have already been included
-in our paper but as static images. Now, we will add some additional
+in our paper, but as static images. Now, we will add some additional
 plots generated straight from R code - which are also more reproducible
 and easier to update than static images. Using code to generate images
 directly assures us that if there are any changes to the data or code
@@ -531,8 +531,8 @@ ending backticks as well ```.</li>
 <p>The most basic (empty) code chunk looks like this:</p>
 <figure><img src="../fig/08-blank-code-chunk.png" class="image-with-shadow figure mx-auto d-block" alt="blank qmd code chunk"></figure><p>Can you tell the subtle differences between the visual and source
 modes in RStudio? That’s right - the backticks ```. As seen in this
-image, the only <strong>required</strong> syntax for a code chunk are
-the backticks preceding and ending (seen only in source mode) and the
+image, the only <strong>required</strong> syntax for a code chunk is the
+use of backticks preceding and ending (seen only in source mode) and the
 specified language (in our case, ‘r’) placed between the curly
 brackets.</p>
 <p>Unless indicated otherwise, we will continue working in
@@ -548,9 +548,9 @@ brackets.</p>
 <p>Although we will (mostly) be using R in this workshop, it’s possible
 to use other programming or markup languages. For example, we have seen
 that we can use LaTeX code for equations. You can also use Python and a
-handful of other languages, so if R is not your preferred programming
+handful of other languages, so if R is not your preferred programming,
 but you like working in the RStudio environment, don’t despair! Other
-options include SQL, Julia, bash, c, etc. It should be noted, however,
+options include SQL, Julia, bash, C, etc. It should be noted, however,
 that some languages (like Python) will require installing and loading
 additional packages.</p>
 </div>
@@ -558,9 +558,9 @@ additional packages.</p>
 </div>
 </div>
 </section><section><h2 class="section-heading" id="adding-our-code-example-to-a-code-chunk">Adding our Code Example to a Code Chunk<a class="anchor" aria-label="anchor" href="#adding-our-code-example-to-a-code-chunk"></a></h2>
-<hr class="half-width"><p>Now, let’s add our first code by copying and pasting the code found
-below into our empty code chunk (also found in the <code>code</code>
-folder as <code>HR_analysis.R</code>.</p>
+<hr class="half-width"><p>Now, let’s add our first code by copying and pasting the code below
+into our empty code chunk (also found in the <code>code</code> folder as
+<code>HR_analysis.R</code>.</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -675,7 +675,7 @@ above.</p>
 see more details on the error:</p>
 <figure><img src="../fig/07-path-error-details.png" class="image-with-shadow figure mx-auto d-block" alt="path error details"></figure><p>This is a path error. But why are we seeing this error?
 Unfortunately, a slight discrepancy exists between the behavior of
-regular R scripts run in R projects and Quarto projects. R scripts will
+regular R scripts run in R projects and Quarto projects. R scripts
 always use the project’s root folder as the working directory, while
 Quarto documents use the folder where the qmd file is located as the
 working directory. If you were learning on your own, you may have been
@@ -784,7 +784,7 @@ documents.</li>
   "url": "https://carpentries-incubator.github.io/reproducible-publications-quarto/instructor/07-code-qmd.html",
   "identifier": "https://carpentries-incubator.github.io/reproducible-publications-quarto/instructor/07-code-qmd.html",
   "dateCreated": "2021-12-01",
-  "dateModified": "2025-07-22",
+  "dateModified": "2025-11-25",
   "datePublished": "2025-11-25"
 }
 

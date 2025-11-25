@@ -1619,7 +1619,7 @@ command. Let’s now make sure you have all of them good to go.</p>
   SOLUTION
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>To see what packages are installed, use the
 <code>installed.packages()</code> command. This will return a matrix
@@ -1706,7 +1706,7 @@ the surrounding text?</p>
   SOLUTION
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p><code>##</code> is a heading, <code>**</code> is to bold enclosed
 text, and <code>&lt;&gt;</code> is for hyperlinks. Don’t worry about
@@ -2375,7 +2375,7 @@ What options would you have?</p>
   Solution:
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>You may change the output format in the YAML to <code>docx</code>.
 Just so you know, to preview Word documents, you need to have MS Word,
@@ -2720,7 +2720,7 @@ dynamic information.</li>
 </div>
 </section></section><section id="aio-07-code-qmd"><p>Content from <a href="07-code-qmd.html">Adding Code to Quarto Documents</a></p>
 <hr>
-<p>Last updated on 2025-07-22 |
+<p>Last updated on 2025-11-25 |
 
         <a href="https://github.com/carpentries-incubator/reproducible-publications-quarto/edit/main/episodes/07-code-qmd.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -2734,7 +2734,7 @@ dynamic information.</li>
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>What is Knitr and how it works?</li>
+<li>What is Knitr and how does it work?</li>
 <li>What are code chunks, and how are they structured?</li>
 <li>How do you add and run code chunks?</li>
 <li>How can I avoid issues with relative paths?</li>
@@ -2765,11 +2765,11 @@ report.</li>
 RStudio. Now, let’s dive into the code portion of Quarto documents. As
 we’ve seen so far, Quarto flips the “code first” default of R scripts,
 prioritizing code over text. Instead of using comments to add text,
-Quarto Documents uses a “text-first” default and requires the use of
-special syntax to add code. In Quarto documents, the syntax to signal
-the switch to code is called “code chunks” in RStudio (referred to as
-“code cells” in other environments). Code chunks are interpreted by
-Knitr. But first, what is Knitr?</p>
+Quarto Documents uses a “text-first” default and requires special syntax
+to add code. In Quarto documents, the syntax to signal the switch to
+code is called “code chunks” in RStudio (referred to as “code cells” in
+other environments). Code chunks are interpreted by Knitr. But first,
+what is Knitr?</p>
 </section><section><h2 class="section-heading" id="what-is-knitr">What is Knitr?<a class="anchor" aria-label="anchor" href="#what-is-knitr"></a>
 </h2>
 <hr class="half-width">
@@ -2793,8 +2793,8 @@ document type indicated in your configuration file).</p>
 </ol>
 <p>First, we’re going to talk about code chunks for including
 substantial portions of code into our narrative, such as generating
-figures and plots. A plethora of options become available to us when
-using code chunks, so this tends to be the more complex part of Quarto
+figures and plots. A plethora of options are available to us when using
+code chunks, so this tends to be the more complex part of Quarto
 documents.</p>
 </section><section><h2 class="section-heading" id="using-code-chunks">Using Code Chunks<a class="anchor" aria-label="anchor" href="#using-code-chunks"></a>
 </h2>
@@ -2809,7 +2809,7 @@ final output. We’ll learn more about that as we walk through the
 <h3 id="creating-a-code-chunk">Creating a Code Chunk<a class="anchor" aria-label="anchor" href="#creating-a-code-chunk"></a>
 </h3>
 <p>Okay, let’s get to some code! Some plots have already been included
-in our paper but as static images. Now, we will add some additional
+in our paper, but as static images. Now, we will add some additional
 plots generated straight from R code - which are also more reproducible
 and easier to update than static images. Using code to generate images
 directly assures us that if there are any changes to the data or code
@@ -2849,8 +2849,8 @@ ending backticks as well ```.</li>
 <p>The most basic (empty) code chunk looks like this:</p>
 <figure><img src="fig/08-blank-code-chunk.png" class="image-with-shadow figure mx-auto d-block" alt="blank qmd code chunk"></figure><p>Can you tell the subtle differences between the visual and source
 modes in RStudio? That’s right - the backticks ```. As seen in this
-image, the only <strong>required</strong> syntax for a code chunk are
-the backticks preceding and ending (seen only in source mode) and the
+image, the only <strong>required</strong> syntax for a code chunk is the
+use of backticks preceding and ending (seen only in source mode) and the
 specified language (in our case, ‘r’) placed between the curly
 brackets.</p>
 <p>Unless indicated otherwise, we will continue working in
@@ -2866,9 +2866,9 @@ brackets.</p>
 <p>Although we will (mostly) be using R in this workshop, it’s possible
 to use other programming or markup languages. For example, we have seen
 that we can use LaTeX code for equations. You can also use Python and a
-handful of other languages, so if R is not your preferred programming
+handful of other languages, so if R is not your preferred programming,
 but you like working in the RStudio environment, don’t despair! Other
-options include SQL, Julia, bash, c, etc. It should be noted, however,
+options include SQL, Julia, bash, C, etc. It should be noted, however,
 that some languages (like Python) will require installing and loading
 additional packages.</p>
 </div>
@@ -2878,9 +2878,9 @@ additional packages.</p>
 </section><section><h2 class="section-heading" id="adding-our-code-example-to-a-code-chunk">Adding our Code Example to a Code Chunk<a class="anchor" aria-label="anchor" href="#adding-our-code-example-to-a-code-chunk"></a>
 </h2>
 <hr class="half-width">
-<p>Now, let’s add our first code by copying and pasting the code found
-below into our empty code chunk (also found in the <code>code</code>
-folder as <code>HR_analysis.R</code>.</p>
+<p>Now, let’s add our first code by copying and pasting the code below
+into our empty code chunk (also found in the <code>code</code> folder as
+<code>HR_analysis.R</code>.</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -3029,7 +3029,7 @@ above.</p>
 see more details on the error:</p>
 <figure><img src="fig/07-path-error-details.png" class="image-with-shadow figure mx-auto d-block" alt="path error details"></figure><p>This is a path error. But why are we seeing this error?
 Unfortunately, a slight discrepancy exists between the behavior of
-regular R scripts run in R projects and Quarto projects. R scripts will
+regular R scripts run in R projects and Quarto projects. R scripts
 always use the project’s root folder as the working directory, while
 Quarto documents use the folder where the qmd file is located as the
 working directory. If you were learning on your own, you may have been
@@ -3117,6 +3117,8 @@ customize your code?</li>
 into your report.</li>
 <li>Apply labels and captions to code chunks.</li>
 <li>Learn the syntax and how to add in-line code.</li>
+<li>Learn how to load libraries and data for use throughout the whole
+<code>.qmd</code> document.</li>
 </ul>
 </div>
 </div>
@@ -3197,13 +3199,13 @@ whatever is printed by the code WILL show up in the final html
 document.</p>
 <p>Now, we are seeing what we would like: a figure without other output
 to show in our paper.</p>
-<div id="challenge-1---rendering-codes-optional" class="callout challenge">
+<div id="rendering-code-optional" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
-<div id="challenge-1---rendering-codes-optional" class="callout-inner">
-<h3 class="callout-title">CHALLENGE 1 - Rendering Codes (Optional)</h3>
+<div id="rendering-code-optional" class="callout-inner">
+<h3 class="callout-title">Rendering Code (Optional)</h3>
 <div class="callout-content">
 <p>Given the following options, how will some hypothetical code render?
 Try it out with the code we just added to visualize the styling
@@ -3252,11 +3254,11 @@ knitr</a>.</p>
 <div class="section level3">
 <h3 id="label-your-code-chunk">Label Your Code Chunk<a class="anchor" aria-label="anchor" href="#label-your-code-chunk"></a>
 </h3>
-<p>Before we get to fixing how our code output looks, let’s pause a
-second and give our code chunk a label. While not required for running
-your code, it is good practice to give a name to each code chunk because
-a label is a unique identifier that allows for more advanced options
-(such as cross-referencing) to work with your qmd files later on:</p>
+<p>Before we fix how our code output looks, let’s pause a second and
+give our code chunk a label. While not required for running your code,
+it is good practice to give a name to each code chunk because a label is
+a unique identifier that allows for more advanced options (such as
+cross-referencing) to work with your QMD files later on:</p>
 <figure><img src="fig/07-code-label.png" alt="code chunk label" class="figure mx-auto d-block"></figure><p>Some things to keep in mind</p>
 <ul>
 <li>The chunk label syntax is always <code>#| label: chunk-label</code>
@@ -3294,28 +3296,28 @@ fig-path = ‘markov chain/monte carlo’ is bad. See more at: <a href="https://
 </h3>
 <p>The options we just looked at focus on code evaluation and text
 output. However, we have another set of options that deal with how plot
-or figure outputs look at act. Many of the options start with
+or figure outputs look at the act. Many of the options start with
 <code>fig</code>. The one we will use today allows us to add a caption
 to our figure. Again, this is an optional feature, but if you need (or
 want) to add captions to your publication, it is straightforward to do
-in code chunks.</p>
+so in code chunks.</p>
 <p>The caption information also resides at the top of a code chunk using
 the <code>#|</code> syntax as such:</p>
 <p><code>#| fig-cap: "Figure Caption Here"</code></p>
 <p><strong>Don’t forget to put the caption within quotes
 <code>""</code>.</strong></p>
-<div id="challenge-2-adding-a-caption-and-cleaning-up-unwanted-content-for-figure-2" class="callout challenge">
+<div id="adding-a-caption-and-cleaning-up-unwanted-content-for-figure-2" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
-<div id="challenge-2-adding-a-caption-and-cleaning-up-unwanted-content-for-figure-2" class="callout-inner">
-<h3 class="callout-title">CHALLENGE 2: Adding a caption and cleaning up
-unwanted content for Figure 2</h3>
+<div id="adding-a-caption-and-cleaning-up-unwanted-content-for-figure-2" class="callout-inner">
+<h3 class="callout-title">Adding a caption and cleaning up unwanted
+content for Figure 2</h3>
 <div class="callout-content">
 <p>Let’s add the following caption: “Mean heart rate of stress and
 control groups at baseline and during intervention.” and ensure only the
-figure and the caption will be displayed in the html document.</p>
+figure and the caption will be displayed in the HTML document.</p>
 </div>
 </div>
 </div>
@@ -3365,7 +3367,7 @@ graphics device.</li>
 <li>
 <code>out-width</code>, <code>out-height</code>: (NULL; character)
 Width and height of the plot in the output document, which can be
-different with its physical fig-width and fig-height, i.e., plots can be
+different from its physical fig-width and fig-height, i.e., plots can be
 scaled in the output document.</li>
 <li>
 <code>fig-align</code>: (‘default’; character) Alignment of figures
@@ -3393,7 +3395,7 @@ and has a caption.</p>
 <div id="time-to-render-1" class="callout-inner">
 <h3 class="callout-title">Time to Render!</h3>
 <div class="callout-content">
-<p>Let’s try that again</p>
+<p>Let’s try that again.</p>
 </div>
 </div>
 </div>
@@ -3403,20 +3405,20 @@ and has a caption.</p>
 <p>We can improve organization and rendering speed in our documents by
 learning how to load data and packages. So far, we’ve loaded the library
 <code>tidyverse</code> and the data frame <code>df</code> we need in the
-first code chunk. Now, if we want to add another figure (say the hormone
-analysis code ’hormone_analysis.R`), which uses the same data as our
-first code generated figure - we would be loading tidyverse and the data
-for a second time. This is unnecessary because once libraries and data
-are loaded in a Quarto document, they are available for use in the rest
-of the code in the following document.</p>
+first code chunk. Now, if we want to add another figure (say, the
+hormone analysis code ’hormone_analysis.R`), which uses the same data as
+our first code-generated figure, we would be loading the tidyverse and
+the data a second time. This is unnecessary because once libraries and
+data are loaded in a Quarto document, they are available for use in the
+rest of the code in the following document.</p>
 <p>The best practice is to load libraries and data once at the beginning
-of our document, making it available for all other figures or
-calculations throughout the document - allowing us to avoid repetition
-in our code and saving us rendering time. This also makes it easier for
-us to keep track of all the libraries and data we need to use in any
-given document for ourselves and collaborators. If anything needs to be
-tweaked, we don’t need to search through every code chunk in our qmd
-document to make a change - it’s listed right at the top.</p>
+of our document, making them available to all other figures and
+calculations throughout the document, avoiding code repetition and
+saving rendering time. This also makes it easier for us to keep track of
+all the libraries and data we need to use in any given document for
+ourselves and collaborators. If anything needs to be tweaked, we don’t
+need to search through every code chunk in our QMD document to make a
+change - it’s listed right at the top.</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -3451,8 +3453,8 @@ libraries?</p>
 </button>
 <div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
-<p>We would get an error because we haven’t loaded tidyverse which is
-required to read the CSV yet!</p>
+<p>We would get an error because we haven’t loaded the tidyverse, which
+is required to read the CSV!</p>
 <figure><img src="fig/08-error-ordermatters.png" alt="Error due to wrong order" class="figure mx-auto d-block"></figure>
 </div>
 </div>
@@ -3519,13 +3521,13 @@ rows.</p>
 </div>
 </div>
 </div>
-<div id="challenge-3---adding-inline-code" class="callout challenge">
+<div id="adding-inline-code" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
-<div id="challenge-3---adding-inline-code" class="callout-inner">
-<h3 class="callout-title">CHALLENGE 3 - Adding inline code</h3>
+<div id="adding-inline-code" class="callout-inner">
+<h3 class="callout-title">Adding inline code</h3>
 <div class="callout-content">
 <p>Suppose we want to add another inline code to the same paragraph.
 Look for <strong>(Example 7B)</strong> to represent the average value
@@ -3820,7 +3822,7 @@ and a caption:
   Solution:
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
