@@ -1,5 +1,5 @@
 ---
-title: Writing and Styling QMD Documents
+title: Writing and Styling Quarto Documents
 teaching: 10
 exercises: 10
 ---
@@ -16,7 +16,7 @@ exercises: 10
 
 - What is the Visual Editor in RStudio?
 - Which features does the Visual Editor have?
-- How can I can apply styling and formatting to Qmd documents in RStudio more easily?
+- How can one apply styling and formatting to Qmd documents in RStudio more easily?
 - How to add inline code?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
