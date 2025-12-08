@@ -1,6 +1,6 @@
 ---
 source: Rmd
-title: Rendering & Customizing Code Outputs
+title: Rendering and Customizing Code Outputs
 teaching: 20
 exercises: 10
 start: yes
