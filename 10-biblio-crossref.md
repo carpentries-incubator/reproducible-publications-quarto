@@ -1,6 +1,6 @@
 ---
 source: Rmd
-title: Bibliography, Citations & Cross-Referencing
+title: Bibliography, Citations and Cross-Referencing
 teaching: 25
 exercises: 10
 ---
