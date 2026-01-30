@@ -1,0 +1,28 @@
+.
+├── CITATION.md
+├── LICENSE.md
+├── README.md
+├── Reproducible-Publications-with-RStudio-Example.Rproj
+├── _quarto.yml
+├── code
+│   ├── data_preprocessing.R
+│   ├── hormone_analysis.R
+│   ├── HR_analysis.R
+│   └── functions
+│       └── GARP_funcs.R
+├── data
+│   ├── processed
+│   │   └── preprocessed-GARP-TSST-data.csv
+│   └── raw
+│       ├── GARP-TSST-mastersheet.xlsx
+│       └── bronars_simulation_data.csv
+├── output
+│   ├── heartrate.pdf
+│   └── hormones.pdf
+└── report
+    ├── DataPaper-ReproducibilityWorkshop.html
+    ├── DataPaper-ReproducibilityWorkshop.qmd
+    ├── apa.csl
+    ├── fig
+    │   └── Fig1.jpg
+    └── references.bib
