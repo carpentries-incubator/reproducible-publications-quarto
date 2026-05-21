@@ -4,6 +4,7 @@
 "LICENSE.md" "16e8eaad880865bc4a41811b3e8fa945" "site/built/LICENSE.md" "2025-07-22"
 "config.yaml" "3b22f1afcc375a1055a85c061b9777b6" "site/built/config.yaml" "2026-04-14"
 "index.md" "50f7499b2cc3ef4061efb7c2abfe766c" "site/built/index.md" "2025-11-25"
+"paper.md" "1e25c347610b27ca6766c4adb65521d4" "site/built/paper.md" "2026-05-21"
 "episodes/01-introduction.md" "f8bb58b5540061d541334bb218c7c1cb" "site/built/01-introduction.md" "2025-11-25"
 "episodes/02-reproducibility.md" "f58137766cf89d7ed6d511ab70318c6e" "site/built/02-reproducibility.md" "2025-11-25"
 "episodes/03-basic-rstudio.md" "8696df9fd3b0440eef9be399e06029a2" "site/built/03-basic-rstudio.md" "2025-11-25"
